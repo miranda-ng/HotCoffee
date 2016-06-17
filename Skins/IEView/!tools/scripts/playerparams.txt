@@ -1,0 +1,15 @@
+bg=0xFF6600
+leftbg=0xeeeeee
+lefticon=0x666666
+rightbg=0xcccccc
+rightbghover=0x999999
+righticon=0x666666
+righticonhover=0xffffff
+text=0x666666
+slider=0x330099
+track=0xFFFFFF
+border=0x666666
+loader=0x9FFFB8
+loop=yes
+autostart=yes
+soundFile=
