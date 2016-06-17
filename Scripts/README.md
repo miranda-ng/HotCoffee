@@ -1,0 +1,1 @@
+The scripts that extend the standard Miranda functionality.
