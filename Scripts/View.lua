@@ -303,7 +303,11 @@ function ApplyIconPack(name)
 			},
 			{
 				Bin = "start /wait IconPatcher.exe",
-				Args = string.format("/PID=%d /bin=%q /arc=%s_hc /res=* /silent", winapi.GetCurrentProcessId(), m.GetFullPath(), name)
+				Args = string.format("/pid=%d /bin=%q /arc=%s /res=* /silent", winapi.GetCurrentProcessId(), m.GetFullPath(), name)
+			},
+			{
+				Bin = "start /wait IconPatcher.exe",
+				Args = string.format("/bin=%q /arc=%s_HotCoffee /res=* /verysilent", m.GetFullPath(), name)
 			},
 			{
 				Bin = "start",
@@ -329,7 +333,7 @@ end
 
 PreBuildMenuFuncs["Icons"] =  function()
 	for i, v in ipairs(IconPacks) do
-		local file = m.Parse('%miranda_path%\\skins\\icons\\'..v.Name..'_hc.7z')
+		local file = m.Parse('%miranda_path%\\skins\\icons\\'..v.Name..'_HotCoffee.7z')
 		genmenu.ShowMenuItem(v.hMenuItem, os.rename(file, file))
 	end	
 end
@@ -412,15 +416,23 @@ hChatsAutoSizeInput = clist.AddMainMenuItem({
 })
 
 m.CreateServiceFunction('Scripts/View/AutoSizeArea', function()
-	local blob = db.GetSetting(_, "Tab_SRMsg", "CNTW_Def")
-	blob[6] = ((blob[6] ^ (~0xaf)) ~= 0) and blob[6] | 0x50 or blob[6] & 0x1F
-	db.WriteSetting(_, "Tab_SRMsg", "CNTW_Def", blob)
+--	if winapi.MessageBox(m.NULL, m.Translate('The changes will take effect only after closing all dialog windows. Continue?'), m.Translate('Changes...'), 36) ~= 6 then
+--	  return
+--	end
+ 	local blob = db.GetSetting(_, "Tab_SRMsg", "CNTW_Def_Flags")
+	  if blob & 16384 ~= 0 then
+	    blob = blob & (~16384)
+	  else
+	    blob = blob | 16384
+	end  
+	db.WriteSetting(_, "Tab_SRMsg", "CNTW_Def_Flags", blob, db.DBVT_DWORD)
+--	m.CallService("SRMsg/BroadcastMessage", 0, 16)
 	m.CallService("TabSRMsg/ReloadSettings", 0, 0)
 	m.CallService("TabSRMsg/ReloadSkin", 0, 0)
 end)
 
 PreBuildMenuFuncs["Chats"] = function()
 	genmenu.ShowMenuItem(hChatsRoot, m.IsPluginLoaded('6ca5f042-7a7f-47cc-a715-fc8c46fbf434'))
-	genmenu.ModifyMenuItem(hChatsAutoSizeInput, nil, ((db.GetSetting(_, "Tab_SRMsg", "CNTW_Def")[6] ^ (~0xaf)) ~= 0) and Icons.Menu.Chats.AutoSize.Disabled or Icons.Menu.Chats.AutoSize.Enabled , -1)
+	genmenu.ModifyMenuItem(hChatsAutoSizeInput, nil, ((db.GetSetting(_, "Tab_SRMsg", "CNTW_Def_Flags") & 16384) == 0) and Icons.Menu.Chats.AutoSize.Disabled or Icons.Menu.Chats.AutoSize.Enabled , -1)
 end
 ----- /Chats --------------------------------------------------------------------------------------
