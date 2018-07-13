@@ -1,26 +1,26 @@
 #Textolite Gray-Dark skin for Popup+ 2.1.0.7 or later
 #Author:	Dracosha
 #Version:	1.0
-#Description:	Skin made to match the Textolite Gray-Dark for Clist Modern Layered
+#Description:	Skin made to match the Textolite Gray-Dark for Contact list Modern/Layered
 #===============options============================================================================
 options
-	#option	id	val	title
-	option	1	0	Use different colors
-	option	2	1	Show icon
-	option	3	1	Show Avatars
-	option	4	1	Avatars to right
-	option	5	1	Clock
-	option	6	1	Logo
-	option	7	1	Use different colors for logo and clock
-	option	8	0	Use different colors for text
-	option	9	0	Use different colors for background
+	#option	id		val	title
+	option	1		1	Icon
+	option	2		1	Avatars
+	option	3		1	Avatars to right
+	option	4		1	Clock
+	option	5		1	Logo
+	option	6		1	Colored logo and clock
+	option	7		0	Colored text
+	option	8		0	Colored background
+	option	9		0	Colored frame
 end
 #==================================================================================================
-w (21+icon.width+2+title.width+1+4+clock.width+21)>(21+avatar.width+3+text.width+21)
-h 14+title.height+4+(avatar.height>text.height)+14
+#w (21+icon.width+2+title.width+1+4+clock.width+21)>(21+avatar.width+3+text.width+21)
+h 12+title.height+9+(avatar.height>text.height)+11
 #=========Background===============================================================================
 object
-	ifset 9
+	ifset 8
 	type bitmap
 	source back.png
 	mono
@@ -31,7 +31,7 @@ object
 	h -9
 end
 object
-	ifnotset 9	
+	ifnotset 8
 	type bitmap
 	source back.png
 	layer
@@ -42,7 +42,7 @@ object
 end
 #===========Titlebar top===========================================================================
 object
-	ifset 1	
+	ifset 9
 	type bitmap
 	source title_lt.png
 	mono
@@ -52,7 +52,7 @@ object
 	h 10
 end
 object
-	ifnotset 1	
+	ifnotset 9
 	type bitmap
 	source title_lt.png
 	x 0
@@ -61,7 +61,7 @@ object
 	h 10
 end
 object
-	ifset 1	
+	ifset 9
 	type bitmap
 	source title_ct.png
 	mono
@@ -71,7 +71,7 @@ object
 	h 10
 end
 object
-	ifnotset 1	
+	ifnotset 9
 	type bitmap
 	source title_ct.png
 	x 10
@@ -80,7 +80,7 @@ object
 	h 10
 end
 object
-	ifset 1	
+	ifset 9
 	type bitmap
 	source title_rt.png
 	mono
@@ -90,7 +90,7 @@ object
 	h 10
 end
 object
-	ifnotset 1	
+	ifnotset 9
 	type bitmap
 	source title_rt.png
 	x window.width-10
@@ -100,7 +100,7 @@ object
 end
 #============Titlebar center=======================================================================
 object
-	ifset 1	
+	ifset 9
 	type bitmap
 	source title_lc.png
 	mono
@@ -109,7 +109,7 @@ object
 	h title.height
 end
 object
-	ifnotset 1	
+	ifnotset 9
 	type bitmap
 	source title_lc.png
 	x 0
@@ -117,7 +117,7 @@ object
 	h title.height
 end
 object
-	ifset 1	
+	ifset 9
 	type bitmap
 	source title_cc.png
 	mono
@@ -127,7 +127,7 @@ object
 	h title.height
 end
 object
-	ifnotset 1	
+	ifnotset 9
 	type bitmap
 	source title_cc.png
 	x 10
@@ -136,7 +136,7 @@ object
 	h title.height
 end
 object
-	ifset 1	
+	ifset 9
 	type bitmap
 	source title_rc.png
 	mono
@@ -145,7 +145,7 @@ object
 	h title.height
 end
 object
-	ifnotset 1	
+	ifnotset 9
 	type bitmap
 	source title_rc.png
 	x window.width-10
@@ -154,7 +154,7 @@ object
 end
 #===========Titlebar bottom / Text area top========================================================
 object
-	ifset 1	
+	ifset 9
 	type bitmap
 	source title_lb.png
 	mono
@@ -163,7 +163,7 @@ object
 	h 9
 end
 object
-	ifnotset 1	
+	ifnotset 9
 	type bitmap
 	source title_lb.png
 	x 0
@@ -171,7 +171,7 @@ object
 	h 9
 end
 object
-	ifset 1	
+	ifset 9
 	type bitmap
 	source title_cb.png
 	mono
@@ -181,7 +181,7 @@ object
 	h 9
 end
 object
-	ifnotset 1	
+	ifnotset 9
 	type bitmap
 	source title_cb.png
 	x 9
@@ -190,7 +190,7 @@ object
 	h 9
 end
 object
-	ifset 1	
+	ifset 9
 	type bitmap
 	source title_rb.png
 	mono
@@ -199,7 +199,7 @@ object
 	h 9
 end
 object
-	ifnotset 1	
+	ifnotset 9
 	type bitmap
 	source title_rb.png
 	x window.width-9
@@ -208,7 +208,7 @@ object
 end
 #============Text area edge========================================================================
 object
-	ifset 1	
+	ifset 9
 	type bitmap
 	source left.png
 	mono
@@ -218,7 +218,7 @@ object
 
 end
 object
-	ifnotset 1	
+	ifnotset 9
 	type bitmap
 	source left.png
 	x 0
@@ -226,7 +226,7 @@ object
 	h window.height-title.height-39
 end
 object
-	ifset 1	
+	ifset 9
 	type bitmap
 	source right.png
 	mono
@@ -235,7 +235,7 @@ object
 	h window.height-title.height-39
 end
 object
-	ifnotset 1	
+	ifnotset 9
 	type bitmap
 	source right.png
 	x window.width-9
@@ -244,7 +244,7 @@ object
 end
 #===========Bottom edge============================================================================
 object
-	ifset 1	
+	ifset 9
 	type bitmap
 	source bottom_left.png
 	mono
@@ -253,7 +253,7 @@ object
 	w 9
 end
 object
-	ifnotset 1	
+	ifnotset 9
 	type bitmap
 	source bottom_left.png
 	x 0
@@ -261,7 +261,7 @@ object
 	w 9
 end
 object
-	ifset 1	
+	ifset 9
 	type bitmap
 	source bottom_left2.png
 	mono
@@ -270,7 +270,7 @@ object
 	w 1
 end
 object
-	ifnotset 1	
+	ifnotset 9
 	type bitmap
 	source bottom_left2.png
 	x 9
@@ -278,7 +278,7 @@ object
 	w 1
 end
 object
-	ifset 1	
+	ifset 9
 	type bitmap
 	source bottom.png
 	mono
@@ -287,7 +287,7 @@ object
 	w window.width-20
 end
 object
-	ifnotset 1	
+	ifnotset 9
 	type bitmap
 	source bottom.png
 	x 10
@@ -295,7 +295,7 @@ object
 	w window.width-20
 end
 object
-	ifset 1	
+	ifset 9
 	type bitmap
 	source bottom_right.png
 	mono
@@ -303,14 +303,14 @@ object
 	y window.height-21
 end
 object
-	ifnotset 1	
+	ifnotset 9
 	type bitmap
 	source bottom_right.png
 	x window.width-9
 	y window.height-21
 end
 object
-	ifset 1	
+	ifset 9
 	type bitmap
 	source bottom_right2.png
 	mono
@@ -318,7 +318,7 @@ object
 	y window.height-10
 end
 object
-	ifnotset 1	
+	ifnotset 9
 	type bitmap
 	source bottom_right2.png
 	x window.width-10
@@ -326,15 +326,15 @@ object
 end
 #============Icon==================================================================================
 object
-	ifset 2
+	ifset 1
 	type icon
 	x 9
 	y 10+(title.height-icon.height)/2
 end
 #===========Avatar=================================================================================
 object
-	ifset 3
-	ifnotset 4
+	ifset 2
+	ifnotset 3
 	type avatar
 	x 11
 	y 12+title.height+9
@@ -342,8 +342,8 @@ object
 	proportional 1
 end
 object
+	ifset 2
 	ifset 3
-	ifset 4
 	type avatar
 	x window.width-avatar.width-11
 	y 12+title.height+9
@@ -352,9 +352,9 @@ object
 end
 #==========Clock===================================================================================
 object
+	ifset 4
 	ifset 5
 	ifset 6
-	ifset 7
 	type clock
 	source clock.png
 	mono
@@ -364,9 +364,9 @@ object
 	y 3
 end
 object
+	ifset 4
 	ifset 5
-	ifset 6
-	ifnotset 7
+	ifnotset 6
 	type clock
 	source clock.png
 	layer
@@ -375,9 +375,9 @@ object
 	y 3
 end
 object
-	ifset 5
-	ifnotset 6
-	ifset 7
+	ifset 4
+	ifnotset 5
+	ifset 6
 	type clock
 	source onlyclock.png
 	mono
@@ -387,9 +387,9 @@ object
 	y 3
 end
 object
-	ifset 5
+	ifset 4
+	ifnotset 5
 	ifnotset 6
-	ifnotset 7
 	type clock
 	source onlyclock.png
 	layer
@@ -399,10 +399,10 @@ object
 end
 #==========logo====================================================================================
 object
+	ifset 4
 	ifset 5
 	ifset 6
-	ifset 7
-	type bitmap logo
+	type bitmap
 	source logo.png
 	mono
 	layer
@@ -410,20 +410,20 @@ object
 	y 3
 end
 object
+	ifset 4
 	ifset 5
-	ifset 6
-	ifnotset 7
-	type bitmap logo
+	ifnotset 6
+	type bitmap
 	source logo.png
 	layer
 	x window.width-63-clock.width
 	y 3
 end
 object
-	ifnotset 5
+	ifnotset 4
+	ifset 5
 	ifset 6
-	ifset 7
-	type bitmap logo
+	type bitmap
 	source onlylogo.png
 	mono
 	layer
@@ -431,10 +431,10 @@ object
 	y 3
 end
 object
-	ifnotset 5
-	ifset 6
-	ifnotset 7	
-	type bitmap logo
+	ifnotset 4
+	ifset 5
+	ifnotset 6
+	type bitmap
 	source onlylogo.png
 	layer
 	x window.width-63
@@ -442,27 +442,45 @@ object
 end
 #===========Title text border======================================================================
 object
-	ifset 2
-	ifnotset 8
+	ifset 1
+	ifnotset 7
 	type title
-	color 255 255 255
+	color 245 245 245
 	x 7+icon.width+2
 	y 12
 	w window.width-(7+icon.width+2)-4-clock.width-10
 end
 object
-	ifnotset 2
-	ifnotset 8
+	ifnotset 1
+	ifnotset 7
 	type title
-	color 255 255 255
+	color 245 245 245
+	x 12
+	y 12
+	w window.width-16-clock.width-10
+end
+object
+	ifset 1
+	ifset 7
+	type title
+	color 245 245 245
+	x 7+icon.width+2
+	y 12
+	w window.width-(7+icon.width+2)-4-clock.width-10
+end
+object
+	ifnotset 1
+	ifset 7
+	type title
+	color 245 245 245
 	x 12
 	y 12
 	w window.width-16-clock.width-10
 end
 #===========Title text=============================================================================
 object
-	ifset 2
-	ifnotset 8
+	ifset 1
+	ifnotset 7
 	type title
 	color 50 50 50
 	x 7+icon.width+2
@@ -470,8 +488,8 @@ object
 	w window.width-(7+icon.width+2)-4-clock.width-10
 end
 object
-	ifnotset 2
-	ifnotset 8
+	ifnotset 1
+	ifnotset 7
 	type title
 	color 50 50 50
 	x 12
@@ -479,54 +497,55 @@ object
 	w window.width-16-clock.width-10
 end
 object
-	ifset 2
-	ifset 8
+	ifset 1
+	ifset 7
 	type title
+	color 50 50 50
 	x 7+icon.width+2
 	y 11
 	w window.width-(7+icon.width+2)-4-clock.width-10
 end
 object
-	ifnotset 2
-	ifset 8
+	ifnotset 1
+	ifset 7
 	type title
+	color 50 50 50
 	x 12
 	y 11
 	w window.width-16-clock.width-10
 end
-
 #============Text area=============================================================================
 object
-	ifset 4
-	ifnotset 8
+	ifset 3
+	ifnotset 7
 	type text
-	color 255 255 255
-	x 9
+	color 245 245 245
+	x 10
 	y 11+title.height+9
 	w window.width-(9+avatar.width+4)-7
 end
 object
-	ifnotset 4
-	ifnotset 8
+	ifnotset 3
+	ifnotset 7
 	type text
-	color 255 255 255
-	x 4+avatar.width+5
+	color 245 245 245
+	x 4+avatar.width+6
 	y 11+title.height+9
 	w window.width-(9+avatar.width+4)-7
 end
 object
-	ifset 4
-	ifset 8
+	ifset 3
+	ifset 7
 	type text
-	x 9
+	x 10
 	y 11+title.height+9
 	w window.width-(9+avatar.width+4)-7
 end
 object
-	ifnotset 4
-	ifset 8
+	ifnotset 3
+	ifset 7
 	type text
-	x 4+avatar.width+5
+	x 4+avatar.width+6
 	y 11+title.height+9
 	w window.width-(9+avatar.width+4)-7
 end
