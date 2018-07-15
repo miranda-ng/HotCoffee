@@ -203,7 +203,7 @@ MainMenuItems =
 			return db.GetSetting(_, 'AdvancedAutoAway', 'ALLPROTOS_OptionFlags', 0) ~= 52 and 'Disable auto-away detection' or 'Enable auto-away detection'
 		end,
 		IsVisible = function()
-			return m.IsPluginLoaded('fadd4a8a-1fd0-4398-83bd-e378b85ed8f1')
+			return m.IsPluginLoaded('fadd4a8a-1fd0-4398-83bd-e378b85ed8f1') and db.GetSetting(_, 'StatusManager', 'AdvancedAutoAway_enabled', 0) ~= 0
 		end,
 		ServiceFunction = function()
 			changes.Ask(function()
