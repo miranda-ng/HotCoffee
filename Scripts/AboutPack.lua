@@ -1,15 +1,23 @@
+assert(m)
 local db = require('m_database')
+assert(db)
 local clist = require('m_clist')
+assert(clist)
 local icolib = require('m_icolib')
+assert(icolib)
 local genmenu = require('m_genmenu')
+assert(genmenu)
 local winapi = require('winapi')
+assert(winapi)
 local changes = require('Changes')
+assert(changes)
 
 local hRoot = clist.AddMainMenuItem({
   Name = 'About pack',
   Icon = icolib.AddIcon('menuAboutPack', 'About pack'),
   Uid = '7BA9CD40-B6DC-43DA-AEA9-C863A2B98370'
 })
+assert(hRoot)
 
 local goToWiki = function()
   local value = db.GetSetting(_, 'Langpack', 'Current')
@@ -117,9 +125,10 @@ local items =
 
 local function registerMenuItem(name, description, position, serviceFunc, uid)
   local serviceName = "Scripts/About/"..name
-  m.CreateServiceFunction(serviceName, serviceFunc)
+  local hService = m.CreateServiceFunction(serviceName, serviceFunc)
+  assert(hService)
 
-  clist.AddMainMenuItem({
+  local hMenuItem = clist.AddMainMenuItem({
     Name = description,
     Parent = hRoot,
     Service = serviceName,
@@ -127,8 +136,9 @@ local function registerMenuItem(name, description, position, serviceFunc, uid)
     Icon = icolib.AddIcon(name, description, m.Translate('MirLua/About pack')),
     Uid = uid
   })
+  assert(hMenuItem)
 end
 
-for i, mi in ipairs(items) do
-  registerMenuItem(mi.Name, mi.Description, mi.Position, mi.Service, mi.Uid)
+for k, v in pairs(items) do
+  registerMenuItem(v.Name, v.Description, v.Position, v.Service, v.Uid)
 end

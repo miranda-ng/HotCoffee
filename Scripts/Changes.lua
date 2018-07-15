@@ -1,6 +1,8 @@
-local changes = {}
-
+assert(m)
 local winapi = require('winapi')
+assert(winapi)
+
+local changes = {}
 
 function changes.Ask(callback, ...)
   local IDYES = 6

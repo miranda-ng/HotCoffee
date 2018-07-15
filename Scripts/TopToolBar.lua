@@ -1,5 +1,8 @@
+assert(m)
 local icolib = require('m_icolib')
+assert(icolib)
 local ttb = require('m_toptoolbar')
+assert(ttb)
 
 local TTBBF_VISIBLE = 0x0002
 local TTBBF_ISSBUTTON = 0x0100

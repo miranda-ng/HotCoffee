@@ -1,5 +1,8 @@
+assert(m)
 local db = require('m_database')
+assert(m)
 local winapi = require('winapi')
+assert(m)
 
 db.WriteSetting(_, 'mRadio', 'Volume', 100, 1)
 
