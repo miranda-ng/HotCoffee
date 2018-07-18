@@ -2,7 +2,7 @@ local db = require('m_database')
 local winapi = require('winapi')
 
 if(not db.GetSetting(_, 'FirstRun', 'MirLua')) then
-  local mQuotesXmlPath = toansi(m.Parse('%miranda_path%\\Plugins\\quotes\\quotes.xml'))
+  local mQuotesXmlPath = toansi(m.Parse('%miranda_path%\\Plugins\\Quotes\\HotCoffee.xml'))
   m.CallService('Quotes/Import', 0, mQuotesXmlPath)
 
   local mRadioIniPath = toansi(m.Parse('%miranda_path%\\Plugins\\mradio.ini'))
