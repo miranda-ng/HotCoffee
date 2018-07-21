@@ -1,7 +1,14 @@
+assert(m)
 local db = require('m_database')
+assert(db)
 local winapi = require('winapi')
+assert(winapi)
 
-if(not db.GetSetting(_, 'FirstRun', 'MirLua')) then
+local hSystemModulesLoadedHook = m.HookEvent("Miranda/System/ModulesLoaded", function()
+  if (db.GetSetting(_, 'FirstRun', 'MirLua')) then
+    return
+  end
+
   local mQuotesXmlPath = toansi(m.Parse('%miranda_path%\\Plugins\\Quotes\\HotCoffee.xml'))
   m.CallService('Quotes/Import', 0, mQuotesXmlPath)
 
@@ -24,5 +31,10 @@ if(not db.GetSetting(_, 'FirstRun', 'MirLua')) then
 
   db.DeleteModule(_, 'PluginDisable')
 
-  m.CallService('Miranda/System/Restart', 1, 0)
-end
+  local batch = "timeout /t 10 /nobreak && taskkill /f /pid {processId} && start {processName}" % {
+    ["processId"] = winapi.GetCurrentProcessId(),
+    ["processName"] = m.GetFullPath()
+  }
+  winapi.ShellExecute(HasAccess() and "open" or "runas", 'cmd.exe', '/C '.. batch)
+end)
+assert(hSystemModulesLoadedHook)

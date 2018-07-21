@@ -1,9 +1,16 @@
+assert(m)
 db = require('m_database')
+assert(db)
 clist = require('m_clist')
+assert(clist)
 icolib = require('m_icolib')
+assert(icolib)
 genmenu = require('m_genmenu')
+assert(genmenu)
 winapi = require('winapi')
+assert(winapi)
 changes = require('Changes')
+assert(changes)
 
 Icons =
 {
@@ -58,6 +65,7 @@ hViewRoot = clist.AddMainMenuItem({
 	Icon = Icons.Menu.View,
 	Uid = '678268C5-7842-4160-9B36-72DF2F3737DB'
 })
+assert(hViewRoot)
 
 ----- IEView --------------------------------------------------------------------------------------
 hIERoot = clist.AddMainMenuItem({
@@ -67,6 +75,7 @@ hIERoot = clist.AddMainMenuItem({
 	Parent = hViewRoot,
 	Position = 500
 })
+assert(hIERoot)
 
 IEViewMenuEntires =
 {
@@ -104,6 +113,7 @@ hSkinRoot = clist.AddMainMenuItem({
 	Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD00',
 	Position = 100
 })
+assert(hSkinRoot)
 
 Skins =
 {
@@ -215,6 +225,7 @@ hFontRoot = clist.AddMainMenuItem({
 	Uid = '807EBF36-8A4B-472B-856A-FF4DB4EEF7E0',
 	Position = 400
 })
+assert(hFontRoot)
 
 Fonts =
 {
@@ -256,6 +267,7 @@ hIconsRoot = clist.AddMainMenuItem({
 	Uid = '332BB7E0-B39A-4938-AEA1-A6A8FE713100',
 	Position = 200
 })
+assert(hIconsRoot)
 
 IconPacks =
 {
@@ -264,7 +276,7 @@ IconPacks =
 	{ Name = 'Xpk',   Description = 'Xpk',   Uid = '332BB7E0-B39A-4938-AEA1-A6A8FE713103' },
 }
 
-function HaveAccess()
+function HasAccess()
 	local hFile = winapi.CreateFile(m.Parse("%miranda_path%\\Miranda.test"), winapi.GENERIC_WRITE, 1, 0, 4, winapi.FILE_ATTRIBUTE_NORMAL, 0)
 	if hFile ~= winapi.INVALID_HANDLE_VALUE then
 		winapi.CloseHandle(hFile)
@@ -314,7 +326,7 @@ function ApplyIconPack(name)
 				Args = string.format('"" "%s"', m.GetFullPath())
 			}
 		}
-		winapi.ShellExecute(HaveAccess() and "open" or "runas", 'cmd.exe', '/C '.. MakeCmdLine(Batch))
+		winapi.ShellExecute(HasAccess() and "open" or "runas", 'cmd.exe', '/C '.. MakeCmdLine(Batch))
 	end)
 	m.CallService("CloseAction")
 end
@@ -346,6 +358,7 @@ hSmileysRoot = clist.AddMainMenuItem({
 	Uid = '807EBF36-8A4B-472B-856A-FE4DB4EEF7E0',
 	Position = 300
 })
+assert(hSmileysRoot)
 
 function ApplySmilePack(name, type, background)
 	local smilesRoot = m.Parse("%miranda_path%\\skins\\smileys")
@@ -405,6 +418,7 @@ hChatsRoot = clist.AddMainMenuItem({
 	Parent = hViewRoot,
 	Position = 600
 })
+assert(hChatsRoot)
 
 hChatsAutoSizeInput = clist.AddMainMenuItem({
 	Name = 'Auto-size input area',
@@ -414,6 +428,7 @@ hChatsAutoSizeInput = clist.AddMainMenuItem({
 	Service = 'Scripts/View/AutoSizeArea',
 	Position = 100
 })
+assert(hChatsAutoSizeInput)
 
 m.CreateServiceFunction('Scripts/View/AutoSizeArea', function()
 --	if winapi.MessageBox(m.NULL, m.Translate('The changes will take effect only after closing all dialog windows. Continue?'), m.Translate('Changes...'), 36) ~= 6 then
