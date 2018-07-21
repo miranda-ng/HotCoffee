@@ -7,7 +7,7 @@ BBBF_ISRSIDEBUTTON = 128
 bbButton =
 {
   Module = module,
-  ButtonID = 1,
+  ButtonId = 1,
   Flags = BBBF_ISCHATBUTTON | BBBF_ISRSIDEBUTTON,
   Tooltip = m.Translate('Leave chat'),
   Icon = icolib.AddIcon(module, 'Leave chat')
