@@ -3,6 +3,8 @@ local db = require('m_database')
 assert(db)
 local winapi = require('winapi')
 assert(winapi)
+hasAccess = require('HasAccess')
+assert(hasAccess)
 
 local hSystemModulesLoadedHook = m.HookEvent("Miranda/System/ModulesLoaded", function()
   if (db.GetSetting(_, 'FirstRun', 'MirLua')) then
@@ -35,6 +37,6 @@ local hSystemModulesLoadedHook = m.HookEvent("Miranda/System/ModulesLoaded", fun
     ["processId"] = winapi.GetCurrentProcessId(),
     ["processName"] = m.GetFullPath()
   }
-  winapi.ShellExecute(HasAccess() and "open" or "runas", 'cmd.exe', '/C '.. batch)
+  winapi.ShellExecute(hasAccess(m.Parse("%miranda_path%\\miranda.test")) and "open" or "runas", 'cmd.exe', '/C '.. batch)
 end)
 assert(hSystemModulesLoadedHook)

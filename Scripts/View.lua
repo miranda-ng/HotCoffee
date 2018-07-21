@@ -11,6 +11,8 @@ winapi = require('winapi')
 assert(winapi)
 changes = require('Changes')
 assert(changes)
+hasAccess = require('HasAccess')
+assert(hasAccess)
 
 Icons =
 {
@@ -276,16 +278,6 @@ IconPacks =
 	{ Name = 'Xpk',   Description = 'Xpk',   Uid = '332BB7E0-B39A-4938-AEA1-A6A8FE713103' },
 }
 
-function HasAccess()
-	local hFile = winapi.CreateFile(m.Parse("%miranda_path%\\Miranda.test"), winapi.GENERIC_WRITE, 1, 0, 4, winapi.FILE_ATTRIBUTE_NORMAL, 0)
-	if hFile ~= winapi.INVALID_HANDLE_VALUE then
-		winapi.CloseHandle(hFile)
-		winapi.DeleteFile(m.Parse("%miranda_path%\\Miranda.test"))
-		return true
-	end
-	return false
-end
-
 function MakeCmdLine(batch)
 	local result = ''
 	for i, v in ipairs(batch) do
@@ -326,7 +318,7 @@ function ApplyIconPack(name)
 				Args = string.format('"" "%s"', m.GetFullPath())
 			}
 		}
-		winapi.ShellExecute(HasAccess() and "open" or "runas", 'cmd.exe', '/C '.. MakeCmdLine(Batch))
+		winapi.ShellExecute(hasAccess(m.Parse("%miranda_path%\\miranda.test")) and "open" or "runas", 'cmd.exe', '/C '.. MakeCmdLine(Batch))
 	end)
 	m.CallService("CloseAction")
 end
