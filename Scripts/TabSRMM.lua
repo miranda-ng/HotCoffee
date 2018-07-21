@@ -1,4 +1,4 @@
-mbb = require('m_msg_buttonsbar')
+mbb = require('m_srmm')
 icolib = require('m_icolib')
 
 module = 'luaLeaveChat'
