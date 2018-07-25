@@ -33,7 +33,7 @@ local MenuItems =
 				m.Translate('Load profile'),
 				MB_YESNO | MB_ICONQUESTION
 			) == IDYES then
-				winapi.ShellExecute('open', m.GetFullPath(), '/profile:fake_profile', 5)
+				winapi.ShellExecute('open', m.GetFullPath(), '/profile:enter new profile name', 5)
 			end
 		end
 	},
