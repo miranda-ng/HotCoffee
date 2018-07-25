@@ -11,18 +11,18 @@ local hSystemModulesLoadedHook = m.HookEvent("Miranda/System/ModulesLoaded", fun
     return
   end
 
-  local mQuotesXmlPath = toansi(m.Parse('%miranda_path%\\Plugins\\Quotes\\HotCoffee.xml'))
+  local mQuotesXmlPath = toansi(m.Parse('%miranda_path%\\UserSet\\Quotes\\Quotes.xml'))
   m.CallService('Quotes/Import', 0, mQuotesXmlPath)
 
-  local mRadioIniPath = toansi(m.Parse('%miranda_path%\\Plugins\\mradio.ini'))
+  local mRadioIniPath = toansi(m.Parse('%miranda_path%\\UserSet\\mRadio\\mRadio.ini'))
   m.CallService('mRadio/Import', 0, mRadioIniPath)
 
   local skin = db.GetSetting(_, 'PackInfo', 'Skin')
-  local mImportIniPath = toansi(m.Parse('%miranda_path%\\Skins\\'..skin..'.ini'))
+  local mImportIniPath = toansi(m.Parse('%miranda_path%\\UserSet\\Skins\\'..skin..'.ini'))
   m.CallService('DB/Ini/ImportFile', mImportIniPath)
 
   local font = db.GetSetting(_, 'PackInfo', 'Font')
-  local mImportIniPath = toansi(m.Parse('%miranda_path%\\Skins\\fonts\\'..font..'.ini'))
+  local mImportIniPath = toansi(m.Parse('%miranda_path%\\UserSet\\Fonts\\'..font..'.ini'))
   m.CallService('DB/Ini/ImportFile', mImportIniPath)
 
   db.WriteSetting(_, 'CList', 'State', 2, 1)

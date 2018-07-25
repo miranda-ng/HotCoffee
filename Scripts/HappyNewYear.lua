@@ -18,7 +18,7 @@ Full of pleasure, joy and fun.]])
     .. '\r\n\r\n\r\n'
     .. db.GetSetting(_, 'PackInfo', 'Production')
   if db.GetSetting(_, 'Skin', 'UseSound', 0) == 1 then
-    sounds.PlayFile(m.Parse('%miranda_path%\\skins\\sounds\\hny.mp3'))
+    sounds.PlayFile(m.Parse('%miranda_path%\\UserSet\\Sounds\\hny.mp3'))
   end
   db.WriteSetting(_, 'MirLua', 'LHNYCY', tonumber(os.date('%Y')))
   winapi.MessageBox(_, text, m.Translate('Happy New Year'), 0x00001000)

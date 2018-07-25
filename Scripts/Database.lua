@@ -37,19 +37,19 @@ local MenuItems =
 			end
 		end
 	},
-	{
-		Name = "checkDatabase", Description = 'Check database', Uid = 'D5E5D9C5-F25E-4F33-9586-E51BE3D23888',
-		ServiceFunction = function()
-			if winapi.MessageBox(_,
-				m.Translate('To continue the program should be closed. Continue?'),
-				m.Translate('Check database'),
-				MB_YESNO | MB_ICONQUESTION
-			) == IDYES then
-				winapi.ShellExecute('open', m.GetFullPath(), '/svc:dbchecker', 5)
-				m.CallService("CloseAction")
-			end
-		end
-	},
+--	{
+--		Name = "checkDatabase", Description = 'Check database', Uid = 'D5E5D9C5-F25E-4F33-9586-E51BE3D23888',
+--		ServiceFunction = function()
+--			if winapi.MessageBox(_,
+--				m.Translate('To continue the program should be closed. Continue?'),
+--				m.Translate('Check database'),
+--				MB_YESNO | MB_ICONQUESTION
+--			) == IDYES then
+--				winapi.ShellExecute('open', m.GetFullPath(), '/svc:dbchecker', 5)
+--				m.CallService("CloseAction")
+--			end
+--		end
+--	},
 	{
 		Name = "openProfileFolder", Description = 'Open profile folder', Uid = '63511F6A-3454-46EB-A862-E343B1EBF6C6',
 		ServiceFunction = function()
