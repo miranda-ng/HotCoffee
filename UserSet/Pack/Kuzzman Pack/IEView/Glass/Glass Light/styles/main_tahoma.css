@@ -1,0 +1,192 @@
+
+/******************************************
+ * common attributes                      *
+ ******************************************/
+
+body {
+	background-color: white;
+	overflow: auto;
+	padding: 0px;
+	margin:0px;
+	border: solid 1px #444;
+	background-image: url(bg_body.png);
+	background-repeat:repeat-x;
+	background-attachment: fixed;
+}
+
+div {
+	margin: 0px;
+	padding:0px;
+	background-color:transparent;
+}
+
+p {
+	margin: 100px;
+	/*padding: 2px 3px 10px 10px;
+	border: solid 3px red;*/
+}
+
+a, a:active, a:visited {
+	color: #216AEA;
+}
+
+a:hover {
+	color: #0E2F69;
+	text-decoration: none;
+}
+
+/***************************************************
+ * common stuff for sections/headers               *
+ ***************************************************/
+
+div.newsec {
+	/*margin-top:5px;*/
+}
+
+div.newsec_event .msg_text{
+	color: #444;
+}
+
+div.header_name {
+	padding-left:5px;
+	padding-top:1px;
+	font-family: Tahoma, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	white-space:nowrap;
+}
+
+div.header_date {
+	font-family: Tahoma, sans-serif;
+	font-weight: bold;
+	font-size: 11px;
+	/*color: #5e819b;*/
+	white-space:nowrap;
+	float:right;
+	padding-right:5px;
+	margin-top: 2px;
+}
+
+/***************************************************
+ * event headers                                   *
+ ***************************************************/
+
+div.header_in, div.header_out, div.status_change, div.header_event{
+	width:100%; 
+	height:24px;
+	padding:0px;
+	padding-top: 2px; 	
+	border-width: 0px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-style: solid;
+	background-color: #D9DEE1;
+}
+
+div.header_in SPAN, div.header_out SPAN, div.status_change SPAN, div.header_event SPAN{
+	display: none;
+}
+
+
+div.header_in {
+	color: #208e15;
+	border-color: #5eaa26;
+	background-color: #cdf7ad;
+}
+
+div.msg_in_first {
+	width:100%; 
+	height:16px; 
+	/*padding:2px;
+	background-image:url(msg_in.gif); 
+	background-repeat:no-repeat;*/
+}
+
+
+
+div.header_out {
+	color:#155c8e;
+	border-color:#308dbe;
+	background-color: #D2DFEE;
+}
+
+div.msg_out_first {
+	width:100%; 
+	height:16px; 
+	padding:0px;
+	/*background-image:url(msg_out.gif); 
+	background-repeat:no-repeat;*/
+}
+
+div.status_change{
+	color:#aaa;
+	border-color:#ccc;
+	background-color: #eee;
+	border-top-width: 0px;
+	border-bottom-width: 0px;
+	
+}
+
+div.header_event {
+	color:#CC8500;
+	border-color:#FFA500;
+	background-color: #fddf9e;
+}
+
+
+
+/******************************************
+ * formatting for messages and events     *
+ ******************************************/
+
+div.msg_frame {
+	width:100%; 
+	padding:0px;
+	/*border: 1px solid #9E9E9E;
+	border-top: none;*/
+}
+
+.msg_time {
+	font-family: "Tahoma";
+	font-size: 11px;
+	color: red; /*#609ccb; /*#5e819b;*/
+	padding: 0px 6px 0px 0px;
+	white-space:nowrap;
+	width:1px;
+	height:100%;
+	float:right;
+}
+
+.msg_text {
+	margin: 2px 3px 2px 2px;
+	color: #222233; /*#D7DBE8;*/
+	font-family:  Tahoma, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	padding:2px;
+}
+
+.msg_text IMG{
+	/*position: relative;
+	top:4px;*/
+	margin: 2px;
+}
+
+div.seperator {
+	/*background-color: #ffffff;*/
+	padding: 0px;
+	/*margin: 2px 0px 2px 0px;*/
+	/*position: relative;*/
+ 	width: auto;
+	border: none;
+	height:1px;
+	border-bottom: 1px dashed #455f74;
+	font-size: 0px;
+}
+
+.seperator HR{
+	margin: 0;
+	padding: 0;
+	height: 1px;
+}
+

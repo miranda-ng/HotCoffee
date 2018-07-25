@@ -1,0 +1,103 @@
+/*
+	Simply Basic Skin v1.0 
+	by Incarniac (incarniac@gmail.com)
+	
+	Somewhat inspired by Trillian's messaging style and the kryStyle Mod Skin 1.0.
+	The IVT and CSS files were originally based on Skully's Miranda IEView Skin 1.0.
+*/
+
+/* Messages */
+
+body {
+    background-image: url(msgbg.jpg); 
+}
+
+.timestamp {
+  color: #4169E1;
+  /*width: 40px;*/
+}
+.timestamp_right {
+  color: #C0C0C0;
+  /*width: 40px;*/
+  text-align: right;
+  vertical-align: top;
+  float: right;
+  padding-right: 3px;
+}
+.namebox {
+  color: #B48246;
+  font-weight: bold;
+}
+.namebox_out {
+  color: #6A5ACD;/*#4682B4*/
+  font-weight: bold;
+}
+.message {
+  color: #000000;
+  padding-left: 3px;
+}
+.message_out {
+  color: #000000;
+  padding-left: 3px;
+}
+.container {
+  font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  padding-left: 8px;
+  padding-right: 5px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+/* Grouped Messages */
+
+.group_message {
+  color: #000000;
+  padding-left: 10px;
+}
+.group_message_out {
+  color: #000000;
+  padding-left: 10px;
+}
+.group_timestamp {
+  color: #C0C0C0;
+  text-align: right;
+  vertical-align: top;
+  float: right;
+}
+
+
+/* Status, URL and File */
+
+.status_timestamp {
+  color: #C0C0C0;/*#4169E1;*/
+  /*width: 40px;*/
+}
+.status_timestamp_right {
+  color: #D0D0D0;
+  /*width: 40px;*/
+  text-align: left;//right;
+  //vertical-align: top;
+  //float: right;
+  //padding-right: 3px;
+}
+.status_namebox {
+  color: #D0D0D0/*#6A5ACD*/;
+  font-weight: bold;
+}
+.status_message {
+  color: #D0D0D0/*#000000*/;
+  padding-left: 3px;
+  font-weight: bold;
+}
+.status_container {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  
+  background-color: #FFFFFF;
+}
+

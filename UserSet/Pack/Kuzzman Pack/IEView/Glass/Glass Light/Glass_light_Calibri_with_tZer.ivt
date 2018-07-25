@@ -1,0 +1,273 @@
+<!--HTMLStart-->
+<html>
+<head>
+	<base href="%base%">
+	<link href="styles/main_calibri.css" rel="stylesheet" type="text/css" />
+	<meta http-equiv="Content-Type" content="text/html;" />
+	
+	<script language="JavaScript">
+	<!--
+		var bSeperatorWritten = false;
+		
+		function StartSession()
+		{
+			if (bSeperatorWritten == false)
+			{
+				bSeperatorWritten = true;
+			}
+			
+			return "";
+		}
+	//-->
+	</script>
+</head>
+
+<body id="body">
+  <script src="js/main.js"></script>
+  <script src="js/thumbs.js"></script>
+  <script src="js/bers.js"></script>
+  <script src="js/ausgabe.js"></script>
+
+<!--MessageIn-->
+<script language="JavaScript">
+<!--
+	document.writeln(StartSession());
+//-->
+</script>
+
+<div class="newsec">
+	<div class="header_in">
+		<div class="header_date"><SPAN>&gt;&gt; [</SPAN>%date% %time%<SPAN>]&nbsp;</SPAN></div>		
+		<div class="header_name">%name%<SPAN>: </SPAN></div>
+	</div>
+	<div class="msg_frame">
+		<div class="msg_in_first">
+			<div class="msg_text"><script type="text/javascript">gibdd('%\text%','image+video+tzer',['window+70','act_V','tzers+center+yes+get+%name%+yes']);</script></div>
+		</div>
+	</div>
+</div>
+
+<!--MessageInGroupStart-->
+<script language="JavaScript">
+<!--
+	document.writeln(StartSession());
+//-->
+</script>
+
+<div class="newsec">
+	<div class="header_in">
+		<div class="header_date"><SPAN>&gt;&gt; [</SPAN>%date% %time%<SPAN>]&nbsp;</SPAN></div>		
+		<div class="header_name">%name%<SPAN>: </SPAN></div>
+	</div>
+	<div class="msg_frame">
+		<div class="msg_in_first">
+			<div class="msg_text"><script type="text/javascript">gibdd('%\text%','image+video+tzer',['window+70','act_V','tzers+center+yes+get+%name%+yes']);</script></div>
+		</div>
+
+<!--MessageInGroupInner-->
+		<div class="seperator"></div>
+		<div class="msg_text"><script type="text/javascript">gibdd('%\text%','image+video+tzer',['window+70','act_V','tzers+center+yes+get+%name%+yes']);</script></div>
+
+<!--MessageInGroupEnd-->
+	</div>
+</div>
+
+<!--hMessageIn-->
+<div class="newsec">
+	<div class="header_in">
+		<div class="header_date"><SPAN>&gt;&gt; [</SPAN>%date% %time%<SPAN>]&nbsp;</SPAN></div>		
+		<div class="header_name">%name%<SPAN>: </SPAN></div>
+	</div>
+	<div class="msg_frame">
+		<div class="msg_in_first">
+			<div class="msg_text">%text%</div>
+		</div>
+	</div>
+</div>
+
+<!--hMessageInGroupStart-->
+<div class="newsec">
+	<div class="header_in">
+		<div class="header_date"><SPAN>&gt;&gt; [</SPAN>%date% %time%<SPAN>]&nbsp;</SPAN></div>		
+		<div class="header_name">%name%<SPAN>: </SPAN></div>
+	</div>
+	<div class="msg_frame">
+		<div class="msg_in_first">
+			<div class="msg_text">%text%</div>
+		</div>
+
+<!--hMessageInGroupInner-->
+		<div class="seperator"></div>
+		<div class="msg_text">%text%</div>
+
+<!--hMessageInGroupEnd-->	
+	</div>
+</div>
+
+
+
+
+
+<!--MessageOut-->
+<script language="JavaScript">
+<!--
+	document.writeln(StartSession());
+//-->
+</script>
+
+<div class="newsec">
+	<div class="header_out">
+		<div class="header_date"><SPAN>&lt;&lt; [</SPAN>%date% %time%<SPAN>]&nbsp;</SPAN></div>		
+		<div class="header_name">%name%<SPAN>: </SPAN></div>
+	</div>
+	<div class="msg_frame">
+		<div class="msg_out_first">
+			<div class="msg_text">%text%</div>
+		</div>
+	</div>
+</div>
+
+<!--MessageOutGroupStart-->
+<script language="JavaScript">
+<!--
+	document.writeln(StartSession());
+//-->
+</script>
+
+<div class="newsec">
+	<div class="header_out">
+		<div class="header_date"><SPAN>&lt;&lt; [</SPAN>%date% %time%<SPAN>]&nbsp;</SPAN></div>		
+		<div class="header_name">%name%<SPAN>: </SPAN></div>
+	</div>
+	<div class="msg_frame">
+		<div class="msg_out_first">
+			<div class="msg_text">%text%</div>
+		</div>
+
+<!--MessageOutGroupInner-->
+		<div class="seperator"></div>
+		<div class="msg_text">%text%</div>
+
+<!--MessageOutGroupEnd-->
+	</div>
+</div>
+
+<!--hMessageOut-->
+<div class="newsec">
+	<div class="header_out">
+		<div class="header_date"><SPAN>&lt;&lt; [</SPAN>%date% %time%<SPAN>]&nbsp;</SPAN></div>		
+		<div class="header_name">%name%<SPAN>: </SPAN></div>
+	</div>
+	<div class="msg_frame">
+		<div class="msg_out_first">
+			<div class="msg_text">%text%</div>
+		</div>
+	</div>
+</div>
+
+<!--hMessageOutGroupStart-->
+<div class="newsec">
+	<div class="header_out">
+		<div class="header_date"><SPAN>&lt;&lt; [</SPAN>%date% %time%<SPAN>]&nbsp;</SPAN></div>		
+		<div class="header_name">%name%<SPAN>: </SPAN></div>
+	</div>
+	<div class="msg_frame">
+		<div class="msg_out_first">
+			<div class="msg_text">%text%</div>
+		</div>
+
+<!--hMessageOutGroupInner-->
+		<div class="seperator"></div>
+		<div class="msg_text">%text%</div>
+
+<!--hMessageOutGroupEnd-->	
+	</div>
+</div>
+
+
+<!--Status-->
+<div class="newsec_event">
+	<div class="status_change" style="border-top-width:1px;">
+		<div class="header_date"><SPAN>! [</SPAN>%date% %time%<SPAN>]&nbsp;</SPAN></div>		
+		<div class="header_name">%name%</div>
+		<div class="msg_frame">
+			<div class="msg_text">%text%</div>
+		</div>
+	</div>
+</div>
+
+<!--hStatus-->
+<div class="newsec_event">
+	<div class="status_change" style="border-top-width:1px;">
+		<div class="header_date"><SPAN>! [</SPAN>%date% %time%<SPAN>]&nbsp;</SPAN></div>		
+		<div class="header_name">%name%</div>
+		<div class="msg_frame">
+			<div class="msg_text">%text%</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!--File-->
+<script language="JavaScript">
+<!--
+	document.writeln(StartSession());
+//-->
+</script>
+
+<div class="newsec_event">
+	<div class="header_event">
+		<div class="header_date"><SPAN>_file_ [</SPAN>%date% %time%<SPAN>]&nbsp;</SPAN></div>		
+		<div class="header_name">%name%<SPAN>:</SPAN>&nbsp;</div>
+	</div>
+	<div class="msg_frame">
+		<div class="msg_text">%text%</div>
+	</div>
+</div>
+
+<!--hFile-->
+<div class="newsec_event">
+	<div class="header_event">
+		<div class="header_date"><SPAN>_file_ [</SPAN>%date% %time%<SPAN>]&nbsp;</SPAN></div>		
+		<div class="header_name">%name%<SPAN>:</SPAN>&nbsp;</div>
+	</div>
+	<div class="msg_frame">
+		<div class="msg_text">%text%</div>
+	</div>
+</div>
+
+
+
+
+
+
+<!--URL-->
+<script language="JavaScript">
+<!--
+	document.writeln(StartSession());
+//-->
+</script>
+
+<div class="newsec_event">
+	<div class="header_event">
+		<div class="header_date">%date%&nbsp;</div>		
+		<div class="header_name">%name%<SPAN>: </SPAN></div>
+	</div>
+	<div class="msg_frame">
+		<div class="msg_time">%time%</div>
+		<div class="msg_text">%text%</div>
+	</div>
+</div>
+
+<!--hURL-->
+<div class="newsec_event">
+	<div class="header_event">
+		<div class="header_date">%date% (H)</div>		
+		<div class="header_name">%name%<SPAN>: </SPAN></div>
+	</div>
+	<div class="msg_frame">
+		<div class="msg_time">%time%</div>
+		<div class="msg_text">%text%</div>
+	</div>
+</div>

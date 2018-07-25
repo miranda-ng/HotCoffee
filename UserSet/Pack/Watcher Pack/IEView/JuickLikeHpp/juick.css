@@ -1,0 +1,38 @@
+.juickMsgNum {
+    text-decoration: none;
+}
+
+.juickMsgNum:hover {
+    text-decoration: none;
+}
+
+.juickNick:link {
+    text-decoration: none;
+}
+
+.juickNick:hover {
+    text-decoration: none;
+}
+
+.controls:link {
+    text-decoration: none;
+
+}
+
+.controls:hover {
+    text-decoration: none;
+}
+
+.juickTag:link {
+    text-decoration: none;
+}
+
+.juickTag:hover {
+    text-decoration: none;
+}
+
+.Icons {
+	display: inline;
+	vertical-align: middle;
+	border: none;
+}

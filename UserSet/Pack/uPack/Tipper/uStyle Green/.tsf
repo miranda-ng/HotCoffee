@@ -1,0 +1,51 @@
+; uStyle Green
+; By Unsane
+;
+
+[About]
+Author = Unsane
+Preview = preview.png
+
+[Background]
+Image = background.png
+TM = TM_STRECH_ALL 
+Left = 14
+Top = 14
+Right = 14
+Bottom = 14
+
+[Fonts]
+Title-face = Tahoma
+Title-color = 40 40 40
+Title-size = 8
+Title-effect = FONT_BOLD
+
+Label-face = Tahoma
+Label-color = 40 40 40
+Label-size = 7
+Label-effect = FONT_BOLD
+
+Value-face = Tahoma
+Value-color = 40 40 40
+Value-size = 7
+
+TrayTitle-face = Tahoma
+TrayTitle-color = 40 40 40
+TrayTitle-size = 8
+TrayTitle-effect = FONT_BOLD
+
+Divider-color = 40 40 40
+
+[Appearance]
+General-padding = 8
+Title-indent = 22
+Text-indent = 22
+Value-indent = 5
+Text-padding = 4
+Outer-avatar-padding = 8
+Inner-Avatar-padding = 5
+Sidebar-width = 0
+Opacity = 100
+
+[Other]
+Enable-coloring = FALSE

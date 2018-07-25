@@ -1,0 +1,51 @@
+;-------------------------------------
+;     KupoXP2 skin for Tipper YM 
+;-------------------------------------
+
+[About]
+Author = Power[O]FF
+Preview = preview.png
+
+[Background]
+Image = KupoXP2.png
+TM = TM_STRECH_ALL 
+Left = 5
+Top = 5
+Right = 5
+Bottom = 5
+
+[Fonts]
+Title-face = Arial
+Title-color = 53 53 53
+Title-size = 9
+Title-effect = FONT_BOLD
+
+Label-face = Arial
+Label-color = 53 53 53
+Label-size = 9
+Label-effect = FONT_BOLD
+
+Value-face = Verdana
+Value-color = 100 100 100
+Value-size = 8
+
+TrayTitle-face = Arial
+TrayTitle-color = 53 53 53
+TrayTitle-size = 9
+TrayTitle-effect = FONT_BOLD
+
+Divider-color = 53 53 53
+
+[Appearance]
+General-padding = 8
+Title-indent = 22
+Text-indent = 22
+Value-indent = 10 
+Text-padding = 4
+Outer-avatar-padding = 8
+Inner-Avatar-padding = 10
+Sidebar-width = 26 
+Opacity = 100
+
+[Other]
+Enable-coloring = FALSE

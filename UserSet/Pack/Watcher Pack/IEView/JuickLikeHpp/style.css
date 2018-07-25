@@ -1,0 +1,93 @@
+.body {
+	background: #EEFEE9;
+	font: 11px Verdana;
+	color: #000000;
+	margin: 0;
+	padding: 0px;
+	overflow-x:hidden;
+}
+
+
+.box_in, .box_inh, .box_out, .box_outh,
+.boxg_in, .boxg_inh, .boxg_out, .boxg_outh,
+.box_file, .box_fileh, .box_url, .box_urlh,
+.box_status, .box_statush {
+	padding: 1px 4px 4px 4px;
+	margin-bottom: 0px;
+	word-wrap: break-word;
+	width: auto;
+	overflow: auto;
+}
+
+
+.box_in, .box_out, .boxg_in, .boxg_out,
+.box_file, .box_url, .box_status
+	{border-bottom: 1px solid #CCCCCC}
+
+.box_inh, .box_outh, .boxg_inh,.boxg_outh,
+.box_fileh, .box_urlh, .box_statush
+	{border-bottom: 1px solid #CCCCCC}
+
+.box_in, .box_inh, .boxg_in, .boxg_inh,
+	{background: #F4FEEB}
+
+.box_file, .box_fileh
+	{background: #B3D9D9}
+
+.box_url, .box_urlh
+	{background: #cad7f4}
+
+.box_status, .box_statush
+	{background: #D2F9D9}
+
+
+.head {
+	line-height: 15px;
+	font-weight: bold;
+	padding: 1px 1px 1px 3px;
+	margin-bottom: 2px;
+	margin-top: 2px;
+}
+
+.box_in .head, .box_inh .head, .boxg_in .head, .boxg_inh .head {}
+.box_out .head, .box_outh .head, .boxg_out .head, .boxg_outh .head 
+	{color: #0860BD}
+
+.box_file .head, .box_fileh .head {}
+
+.box_url .head, .box_urlh .head {}
+
+.box_status .head, .box_statush .head {}
+
+.box_out .text, .box_outh .text, .boxg_out .text, .boxg_out .textg,
+.boxg_outh .text, .boxg_outh .textg
+	{color: #000000}
+
+.text, .textg {
+	line-height: 13px;	
+	margin-left: 2px;
+}
+.status {line-height: 16px; color=#23782C}
+.file {line-height: 16px; color=#408080}
+.textg {
+	border-top: 1px dashed #000000;
+	margin-top: 4px;
+}
+
+.date,{float: right; font: 10px  Calibrib; font-weight: bold; color: #808080;}
+.time,{float: right; font: 10px  Calibrib; font-weight: bold; color: #808080;}
+
+IMG {
+	display: inline;
+	vertical-align: middle;
+}
+
+a {
+	text-decoration: underline;
+	color: #0000FF;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #0000FF;
+}

@@ -1,0 +1,198 @@
+@import url('handwritting.css');
+
+/* Textveränderungen */
+.Link-foto			{color: #e79d10;}
+.Link-foto2			{color: #e79d10;}
+.Link-Text			{color: #e79d10;}
+.Link-Text2			{color: #e79d10;}
+.Mail-Text			{color: #e79d10;}
+.Mail-Text2			{color: #e79d10;}
+.tzerlink			{color: #e79d10;}
+.tzerlink2			{color: #e79d10;}
+
+/* Fonts */
+input {
+	background: #071203;
+	border-top: 1px solid #446515;
+	border-left: 1px solid #446515;
+	border-bottom: 1px solid #446515;
+	border-right: 1px solid #446515;
+	color: #446515;
+}
+
+body {
+	background: url(green/green.jpg) repeat-y center top #000 fixed;
+}
+
+html {
+	scrollbar-face-color: #163606;
+	scrollbar-highlight-color: #2d620a;
+	scrollbar-shadow-color: #446515;
+	scrollbar-arrow-color: #446515;
+	scrollbar-track-color: #0f1f04;
+	scrollbar-base-color: #0f2800;
+	scrollbar-darkshadow-color: #0f2800;
+	background-color: #000000;
+	overflow: auto;
+	padding: 0px;
+	margin: 0px;
+	font-size: 13px;
+	color: #fff;
+	zoom: 0 !important;
+}
+
+a, a:active {
+	color: #e79d10;
+	text-decoration: none;
+	font-weight: normal;
+	cursor:pointer;
+}
+
+a:visited {
+	color: #ffc863;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+a:hover {
+	color: #ffc863;
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+div {
+	width: auto;
+	word-wrap: break-word;
+}
+
+.img {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	vertical-align: middle;
+}
+
+.head {
+	border-bottom: 1px dotted;
+}
+
+.date {
+	font-weight: bold;
+	float: right;
+	font-size: 11px;
+	padding: 3px 5px 0px 5px;
+}
+
+.name {
+	font-weight: bold;
+	padding: 3px 5px 0px 5px;
+}
+
+.time {
+	color: Gray;
+	font-weight: normal;
+	float: right;
+	font-size: 11px;
+}
+
+.text {
+/*	word-break: break-all;*/
+	padding: 3px 5px 3px 5px;
+}
+
+.avatar {
+	float: left;
+	padding: 0px 0px 0px 0px;
+}
+
+.avatar img {
+	height: 32;
+}
+
+.avatar object {
+	width: 32;
+	height: 32;
+}
+
+.MessageIn, .MessageOut, .hMessageIn, .hMessageOut, .frame, .Status, .hStatus, .FileIn, .hFileIn, .FileOut, .hFileOut, .URL, .hURL, {
+	/*border-top: 1px solid #505050;
+	border-bottom: 1px solid #151414;*/
+}
+
+.MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
+	background: url(green/divider.png) repeat-x top;
+}
+
+.hMessageIn, .hMessageOut, .history, .hStatus, .hFileIn, .hFileOut, .hURL {
+	background: url(green/history.png) no-repeat bottom right;
+}
+
+
+/* -------------------- incoming messagebox -------------------- */
+
+.in .head, .in .time, .MessageInGroupInner .time, .hMessageInGroupInner .time {
+	color: #b4df00;
+	/*background-image: url(green/in.png);*/
+}
+
+.contentMessageIn, .contenthMessageIn, .contentMessageInGroupStart, .MessageInGroupInner, .contenthMessageInGroupStart, .hMessageInGroupInner {
+	/*background-image: url(green/in.png);*/
+}
+
+/* -------------------- outgoing messagebox -------------------- */
+
+.out .head, .out .time, .MessageOutGroupInner .time, .hMessageOutGroupInner .time {
+	color: #e79d10;
+	/*background-image: url(green/out.png);*/
+}
+
+.contentMessageOut, .contenthMessageOut, .contentMessageOutGroupStart, .MessageOutGroupInner, .contenthMessageOutGroupStart, .hMessageOutGroupInner {
+	/*background-image: url(green/out.png);*/
+}
+
+/* -------------------- status support -------------------- */
+
+.status .head {
+	color: #b4df00;
+	/*background-image: url(green/status.png);*/
+}
+
+.contentStatus, .contenthStatus {
+	color: #fff;
+	/*background-image: url(green/status.png);*/
+}
+
+.contentStatus .time, .contenthStatus .time {
+	color: #b4df00;
+}
+
+/* -------------------- file transfer support -------------------- */
+
+.infile .head, .outfile .head {
+	color: #b4df00;
+	/*background-image: url(green/file.png);*/
+}
+
+.contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
+	color: #fff;
+	/*background-image: url(green/file.png);*/
+}
+
+.contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
+	color: #b4df00;
+}
+
+/* -------------------- URL support -------------------- */
+
+.inurl .head {
+	color: #b4df00;
+	/*background-image: url(green/url.png);*/
+}
+
+.contentURL, .contenthURL {
+	color: #fff;
+	/*background-image: url(green/url.png);*/
+}
+
+.contentURL .time, .contenthURL .time {
+	color: #b4df00;
+}

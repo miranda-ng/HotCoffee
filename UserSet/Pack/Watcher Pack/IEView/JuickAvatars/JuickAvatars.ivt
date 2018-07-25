@@ -1,0 +1,199 @@
+<!--
+	Simply Basic Skin v1.0 
+	by Incarniac (incarniac@gmail.com)
+	
+	Somewhat inspired by Trillian's messaging style and the kryStyle Mod Skin 1.0.
+	The IVT and CSS files were originally based on Skully's Miranda IEView Skin 1.0.
+-->
+
+<!--HTMLStart-->
+<html>
+
+<head>
+    <base href="%base%">
+    <link rel=stylesheet type="text/css" href="style.css" />
+    <link rel=stylesheet type="text/css" href="messages.css" />
+    <link rel=stylesheet type="text/css" href="history.css">
+    <script language="Javascript" src="utils.js"></script>
+    <script language="Javascript" src="nizers.js"></script>
+</head>
+
+<body>
+
+<!--MessageOut-->
+<div class="container">
+  <span class="namebox_out">%name%</span>
+  <span class="timestamp"> - %date%, %time%</span>
+    <br />
+  <span class="message">%text%</span>
+</div>
+
+<!--MessageIn-->
+<script language="Javascript">
+    /**
+     * Add's nizer's functionality to html-container with id = `id` if current
+     * contact name matches `regex`. :)
+     *
+     * 'nizer' is a function, that recieves id of some html-container and adds
+     * to it capabilities of corresponding xmpp-based blogging service. 
+     *
+     * For example, now there are two nizers: juickonizer and bnwizer. First
+     * one adds feauters for juick@juick.com and second --
+     * for bnw.blasux.ru.
+     *
+     * Nizers defined in nizers.js.
+     */
+    nize = function(id, regex, nizer){
+        if (regex.test("%name%")){
+            nizer(id);
+            document.getElementById(id).id = "old_" + id;
+        }
+    };
+</script>
+
+<div class="container">
+    <span class="namebox">%name%</span>
+    <span class="timestamp"> - %date%, %time%</span>
+    <br />
+    <span class="message" id="new_message">%text%</span>
+    <script language="javascript">
+        var id = "new_message";
+        var juick = /(juick|jubo)/i;
+        var psto = /psto/i;
+        var nya = /nyashaj/i;
+
+        nize(id, juick, juickonizer);
+        nize(id, psto, pstonizer);
+        nize(id, nya, nyaizer);
+    </script>
+</div>
+
+<!--hMessageIn-->
+<script language="Javascript">
+    /**
+     * just one more definition of nize to get round ieview restrictions.
+     */
+    nize = function(id, regex, nizer){
+        if (regex.test("%name%")){
+            nizer(id);
+            document.getElementById(id).id = "old_" + id;
+        }
+    }
+</script>
+<div class="history_container">
+  <span class="namebox">%name%</span>
+  <span class="timestamp"> - %date%, %time%</span>
+  <span class="history_message" id="hmessage">%text%</span>
+    <script language="javascript">
+        var id  = "hmessage";
+        var juick = /(juick|jubo)/i;
+        var psto = /psto/i;
+        var nya = /nyashaj/i;
+
+        nize(id, juick, juickonizer);
+        nize(id, psto, pstonizer);
+        nize(id, nya, nyaizer);
+    </script>
+</div>
+
+<!--hMessageOut-->
+<div class="history_container">
+  <span class="namebox_out"> %name%</span>
+  <span class="timestamp"> - %date%, %time%</span>
+  <br />
+  <span class="history_message">%text%</span>
+</div>
+
+<!--Status-->
+<div class="status_container">
+  <span class="status_timestamp_right">(%time%, %date%)</span>
+  <span class="status_namebox">%name%</span>
+  <span class="status_message">%text%</span>
+</div>
+
+<!--URL-->
+<div class="status_container">
+  <span class="status_timestamp">[%time%]</span>
+  <span class="status_namebox">%name%:</span>
+  <span class="status_message">URL: %text%</span>
+</div>
+
+<!--File-->
+<div class="status_container">
+  <span class="status_timestamp">[%time%]</span>
+  <span class="status_namebox">%name%:</span>
+  <span class="status_message">File: %text%</span>
+</div>
+
+<!--hStatus-->
+<div class="status_container">
+  <span class="status_timestamp_right">[%time%]</span>
+  <span class="status_namebox">%name%</span>
+  <span class="status_message">%text%</span>
+</div>
+
+<!--hURL-->
+<div class="status_container">
+  <span class="status_timestamp">[%time%]</span>
+  <span class="history_status_namebox">%name%:</span>
+  <span class="history_status_message">URL: %text%</span>
+</div>
+
+<!--hFile-->
+<div class="status_container">
+  <span class="status_timestamp">[%time%]</span>
+  <span class="history_status_namebox">%name%:</span>
+  <span class="history_status_message">File: %text%</span>
+</div>
+
+<!-- /////////////// MESSAGE GROUPING /////////////// -->
+
+<!--MessageOutGroupStart-->
+<div class="container_out">
+  <div class="namebox_out">%name%</div>
+  <div class="group_timestamp">[%time%]</div>
+  <div class="group_message_out">%text%</div>
+
+<!--MessageOutGroupInner-->
+  <div class="group_timestamp">[%time%]</div>
+  <div class="group_message_out">%text%</div>
+
+<!--MessageOutGroupEnd-->
+</div>
+
+<!--MessageInGroupStart-->
+<div class="container">
+  <div class="namebox">%name%</div>
+  <div class="group_timestamp">[%time%]</div>
+  <div class="group_message">%text%</div>
+
+<!--MessageInGroupInner-->
+  <div class="group_timestamp">[%time%]</div>
+  <div class="group_message">%text%</div>
+
+<!--MessageInGroupEnd-->
+</div>
+
+<!--hMessageOutGroupStart-->
+<div class="history_container_out">
+  <div class="namebox_out">%name%</div>
+  <div class="group_timestamp">[%time%]</div>
+  <div class="group_message_out">%text%</div>
+
+<!--hMessageOutGroupInner-->
+  <div class="group_message_out">%text%</div>
+
+<!--hMessageOutGroupEnd-->
+</div>
+
+<!--hMessageInGroupStart-->
+<div class="container">
+  <div class="namebox">%name%</div>
+  <div class="group_timestamp">[%time%]</div>
+  <div class="group_message">%text%</div>
+
+<!--hMessageInGroupInner-->
+  <div class="group_message">%text%</div>
+
+<!--hMessageInGroupEnd-->
+</div>

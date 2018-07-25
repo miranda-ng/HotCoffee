@@ -1,0 +1,80 @@
+/* 
+	Simply Basic Skin v1.0 
+	by Incarniac (incarniac@gmail.com)
+	
+	Somewhat inspired by Trillian's messaging style and the kryStyle Mod Skin 1.0.
+	The IVT and CSS files were originally based on Skully's Miranda IEView Skin 1.0.
+*/
+
+/* History Messages */
+
+.history_timestamp {
+  color: #4169E1;
+}
+.history_namebox {
+  color: #6A5ACD;
+  font-weight: bold;
+}
+.history_namebox_out {
+  color: #4682B4;
+  font-weight: bold;
+}
+.history_message {
+  color: #555555;
+  padding-left: 3px;
+}
+
+.history_container {
+  font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  padding-left: 8px;
+  padding-right: 5px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #dddddd !important;
+}
+
+/* History Grouped Messages */
+
+.history_group_message {
+  color: #555555;
+  padding-left: 10px;
+}
+.history_group_message {
+  color: #555555;
+  padding-left: 10px;
+}
+.history_group_timestamp {
+  color: #C0C0C0;
+  text-align: right;
+  vertical-align: top;
+  float: right;
+}
+
+
+/* History Status, URL, File */
+
+.history_status_timestamp {
+  color: #4169E1;
+  width: 40px;
+  font-weight: bold;
+}
+.history_status_namebox {
+  color: #6A5ACD;
+  font-weight: bold;
+}
+.history_status_message {
+  color: #000000;
+  padding-left: 3px;
+}
+.history_status_container {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  
+  background-color: #FFFFFF;
+}
+

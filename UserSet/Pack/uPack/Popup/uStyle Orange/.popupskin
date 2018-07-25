@@ -1,0 +1,177 @@
+# uStyle Orange
+# By Unsane
+#
+
+options
+	#option	id	val	title
+	option	1	1	Show avatars
+	option	2	1	Avatars on right
+	option	3	1	Draw line under the title
+end
+
+w window.width
+h 10 + title.height + 5 + 1 + 5 + (text.height > avatar.height) + 10 + 2
+
+#background
+object
+	type bitmap
+	source background.png
+	x 14
+	y 14
+	w window.width - 28
+	h window.height - 28
+end
+
+#borderlines
+object
+	type bitmap
+	source line_top.png
+	x 14
+	y 0
+	w window.width - 28
+	h 14
+end
+
+object
+	type bitmap
+	source line_bottom.png
+	x 14
+	y window.height - 14
+	w window.width - 28
+	h 14
+end
+
+object
+	type bitmap
+	source line_left.png
+	x 0
+	y 14
+	w 14
+	h window.height - 28
+end
+
+object
+	type bitmap
+	source line_right.png
+	x window.width - 14
+	y 14
+	w 14
+	h window.height - 24
+end
+
+#borderline corners
+object
+	type bitmap
+	source corner_top-left.png
+	x 0
+	y 0
+	w 14
+	h 14
+end
+
+object
+	type bitmap
+	source corner_top-right.png
+	x window.width - 14
+	y 0
+	w 14
+	h 14
+end
+
+object
+	type bitmap
+	source corner_bottom-left.png
+	x 0
+	y window.height - 14
+	w 14
+	h 14
+end
+
+object
+	type bitmap
+	source corner_bottom-right.png
+	x window.width - 14
+	y window.height - 14
+	w 14
+	h 14
+end
+
+#icon
+object
+	type icon
+	x 10
+	y 10
+	w 16
+	h 16
+end
+
+#clock
+object
+	type clock
+	source clock.png
+	clocksize 0 3 7 7 7 7 7 7 7 7 7 7 0 0 0
+	x window.width - clock.width - 10
+	y 12
+	w -1
+	h -1
+end
+
+#title
+object
+	type title
+	x icon.width + 10
+	y 11
+	w window.width - clock.width -  icon.width - 20
+	h -1
+end
+
+#line
+object
+	ifset 3
+	type bitmap
+	source line.png
+	x 10
+	y 10 + (title.height > icon.height) + 5
+	w window.width - 20
+	h 1
+end
+
+#avatar
+object
+	ifset 1
+	ifnotset 2
+	type avatar
+	x 10
+	y 10 + (title.height > icon.height) + 10
+	w options.avatarsize
+	proportional 1
+end
+
+object
+	ifset 1
+	ifset 2
+	type avatar
+	x window.width - avatar.width - 10
+	y 10 + (title.height > icon.height) + 10
+	w options.avatarsize
+	proportional 1
+end
+
+#text
+object
+	ifnotset 2
+	type text
+	x 10 + avatar.width + 2
+	y 10 + (title.height > icon.height) + 10
+	w window.width - icon.width - avatar.width - 20
+	h -1
+end
+
+object
+	ifset 2
+	type text
+	x 10
+	y 10 + (title.height > icon.height) + 10
+	w window.width - icon.width - avatar.width - 20
+	h -1
+end

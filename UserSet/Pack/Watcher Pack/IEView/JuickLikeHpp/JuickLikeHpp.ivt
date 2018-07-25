@@ -1,0 +1,161 @@
+<!--HTMLStart-->
+<html>
+<base href="%base%">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Expires" content="0" />
+	<meta name="Description" content="Template for IEView" />
+	<meta name="Yasnovidyashii" content="JuickLikeHpp" />
+	<title>Silveria</title>
+	<script language="Javascript" src="juickonizer.js"></script>
+	<link rel="stylesheet" href="style.css" />
+	<link href="juick.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="body">
+
+<!--MessageIn-->
+<div class="box_in">
+	<div class="head"><span class="date">%date% %time%</span><img class="IMG" src="images/message.gif"/>  %name%:</div>
+	<div class="text" id="new_message">%text%</div>
+	<script language="javascript">
+		var juick = /(juick|jubo)/i;
+                if (juick.test("%name%")){
+               		juickonize("new_message");
+			document.getElementById("new_message").id = "old_message";
+		}
+        </script>
+</div>
+
+<!--hMessageIn-->
+<div class="box_inh">
+	<div class="head"><span class="date">%date% %time%</span><img class="IMG" src="images/message.gif"/>  %name%:</div>
+	<div class="text" id="new_message">%text%</div>
+	<script language="javascript">
+		var juick = /(juick|jubo)/i;
+                if (juick.test("%name%")){
+	               	juickonize("new_message");
+			document.getElementById("new_message").id = "old_message";
+		}
+        </script>
+</div>
+
+<!--MessageOut-->
+<div class="box_out">
+	<div class="head"><span class="date">%date% %time%</span><img class="IMG" src="images/message.gif"/>  %name%:</div>
+	<div class="text">%text%</div>
+</div>
+
+<!--hMessageOut-->
+<div class="box_outh">
+	<div class="head"><span class="date">%date% %time%</span><img class="IMG" src="images/message.gif"/>  %name%:</div>
+	<div class="text">%text%</div>
+</div>
+
+<!--File-->
+<div class="box_file">
+	<div class="head"><span class="date">%date% %time%</span><img class="IMG" src="images/file.gif"/>  %name%:</div>
+	<div class="file">%text%</div>
+</div>
+
+<!--hFile-->
+<div class="box_fileh">
+	<div class="head"><span class="date">%date% %time%</span><img class="IMG" src="images/file.gif"/>  %name%:</div>
+	<div class="file">%text%</div>
+</div>
+
+<!--URL-->
+<div class="box_url">
+	<div class="head"><span class="date">%date% %time%</span><img class="IMG" src="images/url.gif"/>  %name%:</div>
+	<div class="text">%text%</div>
+</div>
+
+<!--hURL-->
+<div class="box_urlh">
+	<div class="head"><span class="date">%date% %time%</span><img class="IMG" src="images/url.gif"/>  %name%:</div>
+	<div class="text">%text%</div>
+</div>
+
+<!--Status-->
+<div class="box_status">
+	<div class="head"><span class="date">%date% %time%</span><img class="IMG" src="images/status.gif"/> %name%:</div>
+	<div class="status">%text%</div>
+</div>
+
+<!--hStatus-->
+<div class="box_statush">
+	<div class="head"><span class="date">%date% %time%</span><img class="IMG" src="images/status.gif"/> %name%:</div>
+	<div class="status">%text%</div>
+</div>
+
+<!--MessageInGroupStart-->
+<div class="boxg_in">
+	<div class="head"><span class="date">%date%</span><img class="IMG" src="images/message.gif"/>  %name%:</div>
+	<div class="text" id="new_message"><span class="time">%time%</span> %text%</div>
+	<script language="javascript">
+		var juick = /(juick|jubo)/i;
+                if (juick.test("%name%")){
+               		juickonize("new_message");
+			document.getElementById("new_message").id = "old_message";
+		}
+        </script>
+
+<!--MessageInGroupInner-->
+	<div class="textg" id="new_message"><span class="time">%time%</span> %text%</div>
+	<script language="javascript">
+		var juick = /(juick|jubo)/i;
+                if (juick.test("%name%")){
+               		juickonize("new_message");
+			document.getElementById("new_message").id = "old_message";
+		}
+        </script>
+
+<!--MessageInGroupEnd-->
+</div>
+
+<!--hMessageInGroupStart-->
+<div class="boxg_inh">
+	<div class="head"><span class="date">%date%</span><img class="IMG" src="images/message.gif"/>  %name%:</div>
+	<div class="text" id="new_message"><span class="time">%time%</span> %text%</div>
+	<script language="javascript">
+		var juick = /(juick|jubo)/i;
+                if (juick.test("%name%")){
+               		juickonize("new_message");
+			document.getElementById("new_message").id = "old_message";
+		}
+        </script>
+
+<!--hMessageInGroupInner-->
+	<div class="textg" id="new_message"><span class="time">%time%</span> %text%</div>
+	<script language="javascript">
+		var juick = /(juick|jubo)/i;
+                if (juick.test("%name%")){
+               		juickonize("new_message");
+			document.getElementById("new_message").id = "old_message";
+		}
+        </script>
+
+<!--hMessageInGroupEnd-->
+</div>
+
+<!--MessageOutGroupStart-->
+<div class="boxg_out">
+	<div class="head"><span class="date">%date%</span><img class="IMG" src="images/message.gif"/>  %name%:</div>
+	<div class="text"><span class="time">%time%</span> %text%</div>
+
+<!--MessageOutGroupInner-->
+	<div class="textg"><span class="time">%time%</span> %text%</div>
+
+<!--MessageOutGroupEnd-->
+</div>
+
+<!--hMessageOutGroupStart-->
+<div class="boxg_outh">
+	<div class="head"><span class="date">%date%</span><img class="IMG" src="images/message.gif"/>  %name%:</div>
+	<div class="text"><span class="time">%time%</span> %text%</div>
+
+<!--hMessageOutGroupInner-->
+	<div class="textg"><span class="time">%time%</span> %text%</div>
+
+<!--hMessageOutGroupEnd-->
+</div>

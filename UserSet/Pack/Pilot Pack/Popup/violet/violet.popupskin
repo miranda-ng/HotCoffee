@@ -1,0 +1,117 @@
+w 10+icon.width+10+title.width+15+clock.width+10 > 10+avatar.width+5+text.width+17
+h 14+title.height+5+(avatar.height>text.height)+3
+
+object
+    type bitmap
+    source back.png
+    x 11
+    y 11
+    w window.width-0-0
+    h window.height-11-11
+end
+
+object
+    type bitmap
+    source top-left.png
+    x 0
+    y 0
+end
+
+object
+    type bitmap
+    source top.png
+    x 11
+    y 0
+    w window.width-11-11
+end
+
+object
+    type bitmap
+    source top-right.png
+    x window.width-11
+    y 0
+end
+
+object
+    type bitmap
+    source right.png
+    x window.width-11
+    y 11
+    h window.height-11-11
+end
+
+object
+    type bitmap
+    source bottom-right.png
+    x window.width-11
+    y window.height-11
+end
+
+object
+    type bitmap
+    source bottom.png
+    x 11
+    y window.height-11
+    w window.width-11-11
+end
+
+object
+    type bitmap
+    source bottom-left.png
+    x 0
+    y window.height-11
+end
+
+object
+    type bitmap
+    source left.png
+    x 0
+    y 11
+    h window.height-11-11
+end
+
+object
+    type bitmap
+    source divider.png
+    layer
+    x 11
+    y 2+title.height
+    w window.width-11-11
+end
+
+object
+    type icon
+    x 10
+    y 6+(title.height-icon.height)/2
+end
+
+object
+    type title
+    color 255 155 255
+    x 10+icon.width+5
+    y 5
+    w window.width-(0+icon.width+0)-0-clock.width-0
+end
+
+object
+    type avatar
+    x 11
+    y 2+title.height+10
+    w options.avatarsize
+    proportional 1
+end
+
+object
+    type text
+    color 240 240 240
+    x 11+avatar.width+7
+    y title.height+12
+    w window.width-(11+avatar.width+1)-11
+end
+
+object
+    type clock    
+    color 255 155 255
+    x window.width-7-clock.width
+    y 5
+end

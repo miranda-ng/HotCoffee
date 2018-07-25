@@ -1,0 +1,50 @@
+;-------------------------------------
+;     Spring Rainbow skin for Tipper YM 
+;-------------------------------------
+
+[About]
+Author = Power[O]FF
+Preview = preview.jpg
+
+[Background]
+Image = SpingRainbow.png
+TM = TM_STRECH_ALL 
+Left = 5
+Top = 30
+Right = 5
+Bottom = 5
+
+[Fonts]
+Title-face = arial
+Title-color = 160 234 252
+Title-size = 9
+Title-effect = FONT_BOLD
+
+Label-face = verdana
+Label-color = 255 255 255
+Label-size = 8
+
+Value-face = verdana
+Value-color = 255 255 255
+Value-size = 8
+
+TrayTitle-face = verdana
+TrayTitle-color = 255 255 255
+TrayTitle-size = 8
+Title-effect = FONT_BOLD
+
+Divider-color = 13 146 189
+
+[Appearance]
+General-padding = 4
+Title-indent = 18
+Text-indent = 22
+Value-indent = 10 
+Text-padding = 3
+Outer-avatar-padding = 10
+Inner-Avatar-padding = 10
+Opacity = 100
+
+[Other]
+Enable-coloring = FALSE
+

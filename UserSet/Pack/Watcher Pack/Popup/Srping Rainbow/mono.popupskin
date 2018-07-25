@@ -1,0 +1,248 @@
+#Spring Rainbow PopUp
+#Author: PowerOFF
+#www.willdgang.do.am
+
+w 4+icon.width+4+title.width+5+4+clock.width+4 > 5+2+avatar.width+4+text.width+2+5
+h 4+title.height+4+2+(avatar.height>text.height)+2+5
+
+# bakground
+
+
+object 
+	type bitmap
+	source back.png
+	x 9
+	y 27
+	w window.width-19
+	h window.height-36
+end
+
+# titlebar lines
+
+object  
+	type bitmap
+	source title_lt.png
+	x 0
+	y 2
+end
+
+
+
+object  
+	type bitmap
+	source title_ct.png
+	x 3
+	y 2
+	w window.width-3-10
+
+end
+
+
+
+object  
+	type bitmap
+	source title_rt.png
+	x window.width-10
+	y 2
+end
+
+
+
+object  
+	type bitmap
+	source title_lc.png
+	x 0
+	y 9
+	h title.height
+end
+
+
+object  
+	type bitmap
+	source title_cc.png
+	x 5
+	y 9
+	w window.width-5-5
+	h title.height
+end
+
+
+
+object  
+	type bitmap
+	source title_rc.png
+	x window.width-10
+	y 9
+	h title.height
+end
+
+
+object  
+	type bitmap
+	source title_lb.png
+	x 0
+	y 5+title.height
+end
+
+
+object  
+	type bitmap
+	source title_cb.png
+	x 2
+	y 5+title.height
+	w window.width-3-5
+end
+
+
+object  
+	type bitmap
+	source title_rb.png
+	x window.width-10-0
+	y 5+title.height
+end
+
+# text area lines
+
+
+object   
+	type bitmap
+	source left.png
+	x 0
+	y 16+title.height-2
+	h window.height-(0+title.height+4)-8
+end
+
+
+object	
+	type bitmap
+	source right.png
+	x window.width-10
+	y 8+title.height+6
+	h window.height-(4+title.height+4)-8
+end
+
+
+
+object  
+	type bitmap
+	source bottom_left.png
+	x 0
+	y window.height-9
+end
+
+
+
+object  
+	type bitmap
+	source bottom.png
+	x +9
+	y window.height-9
+	w window.width-13-5
+end
+
+
+object 
+	ifset 3 
+	type bitmap
+	source bottom_right1.png
+	x window.width15
+	y window.height13
+end
+
+object 
+	ifnotset 3 
+	type bitmap
+	source bottom_right.png
+	x window.width-10
+	y window.height-9
+end
+# clock
+
+object
+    ifset 1
+    type clock
+    source clock.png
+#    mono
+    clocksize 5 6 9 9 9 9 9 9 9 9 9 9 0 0 5
+    x window.width-12-clock.width
+    y 4
+end
+# avatar
+object
+	ifset 2	
+	type avatar
+	x 7
+	y 6+title.height+4+2
+	w 40
+	proportional 1
+end
+
+# icon
+object  ifset 1
+	type icon
+	x 3
+	y 5+(title.height-icon.height)/2
+end
+
+#titlebar text
+
+
+object 
+	ifset 1
+	type title
+	color 255 255 255
+	x 2+icon.width+4
+	y 5
+	w window.width-(4+icon.width+4)-4-clock.width-4
+end
+object  
+	ifset 1
+	type title
+	color 255 255 255
+	x 2+icon.width+4
+	y 5
+	w window.width-(4+icon.width+4)-4-clock.width-4
+end
+object  
+	ifset 1
+	type title
+	color 255 255 255
+	x 2+icon.width+4
+	y 5
+	w window.width-(4+icon.width+4)-4-clock.width-4
+end
+
+
+object  
+	ifnotset 1
+	type title
+	color 255 255 255
+	x 2+4
+	y 5
+	w window.width-(4+icon.width+4)-4-clock.width-4
+end
+object  
+	ifnotset 1
+	type title
+	color 255 255 255
+	x 2+4
+	y 5
+	w window.width-(4+icon.width+4)-4-clock.width-4
+end
+object  
+	ifnotset 1
+	type title
+	color 255 255 255
+	x 2+4
+	y 5
+	w window.width-(4+icon.width+4)-4-clock.width-4
+end
+
+# text area 
+object 
+	type text
+	color 255 255 255
+	x 6+2+avatar.width+2
+	y 6+title.height+4+2
+	w window.width-(1+2+avatar.width+4)-2-8
+end

@@ -1,0 +1,94 @@
+[Skin_Description_Section]
+Name=Kupo XP
+Author=[PowerOFF]
+Contact =nightfox-nl@mail.ru
+URL=www.wildgang.do.am
+Preview=preview.png
+Description=Skin for Miranda IM
+SkinFolder=Kupo XP
+[ModernSkin]
+
+;Objects
+
+
+  
+;Main back
+  $window=sGlyph,Image,back.png,StretchBoth,30,30,10,10,255
+
+$hotopengroup=sGlyph,Image,HotOpenGroup.png,StretchBoth,6,2,6,2,250
+$normalopengroup=sGlyph,Image,NormalOpenGroup.png,StretchBoth,6,2,6,2,250
+
+$hotclosedgroup=sGlyph,Image,HotClosedGroup.png,StretchBoth,2,2,2,2,250
+$normalclosedgroup=sGlyph,Image,NormalClosedGroup.png,StretchBoth,2,2,2,2,250
+
+$hotcontact=sGlyph,Image,HotContact.png,StretchBoth,6,6,6,6,250
+
+$scrollBack=sGlyph,Image,Scrollbar.png,StretchBoth,0,2,0,2,250
+$scrollBtnUp=sGlyph,Image,Scrollbtnup.png,StretchBoth,3,0,2,0,250
+$scrollBtnDn=sGlyph,Image,Scrollbtndn.png,StretchBoth,3,0,2,0,250
+$scrollThumb=sGlyph,Image,Thumb.png,StretchBoth,0,3,0,5,250
+
+$select=sGlyph,Image,Select.png,StretchBoth,8,8,8,8,200
+
+;Main menu
+ $BTNmenunorm=sGlyph,Image,button.png,StretchBoth,0,0,0,0,255
+ $BTNmenuhov=sGlyph,Image,buttonover.png,StretchBoth,0,0,0,0,255
+ $BTNmenuDn=sGlyph,Image,button.png,StretchBoth,0,0,0,0,255
+
+;Minimize
+  $BTNminnorm=sGlyph,Image,button.png,StretchBoth,0,0,0,0,255
+  $BTNminhov=sGlyph,Image,buttonover.png,StretchBoth,0,0,0,0,255
+  $BTNminDn=sGlyph,Image,button.png,StretchBoth,0,0,0,0,255
+
+;------------------------------------------------------------------------
+
+
+;main
+  @0=s$window:Main,ID=Background
+  @1=s$hotclosedgroup:CL,ID=Row,Type=Group,Open=False,Hot=True
+  @2=s$normalclosedgroup:CL,ID=Row,Type=Group,Open=False
+  @3=s$hotopengroup:CL,ID=Row,Type=Group,Open=True,Hot=True
+  @4=s$normalopengroup:CL,ID=Row,Type=Group,Open=True
+  @5=s$hotcontact:CL,ID=Row,Type=*Contact,Hot=True
+  @6=s$contact:CL,ID=Row,Type=*Contact,Odd=False
+  @7=s$oddcontact:CL,ID=Row,Type=*Contact,Odd=True
+  @8=s$singlecontact:CL,ID=Row,Type=*Contact
+  @9=s$BTNcloseDn:MButton,ID=close,Down=1
+  @10=s$BTNclosehov:MButton,ID=close,Hovered=1
+  @11=s$BTNclosenorm:MButton,ID=close
+  @12=s$BTNminDn:MButton,ID=minimize,Down=1
+  @13=s$BTNminhov:MButton,ID=minimize,Hovered=1
+  @14=s$BTNminnorm:MButton,ID=minimize
+  @15=s$select:CL,ID=Selection
+  @16=s$scrollBack:Main,ID=ScrollBar,Part=Back
+  @17=s$scrollBtnUp:Main,ID=ScrollBar,Part=UpLineButton
+  @18=s$scrollBtnDn:Main,ID=ScrollBar,Part=DownLineButton
+  @19=s$scrollThumb:Main,ID=ScrollBar,Part=Thumb
+  @20=s$status:Main,ID=StatusBar
+  @21=s$BTNmenuDn:MButton,ID=mainmenu,Down=1
+  @22=s$BTNmenuhov:MButton,ID=mainmenu,Hovered=1
+  @23=s$BTNmenunorm:MButton,ID=mainmenu
+
+;Buttons
+ #minimize=sPush,CList/ShowHide,-20,2,-7,22,R-R--,0,0,Minimize Miranda
+ #mainmenu=sPush,CList/ShowMainMenu,7,2,20,22,-----,0,0,Show Main Menu
+
+ ;----------------------------------------------------------------------
+
+[CLUI]
+;Another setting for CLUI section
+  LeftClientMargin=b5
+  TopClientMargin=b23
+  RightClientMargin=b5
+  BottomClientMargin=b5
+  LeftOffset=d8
+  RightOffset=d8
+  SpaceBetween=d6
+
+[CLC]
+  HiLightMode=b1
+  GroupIndent=b4
+  LeftMargin=b9
+  RightMargin=b5
+
+

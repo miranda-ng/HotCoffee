@@ -1,0 +1,346 @@
+<!--HTMLStart-->
+
+<html>
+
+<head>
+	<title>GoneDark_red</title>
+	<base href="%base%">
+	<link rel="stylesheet" type="text/css" media="screen" href="styles/red.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="alternate stylesheet" type="text/css" href="./!tools/fonts/big.css" title="A++++" />
+	<link rel="alternate stylesheet" type="text/css" href="./!tools/fonts/great.css" title="A+++" />
+	<link rel="alternate stylesheet" type="text/css" href="./!tools/fonts/large.css" title="A++" />
+	<link rel="alternate stylesheet" type="text/css" href="./!tools/fonts/medium.css" title="A+" />
+	<link rel="alternate stylesheet" type="text/css" href="./!tools/fonts/norm.css" title="A" />
+	<link rel="alternate stylesheet" type="text/css" href="./!tools/fonts/small.css" title="A-" />
+	<link rel="alternate stylesheet" type="text/css" href="./!tools/fonts/xsmall.css" title="A--" />
+	<script language="Javascript" src="config.js"></script>
+</head>
+
+<body class="body" id="body">
+
+<!--MessageIn-->
+<div class="in MessageIn">
+	<div class="head">
+		<div class="date">%date%</div>
+		<div class="name">%name%</div>
+	</div>
+	<div class="contentMessageIn">
+		<div class="text">
+			<div class="time">%time%</div>
+			<script>mp3('%\text%');</script>
+			<script>getitall('%\text%','%\name%','%\uin%','%\base%',meldungsart[0]);</script>
+		</div>
+	</div>
+	<script>ProcessGroup(MessageIn);</script>
+</div>
+
+
+
+<!--MessageOut-->
+<div class="out MessageOut">
+	<div class="head">
+		<div class="date">%date%</div>
+		<div class="name">%name%</div>
+	</div>
+	<div class="contentMessageOut">
+		<div class="text">
+			<div class="time">%time%</div>
+			<script>mp3('%\text%');</script>
+			<script>getitall('%\text%','%\name%','%\uin%','%\base%',meldungsart[1]);</script>
+		</div>
+	</div>
+	<script>ProcessGroup(MessageOut);</script>
+</div>
+
+
+
+<!--MessageInGroupStart-->
+<div class="frame">
+<div class="in MessageInGroupStart">
+	<div class="head">
+		<div class="date">%date%</div>
+		<div class="name">%name%</div>
+	</div>
+	<div class="contentMessageInGroupStart">
+		<div class="text">
+			<div class="time">%time%</div>
+			<script>mp3('%\text%');</script>
+			<script>getitall('%\text%','%\name%','%\uin%','%\base%',meldungsart[2]);</script>
+		</div>
+	</div>
+	<script>ProcessGroup(MessageInGroupStart);</script>
+</div>
+
+<!--MessageInGroupInner-->
+	<div class="MessageInGroupInner">
+		<div class="text">
+			<div class="time">%time%</div>
+			<script>mp3('%\text%');</script>
+			<script>getitall('%\text%','%\name%','%\uin%','%\base%',meldungsart[2]);</script>
+		</div>
+		<script>ProcessGroup(MessageInGroupInner);</script>
+	</div>
+
+<!--MessageInGroupEnd-->
+</div>
+
+
+
+<!--MessageOutGroupStart-->
+<div class="frame">
+<div class="out MessageOutGroupStart">
+	<div class="head">
+		<div class="date">%date%</div>
+		<div class="name">%name%</div>
+	</div>
+	<div class="contentMessageOutGroupStart">
+		<div class="text">
+			<div class="time">%time%</div>
+			<script>mp3('%\text%');</script>
+			<script>getitall('%\text%','%\name%','%\uin%','%\base%',meldungsart[3]);</script>
+		</div>
+	</div>
+	<script>ProcessGroup(MessageOutGroupStart);</script>
+</div>
+
+<!--MessageOutGroupInner-->
+	<div class="MessageOutGroupInner">
+		<div class="text">
+			<div class="time">%time%</div>
+			<script>mp3('%\text%');</script>
+			<script>getitall('%\text%','%\name%','%\uin%','%\base%',meldungsart[3]);</script>
+		</div>
+		<script>ProcessGroup(MessageOutGroupInner);</script>
+	</div>
+
+<!--MessageOutGroupEnd-->
+</div>
+
+
+
+<!--hMessageIn-->
+<div class="in hMessageIn">
+	<div class="head">
+		<div class="date">%date%</div>
+		<div class="name">%name%</div>
+	</div>
+	<div class="contenthMessageIn">
+		<div class="text">
+			<div class="time">%time%</div>
+			<script>mp3('%\text%');</script>
+			<script>getitall('%\text%','%\name%','%\uin%','%\base%',meldungsart[4]);</script>
+		</div>
+	</div>
+	<script>ProcessGroup(hMessageIn);</script>
+</div>
+
+
+
+<!--hMessageOut-->
+<div class="out hMessageOut">
+	<div class="head">
+		<div class="date">%date%</div>
+		<div class="name">%name%</div>
+	</div>
+	<div class="contenthMessageOut">
+		<div class="text">
+			<div class="time">%time%</div>
+			<script>mp3('%\text%');</script>
+			<script>getitall('%\text%','%\name%','%\uin%','%\base%',meldungsart[5]);</script>
+		</div>
+	</div>
+	<script>ProcessGroup(hMessageOut);</script>
+</div>
+
+
+
+<!--hMessageInGroupStart-->
+<div class="frame history">
+<div class="in hMessageInGroupStart">
+	<div class="head">
+		<div class="date">%date%</div>
+		<div class="name">%name%</div>
+	</div>
+	<div class="contenthMessageInGroupStart">
+		<div class="text">
+			<div class="time">%time%</div>
+			<script>mp3('%\text%');</script>
+			<script>getitall('%\text%','%\name%','%\uin%','%\base%',meldungsart[6]);</script>
+		</div>
+	</div>
+	<script>ProcessGroup(hMessageInGroupStart);</script>
+</div>
+
+<!--hMessageInGroupInner-->
+	<div class="hMessageInGroupInner">
+		<div class="text">
+			<div class="time">%time%</div>
+			<script>mp3('%\text%');</script>
+			<script>getitall('%\text%','%\name%','%\uin%','%\base%',meldungsart[6]);</script>
+		</div>
+		<script>ProcessGroup(hMessageInGroupInner);</script>
+	</div>
+
+<!--hMessageInGroupEnd-->
+</div>
+
+
+
+<!--hMessageOutGroupStart-->
+<div class="frame history">
+<div class="out hMessageOutGroupStart">
+	<div class="head">
+		<div class="date">%date%</div>
+		<div class="name">%name%</div>
+	</div>
+	<div class="contenthMessageOutGroupStart">
+		<div class="text">
+			<div class="time">%time%</div>
+			<script>mp3('%\text%');</script>
+			<script>getitall('%\text%','%\name%','%\uin%','%\base%',meldungsart[7]);</script>
+		</div>
+	</div>
+	<script>ProcessGroup(hMessageOutGroupStart);</script>
+</div>
+
+<!--hMessageOutGroupInner-->
+	<div class="hMessageOutGroupInner">
+		<div class="text">
+			<div class="time">%time%</div>
+			<script>mp3('%\text%');</script>
+			<script>getitall('%\text%','%\name%','%\uin%','%\base%',meldungsart[7]);</script>
+		</div>
+		<script>ProcessGroup(hMessageOutGroupInner);</script>
+	</div>
+
+<!--hMessageOutGroupEnd-->
+</div>
+
+
+
+<!--Status-->
+<div class="status Status">
+	<div class="head">
+		<div class="date">%date%</div>
+		<div class="name">%proto%</div>
+	</div>
+	<div class="contentStatus">
+		<div class="text">
+			<div class="time">%time%</div>
+			%name% %text%
+		</div>
+	</div>
+	<script>ProcessGroup(Status);</script>
+</div>
+
+<!--hStatus-->
+<div class="status hStatus">
+	<div class="head">
+		<div class="date">%date%</div>
+		<div class="name">%proto%</div>
+	</div>
+	<div class="contenthStatus">
+		<div class="text">
+			<div class="time">%time%</div>
+			%name% %text%
+		</div>
+	</div>
+	<script>ProcessGroup(hStatus);</script>
+</div>
+
+
+
+<!--FileIn-->
+<div class="infile FileIn">
+	<div class="head">
+		<div class="date">%date%</div>
+		<div class="name">%name%</div>
+	</div>
+	<div class="contentFileIn">
+		<div class="text">
+			<div class="time">%time%</div>
+			<script>getandsenddata('%\text%','%\nameIn%','%base%','%\uinIn%','%\cid%')</script>
+		</div>
+	</div>
+	<script>ProcessGroup(FileIn);</script>
+</div>
+
+<!--hFileIn-->
+<div class="infile hFileIn">
+	<div class="head">
+		<div class="date">%date%</div>
+		<div class="name">%name%</div>
+	</div>
+	<div class="contenthFileIn">
+		<div class="text">
+			<div class="time">%time%</div>
+			<script>getandsenddata('%\text%','%\nameIn%','%base%','%\uinIn%','%\cid%')</script>
+		</div>
+	</div>
+	<script>ProcessGroup(hFileIn);</script>
+</div>
+
+<!--FileOut-->
+<div class="outfile FileOut">
+	<div class="head">
+		<div class="date">%date%</div>
+		<div class="name">%name%</div>
+	</div>
+	<div class="contentFileOut">
+		<div class="text">
+			<div class="time">%time%</div>
+			<script>getandsenddata('%\text%','%\nameIn%','%base%','%\uinIn%','%\cid%')</script>
+		</div>
+	</div>
+	<script>ProcessGroup(FileOut);</script>
+</div>
+
+<!--hFileOut-->
+<div class="outfile hFileOut">
+	<div class="head">
+		<div class="date">%date%</div>
+		<div class="name">%name%</div>
+	</div>
+	<div class="contenthFileOut">
+		<div class="text">
+			<div class="time">%time%</div>
+			<script>getandsenddata('%\text%','%\nameIn%','%base%','%\uinIn%','%\cid%')</script>
+		</div>
+	</div>
+	<script>ProcessGroup(hFileOut);</script>
+</div>
+
+
+
+<!--URL-->
+<div class="inurl URL">
+	<div class="head">
+		<div class="date">%date%</div>
+		<div class="name">%name%</div>
+	</div>
+	<div class="contentURL">
+		<div class="text">
+			<div class="time">%time%</div>
+			<script>getitall('%\text%','%\name%','%\uin%','%\base%',meldungsart[8]);</script>
+		</div>
+	</div>
+	<script>ProcessGroup(URL);</script>
+</div>
+
+<!--hURL-->
+<div class="inurl hURL">
+	<div class="head">
+		<div class="date">%date%</div>
+		<div class="name">%name%</div>
+	</div>
+	<div class="contenthURL">
+		<div class="text">
+			<div class="time">%time%</div>
+			<script>getitall('%\text%','%\name%','%\uin%','%\base%',meldungsart[8]);</script>
+		</div>
+	</div>
+	<script>ProcessGroup(hURL);</script>
+</div>
+
+</body></html>

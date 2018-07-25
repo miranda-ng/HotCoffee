@@ -1,0 +1,194 @@
+/*@import url('printing.css');*/
+
+/* Textveränderungen */
+.Link-Text			{color: #AAD5FF;}
+.tzerlink			{color: #AAD5FF;}
+
+/* Fonts */
+input {
+	background: #4F4F4F;
+	border-top: 1px solid #838383;
+	border-left: 1px solid #838383;
+	border-bottom: 1px solid #292728;
+	border-right: 1px solid #292728;
+	color: #D3D3D3;
+}
+
+html {
+	scrollbar-face-color: #4F4F4F;
+	scrollbar-highlight-color: #838383;
+	scrollbar-shadow-color: #4F4F4F;
+	scrollbar-arrow-color: #D3D3D3;
+	scrollbar-base-color: #4F4F4F;
+	scrollbar-darkshadow-color: #292728;
+	background: url(Dark.png) fixed no-repeat bottom right;
+/*	background: url(texturelined/back.png) no-repeat;*/
+	background-color: #646263;
+	overflow: auto;
+	padding: 0px 0px 0px 0px;
+	margin: 0;
+	font-size: 13px;
+	color: #D5D5D5;
+	zoom: 0 !important;
+}
+
+/*body { background: url(Dark.png) fixed no-repeat bottom right, url(texturelined/back.png) no-repeat; }*/
+
+a, a:active {
+	color: #AAD5FF;
+	text-decoration: none;
+	font-weight: normal;
+	cursor:pointer;
+}
+
+a:visited {
+	color: #DAA76D;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+a:hover {
+	color: #AAD5FF;
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+div {
+	width: auto;
+	word-wrap: break-word;
+}
+
+.img {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	vertical-align: middle;
+}
+
+.head {
+/*	border-bottom: 1px dotted;*/
+}
+
+.date {
+	font-weight: bold;
+	float: right;
+	font-size: 11px;
+	padding: 3px 5px 0px 5px;
+}
+
+.name {
+	font-weight: bold;
+	padding: 3px 5px 0px 5px;
+}
+
+.time {
+	color: #989898;
+	font-weight: normal;
+	float: right;
+	font-size: 11px;
+}
+
+.text {
+/*	word-break: break-all;*/
+	padding: 3px 5px 3px 5px;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+div.avatar {
+	display: none;
+	float: left;
+	padding: 0px 0px 0px 0px;
+}
+
+.avatar img {
+	height: 32;
+}
+
+.code {
+	border: 1px dashed #838383;
+	margin: -1px;
+}
+
+.MessageIn, .MessageOut, .hMessageIn, .hMessageOut, .frame, .Status, .hStatus, .FileIn, .hFileIn, .FileOut, .hFileOut, .URL, .hURL, {
+	border-top: 1px solid #838383;
+	border-bottom: 1px solid #3D3B3C;
+}
+
+.MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
+	border-top: 1px dotted #838383;
+}
+
+.hMessageIn, .hMessageOut, .history, .hStatus, .hFileIn, .hFileOut, .hURL {
+	background: url(texturelined/history.png) no-repeat bottom right;
+}
+
+
+/* -------------------- incoming messagebox -------------------- */
+
+.in .head {
+	color: #DAA76D;
+	background-image: url(texturelined/in.png);
+}
+
+.contentMessageIn, .contenthMessageIn, .contentMessageInGroupStart, .MessageInGroupInner, .contenthMessageInGroupStart, .hMessageInGroupInner {
+	background-image: url(texturelined/in.png);
+}
+
+/* -------------------- outgoing messagebox -------------------- */
+
+.out .head {
+	color: #8EADCC;
+	background-image: url(texturelined/out.png);
+}
+
+.contentMessageOut, .contenthMessageOut, .contentMessageOutGroupStart, .MessageOutGroupInner, .contenthMessageOutGroupStart, .hMessageOutGroupInner {
+	background-image: url(texturelined/out.png);
+}
+
+/* -------------------- status support -------------------- */
+
+.status .head {
+	color: #DAA76D;
+	background-image: url(texturelined/status.png);
+}
+
+.contentStatus, .contenthStatus {
+	color: #E9D5C0;
+	background-image: url(texturelined/status.png);
+}
+
+.contentStatus .time, .contenthStatus .time {
+	color: #B3906A;
+}
+
+/* -------------------- file transfer support -------------------- */
+
+.infile .head, .outfile .head {
+	color: #7BC47B;
+	background-image: url(texturelined/file.png);
+}
+
+.contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
+	color: #B1E0B5;
+	background-image: url(texturelined/file.png);
+}
+
+.contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
+	color: #8E9F8E;
+}
+
+/* -------------------- URL support -------------------- */
+
+.inurl .head {
+	color: #81A3C6;
+	background-image: url(texturelined/url.png);
+}
+
+.contentURL, .contenthURL {
+	color: #81A3C6;
+	background-image: url(texturelined/url.png);
+}
+
+.contentURL .time, .contenthURL .time {
+	color: #9CA3AB;
+}

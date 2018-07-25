@@ -1,0 +1,291 @@
+#azenis_2 for PopUp
+#Author: Minevra, Èþëü 2009
+#ICQ: 477477792
+#URL: http://mirdiz.ucoz.ru/ 
+
+w 4+icon.width+4+title.width+4+clock.width+8 > 4+2+avatar.width+4+text.width+38
+h 4+(title.height>18)+4+4+(avatar.height>text.height)+25
+
+#---------------------------optionen----------------------------------
+
+options
+   	option	3	0	Show icon
+	option	4	0	Show clock
+end
+
+#----------------------linke obere Titelecke------------------------
+
+object  
+	ifnotset 1 
+	type bitmap
+	source title_lt.png
+	x 0
+	y 0
+end
+
+#----------------------obere Titelmitte------------------------
+
+object  
+	ifnotset 1
+	type bitmap
+	source title_ct.png
+	x 14
+	y 0
+end
+
+#------------------------------------------------------------------
+
+object  
+	ifnotset 1
+	type bitmap
+	source title_ct2.png
+	x 14
+	y 15
+	h 2
+	w window.width-15
+end
+
+#----------------------rechte obere Titelecke------------------------
+object  
+	ifnotset 1
+	type bitmap
+	source title_rt.png
+	x window.width-14
+	y 0
+end
+
+#------------------------------------------------------------------
+
+object  
+	ifnotset 1
+	type bitmap
+	source title_lt2.png
+	x 0
+	y 17
+end
+
+#------------------------------------------------------------------
+
+object  
+	ifnotset 1
+	type bitmap
+	source title_lt3.png
+	x 12
+	y 17
+	h title.height
+end
+
+#------------------------------------------------------------------
+
+object  
+	ifnotset 1
+	type bitmap
+	source title_lt4.png
+	x 12
+	y 17+title.height
+end
+
+#------------------------------------------------------------------
+
+object  
+	ifnotset 1
+	type bitmap
+	source title_ct3.png
+	x 14
+	y 17+title.height
+	w window.width-16
+end
+
+#------------------------------------------------------------------
+
+object  
+	ifnotset 1
+	type bitmap
+	source title_ct4.png
+	x 14
+	y 17
+	h title.height
+	w window.width-14
+end
+
+#------------------------------------------------------------------
+
+object  
+	ifnotset 1
+	type bitmap
+	source title_rt2.png
+	x window.width-14
+	y 17
+	h title.height
+end
+
+#-----------------------rechte Kante------------------------------
+object	
+	ifnotset 1
+	type bitmap
+	source back.png
+	x 30
+	y 19+title.height
+end
+
+#------------------------------------------------------------------
+
+object  
+	ifnotset 1
+	type bitmap
+	source title_rt3.png
+	x window.width-12
+	y 17
+end
+#------------------------------------------------------------------
+
+object  
+	ifnotset 1
+	type bitmap
+	source title_rt4.png
+	x window.width-14
+	y 17+title.height
+	h 2
+end
+
+#------------------------linke Kante------------------------------
+object   
+	ifnotset 1
+	type bitmap
+	source left.png
+	x 12
+	y 19+title.height
+end
+#-----------------------rechte Kante------------------------------
+object	
+	ifnotset 1
+	type bitmap
+	source right.png
+	x window.width-30
+	y 19+title.height
+	
+end
+
+#-----------------------linke untere Ecke------------------------------
+object  
+	ifnotset 1
+	type bitmap
+	source bottom_left.png
+	x 0
+	y window.height-31
+end
+#--------------------------untere Kante--------------------------------
+object  
+	ifnotset 1
+	type bitmap
+	source bottom.png
+	x 12
+	y window.height-31
+end
+#-----------------------rechte untere Ecke------------------------------
+object
+	ifnotset 1
+	type bitmap
+	source bottom_rightS.png
+	x window.width-38
+	y window.height-31
+end
+#----------------------------icon---------------------------------------
+object 
+	ifset 3
+	type icon
+    x 20
+    y 10+(title.height-icon.height)/2+2+5
+end
+#---------------------------avatar---------------------------------------
+object
+    ifnotset 7
+	type avatar
+	x 17
+	y 4+title.height+22
+	w options.avatarsize
+	proportional 1
+end
+object
+    ifset 7
+	type avatar
+	x 10
+	y 4+title.height+17
+	w options.avatarsize
+	proportional 1
+end
+#----------------------------Uhr---------------------------------------
+object
+    ifset 4
+    ifnotset 1
+	ifnotset 5
+	type clock
+	source clock.png
+	layer
+	clocksize 5 4 8 6 8 7 8 8 8 7 8 8 0 0 5
+	x window.width-clock.width-14
+	y 9+(title.height/2)
+end
+object
+    ifset 4
+    ifset 1
+	ifnotset 5
+	type clock
+	source clock.png
+	mono
+	layer
+	clocksize 5 4 8 6 8 7 8 8 8 7 8 8 0 0 5
+	x window.width-clock.width-14
+	y 9+(title.height/2)
+end
+object
+    ifset 4
+    ifnotset 1
+	ifset 5
+	type clock
+	source clock2.png
+	layer
+	clocksize 5 4 8 6 8 7 8 8 8 7 8 8 0 0 5
+	x window.width-clock.width-14
+	y 9+(title.height/2)
+end
+object
+    ifset 4
+    ifset 1
+	ifset 5
+	type clock
+	source clock2.png
+	mono
+	layer
+	clocksize 5 4 8 6 8 7 8 8 8 7 8 8 0 0 5
+	x window.width-clock.width-14
+	y 9+(title.height/2)
+end
+#----------------------------Titeltext---------------------------------------
+
+object
+    ifset 3
+	type title
+	color 254 162 7
+	x 15+icon.width+8
+	y 17
+	w window.width-(4+icon.width+4)-4-clock.width-5
+end
+#----------------------------Titeltext ohne icon---------------------------------------
+object
+    ifnotset 3
+	type title
+	color 254 162 7
+	x 19
+	y 17
+	w window.width-(4+icon.width+4)-4-clock.width-5
+end
+
+#----------------------------Textnachricht---------------------------------------
+object
+	type text
+	color 108 108 108
+	x avatar.width+17
+	y title.height+24
+	w window.width-avatar.width-37
+end
