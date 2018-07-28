@@ -1341,7 +1341,7 @@ fnt0Set=b204
 fnt0Col=d16777215
 fnt0Flags=w160
 
-[Bass Interface]
+[BASS Interface]
 ColorFrame=d5263186
 
 [Console]
