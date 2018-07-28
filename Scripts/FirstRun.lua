@@ -11,8 +11,8 @@ local hSystemModulesLoadedHook = m.HookEvent("Miranda/System/ModulesLoaded", fun
     return
   end
 
-  local mQuotesXmlPath = toansi(m.Parse('%miranda_path%\\UserSet\\Quotes\\Quotes.xml'))
-  m.CallService('Quotes/Import', 0, mQuotesXmlPath)
+  local mCurrencyRatesXmlPath = toansi(m.Parse('%miranda_path%\\UserSet\\CurrencyRates\\CR.xml'))
+  m.CallService('CurrencyRates/Import', 0, mCurrencyRatesXmlPath)
 
   local mRadioIniPath = toansi(m.Parse('%miranda_path%\\UserSet\\mRadio\\mRadio.ini'))
   m.CallService('mRadio/Import', 0, mRadioIniPath)

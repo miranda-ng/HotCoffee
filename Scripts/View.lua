@@ -119,37 +119,37 @@ assert(hSkinRoot)
 
 Skins =
 {
-	{ Name = 'defaultmirl', Description = 'Miranda style',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD01' },
-	{ Name = 'defaultwinl', Description = 'Windows style',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD02' },
+	{ Name = 'DefaultMir_Light', Description = 'Miranda style',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD01' },
+	{ Name = 'DefaultWin_Light', Description = 'Windows style',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD02' },
 
-	{ Name = 'diplomatd',   Description = 'Diplomat Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD03' },
-	{ Name = 'diplomatl',   Description = 'Diplomat Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD04' },
+	{ Name = 'Diplomat_Dark',   Description = 'Diplomat Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD03' },
+	{ Name = 'Diplomat_Light',   Description = 'Diplomat Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD04' },
 
-	{ Name = 'glamourd',    Description = 'Glamour Dark',    Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD05' },
-	{ Name = 'glamourl',    Description = 'Glamour Light',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD06' },
+	{ Name = 'Glamour_Dark',    Description = 'Glamour Dark',    Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD05' },
+	{ Name = 'Glamour_Light',    Description = 'Glamour Light',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD06' },
 
-	{ Name = 'goldtimed',   Description = 'Goldtime Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD07' },
-	{ Name = 'goldtimel',   Description = 'Goldtime Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD08' },
+	{ Name = 'GoldTime_Dark',   Description = 'GoldTime Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD07' },
+	{ Name = 'GoldTime_Light',   Description = 'GoldTime Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD08' },
 
-	{ Name = 'graphited',   Description = 'Graphite Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD09' },
-	{ Name = 'graphitel',   Description = 'Graphite Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD0A' },
+	{ Name = 'Graphite_Dark',   Description = 'Graphite Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD09' },
+	{ Name = 'Graphite_Light',   Description = 'Graphite Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD0A' },
 
-	{ Name = 'photooned',   Description = 'Photoone Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD0B' },
-	{ Name = 'photoonel',   Description = 'Photoone Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD0C' },
+	{ Name = 'PhotoOne_Dark',   Description = 'PhotoOne Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD0B' },
+	{ Name = 'PhotoOne_Light',   Description = 'PhotoOne Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD0C' },
 
-	{ Name = 'surfaceb',    Description = 'Surface Black',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD0D' },
-	{ Name = 'surfacew',    Description = 'Surface White',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD0E' },
+	{ Name = 'Surface_Black',    Description = 'Surface Black',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD0D' },
+	{ Name = 'Surface_White',    Description = 'Surface White',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD0E' },
 
-	{ Name = 'textolited',  Description = 'Textolite Dark',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD0F' },
-	{ Name = 'textolitel',  Description = 'Textolite Light', Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD10' },
+	{ Name = 'Textolite_Dark',  Description = 'Textolite Dark',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD0F' },
+	{ Name = 'Textolite_Light',  Description = 'Textolite Light', Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD10' },
 
-	{ Name = 'winstyled',   Description = 'Winstyle Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD11' },
-	{ Name = 'winstylel',   Description = 'Winstyle Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD12' },
+	{ Name = 'WinStyle_Dark',   Description = 'WinStyle Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD11' },
+	{ Name = 'WinStyle_Light',   Description = 'WinStyle Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD12' },
 }
 
 function WriteTabSRMMSkin(skinName, fontName)
-	local patternLong = 'diplomatd,diplomatl,glamourd,glamourl,goldtimed,goldtimel,photooned,photoonel,surfaceb,surfacew'
-	local patternShort = 'graphited,graphitel,textolited,textolitel'
+	local patternLong = 'Diplomat_Dark,Diplomat_Light,Glamour_Dark,Glamour_Light,GoldTime_Dark,GoldTime_Light,PhotoOne_Dark,PhotoOne_Light,Surface_Black,Surface_White'
+	local patternShort = 'Graphite_Dark,Graphite_Light,Textolite_Dark,Textolite_Light'
 
 	local result = 0
 
@@ -180,7 +180,7 @@ function ApplySkin(skinName, fontName)
 	
 	WriteTabSRMMSkin(skinName, fontName)
 
-	local noTipperSkin = "defaultmirl,defaultwinl,winstylel,winstyled";
+	local noTipperSkin = "DefaultMir_Light,DefaultWin_Light,WinStyle_Light,WinStyle_Dark";
 	
 	m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\UserSet\\Skins\\"..skinName..".ini"), 0)
 	m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\UserSet\\Fonts\\"..fontName..".ini"), 0)

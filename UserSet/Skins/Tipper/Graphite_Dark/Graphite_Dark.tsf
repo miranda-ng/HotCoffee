@@ -1,0 +1,56 @@
+[About]
+Author = Dracosha
+Preview = preview.png
+
+[Background]
+Image = BG.png
+TM = TM_STRECH_ALL 
+Left = 12
+Top = 11
+Right = 11
+Bottom = 11
+
+[Sidebar]
+Image = sidebar.png
+TM = TM_STRECH_ALL 
+Left = 15
+Top = 11
+Right = 0
+Bottom = 11
+
+[Fonts]
+Title-face = Tahoma
+Title-color = 255 128 64
+Title-size = 10
+Title-effect = FONT_BOLD
+
+Label-face = Tahoma
+Label-color = 170 170 170
+Label-size = 7
+Label-effect = FONT_BOLD
+
+Value-face = Tahoma
+Value-color = 230 230 230
+Value-size = 7
+Value-effect = 0
+
+TrayTitle-face = Tahoma
+TrayTitle-color = 250 250 250
+TrayTitle-size = 8
+TrayTitle-effect = FONT_BOLD
+
+Divider-color = 130 130 130
+
+[Appearance]
+General-padding = 12
+Title-indent = 24
+Text-indent = 24
+Value-indent = 8
+Text-padding = 3
+Outer-avatar-padding = 14
+Inner-avatar-padding = 4
+Sidebar-width = 33
+Opacity = 95
+
+[Other]
+Enable-coloring = TRUE
