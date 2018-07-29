@@ -5,8 +5,10 @@ local winapi = require('winapi')
 assert(winapi)
 hasAccess = require('HasAccess')
 assert(hasAccess)
+schedule = require('m_schedule')
+assert(schedule)
 
-local hSystemModulesLoadedHook = m.HookEvent("Miranda/System/ModulesLoaded", function()
+function firstRun()
   if (db.GetSetting(_, 'FirstRun', 'MirLua')) then
     return
   end
@@ -33,10 +35,14 @@ local hSystemModulesLoadedHook = m.HookEvent("Miranda/System/ModulesLoaded", fun
 
   db.DeleteModule(_, 'PluginDisable')
 
-  local batch = "timeout /t 10 /nobreak && taskkill /f /pid {processId} && start {processName}" % {
+  local batch = "timeout /t 3 /nobreak && taskkill /f /pid {processId} && start {processName}" % {
     ["processId"] = winapi.GetCurrentProcessId(),
     ["processName"] = m.GetFullPath()
   }
   winapi.ShellExecute(hasAccess(m.Parse("%miranda_path%\\miranda.test")) and "open" or "runas", 'cmd.exe', '/C '.. batch)
+end
+
+local hSystemModulesLoadedHook = m.HookEvent("Miranda/System/ModulesLoaded", function()
+  schedule.Wait(2).Seconds().Do(firstRun)
 end)
 assert(hSystemModulesLoadedHook)
