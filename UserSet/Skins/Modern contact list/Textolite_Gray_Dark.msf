@@ -257,7 +257,7 @@ RBEdgesColor=d9605779
 [Tipper]
 RoundCorners=b1
 SkinEngine=b1
-SkinName=sTextolite_Dark
+SkinName=sTextolite_Gray_Dark
 TextIndent=d24
 TitleIndent=d24
 ValueIndent=d8
@@ -269,11 +269,11 @@ SidebarWidth=d33
 
 [Popup]
 DropShadow=b0
-SkinPack=sTextolite_Dark
-skin.Textolite_Dark=d126
+SkinPack=sTextolite_Gray_Dark
+skin.Textolite_Gray_Dark=d126
 
 [Tab_SRMsg]
-ContainerSkin=sTextolite_Dark\Textolite_Dark.tsk
+ContainerSkin=sTextolite_Gray_Dark\Textolite_Gray_Dark.tsk
 tab_bg_normal=d6710886
 tab_bg_active=d5328978
 tab_bg_unread=d12632256
@@ -337,7 +337,7 @@ XMPP-filename=uUserSet\Smileys\_dark\kolobok\kolobok.msl
 _default_.SRMMTemplateFile=sUserSet\Skins\IEView\Textolite_Dark.ivt
 
 [PackInfo]
-Skin=uTextolite_Dark
+Skin=uTextolite_Gray_Dark
 
 [MathModule++]
 IEViewForeColor=d16777215
