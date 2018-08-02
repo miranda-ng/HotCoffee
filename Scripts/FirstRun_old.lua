@@ -1,5 +1,5 @@
 ---   Скрипт должен сработать только при первом старте (после создания профиля) Miranda!
----1. Проверяем существует ли сервис 'Miranda/System/ModulesLoaded' если нет, ждем 0,5 секунды и снова проверяем (и так ∞)...
+---1. Проверяем существует ли сервис 'Miranda/System/Restart' если нет, ждем 0,5 секунды и снова проверяем (и так ∞)...
 ---2. Если сервис существует, то проверяем в БД в секции FirstRun значение ключа Lua_FirstRun (byte), если 1 то брейк, если 0, то едем дальше...
 ---3. Читаем в БД в секции PackInfo значение ключа Skin (unicode), и импортируем в БД %miranda_path%\\UserSet\\Skins\\'значение ключа PackInfo\Skin'.ini, и едем дальше...
 ---4. Читаем в БД в секции PackInfo значение ключа Font (unicode), и импортируем в БД %miranda_path%\\UserSet\\Fonts\\'значение ключа PackInfo\Font'.ini, и едем дальше...
@@ -10,22 +10,11 @@
 ---9. Меняем в БД в секции FirstRun значение ключа Lua_FirstRun (byte) на 1 (0 - скрипт FirstRun.lua еще не выполнялся, 1 - уже выполнялся)
 --10. Меняем в БД в секции PackInfo значение ключа MirVer (unicode) на текущее значение MirVer (текущая версия Miranda)
 --11. Удаляем в БД секцию PluginDisable (в этой секции хранятся настройки плагинов, которые должны или не должны быть загружены вместе с Miranda)
---12. Дергаем сервис 'Miranda/System/ModulesLoaded' (Перезагрузка)
-assert(m)
+--12. Дергаем сервис 'Miranda/System/Restart' (Перезагрузка)
 local db = require('m_database')
-assert(db)
 local winapi = require('winapi')
-assert(winapi)
-hasAccess = require('HasAccess')
-assert(hasAccess)
-schedule = require('m_schedule')
-assert(schedule)
 
-function firstRun()
-  if (db.GetSetting(_, 'FirstRun', 'Lua_FirstRun')) then
-    return
-  end
-
+if(not db.GetSetting(_, 'FirstRun', 'Lua_FirstRun')) then
   local mCurrencyRatesXmlPath = toansi(m.Parse('%miranda_path%\\UserSet\\CurrencyRates\\CR.xml'))
   m.CallService('CurrencyRates/Import', 0, mCurrencyRatesXmlPath)
 
@@ -48,14 +37,5 @@ function firstRun()
 
   db.DeleteModule(_, 'PluginDisable')
 
-  local batch = "timeout /t 3 /nobreak && taskkill /f /pid {processId} && start {processName}" % {
-    ["processId"] = winapi.GetCurrentProcessId(),
-    ["processName"] = m.GetFullPath()
-  }
-  winapi.ShellExecute(hasAccess(m.Parse("%miranda_path%\\miranda.test")) and "open" or "runas", 'cmd.exe', '/C '.. batch)
+  m.CallService('Miranda/System/Restart', 1, 0)
 end
-
-local hSystemModulesLoadedHook = m.HookEvent("Miranda/System/ModulesLoaded", function()
-  schedule.Wait(2).Seconds().Do(firstRun)
-end)
-assert(hSystemModulesLoadedHook)
