@@ -22,7 +22,7 @@ schedule = require('m_schedule')
 assert(schedule)
 
 m.WaitOnHandle(function()
-  if (db.GetSetting(_, 'FirstRun', 'MirLua')) then
+  if (db.GetSetting(_, 'FirstRun', 'Lua_FirstRun')) then
     return 0
   end
 
