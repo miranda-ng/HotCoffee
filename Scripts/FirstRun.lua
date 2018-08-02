@@ -21,9 +21,9 @@ assert(hasAccess)
 schedule = require('m_schedule')
 assert(schedule)
 
-function firstRun()
-  if (db.GetSetting(_, 'FirstRun', 'Lua_FirstRun')) then
-    return
+m.WaitOnHandle(function()
+  if (db.GetSetting(_, 'FirstRun', 'MirLua')) then
+    return 0
   end
 
   local mCurrencyRatesXmlPath = toansi(m.Parse('%miranda_path%\\UserSet\\CurrencyRates\\CR.xml'))
@@ -53,9 +53,4 @@ function firstRun()
     ["processName"] = m.GetFullPath()
   }
   winapi.ShellExecute(hasAccess(m.Parse("%miranda_path%\\miranda.test")) and "open" or "runas", 'cmd.exe', '/C '.. batch)
-end
-
-local hSystemModulesLoadedHook = m.HookEvent("Miranda/System/ModulesLoaded", function()
-  schedule.Wait(2).Seconds().Do(firstRun)
 end)
-assert(hSystemModulesLoadedHook)
