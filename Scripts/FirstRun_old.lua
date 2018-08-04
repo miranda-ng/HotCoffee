@@ -12,15 +12,19 @@
 --11. Удаляем в БД секцию PluginDisable (в этой секции хранятся настройки плагинов, которые должны или не должны быть загружены вместе с Miranda)
 --12. Дергаем сервис 'Miranda/System/Restart' (Перезагрузка)
 local db = require('m_database')
+assert(db)
 local winapi = require('winapi')
+assert(winapi)
+hasAccess = require('HasAccess')
+assert(hasAccess)
+schedule = require('m_schedule')
+assert(schedule)
 
-if(not db.GetSetting(_, 'FirstRun', 'Lua_FirstRun')) then
-  local mCurrencyRatesXmlPath = toansi(m.Parse('%miranda_path%\\UserSet\\CurrencyRates\\CR.xml'))
-  m.CallService('CurrencyRates/Import', 0, mCurrencyRatesXmlPath)
+if (db.GetSetting(_, 'FirstRun', 'Lua_FirstRun')) then
+   return 0
+end
 
-  local mRadioIniPath = toansi(m.Parse('%miranda_path%\\UserSet\\mRadio\\mRadio.ini'))
-  m.CallService('mRadio/Import', 0, mRadioIniPath)
-
+m.WaitOnHandle(function()
   local skin = db.GetSetting(_, 'PackInfo', 'Skin')
   local mImportIniPath = toansi(m.Parse('%miranda_path%\\UserSet\\Skins\\'..skin..'.ini'))
   m.CallService('DB/Ini/ImportFile', mImportIniPath)
@@ -37,5 +41,5 @@ if(not db.GetSetting(_, 'FirstRun', 'Lua_FirstRun')) then
 
   db.DeleteModule(_, 'PluginDisable')
 
-  m.CallService('Miranda/System/Restart', 1, 0)
-end
+  m.CallService('Miranda/System/Restart')
+end)

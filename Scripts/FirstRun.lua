@@ -21,11 +21,11 @@ assert(hasAccess)
 schedule = require('m_schedule')
 assert(schedule)
 
-m.WaitOnHandle(function()
-  if (db.GetSetting(_, 'FirstRun', 'Lua_FirstRun')) then
-    return 0
-  end
+if (db.GetSetting(_, 'FirstRun', 'Lua_FirstRun')) then
+   return 0
+end
 
+m.WaitOnHandle(function()
   local skin = db.GetSetting(_, 'PackInfo', 'Skin')
   local mImportIniPath = toansi(m.Parse('%miranda_path%\\UserSet\\Skins\\'..skin..'.ini'))
   m.CallService('DB/Ini/ImportFile', mImportIniPath)
