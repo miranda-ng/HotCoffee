@@ -39,7 +39,7 @@ end
 
 WriteTabSRMMSkin(db.GetSetting(_, 'PackInfo', 'Skin'), db.GetSetting(_, 'PackInfo', 'Font'))
 
-if db.GetSetting(_, 'FirstRun', 'Lua_FirstRun') then
+if db.GetSetting(_, 'FirstRun', 'Lua_FirstRun') == 1 then
   local path = m.Parse('%miranda_path%\\Profiles\\update.ini')
   local hFile = io.open(path, "r")
   if not hFile then

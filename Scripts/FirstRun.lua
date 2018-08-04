@@ -26,12 +26,6 @@ m.WaitOnHandle(function()
     return 0
   end
 
-  local mCurrencyRatesXmlPath = toansi(m.Parse('%miranda_path%\\UserSet\\CurrencyRates\\CR.xml'))
-  m.CallService('CurrencyRates/Import', 0, mCurrencyRatesXmlPath)
-
-  local mRadioIniPath = toansi(m.Parse('%miranda_path%\\UserSet\\mRadio\\mRadio.ini'))
-  m.CallService('mRadio/Import', 0, mRadioIniPath)
-
   local skin = db.GetSetting(_, 'PackInfo', 'Skin')
   local mImportIniPath = toansi(m.Parse('%miranda_path%\\UserSet\\Skins\\'..skin..'.ini'))
   m.CallService('DB/Ini/ImportFile', mImportIniPath)
