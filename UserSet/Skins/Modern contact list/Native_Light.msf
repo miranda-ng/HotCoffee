@@ -320,7 +320,7 @@ OK-filename=uUserSet\Smileys\_light\emoji\emoji.msl
 XMPP-filename=uUserSet\Smileys\_light\kolobok\kolobok.msl
 
 [IEVIEW]
-_default_.SRMMTemplateFile=sUserSet\Skins\IEView\DefaultWin_Light.ivt
+_default_.SRMMTemplateFile=sUserSet\Skins\IEView\Default_Windows.ivt
 
 [PackInfo]
 Skin=uWinStyle_Light
