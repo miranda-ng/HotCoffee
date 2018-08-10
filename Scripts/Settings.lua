@@ -169,25 +169,25 @@ MainMenuItems =
 			db.WriteSetting(_, 'NewAwaySys', 'DontPopDlg', 1022 - db.GetSetting(_, 'NewAwaySys', 'DontPopDlg', 0))
 		end
 	},
-	{
-		Name = "AutoReply",
-		Uid = 'EC451E08-158E-42B3-AD4C-615CF21CCF0D',
-		Icons = 
-		{
-			Enable = icolib.AddIcon('autoreplayDisabled', 'Enable autoreply', 'MirLua/Settings'),
-			Disable = icolib.AddIcon('autoreplayEnabled', 'Disable autoreply', 'MirLua/Settings')
-		},
-		Icon = function(this)
-			return db.GetSetting(_, 'NewAwaySys', 'EnableReply', 0) ~= 0 and this.Icons.Disable or this.Icons.Enable
-		end,
-		Description = function()
-			return db.GetSetting(_, 'NewAwaySys', 'EnableReply', 0) ~= 0 and 'Disable autoreply' or 'Enable autoreply'
-		end,
-		IsVisible = function()
-			return m.ServiceExists("AwaySys/AutoreplyToggle")
-		end,
-		ServiceFunction = function() m.CallService("AwaySys/AutoreplyToggle") end
-	},
+--	{
+--		Name = "AutoReply",
+--		Uid = 'EC451E08-158E-42B3-AD4C-615CF21CCF0D',
+--		Icons = 
+--		{
+--			Enable = icolib.AddIcon('autoreplayDisabled', 'Enable autoreply', 'MirLua/Settings'),
+--			Disable = icolib.AddIcon('autoreplayEnabled', 'Disable autoreply', 'MirLua/Settings')
+--		},
+--		Icon = function(this)
+--			return db.GetSetting(_, 'NewAwaySys', 'EnableReply', 0) ~= 0 and this.Icons.Disable or this.Icons.Enable
+--		end,
+--		Description = function()
+--			return db.GetSetting(_, 'NewAwaySys', 'EnableReply', 0) ~= 0 and 'Disable autoreply' or 'Enable autoreply'
+--		end,
+--		IsVisible = function()
+--			return m.ServiceExists("AwaySys/AutoreplyToggle")
+--		end,
+--		ServiceFunction = function() m.CallService("AwaySys/AutoreplyToggle") end
+--	},
 	{
 		Name = "AutoAway",
 		Uid = 'D842B308-8DC3-4B25-A154-80CEB38A67A9',
