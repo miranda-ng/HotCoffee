@@ -119,7 +119,8 @@ assert(hSkinRoot)
 
 Skins =
 {
-	{ Name = 'Default_Miranda', Description = 'Miranda style',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD01' },
+	{ Name = '_Miranda_', Description = 'Miranda style',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD01' },
+	{ Name = '_Miranda_Light', Description = 'Miranda Light',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2D001' },
 	{ Name = 'Default_Windows', Description = 'Windows style',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD02' },
 
 	{ Name = 'Diplomat_Dark',   Description = 'Diplomat Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD03' },
@@ -180,7 +181,7 @@ function ApplySkin(skinName, fontName)
 	
 	WriteTabSRMMSkin(skinName, fontName)
 
-	local noTipperSkin = "Default_Miranda,Default_Windows,WinStyle_Light,WinStyle_Dark";
+	local noTipperSkin = "_Miranda_,Default_Windows,WinStyle_Light,WinStyle_Dark";
 	
 	m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\UserSet\\Skins\\"..skinName..".ini"), 0)
 	m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\UserSet\\Fonts\\"..fontName..".ini"), 0)
