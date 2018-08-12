@@ -9,7 +9,7 @@ assert(db)
 local winapi = require('winapi')
 assert(winapi)
 
-if not m.ServiceExists('') then
+if not m.ServiceExists('CurrencyRates/Import') then
   return
 end
 
