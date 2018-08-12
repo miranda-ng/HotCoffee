@@ -1,10 +1,18 @@
+assert(m)
 clist = require('m_clist')
+assert(clist)
 db = require('m_database')
+assert(db)
 icolib = require('m_icolib')
+assert(icolib)
 genmenu = require('m_genmenu')
+assert(genmenu)
+options = require('m_options')
+assert(options)
 winapi = require('winapi')
-m = require('m_core')
+assert(winapi)
 changes = require('Changes')
+assert(changes)
 
 hRoot = clist.AddMainMenuItem({ Name = 'Settings', Icon = icolib.GetIcon("core_main_13"), Uid = '299D3276-02BF-40B3-8D2E-63DA2F663CF3' })
 
@@ -261,6 +269,15 @@ MainMenuItems =
 		Uid = '3ED70B42-6E5C-4545-B1B4-88533476187F',
 		ServiceFunction = function()
 			m.CallService("MirLua/Script/OpenContactInboxDir", 0, 0)
+		end
+	},
+	{
+		Name = "Language",
+		Description = function() return 'Open language options' end,
+		Icon = function () return icolib.AddIcon('OpenLanguagesOptionPage', 'Open language options', 'MirLua/Settings') end,
+		Uid = '3D8C42DC-BB9E-4E18-A2A8-44D0278CFEEB',
+		ServiceFunction = function()
+			options.OpenPage('Customize', 'Languages')
 		end
 	}
 }
