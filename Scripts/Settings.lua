@@ -273,8 +273,8 @@ MainMenuItems =
 	},
 	{
 		Name = "Language",
-		Description = function() return 'Open language options' end,
-		Icon = function () return icolib.AddIcon('OpenLanguagesOptionPage', 'Open language options', 'MirLua/Settings') end,
+		Description = function() return 'Language' end,
+		Icon = function () return icolib.AddIcon('OpenLanguagesOptionPage', 'Language', 'MirLua/Settings') end,
 		Uid = '3D8C42DC-BB9E-4E18-A2A8-44D0278CFEEB',
 		ServiceFunction = function()
 			options.OpenPage('Customize', 'Languages')
