@@ -7,6 +7,8 @@ icolib = require('m_icolib')
 assert(icolib)
 genmenu = require('m_genmenu')
 assert(genmenu)
+options = require('m_options')
+assert(options)
 winapi = require('winapi')
 assert(winapi)
 changes = require('Changes')
@@ -50,7 +52,8 @@ Icons =
 				Enabled = icolib.AddIcon('ChatsASEnabled', 'Auto size enabled', "MirLua/View/Chats"),
 				Disabled = icolib.AddIcon('ChatsASDisabled', 'Auto size disabled', "MirLua/View/Chats"),
 			}
-		}
+		},
+		Language = icolib.AddIcon('menuLanguage', 'Language')
 	}
 }
 
@@ -444,3 +447,19 @@ PreBuildMenuFuncs["Chats"] = function()
 	genmenu.ModifyMenuItem(hChatsAutoSizeInput, nil, ((db.GetSetting(_, "Tab_SRMsg", "CNTW_Def_Flags") & 16384) == 0) and Icons.Menu.Chats.AutoSize.Disabled or Icons.Menu.Chats.AutoSize.Enabled , -1)
 end
 ----- /Chats --------------------------------------------------------------------------------------
+
+----- Languages ------------------------------------------------------------------------------------
+hLanguage = clist.AddMainMenuItem{
+	Name = 'Language',
+	Icon = Icons.Menu.Language,
+	Uid = '3D8C42DC-BB9E-4E18-A2A8-44D0278CFEEB',
+	Parent = hViewRoot,
+	Service = 'Scripts/View/Language',
+	Position = 800
+}
+assert(hLanguage)
+
+m.CreateServiceFunction('Scripts/View/Language', function()
+	options.OpenPage('Customize', 'Languages')
+end)
+----- /Languages -----------------------------------------------------------------------------------

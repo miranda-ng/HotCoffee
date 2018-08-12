@@ -9,7 +9,6 @@ assert(hasAccess)
 local CyrillicLanpacks = { 'langpack_belarusian.txt', 'langpack_russian.txt', 'langpack_ukrainian.txt' }
 
 local current = db.GetSetting(_, 'Langpack', 'Current')
-OnLanguageChanged(current)
 
 function IsCurrentLangpackChanged(dbcws)
     if dbcws.Module ~= 'Langpack' or dbcws.Setting ~= 'Current' then
@@ -58,3 +57,5 @@ local hSettingChanged = m.HookEvent("DB/Contact/SettingChanged", function(w, l)
     OnLanguageChanged(dbcws.Value)
 end)
 assert(hSettingChanged)
+
+OnLanguageChanged(current)
