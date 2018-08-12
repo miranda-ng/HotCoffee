@@ -5,7 +5,7 @@ db = require('m_database')
 
 MainMenuItems = 
 {
-	{ Name = 'History', Uid = 'a6bf0371-97ed-48cb-ae2d-486b6036f71c', IsVisible = function() return m.IsPluginLoaded('B92282AC-686B-4541-A12D-6E9971A253B7') or m.IsPluginLoaded('2D77A746-00A6-4343-BFC5-F808CDD772EA') end },
+	{ Name = 'History', Uid = 'a6bf0371-97ed-48cb-ae2d-486b6036f71c', IsVisible = function() return m.IsPluginLoaded('B92282AC-686B-4541-A12D-6E9971A253B7') end },
 	{ Name = 'Update', Uid = 'e58086a7-78bc-4f13-97f2-9d18627c0944', IsVisible = function() return m.IsPluginLoaded('29517be5-779a-48e5-8950-cb4de1d43172') or m.IsPluginLoaded('968def4a-bc60-4266-ac08-754ce721db5f') end }
 }
 
