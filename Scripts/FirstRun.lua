@@ -21,30 +21,33 @@ assert(hasAccess)
 schedule = require('m_schedule')
 assert(schedule)
 
-if (db.GetSetting(_, 'FirstRun', 'Lua_FirstRun')) then
-   return 0
+if db.GetSetting(_, 'FirstRun', 'Lua_FirstRun', 0) == 1 then
+   return
 end
 
-m.WaitOnHandle(function()
-  local skin = db.GetSetting(_, 'PackInfo', 'Skin')
-  local mImportIniPath = toansi(m.Parse('%miranda_path%\\UserSet\\Skins\\'..skin..'.ini'))
-  m.CallService('DB/Ini/ImportFile', mImportIniPath)
+local skin = db.GetSetting(_, 'PackInfo', 'Skin')
+print('FirstRun: skin is', skin)
+local mImportIniPath = toansi(m.Parse('%miranda_path%\\UserSet\\Skins\\'..skin..'.ini'))
+m.CallService('DB/Ini/ImportFile', mImportIniPath)
 
-  local font = db.GetSetting(_, 'PackInfo', 'Font')
-  local mImportIniPath = toansi(m.Parse('%miranda_path%\\UserSet\\Fonts\\'..font..'.ini'))
-  m.CallService('DB/Ini/ImportFile', mImportIniPath)
+local font = db.GetSetting(_, 'PackInfo', 'Font')
+print('FirstRun: font is', font)
+local mImportIniPath = toansi(m.Parse('%miranda_path%\\UserSet\\Fonts\\'..font..'.ini'))
+m.CallService('DB/Ini/ImportFile', mImportIniPath)
 
-  db.WriteSetting(_, 'CList', 'State', 2, 1)
-  db.WriteSetting(_, 'FirstRun', 'AccManager', false)
-  db.WriteSetting(_, 'FirstRun', 'Lua_FirstRun', true)
+db.WriteSetting(_, 'CList', 'State', 2, db.DBVT_BYTE)
+db.WriteSetting(_, 'FirstRun', 'AccManager', 0, db.DBVT_BYTE)
+db.WriteSetting(_, 'FirstRun', 'Lua_FirstRun', 1, db.DBVT_BYTE)
 
-  db.WriteSetting(_, 'PackInfo', 'MirVer', m.Version, 252)
+db.WriteSetting(_, 'PackInfo', 'MirVer', m.Version, db.DBVT_WCHAR)
 
-  db.DeleteModule(_, 'PluginDisable')
+db.DeleteModule(_, 'PluginDisable')
 
-  local batch = "timeout /t 3 /nobreak && taskkill /f /pid {processId} && start {processName}" % {
-    ["processId"] = winapi.GetCurrentProcessId(),
-    ["processName"] = m.GetFullPath()
-  }
-  winapi.ShellExecute(hasAccess(m.Parse("%miranda_path%\\miranda.test")) and "open" or "runas", 'cmd.exe', '/C '.. batch)
-end)
+m.CallService('Miranda/System/Restart')
+--[[
+local batch = "timeout /t 3 /nobreak && taskkill /f /pid {processId} && start {processName}" % {
+  ["processId"] = winapi.GetCurrentProcessId(),
+  ["processName"] = m.GetFullPath()
+}
+winapi.ShellExecute(hasAccess(m.Parse("%miranda_path%\\miranda.test")) and "open" or "runas", 'cmd.exe', '/C '.. batch)
+]]
