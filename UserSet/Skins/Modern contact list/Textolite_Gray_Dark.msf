@@ -231,11 +231,6 @@ UseWinColours=b0
 BkBitmap=s
 BkBmpUse=w3
 
-[TopToolBar]
-BUTTGAP=d0
-BUTTHEIGHT=d20
-BUTTWIDTH=d20
-
 [ViewMode]
 UseBitmap=b0
 UseWinColours=b0
