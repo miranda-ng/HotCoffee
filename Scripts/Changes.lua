@@ -17,4 +17,4 @@ function changes.Ask(callback, ...)
   end
 end
 
-return changes;
+return changes

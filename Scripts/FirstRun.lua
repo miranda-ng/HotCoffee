@@ -18,8 +18,8 @@ local winapi = require('winapi')
 assert(winapi)
 hasAccess = require('HasAccess')
 assert(hasAccess)
-schedule = require('m_schedule')
-assert(schedule)
+local restart = require('Restart')
+assert(restart)
 
 if db.GetSetting(_, 'FirstRun', 'Lua_FirstRun', 0) == 1 then
    return
@@ -43,11 +43,4 @@ db.WriteSetting(_, 'PackInfo', 'MirVer', m.Version, db.DBVT_WCHAR)
 
 db.DeleteModule(_, 'PluginDisable')
 
-m.CallService('Miranda/System/Restart')
---[[
-local batch = "timeout /t 3 /nobreak && taskkill /f /pid {processId} && start {processName}" % {
-  ["processId"] = winapi.GetCurrentProcessId(),
-  ["processName"] = m.GetFullPath()
-}
-winapi.ShellExecute(hasAccess(m.Parse("%miranda_path%\\miranda.test")) and "open" or "runas", 'cmd.exe', '/C '.. batch)
-]]
+restart(0, 0)
