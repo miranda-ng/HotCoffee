@@ -120,7 +120,8 @@ assert(hSkinRoot)
 Skins =
 {
 	{ Name = '_Miranda_', Description = 'Miranda style',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD01' },
-	{ Name = '_Miranda_Light', Description = 'Miranda Light',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2D001' },
+	{ Name = '_Miranda_Dark', Description = 'Miranda Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2D001' },
+	{ Name = '_Miranda_Light', Description = 'Miranda Light',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2D002' },
 	{ Name = 'Default_Windows', Description = 'Windows style',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD02' },
 
 	{ Name = 'Diplomat_Dark',   Description = 'Diplomat Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD03' },
