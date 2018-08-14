@@ -41,14 +41,14 @@ $$Scroll/Thumb=sGlyph,Fragment,BG.png,53,71,6,18,StretchBoth,3,2,2,2,150
 $$Scroll/Back=sGlyph,Fragment,BG.png,80,66,17,1,StretchBoth,1,0,1,0,255
 $$FrameTitleBar=sGlyph,Fragment,BG.png,68,48,3,20,StretchBoth,0,1,0,1,255
 $$StatusBar=sGlyph,Fragment,BG.png,73,48,3,19,StretchBoth,1,2,1,1,255
-$$ViewMode/CurrentMode=sGlyph,Fragment,BG.png,62,70,7,20,StretchBoth,3,3,3,3,255
-$$ViewMode/CurrentMode/Hot=sGlyph,Fragment,BG.png,53,70,7,20,StretchBoth,3,3,3,3,255
-$$ViewMode/CurrentMode/Pressed=sGlyph,Fragment,BG.png,53,70,7,19,StretchBoth,3,3,3,2,255
-$$ViewMode/SetupMode=sGlyph,Fragment,BG.png,62,70,7,20,StretchBoth,3,3,3,3,255
-$$ViewMode/SetupMode/Hot=sGlyph,Fragment,BG.png,53,70,7,20,StretchBoth,3,3,3,3,255
+$$ViewMode/CurrentMode=sGlyph,Fragment,BG.png,62,71,7,18,StretchBoth,3,2,3,2,255
+$$ViewMode/CurrentMode/Hot=sGlyph,Fragment,BG.png,53,71,7,18,StretchBoth,3,2,3,2,255
+$$ViewMode/CurrentMode/Pressed=sGlyph,Fragment,BG.png,53,70,7,20,StretchBoth,3,3,3,3,255
+$$ViewMode/SetupMode=sGlyph,Fragment,BG.png,63,71,6,18,StretchBoth,2,2,3,2,255
+$$ViewMode/SetupMode/Hot=sGlyph,Fragment,BG.png,54,71,6,18,StretchBoth,2,2,3,2,255
 $$ViewMode/SetupMode/Pressed=s
-$$ViewMode/ResetMode=sGlyph,Fragment,BG.png,62,70,7,20,StretchBoth,3,3,3,3,255
-$$ViewMode/ResetMode/Hot=sGlyph,Fragment,BG.png,53,70,7,20,StretchBoth,3,3,3,3,255
+$$ViewMode/ResetMode=sGlyph,Fragment,BG.png,63,71,6,18,StretchBoth,2,2,3,2,255
+$$ViewMode/ResetMode/Hot=sGlyph,Fragment,BG.png,54,71,6,18,StretchBoth,2,2,3,2,255
 $$ViewMode/ResetMode/Pressed=s
 $$Button/Minimize/Normal=sGlyph,Fragment,BG.png,25,48,26,15,StretchBoth,3,0,3,3,255
 $$Button/Minimize/Hovered=sGlyph,Fragment,BG.png,25,64,26,15,StretchBoth,3,0,3,3,255
@@ -57,9 +57,9 @@ $$Button/Menu/Normal=sGlyph,Fragment,BG.png,0,48,24,15,StretchBoth,0,0,0,0,180
 $$Button/Menu/Hovered=sGlyph,Fragment,BG.png,0,48,24,15,StretchBoth,0,0,0,0,255
 $$Button/Menu/Down=sGlyph,Fragment,BG.png,0,64,24,15,StretchBoth,0,0,0,0,255
 $$Background=sGlyph,Skip
-$$ToolBar=sGlyph,Fragment,BG.png,73,49,3,19,StretchBoth,1,1,1,2,255
+$$ToolBar=sGlyph,Fragment,BG.png,73,49,3,18,StretchBoth,1,1,1,1,255
 $$BarButton=s
-$$BarButton/Hot=sGlyph,Fragment,BG.png,62,70,6,20,StretchBoth,3,3,2,3,255
+$$BarButton/Hot=sGlyph,Fragment,BG.png,62,70,7,20,StretchBoth,3,3,3,3,255
 $$BarButton/Pressed=s
 @0=s$$Window:Main,ID=Background
 @1=s$$Background:CL,ID=Background
@@ -130,7 +130,9 @@ $$BarButton/Pressed=s
 
 [CList]
 AvatarsBorderColor=d0
-Width=d230
+AvatarsSize=w29
+AvatarsWidth=w29
+Width=d229
 
 [CLUI]
 LeftClientMargin=b10
