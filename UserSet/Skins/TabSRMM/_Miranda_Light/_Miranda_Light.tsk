@@ -18,7 +18,7 @@ CloseGlyph=Close.ico
 MinimizeGlyph=Minimize.ico
 MaximizeGlyph=Maximize.ico
 SbarHeight=22
-;FontColor=7F7F7F
+FontColor=7F7F7F
 Version=1
 Signature=101
 NoScrollbars=0
@@ -120,7 +120,7 @@ Left=-1
 [%Tabitem_active_bottom]
 Top=-2
 
-[%ToolBar]
+[%Toolbar]
 
 [%Frame]
 
@@ -163,6 +163,7 @@ Left=1
 Top=1
 Right=1
 Bottom=24
+ColorKey=F1F1F1
 Item0=Container
 
 [$Buttonnotpressed]
@@ -263,13 +264,14 @@ Right=2
 Bottom=2
 Item0=Tabitem_active_bottom
 
-[$ToolBar]
-Glyph=9,26,87,51
+[$Toolbar]
+Glyph=72,70,76,89
+Alpha=100
 Left=2
 Top=2
 Right=2
 Bottom=2
-Item0=ToolBar
+Item0=Toolbar
 
 [$Frame]
 Glyph=0,0,96,60
