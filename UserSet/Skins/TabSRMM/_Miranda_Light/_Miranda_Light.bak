@@ -33,17 +33,17 @@ TabTextUnread=804000
 ;LightShadow=FFFFFF
 
 [ClientArea]
-Left=2
-Top=2
-Right=2
-Bottom=2
+Left=1
+Top=1
+Right=1
+Bottom=1
 Inner=3
 
 [WindowFrame]
-Caption=15
-Left=10
-Right=10
-Bottom=10
+Caption=16
+Left=11
+Right=11
+Bottom=11
 ClipFrame=0
 RadiusTL=11
 RadiusTR=11
@@ -138,7 +138,7 @@ Bottom=2
 
 ;[%Statusbarpanel]
 
-[%Statusbar]
+;[%Statusbar]
 
 [%Userlist]
 Left=2
@@ -149,16 +149,16 @@ Bottom=2
 ;--------Image---------
 
 [$glyphs]
-Image=BG1.png
+Image=BG.png
 Alpha=100
 Perpixel=1
 
 [$Container]
-Glyph=10,23,88,25
+Glyph=11,24,85,49
 Left=1
 Top=1
 Right=1
-Bottom=1
+Bottom=24
 ;FillColor=
 ColorKey=F1F1F1
 Item0=Container
@@ -174,11 +174,11 @@ Bottom=1
 Item0=Buttonpressed
 
 [$Buttonmouseover]
-Glyph=64,62,70,81
-Left=3
-Top=3
-Right=3
-Bottom=3
+Glyph=6,62,10,79
+Left=2
+Top=2
+Right=2
+Bottom=2
 Item0=Buttonmouseover
 
 [$InfoPanelBackground]
@@ -264,19 +264,19 @@ Item0=Tabitem_active_bottom
 [$Toolbar]
 
 [$Frame]
-Glyph=0,0,159,35
-Left=10
-Top=23
+Glyph=0,0,159,60
+Left=11
+Top=24
 Right=72
-Bottom=10
+Bottom=36
 Item0=Frame
 
 [$FrameInactive]
-Glyph=0,0,159,35
-Left=10
-Top=23
+Glyph=0,0,159,60
+Left=11
+Top=24
 Right=72
-Bottom=10
+Bottom=36
 Item0=FrameInactive
 
 [$InputArea]
@@ -300,12 +300,6 @@ Item0=MessageLog
 [$Statusbarpanel]
 
 [$Statusbar]
-Glyph=59,62,61,80
-Left=1
-Top=2
-Right=1
-Bottom=1
-Item0=Statusbar
 
 [$Userlist]
 Glyph=0,62,4,66
