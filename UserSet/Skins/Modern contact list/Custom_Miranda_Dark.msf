@@ -32,9 +32,9 @@ $$SubGroup/Closed/Hot=sGlyph,Fragment,BG.png,70,69,3,20,StretchBoth,0,2,0,2,255
 $$SubGroup/Closed/Selected=sGlyph,Fragment,BG.png,70,69,3,20,StretchBoth,0,2,0,2,150
 $$Contact/Hot=sGlyph,Fragment,BG.png,74,69,3,20,StretchBoth,0,0,0,1,255
 $$Contact/Selected=sGlyph,Fragment,BG.png,74,69,3,20,StretchBoth,0,0,0,1,255
-$$Contact/Normal=sGlyph,Fragment,BG.png,52,91,1,2,StretchBoth,0,0,0,2,255
-$$Contact/Last=sGlyph,Fragment,BG.png,52,91,1,2,StretchBoth,0,0,0,2,255
-$$Contact/First=sGlyph,Fragment,BG.png,52,91,1,2,StretchBoth,0,0,0,2,255
+$$Contact/Normal=sGlyph,Fragment,BG.png,52,91,1,2,StretchBoth,0,0,0,1,255
+$$Contact/Last=sGlyph,Fragment,BG.png,52,91,1,2,StretchBoth,0,0,0,1,255
+$$Contact/First=sGlyph,Fragment,BG.png,52,91,1,2,StretchBoth,0,0,0,1,255
 $$Scroll/BtnUp=sGlyph,Fragment,BG.png,80,48,17,17,StretchBoth,0,0,13,12,255
 $$Scroll/BtnDn=sGlyph,Fragment,BG.png,80,68,17,17,StretchBoth,0,12,13,0,255
 $$Scroll/Thumb=sGlyph,Fragment,BG.png,53,71,6,18,StretchBoth,3,2,2,2,150
@@ -57,9 +57,9 @@ $$Button/Menu/Normal=sGlyph,Fragment,BG.png,0,48,24,15,StretchBoth,0,0,0,0,180
 $$Button/Menu/Hovered=sGlyph,Fragment,BG.png,0,48,24,15,StretchBoth,0,0,0,0,255
 $$Button/Menu/Down=sGlyph,Fragment,BG.png,0,64,24,15,StretchBoth,0,0,0,0,255
 $$Background=sGlyph,Skip
-$$ToolBar=sGlyph,Fragment,BG.png,73,49,3,18,StretchBoth,1,1,1,1,255
+$$ToolBar=sGlyph,Fragment,BG.png,73,49,3,19,StretchBoth,1,1,1,2,179
 $$BarButton=s
-$$BarButton/Hot=sGlyph,Fragment,BG.png,62,70,7,20,StretchBoth,3,3,3,3,255
+$$BarButton/Hot=sGlyph,Fragment,BG.png,53,70,7,20,StretchBoth,3,3,3,3,255
 $$BarButton/Pressed=s
 @0=s$$Window:Main,ID=Background
 @1=s$$Background:CL,ID=Background
@@ -1403,7 +1403,7 @@ Font105Col=d8421504
 Font105Flags=w268435744
 Font105Set=b204
 Font105Size=b-11
-Font105Sty=b1
+Font105Sty=b0
 
 [Tab_SRMsg]
 tab_bg_active=d1644825

@@ -1,19 +1,19 @@
 [VersionSkin]
-About=Custom_Miranda skin for TabSRMM
+About=Custom_Miranda_Dark skin for TabSRMM
 Author=Pacificator
 Version=1.0
 
 [Theme]
-File=Custom_Miranda.tabsrmm
+File=Custom_Miranda_Dark.tabsrmm
 
 ;--------Global---------
 
 [Avatars]
 BorderType=0
-BorderColor=000000
+BorderColor=FFFFFF
 
 [Global]
-Name=Custom_Miranda
+Name=Custom_Miranda_Dark
 CloseGlyph=Close.ico
 MaximizeGlyph=Maximize.ico
 MinimizeGlyph=Minimize.ico
@@ -23,9 +23,9 @@ SbarHeight=22
 Signature=101
 TabSkinning=1
 Version=1
-FontColor=000000
-MenuBarBG=EDF0F7
-TabTextActive=000000
+FontColor=FFFFFF
+MenuBarBG=0E0E0E
+TabTextActive=FFFFFF
 TabTextHottrack=004080
 TabTextNormal=646464
 TabTextUnread=804000
@@ -84,8 +84,8 @@ TitleBarRightOffset=0
 [%Buttonmouseover]
 
 [%InfoPanelBackground]
-Color1=F7F8FB
-Color2=E3E8F2
+Color1=FBFBFB
+Color2=E7E7E7
 Gradient=down
 
 ;[%Infopanelfield]
@@ -160,7 +160,7 @@ Top=1
 Right=1
 Bottom=1
 ;FillColor=
-ColorKey=EDF0F7
+ColorKey=F1F1F1
 Item0=Container
 
 [$Buttonnotpressed]
@@ -182,12 +182,12 @@ Bottom=3
 Item0=Buttonmouseover
 
 [$InfoPanelBackground]
-Glyph=60,37,66,56
-Alpha=70
-Left=3
-Top=2
-Right=3
-Bottom=2
+Glyph=61,38,65,55
+;Alpha=70
+Left=2
+Top=1
+Right=2
+Bottom=1
 Item0=InfoPanelBackground
 
 [$Infopanelfield]

@@ -84,6 +84,7 @@ IEViewMenuEntires =
 	{ Name = "Animation",   Description = "Animation",    Uid = 'a6bf0371-97ed-48cb-ae2d-486b6036f721' },
 	{ Name = "Avatars",     Description = "Avatars",      Uid = 'a6bf0371-97ed-48cb-ae2d-486b6036f71f' },
 	{ Name = "ShortLinks",  Description = "Short links",  Uid = 'a6bf0371-97ed-48cb-ae2d-486b6036f800' },
+	{ Name = "ScrollBar",  Description = "Scroll bar",  Uid = 'a6bf0371-97ed-48cb-ae2d-486b6036f801' },
 	{ Name = "CustomContextMenu",  Description = "Context menu",  Uid = 'a6bf0371-97ed-48cb-ae2d-586b6036f800' },
 }
 
@@ -119,7 +120,8 @@ assert(hSkinRoot)
 
 Skins =
 {
-	{ Name = 'Custom_Miranda', Description = 'Custom Miranda',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD01' },
+	{ Name = 'Default_Miranda', Description = 'Default Miranda',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD01' },
+	{ Name = 'Custom_Miranda', Description = 'Custom Miranda',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2D000' },
 	{ Name = 'Custom_Miranda_Dark', Description = 'Custom Miranda Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2D001' },
 	{ Name = 'Custom_Miranda_Light', Description = 'Custom Miranda Light',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2D002' },
 	{ Name = 'Default_Windows', Description = 'Windows style',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD02' },
