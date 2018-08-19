@@ -81,11 +81,11 @@ assert(hIERoot)
 
 IEViewMenuEntires =
 {
-	{ Name = "Animation",   Description = "Animation",    Uid = 'a6bf0371-97ed-48cb-ae2d-486b6036f721' },
-	{ Name = "Avatars",     Description = "Avatars",      Uid = 'a6bf0371-97ed-48cb-ae2d-486b6036f71f' },
-	{ Name = "ShortLinks",  Description = "Short links",  Uid = 'a6bf0371-97ed-48cb-ae2d-486b6036f800' },
-	{ Name = "ScrollBar",  Description = "Scroll bar",  Uid = 'a6bf0371-97ed-48cb-ae2d-486b6036f801' },
-	{ Name = "CustomContextMenu",  Description = "Context menu",  Uid = 'a6bf0371-97ed-48cb-ae2d-586b6036f800' },
+	{ Name = "Animation",		Description = "Animation",	Uid = 'a6bf0371-97ed-48cb-ae2d-486b6036f721' },
+	{ Name = "Avatars",		Description = "Avatars",	Uid = 'a6bf0371-97ed-48cb-ae2d-486b6036f71f' },
+	{ Name = "ShortLinks",		Description = "Short links",	Uid = 'a6bf0371-97ed-48cb-ae2d-486b6036f800' },
+	{ Name = "ScrollBar",		Description = "Scroll bar",	Uid = 'a6bf0371-97ed-48cb-ae2d-486b6036f801' },
+	{ Name = "CustomContextMenu",	Description = "Context menu",	Uid = 'a6bf0371-97ed-48cb-ae2d-586b6036f800' },
 }
 
 function IEView_RebuildLog() m.CallService("SRMsg/BroadcastMessage", 0, 1335) end

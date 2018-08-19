@@ -23,7 +23,7 @@ SbarHeight=22
 Signature=101
 TabSkinning=1
 Version=1
-FontColor=FFFFFF
+FontColor=E2E2E2
 MenuBarBG=0E0E0E
 TabTextActive=FFFFFF
 TabTextHottrack=004080
@@ -33,11 +33,11 @@ TabTextUnread=804000
 ;LightShadow=FFFFFF
 
 [ClientArea]
-Left=2
-Top=2
-Right=2
-Bottom=2
-Inner=3
+Left=1
+Top=1
+Right=1
+Bottom=1
+Inner=4
 
 [WindowFrame]
 Caption=19
@@ -182,11 +182,11 @@ Bottom=3
 Item0=Buttonmouseover
 
 [$InfoPanelBackground]
-Glyph=61,38,65,55
+Glyph=62,38,64,55
 ;Alpha=70
-Left=2
+Left=1
 Top=1
-Right=2
+Right=1
 Bottom=1
 Item0=InfoPanelBackground
 
