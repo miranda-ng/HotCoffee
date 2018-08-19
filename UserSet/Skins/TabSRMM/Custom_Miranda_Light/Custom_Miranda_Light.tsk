@@ -1,10 +1,10 @@
 [VersionSkin]
-About=_Miranda_Light skin for TabSRMM
+About=Custom_Miranda_Light skin for TabSRMM
 Author=Dracosha
 Version=1.0
 
 [Theme]
-File=_Miranda_Light.tabsrmm
+File=Custom_Miranda_Light.tabsrmm
 
 ;--------Global---------
 
@@ -13,7 +13,7 @@ BorderType=0
 BorderColor=000000
 
 [Global]
-Name=_Miranda_Light
+Name=Custom_Miranda_Light
 CloseGlyph=Close.ico
 MaximizeGlyph=Maximize.ico
 MinimizeGlyph=Minimize.ico
@@ -40,7 +40,7 @@ Bottom=2
 Inner=3
 
 [WindowFrame]
-Caption=15
+Caption=19
 Left=10
 Right=10
 Bottom=10
@@ -49,12 +49,12 @@ RadiusTL=11
 RadiusTR=11
 RadiusBL=11
 RadiusBR=11
-CaptionOffset=5
-CaptionPadding=4
+CaptionOffset=4
+CaptionPadding=6
 TitleButtonWidth=18
 TitleButtonHeight=13
 TitleButtonTopOffset=1
-TitleBarLeftOffset=-6
+TitleBarLeftOffset=-5
 TitleBarRightOffset=0
 
 ;--------Standard---------
@@ -84,8 +84,8 @@ TitleBarRightOffset=0
 [%Buttonmouseover]
 
 [%InfoPanelBackground]
-Color1=FFFFFF
-Color2=E3E3E3
+Color1=FBFBFB
+Color2=E7E7E7
 Gradient=down
 
 ;[%Infopanelfield]
@@ -124,7 +124,7 @@ Top=-2
 
 [%InputArea]
 Left=2
-Top=2
+Top=5
 Right=2
 Bottom=2
 
@@ -166,11 +166,11 @@ Item0=Container
 [$Buttonnotpressed]
 
 [$Buttonpressed]
-Glyph=0,43,4,47
-Left=1
-Top=1
-Right=1
-Bottom=1
+Glyph=66,37,70,54
+Left=2
+Top=2
+Right=2
+Bottom=2
 Item0=Buttonpressed
 
 [$Buttonmouseover]
@@ -204,7 +204,7 @@ Bottom=1
 Item0=Titlebuttonmouseover
 
 [$Tabpage]
-Glyph=0,49,4,53
+Glyph=0,43,4,47
 Left=2
 Top=2
 Right=2
@@ -212,16 +212,16 @@ Bottom=2
 Item0=Tabpage
 
 [$Tabitem]
-Glyph=36,37,40,53
+Glyph=36,37,40,57
 Alpha=70
 Left=2
-Top=6
+Top=2
 Right=2
 Bottom=1
 Item0=Tabitem
 
 [$Tabitem_hottrack]
-Glyph=30,37,34,53
+Glyph=30,37,34,57
 Left=2
 Top=2
 Right=2
@@ -237,7 +237,7 @@ Bottom=2
 Item0=Tabitem_active
 
 [$Tabitem_bottom]
-Glyph=54,37,58,53
+Glyph=54,37,58,57
 Alpha=70
 Left=2
 Top=2
@@ -246,7 +246,7 @@ Bottom=2
 Item0=Tabitem_bottom
 
 [$Tabitem_hottrack_bottom]
-Glyph=48,37,52,53
+Glyph=48,37,52,57
 Left=2
 Top=2
 Right=2
@@ -254,7 +254,7 @@ Bottom=2
 Item0=Tabitem_hottrack_bottom
 
 [$Tabitem_active_bottom]
-Glyph=42,37,46,53
+Glyph=42,37,46,60
 Left=2
 Top=2
 Right=2

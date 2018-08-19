@@ -119,9 +119,9 @@ assert(hSkinRoot)
 
 Skins =
 {
-	{ Name = '_Miranda_', Description = 'Miranda style',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD01' },
-	{ Name = '_Miranda_Dark', Description = 'Miranda Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2D001' },
-	{ Name = '_Miranda_Light', Description = 'Miranda Light',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2D002' },
+	{ Name = 'Custom_Miranda', Description = 'Custom Miranda',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD01' },
+	{ Name = 'Custom_Miranda_Dark', Description = 'Custom Miranda Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2D001' },
+	{ Name = 'Custom_Miranda_Light', Description = 'Custom Miranda Light',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2D002' },
 	{ Name = 'Default_Windows', Description = 'Windows style',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD02' },
 
 	{ Name = 'Diplomat_Dark',   Description = 'Diplomat Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD03' },
@@ -182,7 +182,7 @@ function ApplySkin(skinName, fontName)
 	
 	WriteTabSRMMSkin(skinName, fontName)
 
-	local noTipperSkin = "_Miranda_,Default_Windows,WinStyle_Light,WinStyle_Dark";
+	local noTipperSkin = "Default_Miranda,Default_Windows,WinStyle_Light,WinStyle_Dark";
 	
 	m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\UserSet\\Skins\\"..skinName..".ini"), 0)
 	m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\UserSet\\Fonts\\"..fontName..".ini"), 0)
