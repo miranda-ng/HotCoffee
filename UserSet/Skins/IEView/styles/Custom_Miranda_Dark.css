@@ -6,21 +6,21 @@
 
 /* Fonts */
 input {
-	background: #3B3D46;
-	border-top: 1px solid #70737D;
-	border-left: 1px solid #70737D;
-	border-bottom: 1px solid #1B1E25;
-	border-right: 1px solid #1B1E25;
-	color: #D3D3D3;
+	background: #1D1D1D;
+	border-top: 1px solid #464646;
+	border-left: 1px solid #464646;
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000;
+	color: #C0C0C0;
 }
 
 html {
-	scrollbar-face-color: #3B3D46;
-	scrollbar-highlight-color: #70737D;
-	scrollbar-shadow-color: #3B3D46;
-	scrollbar-arrow-color: #D3D3D3;
-	scrollbar-base-color: #3B3D46;
-	scrollbar-darkshadow-color: #1B1E25;
+	scrollbar-face-color: #1D1D1D;
+	scrollbar-highlight-color: #1D1D1D;
+	scrollbar-shadow-color: #1D1D1D;
+	scrollbar-arrow-color: #C0C0C0;
+	scrollbar-base-color: #464646;
+	scrollbar-darkshadow-color: #000;
 	background: url(Dark.png) fixed no-repeat bottom right;
 	background-color: #252525;
 	overflow: auto;

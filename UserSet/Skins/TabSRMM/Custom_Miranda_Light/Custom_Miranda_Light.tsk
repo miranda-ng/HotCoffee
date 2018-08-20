@@ -166,7 +166,7 @@ Item0=Container
 [$Buttonnotpressed]
 
 [$Buttonpressed]
-Glyph=68,37,72,54
+Glyph=66,37,70,54
 Left=2
 Top=2
 Right=2
@@ -182,11 +182,10 @@ Bottom=3
 Item0=Buttonmouseover
 
 [$InfoPanelBackground]
-Glyph=60,37,66,56
-Alpha=70
-Left=3
+Glyph=60,37,64,56
+Left=2
 Top=2
-Right=3
+Right=2
 Bottom=2
 Item0=InfoPanelBackground
 
@@ -307,7 +306,7 @@ Item0=MessageLog
 [$Statusbarpanel]
 
 [$Statusbar]
-Glyph=62,37,64,55
+Glyph=61,37,63,55
 Left=1
 Top=2
 Right=1
