@@ -51,11 +51,11 @@ RadiusBL=11
 RadiusBR=11
 CaptionOffset=5
 CaptionPadding=6
-TitleButtonWidth=18
-TitleButtonHeight=13
+TitleButtonWidth=20
+TitleButtonHeight=14
 TitleButtonTopOffset=1
 TitleBarLeftOffset=-5
-TitleBarRightOffset=0
+TitleBarRightOffset=-1
 
 ;--------Standard---------
 
@@ -154,10 +154,10 @@ Alpha=100
 Perpixel=1
 
 [$Container]
-Glyph=10,23,88,25
+Glyph=10,23,151,25
 Left=1
 Top=1
-Right=1
+Right=65
 Bottom=1
 ;FillColor=
 ColorKey=F1F1F1
@@ -194,7 +194,7 @@ Item0=InfoPanelBackground
 [$Titlebutton]
 
 [$Titlebuttonpressed]
-Glyph=19,37,22,49
+Glyph=19,37,22,50
 Left=1
 Top=1
 Right=2
@@ -202,7 +202,7 @@ Bottom=1
 Item0=Titlebuttonpressed
 
 [$Titlebuttonmouseover]
-Glyph=14,37,17,49
+Glyph=14,37,17,50
 Left=1
 Top=1
 Right=2
@@ -270,18 +270,18 @@ Item0=Tabitem_active_bottom
 [$Toolbar]
 
 [$Frame]
-Glyph=0,0,116,35
+Glyph=0,0,161,35
 Left=10
 Top=23
-Right=72
+Right=75
 Bottom=10
 Item0=Frame
 
 [$FrameInactive]
-Glyph=0,0,116,35
+Glyph=0,0,161,35
 Left=10
 Top=23
-Right=72
+Right=75
 Bottom=10
 Item0=FrameInactive
 
