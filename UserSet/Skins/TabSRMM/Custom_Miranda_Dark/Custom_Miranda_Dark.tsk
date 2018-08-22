@@ -6,7 +6,7 @@ Version=1.0
 [Theme]
 File=Custom_Miranda_Dark.tabsrmm
 
-;--------Global---------
+;-------Global--------
 
 [Avatars]
 BorderType=0
@@ -57,27 +57,19 @@ TitleButtonTopOffset=1
 TitleBarLeftOffset=-5
 TitleBarRightOffset=-1
 
-;--------Standard---------
+;------Standard-------
 
-;[%Default]
-;Alpha=100
-;Perpixel=1
-;Color1=
-;Color2=
-;Color2_Transparent=0
-;TextColor=
-;Gradient=None
-;Corner=tl,tr,bl,br
-;Radius=0
-;BrderStyle=0
-;Left=0
-;Top=0
-;Right=0
-;Bottom=0
+[%Frame]
+
+[%FrameInactive]
+
+[%Titlebuttonpressed]
+
+[%Titlebuttonmouseover]
+
+[%Statusbar]
 
 [%Container]
-
-;[%Buttonnotpressed]
 
 [%Buttonpressed]
 
@@ -87,14 +79,6 @@ TitleBarRightOffset=-1
 Color1=FBFBFB
 Color2=E7E7E7
 Gradient=down
-
-;[%Infopanelfield]
-
-;[%Titlebutton]
-
-[%Titlebuttonpressed]
-
-[%Titlebuttonmouseover]
 
 [%Tabpage]
 
@@ -116,12 +100,6 @@ Left=-1
 [%Tabitem_active_bottom]
 Top=-2
 
-;[%Toolbar]
-
-[%Frame]
-
-[%FrameInactive]
-
 [%InputArea]
 Left=2
 Top=5
@@ -134,24 +112,51 @@ Top=2
 Right=2
 Bottom=2
 
-;[%Sidebar Background]
-
-;[%Statusbarpanel]
-
-[%Statusbar]
-
 [%Userlist]
 Left=2
 Top=2
 Right=2
 Bottom=2
 
-;--------Image---------
+;-------Image---------
 
 [$glyphs]
 Image=BG.png
 Alpha=100
 Perpixel=1
+
+[$Frame]
+Glyph=0,0,161,35
+Left=10
+Top=23
+Right=75
+Bottom=10
+Item0=Frame
+Item1=FrameInactive
+
+[$Titlebuttonpressed]
+Glyph=62,37,81,50
+Left=1
+Top=1
+Right=2
+Bottom=1
+Item0=Titlebuttonpressed
+
+[$Titlebuttonmouseover]
+Glyph=62,52,65,55
+Left=1
+Top=1
+Right=2
+Bottom=1
+Item0=Titlebuttonmouseover
+
+[$Statusbar]
+Glyph=57,37,59,55
+Left=1
+Top=2
+Right=1
+Bottom=1
+Item0=Statusbar
 
 [$Container]
 Glyph=10,23,151,25
@@ -159,14 +164,11 @@ Left=1
 Top=1
 Right=65
 Bottom=1
-;FillColor=
 ColorKey=F1F1F1
 Item0=Container
 
-[$Buttonnotpressed]
-
 [$Buttonpressed]
-Glyph=66,37,70,54
+Glyph=14,37,18,56
 Left=2
 Top=2
 Right=2
@@ -182,32 +184,12 @@ Bottom=3
 Item0=Buttonmouseover
 
 [$InfoPanelBackground]
-Glyph=61,38,63,55
+Glyph=57,38,59,55
 Left=1
 Top=1
 Right=1
 Bottom=1
 Item0=InfoPanelBackground
-
-[$Infopanelfield]
-
-[$Titlebutton]
-
-[$Titlebuttonpressed]
-Glyph=19,37,22,50
-Left=1
-Top=1
-Right=2
-Bottom=1
-Item0=Titlebuttonpressed
-
-[$Titlebuttonmouseover]
-Glyph=14,37,17,50
-Left=1
-Top=1
-Right=2
-Bottom=1
-Item0=Titlebuttonmouseover
 
 [$Tabpage]
 Glyph=0,43,4,47
@@ -218,7 +200,7 @@ Bottom=2
 Item0=Tabpage
 
 [$Tabitem]
-Glyph=36,37,40,57
+Glyph=32,37,36,57
 Alpha=70
 Left=2
 Top=2
@@ -227,7 +209,7 @@ Bottom=1
 Item0=Tabitem
 
 [$Tabitem_hottrack]
-Glyph=30,37,34,57
+Glyph=26,37,30,57
 Left=2
 Top=2
 Right=2
@@ -235,7 +217,7 @@ Bottom=1
 Item0=Tabitem_hottrack
 
 [$Tabitem_active]
-Glyph=24,37,28,61
+Glyph=20,37,24,61
 Left=2
 Top=2
 Right=2
@@ -243,7 +225,7 @@ Bottom=2
 Item0=Tabitem_active
 
 [$Tabitem_bottom]
-Glyph=54,37,58,57
+Glyph=50,37,54,57
 Alpha=70
 Left=2
 Top=2
@@ -252,7 +234,7 @@ Bottom=2
 Item0=Tabitem_bottom
 
 [$Tabitem_hottrack_bottom]
-Glyph=48,37,52,57
+Glyph=44,37,48,57
 Left=2
 Top=2
 Right=2
@@ -260,30 +242,12 @@ Bottom=2
 Item0=Tabitem_hottrack_bottom
 
 [$Tabitem_active_bottom]
-Glyph=42,37,46,60
+Glyph=38,37,42,60
 Left=2
 Top=2
 Right=2
 Bottom=2
 Item0=Tabitem_active_bottom
-
-[$Toolbar]
-
-[$Frame]
-Glyph=0,0,161,35
-Left=10
-Top=23
-Right=75
-Bottom=10
-Item0=Frame
-
-[$FrameInactive]
-Glyph=0,0,161,35
-Left=10
-Top=23
-Right=75
-Bottom=10
-Item0=FrameInactive
 
 [$InputArea]
 Glyph=0,37,4,41
@@ -292,31 +256,5 @@ Top=2
 Right=2
 Bottom=2
 Item0=InputArea
-
-[$MessageLog]
-Glyph=0,37,4,41
-Left=2
-Top=2
-Right=2
-Bottom=2
-Item0=MessageLog
-
-[$Sidebar Background]
-
-[$Statusbarpanel]
-
-[$Statusbar]
-Glyph=61,37,63,55
-Left=1
-Top=2
-Right=1
-Bottom=1
-Item0=Statusbar
-
-[$Userlist]
-Glyph=0,37,4,41
-Left=2
-Top=2
-Right=2
-Bottom=2
-Item0=Userlist
+Item1=MessageLog
+Item2=Userlist
