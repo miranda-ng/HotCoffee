@@ -1,10 +1,9 @@
-/*@import url('printing.css');*/
+/*--- Global ---*/
 
-/* Textveränderungen */
-.Link-Text			{color: #004080;}
-.tzerlink			{color: #004080;}
+.Link-Text, .tzerlink {
+	color: #004080;
+}
 
-/* Fonts */
 input {
 	background: #EDEAEB;
 	border-top: 1px solid #FFFFFF;
@@ -106,7 +105,7 @@ div.avatar {
 	margin: -1px;
 }
 
-.MessageIn, .MessageOut, .hMessageIn, .hMessageOut, .frame, .Status, .hStatus, .FileIn, .hFileIn, .FileOut, .hFileOut, .URL, .hURL, {
+.MessageIn, .MessageOut, .hMessageIn, .hMessageOut, .frame, .Status, .hStatus, .FileIn, .hFileIn, .FileOut, .hFileOut, .URL, .hURL {
 	border-top: 1px solid #FFFFFF;
 	border-bottom: 1px solid #B4B4B4;
 }

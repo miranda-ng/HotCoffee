@@ -1,10 +1,9 @@
-/*@import url('printing.css');*/
+/*--- Global ---*/
 
-/* Textver㭤erungen */
-.Link-Text			{color: #74B8E6;}
-.tzerlink			{color: #74B8E6;}
+.Link-Text, .tzerlink {
+	color: #74B8E6;
+}
 
-/* Fonts */
 input {
 	background: #1D1D1D;
 	border-top: 1px solid #464646;
@@ -19,15 +18,16 @@ html {
 	scrollbar-highlight-color: #1D1D1D;
 	scrollbar-shadow-color: #1D1D1D;
 	scrollbar-arrow-color: #C0C0C0;
-	scrollbar-base-color: #464646;
+	scrollbar-3dlight-color: #464646;
 	scrollbar-darkshadow-color: #000;
+	scrollbar-track-color: #252525;
 	background: url(Dark.png) fixed no-repeat bottom right;
 	background-color: #252525;
 	overflow: auto;
 	padding: 0px 0px 0px 0px;
 	margin: 0;
 	font-size: 13px;
-	color: Silver;
+	color: #C0C0C0;
 	zoom: 0 !important;
 }
 
@@ -106,7 +106,7 @@ div.avatar {
 	margin: -1px;
 }
 
-.MessageIn, .MessageOut, .hMessageIn, .hMessageOut, .frame, .Status, .hStatus, .FileIn, .hFileIn, .FileOut, .hFileOut, .URL, .hURL, {
+.MessageIn, .MessageOut, .hMessageIn, .hMessageOut, .frame, .Status, .hStatus, .FileIn, .hFileIn, .FileOut, .hFileOut, .URL, .hURL {
 	border-top: 1px solid #464646;
 	border-bottom: 1px solid #000;
 }

@@ -5,28 +5,29 @@
 }
 
 input {
-	background: #EDEAEB;
+	background: #E2E2E2;
 	border-top: 1px solid #FFFFFF;
 	border-left: 1px solid #FFFFFF;
-	border-bottom: 1px solid #787979;
-	border-right: 1px solid #787979;
+	border-bottom: 1px solid #B4B4B4;
+	border-right: 1px solid #B4B4B4;
 	color: #454545;
 }
 
 html {
-	scrollbar-face-color: #EDEAEB;
-	scrollbar-highlight-color: #FFFFFF;
-	scrollbar-shadow-color: #EDEAEB;
+	scrollbar-face-color: #E2E2E2;
+	scrollbar-highlight-color: #E2E2E2;
+	scrollbar-shadow-color: #E2E2E2;
 	scrollbar-arrow-color: #454545;
-	scrollbar-base-color: #EDEAEB;
-	scrollbar-darkshadow-color: #787979;
+	scrollbar-3dlight-color: #FFFFFF;
+	scrollbar-darkshadow-color: #B4B4B4;
+	scrollbar-track-color: #F4F4F4;
 	background: url(Light.png) fixed no-repeat bottom right;
-	background-color: #F4F2F3;
+	background-color: #FFFFFF;
 	overflow: auto;
 	padding: 0px 0px 0px 0px;
 	margin: 0;
 	font-size: 13px;
-	color: #4F4F4F;
+	color: #454545;
 	zoom: 0 !important;
 }
 
@@ -115,7 +116,7 @@ div.avatar {
 }
 
 .hMessageIn, .hMessageOut, .history, .hStatus, .hFileIn, .hFileOut, .hURL {
-	background: url(Graphite_Light/history.png) no-repeat bottom right;
+	background: url(Custom_Miranda_Light/history.png) no-repeat bottom right;
 }
 
 
@@ -123,34 +124,34 @@ div.avatar {
 
 .in .head {
 	color: #C44305;
-	background-image: url(Graphite_Light/in.png);
+	background-image: url(Custom_Miranda_Light/in.png);
 }
 
 .contentMessageIn, .contenthMessageIn, .contentMessageInGroupStart, .MessageInGroupInner, .contenthMessageInGroupStart, .hMessageInGroupInner {
-	background-image: url(Graphite_Light/in.png);
+	background-image: url(Custom_Miranda_Light/in.png);
 }
 
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
 	color: #054381;
-	background-image: url(Graphite_Light/out.png);
+	background-image: url(Custom_Miranda_Light/out.png);
 }
 
 .contentMessageOut, .contenthMessageOut, .contentMessageOutGroupStart, .MessageOutGroupInner, .contenthMessageOutGroupStart, .hMessageOutGroupInner {
-	background-image: url(Graphite_Light/out.png);
+	background-image: url(Custom_Miranda_Light/out.png);
 }
 
 /* -------------------- status support -------------------- */
 
 .status .head {
 	color: #C44305;
-	background-image: url(Graphite_Light/status.png);
+	background-image: url(Custom_Miranda_Light/status.png);
 }
 
 .contentStatus, .contenthStatus {
 	color: #C44305;
-	background-image: url(Graphite_Light/status.png);
+	background-image: url(Custom_Miranda_Light/status.png);
 }
 
 .contentStatus .time, .contenthStatus .time {
@@ -161,12 +162,12 @@ div.avatar {
 
 .infile .head, .outfile .head {
 	color: green;
-	background-image: url(Graphite_Light/file.png);
+	background-image: url(Custom_Miranda_Light/file.png);
 }
 
 .contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
 	color: green;
-	background-image: url(Graphite_Light/file.png);
+	background-image: url(Custom_Miranda_Light/file.png);
 }
 
 .contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
@@ -177,12 +178,12 @@ div.avatar {
 
 .inurl .head {
 	color: #054381;
-	background-image: url(Graphite_Light/url.png);
+	background-image: url(Custom_Miranda_Light/url.png);
 }
 
 .contentURL, .contenthURL {
 	color: #054381;
-	background-image: url(Graphite_Light/url.png);
+	background-image: url(Custom_Miranda_Light/url.png);
 }
 
 .contentURL .time, .contenthURL .time {
