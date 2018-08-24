@@ -71,14 +71,16 @@ TitleBarRightOffset=-1
 
 [%Container]
 
+[%Buttonnotpressed]
+Color1=F7F8FB
+Color2=E3E8F2
+Gradient=right
+
 [%Buttonpressed]
 
 [%Buttonmouseover]
 
 [%InfoPanelBackground]
-Color1=F7F8FB
-Color2=E3E8F2
-Gradient=down
 
 [%Tabpage]
 
