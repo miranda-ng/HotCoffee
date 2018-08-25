@@ -1,0 +1,425 @@
+#Miranda Light skin for Popup+ 2.1.0.7 or later
+#Author:	Pacificator
+#Version:	1.0
+#Description:	Skin made to match the Miranda Light for Clist Modern Layered
+#===============options============================================================================
+#options
+#	#option	id	val	title
+#	option	1	0	Use different colors
+#	option	2	1	Show icon
+#	option	3	1	Show Avatars
+#	option	4	1	Avatars to right
+#	option	5	1	Clock
+#	option	6	1	Logo
+#	option	7	1	Use different colors for logo and clock
+#	option	8	0	Use different colors for text
+#	option	9	0	Use different colors for background
+#end
+
+options
+#option	id	val	title
+option	1	1	Show colours
+option	2	1	Show avatars
+option	3	1	Align avatar to the right
+end
+#==================================================================================================
+w 4+icon.width+4+title.width+1+4+clock.width+4 > 9+2+avatar.width+4+text.width+2+9
+h 4+title.height+4+2+(avatar.height>text.height)+2+9
+#popup-version 02010000
+#shadow-region-opacity 30
+#legacy-region-opacity 64
+#=========Background===============================================================================
+object  
+	ifset 1
+	type bitmap
+	source back.png
+	mono
+	x 0
+	y 0
+	w window.width
+	h window.height
+end
+
+object 
+	ifnotset 1
+	type bitmap
+	source back.png
+	x 0
+	y 0
+	w window.width
+	h window.height
+end
+
+object  
+	ifset 1
+	type bitmap
+	source back2.png
+	mono
+	layer
+	x window.width-800
+	y window.height-600
+end
+
+object  
+	ifnotset 1
+	type bitmap
+	source back2.png
+	layer
+	x window.width-800
+	y window.height-600
+end
+# titlebar lines
+object  
+	ifset 1 
+	type bitmap
+	source title_lt2.png
+	mono
+	x 0
+	y 0
+end
+
+object  
+	ifnotset 1 
+	type bitmap
+	source title_lt.png
+	x 0
+	y 0
+end
+
+object  
+	ifset 1
+	type bitmap
+	source title_ct2.png
+	mono
+	x 9
+	y 0
+	w window.width-9-9
+end
+
+object  
+	ifnotset 1
+	type bitmap
+	source title_ct.png
+	x 9
+	y 0
+	w window.width-9-9
+end
+
+object  
+	ifset 1
+	type bitmap
+	source title_rt2.png
+	mono
+	x window.width-9
+	y 0
+end
+
+object  
+	ifnotset 1
+	type bitmap
+	source title_rt.png
+	x window.width-9
+	y 0
+end
+
+object  
+	ifset 1 
+	type bitmap
+	source title_lc2.png
+	mono
+	x 0
+	y 6
+	h title.height
+end
+
+object  
+	ifnotset 1 
+	type bitmap
+	source title_lc.png
+	x 0
+	y 6
+	h title.height
+end
+
+object  
+	ifset 1
+	type bitmap
+	source title_cc2.png
+	mono
+	x 9
+	y 6
+	w window.width-9-9
+	h title.height
+end
+
+object  
+	ifnotset 1
+	type bitmap
+	source title_cc.png
+	x 9
+	y 6
+	w window.width-9-9
+	h title.height
+end
+
+object  
+	ifset 1 
+	type bitmap
+	source title_rc2.png
+	mono
+	x window.width-9
+	y 6
+	h title.height
+end
+
+object  
+	ifnotset 1 
+	type bitmap
+	source title_rc.png
+	x window.width-9
+	y 6
+	h title.height
+end
+
+object  
+	ifset 1
+	type bitmap
+	source title_lb2.png
+	mono
+	x 0
+	y 4+title.height
+end
+
+object  
+	ifnotset 1
+	type bitmap
+	source title_lb.png
+	x 0
+	y 4+title.height
+end
+
+object  
+	ifset 1
+	type bitmap
+	source title_cb2.png
+	mono
+	x 9
+	y 4+title.height
+	w window.width-9-9
+end
+
+object  
+	ifnotset 1
+	type bitmap
+	source title_cb.png
+	x 9
+	y 4+title.height
+	w window.width-9-9
+end
+
+object  
+	ifset 1
+	type bitmap
+	source title_rb2.png
+	mono
+	x window.width-9
+	y 4+title.height
+end
+object  
+	ifnotset 1
+	type bitmap
+	source title_rb.png
+	x window.width-9
+	y 4+title.height
+end
+
+# text area lines
+object  
+	ifset 1
+	type bitmap
+	source left2.png
+	mono
+	x 0
+	y 4+title.height+4
+	h window.height-(4+title.height+4)-9
+end
+
+object   
+	ifnotset 1
+	type bitmap
+	source left.png
+	x 0
+	y 4+title.height+4
+	h window.height-(4+title.height+4)-9
+end
+
+object  
+	ifset 1
+	type bitmap
+	source right2.png
+	mono
+	x window.width-9
+	y 4+title.height+4
+	h window.height-(4+title.height+4)-9
+end
+
+object	
+	ifnotset 1
+	type bitmap
+	source right.png
+	x window.width-9
+	y 4+title.height+4
+	h window.height-(4+title.height+4)-9
+end
+
+object  
+	ifset 1
+	type bitmap
+	source bottom_left2.png
+	mono
+	x 0
+	y window.height-9
+end
+
+object  
+	ifnotset 1
+	type bitmap
+	source bottom_left.png
+	x 0
+	y window.height-9
+end
+
+object  
+	ifset 1
+	type bitmap
+	source bottom2.png
+	mono
+	x 9
+	y window.height-9
+	w window.width-9-9
+end
+
+object  
+	ifnotset 1
+	type bitmap
+	source bottom.png
+	x 9
+	y window.height-9
+	w window.width-9-9
+end
+
+object  ifset 1
+	type bitmap
+	source bottom_right2S.png
+	mono
+	x window.width-9
+	y window.height-9
+end
+
+object 
+	ifnotset 1
+	type bitmap
+	source bottom_rightS.png
+	x window.width-9
+	y window.height-9
+end
+
+# icon
+object 
+	type icon
+	x 4
+	y 4+(title.height-icon.height)/2
+end
+#avatar
+object
+	ifset 2
+	ifnotset 3
+	type avatar
+	x 9+2
+	y 4+title.height+4+2
+	w options.avatarsize+32*(1-options.avatarsize/(options.avatarsize>1))
+	proportional 1
+end
+object
+	ifset 2
+	ifset 3
+	type avatar
+	x window.width-avatar.width-9-2
+	y 4+title.height+4+2
+	w options.avatarsize+32*(1-options.avatarsize/(options.avatarsize>1))
+	proportional 1
+end
+
+# clock
+object
+	ifnotset 1
+	type clock
+	source clock.png
+	clocksize 5 4 8 6 8 7 8 8 8 7 8 8 0 0 5
+	x window.width-clock.width-9
+	y 2
+end
+object
+	ifset 1
+	type clock
+	source clock2.png
+	mono
+	clocksize 5 4 8 6 8 7 8 8 8 7 8 8 0 0 5
+	x window.width-clock.width-9
+	y 2
+end
+
+#titlebar text
+object
+	type title
+	color 100 100 100
+	x 4+icon.width+4-1
+	y 4
+	w window.width-(4+icon.width+4)-4-clock.width-4
+end
+object
+	type title
+	color 100 100 100
+	x 4+icon.width+4
+	y 4-1
+	w window.width-(4+icon.width+4)-4-clock.width-4
+end
+object
+	type title
+	color 100 100 100
+	x 4+icon.width+4+1
+	y 4
+	w window.width-(4+icon.width+4)-4-clock.width-4
+end
+object
+	type title
+	color 100 100 100
+	x 4+icon.width+4
+	y 4+1
+	w window.width-(4+icon.width+4)-4-clock.width-4
+end
+object
+	type title
+	color 255 255 255
+	x 4+icon.width+4
+	y 4
+	w window.width-(4+icon.width+4)-4-clock.width-4
+end
+
+# text area
+object
+	ifnotset 3
+	type text
+	color 0 0 0
+	x 9+2+avatar.width+4
+	y 4+title.height+4+2
+	w window.width-(9+2+avatar.width+4)-2-9
+end
+object
+	ifset 3
+	type text
+	color 0 0 0
+	x 9+2+4
+	y 4+title.height+4+2
+	w window.width-(9+2+avatar.width+4)-2-9
+end
