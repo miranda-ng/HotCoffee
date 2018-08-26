@@ -3,31 +3,18 @@
 #Version:	1.0
 #Description:	Skin made to match the Miranda Light for Clist Modern Layered
 #===============options============================================================================
-#options
-#	#option	id	val	title
-#	option	1	0	Use different colors
-#	option	2	1	Show icon
-#	option	3	1	Show Avatars
-#	option	4	1	Avatars to right
-#	option	5	1	Clock
-#	option	6	1	Logo
-#	option	7	1	Use different colors for logo and clock
-#	option	8	0	Use different colors for text
-#	option	9	0	Use different colors for background
-#end
-
 options
-#option	id	val	title
-option	1	1	Show colours
-option	2	1	Show avatars
-option	3	1	Align avatar to the right
+	#option	id	val	title
+	option	1	1	Show colours
+	option	2	1	Show avatars
+	option	3	1	Align avatar to the right
 end
 #==================================================================================================
 w 4+icon.width+4+title.width+1+4+clock.width+4 > 9+2+avatar.width+4+text.width+2+9
 h 4+title.height+4+2+(avatar.height>text.height)+2+9
-#popup-version 02010000
-#shadow-region-opacity 30
-#legacy-region-opacity 64
+popup-version 02010000
+shadow-region-opacity 30
+legacy-region-opacity 64
 #=========Background===============================================================================
 object  
 	ifset 1
