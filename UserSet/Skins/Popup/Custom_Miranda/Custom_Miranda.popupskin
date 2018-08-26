@@ -7,22 +7,26 @@
 options
 	#option	id	val	title
 	option	1	0	Different colors for frame
-	option	2	0	Different colors for background
+	option	2	0	Different colors for background of text
 	option	3	0	Different colors for text
-	option	4	1	Different colors for clock
+	option	4	1	Different colors for background of clock
 	option	5	1	Icons
 	option	6	1	Avatars
 	option	7	1	Avatars to right
 	option	8	1	Clock
-	option	9	1	Logo
 end
 
-#w (21+icon.width+2+title.width+1+4+clock.width+21)>(21+avatar.width+3+text.width+21)
-h 5+title.height+5+2+(avatar.height>text.height)+2+10
+#w 5+icon.width+4+title.width+4+clock.width+2+7 > 10+2+avatar.width+2+text.width+2+10
+h 5+title.height+5+(2+avatar.height>text.height+2)+2+10
+
+#w 4+icon.width+4+title.width+1+4+clock.width+4 > 9+2+avatar.width+4+text.width+2+9
+#h 4+title.height+4+2+(avatar.height>text.height)+2+9
+
+#w (text.width+(25>(avatar.width+4+4))+4)>(25+title.width+4+clock.width+4)
 
 popup-version 02010007
-#padding-right 40
-#padding-bottom 40
+#padding-right 4
+#padding-bottom 4
 #shadow-region-opacity 30
 #legacy-region-opacity 64
 
@@ -274,7 +278,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source text_cb.png
+	source text_bc.png
 	mono
 	x 10
 	y window.height-10
@@ -283,7 +287,7 @@ end
 object
 	ifnotset 1
 	type bitmap
-	source text_cb.png
+	source text_bc.png
 	x 10
 	y window.height-10
 	w window.width-10
@@ -308,7 +312,7 @@ end
 object
 	ifset 5
 	type icon
-	x 5
+	x 10
 	y 5+(title.height-icon.height)/2
 end
 
@@ -317,8 +321,8 @@ object
 	ifset 6
 	ifnotset 7
 	type avatar
-	x 11
-	y 12+title.height+9
+	x 10+2
+	y title.height+10+3
 	w options.avatarsize
 	proportional 1
 end
@@ -326,8 +330,8 @@ object
 	ifset 6
 	ifset 7
 	type avatar
-	x window.width-avatar.width-11
-	y 12+title.height+9
+	x window.width-avatar.width-10-2
+	y title.height+10+3
 	w options.avatarsize
 	proportional 1
 end
@@ -335,128 +339,58 @@ end
 #==========Clock===================================================================================
 object
 	ifset 8
-	ifset 9
 	ifset 4
 	type clock
 	source clock.png
 	mono
 	layer
-	clocksize 3 3 7 5 7 7 7 7 7 7 7 7 0 0 4
+	clocksize 3 4 8 6 8 8 8 8 8 8 8 8 0 0 4
 	x window.width-8-clock.width
-	y 3
+	y 4
 end
 object
 	ifset 8
-	ifset 9
 	ifnotset 4
 	type clock
 	source clock.png
 	layer
-	clocksize 3 3 7 5 7 7 7 7 7 7 7 7 0 0 4
+	clocksize 3 4 8 6 8 8 8 8 8 8 8 8 0 0 4
 	x window.width-8-clock.width
-	y 3
-end
-object
-	ifset 8
-	ifnotset 9
-	ifset 4
-	type clock
-	source onlyclock.png
-	mono
-	layer
-	clocksize 3 3 7 5 7 7 7 7 7 7 7 7 0 0 4
-	x window.width-8-clock.width
-	y 3
-end
-object
-	ifset 8
-	ifnotset 9
-	ifnotset 4
-	type clock
-	source onlyclock.png
-	layer
-	clocksize 3 3 7 5 7 7 7 7 7 7 7 7 0 0 4
-	x window.width-8-clock.width
-	y 3
+	y 4
 end
 
-#==========logo====================================================================================
+#===========Title text border======================================================================
 object
-	ifset 8
-	ifset 9
-	ifset 4
-	type bitmap logo
-	source logo.png
-	mono
-	layer
-	x window.width-63-clock.width
-	y 3
+	ifset 5
+	type title
+	color 20 20 20
+	x 10+icon.width+1+1
+	y 5+1
+	w window.width-(5+icon.width+5)-4-clock.width-4
 end
 object
-	ifset 8
-	ifset 9
-	ifnotset 4
-	type bitmap logo
-	source logo.png
-	layer
-	x window.width-63-clock.width
-	y 3
-end
-object
-	ifnotset 8
-	ifset 9
-	ifset 4
-	type bitmap logo
-	source onlylogo.png
-	mono
-	layer
-	x window.width-63
-	y 3
-end
-object
-	ifnotset 8
-	ifset 9
-	ifnotset 4
-	type bitmap logo
-	source onlylogo.png
-	layer
-	x window.width-63
-	y 3
+	ifnotset 5
+	type title
+	color 20 20 20
+	x 10+3+1
+	y 5+1
+	w window.width-10-clock.width-4
 end
 
 #===========Title text=============================================================================
-#set 3 - different colors for text; set 5 - icon
 object
-	ifnotset 3
 	ifset 5
 	type title
 	color 255 255 255
-	x icon.width+4
+	x 10+icon.width+1
 	y 5
-	w window.width-(5+icon.width+4)-4-clock.width-4
+	w window.width-(5+icon.width+5)-4-clock.width-4
 end
 object
-	ifnotset 3
 	ifnotset 5
 	type title
 	color 255 255 255
-	x 5
-	y 5
-	w window.width-10-clock.width-4
-end
-object
-	ifset 3
-	ifset 5
-	type title
-	x icon.width+4
-	y 5
-	w window.width-(5+icon.width+4)-4-clock.width-4
-end
-object
-	ifset 3
-	ifnotset 5
-	type title
-	x 5
+	x 10+3
 	y 5
 	w window.width-10-clock.width-4
 end
@@ -466,33 +400,33 @@ object
 	ifnotset 3
 	ifset 7
 	type text
-	color 79 79 79
-	x 9
+	color 30 30 30
+	x 10+3
 	y 5+title.height+5+2
-	w window.width-(9+avatar.width+4)-7
+	w window.width-(5+3+avatar.width+5+3)-10
 end
 object
 	ifnotset 3
 	ifnotset 7
 	type text
-	color 79 79 79
-	x 4+avatar.width+5
+	color 30 30 30
+	x 5+avatar.width+5+3
 	y 5+title.height+5+2
-	w window.width-(9+avatar.width+4)-7
+	w window.width-(5+3+avatar.width+5+3)-10
 end
 object
 	ifset 3
 	ifset 7
 	type text
-	x 9
+	x 10+3
 	y 5+title.height+5+2
-	w window.width-(9+avatar.width+4)-7
+	w window.width-(5+3+avatar.width+5+3)-10
 end
 object
 	ifset 3
 	ifnotset 7
 	type text
-	x 4+avatar.width+5
+	x 5+avatar.width+5+3
 	y 5+title.height+5+2
-	w window.width-(9+avatar.width+4)-7
+	w window.width-(5+3+avatar.width+5+3)-10
 end
