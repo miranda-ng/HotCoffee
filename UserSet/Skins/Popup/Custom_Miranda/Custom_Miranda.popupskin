@@ -9,7 +9,7 @@ options
 	option	1	0	Different colors for frame
 	option	2	0	Different colors for background of text
 	option	3	0	Different colors for text
-	option	4	1	Different colors for background of clock
+	option	4	0	Different colors for background of clock
 	option	5	1	Icons
 	option	6	1	Avatars
 	option	7	1	Avatars to right
@@ -344,8 +344,8 @@ object
 	source clock.png
 	mono
 	layer
-	clocksize 3 4 8 6 8 8 8 8 8 8 8 8 0 0 4
-	x window.width-8-clock.width
+	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
+	x window.width-9-clock.width
 	y 4
 end
 object
@@ -354,8 +354,8 @@ object
 	type clock
 	source clock.png
 	layer
-	clocksize 3 4 8 6 8 8 8 8 8 8 8 8 0 0 4
-	x window.width-8-clock.width
+	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
+	x window.width-9-clock.width
 	y 4
 end
 
