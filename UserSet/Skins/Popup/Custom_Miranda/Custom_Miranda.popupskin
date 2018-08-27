@@ -341,12 +341,12 @@ object
 	ifset 8
 	ifset 4
 	type clock
-	source clock.png
+	source clock_dc.png
 	mono
 	layer
-	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
+	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
 	x window.width-9-clock.width
-	y 4
+	y 1
 end
 object
 	ifset 8
@@ -354,9 +354,9 @@ object
 	type clock
 	source clock.png
 	layer
-	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
+	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
 	x window.width-9-clock.width
-	y 4
+	y 1
 end
 
 #===========Title text border======================================================================
@@ -366,7 +366,7 @@ object
 	color 20 20 20
 	x 10+icon.width+1+1
 	y 5+1
-	w window.width-(5+icon.width+5)-4-clock.width-4
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
 	ifnotset 5
@@ -374,7 +374,7 @@ object
 	color 20 20 20
 	x 10+3+1
 	y 5+1
-	w window.width-10-clock.width-4
+	w window.width-10-clock.width-10-5
 end
 
 #===========Title text=============================================================================
@@ -384,7 +384,7 @@ object
 	color 255 255 255
 	x 10+icon.width+1
 	y 5
-	w window.width-(5+icon.width+5)-4-clock.width-4
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
 	ifnotset 5
@@ -392,7 +392,7 @@ object
 	color 255 255 255
 	x 10+3
 	y 5
-	w window.width-10-clock.width-4
+	w window.width-10-clock.width-10-5
 end
 
 #============Text area=============================================================================
