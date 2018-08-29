@@ -13,8 +13,15 @@ options
 	option	5	1	Icons
 	option	6	1	Avatars
 	option	7	1	Avatars to right
-	option	8	1	Clock
 end
+
+#Transparency
+#Different colors for title text
+#Volume effect for title text
+#Different colors for clock face
+#Standard digital clocks
+#Volume effect for digital clocks
+#Ñlock
 
 #w 5+icon.width+4+title.width+4+clock.width+2+7 > 10+2+avatar.width+2+text.width+2+10
 h 5+title.height+5+(2+avatar.height>text.height+2)+2+10
@@ -338,7 +345,6 @@ end
 
 #==========Clock===================================================================================
 object
-	ifset 8
 	ifset 4
 	type clock
 	source clock_dc.png
@@ -349,7 +355,6 @@ object
 	y 1
 end
 object
-	ifset 8
 	ifnotset 4
 	type clock
 	source clock.png
@@ -363,7 +368,7 @@ end
 object
 	ifset 5
 	type title
-	color 20 20 20
+	color 255 255 255
 	x 10+icon.width+1+1
 	y 5+1
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
@@ -371,7 +376,7 @@ end
 object
 	ifnotset 5
 	type title
-	color 20 20 20
+	color 255 255 255
 	x 10+3+1
 	y 5+1
 	w window.width-10-clock.width-10-5
@@ -379,17 +384,35 @@ end
 
 #===========Title text=============================================================================
 object
+	ifnotset 3
 	ifset 5
 	type title
-	color 255 255 255
+	color 30 30 30
 	x 10+icon.width+1
 	y 5
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
+	ifnotset 3
 	ifnotset 5
 	type title
-	color 255 255 255
+	color 30 30 30
+	x 10+3
+	y 5
+	w window.width-10-clock.width-10-5
+end
+object
+	ifset 3
+	ifset 5
+	type title
+	x 10+icon.width+1
+	y 5
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifset 3
+	ifnotset 5
+	type title
 	x 10+3
 	y 5
 	w window.width-10-clock.width-10-5
