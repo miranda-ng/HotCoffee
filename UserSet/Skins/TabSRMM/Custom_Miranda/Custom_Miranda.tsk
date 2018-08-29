@@ -186,7 +186,7 @@ Bottom=3
 Item0=Buttonmouseover
 
 [$InfoPanelBackground]
-Glyph=56,37,60,56
+Glyph=7,38,11,55
 Left=2
 Top=2
 Right=2
