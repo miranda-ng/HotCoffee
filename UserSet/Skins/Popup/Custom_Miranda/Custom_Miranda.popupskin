@@ -652,21 +652,21 @@ object
 	type clock
 	color 255 255 255
 	x window.width+1-1-clock.width
-	y title.height/2
+	y title.height/2-1
 end
 object
 	ifset 6
 	type clock
 	color 255 255 255
 	x window.width-1-clock.width
-	y title.height/2+1
+	y title.height/2-1+1
 end
 object
 	ifset 6
 	type clock
 	color 255 255 255
 	x window.width+1-1-clock.width
-	y title.height/2+1
+	y title.height/2-1+1
 end
 
 #===========Standard digital clock=================================================================
@@ -674,7 +674,7 @@ object
 	ifset 6
 	type clock
 	x window.width-1-clock.width
-	y title.height/2
+	y title.height/2-1
 end
 
 #===========Title text border======================================================================
