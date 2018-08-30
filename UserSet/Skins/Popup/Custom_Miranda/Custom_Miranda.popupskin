@@ -6,22 +6,19 @@
 #===============Options============================================================================
 options
 	#option	id	val	title
+	#option	#	0	Transparent frame
 	option	1	0	Different colors for frame
 	option	2	0	Different colors for background of text
-	option	3	0	Different colors for text
 	option	4	0	Different colors for background of clock
+	#option	#	0	Different colors for title text
+	option	3	0	Different colors for text
+	#option	#	0	Standard digital clocks
+	#option	#	0	Volume effect for title text
+	#option	#	0	Volume effect for digital clocks
 	option	5	1	Icons
 	option	6	1	Avatars
 	option	7	1	Avatars to right
 end
-
-#Transparency
-#Different colors for title text
-#Volume effect for title text
-#Different colors for clock face
-#Standard digital clocks
-#Volume effect for digital clocks
-#Ñlock
 
 #w 5+icon.width+4+title.width+4+clock.width+2+7 > 10+2+avatar.width+2+text.width+2+10
 h 5+title.height+5+(2+avatar.height>text.height+2)+2+10
