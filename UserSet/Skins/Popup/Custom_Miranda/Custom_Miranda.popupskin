@@ -26,7 +26,7 @@ popup-version 02010007
 #shadow-region-opacity 
 #legacy-region-opacity 
 
-#===========Titlebar top===With out transparent frame==============================================
+#===========Titlebar top===========================================================================
 object
 	ifnotset 1
 	ifset 2
@@ -90,7 +90,7 @@ object
 	w 7
 	h 7
 end
-#===========Titlebar top===With transparent frame==================================================
+#===========Transparent frame====================
 object
 	ifset 1
 	ifset 2
@@ -154,7 +154,8 @@ object
 	w 7
 	h 7
 end
-#===========Titlebar center===With out transparent frame===========================================
+
+#===========Titlebar center========================================================================
 object
 	ifnotset 1
 	ifset 2
@@ -214,7 +215,7 @@ object
 	y 7
 	h title.height+2
 end
-#===========Titlebar center===With transparent frame===============================================
+#===========Transparent frame====================
 object
 	ifset 1
 	ifset 2
@@ -275,7 +276,7 @@ object
 	h title.height+2
 end
 
-#===========Titlebar bottom / Text area top===With out transparent frame===========================
+#===========Titlebar bottom / Text area top========================================================
 object
 	ifnotset 1
 	ifset 2
@@ -335,7 +336,7 @@ object
 	y 7+2+title.height
 	h 2
 end
-#===========Titlebar bottom / Text area top===With transparent frame===============================
+#===========Transparent frame====================
 object
 	ifset 1
 	ifset 2
@@ -419,7 +420,7 @@ object
 	h window.height-(4+title.height+4)-10-3
 end
 
-#===========Text area edge===With out transparent frame============================================
+#===========Text area edge=========================================================================
 object
 	ifnotset 1
 	ifset 2
@@ -460,7 +461,7 @@ object
 	y 7+2+title.height+2
 	h window.height-(4+title.height+4)-9
 end
-#===========Text area edge===With transparent frame================================================
+#===========Transparent frame====================
 object
 	ifset 1
 	ifset 2
@@ -502,7 +503,7 @@ object
 	h window.height-(4+title.height+4)-9
 end
 
-#===========Bottom edge===With out transparent frame===============================================
+#===========Bottom edge============================================================================
 object
 	ifnotset 1
 	ifset 2
@@ -558,7 +559,7 @@ object
 	x window.width-10
 	y window.height-10
 end
-#===========Bottom edge===With transparent frame===================================================
+#===========Transparent frame====================
 object
 	ifset 1
 	ifset 2
