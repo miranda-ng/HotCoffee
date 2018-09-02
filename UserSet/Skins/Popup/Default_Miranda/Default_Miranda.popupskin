@@ -1,167 +1,793 @@
+#Author:	Pacificator
+#Name:		Default_Miranda
+#Version:	1.0
+#Description:	Skin made to match the Default_Miranda for Clist Modern Layered (for Popup+ 2.1.0.7 or later)
+
+#===========Options================================================================================
 options
 	#option	id	val	title
-	option	1	1	Draw gradient background
-	option	2	1	Flat borders
-	option	3	1	Avatars
+	option	1	0	Different colors for frame
+	option	2	0	Different colors for background of text
+	option	3	0	Different colors for background of clock
+	option	4	1	Different colors for text
+	option	5	1	Light title text
+	option	6	0	Standard digital clocks
+	option	7	1	Icons
+	option	8	1	Avatars
+	option	9	1	Avatars to right
 end
 
-padding-right 4
-padding-bottom 4
-w (text.width+(25>(avatar.width+4+4))+4)>(25+title.width+4+clock.width+4)
+#w 5+icon.width+4+title.width+4+clock.width+2+7 > 10+2+avatar.width+2+text.width+2+10
+h 5+title.height+5+(2+avatar.height>text.height+2)+2+10
 
-# background
-object
-	type bitmap
-	ifnotset 1
-	source pixel:808080
-	mono
-	x 0
-	y 0
-	w -1
-	h -1
-end
+popup-version 02010007
+#padding-right 
+#padding-bottom 
+#shadow-region-opacity 
+#legacy-region-opacity 
 
+#€ркость фона 100
+#контраст фона 200
+#€ркость теста 50
+#контраст текста 240
+
+#===========Titlebar top===========================================================================
 object
-	type bitmap
 	ifset 1
-	source gradient:v/707070/909090
+	type bitmap
+	source title_tl.png
 	mono
 	x 0
 	y 0
-	w -1
-	h -1
+	w 7
+	h 7
 end
-
-# 3d border
 object
+	ifnotset 1
 	type bitmap
-	ifnotset 2
-	source pixel:d0d0d0
-	mono
+	source title_tl.png
 	x 0
 	y 0
-	w -1
+	w 7
+	h 7
+end
+object
+	ifset 1
+	type bitmap
+	source title_tc.png
+	mono
+	x 7
+	y 0
+	w window.width-7-7
+	h 2
+end
+object
+	ifnotset 1
+	type bitmap
+	source title_tc.png
+	x 7
+	y 0
+	w window.width-7-7
+	h 2
+end
+object
+	ifset 1
+	type bitmap
+	source title_tr.png
+	mono
+	x window.width-7
+	y 0
+	w 7
+	h 7
+end
+object
+	ifnotset 1
+	type bitmap
+	source title_tr.png
+	x window.width-7
+	y 0
+	w 7
+	h 7
 end
 
+#===========Titlebar center========================================================================
 object
+	ifset 1
 	type bitmap
-	ifnotset 2
-	source pixel:d0d0d0
+	source title_cl.png
 	mono
 	x 0
-	y 0
-	h -1
+	y 7
+	h title.height+2
+end
+object
+	ifnotset 1
+	type bitmap
+	source title_cl.png
+	x 0
+	y 7
+	h title.height+2
+end
+object
+	ifset 1
+	type bitmap
+	source title_cc.png
+	mono
+	x 7
+	y 2
+	w window.width-7-7
+	h title.height+7
+end
+object
+	ifnotset 1
+	type bitmap
+	source title_cc.png
+	x 7
+	y 2
+	w window.width-7-7
+	h title.height+7
+end
+object
+	ifset 1
+	type bitmap
+	source title_cr.png
+	mono
+	x window.width-7
+	y 7
+	h title.height+2
+end
+object
+	ifnotset 1
+	type bitmap
+	source title_cr.png
+	x window.width-7
+	y 7
+	h title.height+2
 end
 
+#===========Titlebar bottom / Text area top========================================================
 object
+	ifset 1
 	type bitmap
-	ifnotset 2
-	source pixel:303030
+	source title_bl.png
 	mono
 	x 0
-	y -1
-	w -1
+	y 7+2+title.height
+	h 2
 end
-
 object
+	ifnotset 1
 	type bitmap
-	ifnotset 2
-	source pixel:303030
+	source title_bl.png
+	x 0
+	y 7+2+title.height
+	h 2
+end
+object
+	ifset 1
+	type bitmap
+	source title_bc.png
 	mono
-	x -1
-	y 0
-	h -1
+	x 10
+	y 7+2+title.height
+	w window.width-10-10
+	h 2
 end
-
 object
+	ifnotset 1
 	type bitmap
-	ifnotset 2
-	source pixel:303030
+	source title_bc.png
+	x 10
+	y 7+2+title.height
+	w window.width-10-10
+	h 2
+end
+object
+	ifset 1
+	type bitmap
+	source title_br.png
 	mono
-	x -1
-	y -1
+	x window.width-10
+	y 7+2+title.height
+	h 2
+end
+object
+	ifnotset 1
+	type bitmap
+	source title_br.png
+	x window.width-10
+	y 7+2+title.height
+	h 2
 end
 
-# flat border
+#===========Background Text area===================================================================
 object
-	type bitmap
 	ifset 2
-	source pixel:000000
+	type bitmap
+	source text_bg.png
+	mono
+	layer
+	x 10
+	y 7+2+title.height+2
+	w window.width-10-10
+	h window.height-(4+title.height+4)-10-3
+end
+object
+	ifnotset 2
+	type bitmap
+	source text_bg.png
+	layer
+	x 10
+	y 7+2+title.height+2
+	w window.width-10-10
+	h window.height-(4+title.height+4)-10-3
+end
+
+#===========Text area edge=========================================================================
+object
+	ifset 1
+	type bitmap
+	source text_l.png
+	mono
 	x 0
-	y 0
-	w -1
-end
+	y 7+2+title.height+2
+	h window.height-(4+title.height+4)-9
 
+end
 object
+	ifnotset 1
 	type bitmap
-	ifset 2
-	source pixel:000000
+	source text_l.png
 	x 0
-	y 0
-	h -1
+	y 7+2+title.height+2
+	h window.height-(4+title.height+4)-9
 end
 
 object
+	ifset 1
 	type bitmap
-	ifset 2
-	source pixel:000000
-	y -1
-	w -1
+	source text_r.png
+	mono
+	x window.width-10
+	y 7+2+title.height+2
+	h window.height-(4+title.height+4)-9
 end
-
 object
+	ifnotset 1
 	type bitmap
-	ifset 2
-	source pixel:000000
-	x -1
-	y 0
-	h -1
+	source text_r.png
+	x window.width-10
+	y 7+2+title.height+2
+	h window.height-(4+title.height+4)-9
 end
 
+#===========Bottom edge============================================================================
 object
+	ifset 1
 	type bitmap
-	ifset 2
-	source pixel:000000
-	x -1
-	y -1
+	source text_bl.png
+	mono
+	x 0
+	y window.height-10
+	w 10
+end
+object
+	ifnotset 1
+	type bitmap
+	source text_bl.png
+	x 0
+	y window.height-10
+	w 10
+end
+object
+	ifset 1
+	type bitmap
+	source text_bc.png
+	mono
+	x 10
+	y window.height-10
+	w window.width-10
+end
+object
+	ifnotset 1
+	type bitmap
+	source text_bc.png
+	x 10
+	y window.height-10
+	w window.width-10
+end
+object
+	ifset 1
+	type bitmap
+	source text_br.png
+	mono
+	x window.width-10
+	y window.height-10
+end
+object
+	ifnotset 1
+	type bitmap
+	source text_br.png
+	x window.width-10
+	y window.height-10
 end
 
-# popup icon
+#===========Icon===================================================================================
 object
+	ifset 7
 	type icon
-	x 5
-	y 3
+	x 10
+	y 5+(title.height-icon.height)/2
 end
 
-#clock
+#===========Clock==================================================================================
 object
-	type clock
-	x window.width-4-clock.width
-	y 4
-end
-
-# popup title
-object
-	type title
-	x 25
-	y 4
-	w window.width-25-4-clock.width-4
-end
-
-# avatar
-object
-	type avatar
 	ifset 3
-	x 4
-	y title.height+4+4
-	w options.avatarsize<(options.avatarsize*avatarbitmap.width/avatarbitmap.height)
+	ifnotset 5
+	ifnotset 6
+	type clock
+	source clock_dc.png
+	mono
+	layer
+	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	x window.width-8-clock.width
+	y 1
+end
+object
+	ifnotset 3
+	ifnotset 5
+	ifnotset 6
+	type clock
+	source clock.png
+	layer
+	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	x window.width-8-clock.width
+	y 1
+end
+#===========Light title text=====================
+object
+	ifset 3
+	ifset 5
+	ifnotset 6
+	type clock
+	source ltt_clock_dc.png
+	mono
+	layer
+	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	x window.width-8-clock.width
+	y 1
+end
+object
+	ifnotset 3
+	ifset 5
+	ifnotset 6
+	type clock
+	source ltt_clock.png
+	layer
+	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	x window.width-8-clock.width
+	y 1
+end
+
+#===========Standard digital clock border==========================================================
+object
+	ifnotset 5
+	ifset 6
+	type clock
+	color 255 255 255
+	x window.width+1-1-clock.width
+	y title.height/2-1
+end
+object
+	ifnotset 5
+	ifset 6
+	type clock
+	color 255 255 255
+	x window.width-1-clock.width
+	y title.height/2-1+1
+end
+object
+	ifnotset 5
+	ifset 6
+	type clock
+	color 255 255 255
+	x window.width+1-1-clock.width
+	y title.height/2-1+1
+end
+#===========Light title text=====================
+object
+	ifnotset 4
+	ifset 5
+	ifset 6
+	type clock
+	color 30 30 30
+	x window.width+1-1-clock.width
+	y title.height/2-1
+end
+object
+	ifnotset 4
+	ifset 5
+	ifset 6
+	type clock
+	color 30 30 30
+	x window.width-1-clock.width
+	y title.height/2-1+1
+end
+object
+	ifnotset 4
+	ifset 5
+	ifset 6
+	type clock
+	color 30 30 30
+	x window.width+1-1-clock.width
+	y title.height/2-1+1
+end
+#Different colors for text
+object
+	ifset 4
+	ifset 5
+	ifset 6
+	type clock
+	x window.width+1-1-clock.width
+	y title.height/2-1
+end
+object
+	ifset 4
+	ifset 5
+	ifset 6
+	type clock
+	x window.width-1-clock.width
+	y title.height/2-1+1
+end
+object
+	ifset 4
+	ifset 5
+	ifset 6
+	type clock
+	x window.width+1-1-clock.width
+	y title.height/2-1+1
+end
+
+#===========Standard digital clock=================================================================
+object
+	ifnotset 4
+	ifnotset 5
+	ifset 6
+	type clock
+	color 30 30 30
+	x window.width-1-clock.width
+	y title.height/2-1
+end
+#Different colors for text
+object
+	ifset 4
+	ifnotset 5
+	ifset 6
+	type clock
+	x window.width-1-clock.width
+	y title.height/2-1
+end
+#===========Light title text=====================
+object
+	ifset 5
+	ifset 6
+	type clock
+	color 255 255 255
+	x window.width-1-clock.width
+	y title.height/2-1
+end
+object
+	ifset 5
+	ifset 6
+	type clock
+	color 255 255 255
+	x window.width-1-clock.width
+	y title.height/2-1
+end
+
+#===========Title text border======================================================================
+object
+	ifnotset 5
+	ifset 7
+	type title
+	color 255 255 255
+	x 10+icon.width+3+1
+	y 5
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifnotset 5
+	ifset 7
+	type title
+	color 255 255 255
+	x 10+icon.width+3
+	y 5+1
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifnotset 5
+	ifset 7
+	type title
+	color 255 255 255
+	x 10+icon.width+3+1
+	y 5+1
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifnotset 5
+	ifnotset 7
+	type title
+	color 255 255 255
+	x 10+3+1
+	y 5
+	w window.width-10-clock.width-10-5
+end
+object
+	ifnotset 5
+	ifnotset 7
+	type title
+	color 255 255 255
+	x 10+3
+	y 5+1
+	w window.width-10-clock.width-10-5
+end
+object
+	ifnotset 5
+	ifnotset 7
+	type title
+	color 255 255 255
+	x 10+3+1
+	y 5+1
+	w window.width-10-clock.width-10-5
+end
+#===========Light title text=====================
+object
+	ifnotset 4
+	ifset 5
+	ifset 7
+	type title
+	color 30 30 30
+	x 10+icon.width+3+1
+	y 5
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifnotset 4
+	ifset 5
+	ifset 7
+	type title
+	color 30 30 30
+	x 10+icon.width+3
+	y 5+1
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifnotset 4
+	ifset 5
+	ifset 7
+	type title
+	color 30 30 30
+	x 10+icon.width+3+1
+	y 5+1
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifnotset 4
+	ifset 5
+	ifnotset 7
+	type title
+	color 30 30 30
+	x 10+3+1
+	y 5
+	w window.width-10-clock.width-10-5
+end
+object
+	ifnotset 4
+	ifset 5
+	ifnotset 7
+	type title
+	color 30 30 30
+	x 10+3
+	y 5+1
+	w window.width-10-clock.width-10-5
+end
+object
+	ifnotset 4
+	ifset 5
+	ifnotset 7
+	type title
+	color 30 30 30
+	x 10+3+1
+	y 5+1
+	w window.width-10-clock.width-10-5
+end
+#Different colors for text
+object
+	ifset 4
+	ifset 5
+	ifset 7
+	type title
+	x 10+icon.width+3+1
+	y 5
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifset 4
+	ifset 5
+	ifset 7
+	type title
+	x 10+icon.width+3
+	y 5+1
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifset 4
+	ifset 5
+	ifset 7
+	type title
+	x 10+icon.width+3+1
+	y 5+1
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifset 4
+	ifset 5
+	ifnotset 7
+	type title
+	x 10+3+1
+	y 5
+	w window.width-10-clock.width-10-5
+end
+object
+	ifset 4
+	ifset 5
+	ifnotset 7
+	type title
+	x 10+3
+	y 5+1
+	w window.width-10-clock.width-10-5
+end
+object
+	ifset 4
+	ifset 5
+	ifnotset 7
+	type title
+	x 10+3+1
+	y 5+1
+	w window.width-10-clock.width-10-5
+end
+
+#===========Title text=============================================================================
+object
+	ifnotset 4
+	ifnotset 5
+	ifset 7
+	type title
+	color 30 30 30
+	x 10+icon.width+3
+	y 5
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifnotset 4
+	ifnotset 5
+	ifnotset 7
+	type title
+	color 30 30 30
+	x 10+3
+	y 5
+	w window.width-10-clock.width-10-5
+end
+#Different colors for text
+object
+	ifset 4
+	ifnotset 5
+	ifset 7
+	type title
+	x 10+icon.width+3
+	y 5
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifset 4
+	ifnotset 5
+	ifnotset 7
+	type title
+	x 10+3
+	y 5
+	w window.width-10-clock.width-10-5
+end
+#===========Light title text=====================
+object
+	ifset 5
+	ifset 7
+	type title
+	color 255 255 255
+	x 10+icon.width+3
+	y 5
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifset 5
+	ifnotset 7
+	type title
+	color 255 255 255
+	x 10+3
+	y 5
+	w window.width-10-clock.width-10-5
+end
+object
+	ifset 5
+	ifset 7
+	type title
+	color 255 255 255
+	x 10+icon.width+3
+	y 5
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifset 5
+	ifnotset 7
+	type title
+	color 255 255 255
+	x 10+3
+	y 5
+	w window.width-10-clock.width-10-5
+end
+
+#===========Avatar=================================================================================
+object
+	ifset 8
+	ifnotset 9
+	type avatar
+	x 10+2
+	y title.height+10+3
+	w options.avatarsize
+	proportional 1
+end
+object
+	ifset 8
+	ifset 9
+	type avatar
+	x window.width-avatar.width-10-2
+	y title.height+10+3
+	w options.avatarsize
 	proportional 1
 end
 
-# popup text
+#===========Text area==============================================================================
 object
+	ifnotset 4
+	ifset 9
 	type text
-	x 25>(avatar.width+4+4)
-	y title.height+4+4
-	w window.width-(25>(avatar.width+4+4))-4
+	color 30 30 30
+	x 10+3
+	y 5+title.height+5+2
+	w window.width-(5+3+avatar.width+5+3)-10
+end
+object
+	ifnotset 4
+	ifnotset 9
+	type text
+	color 30 30 30
+	x 5+avatar.width+5+3
+	y 5+title.height+5+2
+	w window.width-(5+3+avatar.width+5+3)-10
+end
+#Different colors for text
+object
+	ifset 4
+	ifset 9
+	type text
+	x 10+3
+	y 5+title.height+5+2
+	w window.width-(5+3+avatar.width+5+3)-10
+end
+object
+	ifset 4
+	ifnotset 9
+	type text
+	x 5+avatar.width+5+3
+	y 5+title.height+5+2
+	w window.width-(5+3+avatar.width+5+3)-10
 end

@@ -6,11 +6,11 @@
 #===========Options================================================================================
 options
 	#option	id	val	title
-	option	1	0	Transparent frame
-	option	2	0	Different colors for frame
-	option	3	0	Different colors for background of text
-	option	4	0	Different colors for background of clock
-	option	5	0	Different colors for text
+	option	1	0	Different colors for frame
+	option	2	0	Different colors for background of text
+	option	3	0	Different colors for background of clock
+	option	4	1	Different colors for text
+	option	5	1	Light title text
 	option	6	0	Standard digital clocks
 	option	7	1	Icons
 	option	8	1	Avatars
@@ -26,10 +26,14 @@ popup-version 02010007
 #shadow-region-opacity 
 #legacy-region-opacity 
 
+#€ркость фона 100
+#контраст фона 200
+#€ркость теста 50
+#контраст текста 240
+
 #===========Titlebar top===========================================================================
 object
-	ifnotset 1
-	ifset 2
+	ifset 1
 	type bitmap
 	source title_tl.png
 	mono
@@ -40,7 +44,6 @@ object
 end
 object
 	ifnotset 1
-	ifnotset 2
 	type bitmap
 	source title_tl.png
 	x 0
@@ -49,29 +52,26 @@ object
 	h 7
 end
 object
-	ifnotset 1
-	ifset 2
+	ifset 1
 	type bitmap
 	source title_tc.png
 	mono
 	x 7
 	y 0
 	w window.width-7-7
-	h 3
+	h 2
 end
 object
 	ifnotset 1
-	ifnotset 2
 	type bitmap
 	source title_tc.png
 	x 7
 	y 0
 	w window.width-7-7
-	h 3
+	h 2
 end
 object
-	ifnotset 1
-	ifset 2
+	ifset 1
 	type bitmap
 	source title_tr.png
 	mono
@@ -82,73 +82,8 @@ object
 end
 object
 	ifnotset 1
-	ifnotset 2
 	type bitmap
 	source title_tr.png
-	x window.width-7
-	y 0
-	w 7
-	h 7
-end
-#===========Transparent frame====================
-object
-	ifset 1
-	ifset 2
-	type bitmap
-	source transparent_title_tl.png
-	mono
-	x 0
-	y 0
-	w 7
-	h 7
-end
-object
-	ifset 1
-	ifnotset 2
-	type bitmap
-	source transparent_title_tl.png
-	x 0
-	y 0
-	w 7
-	h 7
-end
-object
-	ifset 1
-	ifset 2
-	type bitmap
-	source transparent_title_tc.png
-	mono
-	x 7
-	y 0
-	w window.width-7-7
-	h 3
-end
-object
-	ifset 1
-	ifnotset 2
-	type bitmap
-	source transparent_title_tc.png
-	x 7
-	y 0
-	w window.width-7-7
-	h 3
-end
-object
-	ifset 1
-	ifset 2
-	type bitmap
-	source transparent_title_tr.png
-	mono
-	x window.width-7
-	y 0
-	w 7
-	h 7
-end
-object
-	ifset 1
-	ifnotset 2
-	type bitmap
-	source transparent_title_tr.png
 	x window.width-7
 	y 0
 	w 7
@@ -157,8 +92,7 @@ end
 
 #===========Titlebar center========================================================================
 object
-	ifnotset 1
-	ifset 2
+	ifset 1
 	type bitmap
 	source title_cl.png
 	mono
@@ -168,7 +102,6 @@ object
 end
 object
 	ifnotset 1
-	ifnotset 2
 	type bitmap
 	source title_cl.png
 	x 0
@@ -176,29 +109,26 @@ object
 	h title.height+2
 end
 object
-	ifnotset 1
-	ifset 2
+	ifset 1
 	type bitmap
 	source title_cc.png
 	mono
 	x 7
-	y 3
+	y 2
 	w window.width-7-7
-	h title.height+4+2
+	h title.height+7
 end
 object
 	ifnotset 1
-	ifnotset 2
 	type bitmap
 	source title_cc.png
 	x 7
-	y 3
+	y 2
 	w window.width-7-7
-	h title.height+4+2
+	h title.height+7
 end
 object
-	ifnotset 1
-	ifset 2
+	ifset 1
 	type bitmap
 	source title_cr.png
 	mono
@@ -208,69 +138,8 @@ object
 end
 object
 	ifnotset 1
-	ifnotset 2
 	type bitmap
 	source title_cr.png
-	x window.width-7
-	y 7
-	h title.height+2
-end
-#===========Transparent frame====================
-object
-	ifset 1
-	ifset 2
-	type bitmap
-	source transparent_title_cl.png
-	mono
-	x 0
-	y 7
-	h title.height+2
-end
-object
-	ifset 1
-	ifnotset 2
-	type bitmap
-	source transparent_title_cl.png
-	x 0
-	y 7
-	h title.height+2
-end
-object
-	ifset 1
-	ifset 2
-	type bitmap
-	source transparent_title_cc.png
-	mono
-	x 7
-	y 3
-	w window.width-7-7
-	h title.height+4+2
-end
-object
-	ifset 1
-	ifnotset 2
-	type bitmap
-	source transparent_title_cc.png
-	x 7
-	y 3
-	w window.width-7-7
-	h title.height+4+2
-end
-object
-	ifset 1
-	ifset 2
-	type bitmap
-	source transparent_title_cr.png
-	mono
-	x window.width-7
-	y 7
-	h title.height+2
-end
-object
-	ifset 1
-	ifnotset 2
-	type bitmap
-	source transparent_title_cr.png
 	x window.width-7
 	y 7
 	h title.height+2
@@ -278,8 +147,7 @@ end
 
 #===========Titlebar bottom / Text area top========================================================
 object
-	ifnotset 1
-	ifset 2
+	ifset 1
 	type bitmap
 	source title_bl.png
 	mono
@@ -289,7 +157,6 @@ object
 end
 object
 	ifnotset 1
-	ifnotset 2
 	type bitmap
 	source title_bl.png
 	x 0
@@ -297,8 +164,7 @@ object
 	h 2
 end
 object
-	ifnotset 1
-	ifset 2
+	ifset 1
 	type bitmap
 	source title_bc.png
 	mono
@@ -309,7 +175,6 @@ object
 end
 object
 	ifnotset 1
-	ifnotset 2
 	type bitmap
 	source title_bc.png
 	x 10
@@ -318,8 +183,7 @@ object
 	h 2
 end
 object
-	ifnotset 1
-	ifset 2
+	ifset 1
 	type bitmap
 	source title_br.png
 	mono
@@ -329,69 +193,8 @@ object
 end
 object
 	ifnotset 1
-	ifnotset 2
 	type bitmap
 	source title_br.png
-	x window.width-10
-	y 7+2+title.height
-	h 2
-end
-#===========Transparent frame====================
-object
-	ifset 1
-	ifset 2
-	type bitmap
-	source transparent_title_bl.png
-	mono
-	x 0
-	y 7+2+title.height
-	h 2
-end
-object
-	ifset 1
-	ifnotset 2
-	type bitmap
-	source transparent_title_bl.png
-	x 0
-	y 7+2+title.height
-	h 2
-end
-object
-	ifset 1
-	ifset 2
-	type bitmap
-	source transparent_title_bc.png
-	mono
-	x 10
-	y 7+2+title.height
-	w window.width-10-10
-	h 2
-end
-object
-	ifset 1
-	ifnotset 2
-	type bitmap
-	source transparent_title_bc.png
-	x 10
-	y 7+2+title.height
-	w window.width-10-10
-	h 2
-end
-object
-	ifset 1
-	ifset 2
-	type bitmap
-	source transparent_title_br.png
-	mono
-	x window.width-10
-	y 7+2+title.height
-	h 2
-end
-object
-	ifset 1
-	ifnotset 2
-	type bitmap
-	source transparent_title_br.png
 	x window.width-10
 	y 7+2+title.height
 	h 2
@@ -399,7 +202,7 @@ end
 
 #===========Background Text area===================================================================
 object
-	ifset 3
+	ifset 2
 	type bitmap
 	source text_bg.png
 	mono
@@ -410,7 +213,7 @@ object
 	h window.height-(4+title.height+4)-10-3
 end
 object
-	ifnotset 3
+	ifnotset 2
 	type bitmap
 	source text_bg.png
 	layer
@@ -422,8 +225,7 @@ end
 
 #===========Text area edge=========================================================================
 object
-	ifnotset 1
-	ifset 2
+	ifset 1
 	type bitmap
 	source text_l.png
 	mono
@@ -434,7 +236,6 @@ object
 end
 object
 	ifnotset 1
-	ifnotset 2
 	type bitmap
 	source text_l.png
 	x 0
@@ -443,8 +244,7 @@ object
 end
 
 object
-	ifnotset 1
-	ifset 2
+	ifset 1
 	type bitmap
 	source text_r.png
 	mono
@@ -454,50 +254,8 @@ object
 end
 object
 	ifnotset 1
-	ifnotset 2
 	type bitmap
 	source text_r.png
-	x window.width-10
-	y 7+2+title.height+2
-	h window.height-(4+title.height+4)-9
-end
-#===========Transparent frame====================
-object
-	ifset 1
-	ifset 2
-	type bitmap
-	source transparent_text_l.png
-	mono
-	x 0
-	y 7+2+title.height+2
-	h window.height-(4+title.height+4)-9
-
-end
-object
-	ifset 1
-	ifnotset 2
-	type bitmap
-	source transparent_text_l.png
-	x 0
-	y 7+2+title.height+2
-	h window.height-(4+title.height+4)-9
-end
-
-object
-	ifset 1
-	ifset 2
-	type bitmap
-	source transparent_text_r.png
-	mono
-	x window.width-10
-	y 7+2+title.height+2
-	h window.height-(4+title.height+4)-9
-end
-object
-	ifset 1
-	ifnotset 2
-	type bitmap
-	source transparent_text_r.png
 	x window.width-10
 	y 7+2+title.height+2
 	h window.height-(4+title.height+4)-9
@@ -505,8 +263,7 @@ end
 
 #===========Bottom edge============================================================================
 object
-	ifnotset 1
-	ifset 2
+	ifset 1
 	type bitmap
 	source text_bl.png
 	mono
@@ -516,7 +273,6 @@ object
 end
 object
 	ifnotset 1
-	ifnotset 2
 	type bitmap
 	source text_bl.png
 	x 0
@@ -524,8 +280,7 @@ object
 	w 10
 end
 object
-	ifnotset 1
-	ifset 2
+	ifset 1
 	type bitmap
 	source text_bc.png
 	mono
@@ -535,7 +290,6 @@ object
 end
 object
 	ifnotset 1
-	ifnotset 2
 	type bitmap
 	source text_bc.png
 	x 10
@@ -543,8 +297,7 @@ object
 	w window.width-10
 end
 object
-	ifnotset 1
-	ifset 2
+	ifset 1
 	type bitmap
 	source text_br.png
 	mono
@@ -553,65 +306,8 @@ object
 end
 object
 	ifnotset 1
-	ifnotset 2
 	type bitmap
 	source text_br.png
-	x window.width-10
-	y window.height-10
-end
-#===========Transparent frame====================
-object
-	ifset 1
-	ifset 2
-	type bitmap
-	source transparent_text_bl.png
-	mono
-	x 0
-	y window.height-10
-	w 10
-end
-object
-	ifset 1
-	ifnotset 2
-	type bitmap
-	source transparent_text_bl.png
-	x 0
-	y window.height-10
-	w 10
-end
-object
-	ifset 1
-	ifset 2
-	type bitmap
-	source transparent_text_bc.png
-	mono
-	x 10
-	y window.height-10
-	w window.width-10
-end
-object
-	ifset 1
-	ifnotset 2
-	type bitmap
-	source transparent_text_bc.png
-	x 10
-	y window.height-10
-	w window.width-10
-end
-object
-	ifset 1
-	ifset 2
-	type bitmap
-	source transparent_text_br.png
-	mono
-	x window.width-10
-	y window.height-10
-end
-object
-	ifset 1
-	ifnotset 2
-	type bitmap
-	source transparent_text_br.png
 	x window.width-10
 	y window.height-10
 end
@@ -626,7 +322,8 @@ end
 
 #===========Clock==================================================================================
 object
-	ifset 4
+	ifset 3
+	ifnotset 5
 	ifnotset 6
 	type clock
 	source clock_dc.png
@@ -637,7 +334,8 @@ object
 	y 1
 end
 object
-	ifnotset 4
+	ifnotset 3
+	ifnotset 5
 	ifnotset 6
 	type clock
 	source clock.png
@@ -646,9 +344,34 @@ object
 	x window.width-8-clock.width
 	y 1
 end
+#===========Light title text=====================
+object
+	ifset 3
+	ifset 5
+	ifnotset 6
+	type clock
+	source ltt_clock_dc.png
+	mono
+	layer
+	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	x window.width-8-clock.width
+	y 1
+end
+object
+	ifnotset 3
+	ifset 5
+	ifnotset 6
+	type clock
+	source ltt_clock.png
+	layer
+	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	x window.width-8-clock.width
+	y 1
+end
 
 #===========Standard digital clock border==========================================================
 object
+	ifnotset 5
 	ifset 6
 	type clock
 	color 255 255 255
@@ -656,6 +379,7 @@ object
 	y title.height/2-1
 end
 object
+	ifnotset 5
 	ifset 6
 	type clock
 	color 255 255 255
@@ -663,23 +387,107 @@ object
 	y title.height/2-1+1
 end
 object
+	ifnotset 5
 	ifset 6
 	type clock
 	color 255 255 255
+	x window.width+1-1-clock.width
+	y title.height/2-1+1
+end
+#===========Light title text=====================
+object
+	ifnotset 4
+	ifset 5
+	ifset 6
+	type clock
+	color 30 30 30
+	x window.width+1-1-clock.width
+	y title.height/2-1
+end
+object
+	ifnotset 4
+	ifset 5
+	ifset 6
+	type clock
+	color 30 30 30
+	x window.width-1-clock.width
+	y title.height/2-1+1
+end
+object
+	ifnotset 4
+	ifset 5
+	ifset 6
+	type clock
+	color 30 30 30
+	x window.width+1-1-clock.width
+	y title.height/2-1+1
+end
+#Different colors for text
+object
+	ifset 4
+	ifset 5
+	ifset 6
+	type clock
+	x window.width+1-1-clock.width
+	y title.height/2-1
+end
+object
+	ifset 4
+	ifset 5
+	ifset 6
+	type clock
+	x window.width-1-clock.width
+	y title.height/2-1+1
+end
+object
+	ifset 4
+	ifset 5
+	ifset 6
+	type clock
 	x window.width+1-1-clock.width
 	y title.height/2-1+1
 end
 
 #===========Standard digital clock=================================================================
 object
+	ifnotset 4
+	ifnotset 5
 	ifset 6
 	type clock
+	color 30 30 30
+	x window.width-1-clock.width
+	y title.height/2-1
+end
+#Different colors for text
+object
+	ifset 4
+	ifnotset 5
+	ifset 6
+	type clock
+	x window.width-1-clock.width
+	y title.height/2-1
+end
+#===========Light title text=====================
+object
+	ifset 5
+	ifset 6
+	type clock
+	color 255 255 255
+	x window.width-1-clock.width
+	y title.height/2-1
+end
+object
+	ifset 5
+	ifset 6
+	type clock
+	color 255 255 255
 	x window.width-1-clock.width
 	y title.height/2-1
 end
 
 #===========Title text border======================================================================
 object
+	ifnotset 5
 	ifset 7
 	type title
 	color 255 255 255
@@ -688,6 +496,7 @@ object
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
+	ifnotset 5
 	ifset 7
 	type title
 	color 255 255 255
@@ -696,6 +505,7 @@ object
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
+	ifnotset 5
 	ifset 7
 	type title
 	color 255 255 255
@@ -704,6 +514,7 @@ object
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
+	ifnotset 5
 	ifnotset 7
 	type title
 	color 255 255 255
@@ -712,6 +523,7 @@ object
 	w window.width-10-clock.width-10-5
 end
 object
+	ifnotset 5
 	ifnotset 7
 	type title
 	color 255 255 255
@@ -720,9 +532,126 @@ object
 	w window.width-10-clock.width-10-5
 end
 object
+	ifnotset 5
 	ifnotset 7
 	type title
 	color 255 255 255
+	x 10+3+1
+	y 5+1
+	w window.width-10-clock.width-10-5
+end
+#===========Light title text=====================
+object
+	ifnotset 4
+	ifset 5
+	ifset 7
+	type title
+	color 30 30 30
+	x 10+icon.width+3+1
+	y 5
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifnotset 4
+	ifset 5
+	ifset 7
+	type title
+	color 30 30 30
+	x 10+icon.width+3
+	y 5+1
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifnotset 4
+	ifset 5
+	ifset 7
+	type title
+	color 30 30 30
+	x 10+icon.width+3+1
+	y 5+1
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifnotset 4
+	ifset 5
+	ifnotset 7
+	type title
+	color 30 30 30
+	x 10+3+1
+	y 5
+	w window.width-10-clock.width-10-5
+end
+object
+	ifnotset 4
+	ifset 5
+	ifnotset 7
+	type title
+	color 30 30 30
+	x 10+3
+	y 5+1
+	w window.width-10-clock.width-10-5
+end
+object
+	ifnotset 4
+	ifset 5
+	ifnotset 7
+	type title
+	color 30 30 30
+	x 10+3+1
+	y 5+1
+	w window.width-10-clock.width-10-5
+end
+#Different colors for text
+object
+	ifset 4
+	ifset 5
+	ifset 7
+	type title
+	x 10+icon.width+3+1
+	y 5
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifset 4
+	ifset 5
+	ifset 7
+	type title
+	x 10+icon.width+3
+	y 5+1
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifset 4
+	ifset 5
+	ifset 7
+	type title
+	x 10+icon.width+3+1
+	y 5+1
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifset 4
+	ifset 5
+	ifnotset 7
+	type title
+	x 10+3+1
+	y 5
+	w window.width-10-clock.width-10-5
+end
+object
+	ifset 4
+	ifset 5
+	ifnotset 7
+	type title
+	x 10+3
+	y 5+1
+	w window.width-10-clock.width-10-5
+end
+object
+	ifset 4
+	ifset 5
+	ifnotset 7
+	type title
 	x 10+3+1
 	y 5+1
 	w window.width-10-clock.width-10-5
@@ -730,6 +659,7 @@ end
 
 #===========Title text=============================================================================
 object
+	ifnotset 4
 	ifnotset 5
 	ifset 7
 	type title
@@ -739,6 +669,7 @@ object
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
+	ifnotset 4
 	ifnotset 5
 	ifnotset 7
 	type title
@@ -747,10 +678,31 @@ object
 	y 5
 	w window.width-10-clock.width-10-5
 end
+#Different colors for text
+object
+	ifset 4
+	ifnotset 5
+	ifset 7
+	type title
+	x 10+icon.width+3
+	y 5
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifset 4
+	ifnotset 5
+	ifnotset 7
+	type title
+	x 10+3
+	y 5
+	w window.width-10-clock.width-10-5
+end
+#===========Light title text=====================
 object
 	ifset 5
 	ifset 7
 	type title
+	color 255 255 255
 	x 10+icon.width+3
 	y 5
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
@@ -759,6 +711,25 @@ object
 	ifset 5
 	ifnotset 7
 	type title
+	color 255 255 255
+	x 10+3
+	y 5
+	w window.width-10-clock.width-10-5
+end
+object
+	ifset 5
+	ifset 7
+	type title
+	color 255 255 255
+	x 10+icon.width+3
+	y 5
+	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifset 5
+	ifnotset 7
+	type title
+	color 255 255 255
 	x 10+3
 	y 5
 	w window.width-10-clock.width-10-5
@@ -786,7 +757,7 @@ end
 
 #===========Text area==============================================================================
 object
-	ifnotset 5
+	ifnotset 4
 	ifset 9
 	type text
 	color 30 30 30
@@ -795,7 +766,7 @@ object
 	w window.width-(5+3+avatar.width+5+3)-10
 end
 object
-	ifnotset 5
+	ifnotset 4
 	ifnotset 9
 	type text
 	color 30 30 30
@@ -803,8 +774,9 @@ object
 	y 5+title.height+5+2
 	w window.width-(5+3+avatar.width+5+3)-10
 end
+#Different colors for text
 object
-	ifset 5
+	ifset 4
 	ifset 9
 	type text
 	x 10+3
@@ -812,7 +784,7 @@ object
 	w window.width-(5+3+avatar.width+5+3)-10
 end
 object
-	ifset 5
+	ifset 4
 	ifnotset 9
 	type text
 	x 5+avatar.width+5+3
