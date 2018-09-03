@@ -128,7 +128,7 @@ Alpha=100
 Perpixel=1
 
 [$Frame]
-Glyph=0,0,161,35
+Glyph=0,0,214,46
 Left=10
 Top=23
 Right=75
@@ -137,7 +137,7 @@ Item0=Frame
 Item1=FrameInactive
 
 [$Titlebuttonpressed]
-Glyph=62,37,81,49
+Glyph=62,48,81,60
 Left=1
 Top=1
 Right=2
@@ -145,7 +145,7 @@ Bottom=1
 Item0=Titlebuttonpressed
 
 [$Titlebuttonmouseover]
-Glyph=62,51,65,54
+Glyph=62,62,65,65
 Left=1
 Top=1
 Right=2
@@ -153,7 +153,7 @@ Bottom=1
 Item0=Titlebuttonmouseover
 
 [$Statusbar]
-Glyph=57,37,59,55
+Glyph=57,48,59,66
 Left=1
 Top=2
 Right=1
@@ -161,7 +161,7 @@ Bottom=1
 Item0=Statusbar
 
 [$Container]
-Glyph=10,23,151,25
+Glyph=10,23,204,36
 Left=1
 Top=1
 Right=65
@@ -170,7 +170,7 @@ ColorKey=EDF0F7
 Item0=Container
 
 [$Buttonpressed]
-Glyph=14,37,18,56
+Glyph=14,48,18,67
 Left=2
 Top=2
 Right=2
@@ -178,7 +178,7 @@ Bottom=2
 Item0=Buttonpressed
 
 [$Buttonmouseover]
-Glyph=6,37,12,56
+Glyph=6,48,12,67
 Left=3
 Top=3
 Right=3
@@ -186,7 +186,7 @@ Bottom=3
 Item0=Buttonmouseover
 
 [$InfoPanelBackground]
-Glyph=7,38,11,55
+Glyph=7,49,11,66
 Left=2
 Top=2
 Right=2
@@ -194,7 +194,7 @@ Bottom=2
 Item0=InfoPanelBackground
 
 [$Tabpage]
-Glyph=0,43,4,47
+Glyph=0,54,4,58
 Left=2
 Top=2
 Right=2
@@ -202,7 +202,7 @@ Bottom=2
 Item0=Tabpage
 
 [$Tabitem]
-Glyph=32,37,36,57
+Glyph=32,48,36,68
 Alpha=70
 Left=2
 Top=2
@@ -211,7 +211,7 @@ Bottom=1
 Item0=Tabitem
 
 [$Tabitem_hottrack]
-Glyph=26,37,30,57
+Glyph=26,48,30,68
 Left=2
 Top=2
 Right=2
@@ -219,7 +219,7 @@ Bottom=1
 Item0=Tabitem_hottrack
 
 [$Tabitem_active]
-Glyph=20,37,24,61
+Glyph=20,48,24,72
 Left=2
 Top=2
 Right=2
@@ -227,7 +227,7 @@ Bottom=2
 Item0=Tabitem_active
 
 [$Tabitem_bottom]
-Glyph=50,37,54,57
+Glyph=50,48,54,68
 Alpha=70
 Left=2
 Top=2
@@ -236,7 +236,7 @@ Bottom=2
 Item0=Tabitem_bottom
 
 [$Tabitem_hottrack_bottom]
-Glyph=44,37,48,57
+Glyph=44,48,48,68
 Left=2
 Top=2
 Right=2
@@ -244,7 +244,7 @@ Bottom=2
 Item0=Tabitem_hottrack_bottom
 
 [$Tabitem_active_bottom]
-Glyph=38,37,42,60
+Glyph=38,48,42,71
 Left=2
 Top=2
 Right=2
@@ -252,7 +252,7 @@ Bottom=2
 Item0=Tabitem_active_bottom
 
 [$InputArea]
-Glyph=0,37,4,41
+Glyph=0,48,4,52
 Left=2
 Top=2
 Right=2
