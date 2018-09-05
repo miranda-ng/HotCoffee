@@ -1,7 +1,7 @@
 #Author:	Pacificator
-#Name:		Custom_Miranda_Light
+#Name:		Custom_Miranda_Dark
 #Version:	1.0
-#Description:	Skin made to match the Custom_Miranda_Light for Clist Modern Layered (for Popup+ 2.1.0.7 or later)
+#Description:	Skin made to match the Custom_Miranda_Dark for Clist Modern Layered (for Popup+ 2.1.0.7 or later)
 
 #===========Options================================================================================
 options
@@ -35,7 +35,7 @@ popup-version 02010007
 object
 	ifset 1
 	type bitmap
-	source title_tl.png
+	source dcff\title_tl.png
 	mono
 	x 0
 	y 0
@@ -54,7 +54,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source title_tc.png
+	source dcff\title_tc.png
 	mono
 	x 7
 	y 0
@@ -73,7 +73,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source title_tr.png
+	source dcff\title_tr.png
 	mono
 	x window.width-7
 	y 0
@@ -94,7 +94,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source title_cl.png
+	source dcff\title_cl.png
 	mono
 	x 0
 	y 7
@@ -130,7 +130,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source title_cr.png
+	source dcff\title_cr.png
 	mono
 	x window.width-7
 	y 7
@@ -149,7 +149,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source title_bl.png
+	source dcff\title_bl.png
 	mono
 	x 0
 	y 7+2+title.height
@@ -185,7 +185,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source title_br.png
+	source dcff\title_br.png
 	mono
 	x window.width-10
 	y 7+2+title.height
@@ -227,7 +227,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source text_l.png
+	source dcff\text_l.png
 	mono
 	x 0
 	y 7+2+title.height+2
@@ -246,7 +246,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source text_r.png
+	source dcff\text_r.png
 	mono
 	x window.width-10
 	y 7+2+title.height+2
@@ -265,7 +265,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source text_bl.png
+	source dcff\text_bl.png
 	mono
 	x 0
 	y window.height-10
@@ -282,7 +282,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source text_bc.png
+	source dcff\text_bc.png
 	mono
 	x 10
 	y window.height-10
@@ -299,7 +299,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source text_br.png
+	source dcff\text_br.png
 	mono
 	x window.width-10
 	y window.height-10
