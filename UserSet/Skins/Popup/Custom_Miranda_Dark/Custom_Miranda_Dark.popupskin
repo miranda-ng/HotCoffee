@@ -204,7 +204,7 @@ end
 object
 	ifset 2
 	type bitmap
-	source text_bg.png
+	source dcff\text_bg.png
 	mono
 	layer
 	x 10
@@ -322,11 +322,32 @@ end
 
 #===========Clock==================================================================================
 object
+	ifset 1
+	ifnotset 6
+	type clock
+	source dcff\clock_edges.png
+	mono
+	layer
+	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	x window.width-8-clock.width
+	y 1
+end
+object
+	ifnotset 1
+	ifnotset 6
+	type clock
+	source clock_edges.png
+	layer
+	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	x window.width-8-clock.width
+	y 1
+end
+object
 	ifset 3
 	ifnotset 5
 	ifnotset 6
 	type clock
-	source clock_dc.png
+	source dcff\clock.png
 	mono
 	layer
 	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
@@ -344,13 +365,13 @@ object
 	x window.width-8-clock.width
 	y 1
 end
-#===========Light title text=====================
+#===========Dark title text=====================
 object
 	ifset 3
 	ifset 5
 	ifnotset 6
 	type clock
-	source dtt_clock_dc.png
+	source dcff\dtt_clock.png
 	mono
 	layer
 	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
@@ -400,7 +421,25 @@ object
 	ifset 5
 	ifset 6
 	type clock
-	color 192 192 192
+	color 170 170 170
+	x window.width+1-1-clock.width
+	y title.height/2-1
+end
+object
+	ifnotset 4
+	ifset 5
+	ifset 6
+	type clock
+	color 170 170 170
+	x window.width-1-clock.width
+	y title.height/2-1+1
+end
+object
+	ifnotset 4
+	ifset 5
+	ifset 6
+	type clock
+	color 170 170 170
 	x window.width+1-1-clock.width
 	y title.height/2-1+1
 end
@@ -436,7 +475,7 @@ object
 	ifnotset 5
 	ifset 6
 	type clock
-	color 192 192 192
+	color 170 170 170
 	x window.width-1-clock.width
 	y title.height/2-1
 end
@@ -528,7 +567,7 @@ object
 	ifset 5
 	ifset 7
 	type title
-	color 192 192 192
+	color 170 170 170
 	x 10+icon.width+3+1
 	y 5
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
@@ -538,7 +577,7 @@ object
 	ifset 5
 	ifset 7
 	type title
-	color 192 192 192
+	color 170 170 170
 	x 10+icon.width+3
 	y 5+1
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
@@ -548,7 +587,7 @@ object
 	ifset 5
 	ifset 7
 	type title
-	color 192 192 192
+	color 170 170 170
 	x 10+icon.width+3+1
 	y 5+1
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
@@ -558,7 +597,7 @@ object
 	ifset 5
 	ifnotset 7
 	type title
-	color 192 192 192
+	color 170 170 170
 	x 10+3+1
 	y 5
 	w window.width-10-clock.width-10-5
@@ -568,7 +607,7 @@ object
 	ifset 5
 	ifnotset 7
 	type title
-	color 192 192 192
+	color 170 170 170
 	x 10+3
 	y 5+1
 	w window.width-10-clock.width-10-5
@@ -578,7 +617,7 @@ object
 	ifset 5
 	ifnotset 7
 	type title
-	color 192 192 192
+	color 170 170 170
 	x 10+3+1
 	y 5+1
 	w window.width-10-clock.width-10-5
@@ -645,7 +684,7 @@ object
 	ifnotset 5
 	ifset 7
 	type title
-	color 192 192 192
+	color 170 170 170
 	x 10+icon.width+3
 	y 5
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
@@ -655,7 +694,7 @@ object
 	ifnotset 5
 	ifnotset 7
 	type title
-	color 192 192 192
+	color 170 170 170
 	x 10+3
 	y 5
 	w window.width-10-clock.width-10-5
@@ -742,7 +781,7 @@ object
 	ifnotset 4
 	ifset 9
 	type text
-	color 192 192 192
+	color 170 170 170
 	x 10+3
 	y 5+title.height+5+2
 	w window.width-(5+3+avatar.width+5+3)-10
@@ -751,7 +790,7 @@ object
 	ifnotset 4
 	ifnotset 9
 	type text
-	color 192 192 192
+	color 170 170 170
 	x 5+avatar.width+5+3
 	y 5+title.height+5+2
 	w window.width-(5+3+avatar.width+5+3)-10
