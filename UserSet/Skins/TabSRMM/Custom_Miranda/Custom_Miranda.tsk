@@ -128,7 +128,7 @@ Alpha=100
 Perpixel=1
 
 [$Frame]
-Glyph=0,0,214,46
+Glyph=0,0,674,46
 Left=10
 Top=23
 Right=75
@@ -161,7 +161,7 @@ Bottom=1
 Item0=Statusbar
 
 [$Container]
-Glyph=10,23,204,36
+Glyph=10,23,664,36
 Left=1
 Top=1
 Right=65
