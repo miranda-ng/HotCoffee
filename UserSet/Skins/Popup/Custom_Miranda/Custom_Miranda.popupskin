@@ -31,63 +31,159 @@ popup-version 02010007
 #€ркость теста 50
 #контраст текста 240
 
-#===========Titlebar top===========================================================================
 object
 	ifset 1
 	type bitmap
-	source dcff\title_tl.png
+	source title_cc.png
 	mono
-	x 0
-	y 0
-	w 7
-	h 7
+	x 2
+	y 2
+	w window.width-2-2
+	h title.height+7
 end
 object
 	ifnotset 1
 	type bitmap
-	source title_tl.png
+	source title_cc.png
+	x 2
+	y 2
+	w window.width-2-2
+	h title.height+7
+end
+
+#===========Titlebar top===========================================================================
+object
+	ifset 1
+	type bitmap
+	source dcff\title_tl_1.png
+	mono
 	x 0
 	y 0
-	w 7
-	h 7
+	w 6
+	h 3
+end
+object
+	ifnotset 1
+	type bitmap
+	source title_tl_1.png
+	x 0
+	y 0
+	w 6
+	h 3
+end
+object
+	ifset 1
+	type bitmap
+	source dcff\title_tl_2.png
+	mono
+	x 0
+	y 3
+	w 4
+	h 1
+end
+object
+	ifnotset 1
+	type bitmap
+	source title_tl_2.png
+	x 0
+	y 3
+	w 4
+	h 1
+end
+object
+	ifset 1
+	type bitmap
+	source dcff\title_tl_3.png
+	mono
+	x 0
+	y 4
+	w 3
+	h 2
+end
+object
+	ifnotset 1
+	type bitmap
+	source title_tl_3.png
+	x 0
+	y 4
+	w 3
+	h 2
 end
 object
 	ifset 1
 	type bitmap
 	source dcff\title_tc.png
 	mono
-	x 7
+	x 6
 	y 0
-	w window.width-7-7
+	w window.width-6-6
 	h 2
 end
 object
 	ifnotset 1
 	type bitmap
 	source title_tc.png
-	x 7
+	x 6
 	y 0
-	w window.width-7-7
+	w window.width-6-6
 	h 2
 end
 object
 	ifset 1
 	type bitmap
-	source dcff\title_tr.png
+	source dcff\title_tr_1.png
 	mono
-	x window.width-7
+	x window.width-6
 	y 0
-	w 7
-	h 7
+	w 6
+	h 3
 end
 object
 	ifnotset 1
 	type bitmap
-	source title_tr.png
-	x window.width-7
+	source title_tr_1.png
+	x window.width-6
 	y 0
-	w 7
-	h 7
+	w 6
+	h 3
+end
+object
+	ifset 1
+	type bitmap
+	source dcff\title_tr_2.png
+	mono
+	x window.width-4
+	y 3
+	w 4
+	h 1
+end
+object
+	ifnotset 1
+	type bitmap
+	source title_tr_2.png
+	x window.width-4
+	y 3
+	w 4
+	h 1
+end
+object
+	ifset 1
+	type bitmap
+	source dcff\title_tr_3.png
+	mono
+	x window.width-3
+	y 4
+	w 3
+	h 2
+end
+object
+	ifnotset 1
+	type bitmap
+	source title_tr_3.png
+	x window.width-3
+	y 4
+	w 3
+	h 2
 end
 
 #===========Titlebar center========================================================================
@@ -97,52 +193,33 @@ object
 	source dcff\title_cl.png
 	mono
 	x 0
-	y 7
-	h title.height+2
+	y 6
+	h title.height+3
 end
 object
 	ifnotset 1
 	type bitmap
 	source title_cl.png
 	x 0
-	y 7
-	h title.height+2
-end
-object
-	ifset 1
-	type bitmap
-	source title_cc.png
-	mono
-	x 7
-	y 2
-	w window.width-7-7
-	h title.height+7
-end
-object
-	ifnotset 1
-	type bitmap
-	source title_cc.png
-	x 7
-	y 2
-	w window.width-7-7
-	h title.height+7
+	y 6
+	h title.height+3
 end
 object
 	ifset 1
 	type bitmap
 	source dcff\title_cr.png
 	mono
-	x window.width-7
-	y 7
-	h title.height+2
+	x window.width-2
+	y 6
+	h title.height+3
 end
 object
 	ifnotset 1
 	type bitmap
 	source title_cr.png
-	x window.width-7
-	y 7
-	h title.height+2
+	x window.width-2
+	y 6
+	h title.height+3
 end
 
 #===========Titlebar bottom / Text area top========================================================
