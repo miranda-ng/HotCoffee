@@ -1,4 +1,4 @@
-#Author:	Pacificator
+#Author:	Angeli-ka, FYR, Pacificator
 #Name:		Custom_Miranda_Dark
 #Version:	1.0
 #Description:	Skin made to match the Custom_Miranda_Dark for Clist Modern Layered (for Popup+ 2.1.0.7 or later)
@@ -166,7 +166,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source title_bc.png
+	source dcff\title_bc.png
 	mono
 	x 10
 	y 7+2+title.height

@@ -1,4 +1,4 @@
-#Author:	Pacificator
+#Author:	Angeli-ka, FYR, Pacificator
 #Name:		Custom_Miranda
 #Version:	1.0
 #Description:	Skin made to match the Custom_Miranda for Clist Modern Layered (for Popup+ 2.1.0.7 or later)
@@ -26,15 +26,11 @@ popup-version 02010007
 #shadow-region-opacity 
 #legacy-region-opacity 
 
-#€ркость фона 100
-#контраст фона 200
-#€ркость теста 50
-#контраст текста 240
-
+#===========Titlebar background====================================================================
 object
 	ifset 1
 	type bitmap
-	source title_cc.png
+	source title_bg.png
 	mono
 	x 2
 	y 2
@@ -44,7 +40,7 @@ end
 object
 	ifnotset 1
 	type bitmap
-	source title_cc.png
+	source title_bg.png
 	x 2
 	y 2
 	w window.width-2-2
@@ -283,7 +279,6 @@ object
 	type bitmap
 	source text_bg.png
 	mono
-	layer
 	x 10
 	y 7+2+title.height+2
 	w window.width-10-10
@@ -293,7 +288,6 @@ object
 	ifnotset 2
 	type bitmap
 	source text_bg.png
-	layer
 	x 10
 	y 7+2+title.height+2
 	w window.width-10-10
