@@ -15,8 +15,8 @@ local db = require('m_database')
 assert(db)
 local winapi = require('winapi')
 assert(winapi)
-local restart = require('Restart')
-assert(restart)
+local globals = require('GlobalFunctions')
+assert(globals)
 
 function WriteTabSRMMSkin(skinName, fontName)
   local patternLong = 'Diplomat_Dark,Diplomat_Light,Glamour_Dark,Glamour_Light,GoldTime_Dark,GoldTime_Light,PhotoOne_Dark,PhotoOne_Light,Surface_Black,Surface_White'
@@ -59,6 +59,6 @@ if db.GetSetting(_, 'FirstRun', 'Lua_FirstRun') == 1 then
     io.close(hFile)
     m.CallService('DB/Ini/ImportFile', path)
     db.WriteSetting(_, 'PackInfo', 'MirVer', m.Version, 252)
-    restart(1, 0)
+    globals.Restart(1, 0)
   end
 end

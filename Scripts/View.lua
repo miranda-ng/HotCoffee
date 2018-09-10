@@ -11,8 +11,8 @@ winapi = require('winapi')
 assert(winapi)
 changes = require('Changes')
 assert(changes)
-hasAccess = require('HasAccess')
-assert(hasAccess)
+local globals = require('GlobalFunctions')
+assert(globals)
 
 Icons =
 {
@@ -322,7 +322,7 @@ function ApplyIconPack(name)
 				Args = string.format('"" "%s"', m.GetFullPath())
 			}
 		}
-		winapi.ShellExecute(hasAccess(m.Parse("%miranda_path%\\miranda.test")) and "open" or "runas", 'cmd.exe', '/C '.. MakeCmdLine(Batch))
+		winapi.ShellExecute(globals.HasAccess(m.Parse("%miranda_path%\\miranda.test")) and "open" or "runas", 'cmd.exe', '/C '.. MakeCmdLine(Batch))
 	end)
 	m.CallService("CloseAction")
 end

@@ -13,8 +13,8 @@ winapi = require('winapi')
 assert(winapi)
 changes = require('Changes')
 assert(changes)
-local restart = require('Restart')
-assert(restart)
+local globals = require('GlobalFunctions')
+assert(globals)
 
 hRoot = clist.AddMainMenuItem({ Name = 'Settings', Icon = icolib.GetIcon("core_main_13"), Uid = '299D3276-02BF-40B3-8D2E-63DA2F663CF3' })
 
@@ -225,7 +225,7 @@ MainMenuItems =
 					db.WriteSetting(_, 'AdvancedAutoAway', 'AdvancedAutoAway', value, db.DBVT_WORD)
 					db.WriteSetting(_, 'AdvancedAutoAway', 'ALLPROTOS_OptionFlags', 52, db.DBVT_WORD)
 				end
-				restart(1, 0)
+				globals.Restart(1, 0)
 			end)
 		end
 	},
@@ -251,7 +251,7 @@ MainMenuItems =
 				db.WriteSetting(_, 'Idle', 'IdleOnSaver', value)
 				db.WriteSetting(_, 'Idle', 'IdleOnTerminalDisconnect', value)
 				db.WriteSetting(_, 'Idle', 'UserIdleCheck', value)
-				restart(1, 0)
+				globals.Restart(1, 0)
 			end)
 		end
 	},

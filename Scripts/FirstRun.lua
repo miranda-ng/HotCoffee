@@ -16,10 +16,8 @@ local db = require('m_database')
 assert(db)
 local winapi = require('winapi')
 assert(winapi)
-hasAccess = require('HasAccess')
-assert(hasAccess)
-local restart = require('Restart')
-assert(restart)
+local globals = require('GlobalFunctions')
+assert(globals)
 
 if db.GetSetting(_, 'FirstRun', 'Lua_FirstRun', 0) == 1 then
    return
@@ -43,4 +41,4 @@ db.WriteSetting(_, 'PackInfo', 'MirVer', m.Version, db.DBVT_WCHAR)
 
 db.DeleteModule(_, 'PluginDisable')
 
-restart(0, 0)
+globals.Restart(0, 0)

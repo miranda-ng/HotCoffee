@@ -1,16 +1,16 @@
---Скрипт следит за изменением языка в миранде...
---как только язык меняется, сразу импортируем WhenChangeLanguage.ini в БД
---добавлена проверка на русские языки для SplashScreen,
---если используется русский, беларусский или украинский язык то из папки UserSet\SplashScreen\ru\
---если используется любой другой язык то из папки UserSet\SplashScreen\en\
---копируем с заменой все содержимое в папку UserSet\SplashScreen\
+--РЎРєСЂРёРїС‚ СЃР»РµРґРёС‚ Р·Р° РёР·РјРµРЅРµРЅРёРµРј СЏР·С‹РєР° РІ РјРёСЂР°РЅРґРµ...
+--РєР°Рє С‚РѕР»СЊРєРѕ СЏР·С‹Рє РјРµРЅСЏРµС‚СЃСЏ, СЃСЂР°Р·Сѓ РёРјРїРѕСЂС‚РёСЂСѓРµРј WhenChangeLanguage.ini РІ Р‘Р”
+--РґРѕР±Р°РІР»РµРЅР° РїСЂРѕРІРµСЂРєР° РЅР° СЂСѓСЃСЃРєРёРµ СЏР·С‹РєРё РґР»СЏ SplashScreen,
+--РµСЃР»Рё РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ СЂСѓСЃСЃРєРёР№, Р±РµР»Р°СЂСѓСЃСЃРєРёР№ РёР»Рё СѓРєСЂР°РёРЅСЃРєРёР№ СЏР·С‹Рє С‚Рѕ РёР· РїР°РїРєРё UserSet\SplashScreen\ru\
+--РµСЃР»Рё РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ Р»СЋР±РѕР№ РґСЂСѓРіРѕР№ СЏР·С‹Рє С‚Рѕ РёР· РїР°РїРєРё UserSet\SplashScreen\en\
+--РєРѕРїРёСЂСѓРµРј СЃ Р·Р°РјРµРЅРѕР№ РІСЃРµ СЃРѕРґРµСЂР¶РёРјРѕРµ РІ РїР°РїРєСѓ UserSet\SplashScreen\
 assert(m)
 local db = require('m_database')
 assert(db)
 local winapi = require('winapi')
 assert(winapi)
-hasAccess = require('HasAccess')
-assert(hasAccess)
+local globals = require('GlobalFunctions')
+assert(globals)
 
 local CyrillicLanpacks = { 'langpack_belarusian.txt', 'langpack_russian.txt', 'langpack_ukrainian.txt' }
 
@@ -50,7 +50,7 @@ function OnLanguageChanged(langpack)
         ["splashScreenPathFrom"] = splashScreenPathFrom,
         ["splashScreenPathTo"] = splashScreenPathTo
     }
-    winapi.ShellExecute(hasAccess(m.Parse("%miranda_path%\\miranda.test")) and "open" or "runas", 'cmd.exe', '/C '.. batch)
+    winapi.ShellExecute(globals.HasAccess(m.Parse("%miranda_path%\\miranda.test")) and "open" or "runas", 'cmd.exe', '/C '.. batch)
 
     current = langpack
 end
