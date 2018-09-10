@@ -15,6 +15,7 @@ options
 	option	7	1	Icons
 	option	8	1	Avatars
 	option	9	1	Avatars to right
+	option	10	0	Logo
 end
 
 #w 5+icon.width+4+title.width+4+clock.width+2+7 > 10+2+avatar.width+2+text.width+2+10
@@ -198,6 +199,27 @@ object
 	x window.width-10
 	y 7+2+title.height
 	h 2
+end
+
+#===========Logo===================================================================================
+object
+	ifset 1
+	ifset 10
+	type bitmap
+	source logo.png
+	mono
+	layer
+	x window.width/2-33/2
+	y title.height/2-3
+end
+object
+	ifnotset 1
+	ifset 10
+	type bitmap
+	source logo.png
+	layer
+	x window.width/2-33/2
+	y title.height/2-3
 end
 
 #===========Background Text area===================================================================

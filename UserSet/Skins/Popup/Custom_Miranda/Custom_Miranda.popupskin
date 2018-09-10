@@ -15,7 +15,7 @@ options
 	option	7	1	Icons
 	option	8	1	Avatars
 	option	9	1	Avatars to right
-	option	10	1	Logo
+	option	10	0	Logo
 end
 
 #w 5+icon.width+4+title.width+4+clock.width+2+7 > 10+2+avatar.width+2+text.width+2+10
@@ -27,34 +27,12 @@ popup-version 02010007
 #shadow-region-opacity 
 #legacy-region-opacity 
 
-#===========Logo===================================================================================
-object
-	ifset 1
-	ifset 10
-	type bitmap
-	source logo.png
-#	mono
-	layer
-	x window.width/2-33/2
-	y title.height/2-3
-end
-object
-	ifnotset 1
-	ifset 10
-	type bitmap
-	source logo.png
-	layer
-	x window.width/2-33/2
-	y title.height/2-3
-end
-
 #===========Titlebar background====================================================================
 object
 	ifset 1
 	type bitmap
 	source title_bg.png
 	mono
-	layer
 	x 2
 	y 2
 	w window.width-2-2
@@ -64,11 +42,31 @@ object
 	ifnotset 1
 	type bitmap
 	source title_bg.png
-	layer
 	x 2
 	y 2
 	w window.width-2-2
 	h title.height+7
+end
+
+#===========Logo===================================================================================
+object
+	ifset 1
+	ifset 10
+	type bitmap
+	source logo.png
+	mono
+	layer
+	x window.width/2-33/2
+	y title.height/2-3
+end
+object
+	ifnotset 1
+	ifset 10
+	type bitmap
+	source logo.png
+	layer
+	x window.width/2-33/2
+	y title.height/2-3
 end
 
 #===========Titlebar top===========================================================================
