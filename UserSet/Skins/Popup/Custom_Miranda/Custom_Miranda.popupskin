@@ -19,7 +19,7 @@ options
 end
 
 #w 5+icon.width+4+title.width+4+clock.width+2+7 > 10+2+avatar.width+2+text.width+2+10
-h 5+title.height+5+(2+avatar.height>text.height+2)+2+10
+h 5+5+title.height+5+(2+avatar.height>text.height+2)+2+10
 
 popup-version 02010007
 #padding-right 
@@ -34,7 +34,7 @@ object
 	source title_bg.png
 	mono
 	x 2
-	y 2
+	y 7
 	w window.width-2-2
 	h title.height+7
 end
@@ -43,30 +43,9 @@ object
 	type bitmap
 	source title_bg.png
 	x 2
-	y 2
+	y 7
 	w window.width-2-2
 	h title.height+7
-end
-
-#===========Logo===================================================================================
-object
-	ifset 1
-	ifset 10
-	type bitmap
-	source logo.png
-	mono
-	layer
-	x window.width/2-33/2
-	y title.height/2-3
-end
-object
-	ifnotset 1
-	ifset 10
-	type bitmap
-	source logo.png
-	layer
-	x window.width/2-33/2
-	y title.height/2-3
 end
 
 #===========Titlebar top===========================================================================
@@ -76,7 +55,7 @@ object
 	source dcff\title_tl_1.png
 	mono
 	x 0
-	y 0
+	y 5
 	w 6
 	h 3
 end
@@ -85,7 +64,7 @@ object
 	type bitmap
 	source title_tl_1.png
 	x 0
-	y 0
+	y 5
 	w 6
 	h 3
 end
@@ -95,7 +74,7 @@ object
 	source dcff\title_tl_2.png
 	mono
 	x 0
-	y 3
+	y 8
 	w 4
 	h 1
 end
@@ -104,7 +83,7 @@ object
 	type bitmap
 	source title_tl_2.png
 	x 0
-	y 3
+	y 8
 	w 4
 	h 1
 end
@@ -114,7 +93,7 @@ object
 	source dcff\title_tl_3.png
 	mono
 	x 0
-	y 4
+	y 9
 	w 3
 	h 2
 end
@@ -123,7 +102,7 @@ object
 	type bitmap
 	source title_tl_3.png
 	x 0
-	y 4
+	y 9
 	w 3
 	h 2
 end
@@ -133,7 +112,7 @@ object
 	source dcff\title_tc.png
 	mono
 	x 6
-	y 0
+	y 5
 	w window.width-6-6
 	h 2
 end
@@ -142,7 +121,7 @@ object
 	type bitmap
 	source title_tc.png
 	x 6
-	y 0
+	y 5
 	w window.width-6-6
 	h 2
 end
@@ -152,7 +131,7 @@ object
 	source dcff\title_tr_1.png
 	mono
 	x window.width-6
-	y 0
+	y 5
 	w 6
 	h 3
 end
@@ -161,7 +140,7 @@ object
 	type bitmap
 	source title_tr_1.png
 	x window.width-6
-	y 0
+	y 5
 	w 6
 	h 3
 end
@@ -171,7 +150,7 @@ object
 	source dcff\title_tr_2.png
 	mono
 	x window.width-4
-	y 3
+	y 8
 	w 4
 	h 1
 end
@@ -180,7 +159,7 @@ object
 	type bitmap
 	source title_tr_2.png
 	x window.width-4
-	y 3
+	y 8
 	w 4
 	h 1
 end
@@ -190,7 +169,7 @@ object
 	source dcff\title_tr_3.png
 	mono
 	x window.width-3
-	y 4
+	y 9
 	w 3
 	h 2
 end
@@ -199,7 +178,7 @@ object
 	type bitmap
 	source title_tr_3.png
 	x window.width-3
-	y 4
+	y 9
 	w 3
 	h 2
 end
@@ -211,7 +190,7 @@ object
 	source dcff\title_cl.png
 	mono
 	x 0
-	y 6
+	y 11
 	h title.height+3
 end
 object
@@ -219,7 +198,7 @@ object
 	type bitmap
 	source title_cl.png
 	x 0
-	y 6
+	y 11
 	h title.height+3
 end
 object
@@ -228,7 +207,7 @@ object
 	source dcff\title_cr.png
 	mono
 	x window.width-2
-	y 6
+	y 11
 	h title.height+3
 end
 object
@@ -236,7 +215,7 @@ object
 	type bitmap
 	source title_cr.png
 	x window.width-2
-	y 6
+	y 11
 	h title.height+3
 end
 
@@ -247,7 +226,7 @@ object
 	source dcff\title_bl.png
 	mono
 	x 0
-	y 7+2+title.height
+	y 9+5+title.height
 	h 2
 end
 object
@@ -255,7 +234,7 @@ object
 	type bitmap
 	source title_bl.png
 	x 0
-	y 7+2+title.height
+	y 9+5+title.height
 	h 2
 end
 object
@@ -264,7 +243,7 @@ object
 	source title_bc.png
 	mono
 	x 10
-	y 7+2+title.height
+	y 9+5+title.height
 	w window.width-10-10
 	h 2
 end
@@ -273,7 +252,7 @@ object
 	type bitmap
 	source title_bc.png
 	x 10
-	y 7+2+title.height
+	y 9+5+title.height
 	w window.width-10-10
 	h 2
 end
@@ -283,7 +262,7 @@ object
 	source dcff\title_br.png
 	mono
 	x window.width-10
-	y 7+2+title.height
+	y 9+5+title.height
 	h 2
 end
 object
@@ -291,7 +270,7 @@ object
 	type bitmap
 	source title_br.png
 	x window.width-10
-	y 7+2+title.height
+	y 9+5+title.height
 	h 2
 end
 
@@ -302,7 +281,7 @@ object
 	source text_bg.png
 	mono
 	x 10
-	y 7+2+title.height+2
+	y 9+5+title.height+2
 	w window.width-10-10
 	h window.height-(4+title.height+4)-10-3
 end
@@ -311,7 +290,7 @@ object
 	type bitmap
 	source text_bg.png
 	x 10
-	y 7+2+title.height+2
+	y 9+5+title.height+2
 	w window.width-10-10
 	h window.height-(4+title.height+4)-10-3
 end
@@ -323,7 +302,7 @@ object
 	source dcff\text_l.png
 	mono
 	x 0
-	y 7+2+title.height+2
+	y 9+5+title.height+2
 	h window.height-(4+title.height+4)-9
 
 end
@@ -332,7 +311,7 @@ object
 	type bitmap
 	source text_l.png
 	x 0
-	y 7+2+title.height+2
+	y 9+5+title.height+2
 	h window.height-(4+title.height+4)-9
 end
 
@@ -342,7 +321,7 @@ object
 	source dcff\text_r.png
 	mono
 	x window.width-10
-	y 7+2+title.height+2
+	y 9+5+title.height+2
 	h window.height-(4+title.height+4)-9
 end
 object
@@ -350,7 +329,7 @@ object
 	type bitmap
 	source text_r.png
 	x window.width-10
-	y 7+2+title.height+2
+	y 9+5+title.height+2
 	h window.height-(4+title.height+4)-9
 end
 
@@ -410,7 +389,30 @@ object
 	ifset 7
 	type icon
 	x 10
-	y 5+(title.height-icon.height)/2
+	y 5+5+(title.height-icon.height)/2
+end
+
+#===========Logo===================================================================================
+object
+	ifset 1
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo.png
+	mono
+	layer
+	x window.width-8-clock.width-37
+	y 2
+end
+object
+	ifnotset 1
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo.png
+	layer
+	x window.width-8-clock.width-37
+	y 2
 end
 
 #===========Clock==================================================================================
@@ -424,7 +426,7 @@ object
 	layer
 	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
 	x window.width-8-clock.width
-	y 1
+	y 5+1
 end
 object
 	ifnotset 3
@@ -435,7 +437,7 @@ object
 	layer
 	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
 	x window.width-8-clock.width
-	y 1
+	y 5+1
 end
 #===========Light title text=====================
 object
@@ -448,7 +450,7 @@ object
 	layer
 	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
 	x window.width-8-clock.width
-	y 1
+	y 5+1
 end
 object
 	ifnotset 3
@@ -459,7 +461,7 @@ object
 	layer
 	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
 	x window.width-8-clock.width
-	y 1
+	y 5+1
 end
 
 #===========Standard digital clock border==========================================================
@@ -469,7 +471,7 @@ object
 	type clock
 	color 255 255 255
 	x window.width+1-1-clock.width
-	y title.height/2-1
+	y 5+title.height/2-1
 end
 object
 	ifnotset 5
@@ -477,7 +479,7 @@ object
 	type clock
 	color 255 255 255
 	x window.width-1-clock.width
-	y title.height/2-1+1
+	y 5+title.height/2-1+1
 end
 object
 	ifnotset 5
@@ -485,7 +487,7 @@ object
 	type clock
 	color 255 255 255
 	x window.width+1-1-clock.width
-	y title.height/2-1+1
+	y 5+title.height/2-1+1
 end
 #===========Light title text=====================
 object
@@ -495,7 +497,7 @@ object
 	type clock
 	color 30 30 30
 	x window.width+1-1-clock.width
-	y title.height/2-1
+	y 5+title.height/2-1
 end
 object
 	ifnotset 4
@@ -504,7 +506,7 @@ object
 	type clock
 	color 30 30 30
 	x window.width-1-clock.width
-	y title.height/2-1+1
+	y 5+title.height/2-1+1
 end
 object
 	ifnotset 4
@@ -513,7 +515,7 @@ object
 	type clock
 	color 30 30 30
 	x window.width+1-1-clock.width
-	y title.height/2-1+1
+	y 5+title.height/2-1+1
 end
 #Different colors for text
 object
@@ -522,7 +524,7 @@ object
 	ifset 6
 	type clock
 	x window.width+1-1-clock.width
-	y title.height/2-1
+	y 5+title.height/2-1
 end
 object
 	ifset 4
@@ -530,7 +532,7 @@ object
 	ifset 6
 	type clock
 	x window.width-1-clock.width
-	y title.height/2-1+1
+	y 5+title.height/2-1+1
 end
 object
 	ifset 4
@@ -538,7 +540,7 @@ object
 	ifset 6
 	type clock
 	x window.width+1-1-clock.width
-	y title.height/2-1+1
+	y 5+title.height/2-1+1
 end
 
 #===========Standard digital clock=================================================================
@@ -549,7 +551,7 @@ object
 	type clock
 	color 30 30 30
 	x window.width-1-clock.width
-	y title.height/2-1
+	y 5+title.height/2-1
 end
 #Different colors for text
 object
@@ -558,7 +560,7 @@ object
 	ifset 6
 	type clock
 	x window.width-1-clock.width
-	y title.height/2-1
+	y 5+title.height/2-1
 end
 #===========Light title text=====================
 object
@@ -567,7 +569,7 @@ object
 	type clock
 	color 255 255 255
 	x window.width-1-clock.width
-	y title.height/2-1
+	y 5+title.height/2-1
 end
 object
 	ifset 5
@@ -575,7 +577,7 @@ object
 	type clock
 	color 255 255 255
 	x window.width-1-clock.width
-	y title.height/2-1
+	y 5+title.height/2-1
 end
 
 #===========Title text border======================================================================
@@ -585,7 +587,7 @@ object
 	type title
 	color 255 255 255
 	x 10+icon.width+3+1
-	y 5
+	y 5+5
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
@@ -594,7 +596,7 @@ object
 	type title
 	color 255 255 255
 	x 10+icon.width+3
-	y 5+1
+	y 5+5+1
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
@@ -603,7 +605,7 @@ object
 	type title
 	color 255 255 255
 	x 10+icon.width+3+1
-	y 5+1
+	y 5+5+1
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
@@ -612,7 +614,7 @@ object
 	type title
 	color 255 255 255
 	x 10+3+1
-	y 5
+	y 5+5
 	w window.width-10-clock.width-10-5
 end
 object
@@ -621,7 +623,7 @@ object
 	type title
 	color 255 255 255
 	x 10+3
-	y 5+1
+	y 5+5+1
 	w window.width-10-clock.width-10-5
 end
 object
@@ -630,7 +632,7 @@ object
 	type title
 	color 255 255 255
 	x 10+3+1
-	y 5+1
+	y 5+5+1
 	w window.width-10-clock.width-10-5
 end
 #===========Light title text=====================
@@ -641,7 +643,7 @@ object
 	type title
 	color 30 30 30
 	x 10+icon.width+3+1
-	y 5
+	y 5+5
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
@@ -651,7 +653,7 @@ object
 	type title
 	color 30 30 30
 	x 10+icon.width+3
-	y 5+1
+	y 5+5+1
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
@@ -661,7 +663,7 @@ object
 	type title
 	color 30 30 30
 	x 10+icon.width+3+1
-	y 5+1
+	y 5+5+1
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
@@ -671,7 +673,7 @@ object
 	type title
 	color 30 30 30
 	x 10+3+1
-	y 5
+	y 5+5
 	w window.width-10-clock.width-10-5
 end
 object
@@ -681,7 +683,7 @@ object
 	type title
 	color 30 30 30
 	x 10+3
-	y 5+1
+	y 5+5+1
 	w window.width-10-clock.width-10-5
 end
 object
@@ -691,7 +693,7 @@ object
 	type title
 	color 30 30 30
 	x 10+3+1
-	y 5+1
+	y 5+5+1
 	w window.width-10-clock.width-10-5
 end
 #Different colors for text
@@ -701,7 +703,7 @@ object
 	ifset 7
 	type title
 	x 10+icon.width+3+1
-	y 5
+	y 5+5
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
@@ -710,7 +712,7 @@ object
 	ifset 7
 	type title
 	x 10+icon.width+3
-	y 5+1
+	y 5+5+1
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
@@ -719,7 +721,7 @@ object
 	ifset 7
 	type title
 	x 10+icon.width+3+1
-	y 5+1
+	y 5+5+1
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
@@ -728,7 +730,7 @@ object
 	ifnotset 7
 	type title
 	x 10+3+1
-	y 5
+	y 5+5
 	w window.width-10-clock.width-10-5
 end
 object
@@ -737,7 +739,7 @@ object
 	ifnotset 7
 	type title
 	x 10+3
-	y 5+1
+	y 5+5+1
 	w window.width-10-clock.width-10-5
 end
 object
@@ -746,7 +748,7 @@ object
 	ifnotset 7
 	type title
 	x 10+3+1
-	y 5+1
+	y 5+5+1
 	w window.width-10-clock.width-10-5
 end
 
@@ -758,7 +760,7 @@ object
 	type title
 	color 30 30 30
 	x 10+icon.width+3
-	y 5
+	y 5+5
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
@@ -768,7 +770,7 @@ object
 	type title
 	color 30 30 30
 	x 10+3
-	y 5
+	y 5+5
 	w window.width-10-clock.width-10-5
 end
 #Different colors for text
@@ -778,7 +780,7 @@ object
 	ifset 7
 	type title
 	x 10+icon.width+3
-	y 5
+	y 5+5
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
@@ -787,7 +789,7 @@ object
 	ifnotset 7
 	type title
 	x 10+3
-	y 5
+	y 5+5
 	w window.width-10-clock.width-10-5
 end
 #===========Light title text=====================
@@ -797,7 +799,7 @@ object
 	type title
 	color 255 255 255
 	x 10+icon.width+3
-	y 5
+	y 5+5
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
@@ -806,7 +808,7 @@ object
 	type title
 	color 255 255 255
 	x 10+3
-	y 5
+	y 5+5
 	w window.width-10-clock.width-10-5
 end
 object
@@ -815,7 +817,7 @@ object
 	type title
 	color 255 255 255
 	x 10+icon.width+3
-	y 5
+	y 5+5
 	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
@@ -824,7 +826,7 @@ object
 	type title
 	color 255 255 255
 	x 10+3
-	y 5
+	y 5+5
 	w window.width-10-clock.width-10-5
 end
 
@@ -834,7 +836,7 @@ object
 	ifnotset 9
 	type avatar
 	x 10+2
-	y title.height+10+3
+	y 5+title.height+10+3
 	w options.avatarsize
 	proportional 1
 end
@@ -843,7 +845,7 @@ object
 	ifset 9
 	type avatar
 	x window.width-avatar.width-10-2
-	y title.height+10+3
+	y 5+title.height+10+3
 	w options.avatarsize
 	proportional 1
 end
@@ -855,7 +857,7 @@ object
 	type text
 	color 30 30 30
 	x 10+3
-	y 5+title.height+5+2
+	y 5+5+title.height+5+2
 	w window.width-(5+3+avatar.width+5+3)-10
 end
 object
@@ -864,7 +866,7 @@ object
 	type text
 	color 30 30 30
 	x 5+avatar.width+5+3
-	y 5+title.height+5+2
+	y 5+5+title.height+5+2
 	w window.width-(5+3+avatar.width+5+3)-10
 end
 #Different colors for text
@@ -873,7 +875,7 @@ object
 	ifset 9
 	type text
 	x 10+3
-	y 5+title.height+5+2
+	y 5+5+title.height+5+2
 	w window.width-(5+3+avatar.width+5+3)-10
 end
 object
@@ -881,6 +883,6 @@ object
 	ifnotset 9
 	type text
 	x 5+avatar.width+5+3
-	y 5+title.height+5+2
+	y 5+5+title.height+5+2
 	w window.width-(5+3+avatar.width+5+3)-10
 end
