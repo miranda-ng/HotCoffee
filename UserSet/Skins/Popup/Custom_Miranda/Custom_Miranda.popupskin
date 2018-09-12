@@ -8,7 +8,7 @@ options
 	#option	id	val	title
 	option	1	0	Different colors for frame
 	option	2	0	Different colors for background of text
-	option	3	0	Different colors for background of clock
+	option	3	0	Different colors for background of logo & clock
 	option	4	1	Different colors for text
 	option	5	1	Light title text
 	option	6	0	Standard digital clocks
@@ -394,23 +394,21 @@ end
 
 #===========Logo===================================================================================
 object
-	ifset 1
+	ifset 3
 	ifnotset 6
 	ifset 10
 	type bitmap
 	source logo.png
 	mono
-	layer
 	x window.width-8-clock.width-37
 	y 2
 end
 object
-	ifnotset 1
+	ifnotset 3
 	ifnotset 6
 	ifset 10
 	type bitmap
 	source logo.png
-	layer
 	x window.width-8-clock.width-37
 	y 2
 end
@@ -420,10 +418,10 @@ object
 	ifset 3
 	ifnotset 5
 	ifnotset 6
+	ifnotset 10
 	type clock
 	source clock_dc.png
 	mono
-	layer
 	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
 	x window.width-8-clock.width
 	y 5+1
@@ -432,9 +430,9 @@ object
 	ifnotset 3
 	ifnotset 5
 	ifnotset 6
+	ifnotset 10
 	type clock
 	source clock.png
-	layer
 	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
 	x window.width-8-clock.width
 	y 5+1
@@ -444,10 +442,10 @@ object
 	ifset 3
 	ifset 5
 	ifnotset 6
+	ifnotset 10
 	type clock
 	source ltt_clock_dc.png
 	mono
-	layer
 	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
 	x window.width-8-clock.width
 	y 5+1
@@ -456,10 +454,58 @@ object
 	ifnotset 3
 	ifset 5
 	ifnotset 6
+	ifnotset 10
 	type clock
 	source ltt_clock.png
-	layer
 	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	x window.width-8-clock.width
+	y 5+1
+end
+#ifset logo
+object
+	ifset 3
+	ifnotset 5
+	ifnotset 6
+	ifset 10
+	type clock
+	source clock&logo_dc.png
+	mono
+	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	x window.width-8-clock.width
+	y 5+1
+end
+object
+	ifnotset 3
+	ifnotset 5
+	ifnotset 6
+	ifset 10
+	type clock
+	source clock&logo.png
+	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	x window.width-8-clock.width
+	y 5+1
+end
+#===========Light title text=====================
+object
+	ifset 3
+	ifset 5
+	ifnotset 6
+	ifset 10
+	type clock
+	source ltt_clock&logo_dc.png
+	mono
+	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	x window.width-8-clock.width
+	y 5+1
+end
+object
+	ifnotset 3
+	ifset 5
+	ifnotset 6
+	ifset 10
+	type clock
+	source ltt_clock&logo.png
+	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
 	x window.width-8-clock.width
 	y 5+1
 end
