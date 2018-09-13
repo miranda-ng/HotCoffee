@@ -8,13 +8,13 @@ options
 	#option	id	val	title
 	option	1	0	Different colors for frame
 	option	2	0	Different colors for background of text
-	option	3	0	Different colors for background of logo & clock
+	option	3	0	Different colors for background of logo & clocks
 	option	4	1	Different colors for text
 	option	5	1	Light title text
 	option	6	0	Standard digital clocks
-	option	7	1	Icons
-	option	8	1	Avatars
-	option	9	1	Avatars to right
+	option	7	1	Icon
+	option	8	1	Avatar
+	option	9	1	Avatar to right
 	option	10	0	Logo
 end
 
@@ -393,13 +393,37 @@ object
 end
 
 #===========Logo===================================================================================
+# layer 0
+object
+	ifset 1
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_0.png
+	mono
+	layer
+	x window.width-8-clock.width-37
+	y 2
+end
+object
+	ifnotset 1
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_0.png
+	layer
+	x window.width-8-clock.width-37
+	y 2
+end
+# layer 1
 object
 	ifset 3
 	ifnotset 6
 	ifset 10
 	type bitmap
-	source logo.png
+	source logo_layer_1.png
 	mono
+	layer
 	x window.width-8-clock.width-37
 	y 2
 end
@@ -408,12 +432,104 @@ object
 	ifnotset 6
 	ifset 10
 	type bitmap
-	source logo.png
+	source logo_layer_1.png
+	layer
+	x window.width-8-clock.width-37
+	y 2
+end
+# layer 2
+object
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_2.png
+	layer
+	x window.width-8-clock.width-37
+	y 2
+end
+# layer 3
+object
+	ifset 3
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_3_dc.png
+	mono
+	layer
+	x window.width-8-clock.width-37
+	y 2
+end
+object
+	ifnotset 3
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_3.png
+	layer
+	x window.width-8-clock.width-37
+	y 2
+end
+# layer 4
+object
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_4.png
+	layer
 	x window.width-8-clock.width-37
 	y 2
 end
 
 #===========Clock==================================================================================
+# clock edges
+object
+	ifset 1
+	ifnotset 6
+	ifnotset 10
+	type clock
+	source clock_edges.png
+	mono
+	layer
+	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	x window.width-8-clock.width
+	y 5+1
+end
+object
+	ifnotset 1
+	ifnotset 6
+	ifnotset 10
+	type clock
+	source clock_edges.png
+	layer
+	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	x window.width-8-clock.width
+	y 5+1
+end
+#
+object
+	ifset 1
+	ifnotset 6
+	ifset 10
+	type clock
+	source clock&logo_edges.png
+	mono
+	layer
+	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
+	x window.width-8-clock.width
+	y 5+1
+end
+object
+	ifnotset 1
+	ifnotset 6
+	ifset 10
+	type clock
+	source clock&logo_edges.png
+	layer
+	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
+	x window.width-8-clock.width
+	y 5+1
+end
+#
 object
 	ifset 3
 	ifnotset 5
@@ -470,7 +586,7 @@ object
 	type clock
 	source clock&logo_dc.png
 	mono
-	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
 	x window.width-8-clock.width
 	y 5+1
 end
@@ -481,7 +597,7 @@ object
 	ifset 10
 	type clock
 	source clock&logo.png
-	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
 	x window.width-8-clock.width
 	y 5+1
 end
@@ -494,7 +610,7 @@ object
 	type clock
 	source ltt_clock&logo_dc.png
 	mono
-	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
 	x window.width-8-clock.width
 	y 5+1
 end
