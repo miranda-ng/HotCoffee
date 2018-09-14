@@ -815,7 +815,6 @@ object
 	color 255 255 255
 	x 10+icon.width+3+1
 	y 5+5
-	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
 	ifnotset 5
@@ -824,7 +823,6 @@ object
 	color 255 255 255
 	x 10+icon.width+3
 	y 5+5+1
-	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
 	ifnotset 5
@@ -833,8 +831,8 @@ object
 	color 255 255 255
 	x 10+icon.width+3+1
 	y 5+5+1
-	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
+#
 object
 	ifnotset 5
 	ifnotset 7
@@ -842,7 +840,6 @@ object
 	color 255 255 255
 	x 10+3+1
 	y 5+5
-	w window.width-10-clock.width-10-5
 end
 object
 	ifnotset 5
@@ -851,7 +848,6 @@ object
 	color 255 255 255
 	x 10+3
 	y 5+5+1
-	w window.width-10-clock.width-10-5
 end
 object
 	ifnotset 5
@@ -860,7 +856,6 @@ object
 	color 255 255 255
 	x 10+3+1
 	y 5+5+1
-	w window.width-10-clock.width-10-5
 end
 # Light title text
 object
@@ -871,7 +866,6 @@ object
 	color 30 30 30
 	x 10+icon.width+3+1
 	y 5+5
-	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
 	ifnotset 4
@@ -881,7 +875,6 @@ object
 	color 30 30 30
 	x 10+icon.width+3
 	y 5+5+1
-	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
 	ifnotset 4
@@ -891,8 +884,8 @@ object
 	color 30 30 30
 	x 10+icon.width+3+1
 	y 5+5+1
-	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
+#
 object
 	ifnotset 4
 	ifset 5
@@ -901,7 +894,6 @@ object
 	color 30 30 30
 	x 10+3+1
 	y 5+5
-	w window.width-10-clock.width-10-5
 end
 object
 	ifnotset 4
@@ -911,7 +903,6 @@ object
 	color 30 30 30
 	x 10+3
 	y 5+5+1
-	w window.width-10-clock.width-10-5
 end
 object
 	ifnotset 4
@@ -921,7 +912,6 @@ object
 	color 30 30 30
 	x 10+3+1
 	y 5+5+1
-	w window.width-10-clock.width-10-5
 end
 # Color text
 object
@@ -931,7 +921,6 @@ object
 	type title
 	x 10+icon.width+3+1
 	y 5+5
-	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
 	ifset 4
@@ -940,7 +929,6 @@ object
 	type title
 	x 10+icon.width+3
 	y 5+5+1
-	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
 object
 	ifset 4
@@ -949,8 +937,8 @@ object
 	type title
 	x 10+icon.width+3+1
 	y 5+5+1
-	w window.width-(5+icon.width+5)-5-clock.width-5-5
 end
+#
 object
 	ifset 4
 	ifset 5
@@ -958,7 +946,6 @@ object
 	type title
 	x 10+3+1
 	y 5+5
-	w window.width-10-clock.width-10-5
 end
 object
 	ifset 4
@@ -967,7 +954,6 @@ object
 	type title
 	x 10+3
 	y 5+5+1
-	w window.width-10-clock.width-10-5
 end
 object
 	ifset 4
@@ -976,10 +962,10 @@ object
 	type title
 	x 10+3+1
 	y 5+5+1
-	w window.width-10-clock.width-10-5
 end
 
 #===========Title text=============================================================================
+# Icon
 object
 	ifnotset 4
 	ifnotset 5
@@ -1020,24 +1006,6 @@ object
 	w window.width-10-clock.width-10-5
 end
 # Light title text
-object
-	ifset 5
-	ifset 7
-	type title
-	color 255 255 255
-	x 10+icon.width+3
-	y 5+5
-	w window.width-(5+icon.width+5)-5-clock.width-5-5
-end
-object
-	ifset 5
-	ifnotset 7
-	type title
-	color 255 255 255
-	x 10+3
-	y 5+5
-	w window.width-10-clock.width-10-5
-end
 object
 	ifset 5
 	ifset 7

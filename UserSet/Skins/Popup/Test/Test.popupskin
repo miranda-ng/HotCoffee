@@ -1,0 +1,77 @@
+options
+	#option	id	val	title
+	option	1	1	Show logo
+	option	2	1	Icon
+end
+
+h 4+title.height+4+text.height+4
+
+# background
+object
+	type bitmap
+	source gradient:v/707070/909090
+	x 0
+	y 0
+	w -1
+	h -1
+end
+
+# icon
+object 
+	ifset 2
+	type icon
+	x 4
+	y 4+(title.height-icon.height)/2
+end
+
+# clock
+#object
+#	type clock
+#	x window.width-clock.width
+#	y 4
+#end
+
+# clock
+object
+	type clock
+	source clock.png
+	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	x window.width-clock.width
+	y 0
+end
+
+# logo
+object
+	ifset 1
+	type bitmap
+	source logo.png
+	layer
+	x window.width-clock.width-27
+	y 1
+end
+
+# titlebar text
+object
+	ifset 1
+	type title
+	x icon.width+3
+	y 4
+	w window.width-clock.width-27-20
+#	w window.width-(5+icon.width+5)-5-clock.width-5-5
+end
+object
+	ifnotset 1
+	type title
+	x 20
+	y 4
+	w window.width-clock.width-20
+end
+
+# text area
+object
+	type text
+	x 20
+	y 4+title.height+4
+	w window.width-20
+	h window.height-4
+end
