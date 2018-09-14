@@ -25,13 +25,6 @@ object
 end
 
 # clock
-#object
-#	type clock
-#	x window.width-clock.width
-#	y 4
-#end
-
-# clock
 object
 	type clock
 	source clock.png
@@ -52,19 +45,18 @@ end
 
 # titlebar text
 object
-	ifset 1
-	type title
-	x icon.width+3
-	y 4
-	w window.width-clock.width-27-20
-#	w window.width-(5+icon.width+5)-5-clock.width-5-5
-end
-object
 	ifnotset 1
 	type title
-	x 20
+	x icon.width+4
 	y 4
-	w window.width-clock.width-20
+	w window.width-icon.width-clock.width-5
+end
+object
+	ifset 1
+	type title
+	x icon.width+4
+	y 4
+	w window.width-icon.width-clock.width-27-5
 end
 
 # text area
@@ -75,3 +67,5 @@ object
 	w window.width-20
 	h window.height-4
 end
+
+#	w window.width-(5+icon.width+5)-5-clock.width-5-5
