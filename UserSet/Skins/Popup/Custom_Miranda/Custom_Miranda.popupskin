@@ -8,7 +8,7 @@ options
 	#option	id	val	title
 	option	1	0	Color frame
 	option	2	0	Color text background
-	option	3	0	Color background of logo & clocks
+	option	3	0	Color logo & clocks
 	option	4	1	Color text
 	option	5	1	Light title text
 	option	6	0	Standard digital clocks
@@ -18,14 +18,9 @@ options
 	option	10	0	Logo
 end
 
-#w 5+icon.width+4+title.width+4+clock.width+2+7 > 10+2+avatar.width+2+text.width+2+10
 h 5+5+title.height+5+(2+avatar.height>text.height+2)+2+10
 
 popup-version 02010007
-#padding-right 
-#padding-bottom 
-#shadow-region-opacity 0-254
-#legacy-region-opacity 24
 
 #===========Titlebar background====================================================================
 object
@@ -393,7 +388,6 @@ object
 end
 
 #===========Logo===================================================================================
-# layer 0
 object
 	ifset 1
 	ifnotset 6
@@ -415,7 +409,6 @@ object
 	x window.width-8-clock.width-37
 	y 2
 end
-# layer 1
 object
 	ifset 3
 	ifnotset 6
@@ -437,7 +430,6 @@ object
 	x window.width-8-clock.width-37
 	y 2
 end
-# layer 2
 object
 	ifnotset 6
 	ifset 10
@@ -447,7 +439,6 @@ object
 	x window.width-8-clock.width-37
 	y 2
 end
-# layer 3
 object
 	ifset 3
 	ifnotset 6
@@ -469,7 +460,6 @@ object
 	x window.width-8-clock.width-37
 	y 2
 end
-# layer 4
 object
 	ifset 3
 	ifnotset 6
@@ -493,7 +483,6 @@ object
 end
 
 #===========Clock==================================================================================
-# clock edges
 object
 	ifset 1
 	ifnotset 6
@@ -517,7 +506,6 @@ object
 	x window.width-8-clock.width
 	y 5+1
 end
-#
 object
 	ifset 1
 	ifnotset 6
@@ -541,7 +529,6 @@ object
 	x window.width-8-clock.width
 	y 5+1
 end
-#
 object
 	ifset 3
 	ifnotset 5
@@ -565,7 +552,6 @@ object
 	x window.width-8-clock.width
 	y 5+1
 end
-# Light title text
 object
 	ifset 3
 	ifset 5
@@ -589,7 +575,6 @@ object
 	x window.width-8-clock.width
 	y 5+1
 end
-#ifset logo
 object
 	ifset 3
 	ifnotset 5
@@ -613,7 +598,6 @@ object
 	x window.width-8-clock.width
 	y 5+1
 end
-# Light title text
 object
 	ifset 3
 	ifset 5
@@ -692,7 +676,6 @@ object
 end
 
 #===========Standard digital clocks border=========================================================
-# default
 object
 	ifset 6
 	type clock
@@ -714,8 +697,9 @@ object
 	x window.width-1-clock.width+1
 	y 5+title.height/2-1+1
 end
-# set Light title text
+# ifnotset Color text, ifset Light title text
 object
+	ifnotset 4
 	ifset 5
 	ifset 6
 	type clock
@@ -724,6 +708,7 @@ object
 	y 5+title.height/2-1
 end
 object
+	ifnotset 4
 	ifset 5
 	ifset 6
 	type clock
@@ -732,6 +717,7 @@ object
 	y 5+title.height/2-1+1
 end
 object
+	ifnotset 4
 	ifset 5
 	ifset 6
 	type clock
@@ -739,7 +725,7 @@ object
 	x window.width-1-clock.width+1
 	y 5+title.height/2-1+1
 end
-#set Color text, set Light title text
+# ifset Color text, ifset Light title text
 object
 	ifset 4
 	ifset 5
@@ -766,23 +752,26 @@ object
 end
 
 #===========Standard digital clocks================================================================
-# default
-object
-	ifset 6
-	type clock
-	x window.width-1-clock.width
-	y 5+title.height/2-1
-end
-# notset Color text
+# default, ifnotset Color text, ifnotset Light title text
 object
 	ifnotset 4
+	ifnotset 5
 	ifset 6
 	type clock
 	color 30 30 30
 	x window.width-1-clock.width
 	y 5+title.height/2-1
 end
-# set Light title text
+# ifset Color text, ifnotset Light title text
+object
+	ifset 4
+	ifnotset 5
+	ifset 6
+	type clock
+	x window.width-1-clock.width
+	y 5+title.height/2-1
+end
+# ifset Light title text
 object
 	ifset 5
 	ifset 6
@@ -793,7 +782,6 @@ object
 end
 
 #===========Title text border======================================================================
-# default
 object
 	type title
 	color 255 255 255
@@ -812,8 +800,9 @@ object
 	x 10+icon.width+3+1
 	y 5+5+1
 end
-# set Light title text
+# ifnotset Color text, ifset Light title text
 object
+	ifnotset 4
 	ifset 5
 	type title
 	color 30 30 30
@@ -821,6 +810,7 @@ object
 	y 5+5
 end
 object
+	ifnotset 4
 	ifset 5
 	type title
 	color 30 30 30
@@ -828,13 +818,14 @@ object
 	y 5+5+1
 end
 object
+	ifnotset 4
 	ifset 5
 	type title
 	color 30 30 30
 	x 10+icon.width+3+1
 	y 5+5+1
 end
-#set Color text, set Light title text
+# ifset Color text, ifset Light title text
 object
 	ifset 4
 	ifset 5
@@ -858,23 +849,25 @@ object
 end
 
 #===========Title text=============================================================================
-# default
-object
-	type title
-	x 10+icon.width+3
-	y 5+5
-	w window.width-(10+icon.width+3)-8-clock.width-2
-end
-# notset Color text
 object
 	ifnotset 4
+	ifnotset 5
 	type title
 	color 30 30 30
 	x 10+icon.width+3
 	y 5+5
 	w window.width-(10+icon.width+3)-8-clock.width-2
 end
-# set Light title text
+# ifset Color text, ifnotset Light title text
+object
+	ifset 4
+	ifnotset 5
+	type title
+	x 10+icon.width+3
+	y 5+5
+	w window.width-(10+icon.width+3)-8-clock.width-2
+end
+# ifset Light title text
 object
 	ifset 5
 	type title
@@ -883,7 +876,7 @@ object
 	y 5+5
 	w window.width-(10+icon.width+3)-8-clock.width-2
 end
-# notset Standard digital clocks, set Logo
+# ifnotset Standard digital clocks, ifset Logo
 object
 	ifnotset 6
 	ifset 10
@@ -892,7 +885,7 @@ object
 	y 5+5
 	w window.width-(10+icon.width+3)-8-clock.width-37-2
 end
-# notset Color text, notset Standard digital clocks, set Logo
+# ifnotset Color text, ifnotset Standard digital clocks, ifset Logo
 object
 	ifnotset 4
 	ifnotset 6
@@ -903,7 +896,7 @@ object
 	y 5+5
 	w window.width-(10+icon.width+3)-8-clock.width-37-2
 end
-# set Light title text, notset Standard digital clocks, set Logo
+# ifset Light title text, ifnotset Standard digital clocks, ifset Logo
 object
 	ifset 5
 	ifnotset 6
@@ -921,7 +914,7 @@ object
 	ifnotset 9
 	type avatar
 	x 10+2
-	y 5+title.height+10+3
+	y 5+5+title.height+5+3
 	w options.avatarsize
 	proportional 1
 end
@@ -930,12 +923,32 @@ object
 	ifset 9
 	type avatar
 	x window.width-avatar.width-10-2
-	y 5+title.height+10+3
+	y 5+5+title.height+5+3
 	w options.avatarsize
 	proportional 1
 end
 
 #===========Text area==============================================================================
+# ifnotset Color text, ifnotset Avatar to right
+object
+	ifnotset 4
+	ifnotset 9
+	type text
+	color 30 30 30
+	x 10+avatar.width+3
+	y 5+5+title.height+5+2
+	w window.width-(10+avatar.width+3)-10-3
+end
+# ifset Color text, ifnotset Avatar to right
+object
+	ifset 4
+	ifnotset 9
+	type text
+	x 10+avatar.width+3
+	y 5+5+title.height+5+2
+	w window.width-(10+avatar.width+3)-10-3
+end
+# ifnotset Color text, ifset Avatar to right
 object
 	ifnotset 4
 	ifset 9
@@ -943,31 +956,14 @@ object
 	color 30 30 30
 	x 10+3
 	y 5+5+title.height+5+2
-	w window.width-(5+3+avatar.width+5+3)-10
+	w window.width-(10+avatar.width+3)-10-3
 end
-object
-	ifnotset 4
-	ifnotset 9
-	type text
-	color 30 30 30
-	x 5+avatar.width+5+3
-	y 5+5+title.height+5+2
-	w window.width-(5+3+avatar.width+5+3)-10
-end
-# Color text
+# ifset Color text, ifset Avatar to right
 object
 	ifset 4
 	ifset 9
 	type text
 	x 10+3
 	y 5+5+title.height+5+2
-	w window.width-(5+3+avatar.width+5+3)-10
-end
-object
-	ifset 4
-	ifnotset 9
-	type text
-	x 5+avatar.width+5+3
-	y 5+5+title.height+5+2
-	w window.width-(5+3+avatar.width+5+3)-10
+	w window.width-(10+avatar.width+3)-10-3
 end
