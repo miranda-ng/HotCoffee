@@ -221,7 +221,7 @@ object
 	source Color\title_bl.png
 	mono
 	x 0
-	y 9+5+title.height
+	y 14+title.height
 	h 2
 end
 object
@@ -229,7 +229,7 @@ object
 	type bitmap
 	source title_bl.png
 	x 0
-	y 9+5+title.height
+	y 14+title.height
 	h 2
 end
 object
@@ -238,7 +238,7 @@ object
 	source title_bc.png
 	mono
 	x 10
-	y 9+5+title.height
+	y 14+title.height
 	w window.width-10-10
 	h 2
 end
@@ -247,7 +247,7 @@ object
 	type bitmap
 	source title_bc.png
 	x 10
-	y 9+5+title.height
+	y 14+title.height
 	w window.width-10-10
 	h 2
 end
@@ -257,7 +257,7 @@ object
 	source Color\title_br.png
 	mono
 	x window.width-10
-	y 9+5+title.height
+	y 14+title.height
 	h 2
 end
 object
@@ -265,7 +265,7 @@ object
 	type bitmap
 	source title_br.png
 	x window.width-10
-	y 9+5+title.height
+	y 14+title.height
 	h 2
 end
 
@@ -276,7 +276,7 @@ object
 	source text_bg.png
 	mono
 	x 10
-	y 9+5+title.height+2
+	y 14+title.height+2
 	w window.width-10-10
 	h window.height-(4+title.height+4)-10-3
 end
@@ -285,7 +285,7 @@ object
 	type bitmap
 	source text_bg.png
 	x 10
-	y 9+5+title.height+2
+	y 14+title.height+2
 	w window.width-10-10
 	h window.height-(4+title.height+4)-10-3
 end
@@ -297,7 +297,7 @@ object
 	source Color\text_l.png
 	mono
 	x 0
-	y 9+5+title.height+2
+	y 14+title.height+2
 	h window.height-(4+title.height+4)-9
 
 end
@@ -306,7 +306,7 @@ object
 	type bitmap
 	source text_l.png
 	x 0
-	y 9+5+title.height+2
+	y 14+title.height+2
 	h window.height-(4+title.height+4)-9
 end
 
@@ -316,7 +316,7 @@ object
 	source Color\text_r.png
 	mono
 	x window.width-10
-	y 9+5+title.height+2
+	y 14+title.height+2
 	h window.height-(4+title.height+4)-9
 end
 object
@@ -324,7 +324,7 @@ object
 	type bitmap
 	source text_r.png
 	x window.width-10
-	y 9+5+title.height+2
+	y 14+title.height+2
 	h window.height-(4+title.height+4)-9
 end
 
@@ -752,7 +752,7 @@ object
 end
 
 #===========Standard digital clocks================================================================
-# default, ifnotset Color text, ifnotset Light title text
+# ifnotset Color text, ifnotset Light title text
 object
 	ifnotset 4
 	ifnotset 5
