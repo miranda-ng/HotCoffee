@@ -1554,6 +1554,7 @@ ValueIndent=d8
 DropShadow=b1
 skin.Custom_Miranda=d472
 SkinPack=sCustom_Miranda
+spacing=w0
 UseWinColors=b0
 
 [tabSRMM_NEN]
