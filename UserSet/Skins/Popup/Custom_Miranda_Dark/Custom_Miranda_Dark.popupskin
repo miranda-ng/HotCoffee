@@ -1,4 +1,4 @@
-#Author:	Angeli-ka, FYR, Pacificator
+#Author:	Angeli-ka, FYR, Favor, Pacificator
 #Name:		Custom_Miranda_Dark
 #Version:	1.0
 #Description:	Skin made to match the Custom_Miranda_Dark for Clist Modern Layered (for Popup+ 2.1.0.7 or later)
@@ -319,7 +319,7 @@ object
 	mono
 	layer
 	x window.width-8-clock.width-37
-	y 5
+	y 2
 end
 object
 	ifnotset 1
@@ -329,7 +329,7 @@ object
 	source logo_layer_0.png
 	layer
 	x window.width-8-clock.width-37
-	y 5
+	y 2
 end
 object
 	ifset 3
@@ -340,7 +340,7 @@ object
 	mono
 	layer
 	x window.width-8-clock.width-37
-	y 5
+	y 2
 end
 object
 	ifnotset 3
@@ -350,16 +350,28 @@ object
 	source logo_layer_1.png
 	layer
 	x window.width-8-clock.width-37
-	y 5
+	y 2
 end
 object
+	ifset 3
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source Color\logo_layer_2.png
+	mono
+	layer
+	x window.width-8-clock.width-37
+	y 2
+end
+object
+	ifnotset 3
 	ifnotset 6
 	ifset 10
 	type bitmap
 	source logo_layer_2.png
 	layer
 	x window.width-8-clock.width-37
-	y 5
+	y 2
 end
 object
 	ifset 3
@@ -370,7 +382,7 @@ object
 	mono
 	layer
 	x window.width-8-clock.width-37
-	y 5
+	y 2
 end
 object
 	ifnotset 3
@@ -380,7 +392,7 @@ object
 	source logo_layer_3.png
 	layer
 	x window.width-8-clock.width-37
-	y 5
+	y 2
 end
 object
 	ifset 3
@@ -388,10 +400,10 @@ object
 	ifset 10
 	type bitmap
 	source Color\logo_layer_4.png
-	mono
+#	mono
 	layer
 	x window.width-8-clock.width-37
-	y 5
+	y 2
 end
 object
 	ifnotset 3
@@ -401,7 +413,7 @@ object
 	source logo_layer_4.png
 	layer
 	x window.width-8-clock.width-37
-	y 5
+	y 2
 end
 
 #===========Clock==================================================================================
@@ -544,59 +556,6 @@ object
 	y 8+1
 end
 
-#===========Logo & Standard digital clocks=========================================================
-object
-	ifset 6
-	ifset 10
-	type bitmap
-	source logo_layer_2_std_dgt_clk.png
-	layer
-	x window.width-8-37
-	y 3
-end
-object
-	ifset 3
-	ifset 6
-	ifset 10
-	type bitmap
-	source Color\logo_layer_3.png
-	mono
-	layer
-	x window.width-8-37
-	y 3
-end
-object
-	ifnotset 3
-	ifset 6
-	ifset 10
-	type bitmap
-	source logo_layer_3.png
-	layer
-	x window.width-8-37
-	y 3
-end
-object
-	ifset 3
-	ifset 6
-	ifset 10
-	type bitmap
-	source Color\logo_layer_4.png
-	mono
-	layer
-	x window.width-8-37
-	y 3
-end
-object
-	ifnotset 3
-	ifset 6
-	ifset 10
-	type bitmap
-	source logo_layer_4.png
-	layer
-	x window.width-8-37
-	y 3
-end
-
 #===========Standard digital clocks border=========================================================
 object
 	ifset 6
@@ -701,6 +660,71 @@ object
 	color 0 0 0
 	x window.width-1-clock.width
 	y 8+title.height/2-1
+end
+
+#===========Logo & Standard digital clocks=========================================================
+object
+	ifset 3
+	ifset 6
+	ifset 10
+	type bitmap
+	source Color\logo_layer_2_std_dgt_clk.png
+	mono
+	layer
+	x window.width-8-37
+	y 0
+end
+object
+	ifnotset 3
+	ifset 6
+	ifset 10
+	type bitmap
+	source logo_layer_2_std_dgt_clk.png
+	layer
+	x window.width-8-37
+	y 0
+end
+object
+	ifset 3
+	ifset 6
+	ifset 10
+	type bitmap
+	source Color\logo_layer_3.png
+	mono
+	layer
+	x window.width-8-37
+	y 0
+end
+object
+	ifnotset 3
+	ifset 6
+	ifset 10
+	type bitmap
+	source logo_layer_3.png
+	layer
+	x window.width-8-37
+	y 0
+end
+object
+	ifset 3
+	ifset 6
+	ifset 10
+	type bitmap
+	source Color\logo_layer_4.png
+#	mono
+	layer
+	x window.width-8-37
+	y 0
+end
+object
+	ifnotset 3
+	ifset 6
+	ifset 10
+	type bitmap
+	source logo_layer_4.png
+	layer
+	x window.width-8-37
+	y 0
 end
 
 #===========Title text border======================================================================
