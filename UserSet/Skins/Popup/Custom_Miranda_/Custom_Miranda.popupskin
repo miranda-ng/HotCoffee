@@ -640,21 +640,21 @@ object
 	type clock
 	color 255 255 255
 	x window.width-1-clock.width+1
-	y 8+title.height/2-1
+	y 8+5+(title.height-clock.height)/2
 end
 object
 	ifset 6
 	type clock
 	color 255 255 255
 	x window.width-1-clock.width
-	y 8+title.height/2-1+1
+	y 8+5+(title.height-clock.height)/2+1
 end
 object
 	ifset 6
 	type clock
 	color 255 255 255
 	x window.width-1-clock.width+1
-	y 8+title.height/2-1+1
+	y 8+5+(title.height-clock.height)/2+1
 end
 # ifnotset Color text, ifset Light title text
 object
@@ -664,7 +664,7 @@ object
 	type clock
 	color 30 30 30
 	x window.width-1-clock.width+1
-	y 8+title.height/2-1
+	y 8+5+(title.height-clock.height)/2
 end
 object
 	ifnotset 4
@@ -673,7 +673,7 @@ object
 	type clock
 	color 30 30 30
 	x window.width-1-clock.width
-	y 8+title.height/2-1+1
+	y 8+5+(title.height-clock.height)/2+1
 end
 object
 	ifnotset 4
@@ -682,7 +682,7 @@ object
 	type clock
 	color 30 30 30
 	x window.width-1-clock.width+1
-	y 8+title.height/2-1+1
+	y 8+5+(title.height-clock.height)/2+1
 end
 # ifset Color text, ifset Light title text
 object
@@ -691,7 +691,7 @@ object
 	ifset 6
 	type clock
 	x window.width-1-clock.width+1
-	y 8+title.height/2-1
+	y 8+5+(title.height-clock.height)/2
 end
 object
 	ifset 4
@@ -699,7 +699,7 @@ object
 	ifset 6
 	type clock
 	x window.width-1-clock.width
-	y 8+title.height/2-1+1
+	y 8+5+(title.height-clock.height)/2+1
 end
 object
 	ifset 4
@@ -707,7 +707,7 @@ object
 	ifset 6
 	type clock
 	x window.width-1-clock.width+1
-	y 8+title.height/2-1+1
+	y 8+5+(title.height-clock.height)/2+1
 end
 
 #===========Standard digital clocks================================================================
@@ -719,7 +719,7 @@ object
 	type clock
 	color 30 30 30
 	x window.width-1-clock.width
-	y 8+title.height/2-1
+	y 8+5+(title.height-clock.height)/2
 end
 # ifset Color text, ifnotset Light title text
 object
@@ -728,7 +728,7 @@ object
 	ifset 6
 	type clock
 	x window.width-1-clock.width
-	y 8+title.height/2-1
+	y 8+5+(title.height-clock.height)/2
 end
 # ifset Light title text
 object
@@ -737,7 +737,7 @@ object
 	type clock
 	color 255 255 255
 	x window.width-1-clock.width
-	y 8+title.height/2-1
+	y 8+5+(title.height-clock.height)/2
 end
 
 #===========Logo & Standard digital clocks=========================================================
