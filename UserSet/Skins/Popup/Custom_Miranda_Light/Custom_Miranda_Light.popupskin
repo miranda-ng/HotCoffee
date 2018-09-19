@@ -987,7 +987,7 @@ object
 	source Color\logo_std_dgt_clk_layer_0.png
 	mono
 	layer
-	x window.width-9-(clock.width+37)/2<window.width-9-37
+	x window.width-9-(clock.width+37)/2<window.width-45
 	y 0
 end
 object
@@ -997,7 +997,7 @@ object
 	type bitmap
 	source logo_std_dgt_clk_layer_0.png
 	layer
-	x window.width-9-(clock.width+37)/2<window.width-9-37
+	x window.width-9-(clock.width+37)/2<window.width-45
 	y 0
 end
 object
@@ -1008,7 +1008,7 @@ object
 	source Color\logo_layer_3.png
 	mono
 	layer
-	x window.width-9-(clock.width+37)/2<window.width-9-37
+	x window.width-9-(clock.width+37)/2<window.width-45
 	y 0
 end
 object
@@ -1018,7 +1018,7 @@ object
 	type bitmap
 	source logo_layer_3.png
 	layer
-	x window.width-9-(clock.width+37)/2<window.width-9-37
+	x window.width-9-(clock.width+37)/2<window.width-45
 	y 0
 end
 object
@@ -1029,7 +1029,7 @@ object
 	source Color\logo_layer_4.png
 	mono
 	layer
-	x window.width-9-(clock.width+37)/2<window.width-9-37
+	x window.width-9-(clock.width+37)/2<window.width-45
 	y 0
 end
 object
@@ -1039,7 +1039,7 @@ object
 	type bitmap
 	source logo_layer_4.png
 	layer
-	x window.width-9-(clock.width+37)/2<window.width-9-37
+	x window.width-9-(clock.width+37)/2<window.width-45
 	y 0
 end
 
