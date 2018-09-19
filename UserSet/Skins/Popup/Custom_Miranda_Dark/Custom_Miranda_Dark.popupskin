@@ -24,6 +24,14 @@ popup-version 02010007
 
 #===========Titlebar top===========================================================================
 object
+	type bitmap
+	source title_tl.png
+	x 0
+	y 8
+	w 7
+	h 7
+end
+object
 	ifset 1
 	type bitmap
 	source Color\title_tl.png
@@ -34,13 +42,32 @@ object
 	h 7
 end
 object
-	ifnotset 1
+	ifset 5
 	type bitmap
-	source title_tl.png
+	source Dtt\title_tl.png
 	x 0
 	y 8
 	w 7
 	h 7
+end
+object
+	ifset 1
+	ifset 5
+	type bitmap
+	source Dtt\title_tl.png
+	mono
+	x 0
+	y 8
+	w 7
+	h 7
+end
+object
+	type bitmap
+	source title_tc.png
+	x 7
+	y 8
+	w window.width-7-7
+	h 2
 end
 object
 	ifset 1
@@ -53,13 +80,32 @@ object
 	h 2
 end
 object
-	ifnotset 1
+	ifset 5
 	type bitmap
-	source title_tc.png
+	source Dtt\title_tc.png
 	x 7
 	y 8
 	w window.width-7-7
 	h 2
+end
+object
+	ifset 1
+	ifset 5
+	type bitmap
+	source Dtt\title_tc.png
+	mono
+	x 7
+	y 8
+	w window.width-7-7
+	h 2
+end
+object
+	type bitmap
+	source title_tr.png
+	x window.width-7
+	y 8
+	w 7
+	h 7
 end
 object
 	ifset 1
@@ -72,9 +118,20 @@ object
 	h 7
 end
 object
-	ifnotset 1
+	ifset 5
 	type bitmap
-	source title_tr.png
+	source Dtt\title_tr.png
+	x window.width-7
+	y 8
+	w 7
+	h 7
+end
+object
+	ifset 1
+	ifset 5
+	type bitmap
+	source Dtt\title_tr.png
+	mono
 	x window.width-7
 	y 8
 	w 7
@@ -82,6 +139,13 @@ object
 end
 
 #===========Titlebar center========================================================================
+object
+	type bitmap
+	source title_cl.png
+	x 0
+	y 15
+	h title.height+2
+end
 object
 	ifset 1
 	type bitmap
@@ -92,12 +156,30 @@ object
 	h title.height+2
 end
 object
-	ifnotset 1
+	ifset 5
 	type bitmap
-	source title_cl.png
+	source Dtt\title_cl.png
 	x 0
 	y 15
 	h title.height+2
+end
+object
+	ifset 1
+	ifset 5
+	type bitmap
+	source Dtt\title_cl.png
+	mono
+	x 0
+	y 15
+	h title.height+2
+end
+object
+	type bitmap
+	source title_cc.png
+	x 7
+	y 10
+	w window.width-7-7
+	h title.height+7
 end
 object
 	ifset 1
@@ -110,13 +192,31 @@ object
 	h title.height+7
 end
 object
-	ifnotset 1
+	ifset 5
 	type bitmap
-	source title_cc.png
+	source Dtt\title_cc.png
 	x 7
 	y 10
 	w window.width-7-7
 	h title.height+7
+end
+object
+	ifset 1
+	ifset 5
+	type bitmap
+	source Dtt\title_cc.png
+	mono
+	x 7
+	y 10
+	w window.width-7-7
+	h title.height+7
+end
+object
+	type bitmap
+	source title_cr.png
+	x window.width-7
+	y 15
+	h title.height+2
 end
 object
 	ifset 1
@@ -128,15 +228,32 @@ object
 	h title.height+2
 end
 object
-	ifnotset 1
+	ifset 5
 	type bitmap
-	source title_cr.png
+	source Dtt\title_cr.png
+	x window.width-7
+	y 15
+	h title.height+2
+end
+object
+	ifset 1
+	ifset 5
+	type bitmap
+	source Dtt\title_cr.png
+	mono
 	x window.width-7
 	y 15
 	h title.height+2
 end
 
 #===========Titlebar bottom / Text area top========================================================
+object
+	type bitmap
+	source title_bl.png
+	x 0
+	y 17+title.height
+	h 2
+end
 object
 	ifset 1
 	type bitmap
@@ -147,11 +264,29 @@ object
 	h 2
 end
 object
-	ifnotset 1
+	ifset 5
 	type bitmap
-	source title_bl.png
+	source Dtt\title_bl.png
 	x 0
 	y 17+title.height
+	h 2
+end
+object
+	ifset 1
+	ifset 5
+	type bitmap
+	source Dtt\title_bl.png
+	mono
+	x 0
+	y 17+title.height
+	h 2
+end
+object
+	type bitmap
+	source title_bc.png
+	x 10
+	y 17+title.height
+	w window.width-10-10
 	h 2
 end
 object
@@ -165,12 +300,30 @@ object
 	h 2
 end
 object
-	ifnotset 1
+	ifset 5
 	type bitmap
-	source title_bc.png
+	source Dtt\title_bc.png
 	x 10
 	y 17+title.height
 	w window.width-10-10
+	h 2
+end
+object
+	ifset 1
+	ifset 5
+	type bitmap
+	source Dtt\title_bc.png
+	mono
+	x 10
+	y 17+title.height
+	w window.width-10-10
+	h 2
+end
+object
+	type bitmap
+	source title_br.png
+	x window.width-10
+	y 17+title.height
 	h 2
 end
 object
@@ -183,9 +336,19 @@ object
 	h 2
 end
 object
-	ifnotset 1
+	ifset 5
 	type bitmap
-	source title_br.png
+	source Dtt\title_br.png
+	x window.width-10
+	y 17+title.height
+	h 2
+end
+object
+	ifset 1
+	ifset 5
+	type bitmap
+	source Dtt\title_br.png
+	mono
 	x window.width-10
 	y 17+title.height
 	h 2
@@ -214,6 +377,13 @@ end
 
 #===========Text area edge=========================================================================
 object
+	type bitmap
+	source text_l.png
+	x 0
+	y 17+title.height+2
+	h window.height-(4+title.height+4)-9
+end
+object
 	ifset 1
 	type bitmap
 	source Color\text_l.png
@@ -221,17 +391,32 @@ object
 	x 0
 	y 17+title.height+2
 	h window.height-(4+title.height+4)-9
-
 end
 object
-	ifnotset 1
+	ifset 5
 	type bitmap
-	source text_l.png
+	source Dtt\text_l.png
 	x 0
 	y 17+title.height+2
 	h window.height-(4+title.height+4)-9
 end
-
+object
+	ifset 1
+	ifset 5
+	type bitmap
+	source Dtt\text_l.png
+	mono
+	x 0
+	y 17+title.height+2
+	h window.height-(4+title.height+4)-9
+end
+object
+	type bitmap
+	source text_r.png
+	x window.width-10
+	y 17+title.height+2
+	h window.height-(4+title.height+4)-9
+end
 object
 	ifset 1
 	type bitmap
@@ -242,15 +427,32 @@ object
 	h window.height-(4+title.height+4)-9
 end
 object
-	ifnotset 1
+	ifset 5
 	type bitmap
-	source text_r.png
+	source Dtt\text_r.png
+	x window.width-10
+	y 17+title.height+2
+	h window.height-(4+title.height+4)-9
+end
+object
+	ifset 1
+	ifset 5
+	type bitmap
+	source Dtt\text_r.png
+	mono
 	x window.width-10
 	y 17+title.height+2
 	h window.height-(4+title.height+4)-9
 end
 
 #===========Bottom edge============================================================================
+object
+	type bitmap
+	source text_bl.png
+	x 0
+	y window.height-10
+	w 10
+end
 object
 	ifset 1
 	type bitmap
@@ -261,12 +463,29 @@ object
 	w 10
 end
 object
-	ifnotset 1
+	ifset 5
 	type bitmap
-	source text_bl.png
+	source Dtt\text_bl.png
 	x 0
 	y window.height-10
 	w 10
+end
+object
+	ifset 1
+	ifset 5
+	type bitmap
+	source Dtt\text_bl.png
+	mono
+	x 0
+	y window.height-10
+	w 10
+end
+object
+	type bitmap
+	source text_bc.png
+	x 10
+	y window.height-10
+	w window.width-10
 end
 object
 	ifset 1
@@ -278,12 +497,28 @@ object
 	w window.width-10
 end
 object
-	ifnotset 1
+	ifset 5
 	type bitmap
-	source text_bc.png
+	source Dtt\text_bc.png
 	x 10
 	y window.height-10
 	w window.width-10
+end
+object
+	ifset 1
+	ifset 5
+	type bitmap
+	source Dtt\text_bc.png
+	mono
+	x 10
+	y window.height-10
+	w window.width-10
+end
+object
+	type bitmap
+	source text_br.png
+	x window.width-10
+	y window.height-10
 end
 object
 	ifset 1
@@ -294,9 +529,18 @@ object
 	y window.height-10
 end
 object
-	ifnotset 1
+	ifset 5
 	type bitmap
-	source text_br.png
+	source Dtt\text_br.png
+	x window.width-10
+	y window.height-10
+end
+object
+	ifset 1
+	ifset 5
+	type bitmap
+	source Dtt\text_br.png
+	mono
 	x window.width-10
 	y window.height-10
 end
@@ -987,7 +1231,7 @@ object
 	source Color\logo_std_dgt_clk_layer_0.png
 	mono
 	layer
-	x window.width-9-(clock.width+37)/2<window.width-9-37
+	x window.width-9-(clock.width+37)/2<window.width-45
 	y 0
 end
 object
@@ -997,7 +1241,7 @@ object
 	type bitmap
 	source logo_std_dgt_clk_layer_0.png
 	layer
-	x window.width-9-(clock.width+37)/2<window.width-9-37
+	x window.width-9-(clock.width+37)/2<window.width-45
 	y 0
 end
 object
@@ -1008,7 +1252,7 @@ object
 	source Color\logo_layer_3.png
 	mono
 	layer
-	x window.width-9-(clock.width+37)/2<window.width-9-37
+	x window.width-9-(clock.width+37)/2<window.width-45
 	y 0
 end
 object
@@ -1018,7 +1262,7 @@ object
 	type bitmap
 	source logo_layer_3.png
 	layer
-	x window.width-9-(clock.width+37)/2<window.width-9-37
+	x window.width-9-(clock.width+37)/2<window.width-45
 	y 0
 end
 object
@@ -1029,7 +1273,7 @@ object
 	source Color\logo_layer_4.png
 #	mono
 	layer
-	x window.width-9-(clock.width+37)/2<window.width-9-37
+	x window.width-9-(clock.width+37)/2<window.width-45
 	y 0
 end
 object
@@ -1039,7 +1283,7 @@ object
 	type bitmap
 	source logo_layer_4.png
 	layer
-	x window.width-9-(clock.width+37)/2<window.width-9-37
+	x window.width-9-(clock.width+37)/2<window.width-45
 	y 0
 end
 
