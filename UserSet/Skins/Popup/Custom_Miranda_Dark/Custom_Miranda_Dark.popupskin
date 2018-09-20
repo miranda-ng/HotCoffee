@@ -34,7 +34,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source Color\title_tl.png
+	source ClrFrm\title_tl.png
 	mono
 	x 0
 	y 8
@@ -54,7 +54,7 @@ object
 	ifset 1
 	ifset 5
 	type bitmap
-	source Dtt\title_tl.png
+	source ClrFrm&Dtt\title_tl.png
 	mono
 	x 0
 	y 8
@@ -72,7 +72,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source Color\title_tc.png
+	source ClrFrm\title_tc.png
 	mono
 	x 7
 	y 8
@@ -92,7 +92,7 @@ object
 	ifset 1
 	ifset 5
 	type bitmap
-	source Dtt\title_tc.png
+	source ClrFrm&Dtt\title_tc.png
 	mono
 	x 7
 	y 8
@@ -110,7 +110,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source Color\title_tr.png
+	source ClrFrm\title_tr.png
 	mono
 	x window.width-7
 	y 8
@@ -130,7 +130,7 @@ object
 	ifset 1
 	ifset 5
 	type bitmap
-	source Dtt\title_tr.png
+	source ClrFrm&Dtt\title_tr.png
 	mono
 	x window.width-7
 	y 8
@@ -149,7 +149,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source Color\title_cl.png
+	source ClrFrm\title_cl.png
 	mono
 	x 0
 	y 15
@@ -167,7 +167,7 @@ object
 	ifset 1
 	ifset 5
 	type bitmap
-	source Dtt\title_cl.png
+	source ClrFrm&Dtt\title_cl.png
 	mono
 	x 0
 	y 15
@@ -204,7 +204,7 @@ object
 	ifset 1
 	ifset 5
 	type bitmap
-	source Dtt\title_cc.png
+	source ClrFrm&Dtt\title_cc.png
 	mono
 	x 7
 	y 10
@@ -221,7 +221,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source Color\title_cr.png
+	source ClrFrm\title_cr.png
 	mono
 	x window.width-7
 	y 15
@@ -239,7 +239,7 @@ object
 	ifset 1
 	ifset 5
 	type bitmap
-	source Dtt\title_cr.png
+	source ClrFrm&Dtt\title_cr.png
 	mono
 	x window.width-7
 	y 15
@@ -257,7 +257,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source Color\title_bl.png
+	source ClrFrm\title_bl.png
 	mono
 	x 0
 	y 17+title.height
@@ -275,7 +275,7 @@ object
 	ifset 1
 	ifset 5
 	type bitmap
-	source Dtt\title_bl.png
+	source ClrFrm&Dtt\title_bl.png
 	mono
 	x 0
 	y 17+title.height
@@ -292,7 +292,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source Color\title_bc.png
+	source ClrFrm\title_bc.png
 	mono
 	x 10
 	y 17+title.height
@@ -312,7 +312,7 @@ object
 	ifset 1
 	ifset 5
 	type bitmap
-	source Dtt\title_bc.png
+	source ClrFrm&Dtt\title_bc.png
 	mono
 	x 10
 	y 17+title.height
@@ -329,7 +329,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source Color\title_br.png
+	source ClrFrm\title_br.png
 	mono
 	x window.width-10
 	y 17+title.height
@@ -347,7 +347,7 @@ object
 	ifset 1
 	ifset 5
 	type bitmap
-	source Dtt\title_br.png
+	source ClrFrm&Dtt\title_br.png
 	mono
 	x window.width-10
 	y 17+title.height
@@ -356,19 +356,19 @@ end
 
 #===========Background Text area===================================================================
 object
-	ifset 2
+	ifnotset 2
 	type bitmap
-	source Color\text_bg.png
-	mono
+	source text_bg.png
 	x 10
 	y 17+title.height+2
 	w window.width-10-10
 	h window.height-(4+title.height+4)-10-3
 end
 object
-	ifnotset 2
+	ifset 2
 	type bitmap
-	source text_bg.png
+	source ClrFrm\text_bg.png
+	mono
 	x 10
 	y 17+title.height+2
 	w window.width-10-10
@@ -386,7 +386,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source Color\text_l.png
+	source ClrFrm\text_l.png
 	mono
 	x 0
 	y 17+title.height+2
@@ -404,7 +404,7 @@ object
 	ifset 1
 	ifset 5
 	type bitmap
-	source Dtt\text_l.png
+	source ClrFrm&Dtt\text_l.png
 	mono
 	x 0
 	y 17+title.height+2
@@ -420,7 +420,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source Color\text_r.png
+	source ClrFrm\text_r.png
 	mono
 	x window.width-10
 	y 17+title.height+2
@@ -438,7 +438,7 @@ object
 	ifset 1
 	ifset 5
 	type bitmap
-	source Dtt\text_r.png
+	source ClrFrm&Dtt\text_r.png
 	mono
 	x window.width-10
 	y 17+title.height+2
@@ -456,7 +456,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source Color\text_bl.png
+	source ClrFrm\text_bl.png
 	mono
 	x 0
 	y window.height-10
@@ -474,7 +474,7 @@ object
 	ifset 1
 	ifset 5
 	type bitmap
-	source Dtt\text_bl.png
+	source ClrFrm&Dtt\text_bl.png
 	mono
 	x 0
 	y window.height-10
@@ -490,7 +490,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source Color\text_bc.png
+	source ClrFrm\text_bc.png
 	mono
 	x 10
 	y window.height-10
@@ -508,7 +508,7 @@ object
 	ifset 1
 	ifset 5
 	type bitmap
-	source Dtt\text_bc.png
+	source ClrFrm&Dtt\text_bc.png
 	mono
 	x 10
 	y window.height-10
@@ -523,7 +523,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source Color\text_br.png
+	source ClrFrm\text_br.png
 	mono
 	x window.width-10
 	y window.height-10
@@ -539,7 +539,7 @@ object
 	ifset 1
 	ifset 5
 	type bitmap
-	source Dtt\text_br.png
+	source ClrFrm&Dtt\text_br.png
 	mono
 	x window.width-10
 	y window.height-10
@@ -555,17 +555,6 @@ end
 
 #===========Logo===================================================================================
 object
-	ifset 1
-	ifnotset 6
-	ifset 10
-	type bitmap
-	source Color\logo_layer_0.png
-	mono
-	layer
-	x window.width-8-clock.width-37
-	y 2
-end
-object
 	ifnotset 1
 	ifnotset 6
 	ifset 10
@@ -576,11 +565,11 @@ object
 	y 2
 end
 object
-	ifset 3
+	ifset 1
 	ifnotset 6
 	ifset 10
 	type bitmap
-	source Color\logo_layer_1.png
+	source ClrFrm\logo_layer_0.png
 	mono
 	layer
 	x window.width-8-clock.width-37
@@ -601,7 +590,7 @@ object
 	ifnotset 6
 	ifset 10
 	type bitmap
-	source Color\logo_layer_2.png
+	source ClrFrm\logo_layer_1.png
 	mono
 	layer
 	x window.width-8-clock.width-37
@@ -622,7 +611,7 @@ object
 	ifnotset 6
 	ifset 10
 	type bitmap
-	source Color\logo_layer_3.png
+	source ClrFrm\logo_layer_2.png
 	mono
 	layer
 	x window.width-8-clock.width-37
@@ -643,8 +632,8 @@ object
 	ifnotset 6
 	ifset 10
 	type bitmap
-	source Color\logo_layer_4.png
-#	mono
+	source ClrFrm\logo_layer_3.png
+	mono
 	layer
 	x window.width-8-clock.width-37
 	y 2
@@ -659,22 +648,22 @@ object
 	x window.width-8-clock.width-37
 	y 2
 end
+object
+	ifset 3
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source ClrFrm\logo_layer_4.png
+#	mono
+	layer
+	x window.width-8-clock.width-37
+	y 2
+end
 
 #===========Clock==================================================================================
 object
-	ifset 1
-	ifnotset 6
-	ifnotset 10
-	type clock
-	source Color\clock_edges.png
-	mono
-	layer
-	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
-	x window.width-8-clock.width
-	y 8+1
-end
-object
 	ifnotset 1
+	ifnotset 5
 	ifnotset 6
 	ifnotset 10
 	type clock
@@ -686,18 +675,45 @@ object
 end
 object
 	ifset 1
+	ifnotset 5
 	ifnotset 6
-	ifset 10
+	ifnotset 10
 	type clock
-	source Color\clock&logo_edges.png
+	source ClrFrm\clock_edges.png
 	mono
 	layer
-	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
+	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
 	x window.width-8-clock.width
 	y 8+1
 end
 object
 	ifnotset 1
+	ifset 5
+	ifnotset 6
+	ifnotset 10
+	type clock
+	source Dtt\clock_edges.png
+	layer
+	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	x window.width-8-clock.width
+	y 8+1
+end
+object
+	ifset 1
+	ifset 5
+	ifnotset 6
+	ifnotset 10
+	type clock
+	source ClrFrm&Dtt\clock_edges.png
+	mono
+	layer
+	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	x window.width-8-clock.width
+	y 8+1
+end
+object
+	ifnotset 1
+	ifnotset 5
 	ifnotset 6
 	ifset 10
 	type clock
@@ -708,14 +724,40 @@ object
 	y 8+1
 end
 object
-	ifset 3
+	ifset 1
 	ifnotset 5
 	ifnotset 6
-	ifnotset 10
+	ifset 10
 	type clock
-	source Color\clock.png
+	source ClrFrm\clock&logo_edges.png
 	mono
-	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	layer
+	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
+	x window.width-8-clock.width
+	y 8+1
+end
+object
+	ifnotset 1
+	ifset 5
+	ifnotset 6
+	ifset 10
+	type clock
+	source Dtt\clock&logo_edges.png
+	layer
+	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
+	x window.width-8-clock.width
+	y 8+1
+end
+object
+	ifset 1
+	ifset 5
+	ifnotset 6
+	ifset 10
+	type clock
+	source ClrFrm&Dtt\clock&logo_edges.png
+	mono
+	layer
+	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
 	x window.width-8-clock.width
 	y 8+1
 end
@@ -732,11 +774,11 @@ object
 end
 object
 	ifset 3
-	ifset 5
+	ifnotset 5
 	ifnotset 6
 	ifnotset 10
 	type clock
-	source Color\clock_dtt.png
+	source ClrFrm\clock.png
 	mono
 	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
 	x window.width-8-clock.width
@@ -755,13 +797,13 @@ object
 end
 object
 	ifset 3
-	ifnotset 5
+	ifset 5
 	ifnotset 6
-	ifset 10
+	ifnotset 10
 	type clock
-	source Color\clock&logo.png
+	source ClrFrm\clock_dtt.png
 	mono
-	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
+	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
 	x window.width-8-clock.width
 	y 8+1
 end
@@ -778,11 +820,11 @@ object
 end
 object
 	ifset 3
-	ifset 5
+	ifnotset 5
 	ifnotset 6
 	ifset 10
 	type clock
-	source Color\clock&logo_dtt.png
+	source ClrFrm\clock&logo.png
 	mono
 	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
 	x window.width-8-clock.width
@@ -799,6 +841,18 @@ object
 	x window.width-8-clock.width
 	y 8+1
 end
+object
+	ifset 3
+	ifset 5
+	ifnotset 6
+	ifset 10
+	type clock
+	source ClrFrm\clock&logo_dtt.png
+	mono
+	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
+	x window.width-8-clock.width
+	y 8+1
+end
 
 #===========Logo & Standard digital clocks (background)============================================
 object
@@ -806,7 +860,7 @@ object
 	ifset 6
 	ifset 10
 	type bitmap
-	source Color\logo_std_dgt_clk_bg_tl.png
+	source ClrFrm\logo_std_dgt_clk_bg_tl.png
 	mono
 	layer
 	x window.width-9-(clock.width>36)
@@ -827,7 +881,7 @@ object
 	ifset 6
 	ifset 10
 	type bitmap
-	source Color\logo_std_dgt_clk_bg_l.png
+	source ClrFrm\logo_std_dgt_clk_bg_l.png
 	mono
 	layer
 	x window.width-9-(clock.width>36)
@@ -850,7 +904,7 @@ object
 	ifset 6
 	ifset 10
 	type bitmap
-	source Color\logo_std_dgt_clk_bg_bl.png
+	source ClrFrm\logo_std_dgt_clk_bg_bl.png
 	mono
 	layer
 	x window.width-9-(clock.width>36)
@@ -875,7 +929,7 @@ object
 	ifset 6
 	ifset 10
 	type bitmap
-	source Color\logo_std_dgt_clk_bg_tr.png
+	source ClrFrm\logo_std_dgt_clk_bg_tr.png
 	mono
 	layer
 	x window.width-10
@@ -896,7 +950,7 @@ object
 	ifset 6
 	ifset 10
 	type bitmap
-	source Color\logo_std_dgt_clk_bg_r.png
+	source ClrFrm\logo_std_dgt_clk_bg_r.png
 	mono
 	layer
 	x window.width-10
@@ -919,7 +973,7 @@ object
 	ifset 6
 	ifset 10
 	type bitmap
-	source Color\logo_std_dgt_clk_bg_br.png
+	source ClrFrm\logo_std_dgt_clk_bg_br.png
 	mono
 	layer
 	x window.width-10
@@ -944,7 +998,7 @@ object
 	ifset 6
 	ifset 10
 	type bitmap
-	source Color\logo_std_dgt_clk_bg_bc.png
+	source ClrFrm\logo_std_dgt_clk_bg_bc.png
 	mono
 	layer
 	x window.width-9+2-(clock.width>36)
@@ -967,7 +1021,7 @@ object
 	ifset 6
 	ifset 10
 	type bitmap
-	source Color\text_bg.png
+	source ClrFrm\text_bg.png
 	mono
 	layer
 	x window.width-9+2-(clock.width>36)
@@ -1228,7 +1282,7 @@ object
 	ifset 6
 	ifset 10
 	type bitmap
-	source Color\logo_std_dgt_clk_layer_0.png
+	source ClrFrm\logo_std_dgt_clk_layer_0.png
 	mono
 	layer
 	x window.width-9-(clock.width+37)/2<window.width-45
@@ -1249,7 +1303,7 @@ object
 	ifset 6
 	ifset 10
 	type bitmap
-	source Color\logo_layer_3.png
+	source ClrFrm\logo_layer_3.png
 	mono
 	layer
 	x window.width-9-(clock.width+37)/2<window.width-45
@@ -1270,7 +1324,7 @@ object
 	ifset 6
 	ifset 10
 	type bitmap
-	source Color\logo_layer_4.png
+	source ClrFrm\logo_layer_4.png
 #	mono
 	layer
 	x window.width-9-(clock.width+37)/2<window.width-45
