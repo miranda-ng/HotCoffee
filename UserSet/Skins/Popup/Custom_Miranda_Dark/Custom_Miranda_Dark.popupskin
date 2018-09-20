@@ -42,26 +42,6 @@ object
 	h 7
 end
 object
-	ifset 5
-	type bitmap
-	source Dtt\title_tl.png
-	x 0
-	y 8
-	w 7
-	h 7
-end
-object
-	ifset 1
-	ifset 5
-	type bitmap
-	source ClrFrm&Dtt\title_tl.png
-	mono
-	x 0
-	y 8
-	w 7
-	h 7
-end
-object
 	type bitmap
 	source title_tc.png
 	x 7
@@ -80,26 +60,6 @@ object
 	h 2
 end
 object
-	ifset 5
-	type bitmap
-	source Dtt\title_tc.png
-	x 7
-	y 8
-	w window.width-7-7
-	h 2
-end
-object
-	ifset 1
-	ifset 5
-	type bitmap
-	source ClrFrm&Dtt\title_tc.png
-	mono
-	x 7
-	y 8
-	w window.width-7-7
-	h 2
-end
-object
 	type bitmap
 	source title_tr.png
 	x window.width-7
@@ -111,26 +71,6 @@ object
 	ifset 1
 	type bitmap
 	source ClrFrm\title_tr.png
-	mono
-	x window.width-7
-	y 8
-	w 7
-	h 7
-end
-object
-	ifset 5
-	type bitmap
-	source Dtt\title_tr.png
-	x window.width-7
-	y 8
-	w 7
-	h 7
-end
-object
-	ifset 1
-	ifset 5
-	type bitmap
-	source ClrFrm&Dtt\title_tr.png
 	mono
 	x window.width-7
 	y 8
@@ -156,24 +96,6 @@ object
 	h title.height+2
 end
 object
-	ifset 5
-	type bitmap
-	source Dtt\title_cl.png
-	x 0
-	y 15
-	h title.height+2
-end
-object
-	ifset 1
-	ifset 5
-	type bitmap
-	source ClrFrm&Dtt\title_cl.png
-	mono
-	x 0
-	y 15
-	h title.height+2
-end
-object
 	type bitmap
 	source title_cc.png
 	x 7
@@ -185,26 +107,6 @@ object
 	ifset 1
 	type bitmap
 	source title_cc.png
-	mono
-	x 7
-	y 10
-	w window.width-7-7
-	h title.height+7
-end
-object
-	ifset 5
-	type bitmap
-	source Dtt\title_cc.png
-	x 7
-	y 10
-	w window.width-7-7
-	h title.height+7
-end
-object
-	ifset 1
-	ifset 5
-	type bitmap
-	source ClrFrm&Dtt\title_cc.png
 	mono
 	x 7
 	y 10
@@ -222,24 +124,6 @@ object
 	ifset 1
 	type bitmap
 	source ClrFrm\title_cr.png
-	mono
-	x window.width-7
-	y 15
-	h title.height+2
-end
-object
-	ifset 5
-	type bitmap
-	source Dtt\title_cr.png
-	x window.width-7
-	y 15
-	h title.height+2
-end
-object
-	ifset 1
-	ifset 5
-	type bitmap
-	source ClrFrm&Dtt\title_cr.png
 	mono
 	x window.width-7
 	y 15
@@ -264,24 +148,6 @@ object
 	h 2
 end
 object
-	ifset 5
-	type bitmap
-	source Dtt\title_bl.png
-	x 0
-	y 17+title.height
-	h 2
-end
-object
-	ifset 1
-	ifset 5
-	type bitmap
-	source ClrFrm&Dtt\title_bl.png
-	mono
-	x 0
-	y 17+title.height
-	h 2
-end
-object
 	type bitmap
 	source title_bc.png
 	x 10
@@ -300,26 +166,6 @@ object
 	h 2
 end
 object
-	ifset 5
-	type bitmap
-	source Dtt\title_bc.png
-	x 10
-	y 17+title.height
-	w window.width-10-10
-	h 2
-end
-object
-	ifset 1
-	ifset 5
-	type bitmap
-	source ClrFrm&Dtt\title_bc.png
-	mono
-	x 10
-	y 17+title.height
-	w window.width-10-10
-	h 2
-end
-object
 	type bitmap
 	source title_br.png
 	x window.width-10
@@ -330,24 +176,6 @@ object
 	ifset 1
 	type bitmap
 	source ClrFrm\title_br.png
-	mono
-	x window.width-10
-	y 17+title.height
-	h 2
-end
-object
-	ifset 5
-	type bitmap
-	source Dtt\title_br.png
-	x window.width-10
-	y 17+title.height
-	h 2
-end
-object
-	ifset 1
-	ifset 5
-	type bitmap
-	source ClrFrm&Dtt\title_br.png
 	mono
 	x window.width-10
 	y 17+title.height
@@ -393,24 +221,6 @@ object
 	h window.height-(4+title.height+4)-9
 end
 object
-	ifset 5
-	type bitmap
-	source Dtt\text_l.png
-	x 0
-	y 17+title.height+2
-	h window.height-(4+title.height+4)-9
-end
-object
-	ifset 1
-	ifset 5
-	type bitmap
-	source ClrFrm&Dtt\text_l.png
-	mono
-	x 0
-	y 17+title.height+2
-	h window.height-(4+title.height+4)-9
-end
-object
 	type bitmap
 	source text_r.png
 	x window.width-10
@@ -421,24 +231,6 @@ object
 	ifset 1
 	type bitmap
 	source ClrFrm\text_r.png
-	mono
-	x window.width-10
-	y 17+title.height+2
-	h window.height-(4+title.height+4)-9
-end
-object
-	ifset 5
-	type bitmap
-	source Dtt\text_r.png
-	x window.width-10
-	y 17+title.height+2
-	h window.height-(4+title.height+4)-9
-end
-object
-	ifset 1
-	ifset 5
-	type bitmap
-	source ClrFrm&Dtt\text_r.png
 	mono
 	x window.width-10
 	y 17+title.height+2
@@ -463,24 +255,6 @@ object
 	w 10
 end
 object
-	ifset 5
-	type bitmap
-	source Dtt\text_bl.png
-	x 0
-	y window.height-10
-	w 10
-end
-object
-	ifset 1
-	ifset 5
-	type bitmap
-	source ClrFrm&Dtt\text_bl.png
-	mono
-	x 0
-	y window.height-10
-	w 10
-end
-object
 	type bitmap
 	source text_bc.png
 	x 10
@@ -497,24 +271,6 @@ object
 	w window.width-10
 end
 object
-	ifset 5
-	type bitmap
-	source Dtt\text_bc.png
-	x 10
-	y window.height-10
-	w window.width-10
-end
-object
-	ifset 1
-	ifset 5
-	type bitmap
-	source ClrFrm&Dtt\text_bc.png
-	mono
-	x 10
-	y window.height-10
-	w window.width-10
-end
-object
 	type bitmap
 	source text_br.png
 	x window.width-10
@@ -524,22 +280,6 @@ object
 	ifset 1
 	type bitmap
 	source ClrFrm\text_br.png
-	mono
-	x window.width-10
-	y window.height-10
-end
-object
-	ifset 5
-	type bitmap
-	source Dtt\text_br.png
-	x window.width-10
-	y window.height-10
-end
-object
-	ifset 1
-	ifset 5
-	type bitmap
-	source ClrFrm&Dtt\text_br.png
 	mono
 	x window.width-10
 	y window.height-10
@@ -663,7 +403,6 @@ end
 #===========Clock==================================================================================
 object
 	ifnotset 1
-	ifnotset 5
 	ifnotset 6
 	ifnotset 10
 	type clock
@@ -675,7 +414,6 @@ object
 end
 object
 	ifset 1
-	ifnotset 5
 	ifnotset 6
 	ifnotset 10
 	type clock
@@ -688,32 +426,6 @@ object
 end
 object
 	ifnotset 1
-	ifset 5
-	ifnotset 6
-	ifnotset 10
-	type clock
-	source Dtt\clock_edges.png
-	layer
-	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
-	x window.width-8-clock.width
-	y 8+1
-end
-object
-	ifset 1
-	ifset 5
-	ifnotset 6
-	ifnotset 10
-	type clock
-	source ClrFrm&Dtt\clock_edges.png
-	mono
-	layer
-	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
-	x window.width-8-clock.width
-	y 8+1
-end
-object
-	ifnotset 1
-	ifnotset 5
 	ifnotset 6
 	ifset 10
 	type clock
@@ -725,36 +437,10 @@ object
 end
 object
 	ifset 1
-	ifnotset 5
 	ifnotset 6
 	ifset 10
 	type clock
 	source ClrFrm\clock&logo_edges.png
-	mono
-	layer
-	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
-	x window.width-8-clock.width
-	y 8+1
-end
-object
-	ifnotset 1
-	ifset 5
-	ifnotset 6
-	ifset 10
-	type clock
-	source Dtt\clock&logo_edges.png
-	layer
-	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
-	x window.width-8-clock.width
-	y 8+1
-end
-object
-	ifset 1
-	ifset 5
-	ifnotset 6
-	ifset 10
-	type clock
-	source ClrFrm&Dtt\clock&logo_edges.png
 	mono
 	layer
 	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
