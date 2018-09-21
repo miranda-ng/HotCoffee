@@ -168,7 +168,7 @@ function WriteTabSRMMSkin(skinName, fontName)
 	end
 
 	if result > 0 then
-		winapi.SetIniValue(m.Parse('%miranda_path%\\Skins\\Skins\\TabSRMM\\'..skinName..'\\'..skinName..'.tsk'), 'WindowFrame', 'CaptionOffset', result)
+		winapi.SetIniValue(m.Parse('%miranda_path%\\Skins\\TabSRMM\\'..skinName..'\\'..skinName..'.tsk'), 'WindowFrame', 'CaptionOffset', result)
 	end
 end
 
@@ -186,7 +186,7 @@ function ApplySkin(skinName, fontName)
 
 	local noTipperSkin = "Default_Miranda,Default_Windows,WinStyle_Light,WinStyle_Dark";
 	
-	m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\Skins\\Skins\\"..skinName..".ini"), 0)
+	m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\Skins\\"..skinName..".ini"), 0)
 	m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\Skins\\Fonts\\"..fontName..".ini"), 0)
 
 	m.CallService("TabSRMsg/ReloadSkin")
@@ -198,7 +198,7 @@ function ApplySkin(skinName, fontName)
 	m.CallService("Font/ReloadSvc")
 	m.CallService("Colour/ReloadSvc")
 	
-	m.CallService("ModernSkinSel/Apply", 0, m.Parse("%miranda_path%\\Skins\\Skins\\Modern contact list\\"..skinName..".msf"))
+	m.CallService("ModernSkinSel/Apply", 0, m.Parse("%miranda_path%\\Skins\\Modern contact list\\"..skinName..".msf"))
 end
 
 
@@ -214,7 +214,7 @@ end
 
 PreBuildMenuFuncs["Skins"] = function()
 	for i, v in ipairs(Skins) do
-		local file = io.open(m.Parse('%miranda_path%\\Skins\\Skins\\' .. v.Name .. '.ini'), "r")
+		local file = io.open(m.Parse('%miranda_path%\\Skins\\' .. v.Name .. '.ini'), "r")
 		genmenu.ShowMenuItem(v.hMenuItem, file ~= nil)
 		if file then io.close(file) end
 	end
@@ -296,11 +296,11 @@ function ApplyIconPack(name)
 		{
 			{
 				Bin = "pushd",
-				Args = m.Parse('%miranda_path%\\Skins\\Skins\\IEView\\!tools\\icons\\packs\\')
+				Args = m.Parse('%miranda_path%\\Skins\\IEView\\!tools\\icons\\packs\\')
 			},
 			{ 
 				Bin = "7z.exe",
-				Args = string.format('x "%s" -aoa -o"%s"', name .. ".7z", m.Parse("%miranda_path%\\Skins\\Skins\\IEView\\!tools\\icons"))
+				Args = string.format('x "%s" -aoa -o"%s"', name .. ".7z", m.Parse("%miranda_path%\\Skins\\IEView\\!tools\\icons"))
 			},
 			{	
 				Bin = "popd"
