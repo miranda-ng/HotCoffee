@@ -168,7 +168,7 @@ function WriteTabSRMMSkin(skinName, fontName)
 	end
 
 	if result > 0 then
-		winapi.SetIniValue(m.Parse('%miranda_path%\\UserSet\\Skins\\TabSRMM\\'..skinName..'\\'..skinName..'.tsk'), 'WindowFrame', 'CaptionOffset', result)
+		winapi.SetIniValue(m.Parse('%miranda_path%\\Skins\\Skins\\TabSRMM\\'..skinName..'\\'..skinName..'.tsk'), 'WindowFrame', 'CaptionOffset', result)
 	end
 end
 
@@ -186,8 +186,8 @@ function ApplySkin(skinName, fontName)
 
 	local noTipperSkin = "Default_Miranda,Default_Windows,WinStyle_Light,WinStyle_Dark";
 	
-	m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\UserSet\\Skins\\"..skinName..".ini"), 0)
-	m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\UserSet\\Fonts\\"..fontName..".ini"), 0)
+	m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\Skins\\Skins\\"..skinName..".ini"), 0)
+	m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\Skins\\Fonts\\"..fontName..".ini"), 0)
 
 	m.CallService("TabSRMsg/ReloadSkin")
 	m.CallService("IEView/ReloadOptions")
@@ -198,7 +198,7 @@ function ApplySkin(skinName, fontName)
 	m.CallService("Font/ReloadSvc")
 	m.CallService("Colour/ReloadSvc")
 	
-	m.CallService("ModernSkinSel/Apply", 0, m.Parse("%miranda_path%\\UserSet\\Skins\\Modern contact list\\"..skinName..".msf"))
+	m.CallService("ModernSkinSel/Apply", 0, m.Parse("%miranda_path%\\Skins\\Skins\\Modern contact list\\"..skinName..".msf"))
 end
 
 
@@ -214,7 +214,7 @@ end
 
 PreBuildMenuFuncs["Skins"] = function()
 	for i, v in ipairs(Skins) do
-		local file = io.open(m.Parse('%miranda_path%\\UserSet\\Skins\\' .. v.Name .. '.ini'), "r")
+		local file = io.open(m.Parse('%miranda_path%\\Skins\\Skins\\' .. v.Name .. '.ini'), "r")
 		genmenu.ShowMenuItem(v.hMenuItem, file ~= nil)
 		if file then io.close(file) end
 	end
@@ -244,7 +244,7 @@ function ApplyFont(fontName)
 		db.WriteSetting(_, 'PackInfo', 'Font', fontName)
 		WriteTabSRMMSkin(db.GetSetting(_, 'PackInfo', 'Skin'), fontName)
 		m.CallService("TabSRMsg/ReloadSkin", 0, 0)
-		m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\UserSet\\Fonts\\" .. fontName .. ".ini"), 0)
+		m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\Skins\\Fonts\\" .. fontName .. ".ini"), 0)
 		m.CallService("Font/ReloadSvc", 0, 0)
 		m.CallService("Colour/ReloadSvc", 0, 0)
 	end)
@@ -296,18 +296,18 @@ function ApplyIconPack(name)
 		{
 			{
 				Bin = "pushd",
-				Args = m.Parse('%miranda_path%\\UserSet\\Skins\\IEView\\!tools\\icons\\packs\\')
+				Args = m.Parse('%miranda_path%\\Skins\\Skins\\IEView\\!tools\\icons\\packs\\')
 			},
 			{ 
 				Bin = "7z.exe",
-				Args = string.format('x "%s" -aoa -o"%s"', name .. ".7z", m.Parse("%miranda_path%\\UserSet\\Skins\\IEView\\!tools\\icons"))
+				Args = string.format('x "%s" -aoa -o"%s"', name .. ".7z", m.Parse("%miranda_path%\\Skins\\Skins\\IEView\\!tools\\icons"))
 			},
 			{	
 				Bin = "popd"
 			},
 			{
 				Bin = "pushd",
-				Args = m.Parse("%miranda_path%\\UserSet\\IconPacks")
+				Args = m.Parse("%miranda_path%\\Skins\\IconPacks")
 			},
 			{
 				Bin = "start /wait IconPatcher.exe",
@@ -341,7 +341,7 @@ end
 
 PreBuildMenuFuncs["Icons"] =  function()
 	for i, v in ipairs(IconPacks) do
-		local file = m.Parse('%miranda_path%\\UserSet\\IconPacks\\'..v.Name..'_HotCoffee.7z')
+		local file = m.Parse('%miranda_path%\\Skins\\IconPacks\\'..v.Name..'_HotCoffee.7z')
 		genmenu.ShowMenuItem(v.hMenuItem, os.rename(file, file))
 	end	
 end
@@ -357,7 +357,7 @@ hSmileysRoot = clist.AddMainMenuItem({
 assert(hSmileysRoot)
 
 function ApplySmilePack(name, type, background)
-	local smilesRoot = m.Parse("%miranda_path%\\UserSet\\Smileys")
+	local smilesRoot = m.Parse("%miranda_path%\\Skins\\Smileys")
 	winapi.CopyFile(string.format("%s\\%s\\%s\\%s_%s_pack.msl", smilesRoot, background, type, type, name), string.format("%s\\%s\\%s\\%s.msl", smilesRoot, background, type, type))
 end
 
@@ -393,7 +393,7 @@ for i, v in ipairs(SmileyPacks) do
 end	
 
 PreBuildMenuFuncs["Smileys"] = function()
-	local fileName = m.Parse('%miranda_path%\\UserSet\\Smileys\\_light\\emoji\\emoji.msl')
+	local fileName = m.Parse('%miranda_path%\\Skins\\Smileys\\_light\\emoji\\emoji.msl')
 	
 	genmenu.ShowMenuItem(hSmileysRoot, (os.rename(fileName, fileName) and m.IsPluginLoaded('bd542bb4-5ae4-4d0e-a435-ba8dbe39607f')))
 

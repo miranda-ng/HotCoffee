@@ -1,9 +1,9 @@
 --Скрипт следит за изменением языка в миранде...
 --как только язык меняется, сразу импортируем WhenChangeLanguage.ini в БД
 --добавлена проверка на русские языки для SplashScreen,
---если используется русский, беларусский или украинский язык то из папки UserSet\SplashScreen\ru\
---если используется любой другой язык то из папки UserSet\SplashScreen\en\
---копируем с заменой все содержимое в папку UserSet\SplashScreen\
+--если используется русский, беларусский или украинский язык то из папки Skins\SplashScreen\ru\
+--если используется любой другой язык то из папки Skins\SplashScreen\en\
+--копируем с заменой все содержимое в папку Skins\SplashScreen\
 assert(m)
 local db = require('m_database')
 assert(db)
@@ -36,10 +36,10 @@ local function IsCyrillicLangpack(langpack)
  end
 
 function OnLanguageChanged(langpack)
-    local mImportIniPath = toansi(m.Parse('%miranda_path%\\UserSet\\ini\\WhenChangeLanguage.ini'))
+    local mImportIniPath = toansi(m.Parse('%miranda_path%\\Skins\\ini\\WhenChangeLanguage.ini'))
     m.CallService('DB/Ini/ImportFile', mImportIniPath)
 
-    local splashScreenPathTo = m.Parse('%miranda_path%\\UserSet\\SplashScreen')
+    local splashScreenPathTo = m.Parse('%miranda_path%\\Skins\\SplashScreen')
     local splashScreenPathFrom = splashScreenPathTo
     if IsCyrillicLangpack(langpack) then
         splashScreenPathFrom = splashScreenPathFrom .. '\\' .. 'ru'

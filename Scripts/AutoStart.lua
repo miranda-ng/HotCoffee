@@ -35,7 +35,7 @@ function WriteTabSRMMSkin(skinName, fontName)
   end
 
   if result > 0 then
-    winapi.SetIniValue(m.Parse('%miranda_path%\\UserSet\\Skins\\TabSRMM\\'..skinName..'\\'..skinName..'.tsk'), 'WindowFrame', 'CaptionOffset', result)
+    winapi.SetIniValue(m.Parse('%miranda_path%\\Skins\\Skins\\TabSRMM\\'..skinName..'\\'..skinName..'.tsk'), 'WindowFrame', 'CaptionOffset', result)
   end
 end
 
