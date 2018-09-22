@@ -560,7 +560,7 @@ object
 	ifset 6
 	ifset 10
 	type bitmap
-	source logo_std_dgt_clk_layer_0.png
+	source logo_layer_2_std_clk.png
 	layer
 	x window.width-1-(clock.width+37)/2<window.width-45
 	y 0
@@ -570,7 +570,7 @@ object
 	ifset 6
 	ifset 10
 	type bitmap
-	source Color\logo_std_dgt_clk_layer_0.png
+	source Color\logo_layer_2_std_clk.png
 	mono
 	layer
 	x window.width-1-(clock.width+37)/2<window.width-45
