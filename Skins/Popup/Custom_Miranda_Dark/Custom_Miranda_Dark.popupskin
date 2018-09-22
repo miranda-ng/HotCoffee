@@ -620,7 +620,9 @@ object
 end
 
 #===========Standard digital clocks border=========================================================
+# ifnotset Dark title text
 object
+	ifnotset 5
 	ifset 6
 	type clock
 	color 0 0 0
@@ -628,6 +630,7 @@ object
 	y 8+5+(title.height-clock.height)/2
 end
 object
+	ifnotset 5
 	ifset 6
 	type clock
 	color 0 0 0
@@ -635,6 +638,7 @@ object
 	y 8+5+(title.height-clock.height)/2+1
 end
 object
+	ifnotset 5
 	ifset 6
 	type clock
 	color 0 0 0
@@ -726,19 +730,23 @@ object
 end
 
 #===========Title text border======================================================================
+# ifnotset Dark title text
 object
+	ifnotset 5
 	type title
 	color 0 0 0
 	x 10+icon.width+3+1
 	y 8+5
 end
 object
+	ifnotset 5
 	type title
 	color 0 0 0
 	x 10+icon.width+3
 	y 8+5+1
 end
 object
+	ifnotset 5
 	type title
 	color 0 0 0
 	x 10+icon.width+3+1
@@ -793,6 +801,7 @@ object
 end
 
 #===========Title text=============================================================================
+# ifnotset Color text, ifnotset Dark title text
 object
 	ifnotset 4
 	ifnotset 5
@@ -800,7 +809,6 @@ object
 	color 212 212 212
 	x 10+icon.width+3
 	y 8+5
-	w window.width-(10+icon.width+3)-8-clock.width-2
 end
 # ifset Color text, ifnotset Dark title text
 object
@@ -809,7 +817,6 @@ object
 	type title
 	x 10+icon.width+3
 	y 8+5
-	w window.width-(10+icon.width+3)-8-clock.width-2
 end
 # ifset Dark title text
 object
@@ -818,38 +825,25 @@ object
 	color 0 0 0
 	x 10+icon.width+3
 	y 8+5
+end
+# ifnotset Logo
+object
+	ifnotset 10
+	type title
 	w window.width-(10+icon.width+3)-8-clock.width-2
 end
-# ifnotset Standard digital clocks, ifset Logo
+# ifset Logo
 object
-	ifnotset 6
 	ifset 10
 	type title
-	x 10+icon.width+3
-	y 8+5
 	w window.width-(10+icon.width+3)-8-clock.width-37-2
 end
-# ifnotset Color text, ifnotset Standard digital clocks, ifset Logo
+# ifset Standard digital clocks, ifset Logo
 object
-	ifnotset 4
-	ifnotset 6
+	ifset 6
 	ifset 10
 	type title
-	color 212 212 212
-	x 10+icon.width+3
-	y 8+5
-	w window.width-(10+icon.width+3)-8-clock.width-37-2
-end
-# ifset Dark title text, ifnotset Standard digital clocks, ifset Logo
-object
-	ifset 5
-	ifnotset 6
-	ifset 10
-	type title
-	color 0 0 0
-	x 10+icon.width+3
-	y 8+5
-	w window.width-(10+icon.width+3)-8-clock.width-37-2
+	w window.width-(10+icon.width+3)-8-clock.width-2
 end
 
 #===========Avatar=================================================================================

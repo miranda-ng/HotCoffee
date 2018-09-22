@@ -30,7 +30,7 @@ m.CallService('DB/Ini/ImportFile', mImportIniPath)
 
 local font = db.GetSetting(_, 'PackInfo', 'Font')
 --print('FirstRun: font is', font)
-local mImportIniPath = toansi(m.Parse('%miranda_path%\\Skins\\Fonts\\'..font..'.ini'))
+local mImportIniPath = toansi(m.Parse('%miranda_path%\\UserSet\\Fonts\\'..font..'.ini'))
 m.CallService('DB/Ini/ImportFile', mImportIniPath)
 
 db.WriteSetting(_, 'CList', 'State', 2, db.DBVT_BYTE)

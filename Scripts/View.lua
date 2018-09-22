@@ -187,7 +187,7 @@ function ApplySkin(skinName, fontName)
 	local noTipperSkin = "Default_Miranda,Default_Windows,WinStyle_Light,WinStyle_Dark";
 	
 	m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\Skins\\"..skinName..".ini"), 0)
-	m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\Skins\\Fonts\\"..fontName..".ini"), 0)
+	m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\UserSet\\Fonts\\"..fontName..".ini"), 0)
 
 	m.CallService("TabSRMsg/ReloadSkin")
 	m.CallService("IEView/ReloadOptions")
@@ -244,7 +244,7 @@ function ApplyFont(fontName)
 		db.WriteSetting(_, 'PackInfo', 'Font', fontName)
 		WriteTabSRMMSkin(db.GetSetting(_, 'PackInfo', 'Skin'), fontName)
 		m.CallService("TabSRMsg/ReloadSkin", 0, 0)
-		m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\Skins\\Fonts\\" .. fontName .. ".ini"), 0)
+		m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\UserSet\\Fonts\\" .. fontName .. ".ini"), 0)
 		m.CallService("Font/ReloadSvc", 0, 0)
 		m.CallService("Colour/ReloadSvc", 0, 0)
 	end)

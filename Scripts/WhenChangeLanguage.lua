@@ -36,7 +36,7 @@ local function IsCyrillicLangpack(langpack)
  end
 
 function OnLanguageChanged(langpack)
-    local mImportIniPath = toansi(m.Parse('%miranda_path%\\Skins\\ini\\WhenChangeLanguage.ini'))
+    local mImportIniPath = toansi(m.Parse('%miranda_path%\\UserSet\\ini\\WhenChangeLanguage.ini'))
     m.CallService('DB/Ini/ImportFile', mImportIniPath)
 
     local splashScreenPathTo = m.Parse('%miranda_path%\\Skins\\SplashScreen')
