@@ -11,7 +11,7 @@
 	}
 	else
 	{
-		link = base.replace(/\/?(Skins\/)Skins\/IEView\/?(HotCoffee\/)?/i, "").replace("file://", "") + config.files.inbox + self.attr("uin") + " (" + self.attr("nick") + ")/" + self.text().replace(/^\s+|\s+$/, "");
+		link = base.replace(/\/?(UserSet\/)Skins\/IEView\/?(HotCoffee\/)?/i, "").replace("file://", "") + config.files.inbox + self.attr("uin") + " (" + self.attr("nick") + ")/" + self.text().replace(/^\s+|\s+$/, "");
 	}
 	
 	link = link.replace(/\//g, "\\");
@@ -50,7 +50,7 @@
 					$.translate("File ") + "[", a, "]" + $.translate(" by "), 
 					$("<a>").attr( 
 								{"href": config.files.inbox + self.attr("uin") + "/", 
-								 "title": (base.replace(/\/?(Skins\/)Skins\/IEView\/?(HotCoffee\/)?/i, "") + config.files.inbox + self.attr("uin") + " (" + self.attr("nick") + ")" + "\\").replace(/\//g, "\\") } )
+								 "title": (base.replace(/\/?(UserSet\/)Skins\/IEView\/?(HotCoffee\/)?/i, "") + config.files.inbox + self.attr("uin") + " (" + self.attr("nick") + ")" + "\\").replace(/\//g, "\\") } )
 							.text(self.attr("nick") + " (" + self.attr("uin") + ")")
 							.click(function()
 							{ 
