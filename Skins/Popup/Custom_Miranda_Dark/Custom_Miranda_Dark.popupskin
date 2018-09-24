@@ -580,18 +580,19 @@ object
 	x window.width-1-clock.width+1
 	y 8+5+(title.height-clock.height)/2+1
 end
-=================================================
+
+# Standard digital clocks border background for dark title text
 object
 	ifset 5
 	ifset 6
 	type bitmap
-	source title_cc_dtt_1.png
+	source tt_dtt.png
 	x window.width-1-clock.width
 	y 8+5+(title.height-clock.height)/2
 	w clock.width-7
 	h clock.height
 end
-=================================================
+
 # ifnotset Color text, ifset Dark title text
 object
 	ifnotset 4
@@ -645,19 +646,20 @@ object
 	x window.width-1-clock.width+1
 	y 8+5+(title.height-clock.height)/2+1
 end
-=================================================
+
+# Standard digital clocks border foreground for dark title text
 object
 	ifset 5
 	ifset 6
 	type bitmap
-	source title_cc_dtt_1.png
+	source tt_dtt.png
 	layer
 	x window.width-1-clock.width
 	y 8+5+(title.height-clock.height)/2
 	w clock.width-7
 	h clock.height
 end
-=================================================
+
 #===========Standard digital clocks================================================================
 # ifnotset Color text, ifnotset Dark title text
 object
@@ -686,6 +688,229 @@ object
 	color 0 0 0
 	x window.width-1-clock.width
 	y 8+5+(title.height-clock.height)/2
+end
+
+#===========Title text border======================================================================
+# ifnotset Dark title text
+object
+	ifnotset 5
+	type title
+	color 0 0 0
+	x 10+icon.width+3+1
+	y 8+5
+end
+object
+	ifnotset 5
+	type title
+	color 0 0 0
+	x 10+icon.width+3
+	y 8+5+1
+end
+object
+	ifnotset 5
+	type title
+	color 0 0 0
+	x 10+icon.width+3+1
+	y 8+5+1
+end
+
+# Title text border background for dark title text
+object
+	ifset 5
+	ifnotset 6
+	ifnotset 10
+	type bitmap
+	source tt_dtt.png
+	x 10+icon.width+3
+	y 8+5
+	w window.width-(10+icon.width+3)-8-clock.width-2
+	h title.height+2
+end
+object
+	ifset 5
+	ifset 6
+	ifnotset 10
+	type bitmap
+	source tt_dtt.png
+	x 10+icon.width+3
+	y 8+5
+	w window.width-(10+icon.width+3)-1-clock.width-1
+	h title.height+2
+end
+object
+	ifset 5
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source tt_dtt.png
+	x 10+icon.width+3
+	y 8+5
+	w window.width-(10+icon.width+3)-8-clock.width-37-2
+	h title.height+2
+end
+object
+	ifset 5
+	ifset 6
+	ifset 10
+	type bitmap
+	source tt_dtt.png
+	x 10+icon.width+3
+	y 8+5
+	w window.width-(10+icon.width+3)-1-clock.width-1
+	h title.height+2
+end
+
+# ifnotset Color text, ifset Dark title text
+object
+	ifnotset 4
+	ifset 5
+	type title
+	color 212 212 212
+	x 10+icon.width+3+1
+	y 8+5
+end
+object
+	ifnotset 4
+	ifset 5
+	type title
+	color 212 212 212
+	x 10+icon.width+3
+	y 8+5+1
+end
+object
+	ifnotset 4
+	ifset 5
+	type title
+	color 212 212 212
+	x 10+icon.width+3+1
+	y 8+5+1
+end
+# ifset Color text, ifset Dark title text
+object
+	ifset 4
+	ifset 5
+	type title
+	x 10+icon.width+3+1
+	y 8+5
+end
+object
+	ifset 4
+	ifset 5
+	type title
+	x 10+icon.width+3
+	y 8+5+1
+end
+object
+	ifset 4
+	ifset 5
+	type title
+	x 10+icon.width+3+1
+	y 8+5+1
+end
+
+# Title text border foreground for dark title text
+object
+	ifset 5
+	ifnotset 6
+	ifnotset 10
+	type bitmap
+	source tt_dtt.png
+	layer
+	x 10+icon.width+3
+	y 8+5
+	w window.width-(10+icon.width+3)-8-clock.width-2
+	h title.height+2
+end
+object
+	ifset 5
+	ifset 6
+	ifnotset 10
+	type bitmap
+	source tt_dtt.png
+	layer
+	x 10+icon.width+3
+	y 8+5
+	w window.width-(10+icon.width+3)-1-clock.width-1
+	h title.height+2
+end
+object
+	ifset 5
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source tt_dtt.png
+	layer
+	x 10+icon.width+3
+	y 8+5
+	w window.width-(10+icon.width+3)-8-clock.width-37-2
+	h title.height+2
+end
+object
+	ifset 5
+	ifset 6
+	ifset 10
+	type bitmap
+	source tt_dtt.png
+	layer
+	x 10+icon.width+3
+	y 8+5
+	w window.width-(10+icon.width+3)-1-clock.width-1
+	h title.height+2
+end
+
+#===========Title text=============================================================================
+# ifnotset Color text, ifnotset Dark title text
+object
+	ifnotset 4
+	ifnotset 5
+	type title
+	color 212 212 212
+	x 10+icon.width+3
+	y 8+5
+end
+# ifset Color text, ifnotset Dark title text
+object
+	ifset 4
+	ifnotset 5
+	type title
+	x 10+icon.width+3
+	y 8+5
+end
+# ifset Dark title text
+object
+	ifset 5
+	type title
+	color 0 0 0
+	x 10+icon.width+3
+	y 8+5
+end
+# ifnotset Standard digital clocks, ifnotset Logo
+object
+	ifnotset 6
+	ifnotset 10
+	type title
+	w window.width-(10+icon.width+3)-8-clock.width-2
+end
+# ifset Standard digital clocks, ifnotset Logo
+object
+	ifset 6
+	ifnotset 10
+	type title
+	w window.width-(10+icon.width+3)-1-clock.width-1
+end
+# ifnotset Standard digital clocks, ifset Logo
+object
+	ifnotset 6
+	ifset 10
+	type title
+	w window.width-(10+icon.width+3)-8-clock.width-37-2
+end
+# ifset Standard digital clocks, ifset Logo
+object
+	ifset 6
+	ifset 10
+	type title
+	w window.width-(10+icon.width+3)-1-clock.width-1
 end
 
 #===========Logo & Standard digital clocks=========================================================
@@ -751,227 +976,6 @@ object
 	layer
 	x window.width-1-(clock.width+37)/2<window.width-45
 	y 0
-end
-
-#===========Title text border======================================================================
-# ifnotset Dark title text
-object
-	ifnotset 5
-	type title
-	color 0 0 0
-	x 10+icon.width+3+1
-	y 8+5
-end
-object
-	ifnotset 5
-	type title
-	color 0 0 0
-	x 10+icon.width+3
-	y 8+5+1
-end
-object
-	ifnotset 5
-	type title
-	color 0 0 0
-	x 10+icon.width+3+1
-	y 8+5+1
-end
-=================================================
-object
-	ifset 5
-	ifnotset 6
-	ifnotset 10
-	type bitmap
-	source title_cc_dtt_1.png
-	x 10+icon.width+3
-	y 8+5
-	w window.width-(10+icon.width+3)-8-clock.width-2
-	h title.height+2
-end
-object
-	ifset 5
-	ifset 6
-	ifnotset 10
-	type bitmap
-	source title_cc_dtt_1.png
-	x 10+icon.width+3
-	y 8+5
-	w window.width-(10+icon.width+3)-1-clock.width-1
-	h title.height+2
-end
-object
-	ifset 5
-	ifnotset 6
-	ifset 10
-	type bitmap
-	source title_cc_dtt_1.png
-	x 10+icon.width+3
-	y 8+5
-	w window.width-(10+icon.width+3)-8-clock.width-37-2
-	h title.height+2
-end
-object
-	ifset 5
-	ifset 6
-	ifset 10
-	type bitmap
-	source title_cc_dtt_1.png
-	x 10+icon.width+3
-	y 8+5
-	w window.width-(10+icon.width+3)-1-clock.width-1
-	h title.height+2
-end
-=================================================
-# ifnotset Color text, ifset Dark title text
-object
-	ifnotset 4
-	ifset 5
-	type title
-	color 212 212 212
-	x 10+icon.width+3+1
-	y 8+5
-end
-object
-	ifnotset 4
-	ifset 5
-	type title
-	color 212 212 212
-	x 10+icon.width+3
-	y 8+5+1
-end
-object
-	ifnotset 4
-	ifset 5
-	type title
-	color 212 212 212
-	x 10+icon.width+3+1
-	y 8+5+1
-end
-# ifset Color text, ifset Dark title text
-object
-	ifset 4
-	ifset 5
-	type title
-	x 10+icon.width+3+1
-	y 8+5
-end
-object
-	ifset 4
-	ifset 5
-	type title
-	x 10+icon.width+3
-	y 8+5+1
-end
-object
-	ifset 4
-	ifset 5
-	type title
-	x 10+icon.width+3+1
-	y 8+5+1
-end
-=================================================
-object
-	ifset 5
-	ifnotset 6
-	ifnotset 10
-	type bitmap
-	source title_cc_dtt_1.png
-	layer
-	x 10+icon.width+3
-	y 8+5
-	w window.width-(10+icon.width+3)-8-clock.width-2
-	h title.height+2
-end
-object
-	ifset 5
-	ifset 6
-	ifnotset 10
-	type bitmap
-	source title_cc_dtt_1.png
-	layer
-	x 10+icon.width+3
-	y 8+5
-	w window.width-(10+icon.width+3)-1-clock.width-1
-	h title.height+2
-end
-object
-	ifset 5
-	ifnotset 6
-	ifset 10
-	type bitmap
-	source title_cc_dtt_1.png
-	layer
-	x 10+icon.width+3
-	y 8+5
-	w window.width-(10+icon.width+3)-8-clock.width-37-2
-	h title.height+2
-end
-object
-	ifset 5
-	ifset 6
-	ifset 10
-	type bitmap
-	source title_cc_dtt_1.png
-	layer
-	x 10+icon.width+3
-	y 8+5
-	w window.width-(10+icon.width+3)-1-clock.width-1
-	h title.height+2
-end
-=================================================
-#===========Title text=============================================================================
-# ifnotset Color text, ifnotset Dark title text
-object
-	ifnotset 4
-	ifnotset 5
-	type title
-	color 212 212 212
-	x 10+icon.width+3
-	y 8+5
-end
-# ifset Color text, ifnotset Dark title text
-object
-	ifset 4
-	ifnotset 5
-	type title
-	x 10+icon.width+3
-	y 8+5
-end
-# ifset Dark title text
-object
-	ifset 5
-	type title
-	color 0 0 0
-	x 10+icon.width+3
-	y 8+5
-end
-# ifnotset Standard digital clocks, ifnotset Logo
-object
-	ifnotset 6
-	ifnotset 10
-	type title
-	w window.width-(10+icon.width+3)-8-clock.width-2
-end
-# ifset Standard digital clocks, ifnotset Logo
-object
-	ifset 6
-	ifnotset 10
-	type title
-	w window.width-(10+icon.width+3)-1-clock.width-1
-end
-# ifnotset Standard digital clocks, ifset Logo
-object
-	ifnotset 6
-	ifset 10
-	type title
-	w window.width-(10+icon.width+3)-8-clock.width-37-2
-end
-# ifset Standard digital clocks, ifset Logo
-object
-	ifset 6
-	ifset 10
-	type title
-	w window.width-(10+icon.width+3)-1-clock.width-1
 end
 
 #===========Avatar=================================================================================
