@@ -45,7 +45,7 @@ TitleButtonTopOffset=6
 TitleBarRightOffset=-4
 TitleBarLeftOffset=-4
 CaptionPadding=7
-CaptionOffset=8
+CaptionOffset=7
 
 [ClientArea]
 Top=0
@@ -282,12 +282,12 @@ RadiusTL=40
 ;--------Image---------
 
 [$glyphs]
-Image=back.png
+Image=BG.png
 Alpha=100
 Perpixel=1
 
 [$Container]
-Glyph=3,3,124,296
+Glyph=8,8,12,12
 PERPIXEL=1
 fillColor=323232
 ColorKey=222222
@@ -303,7 +303,7 @@ PERPIXEL=1
 ALPHA=100
 PERPIXEL=1
 fillColor=A8A9B1
-Glyph=3,3,124,296
+Glyph=3,3,124,124
 Right=35
 Top=54
 Bottom=40
