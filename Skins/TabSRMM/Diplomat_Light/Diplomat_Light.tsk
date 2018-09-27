@@ -9,7 +9,7 @@ File=Diplomat_Light.tabsrmm
 
 [Avatars]
 BorderType=0
-BorderColor=A8A9B1
+BorderColor=C8C9CE
 
 [Global]
 ALPHA=100
@@ -26,7 +26,7 @@ CompositedWindow=0
 TabSkinning=1
 LightShadow=6E6B6C
 DarkShadow=3A3839
-MenuBarBG=A8A9B1
+MenuBarBG=C8C9CE
 TabTextNormal=323232
 TabTextActive=FFFFFF
 TabTextUnread=FFFFBF
@@ -73,12 +73,12 @@ BRDERSTYLE=0
 [%Frame]
 ALPHA=100
 PERPIXEL=1
-Left=12
+Left=15
 Top=54
-Right=12
-Bottom=12
-COLOR1=A8A9B1
-COLOR2=A8A9B1
+Right=15
+Bottom=15
+COLOR1=C8C9CE
+COLOR2=C8C9CE
 Color2_Transparent=0
 TEXTCOLOR=323232
 
@@ -89,16 +89,16 @@ Left=0
 Top=0
 Right=0
 Bottom=0
-COLOR1=A8A9B1
-COLOR2=A8A9B1
+COLOR1=C8C9CE
+COLOR2=C8C9CE
 Color2_Transparent=0
 TEXTCOLOR=323232
 
 [%InfoPanelfield]
 ALPHA=100
 PERPIXEL=1
-COLOR1=A8A9B1
-COLOR2=A8A9B1
+COLOR1=C8C9CE
+COLOR2=C8C9CE
 Color2_Transparent=0
 TEXTCOLOR=323232
 top=0
@@ -108,8 +108,8 @@ right=0
 
 [%Toolbar]
 ALPHA=100
-COLOR1=A8A9B1
-COLOR2=A8A9B1
+COLOR1=C8C9CE
+COLOR2=C8C9CE
 Color2_Transparent=0
 TextColor=323232
 CORNER=bl,br,tl,tr
@@ -132,8 +132,8 @@ Bottom=0
 [%Tabitem_active_bottom]
 ALPHA=100
 PERPIXEL=1
-COLOR1=A8A9B1
-COLOR2=A8A9B1
+COLOR1=C8C9CE
+COLOR2=C8C9CE
 Color2_Transparent=0
 TEXTCOLOR=323232
 Top=0
@@ -141,40 +141,40 @@ Top=0
 [%Tabitem]
 ALPHA=100
 PERPIXEL=1
-COLOR1=A8A9B1
-COLOR2=A8A9B1
+COLOR1=C8C9CE
+COLOR2=C8C9CE
 Color2_Transparent=0
 TEXTCOLOR=323232
 
 [%Tabitem_bottom]
 ALPHA=100
 PERPIXEL=1
-COLOR1=A8A9B1
-COLOR2=A8A9B1
+COLOR1=C8C9CE
+COLOR2=C8C9CE
 Color2_Transparent=0
 TEXTCOLOR=323232
 
 [%Tabitem_hottrack]
 ALPHA=100
 PERPIXEL=1
-COLOR1=A8A9B1
-COLOR2=A8A9B1
+COLOR1=C8C9CE
+COLOR2=C8C9CE
 Color2_Transparent=0
 TEXTCOLOR=323232
 
 [%Tabitem_hottrack_bottom]
 ALPHA=100
 PERPIXEL=1
-COLOR1=A8A9B1
-COLOR2=A8A9B1
+COLOR1=C8C9CE
+COLOR2=C8C9CE
 Color2_Transparent=0
 TEXTCOLOR=323232
 
 [%Tabpage]
 ALPHA=100
 PERPIXEL=1
-COLOR1=A8A9B1
-COLOR2=A8A9B1
+COLOR1=C8C9CE
+COLOR2=C8C9CE
 Color2_Transparent=0
 TEXTCOLOR=323232
 
@@ -199,8 +199,8 @@ bottom=0
 [%Container]
 ALPHA=100
 PERPIXEL=1
-COLOR1=A8A9B1
-COLOR2=A8A9B1
+COLOR1=C8C9CE
+COLOR2=C8C9CE
 Color2_Transparent=0
 TEXTCOLOR=323232
 Corner=None
@@ -210,38 +210,38 @@ RadiusTL=40
 [%Buttonnotpressed]
 ALPHA=100
 PERPIXEL=1
-COLOR1=A8A9B1
-COLOR2=A8A9B1
+COLOR1=C8C9CE
+COLOR2=C8C9CE
 Color2_Transparent=0
 TEXTCOLOR=fefefe
 
 [%Buttonpressed]
 ALPHA=100
 PERPIXEL=1
-COLOR1=A8A9B1
-COLOR2=A8A9B1
+COLOR1=C8C9CE
+COLOR2=C8C9CE
 Color2_Transparent=0
 TEXTCOLOR=fefefe
 
 [%Buttonmouseover]
 ALPHA=100
 PERPIXEL=1
-COLOR1=A8A9B1
-COLOR2=A8A9B1
+COLOR1=C8C9CE
+COLOR2=C8C9CE
 Color2_Transparent=0
 TEXTCOLOR=fefefe
 
 [%Statusbarpanel]
-COLOR1=A8A9B1
-COLOR2=A8A9B1
+COLOR1=C8C9CE
+COLOR2=C8C9CE
 Color2_Transparent=0
 TEXTCOLOR=323232
 
 [%InputArea]
 ALPHA=100
 PERPIXEL=1
-COLOR1=A8A9B1
-COLOR2=A8A9B1
+COLOR1=C8C9CE
+COLOR2=C8C9CE
 Color2_Transparent=0
 TEXTCOLOR=323232
 CORNER=bl,br,tl,tr
@@ -254,8 +254,8 @@ RadiusTL=40
 [%MessageLog]
 ALPHA=100
 PERPIXEL=1
-COLOR1=A8A9B1
-COLOR2=A8A9B1
+COLOR1=C8C9CE
+COLOR2=C8C9CE
 Color2_Transparent=0
 TEXTCOLOR=323232
 CORNER=bl,br,tl,tr
@@ -268,8 +268,8 @@ RadiusTL=40
 [%Userlist]
 ALPHA=100
 PERPIXEL=1
-COLOR1=A8A9B1
-COLOR2=A8A9B1
+COLOR1=C8C9CE
+COLOR2=C8C9CE
 Color2_Transparent=0
 TEXTCOLOR=323232
 CORNER=bl,br,tl,tr
@@ -286,23 +286,22 @@ Image=BG.png
 Alpha=100
 Perpixel=1
 
-[$Container]
-Glyph=8,8,12,12
-PERPIXEL=1
-fillColor=323232
-ColorKey=222222
-Left=7
-Top=60
-Right=7
-Bottom=40
-Item0=Frame
-Item1=FrameInactive
-PERPIXEL=1
+;[$Container]
+;Glyph=117,289,126,298
+;PERPIXEL=1
+;fillColor=323232
+;ColorKey=222222
+;Left=3
+;Top=3
+;Right=3
+;Bottom=3
+;Item0=Container
+;PERPIXEL=1
 
 [$Frame]
 ALPHA=100
 PERPIXEL=1
-fillColor=A8A9B1
+fillColor=C8C9CE
 Glyph=3,3,124,124
 Right=35
 Top=54
@@ -415,12 +414,12 @@ Bottom=2
 Item0=Buttonmouseover
 PERPIXEL=1
 
-[$Tabpage]
-Glyph=116,301,127,312
-Left=1
-Top=1
-Right=1
-Bottom=1
+[$InputArea]
+Glyph=117,289,126,298
+Left=3
+Top=3
+Right=3
+Bottom=3
 ;Item0=Tabpage
 Item0=InputArea
 Item1=MessageLog
