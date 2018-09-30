@@ -40,15 +40,15 @@ Bottom=0
 Inner=4
 
 [WindowFrame]
-Caption=26
-Left=7
-Right=7
+Caption=23
+Left=6
+Right=6
 Bottom=5
 ClipFrame=0
-RadiusTL=4
-RadiusTR=11
-RadiusBL=11
-RadiusBR=11
+RadiusTL=2
+RadiusTR=2
+RadiusBL=2
+RadiusBR=2
 CaptionOffset=7
 CaptionPadding=7
 TitleButtonWidth=15
@@ -90,20 +90,20 @@ Bottom=-2
 Top=-2
 
 [%InputArea]
-Left=3
-Top=5
+Left=4
+Top=7
 Right=3
 Bottom=3
 
 [%MessageLog]
-Left=3
-Top=3
+Left=4
+Top=4
 Right=3
 Bottom=3
 
 [%Userlist]
-Left=3
-Top=3
+Left=4
+Top=4
 Right=3
 Bottom=3
 
@@ -124,7 +124,7 @@ Item0=Frame
 Item1=FrameInactive
 
 [$Titlebuttonpressed]
-Glyph=41,0,48,7
+Glyph=27,0,34,7
 Left=4
 Top=4
 Right=3
@@ -132,7 +132,7 @@ Bottom=3
 Item0=Titlebuttonpressed
 
 [$Titlebuttonmouseover]
-Glyph=32,0,39,7
+Glyph=18,0,25,7
 Left=3
 Top=3
 Right=4
@@ -140,7 +140,7 @@ Bottom=4
 Item0=Titlebuttonmouseover
 
 [$Container]
-Glyph=23,4,25,6
+Glyph=18,15,20,17
 Left=1
 Top=1
 Right=1
@@ -148,7 +148,7 @@ Bottom=1
 Item0=Container
 
 [$Buttonpressed]
-Glyph=41,0,48,7
+Glyph=27,0,34,7
 Left=4
 Top=4
 Right=3
@@ -156,7 +156,7 @@ Bottom=3
 Item0=Buttonpressed
 
 [$Buttonmouseover]
-Glyph=32,0,39,7
+Glyph=18,0,25,7
 Left=3
 Top=3
 Right=4
@@ -164,7 +164,7 @@ Bottom=4
 Item0=Buttonmouseover
 
 [$Tabpage]
-Glyph=32,9,36,13
+Glyph=18,9,22,13
 Left=2
 Top=2
 Right=2
@@ -172,7 +172,7 @@ Bottom=2
 Item0=Tabpage
 
 [$Tabitem]
-Glyph=50,0,57,4
+Glyph=36,0,43,4
 Alpha=70
 Left=3
 Top=3
@@ -181,7 +181,7 @@ Bottom=1
 Item0=Tabitem
 
 [$Tabitem_hottrack]
-Glyph=50,0,57,4
+Glyph=36,0,43,4
 Left=3
 Top=3
 Right=2
@@ -189,7 +189,7 @@ Bottom=1
 Item0=Tabitem_hottrack
 
 [$Tabitem_active]
-Glyph=59,0,66,6
+Glyph=45,0,52,6
 Left=3
 Top=3
 Right=2
@@ -197,7 +197,7 @@ Bottom=3
 Item0=Tabitem_active
 
 [$Tabitem_bottom]
-Glyph=68,0,75,6
+Glyph=36,8,43,14
 Alpha=70
 Left=2
 Top=2
@@ -206,7 +206,7 @@ Bottom=4
 Item0=Tabitem_bottom
 
 [$Tabitem_hottrack_bottom]
-Glyph=68,0,75,6
+Glyph=36,8,43,14
 Left=2
 Top=2
 Right=4
@@ -214,7 +214,7 @@ Bottom=4
 Item0=Tabitem_hottrack_bottom
 
 [$Tabitem_active_bottom]
-Glyph=77,0,84,6
+Glyph=45,8,52,14
 Left=2
 Top=2
 Right=4
@@ -222,11 +222,11 @@ Bottom=4
 Item0=Tabitem_active_bottom
 
 [$InputArea]
-Glyph=41,0,48,7
-Left=4
-Top=4
-Right=3
-Bottom=3
+Glyph=24,9,33,18
+Left=5
+Top=5
+Right=4
+Bottom=4
 Item0=InputArea
 Item1=MessageLog
 Item2=Userlist
