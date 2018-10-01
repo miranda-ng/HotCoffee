@@ -7,7 +7,7 @@
 options
 	#option	id	val	title
 	option	1	0	Color frame
-	option	2	0	Color text background
+#	option	2	0	Color text background
 	option	3	0	Color logo & clocks
 	option	4	1	Color text
 	option	5	0	Light title text
@@ -205,7 +205,7 @@ object
 	source logo_layer_0.png
 	layer
 	x window.width-8-clock.width-37
-	y 2
+	y 8
 end
 object
 	ifset 1
@@ -216,7 +216,7 @@ object
 	mono
 	layer
 	x window.width-8-clock.width-37
-	y 2
+	y 8
 end
 object
 	ifnotset 3
@@ -226,7 +226,7 @@ object
 	source logo_layer_1.png
 	layer
 	x window.width-8-clock.width-37
-	y 2
+	y 8
 end
 object
 	ifset 3
@@ -237,7 +237,7 @@ object
 	mono
 	layer
 	x window.width-8-clock.width-37
-	y 2
+	y 8
 end
 object
 	ifnotset 3
@@ -247,7 +247,7 @@ object
 	source logo_layer_2.png
 	layer
 	x window.width-8-clock.width-37
-	y 2
+	y 8
 end
 object
 	ifset 3
@@ -258,7 +258,7 @@ object
 	mono
 	layer
 	x window.width-8-clock.width-37
-	y 2
+	y 8
 end
 object
 	ifnotset 3
@@ -268,7 +268,7 @@ object
 	source logo_layer_3.png
 	layer
 	x window.width-8-clock.width-37
-	y 2
+	y 8
 end
 object
 	ifset 3
@@ -279,7 +279,7 @@ object
 	mono
 	layer
 	x window.width-8-clock.width-37
-	y 2
+	y 8
 end
 object
 	ifnotset 3
@@ -289,7 +289,7 @@ object
 	source logo_layer_4.png
 	layer
 	x window.width-8-clock.width-37
-	y 2
+	y 8
 end
 object
 	ifset 3
@@ -300,7 +300,7 @@ object
 #	mono
 	layer
 	x window.width-8-clock.width-37
-	y 2
+	y 8
 end
 
 #===========Clock==================================================================================
@@ -313,7 +313,7 @@ object
 	layer
 	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
 	x window.width-8-clock.width
-	y 8+1
+	y 8+7
 end
 object
 	ifset 1
@@ -325,7 +325,7 @@ object
 	layer
 	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
 	x window.width-8-clock.width
-	y 8+1
+	y 8+7
 end
 object
 	ifnotset 1
@@ -334,9 +334,9 @@ object
 	type clock
 	source clock&logo_edges.png
 	layer
-	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
+	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
 	x window.width-8-clock.width
-	y 8+1
+	y 8+7
 end
 object
 	ifset 1
@@ -346,9 +346,9 @@ object
 	source clock&logo_edges.png
 	mono
 	layer
-	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
+	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
 	x window.width-8-clock.width
-	y 8+1
+	y 8+7
 end
 object
 	ifnotset 3
@@ -357,9 +357,9 @@ object
 	ifnotset 10
 	type clock
 	source clock.png
-	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
 	x window.width-8-clock.width
-	y 8+1
+	y 8+7
 end
 object
 	ifset 3
@@ -369,9 +369,9 @@ object
 	type clock
 	source Color\clock.png
 	mono
-	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
 	x window.width-8-clock.width
-	y 8+1
+	y 8+7
 end
 object
 	ifnotset 3
@@ -380,9 +380,9 @@ object
 	ifnotset 10
 	type clock
 	source clock_ltt.png
-	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
 	x window.width-8-clock.width
-	y 8+1
+	y 8+7
 end
 object
 	ifset 3
@@ -392,9 +392,9 @@ object
 	type clock
 	source Color\clock_ltt.png
 	mono
-	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
 	x window.width-8-clock.width
-	y 8+1
+	y 8+7
 end
 object
 	ifnotset 3
@@ -403,9 +403,9 @@ object
 	ifset 10
 	type clock
 	source clock&logo.png
-	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
+	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
 	x window.width-8-clock.width
-	y 8+1
+	y 8+7
 end
 object
 	ifset 3
@@ -415,9 +415,9 @@ object
 	type clock
 	source Color\clock&logo.png
 	mono
-	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
+	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
 	x window.width-8-clock.width
-	y 8+1
+	y 8+7
 end
 object
 	ifnotset 3
@@ -426,9 +426,9 @@ object
 	ifset 10
 	type clock
 	source clock&logo_ltt.png
-	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
+	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
 	x window.width-8-clock.width
-	y 8+1
+	y 8+7
 end
 object
 	ifset 3
@@ -438,9 +438,9 @@ object
 	type clock
 	source Color\clock&logo_ltt.png
 	mono
-	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
+	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
 	x window.width-8-clock.width
-	y 8+1
+	y 8+7
 end
 
 #===========Standard digital clocks border=========================================================
