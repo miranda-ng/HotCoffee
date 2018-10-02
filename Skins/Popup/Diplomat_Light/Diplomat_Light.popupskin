@@ -268,14 +268,14 @@ object
 	source hotcoffee_cup_a.png
 	layer
 	x window.width-8-clock.width-37
-	y 3
+	y 8
 end
 object
 	ifset 3
 	ifnotset 6
 	ifset 10
 	type bitmap
-	source Color\logo_layer_3.png
+	source Color\hotcoffee_cup_a.png
 	mono
 	layer
 	x window.width-8-clock.width-37
