@@ -35,7 +35,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source title_tl.png
+	source Color\title_tl.png
 	mono
 	x 0
 	y 6
@@ -54,7 +54,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source title_tc.png
+	source Color\title_tc.png
 	mono
 	x 6
 	y 6
@@ -73,7 +73,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source title_tr.png
+	source Color\title_tr.png
 	mono
 	x window.width-6
 	y 6
@@ -93,7 +93,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source text_l.png
+	source Color\text_l.png
 	mono
 	x 0
 	y 12
@@ -110,7 +110,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source text_r.png
+	source Color\text_r.png
 	mono
 	x window.width-5
 	y 12
@@ -129,7 +129,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source text_bl.png
+	source Color\text_bl.png
 	mono
 	x 0
 	y window.height-7
@@ -146,7 +146,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source text_bc.png
+	source Color\text_bc.png
 	mono
 	x 7
 	y window.height-7
@@ -162,7 +162,7 @@ end
 object
 	ifset 1
 	type bitmap
-	source text_br.png
+	source Color\text_br.png
 	mono
 	x window.width-7
 	y window.height-7
