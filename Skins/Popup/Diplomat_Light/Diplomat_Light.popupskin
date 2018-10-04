@@ -199,15 +199,6 @@ end
 
 #===========Logo===================================================================================
 object
-	ifnotset 6
-	ifset 10
-	type bitmap
-	source logo_layer_.png
-	layer
-	x window.width-8-clock.width-24
-	y 0
-end
-object
 	ifnotset 1
 	ifnotset 6
 	ifset 10
@@ -248,6 +239,15 @@ object
 	layer
 	x window.width-8-clock.width-24
 	y 8
+end
+object
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_2.png
+	layer
+	x window.width-8-clock.width-24
+	y 0
 end
 
 #===========Clock==================================================================================
@@ -419,7 +419,7 @@ object
 	ifnotset 6
 	ifset 10
 	type bitmap
-	source logo_layer_2.png
+	source logo_layer_3.png
 	layer
 	x window.width-8-3
 	y 25
@@ -429,7 +429,7 @@ object
 	ifnotset 6
 	ifset 10
 	type bitmap
-	source logo_layer_2.png
+	source logo_layer_3.png
 	mono
 	layer
 	x window.width-8-3
@@ -678,9 +678,9 @@ object
 	ifset 6
 	ifset 10
 	type bitmap
-	source logo&std_clk_layer_0.png
+	source logo&std_clk.png
 	layer
-	x window.width-1-(clock.width+24)/2<window.width-45
+	x window.width-1-(clock.width+24)/2<window.width-38
 	y 0
 end
 object
@@ -688,52 +688,10 @@ object
 	ifset 6
 	ifset 10
 	type bitmap
-	source Color\logo&std_clk_layer_0.png
+	source logo&std_clk.png
 	mono
 	layer
-	x window.width-1-(clock.width+24)/2<window.width-45
-	y 0
-end
-object
-	ifnotset 3
-	ifset 6
-	ifset 10
-	type bitmap
-	source logo&std_clk_layer_1.png
-	layer
-	x window.width-1-(clock.width+24)/2<window.width-45
-	y 0
-end
-object
-	ifset 3
-	ifset 6
-	ifset 10
-	type bitmap
-	source Color\logo&std_clk_layer_1.png
-	mono
-	layer
-	x window.width-1-(clock.width+24)/2<window.width-45
-	y 0
-end
-object
-	ifnotset 3
-	ifset 6
-	ifset 10
-	type bitmap
-	source logo&std_clk_layer_2.png
-	layer
-	x window.width-1-(clock.width+24)/2<window.width-45
-	y 0
-end
-object
-	ifset 3
-	ifset 6
-	ifset 10
-	type bitmap
-	source logo&std_clk_layer_2.png
-#	mono
-	layer
-	x window.width-1-(clock.width+24)/2<window.width-45
+	x window.width-1-(clock.width+24)/2<window.width-38
 	y 0
 end
 
