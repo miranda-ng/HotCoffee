@@ -1,7 +1,7 @@
 #Author:	Favor, Pacificator
+#Description:	Skin for Popup+ 2.1.0.7 or later
 #Name:		Diplomat_Light
 #Version:	1.0
-#Description:	Skin made to match the Diplomat_Light for Clist Modern Layered (for Popup+ 2.1.0.7 or later)
 
 #===========Options================================================================================
 options
@@ -301,7 +301,6 @@ object
 	ifnotset 3
 	ifnotset 5
 	ifnotset 6
-	ifnotset 10
 	type clock
 	source clock.png
 	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
@@ -312,7 +311,6 @@ object
 	ifset 3
 	ifnotset 5
 	ifnotset 6
-	ifnotset 10
 	type clock
 	source Color\clock.png
 	mono
@@ -324,7 +322,6 @@ object
 	ifnotset 3
 	ifset 5
 	ifnotset 6
-	ifnotset 10
 	type clock
 	source clock_ltt.png
 	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
@@ -335,55 +332,8 @@ object
 	ifset 3
 	ifset 5
 	ifnotset 6
-	ifnotset 10
 	type clock
 	source Color\clock_ltt.png
-	mono
-	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
-	x window.width-8-clock.width
-	y 8+7
-end
-object
-	ifnotset 3
-	ifnotset 5
-	ifnotset 6
-	ifset 10
-	type clock
-	source clock&logo.png
-	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
-	x window.width-8-clock.width
-	y 8+7
-end
-object
-	ifset 3
-	ifnotset 5
-	ifnotset 6
-	ifset 10
-	type clock
-	source Color\clock&logo.png
-	mono
-	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
-	x window.width-8-clock.width
-	y 8+7
-end
-object
-	ifnotset 3
-	ifset 5
-	ifnotset 6
-	ifset 10
-	type clock
-	source clock&logo_ltt.png
-	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
-	x window.width-8-clock.width
-	y 8+7
-end
-object
-	ifset 3
-	ifset 5
-	ifnotset 6
-	ifset 10
-	type clock
-	source Color\clock&logo_ltt.png
 	mono
 	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
 	x window.width-8-clock.width

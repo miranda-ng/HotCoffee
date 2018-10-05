@@ -1,12 +1,12 @@
 [Skin_Description_Section]
-Name=Glamour_Dark
-SubStyle=Normal
-Author=Pacificator (Dark Series based on modified skin by PK and Egoist)
+Author=PK, Egoist, Favor, Pacificator
 Contact=im.hotcoffee@gmail.com
-URL=http://www.miranda-planet.com/
-Preview=preview.png
 Description=Skin for Modern contact list layered
-SkinFolder=Glamour_Dark
+Name=Glamour_Dark
+Preview=Preview.png
+SubStyle=Normal
+URL=https://miranda-ng.org/hotcoffee
+Version=1.0
 
 [ModernSkin]
 SkinFolder=uSkins\Modern contact list\Glamour_Dark

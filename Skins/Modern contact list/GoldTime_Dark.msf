@@ -1,12 +1,12 @@
 [Skin_Description_Section]
-Name=GoldTime_Dark
-SubStyle=Normal
-Author=Pacificator
+Author=Favor, Pacificator
 Contact=im.hotcoffee@gmail.com
-URL=http://www.miranda-planet.com/
-Preview=preview.png
 Description=Skin for Modern contact list layered
-SkinFolder=GoldTime_Dark
+Name=GoldTime_Dark
+Preview=Preview.png
+SubStyle=Normal
+URL=https://miranda-ng.org/hotcoffee
+Version=1.0
 
 [ModernSkin]
 SkinFolder=uSkins\Modern contact list\GoldTime_Dark

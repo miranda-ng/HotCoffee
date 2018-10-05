@@ -1,6 +1,6 @@
-;Goldtime Dark skin for TabSRMM
-;Author = Pacificator
-;Version = 1.0
+[VersionSkin]
+Author=Favor, Pacificator
+Version=1.0
 
 [Theme]
 File=GoldTime_Dark.tabsrmm

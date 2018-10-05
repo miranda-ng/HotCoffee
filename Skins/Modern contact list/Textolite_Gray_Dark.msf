@@ -1,13 +1,12 @@
 [Skin_Description_Section]
-Name=Textolite_Gray_Dark
-Version=2.0
-SubStyle=Normal
-Author=Pacificator (Dark series based on modified skin by Egoist)
+Author=Egoist, Favor, Pacificator
 Contact=im.hotcoffee@gmail.com
-URL=http://www.miranda-planet.com/
-Preview=preview.png
 Description=Skin for Modern contact list layered
-SkinFolder=Textolite_Gray_Dark
+Name=Textolite_Gray_Dark
+Preview=Preview.png
+SubStyle=Normal
+URL=https://miranda-ng.org/hotcoffee
+Version=2.0
 
 [ModernSkin]
 SkinFolder=uSkins\Modern contact list\Textolite_Gray_Dark

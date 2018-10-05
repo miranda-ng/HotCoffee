@@ -1,12 +1,12 @@
 [Skin_Description_Section]
-Name=Custom_Miranda_Light
-SubStyle=Normal
 Author=Angeli-ka, FYR, Favor, Pacificator
 Contact=im.hotcoffee@gmail.com
-URL=https://miranda-ng.org/hotcoffee
-Preview=
 Description=Skin for Modern contact list layered
-SkinFolder=Custom_Miranda_Light
+Name=Custom_Miranda_Light
+Preview=Preview.png
+SubStyle=Normal
+URL=https://miranda-ng.org/hotcoffee
+Version=1.0
 
 [?ModernSkin]
 

@@ -1,12 +1,12 @@
 [Skin_Description_Section]
-Name=Textolite_Light
-SubStyle=Normal
-Author=Pacificator (Lite series based on modified skin by Egoist)
+Author=Egoist, Favor, Pacificator
 Contact=im.hotcoffee@gmail.com
-URL=http://www.miranda-planet.com/
-Preview=preview.png
 Description=Skin for Modern contact list layered
-SkinFolder=Textolite_Light
+Name=Textolite_Light
+Preview=Preview.png
+SubStyle=Normal
+URL=https://miranda-ng.org/hotcoffee
+Version=1.0
 
 [ModernSkin]
 SkinFolder=uSkins\Modern contact list\Textolite_Light
