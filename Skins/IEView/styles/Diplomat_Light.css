@@ -39,7 +39,7 @@ a, a:active {
 }
 
 a:visited {
-	color: #C44305;
+	color: #953100;
 	text-decoration: none;
 	font-weight: normal;
 }
@@ -123,7 +123,7 @@ div.avatar {
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
-	color: #C44305;
+	color: #953100;
 	background-image: url(Diplomat_Light/in.png);
 }
 
@@ -145,12 +145,12 @@ div.avatar {
 /* -------------------- status support -------------------- */
 
 .status .head {
-	color: #C44305;
+	color: #953100;
 	background-image: url(Diplomat_Light/status.png);
 }
 
 .contentStatus, .contenthStatus {
-	color: #C44305;
+	color: #953100;
 	background-image: url(Diplomat_Light/status.png);
 }
 
