@@ -1583,7 +1583,6 @@ ValueIndent=d8
 ;Popup settings
 [Popup]
 DropShadow=b0
-skin.Diplomat_Dark=d460
 SkinPack=sDiplomat_Dark
 spacing=w0
 UseWinColors=b0

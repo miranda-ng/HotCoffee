@@ -1552,7 +1552,6 @@ ValueIndent=d8
 ;Popup settings
 [Popup]
 DropShadow=b1
-skin.Custom_Miranda_Light=d456
 SkinPack=sCustom_Miranda_Light
 spacing=w0
 UseWinColors=b0

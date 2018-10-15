@@ -8,14 +8,14 @@ options
 	#option	id	val	title
 	option	1	0	Color frame
 #	option	2	0	Color text background
-	option	3	0	Color logo & clocks
+	option	3	1	Color logo & clocks
 	option	4	1	Color text
 	option	5	0	Light title text
 	option	6	0	Standard digital clocks
 	option	7	1	Icon
 	option	8	1	Avatar
 	option	9	1	Avatar to right
-	option	10	0	Logo
+	option	10	1	Logo
 end
 
 h 8+5+title.height+5+(2+avatar.height>text.height+2)+2+7
