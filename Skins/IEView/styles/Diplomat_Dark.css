@@ -107,7 +107,9 @@ div.avatar {
 }
 
 .MessageIn, .MessageOut, .hMessageIn, .hMessageOut, .frame, .Status, .hStatus, .FileIn, .hFileIn, .FileOut, .hFileOut, .URL, .hURL {
+	border-left: 1px solid #55575F;
 	border-top: 1px solid #55575F;
+	border-right: 1px solid #1F2025;
 	border-bottom: 1px solid #1F2025;
 }
 

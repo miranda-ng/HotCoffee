@@ -587,7 +587,7 @@ object
 	ifset 5
 	ifset 6
 	type bitmap
-	source tt_dtt.png
+	source tt_dtt_0.png
 	x window.width-1-clock.width
 	y 8+5+(title.height-clock.height)/2
 	w clock.width-7
@@ -598,7 +598,7 @@ object
 	ifset 5
 	ifset 6
 	type bitmap
-	source tt_dtt.png
+	source tt_dtt_0.png
 	mono
 	x window.width-1-clock.width
 	y 8+5+(title.height-clock.height)/2
@@ -666,7 +666,7 @@ object
 	ifset 5
 	ifset 6
 	type bitmap
-	source tt_dtt.png
+	source tt_dtt_1.png
 	layer
 	x window.width-1-clock.width
 	y 8+5+(title.height-clock.height)/2
@@ -678,7 +678,7 @@ object
 	ifset 5
 	ifset 6
 	type bitmap
-	source tt_dtt.png
+	source tt_dtt_1.png
 	mono
 	layer
 	x window.width-1-clock.width
@@ -748,7 +748,7 @@ object
 	ifnotset 6
 	ifnotset 10
 	type bitmap
-	source tt_dtt.png
+	source tt_dtt_0.png
 	x 10+icon.width+3
 	y 8+5
 	w window.width-(10+icon.width+3)-8-clock.width-2
@@ -760,7 +760,7 @@ object
 	ifnotset 6
 	ifnotset 10
 	type bitmap
-	source tt_dtt.png
+	source tt_dtt_0.png
 	mono
 	x 10+icon.width+3
 	y 8+5
@@ -773,7 +773,7 @@ object
 	ifset 6
 	ifnotset 10
 	type bitmap
-	source tt_dtt.png
+	source tt_dtt_0.png
 	x 10+icon.width+3
 	y 8+5
 	w window.width-(10+icon.width+3)-1-clock.width-1
@@ -785,7 +785,7 @@ object
 	ifset 6
 	ifnotset 10
 	type bitmap
-	source tt_dtt.png
+	source tt_dtt_0.png
 	mono
 	x 10+icon.width+3
 	y 8+5
@@ -798,7 +798,7 @@ object
 	ifnotset 6
 	ifset 10
 	type bitmap
-	source tt_dtt.png
+	source tt_dtt_0.png
 	x 10+icon.width+3
 	y 8+5
 	w window.width-(10+icon.width+3)-8-clock.width-37-2
@@ -810,7 +810,7 @@ object
 	ifnotset 6
 	ifset 10
 	type bitmap
-	source tt_dtt.png
+	source tt_dtt_0.png
 	mono
 	x 10+icon.width+3
 	y 8+5
@@ -823,7 +823,7 @@ object
 	ifset 6
 	ifset 10
 	type bitmap
-	source tt_dtt.png
+	source tt_dtt_0.png
 	x 10+icon.width+3
 	y 8+5
 	w window.width-(10+icon.width+3)-1-clock.width-1
@@ -835,7 +835,7 @@ object
 	ifset 6
 	ifset 10
 	type bitmap
-	source tt_dtt.png
+	source tt_dtt_0.png
 	mono
 	x 10+icon.width+3
 	y 8+5
@@ -898,7 +898,7 @@ object
 	ifnotset 6
 	ifnotset 10
 	type bitmap
-	source tt_dtt.png
+	source tt_dtt_1.png
 	layer
 	x 10+icon.width+3
 	y 8+5
@@ -911,7 +911,7 @@ object
 	ifnotset 6
 	ifnotset 10
 	type bitmap
-	source tt_dtt.png
+	source tt_dtt_1.png
 	mono
 	layer
 	x 10+icon.width+3
@@ -925,7 +925,7 @@ object
 	ifset 6
 	ifnotset 10
 	type bitmap
-	source tt_dtt.png
+	source tt_dtt_1.png
 	layer
 	x 10+icon.width+3
 	y 8+5
@@ -938,7 +938,7 @@ object
 	ifset 6
 	ifnotset 10
 	type bitmap
-	source tt_dtt.png
+	source tt_dtt_1.png
 	mono
 	layer
 	x 10+icon.width+3
@@ -952,7 +952,7 @@ object
 	ifnotset 6
 	ifset 10
 	type bitmap
-	source tt_dtt.png
+	source tt_dtt_1.png
 	layer
 	x 10+icon.width+3
 	y 8+5
@@ -965,7 +965,7 @@ object
 	ifnotset 6
 	ifset 10
 	type bitmap
-	source tt_dtt.png
+	source tt_dtt_1.png
 	mono
 	layer
 	x 10+icon.width+3
@@ -979,7 +979,7 @@ object
 	ifset 6
 	ifset 10
 	type bitmap
-	source tt_dtt.png
+	source tt_dtt_1.png
 	layer
 	x 10+icon.width+3
 	y 8+5
@@ -992,7 +992,7 @@ object
 	ifset 6
 	ifset 10
 	type bitmap
-	source tt_dtt.png
+	source tt_dtt_1.png
 	mono
 	layer
 	x 10+icon.width+3
