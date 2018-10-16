@@ -1,0 +1,376 @@
+[Skin_Description_Section]
+;-------------------------------
+ Name=xpk Pixel Perfect Aqua Black
+ SubStyle=Normal
+ Author=pk (heavy modified skin by Error)
+ Contact=pk69com@gmail.com
+ URL=http://www.miranda-im.org/
+ Preview=preview.png
+ Description=Disable Frames Titlebars / Apply and restart / Best visual expirience with xpk icon set
+ SkinFolder=
+
+; **************************//////////\\\\\\\\\\************************************
+; You can't modify and publish any of files from this archive without my permission!
+; **************************\\\\\\\\\\//////////************************************
+
+[ModernSkin]
+
+ $window=sGlyph,Image,back.png,StretchBoth,14,60,14,14,255
+
+ $hotopengroup=sGlyph,Image,hot.png,StretchBoth,3,3,3,3,250
+ $normalopengroup=sGlyph,Image,group.png,StretchBoth,3,3,3,3,250
+
+ $hotclosedgroup=sGlyph,Image,hot.png,StretchBoth,3,3,3,3,250
+ $normalclosedgroup=sGlyph,Image,group.png,StretchBoth,3,3,3,3,250
+
+ $hotcontact=sGlyph,Image,hot.png,StretchBoth,3,3,3,3,250
+ $normalcontact=sGlyph,Image,Contact.png,StretchBoth,3,3,3,3,250
+
+ $scrollBack=sGlyph,Image,Scrollbar.png,StretchBoth,3,3,3,3,250
+ $scrollBtnUp=sGlyph,Image,Scrollbtnup.png,StretchBoth,8,13,7,3,250
+ $scrollBtnDn=sGlyph,Image,Scrollbtndn.png,StretchBoth,8,13,7,3,250
+ $scrollThumb=sGlyph,Image,Thumb.png,StretchBoth,8,10,7,3,250
+
+ $select=sGlyph,Image,Select.png,StretchBoth,6,6,6,6,255
+
+;Minimize
+;-------------------------------
+ $BTNminnorm=sGlyph,Image,minNorm.png,StretchBoth,0,0,0,0,250
+ $BTNminhov=sGlyph,Image,minHov.png,StretchBoth,0,0,0,0,255
+ $BTNminDn=sGlyph,Image,minDn.png,StretchBoth,0,0,0,0,255
+;-------------------------------
+
+;Main menu lable
+;-------------------------------
+ $BTNlbl=sGlyph,Image,mimlbl.png,StretchBoth,0,0,0,0,250
+;-------------------------------
+
+;Main menu2
+;-------------------------------
+ $BTNmenunorm=sGlyph,Image,menuNorm.png,StretchBoth,0,0,0,0,250
+ $BTNmenuhov=sGlyph,Image,menuOver.png,StretchBoth,0,0,0,0,255
+ $BTNmenuDn=sGlyph,Image,menuDown.png,StretchBoth,0,0,0,0,255
+
+;Options
+;-------------------------------
+ $BTNoptionsnorm=sGlyph,Image,setNorm.png,StretchBoth,0,0,0,0,250
+ $BTNoptionshov=sGlyph,Image,setOver.png,StretchBoth,0,0,0,0,255
+ $BTNoptionsDn=sGlyph,Image,setDown.png,StretchBoth,0,0,0,0,255
+;-------------------------------
+
+;Show Online and Offline Users
+;-------------------------------
+ $BTNonlineofflinenorm=sGlyph,Image,onlineofflineNorm.png,StretchBoth,0,0,0,0,250
+ $BTNonlineofflinehov=sGlyph,Image,onlineofflineOver.png,StretchBoth,0,0,0,0,255
+ $BTNonlineofflineDn=sGlyph,Image,onlineofflineDown.png,StretchBoth,0,0,0,0,255
+;-------------------------------
+
+;Show only Online Users
+;-------------------------------
+ $BTNonlinenorm=sGlyph,Image,onlineNorm.png,StretchBoth,0,0,0,0,250
+ $BTNonlinehov=sGlyph,Image,onlineOver.png,StretchBoth,0,0,0,0,255
+ $BTNonlineDn=sGlyph,Image,onlineDown.png,StretchBoth,0,0,0,0,255
+;-------------------------------
+
+;Hide Groups
+;-------------------------------
+ $BTNgroupsOffnorm=sGlyph,Image,groupsonNorm.png,StretchBoth,0,0,0,0,250
+ $BTNgroupsOffhov=sGlyph,Image,groupsonOver.png,StretchBoth,0,0,0,0,255
+ $BTNgroupsOffDn=sGlyph,Image,groupsonDown.png,StretchBoth,0,0,0,0,255
+;-------------------------------
+
+;Show Groups
+;-------------------------------
+ $BTNgroupsOnnorm=sGlyph,Image,groupsoffNorm.png,StretchBoth,0,0,0,0,250
+ $BTNgroupsOnhov=sGlyph,Image,groupsoffOver.png,StretchBoth,0,0,0,0,255
+ $BTNgroupsOnDn=sGlyph,Image,groupsoffDown.png,StretchBoth,0,0,0,0,255
+;-------------------------------
+
+;Turn OFF Sounds
+;-------------------------------
+ $BTNsoundOffnorm=sGlyph,Image,soundonNorm.png,StretchBoth,0,0,0,0,250
+ $BTNsoundOffhov=sGlyph,Image,soundonOver.png,StretchBoth,0,0,0,0,255
+ $BTNsoundOffDn=sGlyph,Image,soundonDown.png,StretchBoth,0,0,0,0,255
+;-------------------------------
+
+;Turn On Sounds
+;-------------------------------
+ $BTNsoundOnnorm=sGlyph,Image,soundoffNorm.png,StretchBoth,0,0,0,0,250
+ $BTNsoundOnhov=sGlyph,Image,soundoffOver.png,StretchBoth,0,0,0,0,255
+ $BTNsoundOnDn=sGlyph,Image,soundoffDown.png,StretchBoth,0,0,0,0,255
+;-------------------------------
+
+;FindAdd
+;-------------------------------
+ $BTNfindaddnorm=sGlyph,Image,findaddNorm.png,StretchBoth,0,0,0,0,250
+ $BTNfindaddhov=sGlyph,Image,findaddOver.png,StretchBoth,0,0,0,0,255
+ $BTNfindaddDn=sGlyph,Image,findaddDown.png,StretchBoth,0,0,0,0,255
+;-------------------------------
+
+;PopUps Enable
+;-------------------------------
+ $BTNpopOffnorm=sGlyph,Image,poponNorm.png,StretchBoth,0,0,0,0,250
+ $BTNpopOffhov=sGlyph,Image,poponOver.png,StretchBoth,0,0,0,0,255
+ $BTNpopOffDn=sGlyph,Image,poponDown.png,StretchBoth,0,0,0,0,255  
+;-------------------------------
+
+;PopUps Disable
+;-------------------------------
+ $BTNpopOnnorm=sGlyph,Image,popoffNorm.png,StretchBoth,0,0,0,0,250
+ $BTNpopOnhov=sGlyph,Image,popoffOver.png,StretchBoth,0,0,0,0,255
+ $BTNpopOnDn=sGlyph,Image,popoffDown.png,StretchBoth,0,0,0,0,255  
+;-------------------------------
+
+;-------------------------------
+ @0=s$window:Main,ID=Background
+ @1=s$hotclosedgroup:CL,ID=Row,Type=Group,Open=False,Hot=True
+ @2=s$normalclosedgroup:CL,ID=Row,Type=Group,Open=False
+ @3=s$hotopengroup:CL,ID=Row,Type=Group,Open=True,Hot=True
+ @4=s$normalopengroup:CL,ID=Row,Type=Group,Open=True
+ @5=s$hotcontact:CL,ID=Row,Type=*Contact,Hot=True
+ @6=s$BTNminDn:MButton,ID=minimize,Down=1
+ @7=s$BTNminhov:MButton,ID=minimize,Hovered=1
+ @8=s$BTNminnorm:MButton,ID=minimize
+ @9=s$BTNmenuDn:MButton,ID=mainmenu,Down=1
+ @10=s$BTNmenuhov:MButton,ID=mainmenu,Hovered=1
+ @11=s$BTNmenunorm:MButton,ID=mainmenu
+ @12=s$BTNstatusDn:MButton,ID=statusmenu,Down=1
+ @13=s$BTNstatushov:MButton,ID=statusmenu,Hovered=1
+ @14=s$BTNstatusnorm:MButton,ID=statusmenu
+ @15=s$scrollBack:Main,ID=ScrollBar,Part=Back
+ @16=s$scrollBtnUp:Main,ID=ScrollBar,Part=UpLineButton
+ @17=s$scrollBtnDn:Main,ID=ScrollBar,Part=DownLineButton
+ @18=s$scrollThumb:Main,ID=ScrollBar,Part=Thumb
+ @19=s$select:CL,ID=Selection
+;-------------------------------
+
+;Options
+;-------------------------------
+ @20=s$BTNoptionsDn:MButton,ID=optionsmenu,Down=1
+ @21=s$BTNoptionshov:MButton,ID=optionsmenu,Hovered=1
+ @22=s$BTNoptionsnorm:MButton,ID=optionsmenu
+;-------------------------------
+
+;Show Online and Offline Users
+;-------------------------------
+ @23=s$BTNonlineofflineDn:MButton,ID=onoffline,Down=1,Value=0
+ @24=s$BTNonlineofflinehov:MButton,ID=onoffline,Hovered=1,Value=0
+ @25=s$BTNonlineofflinenorm:MButton,ID=onoffline,Value=0
+;-------------------------------
+
+;Show only Online Users
+;-------------------------------
+ @26=s$BTNonlineDn:MButton,ID=onoffline,Down=1,Value=1
+ @27=s$BTNonlinehov:MButton,ID=onoffline,Hovered=1,Value=1
+ @28=s$BTNonlinenorm:MButton,ID=onoffline,Value=1
+;-------------------------------
+
+;Hide Groups
+;-------------------------------
+ @29=s$BTNgroupsOffDn:MButton,ID=groupsonoff,Down=1,Value=1
+ @30=s$BTNgroupsOffhov:MButton,ID=groupsonoff,Hovered=1,Value=1
+ @31=s$BTNgroupsOffnorm:MButton,ID=groupsonoff,Value=1
+;-------------------------------
+
+;Show Groups
+;-------------------------------
+ @32=s$BTNgroupsOnDn:MButton,ID=groupsonoff,Down=1,Value=0
+ @33=s$BTNgroupsOnhov:MButton,ID=groupsonoff,Hovered=1,Value=0
+ @34=s$BTNgroupsOnnorm:MButton,ID=groupsonoff,Value=0
+;-------------------------------
+
+;Sound ON
+;-------------------------------
+ @35=s$BTNsoundOnDn:MButton,ID=soundonoff,Down=1,Value=0
+ @36=s$BTNsoundOnhov:MButton,ID=soundonoff,Hovered=1,Value=0
+ @37=s$BTNsoundOnnorm:MButton,ID=soundonoff,Value=0
+;-------------------------------
+
+;Sound OFF
+;-------------------------------
+ @38=s$BTNsoundOffDn:MButton,ID=soundonoff,Down=1,Value=1
+ @39=s$BTNsoundOffhov:MButton,ID=soundonoff,Hovered=1,Value=1
+ @40=s$BTNsoundOffnorm:MButton,ID=soundonoff,Value=1
+;-------------------------------
+
+;FindAdd
+;-------------------------------
+ @41=s$BTNfindaddDn:MButton,ID=findaddmenu,Down=1
+ @42=s$BTNfindaddhov:MButton,ID=findaddmenu,Hovered=1
+ @43=s$BTNfindaddnorm:MButton,ID=findaddmenu
+;-------------------------------
+
+;PopUps Enable
+;-------------------------------
+ @44=s$BTNpopOnDn:MButton,ID=popup,Down=1,Value=0
+ @45=s$BTNpopOnhov:MButton,ID=popup,Hovered=1,Value=0
+ @46=s$BTNpopOnnorm:MButton,ID=popup,Value=0
+;-------------------------------
+
+;PopUps Disable
+;-------------------------------
+ @47=s$BTNpopOffDn:MButton,ID=popup,Down=1,Value=1
+ @48=s$BTNpopOffhov:MButton,ID=popup,Hovered=1,Value=1
+ @49=s$BTNpopOffnorm:MButton,ID=popup,Value=1
+;-------------------------------
+
+;contact
+;-------------------------------
+ @50=s$normalcontact:CL,ID=Row,Type=*Contact
+;-------------------------------
+
+;lable
+;-------------------------------
+ @51=s$BTNlbl:MButton,ID=mimmenu
+;-------------------------------
+
+;buttons functionality and position
+;-------------------------------
+ #minimize=sPush,CList/ShowHide,-23,7,-8,22,R-R--,0,0,Minimize Miranda
+ #mainmenu=sPush,CList/ShowMainMenu,14,28,30,44,-----,0,0,Show Main Menu
+ #mimmenu=sPush,CList/ShowMainMenu,14,11,59,18,-----,0,0,Show Main Menu
+ #onoffline=sSwitch,CList/ToggleHideOffline,CList/HideOffline,b1,31,28,47,44,-----,55,0,Show/Hide offline Users
+ #groupsonoff=sSwitch,CLISTMENUSGroup/UseGroupsHelper,CList/UseGroups,b1,49,28,65,44,-----,73,0,Show/Hide Groups
+ #soundonoff=sSwitch,CList/ToggleSound,Skin/UseSound,b1,66,28,82,44,-----,91,0,Enable/Disable sounds
+ #optionsmenu=sPush,Options/OptionsCommand,83,28,99,44,-----,109,0,Miranda IM Options
+ #findaddmenu=sPush,FindAdd/FindAddCommand,100,28,116,44,-----,125,0,Find/Add Contacts
+ #popup=sSwitch,PopUp/EnableDisableMenuCommand,PopUp/ModuleIsEnabled,b1,117,28,133,44,-----,143,0,Popups On/Off
+;-------------------------------
+
+[CLUI]
+;-------------------------------
+LeftClientMargin=b10
+TopClientMargin=b55
+RightClientMargin=b10
+BottomClientMargin=b10
+LeftOffset=d4
+RightOffset=d0
+SpaceBetween=d3
+;-------------------------------
+
+[CLC]
+;-------------------------------
+SubIndent=b10          
+ExStyle=d2138          
+LeftMargin=b4                
+Font0Set=b204                
+Font0Size=b7                 
+Font0Sty=b0                  
+Font0Col=d16777215           
+Font0As=w4                   
+Font1Set=b204                
+Font1Size=b7                 
+Font1Sty=b1                  
+Font1Col=d16440739          
+Font1As=w768                 
+Font2Set=b204                
+Font2Size=b7                 
+Font2Sty=b0                  
+Font2Col=d13948116            
+Font2As=w1792                
+Font3Set=b204                
+Font3Size=b7                 
+Font3Sty=b0                  
+Font3Col=d13948116           
+Font3As=w1792                
+Font4Set=b204                
+Font4Size=b7                 
+Font4Sty=b1                  
+Font4Col=d16777215            
+Font4As=w256                 
+Font5Set=b204                
+Font5Size=b7                 
+Font5Sty=b0                  
+Font5Col=d13618638            
+Font5As=w2308                
+Font6Name=sTahoma            
+Font6Set=b0                  
+Font6Size=b8                 
+Font6Sty=b1                  
+Font6Col=d255                
+Font6As=w0                   
+Font7Set=b204                
+Font7Size=b7                 
+Font7Sty=b2                  
+Font7Col=d13948116            
+Font7As=w2818                
+GammaCorrect=b0              
+DoNotCheckFontSize=b0        
+HiLightMode=b1               
+HotTextColour=d16777215      
+Font8Name=sTahoma            
+Font8Set=b0                  
+Font8Size=b6                 
+Font8Sty=b0                  
+Font8Col=d14342874            
+Font8As=w0                   
+Font9Set=b204                
+Font9Size=b7                 
+Font9Sty=b0                  
+Font9Col=d14342874           
+Font9As=w768                 
+Font10Set=b204               
+Font10Size=b7                
+Font10Sty=b0                 
+Font10Col=d16777215           
+Font10As=w3840               
+Font11Set=b204               
+Font11Size=b7                
+Font11Sty=b0                 
+Font11Col=d16777215           
+Font11As=w3840               
+Font12Set=b204               
+Font12Size=b7                
+Font12Sty=b0                 
+Font12Col=d16777215           
+Font12As=w3840               
+Font13Set=b204               
+Font13Size=b7                
+Font13Sty=b0                 
+Font13Col=d16777215           
+Font13As=w3840               
+Font14Set=b204               
+Font14Size=b7                
+Font14Sty=b0                 
+Font14Col=d16777215           
+Font14As=w3840               
+Font15Set=b204               
+Font15Size=b7                
+Font15Sty=b0                 
+Font15Col=d16777215           
+Font15As=w3840               
+Font16Set=b204               
+Font16Size=b7                
+Font16Sty=b0                 
+Font16Col=d16777215           
+Font16As=w3840               
+Font17Set=b204               
+Font17Size=b7                
+Font17Sty=b0                 
+Font17Col=d16777215          
+Font17As=w3840               
+Font18Set=b204               
+Font18Size=b7                
+Font18Sty=b0                 
+Font18Col=d13683137           
+Font18As=w1792               
+RightMargin=b2               
+QuickSearchColour=d255       
+Font10Name=sTahoma           
+Font11Name=sTahoma           
+Font12Name=sTahoma           
+Font13Name=sTahoma           
+Font14Name=sTahoma           
+Font15Name=sTahoma           
+Font16Name=sTahoma           
+Font17Name=sTahoma           
+Font18Name=sTahoma           
+Font0Name=sTahoma            
+Font1Name=sTahoma            
+Font2Name=sTahoma            
+Font3Name=sTahoma
+Font4Name=sTahoma
+Font5Name=sTahoma
+Font7Name=sTahoma
+Font9Name=sTahoma
+;-------------------------------
