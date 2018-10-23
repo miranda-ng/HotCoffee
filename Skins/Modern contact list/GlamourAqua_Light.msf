@@ -170,10 +170,10 @@ $$BarButton/Pressed=s
 @1620=s$$BarButton/Hot:Button,Hovered=True
 @1630=s$$BarButton:Button
 
-#close=sPush,Scripts/Exit,-23,8,-8,23,R-R--,0,0,Exit
-#minimize=sPush,CList/ShowHide,-38,8,-23,23,R-R--,0,0,Minimize
+#close=sPush,Scripts/Exit,-24,9,-9,24,R-R--,0,0,Exit
+#minimize=sPush,CList/ShowHide,-40,9,-25,24,R-R--,0,0,Minimize
 #bontop=sSwitch,CList/OnTop,CList/OnTop,b0/1,-59,8,-44,23,R-R--,0,0,On/Off On Top
-;#ontop=sSwitch,CList/OnTop,CList/OnTop,b0/1,15,10,66,21,-----,0,0,On/Off On Top
+;#ontop=s
 #mainmenu=sPush,CList/ShowMainMenu,9,9,38,25,-----,0,0,Show main menu
 #logo=sPush,logo,-62,23,63,48,C-C--,0,0,
 
