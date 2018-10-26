@@ -47,39 +47,39 @@ $$StatusBar=s
 
 $$ViewMode/CurrentMode=s
 $$ViewMode/CurrentMode/Hot=sGlyph,Fragment,BG.png,20,0,9,46,StretchBoth,4,4,4,4,255
-$$ViewMode/CurrentMode/Pressed=s
+$$ViewMode/CurrentMode/Pressed=sGlyph,Fragment,BG.png,20,48,9,9,StretchBoth,4,4,4,4,255
 
 $$ViewMode/SetupMode=s
 $$ViewMode/SetupMode/Hot=sGlyph,Fragment,BG.png,20,0,9,46,StretchBoth,4,4,4,4,255
-$$ViewMode/SetupMode/Pressed=s
+$$ViewMode/SetupMode/Pressed=sGlyph,Fragment,BG.png,20,48,9,9,StretchBoth,4,4,4,4,255
 
 $$ViewMode/ResetMode=s
 $$ViewMode/ResetMode/Hot=sGlyph,Fragment,BG.png,20,0,9,46,StretchBoth,4,4,4,4,255
-$$ViewMode/ResetMode/Pressed=s
+$$ViewMode/ResetMode/Pressed=sGlyph,Fragment,BG.png,20,48,9,9,StretchBoth,4,4,4,4,255
 
-$$Button/Close/Normal=sGlyph,Fragment,BG.png,38,0,19,19,StretchBoth,0,0,0,0,255
-$$Button/Close/Hovered=sGlyph,Fragment,BG.png,58,0,19,19,StretchBoth,0,0,0,0,255
-$$Button/Close/Down=sGlyph,Fragment,BG.png,78,0,19,19,StretchBoth,0,0,0,0,255
+$$Button/Close/Normal=sGlyph,Fragment,BG.png,38,0,17,17,StretchBoth,0,0,0,0,255
+$$Button/Close/Hovered=sGlyph,Fragment,BG.png,56,0,17,17,StretchBoth,0,0,0,0,255
+$$Button/Close/Down=sGlyph,Fragment,BG.png,74,0,17,17,StretchBoth,0,0,0,0,255
 
-$$Button/Minimize/Normal=sGlyph,Fragment,BG.png,38,20,19,19,StretchBoth,0,0,0,0,255
-$$Button/Minimize/Hovered=sGlyph,Fragment,BG.png,58,20,19,19,StretchBoth,0,0,0,0,255
-$$Button/Minimize/Down=sGlyph,Fragment,BG.png,78,20,19,19,StretchBoth,0,0,0,0,255
+$$Button/Minimize/Normal=sGlyph,Fragment,BG.png,38,18,17,17,StretchBoth,0,0,0,0,255
+$$Button/Minimize/Hovered=sGlyph,Fragment,BG.png,56,18,17,17,StretchBoth,0,0,0,0,255
+$$Button/Minimize/Down=sGlyph,Fragment,BG.png,74,18,17,17,StretchBoth,0,0,0,0,255
 
-$$Button/Ontop/Normal=sGlyph,Fragment,BG.png,38,40,19,19,StretchBoth,0,0,0,0,255
-$$Button/Ontop/Hovered=sGlyph,Fragment,BG.png,58,40,19,19,StretchBoth,0,0,0,0,255
-$$Button/Ontop/Down=sGlyph,Fragment,BG.png,78,40,19,19,StretchBoth,0,0,0,0,255
+$$Button/Ontop/Normal=sGlyph,Fragment,BG.png,38,36,17,17,StretchBoth,0,0,0,0,255
+$$Button/Ontop/Hovered=sGlyph,Fragment,BG.png,56,36,17,17,StretchBoth,0,0,0,0,255
+$$Button/Ontop/Down=sGlyph,Fragment,BG.png,74,36,17,17,StretchBoth,0,0,0,0,255
 
-$$Button/Offtop/Normal=sGlyph,Fragment,BG.png,38,60,19,19,StretchBoth,0,0,0,0,255
-$$Button/Offtop/Hovered=sGlyph,Fragment,BG.png,58,60,19,19,StretchBoth,0,0,0,0,255
-$$Button/Offtop/Down=sGlyph,Fragment,BG.png,78,60,19,19,StretchBoth,0,0,0,0,255
+$$Button/Offtop/Normal=sGlyph,Fragment,BG.png,38,54,17,17,StretchBoth,0,0,0,0,255
+$$Button/Offtop/Hovered=sGlyph,Fragment,BG.png,56,54,17,17,StretchBoth,0,0,0,0,255
+$$Button/Offtop/Down=sGlyph,Fragment,BG.png,74,54,17,17,StretchBoth,0,0,0,0,255
 
 $$Button/Menu/Normal=sGlyph,Fragment,BG.png,0,67,31,18,StretchBoth,0,0,0,0,255
 $$Button/Menu/Hovered=sGlyph,Fragment,BG.png,0,86,31,18,StretchBoth,0,0,0,0,255
 $$Button/Menu/Down=sGlyph,Fragment,BG.png,0,105,31,18,StretchBoth,0,0,0,0,255
 
-$$Name/Ontop/Normal=s
-$$Name/Ontop/Hovered=s
-$$Name/Ontop/Down=s
+$$Button/StatusMenu/Normal=sGlyph,Fragment,BG.png,32,72,61,20,StretchBoth,0,0,0,0,255
+$$Button/StatusMenu/Hovered=s
+$$Button/StatusMenu/Down=s
 
 $$Name/Offtop/Normal=s
 $$Name/Offtop/Hovered=s
@@ -88,7 +88,7 @@ $$Name/Offtop/Down=s
 $$Background=sGlyph,Fragment,BG.png,15,64,1,1,StretchBoth,0,0,0,0,255
 $$BarButton=s
 $$BarButton/Hot=sGlyph,Fragment,BG.png,20,0,9,47,StretchBoth,4,4,4,5,255
-$$BarButton/Pressed=s
+$$BarButton/Pressed=sGlyph,Fragment,BG.png,20,48,9,10,StretchBoth,4,4,4,5,255
 
 @0=s$$Window:Main,ID=Background
 @1=s$$Background:CL,ID=Background
@@ -141,21 +141,21 @@ $$BarButton/Pressed=s
 @170=s$$Button/Minimize/Down:MButton,ID=minimize,Down=1
 @180=s$$Button/Minimize/Hovered:MButton,ID=minimize,Hovered=1
 @190=s$$Button/Minimize/Normal:MButton,ID=minimize
-@191=s$$Button/Ontop/Down:MButton,ID=bontop,Down=1,Value=1
-@192=s$$Button/Ontop/Hovered:MButton,ID=bontop,Hovered=1,Value=1
-@193=s$$Button/Ontop/Normal:MButton,ID=bontop,Value=1
-@194=s$$Button/Offtop/Down:MButton,ID=bontop,Down=1,Value=0
-@195=s$$Button/Offtop/Hovered:MButton,ID=bontop,Hovered=1,Value=0
-@196=s$$Button/Offtop/Normal:MButton,ID=bontop,Value=0
+@191=s$$Button/Ontop/Down:MButton,ID=ontop,Down=1,Value=1
+@192=s$$Button/Ontop/Hovered:MButton,ID=ontop,Hovered=1,Value=1
+@193=s$$Button/Ontop/Normal:MButton,ID=ontop,Value=1
+@194=s$$Button/Offtop/Down:MButton,ID=ontop,Down=1,Value=0
+@195=s$$Button/Offtop/Hovered:MButton,ID=ontop,Hovered=1,Value=0
+@196=s$$Button/Offtop/Normal:MButton,ID=ontop,Value=0
 @200=s$$Button/Menu/Down:MButton,ID=mainmenu,Down=1
 @210=s$$Button/Menu/Hovered:MButton,ID=mainmenu,Hovered=1
 @220=s$$Button/Menu/Normal:MButton,ID=mainmenu
-@230=s$$Name/Ontop/Down:MButton,ID=ontop,Down=1,Value=1
-@231=s$$Name/Ontop/Hovered:MButton,ID=ontop,Hovered=1,Value=1
-@232=s$$Name/Ontop/Normal:MButton,ID=ontop,Value=1
-@233=s$$Name/Offtop/Down:MButton,ID=ontop,Down=1,Value=0
-@234=s$$Name/Offtop/Hovered:MButton,ID=ontop,Hovered=1,Value=0
-@235=s$$Name/Offtop/Normal:MButton,ID=ontop,Value=0
+@230=s$$Button/StatusMenu/Down:MButton,ID=statusmenu,Down=1
+@231=s$$Button/StatusMenu/Hovered:MButton,ID=statusmenu,Hovered=1
+@232=s$$Button/StatusMenu/Normal:MButton,ID=statusmenu
+@233=s
+@234=s
+@235=s
 @300=s$$ViewMode:ViewMode,ID=Background
 @301=s$$ViewMode/CurrentMode/Pressed:Button,ID=ViewMode.Select,Pressed=True
 @302=s$$ViewMode/CurrentMode/Hot:Button,ID=ViewMode.Select,Hovered=True
@@ -170,11 +170,11 @@ $$BarButton/Pressed=s
 @1620=s$$BarButton/Hot:Button,Hovered=True
 @1630=s$$BarButton:Button
 
-#close=sPush,Scripts/Exit,-27,8,-8,27,R-R--,0,0,Exit
-#minimize=sPush,CList/ShowHide,-47,8,-28,27,R-R--,0,0,Minimize
-#bontop=sSwitch,CList/OnTop,CList/OnTop,b0/1,-67,8,-48,27,R-R--,0,0,On/Off On Top
-#mainmenu=sPush,CList/ShowMainMenu,9,8,40,26,-----,0,0,Show main menu
-#logo=sPush,logo,-62,23,63,48,C-C--,0,0,
+#close=sPush,Scripts/Exit,-25,8,-8,25,R-R--,0,0,Exit
+#minimize=sPush,CList/ShowHide,-42,8,-25,25,R-R--,0,0,Minimize
+#ontop=sSwitch,CList/OnTop,CList/OnTop,b0/1,-59,8,-42,25,R-R--,0,0,On/Off On Top
+#mainmenu=sPush,CList/ShowMainMenu,9,8,40,26,-----,0,0,Main menu
+#statusmenu=sPush,CList/ShowStatusMenu,42,11,103,31,-----,0,0,Status menu
 
 [CList]
 AvatarsBorderColor=d0
