@@ -2,21 +2,21 @@
 Author=PK, Egoist, Favor, Pacificator
 Contact=im.hotcoffee@gmail.com
 Description=Skin for Modern contact list layered
-Name=GlamourAqua_Light
+Name=Glamour_Aqua_Light
 Preview=Preview.png
 SubStyle=Normal
 URL=https://miranda-ng.org/hotcoffee
 Version=1.0
 
 [ModernSkin]
-SkinFolder=uSkins\Modern contact list\GlamourAqua_Light
-SkinFile=uSkins\Modern contact list\GlamourAqua_Light.msf
+SkinFolder=uSkins\Modern contact list\Glamour_Aqua_Light
+SkinFile=uSkins\Modern contact list\Glamour_Aqua_Light.msf
 fProfFont=s
 tProfile0=s
 tProfile1=s
 tProfile2=s
 tProfile3=s
-$$Window=sGlyph,Fragment,BG.png,83,0,86,66,StretchBoth,9,56,73,9,255
+$$Window=sGlyph,Fragment,BG.png,83,0,100,66,StretchBoth,56,56,43,9,255
 $$Group/Open=sGlyph,Fragment,BG.png,83,67,9,47,StretchBoth,4,4,4,5,255
 $$Group/Open/Hot=sGlyph,Fragment,BG.png,93,67,7,8,StretchBoth,3,3,3,4,180
 $$Group/Open/Selected=s
@@ -36,10 +36,10 @@ $$Contact/Odd=s
 $$Contact/Single=s
 $$Contact/Last=s
 $$Contact/First=s
-$$Scroll/BtnUp=sGlyph,Fragment,BG.png,162,67,17,17,StretchBoth,0,0,10,9,255
-$$Scroll/BtnDn=sGlyph,Fragment,BG.png,162,85,17,17,StretchBoth,0,9,10,0,255
-$$Scroll/Thumb=sGlyph,Fragment,BG.png,162,103,17,1,StretchBoth,0,0,10,0,255
-$$Scroll/Back=sGlyph,Fragment,BG.png,162,105,17,5,StretchBoth,0,2,15,2,50
+$$Scroll/BtnUp=sGlyph,Fragment,BG.png,166,67,17,17,StretchBoth,0,0,10,9,255
+$$Scroll/BtnDn=sGlyph,Fragment,BG.png,166,85,17,17,StretchBoth,0,9,10,0,255
+$$Scroll/Thumb=sGlyph,Fragment,BG.png,166,103,17,1,StretchBoth,0,0,10,0,255
+$$Scroll/Back=sGlyph,Fragment,BG.png,166,105,17,5,StretchBoth,0,2,15,2,50
 $$FrameTitleBar=sGlyph,Fragment,BG.png,83,67,9,47,StretchBoth,4,4,4,5,255
 $$StatusBar=s
 $$ViewMode/CurrentMode=s
@@ -78,7 +78,7 @@ $$BarButton/Hot=sGlyph,Fragment,BG.png,83,67,9,47,StretchBoth,4,4,4,5,255
 $$BarButton/Pressed=sGlyph,Fragment,BG.png,83,115,17,18,StretchBoth,4,4,4,5,255
 @0=s$$Window:Main,ID=Background
 @1=s$$Background:CL,ID=Background
-@2=s$$Logo:MButton,ID=logo
+@2=s
 @3=s
 @10=s
 @11=s
