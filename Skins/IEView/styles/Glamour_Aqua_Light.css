@@ -6,8 +6,8 @@
 
 input {
 	background: #F4F6F8;
-	border-top: 1px solid #AFC0CA;
-	border-left: 1px solid #AFC0CA;
+	border-top: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
 	border-bottom: 1px solid #AFC0CA;
 	border-right: 1px solid #AFC0CA;
 	color: #6B8A9C;
@@ -15,14 +15,14 @@ input {
 
 html {
 	scrollbar-face-color: #F4F6F8;
-	scrollbar-highlight-color: #AFC0CA;
-	scrollbar-shadow-color: #AFC0CA;
+	scrollbar-highlight-color: #F4F6F8;
+	scrollbar-shadow-color: #F4F6F8;
 	scrollbar-arrow-color: #6B8A9C;
-	scrollbar-3dlight-color: #AFC0CA;
+	scrollbar-3dlight-color: #FFFFFF;
 	scrollbar-darkshadow-color: #AFC0CA;
-	scrollbar-track-color: #F4F6F8;
+	scrollbar-track-color: #ECF0F2;
 	background: url(Glamour_Aqua_Light/picture.png) fixed no-repeat bottom right;
-	background-color: #F4F6F8;
+	background-color: #ECF0F2;
 	overflow: auto;
 	padding: 0px 0px 0px 0px;
 	margin: 0;
