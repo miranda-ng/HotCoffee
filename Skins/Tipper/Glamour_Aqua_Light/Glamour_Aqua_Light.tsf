@@ -7,8 +7,8 @@ Image = BG.png
 TM = TM_STRECH_ALL
 Left = 8
 Top = 8
-Right = 89
-Bottom = 248
+Right = 8
+Bottom = 8
 
 [Sidebar]
 Image = SideBar.png
@@ -22,22 +22,22 @@ Bottom = 9
 Title-color = 196 64 0
 Title-effect = FONT_BOLD
 
-Label-color = 100 100 100
+Label-color = 136 154 164
 Label-effect = FONT_BOLD
 
-Value-color = 30 30 30
+Value-color = 67 80 87
 Value-effect = 0
 
-TrayTitle-color = 0 0 0
+TrayTitle-color = 67 80 87
 TrayTitle-effect = FONT_BOLD
 
-Divider-color = 100 100 100
+Divider-color = 184 194 201
 
 [Appearance]
 General-padding = 10
 Title-indent = 28
 Text-indent = 28
-Value-indent = 10
+Value-indent = 8
 Text-padding = 2
 Outer-avatar-padding = 10
 Inner-avatar-padding = 2
