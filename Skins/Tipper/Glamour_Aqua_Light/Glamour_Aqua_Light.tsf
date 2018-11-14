@@ -13,10 +13,10 @@ Bottom = 8
 [Sidebar]
 Image = SideBar.png
 TM = TM_STRECH_ALL
-Left = 9
-Top = 9
+Left = 8
+Top = 8
 Right = 8
-Bottom = 9
+Bottom = 8
 
 [Fonts]
 Title-color = 196 64 0
