@@ -503,7 +503,6 @@ end
 #===========Logo===================================================================================
 object
 	ifnotset 1
-	ifset 5
 	ifnotset 6
 	ifset 10
 	type bitmap
@@ -514,7 +513,6 @@ object
 end
 object
 	ifset 1
-	ifset 5
 	ifnotset 6
 	ifset 10
 	type bitmap
@@ -526,7 +524,6 @@ object
 end
 object
 	ifnotset 1
-	ifset 5
 	ifnotset 6
 	ifset 10
 	type bitmap
@@ -537,7 +534,6 @@ object
 end
 object
 	ifset 1
-	ifset 5
 	ifnotset 6
 	ifset 10
 	type bitmap
