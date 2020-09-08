@@ -508,7 +508,7 @@ object
 	type bitmap
 	source logo_layer_0.png
 	layer
-	x window.width-8-clock.width-37
+	x window.width-8-clock.width-29
 	y 6
 end
 object
@@ -519,7 +519,7 @@ object
 	source logo_layer_0.png
 	mono
 	layer
-	x window.width-8-clock.width-37
+	x window.width-8-clock.width-29
 	y 6
 end
 object
@@ -529,7 +529,7 @@ object
 	type bitmap
 	source logo_layer_1.png
 	layer
-	x window.width-8-clock.width-37
+	x window.width-8-clock.width-29
 	y 6
 end
 object
@@ -540,7 +540,7 @@ object
 	source logo_layer_1.png
 	mono
 	layer
-	x window.width-8-clock.width-37
+	x window.width-8-clock.width-29
 	y 6
 end
 object
@@ -550,7 +550,7 @@ object
 	type bitmap
 	source logo_layer_2.png
 	layer
-	x window.width-8-clock.width-37
+	x window.width-8-clock.width-29
 	y 0
 end
 object
@@ -561,7 +561,16 @@ object
 	source logo_layer_2.png
 	mono
 	layer
-	x window.width-8-clock.width-37
+	x window.width-8-clock.width-29
+	y 0
+end
+object
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_3.png
+	layer
+	x window.width-8-clock.width-29
 	y 0
 end
 object
@@ -569,7 +578,7 @@ object
 	ifnotset 6
 	ifset 10
 	type bitmap
-	source logo_layer_3.png
+	source logo_layer_4.png
 	layer
 	x window.width-8-2
 	y 6
@@ -579,7 +588,7 @@ object
 	ifnotset 6
 	ifset 10
 	type bitmap
-	source logo_layer_3.png
+	source logo_layer_4.png
 	mono
 	layer
 	x window.width-8-2
@@ -589,6 +598,7 @@ end
 #===========Clock==================================================================================
 object
 	ifnotset 1
+	ifnotset 5
 	ifnotset 6
 	ifnotset 10
 	type clock
@@ -600,6 +610,7 @@ object
 end
 object
 	ifset 1
+	ifnotset 5
 	ifnotset 6
 	ifnotset 10
 	type clock
@@ -612,6 +623,32 @@ object
 end
 object
 	ifnotset 1
+	ifset 5
+	ifnotset 6
+	ifnotset 10
+	type clock
+	source clock_edges_ltt.png
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifset 1
+	ifset 5
+	ifnotset 6
+	ifnotset 10
+	type clock
+	source clock_edges_ltt.png
+	mono
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifnotset 1
+	ifnotset 5
 	ifnotset 6
 	ifset 10
 	type clock
@@ -623,10 +660,36 @@ object
 end
 object
 	ifset 1
+	ifnotset 5
 	ifnotset 6
 	ifset 10
 	type clock
 	source clock&logo_edges.png
+	mono
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifnotset 1
+	ifset 5
+	ifnotset 6
+	ifset 10
+	type clock
+	source clock&logo_edges_ltt.png
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifset 1
+	ifset 5
+	ifnotset 6
+	ifset 10
+	type clock
+	source clock&logo_edges_ltt.png
 	mono
 	layer
 	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
@@ -952,7 +1015,7 @@ object
 	ifnotset 6
 	ifset 10
 	type title
-	w window.width-(10+icon.width+3)-8-clock.width-37-2
+	w window.width-(10+icon.width+3)-8-clock.width-29-2
 end
 # ifset Standard digital clocks, ifset Logo
 object
@@ -970,7 +1033,7 @@ object
 	type bitmap
 	source logo&std_clk_layer_0.png
 	layer
-	x window.width-1-(clock.width+37)/2<window.width-45
+	x window.width-1-(clock.width+29)/2<window.width-45
 	y 0
 end
 object
@@ -981,7 +1044,7 @@ object
 	source Color\logo&std_clk_layer_0.png
 	mono
 	layer
-	x window.width-1-(clock.width+37)/2<window.width-45
+	x window.width-1-(clock.width+29)/2<window.width-45
 	y 0
 end
 object
@@ -991,7 +1054,7 @@ object
 	type bitmap
 	source logo&std_clk_layer_1.png
 	layer
-	x window.width-1-(clock.width+37)/2<window.width-45
+	x window.width-1-(clock.width+29)/2<window.width-45
 	y 0
 end
 object
@@ -1002,7 +1065,7 @@ object
 	source Color\logo&std_clk_layer_1.png
 	mono
 	layer
-	x window.width-1-(clock.width+37)/2<window.width-45
+	x window.width-1-(clock.width+29)/2<window.width-45
 	y 0
 end
 object
@@ -1012,7 +1075,7 @@ object
 	type bitmap
 	source logo&std_clk_layer_2.png
 	layer
-	x window.width-1-(clock.width+37)/2<window.width-45
+	x window.width-1-(clock.width+29)/2<window.width-45
 	y 0
 end
 object
@@ -1023,7 +1086,7 @@ object
 	source logo&std_clk_layer_2.png
 #	mono
 	layer
-	x window.width-1-(clock.width+37)/2<window.width-45
+	x window.width-1-(clock.width+29)/2<window.width-45
 	y 0
 end
 
