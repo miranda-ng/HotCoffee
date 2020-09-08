@@ -558,11 +558,32 @@ object
 	ifnotset 6
 	ifset 10
 	type bitmap
-	source Color\logo_layer_2.png
+	source logo_layer_2.png
 	mono
 	layer
 	x window.width-8-clock.width-37
 	y 0
+end
+object
+	ifnotset 1
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_3.png
+	layer
+	x window.width-8-2
+	y 6
+end
+object
+	ifset 1
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_3.png
+	mono
+	layer
+	x window.width-8-2
+	y 6
 end
 
 #===========Clock==================================================================================
@@ -573,9 +594,9 @@ object
 	type clock
 	source clock_edges.png
 	layer
-	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
 	x window.width-8-clock.width
-	y 8+5
+	y 8+4
 end
 object
 	ifset 1
@@ -585,9 +606,9 @@ object
 	source clock_edges.png
 	mono
 	layer
-	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
 	x window.width-8-clock.width
-	y 8+5
+	y 8+4
 end
 object
 	ifnotset 1
@@ -596,9 +617,9 @@ object
 	type clock
 	source clock&logo_edges.png
 	layer
-	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
 	x window.width-8-clock.width
-	y 8+5
+	y 8+4
 end
 object
 	ifset 1
@@ -608,9 +629,9 @@ object
 	source clock&logo_edges.png
 	mono
 	layer
-	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
 	x window.width-8-clock.width
-	y 8+5
+	y 8+4
 end
 object
 	ifnotset 3
@@ -619,7 +640,7 @@ object
 	ifnotset 10
 	type clock
 	source clock.png
-	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
 	x window.width-8-clock.width
 	y 8+5
 end
@@ -631,7 +652,7 @@ object
 	type clock
 	source Color\clock.png
 	mono
-	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
 	x window.width-8-clock.width
 	y 8+5
 end
@@ -642,7 +663,7 @@ object
 	ifnotset 10
 	type clock
 	source clock_ltt.png
-	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
 	x window.width-8-clock.width
 	y 8+5
 end
@@ -654,7 +675,7 @@ object
 	type clock
 	source Color\clock_ltt.png
 	mono
-	clocksize 9 3 7 5 7 7 7 7 7 7 7 7 0 0 8
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
 	x window.width-8-clock.width
 	y 8+5
 end
@@ -665,7 +686,7 @@ object
 	ifset 10
 	type clock
 	source clock&logo.png
-	clocksize 3 4 8 6 8 8 8 8 8 8 8 8 0 0 3
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
 	x window.width-8-clock.width
 	y 8+5
 end
@@ -675,9 +696,9 @@ object
 	ifnotset 6
 	ifset 10
 	type clock
-	source Color\clock&logo.png
+	source clock&logo.png
 	mono
-	clocksize 3 4 8 6 8 8 8 8 8 8 8 8 0 0 3
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
 	x window.width-8-clock.width
 	y 8+5
 end
@@ -688,7 +709,7 @@ object
 	ifset 10
 	type clock
 	source clock&logo_ltt.png
-	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
 	x window.width-8-clock.width
 	y 8+5
 end
@@ -700,7 +721,7 @@ object
 	type clock
 	source Color\clock&logo_ltt.png
 	mono
-	clocksize 8 3 7 5 7 7 7 7 7 7 7 7 0 0 9
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
 	x window.width-8-clock.width
 	y 8+5
 end
