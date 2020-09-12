@@ -22,13 +22,13 @@ Bottom = 8
 Title-color = 196 64 0
 Title-effect = FONT_BOLD
 
-Label-color = 136 154 164
+Label-color = 153 174 187
 Label-effect = FONT_BOLD
 
-Value-color = 67 80 87
+Value-color = 94 123 140
 Value-effect = 0
 
-TrayTitle-color = 67 80 87
+TrayTitle-color = 94 123 140
 TrayTitle-effect = FONT_BOLD
 
 Divider-color = 184 194 201
