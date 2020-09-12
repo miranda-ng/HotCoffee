@@ -1,7 +1,7 @@
 /*--- Global ---*/
 
 .Link-Text, .tzerlink {
-	color: #054381;
+	color: #4475A6;
 }
 
 input {
@@ -32,20 +32,20 @@ html {
 }
 
 a, a:active {
-	color: #054381;
+	color: #4475A6;
 	text-decoration: none;
 	font-weight: normal;
 	cursor:pointer;
 }
 
 a:visited {
-	color: #C44305;
+	color: #A66444;
 	text-decoration: none;
 	font-weight: normal;
 }
 
 a:hover {
-	color: #054381;
+	color: #4475A6;
 	text-decoration: underline;
 	font-weight: normal;
 }
@@ -123,7 +123,7 @@ div.avatar {
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
-	color: #C44305;
+	color: #A66444;
 	background-image: url(Glamour_Aqua_Light/in.png);
 }
 
@@ -134,7 +134,7 @@ div.avatar {
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
-	color: #054381;
+	color: #4475A6;
 	background-image: url(Glamour_Aqua_Light/out.png);
 }
 
@@ -145,12 +145,12 @@ div.avatar {
 /* -------------------- status support -------------------- */
 
 .status .head {
-	color: #C44305;
+	color: #A66444;
 	background-image: url(Glamour_Aqua_Light/status.png);
 }
 
 .contentStatus, .contenthStatus {
-	color: #C44305;
+	color: #A66444;
 	background-image: url(Glamour_Aqua_Light/status.png);
 }
 
@@ -161,31 +161,31 @@ div.avatar {
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
-	color: green;
+	color: #468E46;
 	background-image: url(Glamour_Aqua_Light/file.png);
 }
 
 .contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
-	color: green;
+	color: #468E46;
 	background-image: url(Glamour_Aqua_Light/file.png);
 }
 
 .contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
-	color: #61A061;
+	color: #79AE79;
 }
 
 /* -------------------- URL support -------------------- */
 
 .inurl .head {
-	color: #054381;
+	color: #4475A6;
 	background-image: url(Glamour_Aqua_Light/url.png);
 }
 
 .contentURL, .contenthURL {
-	color: #054381;
+	color: #4475A6;
 	background-image: url(Glamour_Aqua_Light/url.png);
 }
 
 .contentURL .time, .contenthURL .time {
-	color: #6482A1;
+	color: #7994AE;
 }
