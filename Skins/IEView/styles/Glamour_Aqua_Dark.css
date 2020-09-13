@@ -1,51 +1,51 @@
 /*--- Global ---*/
 
 .Link-Text, .tzerlink {
-	color: #4475A6;
+	color: #74B8E6;
 }
 
 input {
-	background: #F4F6F8;
-	border-top: 1px solid #FFFFFF;
-	border-left: 1px solid #FFFFFF;
-	border-bottom: 1px solid #AFC0CA;
-	border-right: 1px solid #AFC0CA;
-	color: #6B8A9C;
+	background: #506779;
+	border-top: 1px solid #748DA3;
+	border-left: 1px solid #748DA3;
+	border-bottom: 1px solid #25323E;
+	border-right: 1px solid #25323E;
+	color: #D0E0EA;
 }
 
 html {
-	scrollbar-face-color: #F4F6F8;
-	scrollbar-highlight-color: #F4F6F8;
-	scrollbar-shadow-color: #F4F6F8;
-	scrollbar-arrow-color: #6B8A9C;
-	scrollbar-3dlight-color: #FFFFFF;
-	scrollbar-darkshadow-color: #AFC0CA;
-	scrollbar-track-color: #ECF0F2;
+	scrollbar-face-color: #506779;
+	scrollbar-highlight-color: #506779;
+	scrollbar-shadow-color: #506779;
+	scrollbar-arrow-color: #D0E0EA;
+	scrollbar-3dlight-color: #748DA3;
+	scrollbar-darkshadow-color: #25323E;
+	scrollbar-track-color: #405261;
 	background: url(Glamour_Aqua_Dark/picture.png) fixed no-repeat bottom right;
-	background-color: #ECF0F2;
+	background-color: #405261;
 	overflow: auto;
 	padding: 0px 0px 0px 0px;
 	margin: 0;
 	font-size: 13px;
-	color: #4B616D;
+	color: #D0E0EA;
 	zoom: 0 !important;
 }
 
 a, a:active {
-	color: #4475A6;
+	color: #74B8E6;
 	text-decoration: none;
 	font-weight: normal;
 	cursor:pointer;
 }
 
 a:visited {
-	color: #A66444;
+	color: #C87046;
 	text-decoration: none;
 	font-weight: normal;
 }
 
 a:hover {
-	color: #4475A6;
+	color: #74B8E6;
 	text-decoration: underline;
 	font-weight: normal;
 }
@@ -78,7 +78,7 @@ div {
 }
 
 .time {
-	color: Gray;
+	color: #ACC5D2;
 	font-weight: normal;
 	float: right;
 	font-size: 11px;
@@ -102,17 +102,17 @@ div.avatar {
 }
 
 .code {
-	border: 1px dashed #AFC0CA;
+	border: 1px dashed #748DA3;
 	margin: -1px;
 }
 
 .MessageIn, .MessageOut, .hMessageIn, .hMessageOut, .frame, .Status, .hStatus, .FileIn, .hFileIn, .FileOut, .hFileOut, .URL, .hURL {
-	border-top: 1px solid #FFFFFF;
-	border-bottom: 1px solid #AFC0CA;
+	border-top: 1px solid #748DA3;
+	border-bottom: 1px solid #25323E;
 }
 
 .MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
-	border-top: 1px dotted #AFC0CA;
+	border-top: 1px dotted #748DA3;
 }
 
 .hMessageIn, .hMessageOut, .history, .hStatus, .hFileIn, .hFileOut, .hURL {
@@ -123,7 +123,7 @@ div.avatar {
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
-	color: #A66444;
+	color: #C87046;
 	background-image: url(Glamour_Aqua_Dark/in.png);
 }
 
@@ -134,7 +134,7 @@ div.avatar {
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
-	color: #4475A6;
+	color: #4E7DAD;
 	background-image: url(Glamour_Aqua_Dark/out.png);
 }
 
@@ -145,47 +145,47 @@ div.avatar {
 /* -------------------- status support -------------------- */
 
 .status .head {
-	color: #A66444;
+	color: #C87046;
 	background-image: url(Glamour_Aqua_Dark/status.png);
 }
 
 .contentStatus, .contenthStatus {
-	color: #A66444;
+	color: #C87046;
 	background-image: url(Glamour_Aqua_Dark/status.png);
 }
 
 .contentStatus .time, .contenthStatus .time {
-	color: #C38264;
+	color: #A57D6B;
 }
 
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
-	color: #468E46;
+	color: #469B46;
 	background-image: url(Glamour_Aqua_Dark/file.png);
 }
 
 .contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
-	color: #468E46;
+	color: #469B46;
 	background-image: url(Glamour_Aqua_Dark/file.png);
 }
 
 .contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
-	color: #79AE79;
+	color: #6B916B;
 }
 
 /* -------------------- URL support -------------------- */
 
 .inurl .head {
-	color: #4475A6;
+	color: #4E7DAD;
 	background-image: url(Glamour_Aqua_Dark/url.png);
 }
 
 .contentURL, .contenthURL {
-	color: #4475A6;
+	color: #4E7DAD;
 	background-image: url(Glamour_Aqua_Dark/url.png);
 }
 
 .contentURL .time, .contenthURL .time {
-	color: #7994AE;
+	color: #6E8399;
 }

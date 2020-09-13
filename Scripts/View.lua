@@ -121,38 +121,43 @@ assert(hSkinRoot)
 Skins =
 {
 	{ Name = 'Default_Miranda', Description = 'Default Miranda',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD01' },
+	{ Name = 'Default_Windows', Description = 'Windows style',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD02' },
+
 	{ Name = 'Custom_Miranda', Description = 'Custom Miranda',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2D000' },
 	{ Name = 'Custom_Miranda_Dark', Description = 'Custom Miranda Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2D001' },
 	{ Name = 'Custom_Miranda_Light', Description = 'Custom Miranda Light',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2D002' },
-	{ Name = 'Default_Windows', Description = 'Windows style',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD02' },
 
-	{ Name = 'Diplomat_Dark',   Description = 'Diplomat Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD03' },
-	{ Name = 'Diplomat_Light',   Description = 'Diplomat Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD04' },
 
-	{ Name = 'Glamour_Dark',    Description = 'Glamour Dark',    Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD05' },
-	{ Name = 'Glamour_Light',    Description = 'Glamour Light',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD06' },
+	{ Name = 'Diplomat_Dark',   Description = 'Diplomat Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AA01' },
+	{ Name = 'Diplomat_Light',   Description = 'Diplomat Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AA02' },
 
-	{ Name = 'GoldTime_Dark',   Description = 'GoldTime Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD07' },
-	{ Name = 'GoldTime_Light',   Description = 'GoldTime Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD08' },
+	{ Name = 'Glamour_Aqua_Dark',    Description = 'Glamour Aqua Dark',    Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AB01' },
+	{ Name = 'Glamour_Aqua_Light',    Description = 'Glamour Aqua Light',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AB02' },
 
-	{ Name = 'Graphite_Dark',   Description = 'Graphite Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD09' },
-	{ Name = 'Graphite_Light',   Description = 'Graphite Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD0A' },
+	{ Name = 'Glamour_Dark',    Description = 'Glamour Dark',    Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AB03' },
+	{ Name = 'Glamour_Light',    Description = 'Glamour Light',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AB04' },
 
-	{ Name = 'PhotoOne_Dark',   Description = 'PhotoOne Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD0B' },
-	{ Name = 'PhotoOne_Light',   Description = 'PhotoOne Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD0C' },
+	{ Name = 'GoldTime_Dark',   Description = 'GoldTime Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AC01' },
+	{ Name = 'GoldTime_Light',   Description = 'GoldTime Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AC01' },
 
-	{ Name = 'Surface_Black',    Description = 'Surface Black',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD0D' },
-	{ Name = 'Surface_White',    Description = 'Surface White',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD0E' },
+	{ Name = 'Graphite_Dark',   Description = 'Graphite Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AD01' },
+	{ Name = 'Graphite_Light',   Description = 'Graphite Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AD02' },
 
-	{ Name = 'Textolite_Dark',  Description = 'Textolite Dark',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD0F' },
-	{ Name = 'Textolite_Light',  Description = 'Textolite Light', Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD10' },
+	{ Name = 'PhotoOne_Dark',   Description = 'PhotoOne Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AE01' },
+	{ Name = 'PhotoOne_Light',   Description = 'PhotoOne Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AE02' },
 
-	{ Name = 'WinStyle_Dark',   Description = 'WinStyle Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD11' },
-	{ Name = 'WinStyle_Light',   Description = 'WinStyle Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD12' },
+	{ Name = 'Surface_Black',    Description = 'Surface Black',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AF01' },
+	{ Name = 'Surface_White',    Description = 'Surface White',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AF02' },
+
+	{ Name = 'Textolite_Dark',  Description = 'Textolite Dark',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2BA01' },
+	{ Name = 'Textolite_Light',  Description = 'Textolite Light', Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2BA02' },
+
+	{ Name = 'WinStyle_Dark',   Description = 'WinStyle Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2BB01' },
+	{ Name = 'WinStyle_Light',   Description = 'WinStyle Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2BB02' },
 }
 
 function WriteTabSRMMSkin(skinName, fontName)
-	local patternLong = 'Diplomat_Dark,Diplomat_Light,Glamour_Dark,Glamour_Light,GoldTime_Dark,GoldTime_Light,PhotoOne_Dark,PhotoOne_Light,Surface_Black,Surface_White'
+	local patternLong = 'Diplomat_Dark,Diplomat_Light,Glamour_Aqua_Dark,Glamour_Aqua_Light,Glamour_Dark,Glamour_Light,GoldTime_Dark,GoldTime_Light,PhotoOne_Dark,PhotoOne_Light,Surface_Black,Surface_White'
 	local patternShort = 'Graphite_Dark,Graphite_Light,Textolite_Dark,Textolite_Light'
 
 	local result = 0
