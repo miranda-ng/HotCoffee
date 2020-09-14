@@ -607,7 +607,7 @@ end
 #===========Clock==================================================================================
 object
 	ifnotset 1
-	ifnotset 5
+	ifset 5
 	ifnotset 6
 	ifnotset 10
 	type clock
@@ -619,7 +619,7 @@ object
 end
 object
 	ifset 1
-	ifnotset 5
+	ifset 5
 	ifnotset 6
 	ifnotset 10
 	type clock
@@ -632,7 +632,7 @@ object
 end
 object
 	ifnotset 1
-	ifset 5
+	ifnotset 5
 	ifnotset 6
 	ifnotset 10
 	type clock
@@ -644,7 +644,7 @@ object
 end
 object
 	ifset 1
-	ifset 5
+	ifnotset 5
 	ifnotset 6
 	ifnotset 10
 	type clock
@@ -657,7 +657,7 @@ object
 end
 object
 	ifnotset 2
-	ifnotset 5
+	ifset 5
 	ifnotset 6
 	ifnotset 10
 	type clock
@@ -669,7 +669,7 @@ object
 end
 object
 	ifset 2
-	ifnotset 5
+	ifset 5
 	ifnotset 6
 	ifnotset 10
 	type clock
@@ -682,7 +682,7 @@ object
 end
 object
 	ifnotset 1
-	ifnotset 5
+	ifset 5
 	ifnotset 6
 	ifset 10
 	type clock
@@ -694,7 +694,7 @@ object
 end
 object
 	ifset 1
-	ifnotset 5
+	ifset 5
 	ifnotset 6
 	ifset 10
 	type clock
@@ -707,7 +707,7 @@ object
 end
 object
 	ifnotset 1
-	ifset 5
+	ifnotset 5
 	ifnotset 6
 	ifset 10
 	type clock
@@ -719,7 +719,7 @@ object
 end
 object
 	ifset 1
-	ifset 5
+	ifnotset 5
 	ifnotset 6
 	ifset 10
 	type clock
@@ -732,7 +732,7 @@ object
 end
 object
 	ifnotset 2
-	ifnotset 5
+	ifset 5
 	ifnotset 6
 	ifset 10
 	type clock
@@ -744,7 +744,7 @@ object
 end
 object
 	ifset 2
-	ifnotset 5
+	ifset 5
 	ifnotset 6
 	ifset 10
 	type clock
@@ -757,7 +757,7 @@ object
 end
 object
 	ifnotset 3
-	ifnotset 5
+	ifset 5
 	ifnotset 6
 	type clock
 	source clock.png
@@ -767,7 +767,7 @@ object
 end
 object
 	ifset 3
-	ifnotset 5
+	ifset 5
 	ifnotset 6
 	type clock
 	source clock.png
@@ -778,7 +778,7 @@ object
 end
 object
 	ifnotset 3
-	ifset 5
+	ifnotset 5
 	ifnotset 6
 	ifnotset 10
 	type clock
@@ -789,7 +789,7 @@ object
 end
 object
 	ifset 3
-	ifset 5
+	ifnotset 5
 	ifnotset 6
 	ifnotset 10
 	type clock
@@ -801,7 +801,7 @@ object
 end
 object
 	ifnotset 3
-	ifset 5
+	ifnotset 5
 	ifnotset 6
 	ifset 10
 	type clock
@@ -812,7 +812,7 @@ object
 end
 object
 	ifset 3
-	ifset 5
+	ifnotset 5
 	ifnotset 6
 	ifset 10
 	type clock
@@ -901,6 +901,33 @@ object
 	type clock
 	x window.width-3-clock.width+1
 	y 8+11+(title.height-clock.height)/2+1
+end
+
+# Standard digital clocks border foreground for dark title text
+object
+	ifnotset 2
+	ifset 5
+	ifset 6
+	type bitmap
+	source tt_dtt_1.png
+	layer
+	x window.width-3-clock.width
+	y 16
+	w clock.width-5
+	h title.height+7
+end
+object
+	ifset 2
+	ifset 5
+	ifset 6
+	type bitmap
+	source tt_dtt_1.png
+	mono
+	layer
+	x window.width-3-clock.width
+	y 16
+	w clock.width-5
+	h title.height+7
 end
 
 #===========Standard digital clocks================================================================
@@ -1002,6 +1029,116 @@ object
 	type title
 	x 10+icon.width+3+1
 	y 8+11+1
+end
+
+# Title text border foreground for dark title text
+object
+	ifnotset 2
+	ifset 5
+	ifnotset 6
+	ifnotset 10
+	type bitmap
+	source tt_dtt_1.png
+	layer
+	x 10+icon.width+3
+	y 16
+	w window.width-(10+icon.width+3)-8-clock.width-2
+	h title.height+7
+end
+object
+	ifset 2
+	ifset 5
+	ifnotset 6
+	ifnotset 10
+	type bitmap
+	source tt_dtt_1.png
+	mono
+	layer
+	x 10+icon.width+3
+	y 16
+	w window.width-(10+icon.width+3)-8-clock.width-2
+	h title.height+7
+end
+object
+	ifnotset 2
+	ifset 5
+	ifset 6
+	ifnotset 10
+	type bitmap
+	source tt_dtt_1.png
+	layer
+	x 10+icon.width+3
+	y 16
+	w window.width-(10+icon.width+3)-1-clock.width-2
+	h title.height+7
+end
+object
+	ifset 2
+	ifset 5
+	ifset 6
+	ifnotset 10
+	type bitmap
+	source tt_dtt_1.png
+	mono
+	layer
+	x 10+icon.width+3
+	y 16
+	w window.width-(10+icon.width+3)-1-clock.width-2
+	h title.height+7
+end
+object
+	ifnotset 2
+	ifset 5
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source tt_dtt_1.png
+	layer
+	x 10+icon.width+3
+	y 16
+	w window.width-(10+icon.width+3)-8-clock.width-29-2
+	h title.height+7
+end
+object
+	ifset 2
+	ifset 5
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source tt_dtt_1.png
+	mono
+	layer
+	x 10+icon.width+3
+	y 16
+	w window.width-(10+icon.width+3)-8-clock.width-29-2
+	h title.height+7
+end
+object
+	ifnotset 2
+	ifset 5
+	ifset 6
+	ifset 10
+	type bitmap
+	source tt_dtt_1.png
+	layer
+	x 10+icon.width+3
+	y 16
+	w window.width-(10+icon.width+3)-1-clock.width-2
+	h title.height+7
+end
+object
+	ifset 2
+	ifset 5
+	ifset 6
+	ifset 10
+	type bitmap
+	source tt_dtt_1.png
+	mono
+	layer
+	x 10+icon.width+3
+	y 16
+	w window.width-(10+icon.width+3)-1-clock.width-2
+	h title.height+7
 end
 
 #===========Title text=============================================================================
