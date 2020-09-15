@@ -113,20 +113,22 @@ hSkinRoot = clist.AddMainMenuItem({
 	Name = 'Skin',
 	Parent = hViewRoot,
 	Icon = Icons.Menu.Skin,
-	Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD00',
+	Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2A000',
 	Position = 100
 })
 assert(hSkinRoot)
 
 Skins =
 {
-	{ Name = 'Default_Miranda', Description = 'Default Miranda',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD01' },
-	{ Name = 'Default_Windows', Description = 'Windows style',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2DD02' },
+	{ Name = 'Default_Miranda', Description = 'Default Miranda',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2A001' },
+	{ Name = 'Default_Windows', Description = 'Windows style',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2A002' },
 
-	{ Name = 'Custom_Miranda', Description = 'Custom Miranda',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2D000' },
-	{ Name = 'Custom_Miranda_Dark', Description = 'Custom Miranda Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2D001' },
-	{ Name = 'Custom_Miranda_Light', Description = 'Custom Miranda Light',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2D002' },
+	{ Name = 'Custom_Miranda', Description = 'Custom Miranda',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2B001' },
+	{ Name = 'Custom_Miranda_Dark', Description = 'Custom Miranda Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2B002' },
+	{ Name = 'Custom_Miranda_Light', Description = 'Custom Miranda Light',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2B003' },
 
+	{ Name = 'WinStyle_Dark',   Description = 'WinStyle Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2C001' },
+	{ Name = 'WinStyle_Light',   Description = 'WinStyle Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2C002' },
 
 	{ Name = 'Diplomat_Dark',   Description = 'Diplomat Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AA01' },
 	{ Name = 'Diplomat_Light',   Description = 'Diplomat Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AA02' },
@@ -152,13 +154,14 @@ Skins =
 	{ Name = 'Textolite_Dark',  Description = 'Textolite Dark',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2BA01' },
 	{ Name = 'Textolite_Light',  Description = 'Textolite Light', Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2BA02' },
 
-	{ Name = 'WinStyle_Dark',   Description = 'WinStyle Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2BB01' },
-	{ Name = 'WinStyle_Light',   Description = 'WinStyle Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2BB02' },
+	{ Name = 'Textolite_Gray_Dark',  Description = 'Textolite Gray Dark',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2BB01' },
+	{ Name = 'Textolite_Gray_Light',  Description = 'Textolite Gray Light', Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2BB02' },
 }
 
 function WriteTabSRMMSkin(skinName, fontName)
 	local patternLong = 'Diplomat_Dark,Diplomat_Light,Glamour_Aqua_Dark,Glamour_Aqua_Light,Glamour_Dark,Glamour_Light,GoldTime_Dark,GoldTime_Light,PhotoOne_Dark,PhotoOne_Light,Surface_Black,Surface_White'
 	local patternShort = 'Graphite_Dark,Graphite_Light,Textolite_Dark,Textolite_Light'
+	local patternShortNew = 'Textolite_Gray_Dark,Textolite_Gray_Light'
 
 	local result = 0
 
@@ -170,6 +173,10 @@ function WriteTabSRMMSkin(skinName, fontName)
 		result = 6
 	elseif patternShort:find(skinName) and fontName == 'handwriting' then
 		result = 3
+	elseif patternShortNew:find(skinName) and fontName == 'printing' then
+		result = 9
+	elseif patternShortNew:find(skinName) and fontName == 'handwriting' then
+		result = 6
 	end
 
 	if result > 0 then
