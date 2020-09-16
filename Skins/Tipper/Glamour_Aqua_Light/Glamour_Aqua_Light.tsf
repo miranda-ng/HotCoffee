@@ -19,7 +19,7 @@ Right = 8
 Bottom = 8
 
 [Fonts]
-Title-color = 196 64 0
+Title-color = 94 123 140
 Title-effect = FONT_BOLD
 
 Label-color = 153 174 187

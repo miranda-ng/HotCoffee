@@ -329,6 +329,7 @@ XMPP-filename=uSkins\Smileys\_dark\kolobok\kolobok.msl
 
 [IEVIEW]
 _default_.SRMMTemplateFile=sSkins\IEView\Textolite_Dark.ivt
+GeneralFlags=d37
 
 [PackInfo]
 Skin=uTextolite_Gray_Dark
