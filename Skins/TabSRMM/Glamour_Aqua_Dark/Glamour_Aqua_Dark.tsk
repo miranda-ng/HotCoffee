@@ -72,6 +72,11 @@ TitleBarRightOffset=-5
 
 [%Buttonmouseover]
 
+[%InfoPanelBackground]
+Color1=5E778C
+Color2=445766
+Gradient=down
+
 [%Tabpage]
 
 [%Tabitem]
@@ -175,7 +180,7 @@ Bottom=3
 Item0=Tabpage
 
 [$Tabitem]
-Glyph=0,83,6,87
+Glyph=32,67,40,110
 ;Alpha=70
 Left=3
 Top=3
@@ -200,7 +205,7 @@ Bottom=2
 Item0=Tabitem_active
 
 [$Tabitem_bottom]
-Glyph=0,89,6,94
+Glyph=62,67,70,110
 ;Alpha=70
 Left=3
 Top=2
@@ -209,7 +214,7 @@ Bottom=3
 Item0=Tabitem_bottom
 
 [$Tabitem_hottrack_bottom]
-Glyph=32,67,40,110
+Glyph=42,67,50,110
 Left=4
 Top=2
 Right=4
@@ -217,7 +222,7 @@ Bottom=2
 Item0=Tabitem_hottrack_bottom
 
 [$Tabitem_active_bottom]
-Glyph=42,67,50,110
+Glyph=52,67,60,110
 Left=4
 Top=2
 Right=4
