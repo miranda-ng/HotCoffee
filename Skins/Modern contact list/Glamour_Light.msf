@@ -1255,22 +1255,22 @@ BkColour=l
 SelBkColour=l
 
 [TabSRMM_Fonts]
-aeroGlow=d15790320
+aeroGlow=l
 BkgColour=d15724013
-cRichBorders=d0
-fillColor=d0
-genericTxtClr=d0
+cRichBorders=l
+fillColor=l
+genericTxtClr=l
 hgrid=d10526880
 inbg=d15724013
 inputbg=d15724013
-ipfieldsbg=d15790320
-ipfieldsbgHigh=d16777215
+ipfieldsbg=l
+ipfieldsbgHigh=l
 oldinbg=d15724013
 oldoutbg=d14737118
 outbg=d14737118
 statbg=d15265779
-tbBgHigh=d16777215
-tbBgLow=d15790320
+tbBgHigh=l
+tbBgLow=l
 Font0=sVerdana
 Font0Col=d4605510
 Font0Flags=w536871200
@@ -1441,14 +1441,14 @@ Font105Size=b-11
 Font105Sty=b1
 
 [Tab_SRMsg]
-tab_bg_active=d16777215
-tab_bg_hottrack=d15335166
-tab_bg_normal=d15790320
-tab_bg_unread=d15335166
-tab_txt_active=d0
-tab_txt_hottrack=d8404992
-tab_txt_normal=d5263440
-tab_txt_unread=d16512
+tab_bg_active=l
+tab_bg_hottrack=l
+tab_bg_normal=l
+tab_bg_unread=l
+tab_txt_active=l
+tab_txt_hottrack=l
+tab_txt_normal=l
+tab_txt_unread=l
 
 [Tipper]
 AvBorderCol=d0

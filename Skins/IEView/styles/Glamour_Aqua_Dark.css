@@ -1,7 +1,7 @@
 /*--- Global ---*/
 
 .Link-Text, .tzerlink {
-	color: #74B8E6;
+	color: #98BFE7;
 }
 
 input {
@@ -32,20 +32,20 @@ html {
 }
 
 a, a:active {
-	color: #74B8E6;
+	color: #98BFE7;
 	text-decoration: none;
 	font-weight: normal;
 	cursor:pointer;
 }
 
 a:visited {
-	color: #C87046;
+	color: #E7BF98;
 	text-decoration: none;
 	font-weight: normal;
 }
 
 a:hover {
-	color: #74B8E6;
+	color: #98BFE7;
 	text-decoration: underline;
 	font-weight: normal;
 }
@@ -78,7 +78,7 @@ div {
 }
 
 .time {
-	color: #ACC5D2;
+	color: #8EA5B0;
 	font-weight: normal;
 	float: right;
 	font-size: 11px;
@@ -123,7 +123,7 @@ div.avatar {
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
-	color: #C87046;
+	color: #DFAA75;
 	background-image: url(Glamour_Aqua_Dark/in.png);
 }
 
@@ -134,7 +134,7 @@ div.avatar {
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
-	color: #4E7DAD;
+	color: #75AADF;
 	background-image: url(Glamour_Aqua_Dark/out.png);
 }
 
@@ -145,47 +145,47 @@ div.avatar {
 /* -------------------- status support -------------------- */
 
 .status .head {
-	color: #C87046;
+	color: #DFAA75;
 	background-image: url(Glamour_Aqua_Dark/status.png);
 }
 
 .contentStatus, .contenthStatus {
-	color: #C87046;
+	color: #E7BF98;
 	background-image: url(Glamour_Aqua_Dark/status.png);
 }
 
 .contentStatus .time, .contenthStatus .time {
-	color: #A57D6B;
+	color: #C79F78;
 }
 
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
-	color: #469B46;
+	color: #8BC26D;
 	background-image: url(Glamour_Aqua_Dark/file.png);
 }
 
 .contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
-	color: #469B46;
+	color: #A3CF8B;
 	background-image: url(Glamour_Aqua_Dark/file.png);
 }
 
 .contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
-	color: #6B916B;
+	color: #82A76D;
 }
 
 /* -------------------- URL support -------------------- */
 
 .inurl .head {
-	color: #4E7DAD;
+	color: #75AADF;
 	background-image: url(Glamour_Aqua_Dark/url.png);
 }
 
 .contentURL, .contenthURL {
-	color: #4E7DAD;
+	color: #98BFE7;
 	background-image: url(Glamour_Aqua_Dark/url.png);
 }
 
 .contentURL .time, .contenthURL .time {
-	color: #6E8399;
+	color: #789FC7;
 }
