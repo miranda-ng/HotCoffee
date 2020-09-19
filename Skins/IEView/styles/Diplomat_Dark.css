@@ -106,7 +106,7 @@ div.avatar {
 	margin: -1px;
 }
 
-.MessageIn, .MessageOut, .hMessageIn, .hMessageOut, .frame, .Status, .hStatus, .FileIn, .hFileIn, .FileOut, .hFileOut, .URL, .hURL {
+.MessageIn, .MessageOut, .hMessageIn, .hMessageOut, .frame_MessageInGroupStart, .frame_MessageOutGroupStart, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart {
 	border-left: 1px solid #55575F;
 	border-top: 1px solid #55575F;
 	border-right: 1px solid #1F2025;
@@ -117,7 +117,7 @@ div.avatar {
 	border-top: 1px dotted #55575F;
 }
 
-.hMessageIn, .hMessageOut, .history, .hStatus, .hFileIn, .hFileOut, .hURL {
+.hMessageIn, .hMessageOut, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart, .hStatus, .hFileIn, .hFileOut, .hURL {
 	background: url(Diplomat_Dark/history.png) no-repeat bottom right;
 }
 
@@ -160,6 +160,13 @@ div.avatar {
 	color: #A57D6B;
 }
 
+.Status, .hStatus {
+	border-left: 1px solid #55575F;
+	border-top: 1px solid #55575F;
+	border-right: 1px solid #1F2025;
+	border-bottom: 1px solid #1F2025;
+}
+
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
@@ -176,9 +183,16 @@ div.avatar {
 	color: #6B916B;
 }
 
+.FileIn, .hFileIn, .FileOut, .hFileOut {
+	border-left: 1px solid #55575F;
+	border-top: 1px solid #55575F;
+	border-right: 1px solid #1F2025;
+	border-bottom: 1px solid #1F2025;
+}
+
 /* -------------------- URL support -------------------- */
 
-.inurl .head {
+.inurl .head, .outurl .head {
 	color: #4E7DAD;
 	background-image: url(Diplomat_Dark/url.png);
 }
@@ -190,4 +204,11 @@ div.avatar {
 
 .contentURL .time, .contenthURL .time {
 	color: #6E8399;
+}
+
+.URL, .hURL {
+	border-left: 1px solid #55575F;
+	border-top: 1px solid #55575F;
+	border-right: 1px solid #1F2025;
+	border-bottom: 1px solid #1F2025;
 }

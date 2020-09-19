@@ -59,7 +59,7 @@
 
 
 <!--MessageInGroupStart-->
-<div class="frame">
+<div class="frame_MessageInGroupStart">
 <div class="in MessageInGroupStart">
 	<div class="head">
 		<div class="date">%date%</div>
@@ -96,7 +96,7 @@
 
 
 <!--MessageOutGroupStart-->
-<div class="frame">
+<div class="frame_MessageOutGroupStart">
 <div class="out MessageOutGroupStart">
 	<div class="head">
 		<div class="date">%date%</div>
@@ -173,7 +173,7 @@
 
 
 <!--hMessageInGroupStart-->
-<div class="frame history">
+<div class="frame_hMessageInGroupStart">
 <div class="in hMessageInGroupStart">
 	<div class="head">
 		<div class="date">%date%</div>
@@ -208,7 +208,7 @@
 
 
 <!--hMessageOutGroupStart-->
-<div class="frame history">
+<div class="frame_hMessageOutGroupStart">
 <div class="out hMessageOutGroupStart">
 	<div class="head">
 		<div class="date">%date%</div>
@@ -388,7 +388,7 @@
 </div>
 
 <!--URLOut-->
-<div class="inurl URL">
+<div class="outurl URL">
 	<div class="head">
 		<div class="date">%date%</div>
 		<div class="name">%name%</div>
@@ -407,7 +407,7 @@
 </div>
 
 <!--hURLOut-->
-<div class="inurl hURL">
+<div class="outurl hURL">
 	<div class="head">
 		<div class="date">%date%</div>
 		<div class="name">%name%</div>
