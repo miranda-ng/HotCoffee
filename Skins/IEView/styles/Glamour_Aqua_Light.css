@@ -39,7 +39,7 @@ a, a:active {
 }
 
 a:visited {
-	color: #A66444;
+	color: #A67544;
 	text-decoration: none;
 	font-weight: normal;
 }
@@ -123,7 +123,7 @@ div.avatar {
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
-	color: #A66444;
+	color: #A67544;
 	background-image: url(Glamour_Aqua_Light/in.png);
 }
 
@@ -145,17 +145,17 @@ div.avatar {
 /* -------------------- status support -------------------- */
 
 .status .head {
-	color: #A66444;
+	color: #A67544;
 	background-image: url(Glamour_Aqua_Light/status.png);
 }
 
 .contentStatus, .contenthStatus {
-	color: #A66444;
+	color: #A67544;
 	background-image: url(Glamour_Aqua_Light/status.png);
 }
 
 .contentStatus .time, .contenthStatus .time {
-	color: #C38264;
+	color: #CEAA86;
 }
 
 .Status, .hStatus {
@@ -166,17 +166,17 @@ div.avatar {
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
-	color: #468E46;
+	color: #417441;
 	background-image: url(Glamour_Aqua_Light/file.png);
 }
 
 .contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
-	color: #468E46;
+	color: #417441;
 	background-image: url(Glamour_Aqua_Light/file.png);
 }
 
 .contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
-	color: #79AE79;
+	color: #7DB77D;
 }
 
 .FileIn, .hFileIn, .FileOut, .hFileOut {
@@ -197,7 +197,7 @@ div.avatar {
 }
 
 .contentURL .time, .contenthURL .time {
-	color: #7994AE;
+	color: #86AACE;
 }
 
 .URL, .hURL {
