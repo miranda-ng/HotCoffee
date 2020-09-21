@@ -6,7 +6,7 @@
 #===========Options================================================================================
 options
 	#option	id	val	title
-	option	1	0	Color frame
+	option	1	1	Color frame
 	option	2	0	Color text background
 	option	3	1	Color logo & clocks
 	option	4	1	Color text
