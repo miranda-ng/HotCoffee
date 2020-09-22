@@ -140,7 +140,7 @@ Bottom=3
 Item0=Titlebuttonpressed
 
 [$Titlebuttonmouseover]
-Glyph=0,96,6,110
+Glyph=0,83,6,97
 Left=3
 Top=2
 Right=3
