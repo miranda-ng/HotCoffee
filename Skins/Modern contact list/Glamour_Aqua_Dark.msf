@@ -196,7 +196,7 @@ EnableLayering=b1
 ;Colors
 [Alarm]
 BkColour=d15790320
-clFrameBack=d7430219
+clFrameBack=d7956304
 Font=sVerdana
 FontCol=d15392976
 FontFlags=w0
@@ -217,10 +217,10 @@ FontWindowSize=b-13
 FontWindowSty=b0
 
 [BASS Interface]
-ColorFrame=d7430219
+ColorFrame=d7956304
 
 [CLC]
-BkColour=d7430219
+BkColour=d7956304
 HotTextColour=d16777215
 QuickSearchColour=d4210879
 SelBkColour=l
@@ -708,15 +708,15 @@ TextColour=d15392976
 Color0=d11576462
 Color1=d16777215
 Color2=d9663831
-Color3=d7430219
+Color3=d7956304
 Color4=d6378048
 Color5=d4873536
 Color6=d4873536
 Color7=d6834489
 Color8=d6834489
-Color9=d7430219
+Color9=d7956304
 Color10=d6378048
-Color11=d7430219
+Color11=d7956304
 Color12=d6378048
 Color13=d4868951
 Color14=d4868951
@@ -903,7 +903,7 @@ Font28Size=b-13
 Font28Sty=b0
 
 [JABBER]
-clFrameBack=d7430219
+clFrameBack=d7956304
 fntFrameClock=sVerdana
 fntFrameClockCol=d15392976
 fntFrameClockFlags=w32
@@ -924,11 +924,11 @@ SelTextColour=d8388608
 TextColour=d0
 
 [ModernSettings]
-KeyColor=d7430219
+KeyColor=d7956304
 
 [MyDetails]
 AvatarBorderColor=d16777215
-BackgroundColor=d7430219
+BackgroundColor=d7956304
 AccountFont=sVerdana
 AccountFontCol=d15392976
 AccountFontFlags=w32
@@ -1230,7 +1230,7 @@ XMPP_Error/TextSty=b0
 {Misc/Warning}textSty=b0
 
 [QuickSearch]
-frame_back=d7430219
+frame_back=d7956304
 back_del=d14002943
 back_dis=d12303359
 back_hid=d12251893
@@ -1260,11 +1260,11 @@ cRichBorders=l
 fillColor=l
 genericTxtClr=l
 hgrid=d11576462
-inbg=d7430219
+inbg=d7956304
 inputbg=d6378048
 ipfieldsbg=l
 ipfieldsbgHigh=l
-oldinbg=d7430219
+oldinbg=d7956304
 oldoutbg=d6378048
 outbg=d6378048
 statbg=d4868951
@@ -1452,9 +1452,9 @@ tab_txt_unread=l
 [Tipper]
 AvBorderCol=d16777215
 BorderCol=d6378048
-ColourBg=d7430219
+ColourBg=d7956304
 DividerCol=d11576462
-SidebarCol=d7430219
+SidebarCol=d7956304
 FontFirst=sVerdana
 FontFirstCol=d16777215
 FontFirstFlags=w288
@@ -1489,7 +1489,7 @@ BkColour=l
 SelBkColour=l
 
 [Weather]
-ColorMwinFrame=d7430219
+ColorMwinFrame=d7956304
 fnt0=sVerdana
 fnt0Col=d15392976
 fnt0Flags=w160
@@ -1504,7 +1504,7 @@ fnt1Size=b-11
 fnt1Sty=b1
 
 [mRadio]
-frame_back=d7430219
+frame_back=d7956304
 
 
 ;IEView settings
