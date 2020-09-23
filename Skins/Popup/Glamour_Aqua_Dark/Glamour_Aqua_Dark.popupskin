@@ -603,6 +603,27 @@ object
 	x window.width-8-2
 	y 6
 end
+object
+	ifnotset 2
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_6.png
+	layer
+	x window.width-8-2
+	y 6
+end
+object
+	ifset 2
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_6.png
+	mono
+	layer
+	x window.width-8-2
+	y 6
+end
 
 #===========Clock==================================================================================
 object
