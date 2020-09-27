@@ -892,7 +892,7 @@ Font19Flags=w224
 [TabSRMM_Fonts]
 Font100=sVerdana
 Font100Size=b-9
-Font100Sty=b0
+Font100Sty=b1
 Font100Set=b204
 Font100Col=d12632256
 Font100Flags=w536871200
