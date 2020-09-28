@@ -1,15 +1,15 @@
 /*--- Global ---*/
 
 .Link-Text, .tzerlink {
-	color: #98BFE7;
+	color: #75A5DF;
 }
 
 input {
 	background: #506779;
-	border-top: 1px solid #748DA3;
-	border-left: 1px solid #748DA3;
-	border-bottom: 1px solid #25323E;
-	border-right: 1px solid #25323E;
+	border-top: 1px solid #658198;
+	border-left: 1px solid #658198;
+	border-bottom: 1px solid #253038;
+	border-right: 1px solid #253038;
 	color: #D0E0EA;
 }
 
@@ -18,8 +18,8 @@ html {
 	scrollbar-highlight-color: #506779;
 	scrollbar-shadow-color: #506779;
 	scrollbar-arrow-color: #D0E0EA;
-	scrollbar-3dlight-color: #748DA3;
-	scrollbar-darkshadow-color: #25323E;
+	scrollbar-3dlight-color: #658198;
+	scrollbar-darkshadow-color: #253038;
 	scrollbar-track-color: #405261;
 	background: url(Glamour_Aqua_Dark/picture.png) fixed no-repeat bottom right;
 	background-color: #405261;
@@ -32,7 +32,7 @@ html {
 }
 
 a, a:active {
-	color: #98BFE7;
+	color: #75A5DF;
 	text-decoration: none;
 	font-weight: normal;
 	cursor:pointer;
@@ -45,7 +45,7 @@ a:visited {
 }
 
 a:hover {
-	color: #98BFE7;
+	color: #75A5DF;
 	text-decoration: underline;
 	font-weight: normal;
 }
@@ -102,18 +102,18 @@ div.avatar {
 }
 
 .code {
-	border: 1px dashed #748DA3;
+	border: 1px dashed #658198;
 	margin: -1px;
 }
 
 .MessageIn, .MessageOut, .hMessageIn, .hMessageOut, .frame_MessageInGroupStart, .frame_MessageOutGroupStart, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart {
-	border-top: 1px solid #748DA3;
-	border-bottom: 1px solid #25323E;
+	border-top: 1px solid #658198;
+	border-bottom: 1px solid #253038;
 
 }
 
 .MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
-	border-top: 1px dotted #748DA3;
+	border-top: 1px dotted #658198;
 }
 
 .hMessageIn, .hMessageOut, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart, .hStatus, .hFileIn, .hFileOut, .hURL {
@@ -124,7 +124,7 @@ div.avatar {
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
-	color: #DFAA75;
+	color: #DFA375;
 	background-image: url(Glamour_Aqua_Dark/in.png);
 }
 
@@ -135,7 +135,7 @@ div.avatar {
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
-	color: #75AADF;
+	color: #75A5DF;
 	background-image: url(Glamour_Aqua_Dark/out.png);
 }
 
@@ -146,38 +146,38 @@ div.avatar {
 /* -------------------- status support -------------------- */
 
 .status .head {
-	color: #DFAA75;
+	color: #DFA375;
 	background-image: url(Glamour_Aqua_Dark/status.png);
 }
 
 .contentStatus, .contenthStatus {
-	color: #E7BF98;
+	color: #DFA375;
 	background-image: url(Glamour_Aqua_Dark/status.png);
 }
 
 .contentStatus .time, .contenthStatus .time {
-	color: #C79F78;
+	color: #B6845F;
 }
 
 .Status, .hStatus {
-	border-top: 1px solid #997064;
-	border-bottom: 1px solid #382925;
+	border-top: 1px solid #A87855;
+	border-bottom: 1px solid #3E2D20;
 }
 
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
-	color: #8BC26D;
+	color: #8BCF8B;
 	background-image: url(Glamour_Aqua_Dark/file.png);
 }
 
 .contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
-	color: #A3CF8B;
+	color: #8BCF8B;
 	background-image: url(Glamour_Aqua_Dark/file.png);
 }
 
 .contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
-	color: #82A76D;
+	color: #72A372;
 }
 
 .FileIn, .hFileIn, .FileOut, .hFileOut {
@@ -188,20 +188,20 @@ div.avatar {
 /* -------------------- URL support -------------------- */
 
 .inurl .head, .outurl .head {
-	color: #75AADF;
+	color: #75A5DF;
 	background-image: url(Glamour_Aqua_Dark/url.png);
 }
 
 .contentURL, .contenthURL {
-	color: #98BFE7;
+	color: #75A5DF;
 	background-image: url(Glamour_Aqua_Dark/url.png);
 }
 
 .contentURL .time, .contenthURL .time {
-	color: #789FC7;
+	color: #5F86B6;
 }
 
 .URL, .hURL {
-	border-top: 1px solid #556BA8;
-	border-bottom: 1px solid #20283E;
+	border-top: 1px solid #547AA9;
+	border-bottom: 1px solid #1F2E3F;
 }
