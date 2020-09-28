@@ -1,3 +1,10 @@
 https://material.io/inline-tools/color/
 https://habr.com/ru/post/472410/
 https://colorschemedesigner.com/csd-3.5/
+
+
+https://learn.javascript.ru/css-sprite
+https://habr.com/ru/post/159027/
+htmlbook.ru/css/background-position
+https://www.cyberforum.ru/html/thread1224620.html
+https://ruseller.com/lessons.php?rub=2&id=1104
