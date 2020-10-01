@@ -1,0 +1,56 @@
+[About]
+Author = Dracosha
+Preview = preview.png
+
+[Background]
+Image = diplomatl.png
+TM = TM_STRECH_ALL 
+Left = 9
+Top = 9
+Right = 9
+Bottom = 9
+
+[Sidebar]
+Image = 
+TM = 
+Left = 
+Top = 
+Right = 
+Bottom = 
+
+[Fonts]
+Title-face = Tahoma
+Title-color = 196 67 5
+Title-size = 10
+Title-effect = FONT_BOLD
+
+Label-face = Tahoma
+Label-color = 70 70 70
+Label-size = 7
+Label-effect = FONT_BOLD
+
+Value-face = Tahoma
+Value-color = 10 10 10
+Value-size = 7
+Value-effect = 0
+
+TrayTitle-face = Tahoma
+TrayTitle-color = 0 0 0
+TrayTitle-size = 8
+TrayTitle-effect = FONT_BOLD
+
+Divider-color = 70 70 70
+
+[Appearance]
+General-padding = 12
+Title-indent = 24
+Text-indent = 24
+Value-indent = 10
+Text-padding = 2
+Outer-avatar-padding = 10
+Inner-avatar-padding = 2
+Sidebar-width = 36
+Opacity = 95
+
+[Other]
+Enable-coloring = TRUE

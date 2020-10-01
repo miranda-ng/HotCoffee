@@ -1,0 +1,191 @@
+/*@import url('printing.css');*/
+
+/* Textveränderungen */
+.Link-Text			{color: #004080;}
+.tzerlink			{color: #004080;}
+
+/* Fonts */
+input {
+	background: #FFFFFF;
+	border-top: 1px solid #E8E8E8;
+	border-left: 1px solid #E8E8E8;
+	border-bottom: 1px solid #E8E8E8;
+	border-right: 1px solid #E8E8E8;
+	color: #272727;
+}
+
+html {
+	scrollbar-face-color: #FFFFFF;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #FFFFFF;
+	scrollbar-arrow-color: #272727;
+	scrollbar-base-color: #E8E8E8;
+	scrollbar-darkshadow-color: #E8E8E8;
+	background: url(Light.png) fixed no-repeat bottom right;
+	background-color: #FFFFFF;
+	overflow: auto;
+	padding: 0px 0px 0px 0px;
+	margin: 0;
+	font-size: 13px;
+	color: #4F4F4F;
+	zoom: 0 !important;
+}
+
+a, a:active {
+	color: #004080;
+	text-decoration: none;
+	font-weight: normal;
+	cursor:pointer;
+}
+
+a:visited {
+	color: #C44305;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+a:hover {
+	color: #004080;
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+div {
+	width: auto;
+	word-wrap: break-word;
+}
+
+.img {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	vertical-align: middle;
+}
+
+.head {
+	border-bottom: 1px dotted;
+}
+
+.date {
+	font-weight: bold;
+	float: right;
+	font-size: 11px;
+	padding: 3px 5px 0px 5px;
+}
+
+.name {
+	font-weight: bold;
+	padding: 3px 5px 0px 5px;
+}
+
+.time {
+	color: Gray;
+	font-weight: normal;
+	float: right;
+	font-size: 11px;
+}
+
+.text {
+/*	word-break: break-all;*/
+	padding: 3px 5px 3px 5px;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+div.avatar {
+	display: none;
+	float: left;
+	padding: 0px 0px 0px 0px;
+}
+
+.avatar img {
+	height: 32;
+}
+
+.code {
+	border: 1px dashed #E8E8E8;
+	margin: -1px;
+}
+
+.MessageIn, .MessageOut, .hMessageIn, .hMessageOut, .frame, .Status, .hStatus, .FileIn, .hFileIn, .FileOut, .hFileOut, .URL, .hURL, {
+	/*border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #B4B4B4;*/
+}
+
+.MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
+	border-top: 1px dotted #E8E8E8;
+}
+
+.hMessageIn, .hMessageOut, .history, .hStatus, .hFileIn, .hFileOut, .hURL {
+	background: url(surfacew/history.png) no-repeat bottom right;
+}
+
+
+/* -------------------- incoming messagebox -------------------- */
+
+.in .head {
+	color: #C44305;
+	background-image: url(surfacew/in.png);
+}
+
+.contentMessageIn, .contenthMessageIn, .contentMessageInGroupStart, .MessageInGroupInner, .contenthMessageInGroupStart, .hMessageInGroupInner {
+	background-image: url(surfacew/in.png);
+}
+
+/* -------------------- outgoing messagebox -------------------- */
+
+.out .head {
+	color: #054381;
+	background-image: url(surfacew/out.png);
+}
+
+.contentMessageOut, .contenthMessageOut, .contentMessageOutGroupStart, .MessageOutGroupInner, .contenthMessageOutGroupStart, .hMessageOutGroupInner {
+	background-image: url(surfacew/out.png);
+}
+
+/* -------------------- status support -------------------- */
+
+.status .head {
+	color: #C44305;
+	background-image: url(surfacew/status.png);
+}
+
+.contentStatus, .contenthStatus {
+	color: #C44305;
+	background-image: url(surfacew/status.png);
+}
+
+.contentStatus .time, .contenthStatus .time {
+	color: #C38264;
+}
+
+/* -------------------- file transfer support -------------------- */
+
+.infile .head, .outfile .head {
+	color: green;
+	background-image: url(surfacew/file.png);
+}
+
+.contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
+	color: green;
+	background-image: url(surfacew/file.png);
+}
+
+.contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
+	color: #61A061;
+}
+
+/* -------------------- URL support -------------------- */
+
+.inurl .head {
+	color: #054381;
+	background-image: url(surfacew/url.png);
+}
+
+.contentURL, .contenthURL {
+	color: #054381;
+	background-image: url(surfacew/url.png);
+}
+
+.contentURL .time, .contenthURL .time {
+	color: #6482A1;
+}
