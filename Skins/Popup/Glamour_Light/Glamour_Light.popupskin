@@ -508,7 +508,7 @@ object
 	type bitmap
 	source logo_layer_0.png
 	layer
-	x window.width-8-clock.width-29
+	x window.width-8-clock.width-28
 	y 6
 end
 object
@@ -519,11 +519,11 @@ object
 	source logo_layer_0.png
 	mono
 	layer
-	x window.width-8-clock.width-29
+	x window.width-8-clock.width-28
 	y 6
 end
 object
-	ifnotset 1
+	ifnotset 2
 	ifnotset 6
 	ifset 10
 	type bitmap
@@ -533,7 +533,7 @@ object
 	y 6
 end
 object
-	ifset 1
+	ifset 2
 	ifnotset 6
 	ifset 10
 	type bitmap
@@ -582,51 +582,30 @@ object
 	x window.width-8-clock.width-29
 	y 0
 end
-object
-	ifnotset 1
-	ifnotset 6
-	ifset 10
-	type bitmap
-	source logo_layer_5.png
-	layer
-	x window.width-8-2
-	y 6
-end
-object
-	ifset 1
-	ifnotset 6
-	ifset 10
-	type bitmap
-	source logo_layer_5.png
-	mono
-	layer
-	x window.width-8-2
-	y 6
-end
 
 #===========Clock==================================================================================
 object
 	ifnotset 1
-	ifnotset 5
+	ifset 5
 	ifnotset 6
 	ifnotset 10
 	type clock
-	source clock_edges.png
+	source clock_bg_ltt.png
 	layer
-	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	clocksize 4 4 8 6 8 8 8 8 8 8 8 8 0 0 4
 	x window.width-8-clock.width
 	y 8+4
 end
 object
 	ifset 1
-	ifnotset 5
+	ifset 5
 	ifnotset 6
 	ifnotset 10
 	type clock
-	source clock_edges.png
+	source clock_bg_ltt.png
 	mono
 	layer
-	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	clocksize 4 4 8 6 8 8 8 8 8 8 8 8 0 0 4
 	x window.width-8-clock.width
 	y 8+4
 end
@@ -634,11 +613,11 @@ object
 	ifnotset 1
 	ifset 5
 	ifnotset 6
-	ifnotset 10
+	ifset 10
 	type clock
-	source clock_edges_ltt.png
+	source clock&logo_bg_ltt.png
 	layer
-	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	clocksize 0 4 8 6 8 8 8 8 8 8 8 8 0 0 4
 	x window.width-8-clock.width
 	y 8+4
 end
@@ -646,12 +625,12 @@ object
 	ifset 1
 	ifset 5
 	ifnotset 6
-	ifnotset 10
+	ifset 10
 	type clock
-	source clock_edges_ltt.png
+	source clock&logo_bg_ltt.png
 	mono
 	layer
-	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	clocksize 0 4 8 6 8 8 8 8 8 8 8 8 0 0 4
 	x window.width-8-clock.width
 	y 8+4
 end
@@ -681,56 +660,6 @@ object
 	y 8+4
 end
 object
-	ifnotset 1
-	ifnotset 5
-	ifnotset 6
-	ifset 10
-	type clock
-	source clock&logo_edges.png
-	layer
-	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
-	x window.width-8-clock.width
-	y 8+4
-end
-object
-	ifset 1
-	ifnotset 5
-	ifnotset 6
-	ifset 10
-	type clock
-	source clock&logo_edges.png
-	mono
-	layer
-	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
-	x window.width-8-clock.width
-	y 8+4
-end
-object
-	ifnotset 1
-	ifset 5
-	ifnotset 6
-	ifset 10
-	type clock
-	source clock&logo_edges_ltt.png
-	layer
-	clocksize 0 4 8 6 8 8 8 8 8 8 8 8 0 0 5
-	x window.width-8-clock.width
-	y 8+4
-end
-object
-	ifset 1
-	ifset 5
-	ifnotset 6
-	ifset 10
-	type clock
-	source clock&logo_edges_ltt.png
-	mono
-	layer
-	clocksize 0 4 8 6 8 8 8 8 8 8 8 8 0 0 5
-	x window.width-8-clock.width
-	y 8+4
-end
-object
 	ifnotset 2
 	ifnotset 5
 	ifnotset 6
@@ -752,6 +681,106 @@ object
 	mono
 	layer
 	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifnotset 2
+	ifset 5
+	ifnotset 6
+	ifnotset 10
+	type clock
+	source clock_edges_ltt.png
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifset 2
+	ifset 5
+	ifnotset 6
+	ifnotset 10
+	type clock
+	source clock_edges_ltt.png
+	mono
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifnotset 2
+	ifnotset 5
+	ifnotset 6
+	ifnotset 10
+	type clock
+	source clock_edges.png
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifset 2
+	ifnotset 5
+	ifnotset 6
+	ifnotset 10
+	type clock
+	source clock_edges.png
+	mono
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifnotset 2
+	ifnotset 5
+	ifnotset 6
+	ifset 10
+	type clock
+	source clock&logo_edges.png
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifset 2
+	ifnotset 5
+	ifnotset 6
+	ifset 10
+	type clock
+	source clock&logo_edges.png
+	mono
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifnotset 2
+	ifset 5
+	ifnotset 6
+	ifset 10
+	type clock
+	source clock&logo_edges_ltt.png
+	layer
+	clocksize 0 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifset 2
+	ifset 5
+	ifnotset 6
+	ifset 10
+	type clock
+	source clock&logo_edges_ltt.png
+	mono
+	layer
+	clocksize 0 4 8 6 8 8 8 8 8 8 8 8 0 0 5
 	x window.width-8-clock.width
 	y 8+4
 end
@@ -821,6 +850,50 @@ object
 	clocksize 0 4 8 6 8 8 8 8 8 8 8 8 0 0 5
 	x window.width-8-clock.width
 	y 8+5
+end
+
+#===========Logo===================================================================================
+object
+	ifnotset 1
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_5.png
+	layer
+	x window.width-8-2
+	y 6
+end
+object
+	ifset 1
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_5.png
+	mono
+	layer
+	x window.width-8-2
+	y 6
+end
+object
+	ifnotset 2
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_6.png
+	layer
+	x window.width-8-2
+	y 6
+end
+object
+	ifset 2
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_6.png
+	mono
+	layer
+	x window.width-8-2
+	y 6
 end
 
 #===========Standard digital clocks border=========================================================
