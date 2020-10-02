@@ -18,9 +18,10 @@ html {
 	scrollbar-highlight-color: #FFFFFF;
 	scrollbar-shadow-color: #C2C2C2;
 	scrollbar-arrow-color: #454545;
-	scrollbar-base-color: #C2C2C2;
+	scrollbar-3dlight-color: #C2C2C2;
 	scrollbar-darkshadow-color: #787979;
-	background: url(Light.png) fixed no-repeat bottom right;
+	scrollbar-track-color: #EEEEEE;
+	background: url(Glamour_Light/picture.png) fixed no-repeat bottom right;
 	background-color: #EEEEEE;
 	overflow: auto;
 	padding: 0px 0px 0px 0px;
