@@ -1,6 +1,6 @@
 #Author:	PK, Egoist, Favor, Pacificator
 #Description:	Skin for Popup+ 2.1.0.7 or later
-#Name:		Glamour_Aqua_Light
+#Name:		Glamour_Light
 #Version:	2.0
 
 #===========Options================================================================================
@@ -586,14 +586,186 @@ end
 #===========Clock==================================================================================
 object
 	ifnotset 1
+	ifnotset 5
+	ifnotset 6
+	ifnotset 10
+	type clock
+	source Dtt\clock_layer_0.png
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifset 1
+	ifnotset 5
+	ifnotset 6
+	ifnotset 10
+	type clock
+	source Dtt\clock_layer_0.png
+	mono
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifnotset 2
+	ifnotset 5
+	ifnotset 6
+	ifnotset 10
+	type clock
+	source Dtt\clock_layer_1.png
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifset 2
+	ifnotset 5
+	ifnotset 6
+	ifnotset 10
+	type clock
+	source Dtt\clock_layer_1.png
+	mono
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifnotset 2
+	ifnotset 5
+	ifnotset 6
+	ifnotset 10
+	type clock
+	source Dtt\clock_layer_2.png
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifset 2
+	ifnotset 5
+	ifnotset 6
+	ifnotset 10
+	type clock
+	source Dtt\clock_layer_2.png
+	mono
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifnotset 1
+	ifnotset 5
+	ifnotset 6
+	ifset 10
+	type clock
+	source Dtt\clock&logo_layer_0.png
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifset 1
+	ifnotset 5
+	ifnotset 6
+	ifset 10
+	type clock
+	source Dtt\clock&logo_layer_0.png
+	mono
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifnotset 2
+	ifnotset 5
+	ifnotset 6
+	ifset 10
+	type clock
+	source Dtt\clock&logo_layer_1.png
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifset 2
+	ifnotset 5
+	ifnotset 6
+	ifset 10
+	type clock
+	source Dtt\clock&logo_layer_1.png
+	mono
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifnotset 2
+	ifnotset 5
+	ifnotset 6
+	ifset 10
+	type clock
+	source Dtt\clock&logo_layer_2.png
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifset 2
+	ifnotset 5
+	ifnotset 6
+	ifset 10
+	type clock
+	source Dtt\clock&logo_layer_2.png
+	mono
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifnotset 3
+	ifnotset 5
+	ifnotset 6
+	type clock
+	source Dtt\clock.png
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+5
+end
+object
+	ifset 3
+	ifnotset 5
+	ifnotset 6
+	type clock
+	source Dtt\clock.png
+	mono
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+5
+end
+
+object
+	ifnotset 1
 	ifset 5
 	ifnotset 6
 	ifnotset 10
 	type clock
-	source clock_bg_ltt.png
+	source Ltt\clock_layer_0.png
 	layer
 	clocksize 4 4 8 6 8 8 8 8 8 8 8 8 0 0 4
-	x window.width-8-clock.width
+	x window.width-7-clock.width
 	y 8+4
 end
 object
@@ -602,22 +774,71 @@ object
 	ifnotset 6
 	ifnotset 10
 	type clock
-	source clock_bg_ltt.png
+	source Ltt\clock_layer_0.png
 	mono
 	layer
 	clocksize 4 4 8 6 8 8 8 8 8 8 8 8 0 0 4
+	x window.width-7-clock.width
+	y 8+4
+end
+object
+	ifnotset 2
+	ifset 5
+	ifnotset 6
+	ifnotset 10
+	type clock
+	source Ltt\clock_layer_1.png
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
 	x window.width-8-clock.width
 	y 8+4
 end
+object
+	ifset 2
+	ifset 5
+	ifnotset 6
+	ifnotset 10
+	type clock
+	source Ltt\clock_layer_1.png
+	mono
+	layer
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+4
+end
+object
+	ifnotset 3
+	ifset 5
+	ifnotset 6
+	ifnotset 10
+	type clock
+	source Ltt\clock.png
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+5
+end
+object
+	ifset 3
+	ifset 5
+	ifnotset 6
+	ifnotset 10
+	type clock
+	source Ltt\clock.png
+	mono
+	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	x window.width-8-clock.width
+	y 8+5
+end
+
 object
 	ifnotset 1
 	ifset 5
 	ifnotset 6
 	ifset 10
 	type clock
-	source clock&logo_bg_ltt.png
+	source Ltt\clock&logo_layer_0.png
 	layer
-	clocksize 0 4 8 6 8 8 8 8 8 8 8 8 0 0 4
+	clocksize 0 4 8 6 8 8 8 8 8 8 8 8 0 0 3
 	x window.width-8-clock.width
 	y 8+4
 end
@@ -627,135 +848,10 @@ object
 	ifnotset 6
 	ifset 10
 	type clock
-	source clock&logo_bg_ltt.png
+	source Ltt\clock&logo_layer_0.png
 	mono
 	layer
-	clocksize 0 4 8 6 8 8 8 8 8 8 8 8 0 0 4
-	x window.width-8-clock.width
-	y 8+4
-end
-object
-	ifnotset 2
-	ifnotset 5
-	ifnotset 6
-	ifnotset 10
-	type clock
-	source clock_bg_dtt.png
-	layer
-	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
-	x window.width-8-clock.width
-	y 8+4
-end
-object
-	ifset 2
-	ifnotset 5
-	ifnotset 6
-	ifnotset 10
-	type clock
-	source clock_bg_dtt.png
-	mono
-	layer
-	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
-	x window.width-8-clock.width
-	y 8+4
-end
-object
-	ifnotset 2
-	ifnotset 5
-	ifnotset 6
-	ifset 10
-	type clock
-	source clock&logo_bg_dtt.png
-	layer
-	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
-	x window.width-8-clock.width
-	y 8+4
-end
-object
-	ifset 2
-	ifnotset 5
-	ifnotset 6
-	ifset 10
-	type clock
-	source clock&logo_bg_dtt.png
-	mono
-	layer
-	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
-	x window.width-8-clock.width
-	y 8+4
-end
-object
-	ifnotset 2
-	ifset 5
-	ifnotset 6
-	ifnotset 10
-	type clock
-	source clock_edges_ltt.png
-	layer
-	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
-	x window.width-8-clock.width
-	y 8+4
-end
-object
-	ifset 2
-	ifset 5
-	ifnotset 6
-	ifnotset 10
-	type clock
-	source clock_edges_ltt.png
-	mono
-	layer
-	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
-	x window.width-8-clock.width
-	y 8+4
-end
-object
-	ifnotset 2
-	ifnotset 5
-	ifnotset 6
-	ifnotset 10
-	type clock
-	source clock_edges.png
-	layer
-	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
-	x window.width-8-clock.width
-	y 8+4
-end
-object
-	ifset 2
-	ifnotset 5
-	ifnotset 6
-	ifnotset 10
-	type clock
-	source clock_edges.png
-	mono
-	layer
-	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
-	x window.width-8-clock.width
-	y 8+4
-end
-object
-	ifnotset 2
-	ifnotset 5
-	ifnotset 6
-	ifset 10
-	type clock
-	source clock&logo_edges.png
-	layer
-	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
-	x window.width-8-clock.width
-	y 8+4
-end
-object
-	ifset 2
-	ifnotset 5
-	ifnotset 6
-	ifset 10
-	type clock
-	source clock&logo_edges.png
-	mono
-	layer
-	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
+	clocksize 0 4 8 6 8 8 8 8 8 8 8 8 0 0 3
 	x window.width-8-clock.width
 	y 8+4
 end
@@ -765,7 +861,7 @@ object
 	ifnotset 6
 	ifset 10
 	type clock
-	source clock&logo_edges_ltt.png
+	source Ltt\clock&logo_layer_1.png
 	layer
 	clocksize 0 4 8 6 8 8 8 8 8 8 8 8 0 0 5
 	x window.width-8-clock.width
@@ -777,7 +873,7 @@ object
 	ifnotset 6
 	ifset 10
 	type clock
-	source clock&logo_edges_ltt.png
+	source Ltt\clock&logo_layer_1.png
 	mono
 	layer
 	clocksize 0 4 8 6 8 8 8 8 8 8 8 8 0 0 5
@@ -786,55 +882,11 @@ object
 end
 object
 	ifnotset 3
-	ifnotset 5
-	ifnotset 6
-	type clock
-	source clock.png
-	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
-	x window.width-8-clock.width
-	y 8+5
-end
-object
-	ifset 3
-	ifnotset 5
-	ifnotset 6
-	type clock
-	source clock.png
-	mono
-	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
-	x window.width-8-clock.width
-	y 8+5
-end
-object
-	ifnotset 3
-	ifset 5
-	ifnotset 6
-	ifnotset 10
-	type clock
-	source clock_ltt.png
-	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
-	x window.width-8-clock.width
-	y 8+5
-end
-object
-	ifset 3
-	ifset 5
-	ifnotset 6
-	ifnotset 10
-	type clock
-	source clock_ltt.png
-	mono
-	clocksize 5 4 8 6 8 8 8 8 8 8 8 8 0 0 5
-	x window.width-8-clock.width
-	y 8+5
-end
-object
-	ifnotset 3
 	ifset 5
 	ifnotset 6
 	ifset 10
 	type clock
-	source clock&logo_ltt.png
+	source Ltt\clock&logo.png
 	clocksize 0 4 8 6 8 8 8 8 8 8 8 8 0 0 5
 	x window.width-8-clock.width
 	y 8+5
@@ -845,7 +897,7 @@ object
 	ifnotset 6
 	ifset 10
 	type clock
-	source clock&logo_ltt.png
+	source Ltt\clock&logo.png
 	mono
 	clocksize 0 4 8 6 8 8 8 8 8 8 8 8 0 0 5
 	x window.width-8-clock.width
