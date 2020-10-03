@@ -1,51 +1,51 @@
 /*--- Global ---*/
 
 .Link-Text, .tzerlink {
-	color: #054381;
+	color: #003980;
 }
 
 input {
-	background: #C2C2C2;
-	border-top: 1px solid #FFFFFF;
-	border-left: 1px solid #FFFFFF;
+	background: #C1C1C1;
+	border-top: 1px solid #F4F4F4;
+	border-left: 1px solid #F4F4F4;
 	border-bottom: 1px solid #787979;
 	border-right: 1px solid #787979;
-	color: #454545;
+	color: #585858;
 }
 
 html {
-	scrollbar-face-color: #C2C2C2;
-	scrollbar-highlight-color: #FFFFFF;
-	scrollbar-shadow-color: #C2C2C2;
-	scrollbar-arrow-color: #454545;
-	scrollbar-3dlight-color: #C2C2C2;
+	scrollbar-face-color: #C1C1C1;
+	scrollbar-highlight-color: #C1C1C1;
+	scrollbar-shadow-color: #C1C1C1;
+	scrollbar-arrow-color: #585858;
+	scrollbar-3dlight-color: #F4F4F4;
 	scrollbar-darkshadow-color: #787979;
-	scrollbar-track-color: #EEEEEE;
+	scrollbar-track-color: #EDEDEF;
 	background: url(Glamour_Light/picture.png) fixed no-repeat bottom right;
-	background-color: #EEEEEE;
+	background-color: #EDEDEF;
 	overflow: auto;
 	padding: 0px 0px 0px 0px;
 	margin: 0;
 	font-size: 13px;
-	color: #5C5C5C;
+	color: #585858;
 	zoom: 0 !important;
 }
 
 a, a:active {
-	color: #054381;
+	color: #003980;
 	text-decoration: none;
 	font-weight: normal;
 	cursor:pointer;
 }
 
 a:visited {
-	color: #C44305;
+	color: #803600;
 	text-decoration: none;
 	font-weight: normal;
 }
 
 a:hover {
-	color: #054381;
+	color: #003980;
 	text-decoration: underline;
 	font-weight: normal;
 }
@@ -78,7 +78,7 @@ div {
 }
 
 .time {
-	color: Gray;
+	color: #808080;
 	font-weight: normal;
 	float: right;
 	font-size: 11px;
@@ -108,18 +108,18 @@ div.avatar {
 
 .MessageIn, .hMessageIn, .frame_MessageInGroupStart, .frame_hMessageInGroupStart {
 	border-top: 1px solid #FFFFFF;
-	border-bottom: 1px solid #B4B4B4;
+	border-bottom: 1px solid #949494;
 
 }
 
 .MessageOut, .hMessageOut, .frame_MessageOutGroupStart, .frame_hMessageOutGroupStart {
 	border-top: 1px solid #FFFFFF;
-	border-bottom: 1px solid #B4B4B4;
+	border-bottom: 1px solid #949494;
 
 }
 
 .MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
-	border-top: 1px dotted #B4B4B4;
+	border-top: 1px dotted #949494;
 }
 
 .hMessageIn, .hMessageOut, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart, .hStatus, .hFileIn, .hFileOut, .hURL {
@@ -130,7 +130,7 @@ div.avatar {
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
-	color: #C44305;
+	color: #803600;
 	background-image: url(Glamour_Light/in.png);
 }
 
@@ -141,7 +141,7 @@ div.avatar {
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
-	color: #054381;
+	color: #003980;
 	background-image: url(Glamour_Light/out.png);
 }
 
@@ -152,62 +152,62 @@ div.avatar {
 /* -------------------- status support -------------------- */
 
 .status .head {
-	color: #C44305;
+	color: #803600;
 	background-image: url(Glamour_Light/status.png);
 }
 
 .contentStatus, .contenthStatus {
-	color: #C44305;
+	color: #935528;
 	background-image: url(Glamour_Light/status.png);
 }
 
 .contentStatus .time, .contenthStatus .time {
-	color: #C38264;
+	color: #A8744D;
 }
 
 .Status, .hStatus {
-	border-top: 1px solid #FFFFFF;
-	border-bottom: 1px solid #B4B4B4;
+	border-top: 1px solid #F9F4F1;
+	border-bottom: 1px solid #AD9F94;
 }
 
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
-	color: green;
+	color: #005500;
 	background-image: url(Glamour_Light/file.png);
 }
 
 .contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
-	color: green;
+	color: #286F28;
 	background-image: url(Glamour_Light/file.png);
 }
 
 .contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
-	color: #61A061;
+	color: #579357;
 }
 
 .FileIn, .hFileIn, .FileOut, .hFileOut {
-	border-top: 1px solid #FFFFFF;
-	border-bottom: 1px solid #B4B4B4;
+	border-top: 1px solid #F2F8F2;
+	border-bottom: 1px solid #91A292;
 }
 
 /* -------------------- URL support -------------------- */
 
 .inurl .head, .outurl .head {
-	color: #054381;
+	color: #003980;
 	background-image: url(Glamour_Light/url.png);
 }
 
 .contentURL, .contenthURL {
-	color: #054381;
+	color: #285893;
 	background-image: url(Glamour_Light/url.png);
 }
 
 .contentURL .time, .contenthURL .time {
-	color: #6482A1;
+	color: #6480A2;
 }
 
 .URL, .hURL {
-	border-top: 1px solid #FFFFFF;
-	border-bottom: 1px solid #B4B4B4;
+	border-top: 1px solid #F2F5F9;
+	border-bottom: 1px solid #949EAD;
 }
