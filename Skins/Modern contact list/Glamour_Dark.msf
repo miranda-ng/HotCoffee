@@ -614,13 +614,13 @@ BkColour=l
 SelBkColour=l
 
 [FavContacts]
-BackColour=d15790320
-SelectedColour=d16750899
+BackColour=l
+SelectedColour=l
 fntName=sVerdana
-fntNameCol=d0
+fntNameCol=l
 fntNameFlags=w32
 fntNameSel=sVerdana
-fntNameSelCol=d16777215
+fntNameSelCol=l
 fntNameSelFlags=w32
 fntNameSelSet=b204
 fntNameSelSize=b-11
@@ -629,10 +629,10 @@ fntNameSet=b204
 fntNameSize=b-11
 fntNameSty=b1
 fntSecond=sVerdana
-fntSecondCol=d5329233
+fntSecondCol=l
 fntSecondFlags=w32
 fntSecondSel=sVerdana
-fntSecondSelCol=d16772313
+fntSecondSelCol=l
 fntSecondSelFlags=w32
 fntSecondSelSet=b204
 fntSecondSelSize=b-11
@@ -1231,20 +1231,20 @@ XMPP_Error/TextSty=b0
 
 [QuickSearch]
 frame_back=d15790320
-back_del=d14002943
-back_dis=d12303359
-back_hid=d12251893
-back_meta=d14283207
-back_norm=d16777215
-back_odd=d15460062
-back_sub=d13623000
-fore_del=d5263440
-fore_dis=d5263440
-fore_hid=d5263440
-fore_meta=d2631720
-fore_norm=d2631720
-fore_odd=d2631720
-fore_sub=d2631720
+back_del=l
+back_dis=l
+back_hid=l
+back_meta=l
+back_norm=l
+back_odd=l
+back_sub=l
+fore_del=l
+fore_dis=l
+fore_hid=l
+fore_meta=l
+fore_norm=l
+fore_odd=l
+fore_sub=l
 
 [SmileyAdd]
 SelWndBkgClr=d6513252
