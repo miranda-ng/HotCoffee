@@ -105,9 +105,14 @@ div.avatar {
 	margin: -1px;
 }
 
-.MessageIn, .MessageOut, .hMessageIn, .hMessageOut, .frame_MessageInGroupStart, .frame_MessageOutGroupStart, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart {
-	border-top: 1px solid #838383;
-	border-bottom: 1px solid #3D3B3C;
+.MessageIn, .hMessageIn, .frame_MessageInGroupStart, .frame_hMessageInGroupStart {
+	border-top: 1px solid #8D8C8D;
+	border-bottom: 1px solid #333233;
+}
+
+.MessageOut, .hMessageOut, .frame_MessageOutGroupStart, .frame_hMessageOutGroupStart {
+	border-top: 1px solid #848383;
+	border-bottom: 1px solid #2D2C2C;
 }
 
 .MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
@@ -158,8 +163,8 @@ div.avatar {
 }
 
 .Status, .hStatus {
-	border-top: 1px solid #A47D73;
-	border-bottom: 1px solid #3C2D28;
+	border-top: 1px solid #90867F;
+	border-bottom: 1px solid #352E2A;
 }
 
 /* -------------------- file transfer support -------------------- */
@@ -179,19 +184,19 @@ div.avatar {
 }
 
 .FileIn, .hFileIn, .FileOut, .hFileOut {
-	border-top: 1px solid #73A473;
-	border-bottom: 1px solid #273D27;
+	border-top: 1px solid #818F81;
+	border-bottom: 1px solid #2B342B;
 }
 
 /* -------------------- URL support -------------------- */
 
 .inurl .head, .outurl .head {
-	color: #81A3C6;
+	color: #8EADCC;
 	background-image: url(Glamour_Dark/url.png);
 }
 
 .contentURL, .contenthURL {
-	color: #81A3C6;
+	color: #AAD5FF;
 	background-image: url(Glamour_Dark/url.png);
 }
 
@@ -200,6 +205,6 @@ div.avatar {
 }
 
 .URL, .hURL {
-	border-top: 1px solid #657AB1;
-	border-bottom: 1px solid #222B42;
+	border-top: 1px solid #7E8793;
+	border-bottom: 1px solid #292F37;
 }
