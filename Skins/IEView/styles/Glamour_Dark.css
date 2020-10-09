@@ -5,7 +5,7 @@
 }
 
 input {
-	background: #4F4F4F;
+	background: #4E4E4E;
 	border-top: 1px solid #838383;
 	border-left: 1px solid #838383;
 	border-bottom: 1px solid #292728;
@@ -14,13 +14,14 @@ input {
 }
 
 html {
-	scrollbar-face-color: #4F4F4F;
-	scrollbar-highlight-color: #838383;
-	scrollbar-shadow-color: #4F4F4F;
+	scrollbar-face-color: #4E4E4E;
+	scrollbar-highlight-color: #4E4E4E;
+	scrollbar-shadow-color: #4E4E4E;
 	scrollbar-arrow-color: #D3D3D3;
-	scrollbar-base-color: #4F4F4F;
+	scrollbar-3dlight-color: #838383;
 	scrollbar-darkshadow-color: #292728;
-	background: url(Dark.png) fixed no-repeat bottom right;
+	scrollbar-track-color: #646263;
+	background: url(Glamour_Dark/picture.png) fixed no-repeat bottom right;
 	background-color: #646263;
 	overflow: auto;
 	padding: 0px 0px 0px 0px;
