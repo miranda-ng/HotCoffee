@@ -1,4 +1,5 @@
 [VersionSkin]
+About=Textolite_Gray_Dark skin for TabSRMM
 Author=Egoist, Favor, Pacificator
 Version=1.0
 
@@ -20,7 +21,7 @@ SbarHeight=18
 FontColor=C8C8C8
 Version=1
 Signature=101
-NoScrollbars=1
+NoScrollbars=0
 FrameLessMode=1
 CompositedWindow=0
 TabSkinning=1
