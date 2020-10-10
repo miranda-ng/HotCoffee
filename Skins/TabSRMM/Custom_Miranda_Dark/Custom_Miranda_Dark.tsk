@@ -24,9 +24,9 @@ TabSkinning=1
 Version=1
 FontColor=C0C0C0
 MenuBarBG=0E0E0E
-TabTextActive=C0C0C0
+TabTextActive=FFFFFF
 TabTextHottrack=4E7DAD
-TabTextNormal=808080
+TabTextNormal=C0C0C0
 TabTextUnread=C87046
 DarkShadow=000000
 LightShadow=FFFFFF
@@ -169,7 +169,7 @@ ColorKey=F1F1F1
 Item0=Container
 
 [$Buttonpressed]
-Glyph=14,37,18,56
+Glyph=0,37,4,41
 Left=2
 Top=2
 Right=2
@@ -177,11 +177,11 @@ Bottom=2
 Item0=Buttonpressed
 
 [$Buttonmouseover]
-Glyph=6,37,12,56
-Left=3
-Top=3
-Right=3
-Bottom=3
+Glyph=6,37,10,82
+Left=2
+Top=2
+Right=2
+Bottom=2
 Item0=Buttonmouseover
 
 [$InfoPanelBackground]

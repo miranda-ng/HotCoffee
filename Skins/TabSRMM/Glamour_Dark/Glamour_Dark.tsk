@@ -22,12 +22,12 @@ SbarHeight=22
 Signature=101
 TabSkinning=1
 Version=1
-FontColor=C0C0C0
+FontColor=D2CECC
 MenuBarBG=4E4E4E
 TabTextActive=FFFFFF
-TabTextHottrack=FFFFFF
-TabTextNormal=C0C0C0
-TabTextUnread=FFFFBF
+TabTextHottrack=B1CCED
+TabTextNormal=D2CECC
+TabTextUnread=E9BFA0
 DarkShadow=000000
 LightShadow=FFFFFF
 
