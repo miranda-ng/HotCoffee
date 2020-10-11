@@ -25,9 +25,9 @@ Version=1
 FontColor=C0C0C0
 MenuBarBG=0E0E0E
 TabTextActive=FFFFFF
-TabTextHottrack=4E7DAD
+TabTextHottrack=75A5DF
 TabTextNormal=C0C0C0
-TabTextUnread=C87046
+TabTextUnread=DFA375
 DarkShadow=000000
 LightShadow=FFFFFF
 
@@ -80,6 +80,9 @@ Gradient=right
 [%Buttonmouseover]
 
 [%InfoPanelBackground]
+Color1=181818
+Color2=040404
+Gradient=down
 
 [%Tabpage]
 
@@ -183,14 +186,6 @@ Top=2
 Right=2
 Bottom=2
 Item0=Buttonmouseover
-
-[$InfoPanelBackground]
-Glyph=57,38,59,55
-Left=1
-Top=1
-Right=1
-Bottom=1
-Item0=InfoPanelBackground
 
 [$Tabpage]
 Glyph=0,43,4,47

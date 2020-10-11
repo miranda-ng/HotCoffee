@@ -1,15 +1,15 @@
 /*--- Global ---*/
 
 .Link-Text, .tzerlink {
-	color: #74B8E6;
+	color: #98BBE7;
 }
 
 input {
 	background: #1D1D1D;
-	border-top: 1px solid #464646;
-	border-left: 1px solid #464646;
-	border-bottom: 1px solid #000;
-	border-right: 1px solid #000;
+	border-top: 1px solid #373737;
+	border-left: 1px solid #373737;
+	border-bottom: 1px solid #0C0C0C;
+	border-right: 1px solid #0C0C0C;
 	color: #C0C0C0;
 }
 
@@ -18,8 +18,8 @@ html {
 	scrollbar-highlight-color: #1D1D1D;
 	scrollbar-shadow-color: #1D1D1D;
 	scrollbar-arrow-color: #C0C0C0;
-	scrollbar-3dlight-color: #464646;
-	scrollbar-darkshadow-color: #000;
+	scrollbar-3dlight-color: #373737;
+	scrollbar-darkshadow-color: #0C0C0C;
 	scrollbar-track-color: #252525;
 	background: url(Dark.png) fixed no-repeat bottom right;
 	background-color: #252525;
@@ -32,20 +32,20 @@ html {
 }
 
 a, a:active {
-	color: #74B8E6;
+	color: #98BBE7;
 	text-decoration: none;
 	font-weight: normal;
 	cursor:pointer;
 }
 
 a:visited {
-	color: #C87046;
+	color: #E4BA8F;
 	text-decoration: none;
 	font-weight: normal;
 }
 
 a:hover {
-	color: #74B8E6;
+	color: #98BBE7;
 	text-decoration: underline;
 	font-weight: normal;
 }
@@ -78,7 +78,7 @@ div {
 }
 
 .time {
-	color: Gray;
+	color: #808080;
 	font-weight: normal;
 	float: right;
 	font-size: 11px;
@@ -102,17 +102,22 @@ div.avatar {
 }
 
 .code {
-	border: 1px dashed #464646;
+	border: 1px dashed #373737;
 	margin: -1px;
 }
 
-.MessageIn, .MessageOut, .hMessageIn, .hMessageOut, .frame_MessageInGroupStart, .frame_MessageOutGroupStart, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart {
-	border-top: 1px solid #464646;
-	border-bottom: 1px solid #000;
+.MessageIn, .hMessageIn, .frame_MessageInGroupStart, .frame_hMessageInGroupStart {
+	border-top: 1px solid #373737;
+	border-bottom: 1px solid #0C0C0C;
+}
+
+.MessageOut, .hMessageOut, .frame_MessageOutGroupStart, .frame_hMessageOutGroupStart {
+	border-top: 1px solid #373737;
+	border-bottom: 1px solid #0C0C0C;
 }
 
 .MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
-	border-top: 1px dotted #464646;
+	border-top: 1px dotted #373737;
 }
 
 .hMessageIn, .hMessageOut, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart, .hStatus, .hFileIn, .hFileOut, .hURL {
@@ -123,7 +128,7 @@ div.avatar {
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
-	color: #C87046;
+	color: #B5784A;
 	background-image: url(Custom_Miranda_Dark/in.png);
 }
 
@@ -134,7 +139,7 @@ div.avatar {
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
-	color: #4E7DAD;
+	color: #618BBE;
 	background-image: url(Custom_Miranda_Dark/out.png);
 }
 
@@ -145,62 +150,62 @@ div.avatar {
 /* -------------------- status support -------------------- */
 
 .status .head {
-	color: #C87046;
+	color: #B5784A;
 	background-image: url(Custom_Miranda_Dark/status.png);
 }
 
 .contentStatus, .contenthStatus {
-	color: #C87046;
+	color: #E4BA8F;
 	background-image: url(Custom_Miranda_Dark/status.png);
 }
 
 .contentStatus .time, .contenthStatus .time {
-	color: #A57D6B;
+	color: #B98966;
 }
 
 .Status, .hStatus {
-	border-top: 1px solid #A47D73;
-	border-bottom: 1px solid #3C2D28;
+	border-top: 1px solid #42382E;
+	border-bottom: 1px solid #0F0D0B;
 }
 
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
-	color: #469B46;
+	color: #699C4E;
 	background-image: url(Custom_Miranda_Dark/file.png);
 }
 
 .contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
-	color: #469B46;
+	color: #A3CF8B;
 	background-image: url(Custom_Miranda_Dark/file.png);
 }
 
 .contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
-	color: #6B916B;
+	color: #82A76D;
 }
 
 .FileIn, .hFileIn, .FileOut, .hFileOut {
-	border-top: 1px solid #73A473;
-	border-bottom: 1px solid #273D27;
+	border-top: 1px solid #343F34;
+	border-bottom: 1px solid #0C0E0C;
 }
 
 /* -------------------- URL support -------------------- */
 
 .inurl .head, .outurl .head {
-	color: #4E7DAD;
+	color: #618BBE;
 	background-image: url(Custom_Miranda_Dark/url.png);
 }
 
 .contentURL, .contenthURL {
-	color: #4E7DAD;
+	color: #98BBE7;
 	background-image: url(Custom_Miranda_Dark/url.png);
 }
 
 .contentURL .time, .contenthURL .time {
-	color: #6E8399;
+	color: #6D91BC;
 }
 
 .URL, .hURL {
-	border-top: 1px solid #657AB1;
-	border-bottom: 1px solid #222B42;
+	border-top: 1px solid #2C3847;
+	border-bottom: 1px solid #0A0C10;
 }
