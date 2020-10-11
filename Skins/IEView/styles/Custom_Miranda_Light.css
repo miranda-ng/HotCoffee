@@ -1,51 +1,51 @@
 /*--- Global ---*/
 
 .Link-Text, .tzerlink {
-	color: #004080;
+	color: #4470A6;
 }
 
 input {
-	background: #E2E2E2;
+	background: #F1F1F1;
 	border-top: 1px solid #FFFFFF;
 	border-left: 1px solid #FFFFFF;
 	border-bottom: 1px solid #B4B4B4;
 	border-right: 1px solid #B4B4B4;
-	color: #454545;
+	color: #595959;
 }
 
 html {
-	scrollbar-face-color: #E2E2E2;
-	scrollbar-highlight-color: #E2E2E2;
-	scrollbar-shadow-color: #E2E2E2;
-	scrollbar-arrow-color: #454545;
+	scrollbar-face-color: #F1F1F1;
+	scrollbar-highlight-color: #F1F1F1;
+	scrollbar-shadow-color: #F1F1F1;
+	scrollbar-arrow-color: #595959;
 	scrollbar-3dlight-color: #FFFFFF;
 	scrollbar-darkshadow-color: #B4B4B4;
-	scrollbar-track-color: #F4F4F4;
+	scrollbar-track-color: #FFFFFF;
 	background: url(Light.png) fixed no-repeat bottom right;
 	background-color: #FFFFFF;
 	overflow: auto;
 	padding: 0px 0px 0px 0px;
 	margin: 0;
 	font-size: 13px;
-	color: #454545;
+	color: #595959;
 	zoom: 0 !important;
 }
 
 a, a:active {
-	color: #004080;
+	color: #4470A6;
 	text-decoration: none;
 	font-weight: normal;
 	cursor:pointer;
 }
 
 a:visited {
-	color: #C44305;
+	color: #A66D44;
 	text-decoration: none;
 	font-weight: normal;
 }
 
 a:hover {
-	color: #004080;
+	color: #4470A6;
 	text-decoration: underline;
 	font-weight: normal;
 }
@@ -78,7 +78,7 @@ div {
 }
 
 .time {
-	color: Gray;
+	color: #9F9F9F;
 	font-weight: normal;
 	float: right;
 	font-size: 11px;
@@ -106,9 +106,16 @@ div.avatar {
 	margin: -1px;
 }
 
-.MessageIn, .MessageOut, .hMessageIn, .hMessageOut, .frame_MessageInGroupStart, .frame_MessageOutGroupStart, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart {
+.MessageIn, .hMessageIn, .frame_MessageInGroupStart, .frame_hMessageInGroupStart {
 	border-top: 1px solid #FFFFFF;
 	border-bottom: 1px solid #B4B4B4;
+
+}
+
+.MessageOut, .hMessageOut, .frame_MessageOutGroupStart, .frame_hMessageOutGroupStart {
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #B4B4B4;
+
 }
 
 .MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
@@ -123,7 +130,7 @@ div.avatar {
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
-	color: #C44305;
+	color: #A66D44;
 	background-image: url(Custom_Miranda_Light/in.png);
 }
 
@@ -134,7 +141,7 @@ div.avatar {
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
-	color: #054381;
+	color: #4470A6;
 	background-image: url(Custom_Miranda_Light/out.png);
 }
 
@@ -145,62 +152,62 @@ div.avatar {
 /* -------------------- status support -------------------- */
 
 .status .head {
-	color: #C44305;
+	color: #A66D44;
 	background-image: url(Custom_Miranda_Light/status.png);
 }
 
 .contentStatus, .contenthStatus {
-	color: #C44305;
+	color: #A66D44;
 	background-image: url(Custom_Miranda_Light/status.png);
 }
 
 .contentStatus .time, .contenthStatus .time {
-	color: #C38264;
+	color: #C48C64;
 }
 
 .Status, .hStatus {
-	border-top: 1px solid #A47D73;
-	border-bottom: 1px solid #3C2D28;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #B4B4B4;
 }
 
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
-	color: green;
+	color: #488248;
 	background-image: url(Custom_Miranda_Light/file.png);
 }
 
 .contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
-	color: green;
+	color: #488248;
 	background-image: url(Custom_Miranda_Light/file.png);
 }
 
 .contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
-	color: #61A061;
+	color: #6DA76D;
 }
 
 .FileIn, .hFileIn, .FileOut, .hFileOut {
-	border-top: 1px solid #73A473;
-	border-bottom: 1px solid #273D27;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #B4B4B4;
 }
 
 /* -------------------- URL support -------------------- */
 
 .inurl .head, .outurl .head {
-	color: #054381;
+	color: #4470A6;
 	background-image: url(Custom_Miranda_Light/url.png);
 }
 
 .contentURL, .contenthURL {
-	color: #054381;
+	color: #4470A6;
 	background-image: url(Custom_Miranda_Light/url.png);
 }
 
 .contentURL .time, .contenthURL .time {
-	color: #6482A1;
+	color: #6D93BC;
 }
 
 .URL, .hURL {
-	border-top: 1px solid #657AB1;
-	border-bottom: 1px solid #222B42;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #B4B4B4;
 }

@@ -22,12 +22,12 @@ SbarHeight=22
 Signature=101
 TabSkinning=1
 Version=1
-FontColor=000000
+FontColor=595959
 MenuBarBG=F1F1F1
 TabTextActive=000000
-TabTextHottrack=004080
-TabTextNormal=646464
-TabTextUnread=804000
+TabTextHottrack=4470A6
+TabTextNormal=595959
+TabTextUnread=A66D44
 DarkShadow=000000
 LightShadow=FFFFFF
 
@@ -80,6 +80,9 @@ Gradient=right
 [%Buttonmouseover]
 
 [%InfoPanelBackground]
+Color1=FBFBFB
+Color2=E7E7E7
+Gradient=down
 
 [%Tabpage]
 
@@ -169,7 +172,7 @@ ColorKey=F1F1F1
 Item0=Container
 
 [$Buttonpressed]
-Glyph=14,37,18,56
+Glyph=0,37,4,41
 Left=2
 Top=2
 Right=2
@@ -177,20 +180,12 @@ Bottom=2
 Item0=Buttonpressed
 
 [$Buttonmouseover]
-Glyph=6,37,12,56
-Left=3
-Top=3
-Right=3
-Bottom=3
-Item0=Buttonmouseover
-
-[$InfoPanelBackground]
-Glyph=56,37,60,56
+Glyph=6,37,10,82
 Left=2
 Top=2
 Right=2
 Bottom=2
-Item0=InfoPanelBackground
+Item0=Buttonmouseover
 
 [$Tabpage]
 Glyph=0,43,4,47
