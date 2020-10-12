@@ -39,7 +39,7 @@ a, a:active {
 }
 
 a:visited {
-	color: #E9BFA0;
+	color: #E9C5A0;
 	text-decoration: none;
 	font-weight: normal;
 }
@@ -139,7 +139,7 @@ div.avatar {
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
-	color: #94B9E7;
+	color: #81ACE2;
 	background-image: url(Glamour_Dark/out.png);
 }
 
@@ -155,12 +155,12 @@ div.avatar {
 }
 
 .contentStatus, .contenthStatus {
-	color: #E9BFA0;
+	color: #E9C5A0;
 	background-image: url(Glamour_Dark/status.png);
 }
 
 .contentStatus .time, .contenthStatus .time {
-	color: #B3896A;
+	color: #B98966;
 }
 
 .Status, .hStatus {
@@ -171,17 +171,17 @@ div.avatar {
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
-	color: #80CA80;
+	color: #8BC26D;
 	background-image: url(Glamour_Dark/file.png);
 }
 
 .contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
-	color: #A5DAA5;
+	color: #B9D9A6;
 	background-image: url(Glamour_Dark/file.png);
 }
 
 .contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
-	color: #6DA76D;
+	color: #7CA367;
 }
 
 .FileIn, .hFileIn, .FileOut, .hFileOut {
@@ -192,7 +192,7 @@ div.avatar {
 /* -------------------- URL support -------------------- */
 
 .inurl .head, .outurl .head {
-	color: #94B9E7;
+	color: #81ACE2;
 	background-image: url(Glamour_Dark/url.png);
 }
 
@@ -202,7 +202,7 @@ div.avatar {
 }
 
 .contentURL .time, .contenthURL .time {
-	color: #7392B7;
+	color: #6D91BC;
 }
 
 .URL, .hURL {

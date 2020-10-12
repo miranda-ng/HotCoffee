@@ -1,7 +1,7 @@
 /*--- Global ---*/
 
 .Link-Text, .tzerlink {
-	color: #98BBE7;
+	color: #B1CCED;
 }
 
 input {
@@ -32,20 +32,20 @@ html {
 }
 
 a, a:active {
-	color: #98BBE7;
+	color: #B1CCED;
 	text-decoration: none;
 	font-weight: normal;
 	cursor:pointer;
 }
 
 a:visited {
-	color: #E4BA8F;
+	color: #E9C5A0;
 	text-decoration: none;
 	font-weight: normal;
 }
 
 a:hover {
-	color: #98BBE7;
+	color: #B1CCED;
 	text-decoration: underline;
 	font-weight: normal;
 }
@@ -141,7 +141,7 @@ div.avatar {
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
-	color: #75A5DF;
+	color: #81ACE2;
 	background-image: url(Glamour_Aqua_Dark/out.png);
 }
 
@@ -157,7 +157,7 @@ div.avatar {
 }
 
 .contentStatus, .contenthStatus {
-	color: #E4BA8F;
+	color: #E9C5A0;
 	background-image: url(Glamour_Aqua_Dark/status.png);
 }
 
@@ -178,12 +178,12 @@ div.avatar {
 }
 
 .contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
-	color: #A3CF8B;
+	color: #B9D9A6;
 	background-image: url(Glamour_Aqua_Dark/file.png);
 }
 
 .contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
-	color: #82A76D;
+	color: #7CA367;
 }
 
 .FileIn, .hFileIn, .FileOut, .hFileOut {
@@ -194,12 +194,12 @@ div.avatar {
 /* -------------------- URL support -------------------- */
 
 .inurl .head, .outurl .head {
-	color: #75A5DF;
+	color: #81ACE2;
 	background-image: url(Glamour_Aqua_Dark/url.png);
 }
 
 .contentURL, .contenthURL {
-	color: #98BBE7;
+	color: #B1CCED;
 	background-image: url(Glamour_Aqua_Dark/url.png);
 }
 
