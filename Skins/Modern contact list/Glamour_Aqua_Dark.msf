@@ -1582,6 +1582,8 @@ ValueIndent=d8
 ;Popup settings
 [Popup]
 DropShadow=b0
+EnableShadowRegion=b0
+skin.Glamour_Aqua_Dark=d973
 SkinPack=sGlamour_Aqua_Dark
 spacing=w0
 UseWinColors=b0
