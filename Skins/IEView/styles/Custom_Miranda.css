@@ -106,9 +106,16 @@ div.avatar {
 	margin: -1px;
 }
 
-.MessageIn, .MessageOut, .hMessageIn, .hMessageOut, .frame_MessageInGroupStart, .frame_MessageOutGroupStart, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart {
+.MessageIn, .hMessageIn, .frame_MessageInGroupStart, .frame_hMessageInGroupStart {
 	border-top: 1px solid #FFFFFF;
 	border-bottom: 1px solid #B4B4B4;
+
+}
+
+.MessageOut, .hMessageOut, .frame_MessageOutGroupStart, .frame_hMessageOutGroupStart {
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #B4B4B4;
+
 }
 
 .MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
@@ -159,8 +166,8 @@ div.avatar {
 }
 
 .Status, .hStatus {
-	border-top: 1px solid #A47D73;
-	border-bottom: 1px solid #3C2D28;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #B4B4B4;
 }
 
 /* -------------------- file transfer support -------------------- */
@@ -180,8 +187,8 @@ div.avatar {
 }
 
 .FileIn, .hFileIn, .FileOut, .hFileOut {
-	border-top: 1px solid #73A473;
-	border-bottom: 1px solid #273D27;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #B4B4B4;
 }
 
 /* -------------------- URL support -------------------- */
@@ -201,6 +208,6 @@ div.avatar {
 }
 
 .URL, .hURL {
-	border-top: 1px solid #657AB1;
-	border-bottom: 1px solid #222B42;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #B4B4B4;
 }
