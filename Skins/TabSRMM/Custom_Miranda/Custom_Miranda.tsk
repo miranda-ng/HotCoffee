@@ -80,6 +80,9 @@ Gradient=right
 [%Buttonmouseover]
 
 [%InfoPanelBackground]
+Color1=F7F8FB
+Color2=E3E8F2
+Gradient=down
 
 [%Tabpage]
 
@@ -169,7 +172,7 @@ ColorKey=EDF0F7
 Item0=Container
 
 [$Buttonpressed]
-Glyph=14,48,18,67
+Glyph=0,48,4,52
 Left=2
 Top=2
 Right=2
@@ -177,20 +180,12 @@ Bottom=2
 Item0=Buttonpressed
 
 [$Buttonmouseover]
-Glyph=6,48,12,67
-Left=3
-Top=3
-Right=3
-Bottom=3
-Item0=Buttonmouseover
-
-[$InfoPanelBackground]
-Glyph=7,49,11,66
+Glyph=6,48,10,93
 Left=2
 Top=2
 Right=2
 Bottom=2
-Item0=InfoPanelBackground
+Item0=Buttonmouseover
 
 [$Tabpage]
 Glyph=0,54,4,58
