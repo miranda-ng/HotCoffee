@@ -6,11 +6,11 @@
 #===========Options================================================================================
 options
 	#option	id	val	title
-	option	1	1	Color frame
-	option	2	0	Color text background
+	option	1	0	Color frame
+	option	2	1	Color text background
 	option	3	1	Color logo & clocks
 	option	4	1	Color text
-	option	5	0	Light title text
+	option	5	1	Light title text
 	option	6	0	Standard digital clocks
 	option	7	1	Icon
 	option	8	1	Avatar
