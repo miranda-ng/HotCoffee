@@ -19,19 +19,19 @@ Right =
 Bottom = 
 
 [Fonts]
-Title-color = 200 112 70
+Title-color = 182 119 73
 Title-effect = FONT_BOLD
 
-Label-color = 170 170 170
+Label-color = 185 187 200
 Label-effect = FONT_BOLD
 
-Value-color = 230 230 230
+Value-color = 185 187 200
 Value-effect = 0
 
-TrayTitle-color = 250 250 250
+TrayTitle-color = 97 139 190
 TrayTitle-effect = FONT_BOLD
 
-Divider-color = 130 130 130
+Divider-color = 109 112 124
 
 [Appearance]
 General-padding = 8
