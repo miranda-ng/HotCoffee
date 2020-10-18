@@ -665,7 +665,7 @@ object
 	ifset 5
 	ifset 6
 	type clock
-	color 30 30 30
+	color 37 53 69
 	x window.width-1-clock.width+1
 	y 8+5+(title.height-clock.height)/2
 end
@@ -674,7 +674,7 @@ object
 	ifset 5
 	ifset 6
 	type clock
-	color 30 30 30
+	color 37 53 69
 	x window.width-1-clock.width
 	y 8+5+(title.height-clock.height)/2+1
 end
@@ -683,7 +683,7 @@ object
 	ifset 5
 	ifset 6
 	type clock
-	color 30 30 30
+	color 37 53 69
 	x window.width-1-clock.width+1
 	y 8+5+(title.height-clock.height)/2+1
 end
@@ -720,7 +720,7 @@ object
 	ifnotset 5
 	ifset 6
 	type clock
-	color 30 30 30
+	color 37 53 69
 	x window.width-1-clock.width
 	y 8+5+(title.height-clock.height)/2
 end
@@ -771,7 +771,7 @@ object
 	ifnotset 4
 	ifset 5
 	type title
-	color 30 30 30
+	color 37 53 69
 	x 10+icon.width+3+1
 	y 8+5
 end
@@ -779,7 +779,7 @@ object
 	ifnotset 4
 	ifset 5
 	type title
-	color 30 30 30
+	color 37 53 69
 	x 10+icon.width+3
 	y 8+5+1
 end
@@ -787,7 +787,7 @@ object
 	ifnotset 4
 	ifset 5
 	type title
-	color 30 30 30
+	color 37 53 69
 	x 10+icon.width+3+1
 	y 8+5+1
 end
@@ -820,7 +820,7 @@ object
 	ifnotset 4
 	ifnotset 5
 	type title
-	color 30 30 30
+	color 37 53 69
 	x 10+icon.width+3
 	y 8+5
 end
@@ -962,7 +962,7 @@ object
 	ifnotset 4
 	ifnotset 9
 	type text
-	color 30 30 30
+	color 37 53 69
 	x 10+avatar.width+3
 	y 8+5+title.height+5+2
 	w window.width-(10+avatar.width+3)-10-3
@@ -981,7 +981,7 @@ object
 	ifnotset 4
 	ifset 9
 	type text
-	color 30 30 30
+	color 37 53 69
 	x 10+3
 	y 8+5+title.height+5+2
 	w window.width-(10+avatar.width+3)-10-3
