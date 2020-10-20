@@ -67,12 +67,12 @@ $$Button/Ontop/Down=sGlyph,Fragment,BG.png,32,50,15,15,StretchBoth,0,0,0,0,255
 $$Button/Offtop/Normal=sGlyph,Fragment,BG.png,0,66,15,15,StretchBoth,0,0,0,0,255
 $$Button/Offtop/Hovered=sGlyph,Fragment,BG.png,16,66,15,15,StretchBoth,0,0,0,0,255
 $$Button/Offtop/Down=sGlyph,Fragment,BG.png,32,66,15,15,StretchBoth,0,0,0,0,255
-$$Button/StatusMenu/Normal=sGlyph,Fragment,BG.png,0,127,65,14,StretchBoth,0,0,0,0,255
-$$Button/StatusMenu/Hovered=sGlyph,Fragment,BG.png,0,142,65,14,StretchBoth,0,0,0,0,255
-$$Button/StatusMenu/Down=sGlyph,Fragment,BG.png,0,157,65,14,StretchBoth,0,0,0,0,255
-$$Button/Menu/Normal=sGlyph,Fragment,BG.png,0,82,27,14,StretchBoth,0,0,0,0,255
-$$Button/Menu/Hovered=sGlyph,Fragment,BG.png,0,97,27,14,StretchBoth,0,0,0,0,255
-$$Button/Menu/Down=sGlyph,Fragment,BG.png,0,112,27,14,StretchBoth,0,0,0,0,255
+$$Button/StatusMenu/Normal=sGlyph,Fragment,BG.png,0,133,65,14,StretchBoth,0,0,0,0,255
+$$Button/StatusMenu/Hovered=sGlyph,Fragment,BG.png,0,148,65,14,StretchBoth,0,0,0,0,255
+$$Button/StatusMenu/Down=sGlyph,Fragment,BG.png,0,163,65,14,StretchBoth,0,0,0,0,255
+$$Button/Menu/Normal=sGlyph,Fragment,BG.png,0,82,29,16,StretchBoth,0,0,0,0,255
+$$Button/Menu/Hovered=sGlyph,Fragment,BG.png,0,99,29,16,StretchBoth,0,0,0,0,255
+$$Button/Menu/Down=sGlyph,Fragment,BG.png,0,116,29,16,StretchBoth,0,0,0,0,255
 $$Name/Ontop/Normal=s
 $$Name/Ontop/Hovered=s
 $$Name/Ontop/Down=s
@@ -169,8 +169,8 @@ $$BarButton/Pressed=sGlyph,Fragment,BG.png,41,0,8,8,StretchBoth,4,4,3,3,255
 #close=sPush,Scripts/Exit,-24,9,-9,24,R-R--,0,0,Exit
 #minimize=sPush,CList/ShowHide,-41,9,-26,24,R-R--,0,0,Minimize
 #bontop=sSwitch,CList/OnTop,CList/OnTop,b0/1,-58,9,-43,24,R-R--,0,0,On/Off On Top
-#statusmenu=sPush,CList/ShowStatusMenu,40,11,105,25,-----,0,0,Status menu
-#mainmenu=sPush,CList/ShowMainMenu,9,9,36,23,-----,0,0,Main menu
+#statusmenu=sPush,CList/ShowStatusMenu,39,11,104,25,-----,0,0,Status menu
+#mainmenu=sPush,CList/ShowMainMenu,8,8,37,24,-----,0,0,Main menu
 
 
 [CList]
