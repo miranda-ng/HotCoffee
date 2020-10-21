@@ -619,9 +619,6 @@ fntSecondSize=b-11
 fntSecondSty=b0
 
 [FloatingContacts]
-BkColor=d15856113
-LTEdgesColor=d16777215
-RBEdgesColor=d12632256
 Font0=sVerdana
 Font0Col=d5855577
 Font0Flags=w160
@@ -1482,6 +1479,13 @@ fnt1Sty=b1
 
 [mRadio]
 frame_back=d15856113
+
+
+;Floating Contacts
+[FloatingContacts]
+BkColor=d15856113
+LTEdgesColor=d16777215
+RBEdgesColor=d12632256
 
 
 ;IEView settings

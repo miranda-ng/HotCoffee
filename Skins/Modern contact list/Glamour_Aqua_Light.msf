@@ -8,6 +8,8 @@ SubStyle=Normal
 URL=https://miranda-ng.org/hotcoffee
 Version=2.0
 
+[?ModernSkin]
+
 [ModernSkin]
 SkinFolder=uSkins\Modern contact list\Glamour_Aqua_Light
 SkinFile=uSkins\Modern contact list\Glamour_Aqua_Light.msf
@@ -642,9 +644,6 @@ fntSecondSize=b-11
 fntSecondSty=b0
 
 [FloatingContacts]
-BkColor=d16316148
-LTEdgesColor=d16777215
-RBEdgesColor=d12632256
 Font0=sVerdana
 Font0Col=d9206622
 Font0Flags=w160
@@ -1507,8 +1506,16 @@ fnt1Sty=b1
 frame_back=d16316148
 
 
+;Floating Contacts
+[FloatingContacts]
+BkColor=d16316148
+LTEdgesColor=d9206622
+RBEdgesColor=d9206622
+
+
 ;IEView settings
 [IEVIEW]
+_default_.SRMMMode=b2
 _default_.SRMMTemplateFile=sSkins\IEView\Glamour_Aqua_Light.ivt
 GeneralFlags=d37
 

@@ -8,6 +8,8 @@ SubStyle=Normal
 URL=https://miranda-ng.org/hotcoffee
 Version=1.0
 
+[?ModernSkin]
+
 [ModernSkin]
 SkinFolder=uSkins\Modern contact list\Diplomat_Light
 SkinFile=uSkins\Modern contact list\Diplomat_Light.msf
@@ -643,9 +645,6 @@ fntSecondSize=b-11
 fntSecondSty=b0
 
 [FloatingContacts]
-BkColor=d13552072
-LTEdgesColor=d16777215
-RBEdgesColor=d12632256
 Font0=sVerdana
 Font0Col=d4605510
 Font0Flags=w160
@@ -1508,8 +1507,16 @@ fnt1Sty=b1
 frame_back=d13552072
 
 
+;Floating Contacts
+[FloatingContacts]
+BkColor=d13552072
+LTEdgesColor=d15132390
+RBEdgesColor=d8421504
+
+
 ;IEView settings
 [IEVIEW]
+_default_.SRMMMode=b2
 _default_.SRMMTemplateFile=sSkins\IEView\Diplomat_Light.ivt
 GeneralFlags=d37
 
