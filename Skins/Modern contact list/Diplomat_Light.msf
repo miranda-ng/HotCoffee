@@ -1625,6 +1625,10 @@ popupTxtColor=d6436105
 PopupBackColor=d5207492
 PopupTextColor=d599394
 
+[NewAwaySys]
+PopupBGColour=d10390388
+PopupTextColour=d3287843
+
 [NewStatusNotify]
 40071bg=d9013641
 40071tx=d1973790
