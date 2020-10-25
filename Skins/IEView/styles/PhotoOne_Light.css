@@ -60,9 +60,9 @@ div {
 	vertical-align: middle;
 }
 
-.head {
-/*	border-bottom: 1px dotted;*/
-}
+/*.head {
+	border-bottom: 1px dotted;
+}*/
 
 .date {
 	font-weight: bold;
@@ -117,7 +117,6 @@ div.avatar {
 .hMessageIn, .hMessageOut, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart, .hStatus, .hFileIn, .hFileOut, .hURL {
 	background: url(PhotoOne_Light/history.png) no-repeat bottom right;
 }
-
 
 /* -------------------- incoming messagebox -------------------- */
 
