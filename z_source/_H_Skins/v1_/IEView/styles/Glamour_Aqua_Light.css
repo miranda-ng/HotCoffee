@@ -1,0 +1,191 @@
+/*--- Global ---*/
+
+.Link-Text, .tzerlink {
+	color: #054381;
+}
+
+input {
+	background: #F4F6F8;
+	border-top: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+	border-bottom: 1px solid #AFC0CA;
+	border-right: 1px solid #AFC0CA;
+	color: #6B8A9C;
+}
+
+html {
+	scrollbar-face-color: #F4F6F8;
+	scrollbar-highlight-color: #F4F6F8;
+	scrollbar-shadow-color: #F4F6F8;
+	scrollbar-arrow-color: #6B8A9C;
+	scrollbar-3dlight-color: #FFFFFF;
+	scrollbar-darkshadow-color: #AFC0CA;
+	scrollbar-track-color: #ECF0F2;
+	background: url(Glamour_Aqua_Light/picture.png) fixed no-repeat bottom right;
+	background-color: #ECF0F2;
+	overflow: auto;
+	padding: 0px 0px 0px 0px;
+	margin: 0;
+	font-size: 13px;
+	color: #4B616D;
+	zoom: 0 !important;
+}
+
+a, a:active {
+	color: #054381;
+	text-decoration: none;
+	font-weight: normal;
+	cursor:pointer;
+}
+
+a:visited {
+	color: #C44305;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+a:hover {
+	color: #054381;
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+div {
+	width: auto;
+	word-wrap: break-word;
+}
+
+.img {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	vertical-align: middle;
+}
+
+.head {
+/*	border-bottom: 1px dotted;*/
+}
+
+.date {
+	font-weight: bold;
+	float: right;
+	font-size: 11px;
+	padding: 3px 5px 0px 5px;
+}
+
+.name {
+	font-weight: bold;
+	padding: 3px 5px 0px 5px;
+}
+
+.time {
+	color: Gray;
+	font-weight: normal;
+	float: right;
+	font-size: 11px;
+}
+
+.text {
+/*	word-break: break-all;*/
+	padding: 3px 5px 3px 5px;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+div.avatar {
+	display: none;
+	float: left;
+	padding: 0px 0px 0px 0px;
+}
+
+.avatar img {
+	height: 32;
+}
+
+.code {
+	border: 1px dashed #AFC0CA;
+	margin: -1px;
+}
+
+.MessageIn, .MessageOut, .hMessageIn, .hMessageOut, .frame, .Status, .hStatus, .FileIn, .hFileIn, .FileOut, .hFileOut, .URL, .hURL {
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #AFC0CA;
+}
+
+.MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
+	border-top: 1px dotted #AFC0CA;
+}
+
+.hMessageIn, .hMessageOut, .history, .hStatus, .hFileIn, .hFileOut, .hURL {
+	background: url(Glamour_Aqua_Light/history.png) no-repeat bottom right;
+}
+
+
+/* -------------------- incoming messagebox -------------------- */
+
+.in .head {
+	color: #C44305;
+	background-image: url(Glamour_Aqua_Light/in.png);
+}
+
+.contentMessageIn, .contenthMessageIn, .contentMessageInGroupStart, .MessageInGroupInner, .contenthMessageInGroupStart, .hMessageInGroupInner {
+	background-image: url(Glamour_Aqua_Light/in.png);
+}
+
+/* -------------------- outgoing messagebox -------------------- */
+
+.out .head {
+	color: #054381;
+	background-image: url(Glamour_Aqua_Light/out.png);
+}
+
+.contentMessageOut, .contenthMessageOut, .contentMessageOutGroupStart, .MessageOutGroupInner, .contenthMessageOutGroupStart, .hMessageOutGroupInner {
+	background-image: url(Glamour_Aqua_Light/out.png);
+}
+
+/* -------------------- status support -------------------- */
+
+.status .head {
+	color: #C44305;
+	background-image: url(Glamour_Aqua_Light/status.png);
+}
+
+.contentStatus, .contenthStatus {
+	color: #C44305;
+	background-image: url(Glamour_Aqua_Light/status.png);
+}
+
+.contentStatus .time, .contenthStatus .time {
+	color: #C38264;
+}
+
+/* -------------------- file transfer support -------------------- */
+
+.infile .head, .outfile .head {
+	color: green;
+	background-image: url(Glamour_Aqua_Light/file.png);
+}
+
+.contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
+	color: green;
+	background-image: url(Glamour_Aqua_Light/file.png);
+}
+
+.contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
+	color: #61A061;
+}
+
+/* -------------------- URL support -------------------- */
+
+.inurl .head {
+	color: #054381;
+	background-image: url(Glamour_Aqua_Light/url.png);
+}
+
+.contentURL, .contenthURL {
+	color: #054381;
+	background-image: url(Glamour_Aqua_Light/url.png);
+}
+
+.contentURL .time, .contenthURL .time {
+	color: #6482A1;
+}
