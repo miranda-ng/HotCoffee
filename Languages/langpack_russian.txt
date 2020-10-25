@@ -11,7 +11,7 @@ Authors: Mataes, Mikel-Ard-Ri, mitrich, Navy, NightFox, Oleg Makovski, PoWeR, Ra
 Authors: Sergey Morozov, SergoZD, Sledge, theMIROn, thundred, Valery Bragin,
 Authors: Viktor Shanin, Vjacheslav Ogrenich, Vladimir Rozhkovskiy aka Voron, watcher,
 Authors: Yevgeny, YurasiK, Yury A. Marcinchick
-Last-Modified-Using: Miranda NG 0.95.12
+Last-Modified-Using: Miranda NG 0.95.13
 
 
 ;============================================================
@@ -836,12 +836,16 @@ Last-Modified-Using: Miranda NG 0.95.12
 Автоопределение текста
 [Calling modules' names]
 Имена вызывающих модулей
+[Print dates]
+Дата
 [Log to]
 Записывать в
 [OutputDebugString()]
 Функцию OutputDebugString()
 [File]
 Файл
+[Rotate logs]
+Ротация файлов
 [Run program when Miranda NG starts (e.g., tail -f, dbgview, etc.):]
 Запускать программу вместе с Miranda NG (например, tail -f, dbgview и т.д.):
 [Run now]
@@ -1190,6 +1194,8 @@ UIN, E-mail и т.д.
 Подсветка
 [Show popups only when the chat room is not active]
 Показывать всплывающие окна только когда окно чата не активно
+[Show button menus when right clicking the buttons]
+Показывать меню кнопки по правому щелчку
 [Hidden window]
 Скрытое окно
 [&Hide/Show]
@@ -1485,8 +1491,6 @@ Google Карты
 Мигать окном, если есть подсвеченные сообщения
 [Show list of users in the chat room]
 Показывать список пользователей в комнате чата
-[Show button menus when right clicking the buttons]
-Показывать меню кнопки по правому щелчку
 [Show the topic of the room on your contact list (if supported)]
 Показывать тему комнаты чата в списке контактов (если поддерживается)
 [Do not play sounds when the chat room is focused]
@@ -1949,11 +1953,6 @@ Miranda не смогла загрузить встроенную систему
 %u добавил вас в свой список контактов
 [Added event]
 Событие добавления
-;file \src\mir_app\src\chat_clist.cpp
-[&Join chat]
-Войти в чат
-[&Open/close chat window]
-&Открыть/закрыть окно чата
 ;file \src\mir_app\src\chat_log.cpp
 [%s has joined]
 %s вошёл
@@ -2021,8 +2020,18 @@ Miranda не смогла загрузить встроенную систему
 [Chat log symbols (Webdings)]
 Символы в чате (шрифт Webdings)
 ;file \src\mir_app\src\chat_svc.cpp
+[&Join chat]
+Войти в чат
+[&Open/close chat window]
+&Открыть/закрыть окно чата
 [&Leave chat]
 Покинуть чат
+[&Mute chat]
+&Заглушать чат
+[Always]
+Всегда
+[Never]
+Никогда
 [Message is highlighted]
 Подсвеченное сообщение
 [User has performed an action]
@@ -2171,6 +2180,8 @@ Miranda не может распознать этот профиль
 Телефон/SMS
 [Chat activity]
 Активность в чате
+[Chat mute mode]
+Режим беззвучности чата
 ;file \src\mir_app\src\ei_options.cpp
 [Extra icons]
 Экстра значки
@@ -2557,6 +2568,8 @@ xСтатус
 <Неизвестный формат>
 [Are you sure you want to remove profile "%s"?]
 Вы уверены, что хотите удалить профиль "%s"?
+[Database was compacted successfully]
+База успешно сжата
 [&Convert]
 &Конвертировать
 [Run]
@@ -9059,7 +9072,7 @@ HTTP-подключения CurrencyRates
 ;============================================================
 ;  File: DbChecker.dll
 ;  Plugin: Database checker
-;  Version: 0.95.12.1
+;  Version: 0.95.13.1
 ;  Authors: George Hazan
 ;============================================================
 [Miranda NG Database Checker.]
@@ -9083,6 +9096,11 @@ HTTP-подключения CurrencyRates
 Выполнение...
 [Please wait while the requested operations are being performed.]
 Подождите, пока все операции будут завершены.
+;file \plugins\DbChecker\src\main.cpp
+[Database]
+База данных
+[Check database]
+Проверить базу
 ;file \plugins\DbChecker\src\openerror.cpp
 [Database Checker cannot find a suitable database plugin to open '%s'.]
 Плагин проверки не может найти подходящий драйвер базы для открытия '%s'.
@@ -9977,7 +9995,7 @@ WhatsApp ID
 ;============================================================
 ;  File: EmLanProto.dll
 ;  Plugin: E-mage LAN protocol
-;  Version: 0.1.0.2
+;  Version: 0.1.0.3
 ;  Authors: kva
 ;============================================================
 [E-mage LAN protocol support for Miranda NG.]
@@ -10764,7 +10782,7 @@ MirOTR оверлей
 ;============================================================
 ;  File: FTPFile.dll
 ;  Plugin: FTP File YM
-;  Version: 0.6.0.5
+;  Version: 0.6.0.6
 ;  Authors: yaho
 ;============================================================
 [FTP a file to a server and send the URL to your friend. Supported automatic zipping before upload and encryption via SFTP and FTPS.]
@@ -13647,6 +13665,8 @@ UIN/почта/телефон
 Неизвестный стикер
 [User sent a sticker:]
 Пользователь отправил стикер:
+[SmileyAdd plugin required to support stickers]
+Для поддержки стикеров требуется плагин SmileyAdd
 [Buddy addition failed]
 Не удалось добавить контакт
 
@@ -15881,6 +15901,9 @@ Jabber ошибка
 ;file \protocols\JabberG\src\jabber_iq_handlers.cpp
 [Http authentication request received]
 Получен запрос HTTP авторизации
+;file \protocols\JabberG\src\jabber_mam.cpp
+[Do you want to erase local history before loading it from server?]
+Очистить локальную историю перед загрузкой истории с сервера?
 ;file \protocols\JabberG\src\jabber_menu.cpp
 [Jabber account chooser]
 Выбор учётной записи Jabber
@@ -16379,6 +16402,8 @@ OMEMO: Новая сессия
 Включить уведомления о состоянии чата (XEP-0085)
 [Enable server-side history (XEP-0136)]
 Включить историю на сервере (XEP-0136) (только при поддержке на стороне сервера)
+[Enable Message Archive Management (XEP-0313)]
+Включить архивацию сообщений на сервере (XEP-0313)
 [Enable carbon copies (XEP-0280)]
 Включить копирование сообщений на все ресурсы (XEP-0280)
 [Use Stream Management (XEP-0198) if possible (Testing)]
@@ -16603,8 +16628,6 @@ S.ms
 Список не выбран
 [Can't remove active or default list]
 Невозможно удалить активный или стандартный список
-[Sorry]
-Извините
 [Unable to save list because you are currently offline.]
 Невозможно сохранить список, т.к. вы не в сети.
 [List Editor...]
@@ -18368,7 +18391,7 @@ MirFox (Miranda) - Ошибка
 ;============================================================
 ;  File: MirLua.dll
 ;  Plugin: MirLua
-;  Version: 0.11.9.1
+;  Version: 0.11.9.2
 ;  Authors: Miranda NG team
 ;============================================================
 [Extends Miranda NG functionality with Lua scripts.]
@@ -20122,9 +20145,11 @@ HTTP-подключения каналов новостей
 [History export]
 Экспорт истории
 ;file \plugins\NewStory\src\history_control.cpp
+[Do you really want to remove selected event(s)?]
+Уверены, что хотите удалить выбранные события?
+;file \plugins\NewStory\src\history_menus.cpp
 [Are you sure to remove all events from history?]
 Уверены, что хотите удалить все события из истории?
-;file \plugins\NewStory\src\history_menus.cpp
 [User history]
 История пользователя
 [Empty history]
@@ -21037,8 +21062,8 @@ GPG не удалось расшифровать входящее сообщен
 Длина ключа должна быть от 1024 до 4096 бит
 [Invalid date]
 Недопустимая дата
-[Name must contain at least 5 characters]
-Имя должно содержать не менее 5 символов
+[Name must contain at least 4 characters]
+Имя должно содержать не менее 4 символов
 [Name cannot contain '(' or ')']
 Имя не может содержать '(' или ')'
 [Invalid Email]
@@ -21943,8 +21968,8 @@ Omegle - отличный способ найти новых друзей!
 ;  Version: 0.1.0.2
 ;  Authors: Miranda NG team
 ;============================================================
-[Core driver to provide OpenSSL-based SSL services.]
-Драйвер ядра, использующий OpenSSL для предоставления услуг шифрования.
+[Core driver to provide OpenSSL-based SSL services. It provides TLS 1.2/1.3 support for legacy operating systems.]
+Драйвер ядра, использующий OpenSSL для предоставления услуг шифрования. Добавляет поддержку TLS 1.2/1.3 в устаревшие операционные системы.
 ;file \plugins\OpenSSL\src\ssl_openssl.cpp
 [Client cannot decode host message. Possible causes: host does not support SSL or requires not existing security package]
 Клиент не может расшифровать сообщение сервера. Возможные причины: сервер не поддерживает SSL, либо требует не существующий пакет безопасности
@@ -22446,7 +22471,7 @@ TCP соединение
 ;============================================================
 ;  File: PluginUpdater.dll
 ;  Plugin: Plugin updater
-;  Version: 0.2.0.7
+;  Version: 0.2.0.9
 ;  Authors: Mataes, George Hazan
 ;============================================================
 [Installs and updates plugins and other Miranda NG components.]
@@ -22480,6 +22505,8 @@ TCP соединение
 Автоматический перезапуск
 [Backup database before update (requires Db_autobackups plugin)]
 Резервировать базу перед обновлением (требуется плагин Db_autobackups)
+[Number of backups to keep:]
+Количество резервных копий:
 [Files source]
 Источник обновления
 [Stable version]
@@ -22578,6 +22605,8 @@ TCP соединение
 ;file \plugins\PluginUpdater\src\DlgUpdate.cpp
 [Will be deleted!]
 Удалено!
+[Unpack operation failed with error code=%d, update terminated]
+Не удалось распаковать, код ошибки=%d, обновление прервано
 [Update complete. Press Yes to restart Miranda now or No to postpone a restart until the exit.]
 Обновление завершено. Нажмите "Да" для немедленной перезагрузки программы или "Нет", чтобы отложить обновление до выхода.
 [Miranda NG Core]
@@ -24445,8 +24474,6 @@ IP токена не совпадает
 Мигать окном, если есть подсвеченные сообщения
 [Show chat nick list]
 Показывать пользователей в списке
-[Enable button context menus]
-Включить кнопки в контекстном меню
 [Show topic on your contact list (if supported)]
 Показывать тему в списке контактов (если поддерживается)
 [Do not play sounds when focused]
@@ -25308,7 +25335,7 @@ SecureIM (RSA/AES)
 ;============================================================
 ;  File: SeenPlugin.dll
 ;  Plugin: Last seen
-;  Version: 5.0.5.5
+;  Version: 5.0.5.6
 ;  Authors: Heiko Schillinger, YB
 ;============================================================
 [Logs when a user was last seen online and which users were online while you were away.]
@@ -26379,7 +26406,7 @@ Miranda NG - Контекстное меню оболочки ОС (shellext.dll
 ;============================================================
 ;  File: SkypeWeb.dll
 ;  Plugin: Skype protocol (Web)
-;  Version: 0.95.12.1
+;  Version: 0.95.12.2
 ;  Authors: Miranda NG team
 ;============================================================
 [Skype protocol support for Miranda NG. Based on new Skype for Web.]
@@ -26544,9 +26571,6 @@ URI объект
 Неизвестная ошибка!
 [Network error!]
 Ошибка сети!
-;file \protocols\SkypeWeb\src\skype_network.cpp
-[%s connection]
-%s подключение
 ;file \protocols\SkypeWeb\src\skype_options.cpp
 [Network]
 Сеть
@@ -26558,6 +26582,8 @@ URI объект
 [Calls]
 Звонки
 ;file \protocols\SkypeWeb\src\skype_proto.cpp
+[%s connection]
+%s подключение
 [Incoming call canceled]
 Отмена входящего звонка
 [Skypename]
@@ -26567,7 +26593,7 @@ URI объект
 ;============================================================
 ;  File: SmileyAdd.dll
 ;  Plugin: SmileyAdd
-;  Version: 0.3.1.2
+;  Version: 0.3.2.1
 ;  Authors: Peacow, nightwish, bid, borkra
 ;============================================================
 [Smiley support for Miranda NG.]
@@ -26593,8 +26619,6 @@ URI объект
 Заменять только смайлы, окружённые пробелами
 [Scale smiley to text height]
 Масштабировать смайлы под текст
-[Disable stickers]
-Отключить стикеры
 [High quality smiley scaling]
 Качественное масштабирование
 [Animate]
@@ -27864,7 +27888,7 @@ StopSpam: отправьте сообщение и ответьте на воп�
 ;============================================================
 ;  File: TabSRMM.dll
 ;  Plugin: TabSRMM
-;  Version: 3.6.1.3
+;  Version: 3.6.1.5
 ;  Authors: The Miranda developers team and contributors
 ;============================================================
 [IM and group chat module for Miranda NG.]
@@ -28605,16 +28629,16 @@ BBCode ([b][i][u])
 История сообщений
 [Edit user notes]
 Редактировать заметки о пользователе
-[Select font color]
-Выбор цвета
-[Change background color]
-Изменить цвет фона
-[Toggle nick list]
-Вкл/выкл список участников
-[Event filter - right click to setup, left click to activate/deactivate]
-Фильтр событий - щелчок правой кнопкой для настройки, левой - вкл/выкл
-[Channel manager]
-Управление каналом
+[Select a foreground color for the text (Ctrl+K)]
+Выбрать цвет текста (Ctrl+K)
+[Select a background color for the text (Ctrl+L)]
+Выбрать фон текста (Ctrl+L)
+[Show/hide the nick list (Ctrl+N)]
+Показать/скрыть список пользователей (Ctrl+N)
+[Enable/disable the event filter (Ctrl+F)]
+Включить/выключить фильтр событий (Ctrl+F)
+[Control this room (Ctrl+O)]
+Управление комнатой чата (Ctrl+O)
 ;file \plugins\TabSRMM\src\chat_main.cpp
 [Message sessions]
 Беседы
@@ -28821,8 +28845,6 @@ BBCode ([b][i][u])
 Показывать список пользователей в комнате чата
 [Colorize nicknames in member list]
 Цветные ники в списке пользователей
-[Show button menus when right clicking the buttons]
-Показывать меню кнопки по правому щелчку
 [Show topic as status message on the contact list]
 Показать тему комнаты чата в списке контактов как сообщение статуса
 [Do not pop up the window when joining a chat room]
@@ -29147,8 +29169,12 @@ TabSRMM: набор текста
 Очистить журнал сообщений
 [Collapse side bar]
 Свернуть боковую панель
+[Channel manager]
+Управление каналом
 [Toggle filter]
 Переключить фильтр
+[Toggle nick list]
+Вкл/выкл список участников
 [Show server window]
 Показать окно сервера
 ;file \plugins\TabSRMM\src\infopanel.cpp
@@ -32830,7 +32856,7 @@ x, и сохраняет y, как переменную с именем x
 ;============================================================
 ;  File: VKontakte.dll
 ;  Plugin: VKontakte protocol
-;  Version: 0.1.11.3
+;  Version: 0.1.11.6
 ;  Authors: Miranda NG team
 ;============================================================
 [VKontakte protocol support for Miranda NG.]
@@ -33145,8 +33171,16 @@ URL:
 Документ
 [Wall post]
 Запись на стене
+[(Unknown contact)]
+(Неизвестный контакт)
+[Wall reply]
+Комментарий на стене
+[from]
+от
 [Story]
 История
+[Sticker]
+Стикер
 [Product]
 Товар
 [Price]
@@ -33155,8 +33189,8 @@ URL:
 Подарок
 [Unsupported or unknown attachment type: %s]
 Неподдерживаемый или неизвестный тип вложения: %s
-[(Unknown contact)]
-(Неизвестный контакт)
+[Text]
+Текст
 [Message from]
 Сообщение от
 [at]
