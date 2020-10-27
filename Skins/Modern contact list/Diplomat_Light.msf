@@ -36,7 +36,7 @@ $$SubGroup/Closed/Selected=sGlyph,Fragment,BG.png,18,0,13,13,StretchBoth,6,6,6,6
 $$Contact/Hot=sGlyph,Fragment,BG.png,32,0,8,8,StretchBoth,3,3,4,4,255
 $$Contact/Selected=sGlyph,Fragment,BG.png,41,0,8,8,StretchBoth,4,4,3,3,255
 $$Contact/Normal=s
-$$Contact/Odd=sGlyph,Solid,197,198,203,255
+$$Contact/Odd=sGlyph,Solid,197,198,205,255
 $$Contact/Single=sGlyph,Solid,203,204,209,255
 $$Contact/Last=s
 $$Contact/First=s
@@ -1615,8 +1615,8 @@ iPopUpColorBack=d8951900
 iPopUpColorFore=d2898437
 
 [ChangeKeyboardLayout]
-BackColor=d8553090
-TextColor=d2763306
+BackColor=d9405827
+TextColor=d3155749
 
 [Chat]
 PopupColorBG=d4622508
@@ -1634,12 +1634,12 @@ PopupBackColor=d4880565
 PopupTextColor=d9301
 
 [NewAwaySys]
-PopupBGColour=d8553090
-PopupTextColour=d2763306
+PopupBGColour=d9405827
+PopupTextColour=d3155749
 
 [NewStatusNotify]
-40071bg=d8553090
-40071tx=d2763306
+40071bg=d9405827
+40071tx=d3155749
 40072bg=d6332256
 40072tx=d1389845
 40073bg=d11959374
@@ -1664,8 +1664,8 @@ PopupTextColour=d2763306
 40082tx=d12618
 
 [PackUpdater]
-Popups0Bg=d8553090
-Popups0Tx=d2763306
+Popups0Bg=d9405827
+Popups0Tx=d3155749
 Popups1Bg=d6513086
 Popups1Tx=d986462
 Popups2Bg=d11959374
@@ -1692,20 +1692,20 @@ colorSect=d6435081
 [tabSRMM_NEN]
 ColorBackErr=d6513086
 ColorBackMsg=d4622508
-ColorBackOthers=d8553090
+ColorBackOthers=d9405827
 ColorTextErr=d986462
 ColorTextMsg=d12618
-ColorTextOthers=d2763306
+ColorTextOthers=d3155749
 
 [Twitter]
 Popup/ColorBack=d11959374
 Popup/ColorText=d6435081
 
 [TypingNotify]
-OFF_BG=d8553090
-OFF_TX=d2763306
-ON_BG=d8553090
-ON_TX=d2763306
+OFF_BG=d9405827
+OFF_TX=d3155749
+ON_BG=d9405827
+ON_TX=d3155749
 
 [UserInfoEx]
 PopupAnnivClrBack=d8951900
@@ -1714,8 +1714,8 @@ PopupBirthClrBirthBack=d11364199
 PopupBirthClrBirthText=d5380120
 
 [Weather]
-BackgroundColour=d8553090
-TextColour=d2763306
+BackgroundColour=d9405827
+TextColour=d3155749
 
 [WebView]
 PopBGClr=d11959374

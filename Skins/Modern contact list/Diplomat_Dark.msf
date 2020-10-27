@@ -36,8 +36,8 @@ $$SubGroup/Closed/Selected=sGlyph,Fragment,BG.png,18,0,13,13,StretchBoth,6,6,6,6
 $$Contact/Hot=sGlyph,Fragment,BG.png,32,0,8,8,StretchBoth,3,3,4,4,255
 $$Contact/Selected=sGlyph,Fragment,BG.png,41,0,8,8,StretchBoth,4,4,3,3,255
 $$Contact/Normal=s
-$$Contact/Odd=s
-$$Contact/Single=s
+$$Contact/Odd=sGlyph,Solid,56,58,69,255
+$$Contact/Single=sGlyph,Solid,61,63,73,255
 $$Contact/Last=s
 $$Contact/First=s
 $$Scroll/BtnUp=sGlyph,Fragment,BG.png,48,18,17,17,StretchBoth,0,0,11,11,255
@@ -102,8 +102,8 @@ $$BarButton/Pressed=sGlyph,Fragment,BG.png,41,0,8,8,StretchBoth,4,4,3,3,255
 @50=s$$Contact/Selected:CL,ID=Row,Type=*Contact,Selected=True
 @51=s$$Contact/Hot:CL,ID=Row,Type=*Contact,Hot=True
 @55=s$$Contact/Normal:CL,ID=Row,Type=*Contact,Odd=Flase
-@56=s
-@57=s
+@56=s$$Contact/Odd:CL,ID=Row,Type=*Contact,Odd=True
+@57=s$$Contact/Single:CL,ID=Row,Type=*Contact
 @62=s
 @63=s
 @64=s
