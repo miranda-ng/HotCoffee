@@ -39,7 +39,7 @@ Bottom=0
 Inner=4
 
 [WindowFrame]
-Caption=23
+Caption=32
 Left=6
 Right=6
 Bottom=5
@@ -48,12 +48,12 @@ RadiusTL=3
 RadiusTR=3
 RadiusBL=3
 RadiusBR=3
-CaptionOffset=7
-CaptionPadding=7
+CaptionOffset=9
+CaptionPadding=5
 TitleButtonWidth=15
 TitleButtonHeight=15
 TitleButtonTopOffset=6
-TitleBarLeftOffset=-4
+TitleBarLeftOffset=-2
 TitleBarRightOffset=-4
 
 ;------Standard-------
@@ -114,9 +114,9 @@ Alpha=100
 Perpixel=1
 
 [$Frame]
-Glyph=3,3,13,13
+Glyph=3,3,13,43
 Left=5
-Top=5
+Top=35
 Right=5
 Bottom=5
 Item0=Frame
