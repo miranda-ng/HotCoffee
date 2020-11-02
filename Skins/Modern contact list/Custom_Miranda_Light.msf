@@ -1551,14 +1551,14 @@ ContainerSkin=sCustom_Miranda_Light\Custom_Miranda_Light.tsk
 InnerAvatarPadding=w4
 OuterAvatarPadding=w12
 Padding=w12
-RoundCorners=b1
+TextPadding=w3
 SidebarWidth=d31
+TitleIndent=d21
+TextIndent=d21
+ValueIndent=d8
+RoundCorners=b1
 SkinEngine=b1
 SkinName=uCustom_Miranda_Light
-TextIndent=d21
-TextPadding=w3
-TitleIndent=d21
-ValueIndent=d8
 
 
 ;Popup settings

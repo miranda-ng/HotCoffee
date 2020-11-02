@@ -1584,15 +1584,15 @@ ContainerSkin=sDiplomat_Light\Diplomat_Light.tsk
 [Tipper]
 InnerAvatarPadding=w0
 OuterAvatarPadding=w8
-Padding=w8
+Padding=w7
+TextPadding=w3
+SidebarWidth=d33
+TitleIndent=d25
+TextIndent=d25
+ValueIndent=d8
 RoundCorners=b1
-SidebarWidth=d0
 SkinEngine=b1
 SkinName=uDiplomat_Light
-TextIndent=d21
-TextPadding=w3
-TitleIndent=d21
-ValueIndent=d8
 
 
 ;Popup settings

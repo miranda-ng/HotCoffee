@@ -1576,14 +1576,14 @@ ContainerSkin=sGlamour_Aqua_Light\Glamour_Aqua_Light.tsk
 InnerAvatarPadding=w2
 OuterAvatarPadding=w10
 Padding=w10
-RoundCorners=b1
+TextPadding=w3
 SidebarWidth=d36
+TitleIndent=d28
+TextIndent=d28
+ValueIndent=d8
+RoundCorners=b1
 SkinEngine=b1
 SkinName=uGlamour_Aqua_Light
-TextIndent=d28
-TextPadding=w3
-TitleIndent=d28
-ValueIndent=d8
 
 
 ;Popup settings
