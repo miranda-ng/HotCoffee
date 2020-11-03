@@ -1113,7 +1113,7 @@ object
 	ifnotset 9
 	type avatar
 	x 6+1
-	y 8+5+title.height+5+6
+	y 8+5+title.height+5+6+(text.height-avatar.height)/2
 	w options.avatarsize
 	proportional 1
 end
@@ -1123,7 +1123,7 @@ object
 	ifset 9
 	type avatar
 	x window.width-avatar.width-6-1
-	y 8+5+title.height+5+6
+	y 8+5+title.height+5+6+(text.height-avatar.height)/2
 	w options.avatarsize
 	proportional 1
 end

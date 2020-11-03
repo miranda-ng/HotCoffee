@@ -1,13 +1,13 @@
 #Author:	Favor, Dracosha
 #Description:	Skin for Popup+ 2.1.0.7 or later
 #Name:		Diplomat_Light
-#Version:	1.0
+#Version:	2.0
 
 #===========Options================================================================================
 options
 	#option	id	val	title
-	option	1	0	Color frame
-#	option	2	0	Color text background
+	option	1	1	Color frame
+	option	2	0	Color text background
 	option	3	1	Color logo & clocks
 	option	4	1	Color text
 	option	5	0	Light title text
@@ -18,175 +18,478 @@ options
 	option	10	1	Logo
 end
 
-h 8+5+title.height+5+(2+avatar.height>text.height+2)+2+7
+h 8+5+title.height+5+(2+avatar.height>text.height+2)+2+8
 
 popup-version 02010007
 
-#===========Top====================================================================================
+#===========Background top=========================================================================
 object
 	ifnotset 1
+	type bitmap
+	source bg_tl.png
+	x 0
+	y 6
+	w 6
+	h 6
+end
+object
+	ifset 1
+	type bitmap
+	source bg_tl.png
+	mono
+	x 0
+	y 6
+	w 6
+	h 6
+end
+object
+	ifnotset 1
+	type bitmap
+	source bg_t.png
+	x 6
+	y 6
+	w window.width-6-6
+	h 6
+end
+object
+	ifset 1
+	type bitmap
+	source bg_t.png
+	mono
+	x 6
+	y 6
+	w window.width-6-6
+	h 6
+end
+object
+	ifnotset 1
+	type bitmap
+	source bg_tr.png
+	x window.width-6
+	y 6
+	w 6
+	h 6
+end
+object
+	ifset 1
+	type bitmap
+	source bg_tr.png
+	mono
+	x window.width-6
+	y 6
+	w 6
+	h 6
+end
+
+#===========Background center======================================================================
+object
+	ifnotset 1
+	type bitmap
+	source bg_l.png
+	x 0
+	y 12
+	h window.height-6-6-6
+end
+object
+	ifset 1
+	type bitmap
+	source bg_l.png
+	mono
+	x 0
+	y 12
+	h window.height-6-6-6
+end
+object
+	ifnotset 1
+	type bitmap
+	source bg_c.png
+	x 6
+	y 12
+	w window.width-6-6
+	h window.height-6-6-6
+end
+object
+	ifset 1
+	type bitmap
+	source bg_c.png
+	mono
+	x 6
+	y 12
+	w window.width-6-6
+	h window.height-6-6-6
+end
+object
+	ifnotset 1
+	type bitmap
+	source bg_r.png
+	x window.width-6
+	y 12
+	h window.height-6-6-6
+end
+object
+	ifset 1
+	type bitmap
+	source bg_r.png
+	mono
+	x window.width-6
+	y 12
+	h window.height-6-6-6
+end
+
+#===========Background bottom======================================================================
+object
+	ifnotset 1
+	type bitmap
+	source bg_bl.png
+	x 0
+	y window.height-6
+	w 6
+end
+object
+	ifset 1
+	type bitmap
+	source bg_bl.png
+	mono
+	x 0
+	y window.height-6
+	w 6
+end
+object
+	ifnotset 1
+	type bitmap
+	source bg_b.png
+	x 6
+	y window.height-6
+	w window.width-6
+end
+object
+	ifset 1
+	type bitmap
+	source bg_b.png
+	mono
+	x 6
+	y window.height-6
+	w window.width-6
+end
+object
+	ifnotset 1
+	type bitmap
+	source bg_br.png
+	x window.width-6
+	y window.height-6
+end
+object
+	ifset 1
+	type bitmap
+	source bg_br.png
+	mono
+	x window.width-6
+	y window.height-6
+end
+
+#===========Titlebar top===========================================================================
+object
+	ifnotset 2
 	type bitmap
 	source title_tl.png
-	x 0
-	y 6
-	w 6
-	h 6
+	layer
+	x 3
+	y 9
+	w 3
+	h 3
 end
 object
-	ifset 1
+	ifset 2
 	type bitmap
-	source Color\title_tl.png
+	source title_tl.png
 	mono
-	x 0
-	y 6
-	w 6
-	h 6
+	layer
+	x 3
+	y 9
+	w 3
+	h 3
 end
 object
-	ifnotset 1
+	ifnotset 2
 	type bitmap
-	source title_tc.png
+	source title_t.png
+	layer
 	x 6
-	y 6
+	y 9
 	w window.width-6-6
-	h 6
+	h 3
 end
 object
-	ifset 1
+	ifset 2
 	type bitmap
-	source Color\title_tc.png
+	source title_t.png
 	mono
+	layer
 	x 6
-	y 6
+	y 9
 	w window.width-6-6
-	h 6
+	h 3
 end
 object
-	ifnotset 1
+	ifnotset 2
 	type bitmap
 	source title_tr.png
+	layer
 	x window.width-6
-	y 6
-	w 6
+	y 9
+	w 3
+	h 3
+end
+object
+	ifset 2
+	type bitmap
+	source title_tr.png
+	mono
+	layer
+	x window.width-6
+	y 9
+	w 3
+	h 3
+end
+
+#===========Titlebar center========================================================================
+object
+	ifnotset 2
+	type bitmap
+	source title_l.png
+	layer
+	x 3
+	y 12
+	h title.height+6
+end
+object
+	ifset 2
+	type bitmap
+	source title_l.png
+	mono
+	layer
+	x 3
+	y 12
+	h title.height+6
+end
+object
+	ifnotset 2
+	type bitmap
+	source title_c.png
+	layer
+	x 6
+	y 12
+	w window.width-6-6
+	h title.height+6
+end
+object
+	ifset 2
+	type bitmap
+	source title_c.png
+	mono
+	layer
+	x 6
+	y 12
+	w window.width-6-6
+	h title.height+6
+end
+object
+	ifnotset 2
+	type bitmap
+	source title_r.png
+	layer
+	x window.width-6
+	y 12
+	h title.height+6
+end
+object
+	ifset 2
+	type bitmap
+	source title_r.png
+	mono
+	layer
+	x window.width-6
+	y 12
+	h title.height+6
+end
+
+#===========Titlebar bottom / Text area top========================================================
+object
+	ifnotset 2
+	type bitmap
+	source title_bl.png
+	layer
+	x 3
+	y 16+title.height
 	h 6
 end
 object
-	ifset 1
+	ifset 2
 	type bitmap
-	source Color\title_tr.png
+	source title_bl.png
 	mono
+	layer
+	x 3
+	y 16+title.height
+	h 6
+end
+object
+	ifnotset 2
+	type bitmap
+	source title_b.png
+	layer
+	x 6
+	y 16+title.height
+	w window.width-6-6
+	h 6
+end
+object
+	ifset 2
+	type bitmap
+	source title_b.png
+	mono
+	layer
+	x 6
+	y 16+title.height
+	w window.width-6-6
+	h 6
+end
+object
+	ifnotset 2
+	type bitmap
+	source title_br.png
+	layer
 	x window.width-6
-	y 6
-	w 6
+	y 16+title.height
+	h 6
+end
+object
+	ifset 2
+	type bitmap
+	source title_br.png
+	mono
+	layer
+	x window.width-6
+	y 16+title.height
 	h 6
 end
 
-#===========Center=================================================================================
+#===========Background Text area===================================================================
 object
-	ifnotset 1
+	ifnotset 2
+	type bitmap
+	source text_c.png
+	layer
+	x 6
+	y 16+title.height+6
+	w window.width-6-6
+	h window.height-(6+title.height+9+6)-7
+end
+object
+	ifset 2
+	type bitmap
+	source text_c.png
+	mono
+	layer
+	x 6
+	y 16+title.height+6
+	w window.width-6-6
+	h window.height-(6+title.height+9+6)-7
+end
+
+#===========Text area edge=========================================================================
+object
+	ifnotset 2
 	type bitmap
 	source text_l.png
-	x 0
-	y 12
-	h window.height-7-7-5
+	layer
+	x 3
+	y 16+title.height+6
+	h window.height-(6+title.height+9+6)-7
 end
 object
-	ifset 1
+	ifset 2
 	type bitmap
-	source Color\text_l.png
+	source text_l.png
 	mono
-	x 0
-	y 12
-	h window.height-7-7-5
+	layer
+	x 3
+	y 16+title.height+6
+	h window.height-(6+title.height+9+6)-7
 end
 object
-	ifnotset 1
+	ifnotset 2
 	type bitmap
 	source text_r.png
-	x window.width-5
-	y 12
-	h window.height-7-7-5
+	layer
+	x window.width-3-3
+	y 16+title.height+6
+	h window.height-(6+title.height+9+6)-7
 end
 object
-	ifset 1
+	ifset 2
 	type bitmap
-	source Color\text_r.png
+	source text_r.png
 	mono
-	x window.width-5
-	y 12
-	h window.height-7-7-5
+	layer
+	x window.width-3-3
+	y 16+title.height+6
+	h window.height-(6+title.height+9+6)-7
 end
 
-#===========Bottom=================================================================================
+#===========Bottom edge============================================================================
 object
-	ifnotset 1
+	ifnotset 2
 	type bitmap
 	source text_bl.png
-	x 0
-	y window.height-7
-	w 7
+	layer
+	x 3
+	y window.height-3-3
 end
 object
-	ifset 1
+	ifset 2
 	type bitmap
-	source Color\text_bl.png
+	source text_bl.png
 	mono
-	x 0
-	y window.height-7
-	w 7
+	layer
+	x 3
+	y window.height-3-3
 end
 object
-	ifnotset 1
+	ifnotset 2
 	type bitmap
-	source text_bc.png
-	x 7
-	y window.height-7
-	w window.width-7
+	source text_b.png
+	layer
+	x 6
+	y window.height-3-3
+	w window.width-6-6
 end
 object
-	ifset 1
+	ifset 2
 	type bitmap
-	source Color\text_bc.png
+	source text_b.png
 	mono
-	x 7
-	y window.height-7
-	w window.width-7
+	layer
+	x 6
+	y window.height-3-3
+	w window.width-6-6
 end
 object
-	ifnotset 1
+	ifnotset 2
 	type bitmap
 	source text_br.png
-	x window.width-7
-	y window.height-7
+	layer
+	x window.width-3-3
+	y window.height-6
 end
 object
-	ifset 1
+	ifset 2
 	type bitmap
-	source Color\text_br.png
+	source text_br.png
 	mono
-	x window.width-7
-	y window.height-7
-end
-
-#===========Background=============================================================================
-object
-	ifnotset 1
-	type bitmap
-	source pixel:C8C9CE
-	x 5
-	y 12
-	w -6
-	h -8
-end
-object
-	ifset 1
-	type bitmap
-	source pixel:C8C9CE
-	mono
-	x 5
-	y 12
-	w -6
-	h -8
+	layer
+	x window.width-3-3
+	y window.height-6
 end
 
 #===========Icon===================================================================================
@@ -199,7 +502,7 @@ end
 
 #===========Logo===================================================================================
 object
-	ifnotset 1
+	ifnotset 2
 	ifnotset 6
 	ifset 10
 	type bitmap
@@ -209,7 +512,7 @@ object
 	y 8
 end
 object
-	ifset 1
+	ifset 2
 	ifnotset 6
 	ifset 10
 	type bitmap
@@ -252,7 +555,7 @@ end
 
 #===========Clock==================================================================================
 object
-	ifnotset 1
+	ifnotset 2
 	ifnotset 6
 	ifnotset 10
 	type clock
@@ -263,7 +566,7 @@ object
 	y 8+7
 end
 object
-	ifset 1
+	ifset 2
 	ifnotset 6
 	ifnotset 10
 	type clock
@@ -275,7 +578,7 @@ object
 	y 8+7
 end
 object
-	ifnotset 1
+	ifnotset 2
 	ifnotset 6
 	ifset 10
 	type clock
@@ -286,7 +589,7 @@ object
 	y 8+7
 end
 object
-	ifset 1
+	ifset 2
 	ifnotset 6
 	ifset 10
 	type clock
@@ -342,7 +645,7 @@ end
 
 #===========Logo===================================================================================
 object
-	ifnotset 1
+	ifnotset 2
 	ifnotset 6
 	ifset 10
 	type bitmap
@@ -353,7 +656,7 @@ object
 	h 4
 end
 object
-	ifset 1
+	ifset 2
 	ifnotset 6
 	ifset 10
 	type bitmap
@@ -365,7 +668,7 @@ object
 	h 4
 end
 object
-	ifnotset 1
+	ifnotset 2
 	ifnotset 6
 	ifset 10
 	type bitmap
@@ -375,7 +678,7 @@ object
 	y 25
 end
 object
-	ifset 1
+	ifset 2
 	ifnotset 6
 	ifset 10
 	type bitmap
@@ -651,8 +954,8 @@ object
 	ifset 8
 	ifnotset 9
 	type avatar
-	x 7+2
-	y 8+5+title.height+5+3
+	x 6+1
+	y 8+5+title.height+5+6+(text.height-avatar.height)/2
 	w options.avatarsize
 	proportional 1
 end
@@ -661,8 +964,8 @@ object
 	ifset 8
 	ifset 9
 	type avatar
-	x window.width-avatar.width-7-2
-	y 8+5+title.height+5+3
+	x window.width-avatar.width-6-1
+	y 8+5+title.height+5+6+(text.height-avatar.height)/2
 	w options.avatarsize
 	proportional 1
 end
@@ -674,18 +977,18 @@ object
 	ifnotset 9
 	type text
 	color 37 39 48
-	x 7+avatar.width+3
-	y 8+5+title.height+5+2
-	w window.width-(7+avatar.width+3)-7-3
+	x 3+avatar.width+2
+	y 8+5+title.height+5+5
+	w window.width-(3+avatar.width+2)-6-2
 end
 # ifset Color text, ifnotset Avatar to right
 object
 	ifset 4
 	ifnotset 9
 	type text
-	x 7+avatar.width+3
-	y 8+5+title.height+5+2
-	w window.width-(7+avatar.width+3)-7-3
+	x 3+avatar.width+2
+	y 8+5+title.height+5+5
+	w window.width-(3+avatar.width+2)-6-2
 end
 # ifnotset Color text, ifset Avatar to right
 object
@@ -693,16 +996,16 @@ object
 	ifset 9
 	type text
 	color 37 39 48
-	x 7+3
-	y 8+5+title.height+5+2
-	w window.width-(7+avatar.width+3)-7-3
+	x 3+2
+	y 8+5+title.height+5+5
+	w window.width-(3+avatar.width+2)-6-2
 end
 # ifset Color text, ifset Avatar to right
 object
 	ifset 4
 	ifset 9
 	type text
-	x 7+3
-	y 8+5+title.height+5+2
-	w window.width-(7+avatar.width+3)-7-3
+	x 3+2
+	y 8+5+title.height+5+5
+	w window.width-(3+avatar.width+2)-6-2
 end
