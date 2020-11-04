@@ -1584,11 +1584,11 @@ ContainerSkin=sDiplomat_Light\Diplomat_Light.tsk
 [Tipper]
 InnerAvatarPadding=w0
 OuterAvatarPadding=w8
-Padding=w7
+Padding=w8
 TextPadding=w3
-SidebarWidth=d33
-TitleIndent=d25
-TextIndent=d25
+SidebarWidth=d35
+TitleIndent=d27
+TextIndent=d27
 ValueIndent=d8
 RoundCorners=b1
 SkinEngine=b1

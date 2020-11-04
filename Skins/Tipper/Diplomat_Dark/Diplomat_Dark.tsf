@@ -15,7 +15,7 @@ Image = SideBar.png
 TM = TM_STRECH_ALL
 Left = 6
 Top = 6
-Right = 9
+Right = 8
 Bottom = 6
 
 [Fonts]
@@ -36,11 +36,11 @@ Divider-color = 109 112 124
 [Appearance]
 Inner-avatar-padding = 0
 Outer-avatar-padding = 8
-General-padding = 7
+General-padding = 8
 Text-padding = 3
-Sidebar-width = 33
-Title-indent = 25
-Text-indent = 25
+Sidebar-width = 35
+Title-indent = 27
+Text-indent = 27
 Value-indent = 8
 
 [Other]
