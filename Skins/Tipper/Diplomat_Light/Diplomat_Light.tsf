@@ -39,8 +39,8 @@ Outer-avatar-padding = 8
 General-padding = 8
 Text-padding = 3
 Sidebar-width = 35
-Title-indent = 27
-Text-indent = 27
+Title-indent = 28
+Text-indent = 28
 Value-indent = 8
 
 [Other]
