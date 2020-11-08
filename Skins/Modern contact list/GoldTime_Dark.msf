@@ -18,43 +18,44 @@ tProfile0=s
 tProfile1=s
 tProfile2=s
 tProfile3=s
-$$Window=sGlyph,Fragment,BG.png,0,0,9,35,StretchBoth,4,30,4,4,255
+$$Window=sGlyph,Fragment,BG.png,0,0,9,9,StretchBoth,4,4,4,4,255
 $$Logo=s
-$$Emphasis=sGlyph,Fragment,BG.png,14,169,5,4,StretchBoth,2,0,2,0,255
-$$Group/Open=sGlyph,Fragment,BG.png,14,160,8,8,StretchBoth,3,3,4,4,200
-$$Group/Open/Hot=sGlyph,Fragment,BG.png,0,160,13,13,StretchBoth,6,6,6,6,200
-$$Group/Open/Selected=sGlyph,Fragment,BG.png,0,160,13,13,StretchBoth,6,6,6,6,200
-$$Group/Closed=sGlyph,Fragment,BG.png,14,160,8,8,StretchBoth,3,3,4,4,200
-$$Group/Closed/Hot=sGlyph,Fragment,BG.png,0,160,13,13,StretchBoth,6,6,6,6,200
-$$Group/Closed/Selected=sGlyph,Fragment,BG.png,0,160,13,13,StretchBoth,6,6,6,6,200
-$$SubGroup/Open=sGlyph,Fragment,BG.png,14,160,8,8,StretchBoth,3,3,4,4,200
-$$SubGroup/Open/Hot=sGlyph,Fragment,BG.png,0,160,13,13,StretchBoth,6,6,6,6,200
-$$SubGroup/Open/Selected=sGlyph,Fragment,BG.png,0,160,13,13,StretchBoth,6,6,6,6,200
-$$SubGroup/Closed=sGlyph,Fragment,BG.png,14,160,8,8,StretchBoth,3,3,4,4,200
-$$SubGroup/Closed/Hot=sGlyph,Fragment,BG.png,0,160,13,13,StretchBoth,6,6,6,6,200
-$$SubGroup/Closed/Selected=sGlyph,Fragment,BG.png,0,160,13,13,StretchBoth,6,6,6,6,200
-$$Contact/Hot=sGlyph,Fragment,BG.png,14,160,8,8,StretchBoth,3,3,4,4,200
-$$Contact/Selected=sGlyph,Fragment,BG.png,14,160,8,8,StretchBoth,4,4,3,3,200
+$$Emphasis=s
+$$Separator=sGlyph,Fragment,BG.png,0,185,7,12,StretchBoth,3,3,3,3,255
+$$Group/Open=sGlyph,Fragment,BG.png,10,160,5,5,StretchBoth,2,2,2,2,200
+$$Group/Open/Hot=sGlyph,Fragment,BG.png,0,160,9,9,StretchBoth,4,4,4,4,200
+$$Group/Open/Selected=sGlyph,Fragment,BG.png,0,160,9,9,StretchBoth,4,4,4,4,200
+$$Group/Closed=sGlyph,Fragment,BG.png,10,160,5,5,StretchBoth,2,2,2,2,200
+$$Group/Closed/Hot=sGlyph,Fragment,BG.png,0,160,9,9,StretchBoth,4,4,4,4,200
+$$Group/Closed/Selected=sGlyph,Fragment,BG.png,0,160,9,9,StretchBoth,4,4,4,4,200
+$$SubGroup/Open=sGlyph,Fragment,BG.png,10,160,5,5,StretchBoth,2,2,2,2,200
+$$SubGroup/Open/Hot=sGlyph,Fragment,BG.png,0,160,9,9,StretchBoth,4,4,4,4,200
+$$SubGroup/Open/Selected=sGlyph,Fragment,BG.png,0,160,9,9,StretchBoth,4,4,4,4,200
+$$SubGroup/Closed=sGlyph,Fragment,BG.png,10,160,5,5,StretchBoth,2,2,2,2,200
+$$SubGroup/Closed/Hot=sGlyph,Fragment,BG.png,0,160,9,9,StretchBoth,4,4,4,4,200
+$$SubGroup/Closed/Selected=sGlyph,Fragment,BG.png,0,160,9,9,StretchBoth,4,4,4,4,200
+$$Contact/Hot=sGlyph,Fragment,BG.png,10,160,5,5,StretchBoth,2,2,2,2,200
+$$Contact/Selected=sGlyph,Fragment,BG.png,10,160,5,5,StretchBoth,2,2,2,2,200
 $$Contact/Normal=s
-$$Contact/Odd=sGlyph,Solid,4,6,19,7
-$$Contact/Single=sGlyph,Solid,157,163,185,7
+$$Contact/Odd=sGlyph,Solid,17,15,15,7
+$$Contact/Single=sGlyph,Solid,156,147,147,7
 $$Contact/Last=s
 $$Contact/First=s
 $$Scroll/BtnUp=sGlyph,Fragment,BG.png,48,64,17,17,StretchBoth,0,0,11,11,255
 $$Scroll/BtnDn=sGlyph,Fragment,BG.png,48,88,17,17,StretchBoth,0,11,11,0,255
 $$Scroll/Thumb=sGlyph,Fragment,BG.png,48,82,17,5,StretchBoth,0,2,11,2,255
 $$Scroll/Back=s
-$$FrameTitleBar=sGlyph,Fragment,BG.png,32,160,7,5,StretchBoth,3,2,3,2,255
+$$FrameTitleBar=sGlyph,Fragment,BG.png,22,160,7,5,StretchBoth,3,2,3,2,255
 $$StatusBar=s
 $$ViewMode/CurrentMode=s
-$$ViewMode/CurrentMode/Hot=sGlyph,Fragment,BG.png,14,160,8,8,StretchBoth,3,3,4,4,255
-$$ViewMode/CurrentMode/Pressed=sGlyph,Fragment,BG.png,23,160,8,8,StretchBoth,4,4,3,3,255
+$$ViewMode/CurrentMode/Hot=sGlyph,Fragment,BG.png,10,160,5,5,StretchBoth,2,2,2,2,255
+$$ViewMode/CurrentMode/Pressed=sGlyph,Fragment,BG.png,16,160,5,5,StretchBoth,2,2,2,2,255
 $$ViewMode/SetupMode=s
-$$ViewMode/SetupMode/Hot=sGlyph,Fragment,BG.png,14,160,8,8,StretchBoth,3,3,4,4,255
-$$ViewMode/SetupMode/Pressed=sGlyph,Fragment,BG.png,23,160,8,8,StretchBoth,4,4,3,3,255
+$$ViewMode/SetupMode/Hot=sGlyph,Fragment,BG.png,10,160,5,5,StretchBoth,2,2,2,2,255
+$$ViewMode/SetupMode/Pressed=sGlyph,Fragment,BG.png,16,160,5,5,StretchBoth,2,2,2,2,255
 $$ViewMode/ResetMode=s
-$$ViewMode/ResetMode/Hot=sGlyph,Fragment,BG.png,14,160,8,8,StretchBoth,3,3,4,4,255
-$$ViewMode/ResetMode/Pressed=sGlyph,Fragment,BG.png,23,160,8,8,StretchBoth,4,4,3,3,255
+$$ViewMode/ResetMode/Hot=sGlyph,Fragment,BG.png,10,160,5,5,StretchBoth,2,2,2,2,255
+$$ViewMode/ResetMode/Pressed=sGlyph,Fragment,BG.png,16,160,5,5,StretchBoth,2,2,2,2,255
 $$Button/Close/Normal=sGlyph,Fragment,BG.png,18,0,15,15,StretchBoth,0,0,0,0,255
 $$Button/Close/Hovered=sGlyph,Fragment,BG.png,34,0,15,15,StretchBoth,0,0,0,0,255
 $$Button/Close/Down=sGlyph,Fragment,BG.png,50,0,15,15,StretchBoth,0,0,0,0,255
@@ -81,12 +82,13 @@ $$Name/Offtop/Hovered=s
 $$Name/Offtop/Down=s
 $$Background=sGlyph,Fragment,BG.png,66,0,100,200,StretchBoth,0,0,99,199,255
 $$BarButton=s
-$$BarButton/Hot=sGlyph,Fragment,BG.png,14,160,8,8,StretchBoth,3,3,4,4,255
-$$BarButton/Pressed=sGlyph,Fragment,BG.png,23,160,8,8,StretchBoth,4,4,3,3,255
+$$BarButton/Hot=sGlyph,Fragment,BG.png,10,160,5,5,StretchBoth,2,2,2,2,255
+$$BarButton/Pressed=sGlyph,Fragment,BG.png,16,160,5,5,StretchBoth,2,2,2,2,255
 @0=s$$Window:Main,ID=Background
 @1=s$$Background:CL,ID=Background
 @2=s
-@3=s$$Emphasis:MButton,ID=Emphasis
+@3=s
+@4=s$$Separator:MButton,ID=Separator
 @10=s$$SubGroup/Closed/Hot:CL,ID=Row,Type=Group,Open=False,Hot=True,Indent^0
 @11=s$$SubGroup/Closed/Selected:CL,ID=Row,Type=Group,Open=False,Selected=True,Indent^0
 @12=s$$SubGroup/Closed:CL,ID=Row,Type=Group,Open=False,Indent^0
@@ -171,17 +173,17 @@ $$BarButton/Pressed=sGlyph,Fragment,BG.png,23,160,8,8,StretchBoth,4,4,3,3,255
 #bontop=sSwitch,CList/OnTop,CList/OnTop,b0/1,-54,5,-39,20,R-R--,0,0,On/Off On Top
 #statusmenu=sPush,CList/ShowStatusMenu,34,7,99,21,-----,0,0,Status menu
 #mainmenu=sPush,CList/ShowMainMenu,4,4,33,20,-----,0,0,Main menu
-#Emphasis=sPush,Emphasis,5,21,99,25,-----,0,0,
+#Separator=sPush,Separator,1,24,-1,36,--R--,0,0,
 
 [CList]
 AvatarsBorderColor=d16777215
 AvatarsSize=w26
 AvatarsWidth=w26
-Width=d218
+Width=d210
 
 [CLUI]
 LeftClientMargin=b5
-TopClientMargin=b39
+TopClientMargin=b37
 RightClientMargin=b5
 BottomClientMargin=b5
 LeftOffset=d0
@@ -478,8 +480,8 @@ Font23Size=b8
 Font23Sty=b0
 
 [Chat]
-ColorLogBG=d3353643
-ColorNicklistBG=d3353643
+ColorLogBG=d2500139
+ColorNicklistBG=d2500139
 NickColor0=d9162635
 NickColor1=d7453909
 NickColor2=d10131687
@@ -717,7 +719,7 @@ Color0=d8155245
 Color1=d16777215
 Color2=d5849135
 Color3=d4340280
-Color4=d3353643
+Color4=d2500139
 Color5=d3490866
 Color6=d3490866
 Color7=d5062196
@@ -730,10 +732,10 @@ Color13=d3488325
 Color14=d3488325
 Color15=d5062196
 Color16=d3488325
-Color17=d3353643
+Color17=d2500139
 Color18=d3488325
 Color19=d3488325
-Color22=d3353643
+Color22=d2500139
 Color23=d3488325
 Color24=d3488325
 Color25=d3488325
@@ -1255,7 +1257,7 @@ fore_odd=l
 fore_sub=l
 
 [SmileyAdd]
-SelWndBkgClr=d3353643
+SelWndBkgClr=d2500139
 
 [StatusBar]
 BkColour=l
@@ -1263,18 +1265,18 @@ SelBkColour=l
 
 [TabSRMM_Fonts]
 aeroGlow=l
-BkgColour=d3353643
+BkgColour=d2500139
 cRichBorders=l
 fillColor=l
 genericTxtClr=l
 hgrid=d8155245
 inbg=d4340280
-inputbg=d3353643
-ipfieldsbg=d3353643
+inputbg=d2500139
+ipfieldsbg=d2500139
 ipfieldsbgHigh=d4603195
 oldinbg=d4340280
-oldoutbg=d3353643
-outbg=d3353643
+oldoutbg=d2500139
+outbg=d2500139
 statbg=d3488325
 tbBgHigh=l
 tbBgLow=l
@@ -1582,13 +1584,13 @@ ContainerSkin=sGoldTime_Dark\GoldTime_Dark.tsk
 
 ;Tipper settings
 [Tipper]
-InnerAvatarPadding=w0
-OuterAvatarPadding=w8
-Padding=w7
+InnerAvatarPadding=w2
+OuterAvatarPadding=w6
+Padding=w6
 TextPadding=w3
-SidebarWidth=d33
-TitleIndent=d25
-TextIndent=d25
+SidebarWidth=d36
+TitleIndent=d33
+TextIndent=d33
 ValueIndent=d8
 RoundCorners=b1
 SkinEngine=b1
