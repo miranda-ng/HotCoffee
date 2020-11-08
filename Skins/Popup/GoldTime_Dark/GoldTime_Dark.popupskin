@@ -1,488 +1,1169 @@
 #Author:	Favor, Dracosha
 #Description:	Skin for Popup+ 2.1.0.7 or later
-#Name:		Goldtime_Dark
-#Version:	1.0
+#Name:		GoldTime_Dark
+#Version:	2.0
 
-#===============options============================================================================
+#===========Options================================================================================
 options
 	#option	id	val	title
-	option	1	0	Use different colors
-	option	2	1	Show icon
-	option	3	1	Show Avatars
-	option	4	1	Avatars to right
-	option	5	1	Clock
-	option	6	1	Logo
-	option	7	0	Use different colors for logo and clock
-	option	8	0	Use different colors for text
+	option	1	1	Color frame
+	option	2	0	Color text background
+	option	3	1	Color logo & clocks
+	option	4	1	Color text
+	option	5	0	Dark title text
+	option	6	0	Standard digital clocks
+	option	7	1	Icon
+	option	8	1	Avatar
+	option	9	1	Avatar to right
+	option	10	1	Logo
 end
 
-#==================================================================================================
-w 7+icon.width+4+title.width+1+4+clock.width+10>7+2+avatar.width+4+text.width+2+10
-h 6+2+title.height+4+4+0+(avatar.height>text.height)+11
+h 8+5+title.height+5+(2+avatar.height>text.height+2)+2+8+4
 
-#=========Background===============================================================================
+popup-version 02010007
+
+#===========Background top=========================================================================
 object
-	ifset 1	
+	ifnotset 1
 	type bitmap
-	source back.png
+	source bg_tl.png
+	x 0
+	y 6
+	w 6
+	h 6
+end
+object
+	ifset 1
+	type bitmap
+	source bg_tl.png
 	mono
-	x 10
-	y 34
-	w window.width-10-7
-	h window.height-7-9
+	x 0
+	y 6
+	w 6
+	h 6
 end
 object
-	ifnotset 1	
+	ifnotset 1
 	type bitmap
-	source back.png
-	x 10
-	y 34
-	w window.width-10-7
-	h window.height-7-9
+	source bg_t.png
+	x 6
+	y 6
+	w window.width-6-6
+	h 6
+end
+object
+	ifset 1
+	type bitmap
+	source bg_t.png
+	mono
+	x 6
+	y 6
+	w window.width-6-6
+	h 6
+end
+object
+	ifnotset 1
+	type bitmap
+	source bg_tr.png
+	x window.width-6
+	y 6
+	w 6
+	h 6
+end
+object
+	ifset 1
+	type bitmap
+	source bg_tr.png
+	mono
+	x window.width-6
+	y 6
+	w 6
+	h 6
+end
+
+#===========Background center======================================================================
+object
+	ifnotset 1
+	type bitmap
+	source bg_l.png
+	x 0
+	y 12
+	h window.height-6-6-6
+end
+object
+	ifset 1
+	type bitmap
+	source bg_l.png
+	mono
+	x 0
+	y 12
+	h window.height-6-6-6
+end
+object
+	ifnotset 1
+	type bitmap
+	source bg_c.png
+	x 6
+	y 12
+	w window.width-6-6
+	h window.height-6-6-6
+end
+object
+	ifset 1
+	type bitmap
+	source bg_c.png
+	mono
+	x 6
+	y 12
+	w window.width-6-6
+	h window.height-6-6-6
+end
+object
+	ifnotset 1
+	type bitmap
+	source bg_r.png
+	x window.width-6
+	y 12
+	h window.height-6-6-6
+end
+object
+	ifset 1
+	type bitmap
+	source bg_r.png
+	mono
+	x window.width-6
+	y 12
+	h window.height-6-6-6
+end
+
+#===========Background bottom======================================================================
+object
+	ifnotset 1
+	type bitmap
+	source bg_bl.png
+	x 0
+	y window.height-6
+	w 6
+end
+object
+	ifset 1
+	type bitmap
+	source bg_bl.png
+	mono
+	x 0
+	y window.height-6
+	w 6
+end
+object
+	ifnotset 1
+	type bitmap
+	source bg_b.png
+	x 6
+	y window.height-6
+	w window.width-6
+end
+object
+	ifset 1
+	type bitmap
+	source bg_b.png
+	mono
+	x 6
+	y window.height-6
+	w window.width-6
+end
+object
+	ifnotset 1
+	type bitmap
+	source bg_br.png
+	x window.width-6
+	y window.height-6
+end
+object
+	ifset 1
+	type bitmap
+	source bg_br.png
+	mono
+	x window.width-6
+	y window.height-6
 end
 
 #===========Titlebar top===========================================================================
 object
-	ifset 1	
+	ifnotset 2
 	type bitmap
-	source title_lt.png
+	source title_tl.png
+	layer
+	x 3
+	y 9
+	w 3
+	h 3
+end
+object
+	ifset 2
+	type bitmap
+	source title_tl.png
 	mono
-	x 0
-	y 0
+	layer
+	x 3
+	y 9
+	w 3
+	h 3
 end
 object
-	ifnotset 1	
+	ifnotset 2
 	type bitmap
-	source title_lt.png
-	x 0
-	y 0
+	source title_t.png
+	layer
+	x 6
+	y 9
+	w window.width-6-6
+	h 3
 end
 object
-	ifset 1	
+	ifset 2
 	type bitmap
-	source title_ct.png
+	source title_t.png
 	mono
-	x 10
-	y 0
-	w window.width-10-10
+	layer
+	x 6
+	y 9
+	w window.width-6-6
+	h 3
 end
 object
-	ifnotset 1	
+	ifnotset 2
 	type bitmap
-	source title_ct.png
-	x 10
-	y 0
-	w window.width-10-10
+	source title_tr.png
+	layer
+	x window.width-6
+	y 9
+	w 3
+	h 3
 end
 object
-	ifset 1	
+	ifset 2
 	type bitmap
-	source title_rt.png
+	source title_tr.png
 	mono
-	x window.width-10
-	y 0
-end
-object
-	ifnotset 1	
-	type bitmap
-	source title_rt.png
-	x window.width-10
-	y 0
+	layer
+	x window.width-6
+	y 9
+	w 3
+	h 3
 end
 
-#============Titlebar center=======================================================================
+#===========Titlebar center========================================================================
 object
-	ifset 1	
+	ifnotset 2
 	type bitmap
-	source title_lc.png
+	source title_l.png
+	layer
+	x 3
+	y 12
+	h title.height+6
+end
+object
+	ifset 2
+	type bitmap
+	source title_l.png
 	mono
-	x 0
-	y 8
-	h 2+title.height+2
+	layer
+	x 3
+	y 12
+	h title.height+6
 end
 object
-	ifnotset 1	
+	ifnotset 2
 	type bitmap
-	source title_lc.png
-	x 0
-	y 8
-	h 2+title.height+2
+	source title_c.png
+	layer
+	x 6
+	y 12
+	w window.width-6-6
+	h title.height+6
 end
 object
-	ifset 1	
+	ifset 2
 	type bitmap
-	source title_cc.png
+	source title_c.png
 	mono
-	x 10
-	y 8
-	w window.width
-	h 2+title.height+2
+	layer
+	x 6
+	y 12
+	w window.width-6-6
+	h title.height+6
 end
 object
-	ifnotset 1	
+	ifnotset 2
 	type bitmap
-	source title_cc.png
-	x 10
-	y 8
-	w window.width
-	h 2+title.height+2
+	source title_r.png
+	layer
+	x window.width-6
+	y 12
+	h title.height+6
 end
 object
-	ifset 1	
+	ifset 2
 	type bitmap
-	source title_rc.png
+	source title_r.png
 	mono
-	x window.width-10
-	y 8
-	h 2+title.height+2
-end
-object
-	ifnotset 1	
-	type bitmap
-	source title_rc.png
-	x window.width-10
-	y 8
-	h 2+title.height+2
+	layer
+	x window.width-6
+	y 12
+	h title.height+6
 end
 
 #===========Titlebar bottom / Text area top========================================================
 object
-	ifset 1	
+	ifnotset 2
 	type bitmap
-	source title_lb.png
+	source title_bl.png
+	layer
+	x 3
+	y 16+title.height
+	h 10
+end
+object
+	ifset 2
+	type bitmap
+	source title_bl.png
 	mono
-	x 0
-	y 8+title.height+4
+	layer
+	x 3
+	y 16+title.height
+	h 10
 end
 object
-	ifnotset 1	
+	ifnotset 2
 	type bitmap
-	source title_lb.png
-	x 0
-	y 8+title.height+4
+	source title_b.png
+	layer
+	x 6
+	y 16+title.height
+	w window.width-6-6
+	h 10
 end
 object
-	ifset 1	
+	ifset 2
 	type bitmap
-	source title_cb.png
+	source title_b.png
 	mono
-	x 10
-	y 8+title.height+4
-	w window.width-10
+	layer
+	x 6
+	y 16+title.height
+	w window.width-6-6
+	h 10
 end
 object
-	ifnotset 1	
+	ifnotset 2
 	type bitmap
-	source title_cb.png
-	x 10
-	y 8+title.height+4
-	w window.width-10
+	source title_br.png
+	layer
+	x window.width-6
+	y 16+title.height
+	h 10
 end
 object
-	ifset 1	
+	ifset 2
 	type bitmap
-	source title_rb.png
+	source title_br.png
 	mono
-	x window.width-10
-	y 8+title.height+4
-end
-object
-	ifnotset 1	
-	type bitmap
-	source title_rb.png
-	x window.width-10
-	y 8+title.height+4
+	layer
+	x window.width-6
+	y 16+title.height
+	h 10
 end
 
-#============Text area edge========================================================================
+#===========Background Text area===================================================================
 object
-	ifset 1	
+	ifnotset 2
 	type bitmap
-	source left.png
+	source text_c.png
+	layer
+	x 6
+	y 16+title.height+10
+	w window.width-6-6
+	h window.height-(6+title.height+9+6)-10
+end
+object
+	ifset 2
+	type bitmap
+	source text_c.png
 	mono
-	x 0
-	y 15+title.height+8
-	h window.height-(10+8+title.height)
+	layer
+	x 6
+	y 16+title.height+10
+	w window.width-6-6
+	h window.height-(6+title.height+9+6)-10
+end
+
+#===========Text area edge=========================================================================
+object
+	ifnotset 2
+	type bitmap
+	source text_l.png
+	layer
+	x 3
+	y 16+title.height+10
+	h window.height-(6+title.height+9+6)-10
 end
 object
-	ifnotset 1	
+	ifset 2
 	type bitmap
-	source left.png
-	x 0
-	y 15+title.height+8
-	h window.height-(10+8+title.height)
-end
-object
-	ifset 1	
-	type bitmap
-	source right.png
+	source text_l.png
 	mono
-	x window.width-10
-	y 15+title.height+8
-	h window.height-(10+8+title.height)
+	layer
+	x 3
+	y 16+title.height+10
+	h window.height-(6+title.height+9+6)-10
 end
 object
-	ifnotset 1	
+	ifnotset 2
 	type bitmap
-	source right.png
-	x window.width-10
-	y 15+title.height+8
-	h window.height-(10+8+title.height)
+	source text_r.png
+	layer
+	x window.width-3-3
+	y 16+title.height+10
+	h window.height-(6+title.height+9+6)-10
+end
+object
+	ifset 2
+	type bitmap
+	source text_r.png
+	mono
+	layer
+	x window.width-3-3
+	y 16+title.height+10
+	h window.height-(6+title.height+9+6)-10
 end
 
 #===========Bottom edge============================================================================
 object
-	ifset 1	
+	ifnotset 2
 	type bitmap
-	source bottom_left.png
-	mono
-	x 0
-	y window.height-10
+	source text_bl.png
+	layer
+	x 3
+	y window.height-3-3
 end
-object
-	ifnotset 1	
-	type bitmap
-	source bottom_left.png
-	x 0
-	y window.height-10
-end
-object
-	ifset 1	
-	type bitmap
-	source bottom.png
-	mono
-	x 10
-	y window.height-10
-	w window.width
-end
-object
-	ifnotset 1	
-	type bitmap
-	source bottom.png
-	x 10
-	y window.height-10
-	w window.width
-end
-object
-	ifset 1	
-	type bitmap
-	source bottom_right.png
-	mono
-	x window.width-10
-	y window.height-10
-end
-object
-	ifnotset 1	
-	type bitmap
-	source bottom_right.png
-	x window.width-10
-	y window.height-10
-end
-
-#============Icon==================================================================================
 object
 	ifset 2
+	type bitmap
+	source text_bl.png
+	mono
+	layer
+	x 3
+	y window.height-3-3
+end
+object
+	ifnotset 2
+	type bitmap
+	source text_b.png
+	layer
+	x 6
+	y window.height-3-3
+	w window.width-6-6
+end
+object
+	ifset 2
+	type bitmap
+	source text_b.png
+	mono
+	layer
+	x 6
+	y window.height-3-3
+	w window.width-6-6
+end
+object
+	ifnotset 2
+	type bitmap
+	source text_br.png
+	layer
+	x window.width-3-3
+	y window.height-6
+end
+object
+	ifset 2
+	type bitmap
+	source text_br.png
+	mono
+	layer
+	x window.width-3-3
+	y window.height-6
+end
+
+#===========Icon===================================================================================
+object
+	ifset 7
 	type icon
 	x 9
-	y 10+(title.height-icon.height)/2
+	y 8+5+(title.height-icon.height)/2
 end
 
-#===========Avatar=================================================================================
+#===========Logo===================================================================================
+object
+	ifnotset 2
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_0.png
+	layer
+	x window.width-8-clock.width-24
+	y 8
+end
+object
+	ifset 2
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_0.png
+	mono
+	layer
+	x window.width-8-clock.width-24
+	y 8
+end
+object
+	ifnotset 3
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_1.png
+	layer
+	x window.width-8-clock.width-24
+	y 8
+end
 object
 	ifset 3
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_1.png
+	mono
+	layer
+	x window.width-8-clock.width-24
+	y 8
+end
+object
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_2.png
+	layer
+	x window.width-8-clock.width-24
+	y 0
+end
+
+#===========Clock==================================================================================
+object
+	ifnotset 2
+	ifnotset 6
+	ifnotset 10
+	type clock
+	source clock_.png
+	layer
+	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
+	x window.width-8-clock.width
+	y 8+7
+end
+object
+	ifset 2
+	ifnotset 6
+	ifnotset 10
+	type clock
+	source clock_.png
+	mono
+	layer
+	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
+	x window.width-8-clock.width
+	y 8+7
+end
+object
+	ifnotset 2
+	ifnotset 6
+	ifset 10
+	type clock
+	source clock&logo_.png
+	layer
+	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
+	x window.width-8-clock.width
+	y 8+7
+end
+object
+	ifset 2
+	ifnotset 6
+	ifset 10
+	type clock
+	source clock&logo_.png
+	mono
+	layer
+	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
+	x window.width-8-clock.width
+	y 8+7
+end
+object
+	ifnotset 3
+	ifnotset 5
+	ifnotset 6
+	type clock
+	source clock.png
+	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
+	x window.width-8-clock.width
+	y 8+7
+end
+object
+	ifset 3
+	ifnotset 5
+	ifnotset 6
+	type clock
+	source Color\clock.png
+	mono
+	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
+	x window.width-8-clock.width
+	y 8+7
+end
+object
+	ifnotset 2
+	ifset 5
+	ifnotset 6
+	type clock
+	source clock_dtt_.png
+	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
+	x window.width-8-clock.width
+	y 8+7
+end
+object
+	ifset 2
+	ifset 5
+	ifnotset 6
+	type clock
+	source clock_dtt_.png
+	mono
+	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
+	x window.width-8-clock.width
+	y 8+7
+end
+object
+	ifnotset 3
+	ifset 5
+	ifnotset 6
+	type clock
+	source clock_dtt.png
+	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
+	x window.width-8-clock.width
+	y 8+7
+end
+object
+	ifset 3
+	ifset 5
+	ifnotset 6
+	type clock
+	source Color\clock_dtt.png
+	mono
+	clocksize 4 3 7 5 7 7 7 7 7 7 7 7 0 0 3
+	x window.width-8-clock.width
+	y 8+7
+end
+
+#===========Logo===================================================================================
+object
+	ifnotset 2
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source pixel:3B3D46
+	x window.width-8-3
+	y 25
+	w 3
+	h 4
+end
+object
+	ifset 2
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source pixel:3B3D46
+	mono
+	x window.width-8-3
+	y 25
+	w 3
+	h 4
+end
+object
+	ifnotset 2
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_3.png
+	layer
+	x window.width-8-3
+	y 25
+end
+object
+	ifset 2
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source logo_layer_3.png
+	mono
+	layer
+	x window.width-8-3
+	y 25
+end
+
+#===========Standard digital clocks border=========================================================
+# ifnotset Dark title text
+object
+	ifnotset 5
+	ifset 6
+	type clock
+	color 27 30 37
+	x window.width-1-clock.width+1
+	y 8+5+(title.height-clock.height)/2
+end
+object
+	ifnotset 5
+	ifset 6
+	type clock
+	color 27 30 37
+	x window.width-1-clock.width
+	y 8+5+(title.height-clock.height)/2+1
+end
+object
+	ifnotset 5
+	ifset 6
+	type clock
+	color 27 30 37
+	x window.width-1-clock.width+1
+	y 8+5+(title.height-clock.height)/2+1
+end
+# ifnotset Color text, ifset Dark title text
+object
 	ifnotset 4
-	type avatar
-	x 9
-	y 10+2+title.height+4+4+1
-	w options.avatarsize
-	proportional 1
+	ifset 5
+	ifset 6
+	type clock
+	color 207 208 218
+	x window.width-1-clock.width+1
+	y 8+5+(title.height-clock.height)/2
 end
 object
-	ifset 3
+	ifnotset 4
+	ifset 5
+	ifset 6
+	type clock
+	color 207 208 218
+	x window.width-1-clock.width
+	y 8+5+(title.height-clock.height)/2+1
+end
+object
+	ifnotset 4
+	ifset 5
+	ifset 6
+	type clock
+	color 207 208 218
+	x window.width-1-clock.width+1
+	y 8+5+(title.height-clock.height)/2+1
+end
+# ifset Color text, ifset Dark title text
+object
 	ifset 4
-	type avatar
-	x window.width-(avatar.width+7)
-	y 10+2+title.height+4+4+1
-	w options.avatarsize
-	proportional 1
+	ifset 5
+	ifset 6
+	type clock
+	x window.width-1-clock.width+1
+	y 8+5+(title.height-clock.height)/2
+end
+object
+	ifset 4
+	ifset 5
+	ifset 6
+	type clock
+	x window.width-1-clock.width
+	y 8+5+(title.height-clock.height)/2+1
+end
+object
+	ifset 4
+	ifset 5
+	ifset 6
+	type clock
+	x window.width-1-clock.width+1
+	y 8+5+(title.height-clock.height)/2+1
 end
 
-#==========Clock===================================================================================
+# Standard digital clocks border foreground for dark title text
 object
+	ifnotset 2
+	ifset 5
 	ifset 6
-	ifset 5
-	ifset 7	
-	type clock
-	source clock.png
-	mono
-	clocksize 3 3 7 5 7 7 7 7 7 7 7 7 0 0 4
-	x window.width-7-clock.width
-	y 5
+	type bitmap
+	source tt_dtt.png
+	layer
+	x window.width-1-clock.width
+	y 8+5+(title.height-clock.height)/2
+	w clock.width-7
+	h clock.height
 end
 object
+	ifset 2
+	ifset 5
 	ifset 6
-	ifset 5
-	ifnotset 7	
-	type clock
-	source clock.png
-	clocksize 3 3 7 5 7 7 7 7 7 7 7 7 0 0 4
-	x window.width-7-clock.width
-	y 5
-end
-object
-	ifnotset 6
-	ifset 5
-	ifset 7	
-	type clock
-	source clock.png
+	type bitmap
+	source Color\tt_dtt.png
 	mono
-	clocksize 3 3 7 5 7 7 7 7 7 7 7 7 0 0 4
-	x window.width-7-clock.width
-	y 5
-end
-object
-	ifnotset 6
-	ifset 5
-	ifnotset 7	
-	type clock
-	source clock.png
-	clocksize 3 3 7 5 7 7 7 7 7 7 7 7 0 0 4
-	x window.width-7-clock.width
-	y 5
+	layer
+	x window.width-1-clock.width
+	y 8+5+(title.height-clock.height)/2
+	w clock.width-7
+	h clock.height
 end
 
-#==========logo====================================================================================
+#===========Standard digital clocks================================================================
+# ifnotset Color text, ifnotset Dark title text
 object
-	ifset 6
-	ifset 5
-	ifset 7	
-	type bitmap logo
-	source logo.png
-	mono
-	layer
-	x window.width-62-clock.width
-	y 5
-end
-object
-	ifset 6
-	ifset 5
-	ifnotset 7	
-	type bitmap logo
-	source logo.png
-	layer
-	x window.width-62-clock.width
-	y 5
-end
-object
-	ifset 6
+	ifnotset 4
 	ifnotset 5
-	ifset 7	
-	type bitmap logo
-	source logo.png
-	mono
-	layer
-	x window.width-62
-	y 5
-end
-object
 	ifset 6
+	type clock
+	color 207 208 218
+	x window.width-1-clock.width
+	y 8+5+(title.height-clock.height)/2
+end
+# ifset Color text, ifnotset Dark title text
+object
+	ifset 4
 	ifnotset 5
-	ifnotset 7	
-	type bitmap logo
-	source logo.png
-	layer
-	x window.width-62
-	y 5
+	ifset 6
+	type clock
+	x window.width-1-clock.width
+	y 8+5+(title.height-clock.height)/2
+end
+# ifset Dark title text
+object
+	ifset 5
+	ifset 6
+	type clock
+	color 27 30 37
+	x window.width-1-clock.width
+	y 8+5+(title.height-clock.height)/2
 end
 
 #===========Title text border======================================================================
+# ifnotset Dark title text
 object
-	ifnotset 8
-	ifset 2
+	ifnotset 5
 	type title
-	color 53 53 53
-	x 7+icon.width
-	y 10-1
-	w window.width-(7+icon.width)-4-clock.width-10
+	color 27 30 37
+	x 7+icon.width+3+1
+	y 8+5
 end
 object
-	ifnotset 8
-	ifnotset 2
+	ifnotset 5
 	type title
-	color 53 53 53
-	x 7+3
-	y 10-1
-	w window.width-(7+3)-4-clock.width-10
+	color 27 30 37
+	x 7+icon.width+3
+	y 8+5+1
+end
+object
+	ifnotset 5
+	type title
+	color 27 30 37
+	x 7+icon.width+3+1
+	y 8+5+1
+end
+# ifnotset Color text, ifset Dark title text
+object
+	ifnotset 4
+	ifset 5
+	type title
+	color 207 208 218
+	x 7+icon.width+3+1
+	y 8+5
+end
+object
+	ifnotset 4
+	ifset 5
+	type title
+	color 207 208 218
+	x 7+icon.width+3
+	y 8+5+1
+end
+object
+	ifnotset 4
+	ifset 5
+	type title
+	color 207 208 218
+	x 7+icon.width+3+1
+	y 8+5+1
+end
+# ifset Color text, ifset Dark title text
+object
+	ifset 4
+	ifset 5
+	type title
+	x 7+icon.width+3+1
+	y 8+5
+end
+object
+	ifset 4
+	ifset 5
+	type title
+	x 7+icon.width+3
+	y 8+5+1
+end
+object
+	ifset 4
+	ifset 5
+	type title
+	x 7+icon.width+3+1
+	y 8+5+1
+end
+
+# Title text border foreground for dark title text
+object
+	ifnotset 2
+	ifset 5
+	ifnotset 6
+	ifnotset 10
+	type bitmap
+	source tt_dtt.png
+	layer
+	x 7+icon.width+3
+	y 8+5
+	w window.width-(7+icon.width+3)-8-clock.width-2
+	h title.height+2
+end
+object
+	ifset 2
+	ifset 5
+	ifnotset 6
+	ifnotset 10
+	type bitmap
+	source Color\tt_dtt.png
+	mono
+	layer
+	x 7+icon.width+3
+	y 8+5
+	w window.width-(7+icon.width+3)-8-clock.width-2
+	h title.height+2
+end
+object
+	ifnotset 2
+	ifset 5
+	ifset 6
+	ifnotset 10
+	type bitmap
+	source tt_dtt.png
+	layer
+	x 7+icon.width+3
+	y 8+5
+	w window.width-(7+icon.width+3)-1-clock.width-1
+	h title.height+2
+end
+object
+	ifset 2
+	ifset 5
+	ifset 6
+	ifnotset 10
+	type bitmap
+	source Color\tt_dtt.png
+	mono
+	layer
+	x 7+icon.width+3
+	y 8+5
+	w window.width-(7+icon.width+3)-1-clock.width-1
+	h title.height+2
+end
+object
+	ifnotset 2
+	ifset 5
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source tt_dtt.png
+	layer
+	x 7+icon.width+3
+	y 8+5
+	w window.width-(7+icon.width+3)-8-clock.width-24-2
+	h title.height+2
+end
+object
+	ifset 2
+	ifset 5
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source Color\tt_dtt.png
+	mono
+	layer
+	x 7+icon.width+3
+	y 8+5
+	w window.width-(7+icon.width+3)-8-clock.width-24-2
+	h title.height+2
+end
+object
+	ifnotset 2
+	ifset 5
+	ifset 6
+	ifset 10
+	type bitmap
+	source tt_dtt.png
+	layer
+	x 7+icon.width+3
+	y 8+5
+	w window.width-(7+icon.width+3)-1-clock.width-1
+	h title.height+2
+end
+object
+	ifset 2
+	ifset 5
+	ifset 6
+	ifset 10
+	type bitmap
+	source Color\tt_dtt.png
+	mono
+	layer
+	x 7+icon.width+3
+	y 8+5
+	w window.width-(7+icon.width+3)-1-clock.width-1
+	h title.height+2
 end
 
 #===========Title text=============================================================================
+# ifnotset Color text, ifnotset Dark title text
 object
-	ifnotset 8
-	ifset 2
+	ifnotset 4
+	ifnotset 5
 	type title
-	color 226 226 226
-	x 7+icon.width
-	y 10
-	w window.width-(7+icon.width)-4-clock.width-10
+	color 207 208 218
+	x 7+icon.width+3
+	y 8+5
 end
+# ifset Color text, ifnotset Dark title text
 object
-	ifnotset 8
-	ifnotset 2
+	ifset 4
+	ifnotset 5
 	type title
-	color 226 226 226
-	x 7+3
-	y 10
-	w window.width-(7+3)-4-clock.width-10
+	x 7+icon.width+3
+	y 8+5
 end
+# ifset Dark title text
 object
-	ifset 8
-	ifset 2
+	ifset 5
 	type title
-	x 7+icon.width
-	y 10
-	w window.width-(7+icon.width)-4-clock.width-10
+	color 27 30 37
+	x 7+icon.width+3
+	y 8+5
 end
+# ifnotset Standard digital clocks, ifnotset Logo
 object
-	ifset 8
-	ifnotset 2
+	ifnotset 6
+	ifnotset 10
 	type title
-	x 7+3
-	y 10
-	w window.width-(7+3)-4-clock.width-10
+	w window.width-(7+icon.width+3)-8-clock.width-2
+end
+# ifset Standard digital clocks, ifnotset Logo
+object
+	ifset 6
+	ifnotset 10
+	type title
+	w window.width-(7+icon.width+3)-1-clock.width-1
+end
+# ifnotset Standard digital clocks, ifset Logo
+object
+	ifnotset 6
+	ifset 10
+	type title
+	w window.width-(7+icon.width+3)-8-clock.width-24-2
+end
+# ifset Standard digital clocks, ifset Logo
+object
+	ifset 6
+	ifset 10
+	type title
+	w window.width-(7+icon.width+3)-1-clock.width-1
 end
 
-#============Text area=============================================================================
+#===========Logo & Standard digital clocks=========================================================
 object
-	ifnotset 8
-	ifset 4
-	type text
-	color 255 255 255
-	x 4+4
-	y 10+title.height+10
-	w window.width-(9+avatar.width+4)-4
+	ifnotset 3
+	ifset 6
+	ifset 10
+	type bitmap
+	source logo&std_clk.png
+	layer
+	x window.width-1-(clock.width+24)/2<window.width-38
+	y 0
 end
 object
-	ifnotset 8
-	ifnotset 4
-	type text
-	color 255 255 255
-	x 4+avatar.width+4
-	y 10+title.height+10
-	w window.width-(9+avatar.width+4)-4
+	ifset 3
+	ifset 6
+	ifset 10
+	type bitmap
+	source logo&std_clk.png
+	mono
+	layer
+	x window.width-1-(clock.width+24)/2<window.width-38
+	y 0
 end
+
+#===========Avatar=================================================================================
+# ifnotset Avatar to right
 object
 	ifset 8
-	ifset 4
-	type text
-	x 4+4
-	y 10+title.height+10
-	w window.width-(9+avatar.width+4)-4
+	ifnotset 9
+	type avatar
+	x 6+1
+	y 8+5+title.height+5+10+(text.height-avatar.height)/2
+	w options.avatarsize
+	proportional 1
 end
+# ifset Avatar to right
 object
 	ifset 8
+	ifset 9
+	type avatar
+	x window.width-avatar.width-6-1
+	y 8+5+title.height+5+10+(text.height-avatar.height)/2
+	w options.avatarsize
+	proportional 1
+end
+
+#===========Text area==============================================================================
+# ifnotset Color text, ifnotset Avatar to right
+object
 	ifnotset 4
+	ifnotset 9
 	type text
-	x 4+avatar.width+4
-	y 10+title.height+10
-	w window.width-(9+avatar.width+4)-4
+	color 207 208 218
+	x 3+avatar.width+2
+	y 8+5+title.height+5+9
+	w window.width-(3+avatar.width+2)-6-2
+end
+# ifset Color text, ifnotset Avatar to right
+object
+	ifset 4
+	ifnotset 9
+	type text
+	x 3+avatar.width+2
+	y 8+5+title.height+5+9
+	w window.width-(3+avatar.width+2)-6-2
+end
+# ifnotset Color text, ifset Avatar to right
+object
+	ifnotset 4
+	ifset 9
+	type text
+	color 207 208 218
+	x 3+2
+	y 8+5+title.height+5+9
+	w window.width-(3+avatar.width+2)-6-2
+end
+# ifset Color text, ifset Avatar to right
+object
+	ifset 4
+	ifset 9
+	type text
+	x 3+2
+	y 8+5+title.height+5+9
+	w window.width-(3+avatar.width+2)-6-2
 end

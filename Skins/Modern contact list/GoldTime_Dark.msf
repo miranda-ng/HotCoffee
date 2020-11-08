@@ -209,7 +209,7 @@ EnableLayering=b1
 ;Colors
 [Alarm]
 BkColour=l
-clFrameBack=d4603195
+clFrameBack=d3684413
 Font=sVerdana
 FontCol=d13155257
 FontFlags=w0
@@ -230,10 +230,10 @@ FontWindowSize=b-13
 FontWindowSty=b0
 
 [BASS Interface]
-ColorFrame=d4603195
+ColorFrame=d3684413
 
 [CLC]
-BkColour=d4603195
+BkColour=d3684413
 HotTextColour=d12487521
 QuickSearchColour=d4473299
 SelBkColour=l
@@ -913,7 +913,7 @@ Font28Size=b-13
 Font28Sty=b0
 
 [JABBER]
-clFrameBack=d4603195
+clFrameBack=d3684413
 fntFrameClock=sVerdana
 fntFrameClockCol=d13155257
 fntFrameClockFlags=w32
@@ -934,11 +934,11 @@ SelTextColour=d8388608
 TextColour=d0
 
 [ModernSettings]
-KeyColor=d4603195
+KeyColor=d3684413
 
 [MyDetails]
 AvatarBorderColor=d16777215
-BackgroundColor=d4603195
+BackgroundColor=d3684413
 AccountFont=sVerdana
 AccountFontCol=d13155257
 AccountFontFlags=w32
@@ -1240,7 +1240,7 @@ XMPP_Error/TextSty=b0
 {Misc/Warning}textSty=b0
 
 [QuickSearch]
-frame_back=d4603195
+frame_back=d3684413
 back_del=l
 back_dis=l
 back_hid=l
@@ -1273,7 +1273,7 @@ hgrid=d8155245
 inbg=d4340280
 inputbg=d2500139
 ipfieldsbg=d2500139
-ipfieldsbgHigh=d4603195
+ipfieldsbgHigh=d3684413
 oldinbg=d4340280
 oldoutbg=d2500139
 outbg=d2500139
@@ -1462,9 +1462,9 @@ tab_txt_unread=l
 [Tipper]
 AvBorderCol=d16777215
 BorderCol=d8155245
-ColourBg=d4603195
+ColourBg=d3684413
 DividerCol=d8155245
-SidebarCol=d4603195
+SidebarCol=d3684413
 FontFirst=sVerdana
 FontFirstCol=d4814774
 FontFirstFlags=w288
@@ -1499,7 +1499,7 @@ BkColour=l
 SelBkColour=l
 
 [Weather]
-ColorMwinFrame=d4603195
+ColorMwinFrame=d3684413
 fnt0=sVerdana
 fnt0Col=d13155257
 fnt0Flags=w160
@@ -1514,12 +1514,12 @@ fnt1Size=b-11
 fnt1Sty=b1
 
 [mRadio]
-frame_back=d4603195
+frame_back=d3684413
 
 
 ;Floating Contacts
 [FloatingContacts]
-BkColor=d4603195
+BkColor=d3684413
 LTEdgesColor=d6248277
 RBEdgesColor=d3288106
 
