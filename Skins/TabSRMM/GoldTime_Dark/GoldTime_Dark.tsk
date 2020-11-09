@@ -89,20 +89,20 @@ Bottom=-2
 Top=-2
 
 [%InputArea]
-Left=4
+Left=3
 Top=7
 Right=3
 Bottom=3
 
 [%MessageLog]
-Left=4
-Top=4
+Left=3
+Top=3
 Right=3
 Bottom=3
 
 [%Userlist]
-Left=4
-Top=4
+Left=3
+Top=3
 Right=3
 Bottom=3
 
