@@ -147,7 +147,7 @@ Bottom=1
 Item0=Container
 
 [$Buttonpressed]
-Glyph=14,6,18,10
+Glyph=14,12,18,16
 Left=2
 Top=2
 Right=2

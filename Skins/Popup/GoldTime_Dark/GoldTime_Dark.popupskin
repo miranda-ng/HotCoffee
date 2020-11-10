@@ -601,11 +601,22 @@ object
 	y 8+7
 end
 object
-#	ifnotset 3
+	ifnotset 3
 	ifnotset 5
 	ifnotset 6
 	type clock
 	source clock_layer_0.png
+	clocksize 0 5 9 9 9 9 9 9 9 9 9 9 0 0 0
+	x window.width-8-clock.width
+	y 8+7
+end
+object
+	ifset 3
+	ifnotset 5
+	ifnotset 6
+	type clock
+	source Color\clock_layer_0.png
+	mono
 	clocksize 0 5 9 9 9 9 9 9 9 9 9 9 0 0 0
 	x window.width-8-clock.width
 	y 8+7
