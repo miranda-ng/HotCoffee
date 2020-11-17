@@ -1,7 +1,7 @@
 /*--- Global ---*/
 
 .Link-Text, .tzerlink {
-	color: #74B8E6;
+	color: #98BBE7;
 }
 
 input {
@@ -10,42 +10,42 @@ input {
 	border-left: 1px solid #5A5353;
 	border-bottom: 1px solid #1D1F23;
 	border-right: 1px solid #1D1F23;
-	color: #D3D3D3;
+	color: #C2BEBE;
 }
 
 html {
 	scrollbar-face-color: #3D3838;
 	scrollbar-highlight-color: #3D3838;
 	scrollbar-shadow-color: #3D3838;
-	scrollbar-arrow-color: #B9BBC8;
+	scrollbar-arrow-color: #C2BEBE;
 	scrollbar-3dlight-color: #5A5353;
 	scrollbar-darkshadow-color: #1D1F23;
 	scrollbar-track-color: #2B2626;
-	background: url(Dark.png) fixed no-repeat bottom right;
+	background: url(GoldTime_Dark/picture.png) fixed no-repeat bottom right;
 	background-color: #2B2626;
 	overflow: auto;
 	padding: 0px 0px 0px 0px;
 	margin: 0;
 	font-size: 13px;
-	color: Silver;
+	color: #C2BEBE;
 	zoom: 0 !important;
 }
 
 a, a:active {
-	color: #74B8E6;
+	color: #98BBE7;
 	text-decoration: none;
 	font-weight: normal;
 	cursor:pointer;
 }
 
 a:visited {
-	color: #C87046;
+	color: #E4B48F;
 	text-decoration: none;
 	font-weight: normal;
 }
 
 a:hover {
-	color: #74B8E6;
+	color: #98BBE7;
 	text-decoration: underline;
 	font-weight: normal;
 }
@@ -78,7 +78,7 @@ div {
 }
 
 .time {
-	color: Gray;
+	color: #797171;
 	font-weight: normal;
 	float: right;
 	font-size: 11px;
@@ -131,7 +131,7 @@ div.avatar {
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
-	color: #C87046;
+	color: #B5784A;
 	background-image: url(GoldTime_Dark/in.png);
 }
 
@@ -142,7 +142,7 @@ div.avatar {
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
-	color: #4E7DAD;
+	color: #618BBE;
 	background-image: url(GoldTime_Dark/out.png);
 }
 
@@ -153,17 +153,17 @@ div.avatar {
 /* -------------------- status support -------------------- */
 
 .status .head {
-	color: #C87046;
+	color: #B5784A;
 	background-image: url(GoldTime_Dark/status.png);
 }
 
 .contentStatus, .contenthStatus {
-	color: #C87046;
+	color: #E4B48F;
 	background-image: url(GoldTime_Dark/status.png);
 }
 
 .contentStatus .time, .contenthStatus .time {
-	color: #A57D6B;
+	color: #9C6F4E;
 }
 
 .Status, .hStatus {
@@ -176,17 +176,17 @@ div.avatar {
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
-	color: #469B46;
+	color: #699C4E;
 	background-image: url(GoldTime_Dark/file.png);
 }
 
 .contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
-	color: #469B46;
+	color: #A3CF8B;
 	background-image: url(GoldTime_Dark/file.png);
 }
 
 .contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
-	color: #6B916B;
+	color: #638550;
 }
 
 .FileIn, .hFileIn, .FileOut, .hFileOut {
@@ -199,17 +199,17 @@ div.avatar {
 /* -------------------- URL support -------------------- */
 
 .inurl .head, .outurl .head {
-	color: #4E7DAD;
+	color: #618BBE;
 	background-image: url(GoldTime_Dark/url.png);
 }
 
 .contentURL, .contenthURL {
-	color: #4E7DAD;
+	color: #98BBE7;
 	background-image: url(GoldTime_Dark/url.png);
 }
 
 .contentURL .time, .contenthURL .time {
-	color: #6E8399;
+	color: #5276A3;
 }
 
 .URL, .hURL {
