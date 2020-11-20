@@ -34,13 +34,13 @@ TrayTitle-effect = FONT_BOLD
 Divider-color = 192 192 192
 
 [Appearance]
-Inner-avatar-padding = 4
-Outer-avatar-padding = 12
-General-padding = 12
+Inner-avatar-padding = 0
+Outer-avatar-padding = 13
+General-padding = 13
 Text-padding = 3
-Sidebar-width = 31
-Title-indent = 21
-Text-indent = 21
+Sidebar-width = 33
+Title-indent = 23
+Text-indent = 23
 Value-indent = 8
 
 [Other]

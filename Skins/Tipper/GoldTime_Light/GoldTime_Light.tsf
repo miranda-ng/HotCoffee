@@ -34,7 +34,7 @@ TrayTitle-effect = FONT_BOLD
 Divider-color = 165 154 154
 
 [Appearance]
-Inner-avatar-padding = 2
+Inner-avatar-padding = 0
 Outer-avatar-padding = 6
 General-padding = 6
 Text-padding = 3

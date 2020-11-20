@@ -13,9 +13,9 @@ BorderColor=191919
 
 [Global]
 Name=Graphite_Dark
-CloseGlyph=close.ico
-MinimizeGlyph=minimize.ico
-MaximizeGlyph=maximize.ico
+CloseGlyph=Close.ico
+MinimizeGlyph=Minimize.ico
+MaximizeGlyph=Maximize.ico
 SbarHeight=22
 FontColor=C8C8C8
 Version=1
