@@ -8,7 +8,7 @@ SubStyle=Normal
 URL=https://miranda-ng.org/hotcoffee
 Version=2.0
 
-[?ModernSkin]
+[-ModernSkin]
 
 [ModernSkin]
 SkinFolder=uSkins\Modern contact list\GoldTime_Light
@@ -37,8 +37,8 @@ $$SubGroup/Closed/Selected=sGlyph,Fragment,BG.png,0,18,9,9,StretchBoth,4,4,4,4,2
 $$Contact/Hot=sGlyph,Fragment,BG.png,0,28,5,5,StretchBoth,2,2,2,2,200
 $$Contact/Selected=sGlyph,Fragment,BG.png,0,28,5,5,StretchBoth,2,2,2,2,200
 $$Contact/Normal=s
-$$Contact/Odd=sGlyph,Solid,17,15,15,0
-$$Contact/Single=sGlyph,Solid,156,147,147,0
+$$Contact/Odd=sGlyph,Solid,172,149,149,10
+$$Contact/Single=sGlyph,Solid,249,242,242,10
 $$Contact/Last=s
 $$Contact/First=s
 $$Scroll/BtnUp=sGlyph,Fragment,BG.png,48,64,17,17,StretchBoth,0,0,15,13,255
