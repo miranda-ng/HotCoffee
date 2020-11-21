@@ -37,7 +37,7 @@ $$SubGroup/Closed/Selected=sGlyph,Fragment,BG.png,0,18,9,9,StretchBoth,4,4,4,4,2
 $$Contact/Hot=sGlyph,Fragment,BG.png,0,28,5,5,StretchBoth,2,2,2,2,200
 $$Contact/Selected=sGlyph,Fragment,BG.png,0,28,5,5,StretchBoth,2,2,2,2,200
 $$Contact/Normal=s
-$$Contact/Odd=sGlyph,Solid,172,149,149,10
+$$Contact/Odd=sGlyph,Solid,167,154,154,10
 $$Contact/Single=sGlyph,Solid,249,242,242,10
 $$Contact/Last=s
 $$Contact/First=s
@@ -1584,14 +1584,14 @@ ContainerSkin=sGoldTime_Light\GoldTime_Light.tsk
 
 ;Tipper settings
 [Tipper]
-InnerAvatarPadding=w0
+InnerAvatarPadding=w2
 OuterAvatarPadding=w6
 Padding=w6
-TextPadding=w3
+TextPadding=w2
 SidebarWidth=d35
 TitleIndent=d32
 TextIndent=d32
-ValueIndent=d8
+ValueIndent=d7
 RoundCorners=b1
 SkinEngine=b1
 SkinName=uGoldTime_Light
