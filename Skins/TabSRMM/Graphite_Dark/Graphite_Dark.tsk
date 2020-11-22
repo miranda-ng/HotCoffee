@@ -33,17 +33,17 @@ TabTextUnread=FFFFBF
 TabTextHottrack=FFFFFF
 
 [ClientArea]
-Top=0
-Bottom=0
 Left=0
+Top=0
 Right=0
+Bottom=0
 Inner=4
 
 [WindowFrame]
-Caption=22
-Bottom=8
 Left=8
+Caption=22
 Right=8
+Bottom=8
 ClipFrame=0
 RadiusTL=1
 RadiusTR=1
@@ -156,7 +156,7 @@ Right=1
 ;--------Image---------
 
 [$glyphs]
-Image=BG.png
+Image=BG2.png
 Alpha=100
 Perpixel=1
 
@@ -165,19 +165,19 @@ Perpixel=1
 [$Buttonnotpressed]
 
 [$Buttonpressed]
-Glyph=60,301,62,321
-Top=1
-Bottom=1
+Glyph=0,609,2,611
 Left=1
+Top=1
 Right=1
+Bottom=1
 Item0=Buttonpressed
 
 [$Buttonmouseover]
-Glyph=56,301,58,321
-Top=1
-Bottom=1
-Left=1
-Right=1
+Glyph=16,595,20,619
+Left=2
+Top=2
+Right=2
+Bottom=2
 Item0=Buttonmouseover
 
 [$InfoPanelBackground]
@@ -187,113 +187,113 @@ Item0=Buttonmouseover
 [$Titlebutton]
 
 [$Titlebuttonpressed]
-Glyph=5,301,7,303
-Top=1
-Bottom=1
+Glyph=0,605,2,607
 Left=1
+Top=1
 Right=1
+Bottom=1
 Item0=Titlebuttonpressed
 
 [$Titlebuttonmouseover]
-Glyph=1,301,3,303
-Top=1
-Bottom=1
+Glyph=0,601,2,603
 Left=1
+Top=1
 Right=1
+Bottom=1
 Item0=Titlebuttonmouseover
 
 [$Tabpage]
-Glyph=1,305,5,309
-Top=2
-Bottom=2
+Glyph=0,595,4,599
 Left=2
+Top=2
 Right=2
+Bottom=2
 Item0=Tabpage
 
 [$Tabitem]
-Glyph=70,301,74,321
+Glyph=34,595,38,615
 Alpha=70
-Top=2
-Bottom=2
 Left=2
+Top=2
 Right=2
+Bottom=1
 Item0=Tabitem
 
 [$Tabitem_hottrack]
-Glyph=76,301,80,321
-Top=2
-Bottom=2
+Glyph=40,595,44,615
 Left=2
+Top=2
 Right=2
+Bottom=1
 Item0=Tabitem_hottrack
 
 [$Tabitem_active]
-Glyph=64,301,68,321
-Top=2
-Bottom=2
+Glyph=28,595,32,615
 Left=2
+Top=2
 Right=2
+Bottom=2
 Item0=Tabitem_active
 
 [$Tabitem_bottom]
-Glyph=88,300,92,321
+Glyph=52,595,56,616
 Alpha=70
-Top=2
-Bottom=2
 Left=2
+Top=2
 Right=2
+Bottom=2
 Item0=Tabitem_bottom
 
 [$Tabitem_hottrack_bottom]
-Glyph=94,300,98,321
-Top=2
-Bottom=2
+Glyph=58,595,62,616
 Left=2
+Top=2
 Right=2
+Bottom=2
 Item0=Tabitem_hottrack_bottom
 
 [$Tabitem_active_bottom]
-Glyph=82,301,86,321
-Top=2
-Bottom=2
+Glyph=46,595,50,615
 Left=2
+Top=2
 Right=2
+Bottom=2
 Item0=Tabitem_active_bottom
 
 [$Toolbar]
 
 [$Frame]
-Glyph=4,2,123,297
+Glyph=2,2,700,591
 FillColor=191919
-Top=24
-Bottom=6
 Left=6
+Top=24
 Right=6
+Bottom=6
 Item0=Frame
 
 [$FrameInactive]
-Glyph=4,2,123,297
+Glyph=2,2,700,591
 FillColor=191919
-Top=24
-Bottom=6
 Left=6
+Top=24
 Right=6
+Bottom=6
 Item0=FrameInactive
 
 [$InputArea]
-Glyph=9,301,11,303
-Top=1
-Bottom=1
+Glyph=0,609,2,611
 Left=1
+Top=1
 Right=1
+Bottom=1
 Item0=InputArea
 
 [$MessageLog]
-Glyph=9,301,11,303
-Top=1
-Bottom=1
+Glyph=0,609,2,611
 Left=1
+Top=1
 Right=1
+Bottom=1
 Item0=MessageLog
 
 [$Sidebar Background]
@@ -303,9 +303,9 @@ Item0=MessageLog
 [$Statusbar]
 
 [$Userlist]
-Glyph=9,301,11,303
-Top=1
-Bottom=1
+Glyph=0,609,2,611
 Left=1
+Top=1
 Right=1
+Bottom=1
 Item0=Userlist
