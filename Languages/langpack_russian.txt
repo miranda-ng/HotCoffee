@@ -1669,7 +1669,7 @@ Google Карты
 [Incoming colon]
 Двоеточие во входящих сообщениях
 [Message area]
-Область сообщения
+Область сообщений
 [Other events]
 Другие события
 [Message log]
@@ -1742,11 +1742,6 @@ Miranda не смогла загрузить встроенную систему
 ;file \src\core\stdmsg\src\msgtimedout.cpp
 [An unknown error has occurred.]
 Неизвестная ошибка.
-;file \src\core\stdpopup\src\icons.cpp
-[Popups are enabled]
-Всплывающие окна включены
-[Popups are disabled]
-Всплывающие окна выключены
 ;file \src\core\stdpopup\src\options.cpp
 [Example]
 Пример
@@ -1804,6 +1799,10 @@ Miranda не смогла загрузить встроенную систему
 [Enable popups]
 Включить всплывающие окна
 ;file \src\core\stdpopup\src\yapp.cpp
+[Popups are enabled]
+Всплывающие окна включены
+[Popups are disabled]
+Всплывающие окна выключены
 [Toggle popups]
 Вкл/Выкл вспл. окна
 [First line]
@@ -2186,6 +2185,8 @@ Miranda не может распознать этот профиль
 [Extra icons]
 Экстра значки
 ;file \src\mir_app\src\ei_services.cpp
+[Mute chat]
+Заглушать чат
 ;file \src\mir_app\src\findadd.cpp
 [You haven't filled in the search field. Please enter a search term and try again.]
 Вы не заполнили поле для поиска. Пожалуйста, введите запрос для поиска и попробуйте ещё раз.
@@ -8810,7 +8811,7 @@ ID пользователя
 ;============================================================
 ;  File: CurrencyRates.dll
 ;  Plugin: Currency Rates
-;  Version: 0.2.1.0
+;  Version: 0.2.1.1
 ;  Authors: Dioksin
 ;============================================================
 [Shows currency rates.]
@@ -20145,7 +20146,7 @@ HTTP-подключения каналов новостей
 [History export]
 Экспорт истории
 ;file \plugins\NewStory\src\history_control.cpp
-[Do you really want to remove selected event(s)?]
+[Are you sure to remove selected event(s)?]
 Уверены, что хотите удалить выбранные события?
 ;file \plugins\NewStory\src\history_menus.cpp
 [Are you sure to remove all events from history?]
@@ -26406,7 +26407,7 @@ Miranda NG - Контекстное меню оболочки ОС (shellext.dll
 ;============================================================
 ;  File: SkypeWeb.dll
 ;  Plugin: Skype protocol (Web)
-;  Version: 0.95.12.2
+;  Version: 0.95.12.3
 ;  Authors: Miranda NG team
 ;============================================================
 [Skype protocol support for Miranda NG. Based on new Skype for Web.]
@@ -29143,6 +29144,8 @@ TabSRMM: набор текста
 Отправить файл
 [Quote message]
 Цитировать сообщение
+[Clear message area]
+Очистить область сообщений
 [Toggle send later]
 Вкл/выкл отправку с задержкой
 [Send message]
@@ -32856,7 +32859,7 @@ x, и сохраняет y, как переменную с именем x
 ;============================================================
 ;  File: VKontakte.dll
 ;  Plugin: VKontakte protocol
-;  Version: 0.1.11.6
+;  Version: 0.1.11.7
 ;  Authors: Miranda NG team
 ;============================================================
 [VKontakte protocol support for Miranda NG.]
