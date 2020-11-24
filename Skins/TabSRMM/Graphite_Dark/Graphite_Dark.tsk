@@ -125,7 +125,7 @@ Bottom=1
 ;--------Image---------
 
 [$glyphs]
-Image=BG2.png
+Image=BG.png
 Alpha=100
 Perpixel=1
 

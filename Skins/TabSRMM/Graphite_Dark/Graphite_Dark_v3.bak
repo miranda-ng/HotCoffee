@@ -120,7 +120,7 @@ Alpha=100
 Perpixel=1
 
 [$Frame]
-Glyph=4,2,123,297
+Glyph=2,2,700,591
 Left=1
 Top=1
 Right=1
@@ -128,7 +128,7 @@ Bottom=1
 Item0=Frame
 
 [$FrameInactive]
-Glyph=4,2,123,297
+Glyph=2,2,700,591
 Left=1
 Top=1
 Right=1
@@ -136,7 +136,7 @@ Bottom=1
 Item0=FrameInactive
 
 [$Titlebuttonpressed]
-Glyph=5,301,7,303
+Glyph=0,605,2,607
 Left=1
 Top=1
 Right=1
@@ -144,7 +144,7 @@ Bottom=1
 Item0=Titlebuttonpressed
 
 [$Titlebuttonmouseover]
-Glyph=1,301,3,303
+Glyph=0,601,2,603
 Left=1
 Top=1
 Right=1
@@ -152,7 +152,7 @@ Bottom=1
 Item0=Titlebuttonmouseover
 
 [$Container]
-Glyph=8,27,119,292
+Glyph=6,27,696,586
 Left=1
 Top=1
 Right=1
@@ -162,7 +162,7 @@ Item0=Container
 [$Buttonnotpressed]
 
 [$Buttonpressed]
-Glyph=5,301,7,303
+Glyph=0,605,2,607
 Left=1
 Top=1
 Right=1
@@ -170,7 +170,7 @@ Bottom=1
 Item0=Buttonpressed
 
 [$Buttonmouseover]
-Glyph=1,301,3,303
+Glyph=0,601,2,603
 Left=1
 Top=1
 Right=1
@@ -178,7 +178,7 @@ Bottom=1
 Item0=Buttonmouseover
 
 [$InfoPanelBackground]
-Glyph=21,301,23,321
+Glyph=64,595,66,615
 Left=1
 Top=1
 Right=1
@@ -186,7 +186,7 @@ Bottom=1
 Item0=InfoPanelBackground
 
 [$Tabpage]
-Glyph=1,327,5,331
+Glyph=68,595,72,599
 Left=2
 Top=2
 Right=2
@@ -194,7 +194,7 @@ Bottom=2
 Item0=Tabpage
 
 [$Tabitem]
-Glyph=13,323,66,343
+Glyph=74,595,127,615
 Alpha=70
 Left=2
 Top=2
@@ -203,7 +203,7 @@ Bottom=2
 Item0=Tabitem
 
 [$Tabitem_hottrack]
-Glyph=13,323,66,343
+Glyph=74,595,127,615
 Left=2
 Top=2
 Right=2
@@ -211,7 +211,7 @@ Bottom=2
 Item0=Tabitem_hottrack
 
 [$Tabitem_active]
-Glyph=13,323,66,347
+Glyph=74,595,127,619
 Left=2
 Top=2
 Right=2
@@ -219,7 +219,7 @@ Bottom=2
 Item0=Tabitem_active
 
 [$Tabitem_bottom]
-Glyph=13,373,66,393
+Glyph=184,595,237,615
 Alpha=70
 Left=2
 Top=2
@@ -228,7 +228,7 @@ Bottom=2
 Item0=Tabitem_bottom
 
 [$Tabitem_hottrack_bottom]
-Glyph=13,373,66,393
+Glyph=184,595,237,615
 Left=2
 Top=2
 Right=2
@@ -236,7 +236,7 @@ Bottom=2
 Item0=Tabitem_hottrack_bottom
 
 [$Tabitem_active_bottom]
-Glyph=13,349,66,372
+Glyph=129,595,182,618
 Left=2
 Top=2
 Right=2
@@ -244,7 +244,7 @@ Bottom=2
 Item0=Tabitem_active_bottom
 
 [$InputArea]
-Glyph=9,323,11,325
+Glyph=68,607,70,609
 Left=1
 Top=1
 Right=1
