@@ -1,50 +1,51 @@
 /*--- Global ---*/
 
 .Link-Text, .tzerlink {
-	color: #74B8E6;
+	color: #98BBE7;
 }
 
 input {
 	background: #191919;
-	border-top: 1px solid #6F6F6F;
-	border-left: 1px solid #6F6F6F;
+	border-top: 1px solid #373737;
+	border-left: 1px solid #373737;
 	border-bottom: 1px solid #000000;
 	border-right: 1px solid #000000;
-	color: #D3D3D3;
+	color: #C0C0C0;
 }
 
 html {
 	scrollbar-face-color: #191919;
-	scrollbar-highlight-color: #6F6F6F;
+	scrollbar-highlight-color: #191919;
 	scrollbar-shadow-color: #191919;
-	scrollbar-arrow-color: #D3D3D3;
-	scrollbar-base-color: #191919;
+	scrollbar-arrow-color: #C0C0C0;
+	scrollbar-3dlight-color: #373737;
 	scrollbar-darkshadow-color: #000000;
+	scrollbar-track-color: #3A3A3A;
 	background: url(Dark.png) fixed no-repeat bottom right;
-	background-color: #454545;
+	background-color: #3A3A3A;
 	overflow: auto;
 	padding: 0px 0px 0px 0px;
 	margin: 0;
 	font-size: 13px;
-	color: Silver;
+	color: #C0C0C0;
 	zoom: 0 !important;
 }
 
 a, a:active {
-	color: #74B8E6;
+	color: #98BBE7;
 	text-decoration: none;
 	font-weight: normal;
 	cursor:pointer;
 }
 
 a:visited {
-	color: #C87046;
+	color: #E4BA8F;
 	text-decoration: none;
 	font-weight: normal;
 }
 
 a:hover {
-	color: #74B8E6;
+	color: #98BBE7;
 	text-decoration: underline;
 	font-weight: normal;
 }
@@ -77,7 +78,7 @@ div {
 }
 
 .time {
-	color: Gray;
+	color: #808080;
 	font-weight: normal;
 	float: right;
 	font-size: 11px;
@@ -105,9 +106,14 @@ div.avatar {
 	margin: -1px;
 }
 
-.MessageIn, .MessageOut, .hMessageIn, .hMessageOut, .frame_MessageInGroupStart, .frame_MessageOutGroupStart, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart {
-	border-top: 1px solid #646464;
-	border-bottom: 1px solid #1E1E1E;
+.MessageIn, .hMessageIn, .frame_MessageInGroupStart, .frame_hMessageInGroupStart {
+	border-top: 1px solid #545454;
+	border-bottom: 1px solid #222222;
+}
+
+.MessageOut, .hMessageOut, .frame_MessageOutGroupStart, .frame_hMessageOutGroupStart {
+	border-top: 1px solid #474747;
+	border-bottom: 1px solid #1F1F1F;
 }
 
 .MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
@@ -121,7 +127,7 @@ div.avatar {
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
-	color: #C87046;
+	color: #B5784A;
 	background-image: url(Graphite_Dark/in.png);
 }
 
@@ -143,62 +149,62 @@ div.avatar {
 /* -------------------- status support -------------------- */
 
 .status .head {
-	color: #C87046;
+	color: #B5784A;
 	background-image: url(Graphite_Dark/status.png);
 }
 
 .contentStatus, .contenthStatus {
-	color: #C87046;
+	color: #E4BA8F;
 	background-image: url(Graphite_Dark/status.png);
 }
 
 .contentStatus .time, .contenthStatus .time {
-	color: #A57D6B;
+	color: #B98966;
 }
 
 .Status, .hStatus {
-	border-top: 1px solid #A47D73;
-	border-bottom: 1px solid #3C2D28;
+	border-top: 1px solid #5B514D;
+	border-bottom: 1px solid #25211F;
 }
 
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
-	color: #469B46;
+	color: #699C4E;
 	background-image: url(Graphite_Dark/file.png);
 }
 
 .contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
-	color: #469B46;
+	color: #A3CF8B;
 	background-image: url(Graphite_Dark/file.png);
 }
 
 .contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
-	color: #6B916B;
+	color: #82A76D;
 }
 
 .FileIn, .hFileIn, .FileOut, .hFileOut {
-	border-top: 1px solid #73A473;
-	border-bottom: 1px solid #273D27;
+	border-top: 1px solid #4E5A4E;
+	border-bottom: 1px solid #202420;
 }
 
 /* -------------------- URL support -------------------- */
 
 .inurl .head, .outurl .head {
-	color: #4E7DAD;
+	color: #618BBE;
 	background-image: url(Graphite_Dark/url.png);
 }
 
 .contentURL, .contenthURL {
-	color: #4E7DAD;
+	color: #98BBE7;
 	background-image: url(Graphite_Dark/url.png);
 }
 
 .contentURL .time, .contenthURL .time {
-	color: #6E8399;
+	color: #6D91BC;
 }
 
 .URL, .hURL {
-	border-top: 1px solid #657AB1;
-	border-bottom: 1px solid #222B42;
+	border-top: 1px solid #4D5763;
+	border-bottom: 1px solid #1F2328;
 }
