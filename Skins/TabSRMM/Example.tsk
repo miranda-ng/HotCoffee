@@ -74,6 +74,8 @@ Bottom=0
 
 [%FrameInactive]
 
+[%Titlebutton]
+
 [%Titlebuttonpressed]
 
 [%Titlebuttonmouseover]
@@ -95,8 +97,6 @@ Bottom=0
 [%InfoPanelBackground]
 
 [%Infopanelfield]
-
-[%Titlebutton]
 
 [%Tabpage]
 
@@ -130,6 +130,8 @@ Perpixel=
 [$Frame]
 
 [$FrameInactive]
+
+[$Titlebutton]
 
 [$Titlebuttonpressed]
 
@@ -166,8 +168,6 @@ Item0=Buttonpressed
 [$InfoPanelBackground]
 
 [$Infopanelfield]
-
-[$Titlebutton]
 
 [$Tabpage]
 
