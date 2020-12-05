@@ -242,7 +242,7 @@ object
 	source logo_layer_1.png
 	layer
 	x window.width-7-clock.width-27
-	y 17
+	y 15
 end
 object
 	ifset 3
@@ -253,7 +253,7 @@ object
 	mono
 	layer
 	x window.width-7-clock.width-27
-	y 17
+	y 15
 end
 
 #===========Clock==================================================================================
