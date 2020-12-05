@@ -1642,7 +1642,7 @@ SkinName=uGraphite_Dark
 [Popup]
 DropShadow=b0
 EnableShadowRegion=b0
-skin.Graphite_Dark=d974
+skin.Graphite_Dark=d990
 SkinPack=sGraphite_Dark
 spacing=w0
 UseWinColors=b0
