@@ -242,7 +242,7 @@ object
 	source logo_layer_1.png
 	layer
 	x window.width-8-clock.width-27
-	y 16
+	y 18
 end
 object
 	ifset 3
@@ -253,7 +253,7 @@ object
 	mono
 	layer
 	x window.width-8-clock.width-27
-	y 16
+	y 18
 end
 
 #===========Clock==================================================================================
@@ -544,7 +544,7 @@ object
 	ifset 6
 	ifset 10
 	type bitmap
-	source logo&std_clk.png
+	source logo_layer_1.png
 	layer
 	x window.width-1-(clock.width+27)/2<window.width-37
 	y 6
@@ -554,7 +554,7 @@ object
 	ifset 6
 	ifset 10
 	type bitmap
-	source logo&std_clk.png
+	source logo_layer_1.png
 	mono
 	layer
 	x window.width-1-(clock.width+27)/2<window.width-37
