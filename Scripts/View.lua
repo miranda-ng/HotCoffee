@@ -142,7 +142,8 @@ Skins =
 	{ Name = 'GoldTime_Dark',   Description = 'GoldTime Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AC01' },
 	{ Name = 'GoldTime_Light',   Description = 'GoldTime Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AC01' },
 
-	{ Name = 'Graphite_Dark',   Description = 'Graphite Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AD01' },
+	{ Name = 'Graphite_Gray_Dark',   Description = 'Graphite Gray Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AD00' },
+	{ Name = 'Graphite_Gray_Light',   Description = 'Graphite Gray Light',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AD01' },
 	{ Name = 'Graphite_Light',   Description = 'Graphite Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AD02' },
 
 	{ Name = 'PhotoOne_Dark',   Description = 'PhotoOne Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AE01' },
@@ -161,7 +162,7 @@ Skins =
 function WriteTabSRMMSkin(skinName, fontName)
 	local patternCustMir = 'Custom_Miranda,Custom_Miranda_Dark,Custom_Miranda_Light'
 	local patternLong = 'Glamour_Aqua_Dark,Glamour_Aqua_Light,Glamour_Dark,Glamour_Light,GoldTime_Dark,GoldTime_Light,PhotoOne_Dark,PhotoOne_Light,Surface_Black,Surface_White'
-	local patternShort = 'Graphite_Dark,Graphite_Light,Textolite_Dark,Textolite_Light'
+	local patternShort = 'Graphite_Gray_Dark,Graphite_Gray_Light,Graphite_Light,Textolite_Dark,Textolite_Light'
 	local patternShortNew = 'Diplomat_Dark,Diplomat_Light,Textolite_Gray_Dark,Textolite_Gray_Light'
 
 	local result = 0
