@@ -3,7 +3,7 @@ Author=Egoist, Favor, Dracosha
 Version=2.0
 
 [Theme]
-File=Graphite_Dark_v2.tabsrmm
+File=Graphite_Gray_Light_v2.tabsrmm
 
 ;--------Global---------
 
@@ -12,7 +12,7 @@ BorderType=0
 BorderColor=191919
 
 [Global]
-Name=Graphite_Dark
+Name=Graphite_Gray_Light
 CloseGlyph=Close.ico
 MaximizeGlyph=Maximize.ico
 MinimizeGlyph=Minimize.ico

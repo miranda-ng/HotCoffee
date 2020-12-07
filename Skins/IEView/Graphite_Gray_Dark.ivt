@@ -3,7 +3,7 @@
 <html>
 
 <head>
-	<title>Graphite_Dark</title>
+	<title>Graphite_Gray_Dark</title>
 	<base href="%base%">
 	<protocol name="%proto%"></protocol>
 	<contact uid="%uinIn%" out="%uinOut%"></contact> 

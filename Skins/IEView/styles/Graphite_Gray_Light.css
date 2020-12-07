@@ -121,41 +121,41 @@ div.avatar {
 }
 
 .hMessageIn, .hMessageOut, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart, .hStatus, .hFileIn, .hFileOut, .hURL {
-	background: url(Graphite_Dark/history.png) no-repeat bottom right;
+	background: url(Graphite_Gray_Light/history.png) no-repeat bottom right;
 }
 
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
 	color: #B5784A;
-	background-image: url(Graphite_Dark/in.png);
+	background-image: url(Graphite_Gray_Light/in.png);
 }
 
 .contentMessageIn, .contenthMessageIn, .contentMessageInGroupStart, .MessageInGroupInner, .contenthMessageInGroupStart, .hMessageInGroupInner {
-	background-image: url(Graphite_Dark/in.png);
+	background-image: url(Graphite_Gray_Light/in.png);
 }
 
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
 	color: #4E7DAD;
-	background-image: url(Graphite_Dark/out.png);
+	background-image: url(Graphite_Gray_Light/out.png);
 }
 
 .contentMessageOut, .contenthMessageOut, .contentMessageOutGroupStart, .MessageOutGroupInner, .contenthMessageOutGroupStart, .hMessageOutGroupInner {
-	background-image: url(Graphite_Dark/out.png);
+	background-image: url(Graphite_Gray_Light/out.png);
 }
 
 /* -------------------- status support -------------------- */
 
 .status .head {
 	color: #B5784A;
-	background-image: url(Graphite_Dark/status.png);
+	background-image: url(Graphite_Gray_Light/status.png);
 }
 
 .contentStatus, .contenthStatus {
 	color: #E4BA8F;
-	background-image: url(Graphite_Dark/status.png);
+	background-image: url(Graphite_Gray_Light/status.png);
 }
 
 .contentStatus .time, .contenthStatus .time {
@@ -171,12 +171,12 @@ div.avatar {
 
 .infile .head, .outfile .head {
 	color: #699C4E;
-	background-image: url(Graphite_Dark/file.png);
+	background-image: url(Graphite_Gray_Light/file.png);
 }
 
 .contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
 	color: #A3CF8B;
-	background-image: url(Graphite_Dark/file.png);
+	background-image: url(Graphite_Gray_Light/file.png);
 }
 
 .contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
@@ -192,12 +192,12 @@ div.avatar {
 
 .inurl .head, .outurl .head {
 	color: #618BBE;
-	background-image: url(Graphite_Dark/url.png);
+	background-image: url(Graphite_Gray_Light/url.png);
 }
 
 .contentURL, .contenthURL {
 	color: #98BBE7;
-	background-image: url(Graphite_Dark/url.png);
+	background-image: url(Graphite_Gray_Light/url.png);
 }
 
 .contentURL .time, .contenthURL .time {
