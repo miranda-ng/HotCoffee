@@ -199,7 +199,7 @@ end
 object
 	ifnotset 2
 	type bitmap
-	source pixel:191919
+	source pixel:E4E4E4
 	x 3+5
 	y 8+3+8+title.height+8
 	w window.width-6-5-5
@@ -208,7 +208,7 @@ end
 object
 	ifset 2
 	type bitmap
-	source pixel:191919
+	source pixel:E4E4E4
 	mono
 	x 3+5
 	y 8+3+8+title.height+8

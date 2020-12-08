@@ -1,51 +1,51 @@
 /*--- Global ---*/
 
 .Link-Text, .tzerlink {
-	color: #98BBE7;
+	color: #4470A6;
 }
 
 input {
-	background: #191919;
-	border-top: 1px solid #373737;
-	border-left: 1px solid #373737;
-	border-bottom: 1px solid #000000;
-	border-right: 1px solid #000000;
-	color: #C0C0C0;
+	background: #F1F1F1;
+	border-top: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+	border-bottom: 1px solid #B4B4B4;
+	border-right: 1px solid #B4B4B4;
+	color: #595959;
 }
 
 html {
-	scrollbar-face-color: #191919;
-	scrollbar-highlight-color: #191919;
-	scrollbar-shadow-color: #191919;
-	scrollbar-arrow-color: #C0C0C0;
-	scrollbar-3dlight-color: #373737;
-	scrollbar-darkshadow-color: #000000;
-	scrollbar-track-color: #3A3A3A;
-	background: url(Dark.png) fixed no-repeat bottom right;
-	background-color: #3A3A3A;
+	scrollbar-face-color: #F1F1F1;
+	scrollbar-highlight-color: #F1F1F1;
+	scrollbar-shadow-color: #F1F1F1;
+	scrollbar-arrow-color: #595959;
+	scrollbar-3dlight-color: #FFFFFF;
+	scrollbar-darkshadow-color: #B4B4B4;
+	scrollbar-track-color: #FFFFFF;
+	background: url(Light.png) fixed no-repeat bottom right;
+	background-color: #FFFFFF;
 	overflow: auto;
 	padding: 0px 0px 0px 0px;
 	margin: 0;
 	font-size: 13px;
-	color: #C0C0C0;
+	color: #595959;
 	zoom: 0 !important;
 }
 
 a, a:active {
-	color: #98BBE7;
+	color: #4470A6;
 	text-decoration: none;
 	font-weight: normal;
 	cursor:pointer;
 }
 
 a:visited {
-	color: #E4BA8F;
+	color: #A66D44;
 	text-decoration: none;
 	font-weight: normal;
 }
 
 a:hover {
-	color: #98BBE7;
+	color: #4470A6;
 	text-decoration: underline;
 	font-weight: normal;
 }
@@ -78,7 +78,7 @@ div {
 }
 
 .time {
-	color: #808080;
+	color: #9F9F9F;
 	font-weight: normal;
 	float: right;
 	font-size: 11px;
@@ -102,22 +102,24 @@ div.avatar {
 }
 
 .code {
-	border: 1px dashed #646464;
+	border: 1px dashed #B4B4B4;
 	margin: -1px;
 }
 
 .MessageIn, .hMessageIn, .frame_MessageInGroupStart, .frame_hMessageInGroupStart {
-	border-top: 1px solid #545454;
-	border-bottom: 1px solid #222222;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #B4B4B4;
+
 }
 
 .MessageOut, .hMessageOut, .frame_MessageOutGroupStart, .frame_hMessageOutGroupStart {
-	border-top: 1px solid #474747;
-	border-bottom: 1px solid #1F1F1F;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #B4B4B4;
+
 }
 
 .MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
-	border-top: 1px dotted #646464;
+	border-top: 1px dotted #B4B4B4;
 }
 
 .hMessageIn, .hMessageOut, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart, .hStatus, .hFileIn, .hFileOut, .hURL {
@@ -127,7 +129,7 @@ div.avatar {
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
-	color: #B5784A;
+	color: #A66D44;
 	background-image: url(Graphite_Gray_Light/in.png);
 }
 
@@ -138,7 +140,7 @@ div.avatar {
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
-	color: #4E7DAD;
+	color: #4470A6;
 	background-image: url(Graphite_Gray_Light/out.png);
 }
 
@@ -149,62 +151,62 @@ div.avatar {
 /* -------------------- status support -------------------- */
 
 .status .head {
-	color: #B5784A;
+	color: #A66D44;
 	background-image: url(Graphite_Gray_Light/status.png);
 }
 
 .contentStatus, .contenthStatus {
-	color: #E4BA8F;
+	color: #A66D44;
 	background-image: url(Graphite_Gray_Light/status.png);
 }
 
 .contentStatus .time, .contenthStatus .time {
-	color: #B98966;
+	color: #C48C64;
 }
 
 .Status, .hStatus {
-	border-top: 1px solid #5B514D;
-	border-bottom: 1px solid #25211F;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #B4B4B4;
 }
 
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
-	color: #699C4E;
+	color: #488248;
 	background-image: url(Graphite_Gray_Light/file.png);
 }
 
 .contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
-	color: #A3CF8B;
+	color: #488248;
 	background-image: url(Graphite_Gray_Light/file.png);
 }
 
 .contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
-	color: #82A76D;
+	color: #6DA76D;
 }
 
 .FileIn, .hFileIn, .FileOut, .hFileOut {
-	border-top: 1px solid #4E5A4E;
-	border-bottom: 1px solid #202420;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #B4B4B4;
 }
 
 /* -------------------- URL support -------------------- */
 
 .inurl .head, .outurl .head {
-	color: #618BBE;
+	color: #4470A6;
 	background-image: url(Graphite_Gray_Light/url.png);
 }
 
 .contentURL, .contenthURL {
-	color: #98BBE7;
+	color: #4470A6;
 	background-image: url(Graphite_Gray_Light/url.png);
 }
 
 .contentURL .time, .contenthURL .time {
-	color: #6D91BC;
+	color: #6D93BC;
 }
 
 .URL, .hURL {
-	border-top: 1px solid #4D5763;
-	border-bottom: 1px solid #1F2328;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #B4B4B4;
 }
