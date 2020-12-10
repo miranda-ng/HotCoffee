@@ -250,7 +250,7 @@ EnableLayering=b1
 ;Colors
 [Alarm]
 BkColour=l
-clFrameBack=d15856113
+clFrameBack=d13816530
 Font=sVerdana
 FontCol=d5855577
 FontFlags=w0
@@ -271,10 +271,10 @@ FontWindowSize=b-13
 FontWindowSty=b0
 
 [BASS Interface]
-ColorFrame=d15856113
+ColorFrame=d13816530
 
 [CLC]
-BkColour=d15856113
+BkColour=d15000804
 HotTextColour=d10907716
 QuickSearchColour=d196757
 SelBkColour=l
@@ -776,7 +776,7 @@ Color16=d15726334
 Color17=d16777215
 Color18=d15726334
 Color19=d15726334
-Color22=d16777215
+Color22=d15000804
 Color23=d15726334
 Color24=d15726334
 Color25=d15726334
@@ -954,7 +954,7 @@ Font28Size=b-13
 Font28Sty=b0
 
 [JABBER]
-clFrameBack=d15856113
+clFrameBack=d13816530
 fntFrameClock=sVerdana
 fntFrameClockCol=d5855577
 fntFrameClockFlags=w32
@@ -975,11 +975,11 @@ SelTextColour=d8388608
 TextColour=d0
 
 [ModernSettings]
-KeyColor=d15856113
+KeyColor=d13816530
 
 [MyDetails]
 AvatarBorderColor=d0
-BackgroundColor=d15856113
+BackgroundColor=d13816530
 AccountFont=sVerdana
 AccountFontCol=d5855577
 AccountFontFlags=w32
@@ -1013,7 +1013,7 @@ StatusMessageFontSty=b2
 
 [Popup]
 ColourAvatarBorder=d0
-ColourBg=d9211020
+ColourBg=d8684676
 fntAction=sVerdana
 fntActionCol=d7355408
 fntActionFlags=w288
@@ -1281,7 +1281,7 @@ XMPP_Error/TextSty=b0
 {Misc/Warning}textSty=b0
 
 [QuickSearch]
-frame_back=d15856113
+frame_back=d13816530
 back_del=l
 back_dis=l
 back_hid=l
@@ -1298,7 +1298,7 @@ fore_odd=l
 fore_sub=l
 
 [SmileyAdd]
-SelWndBkgClr=d16777215
+SelWndBkgClr=d15000804
 
 [StatusBar]
 BkColour=l
@@ -1502,10 +1502,10 @@ tab_txt_unread=l
 
 [Tipper]
 AvBorderCol=d0
-BorderCol=d12632256
-ColourBg=d15856113
+BorderCol=d0
+ColourBg=d15000804
 DividerCol=d12632256
-SidebarCol=d15856113
+SidebarCol=d12632256
 FontFirst=sVerdana
 FontFirstCol=d4484518
 FontFirstFlags=w288
@@ -1540,7 +1540,7 @@ BkColour=l
 SelBkColour=l
 
 [Weather]
-ColorMwinFrame=d15856113
+ColorMwinFrame=d13816530
 fnt0=sVerdana
 fnt0Col=d5855577
 fnt0Flags=w160
@@ -1555,12 +1555,12 @@ fnt1Size=b-11
 fnt1Sty=b1
 
 [mRadio]
-frame_back=d15856113
+frame_back=d13816530
 
 
 ;Floating Contacts
 [FloatingContacts]
-BkColor=d15856113
+BkColor=d15000804
 LTEdgesColor=d16777215
 RBEdgesColor=d12632256
 

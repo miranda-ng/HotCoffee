@@ -306,7 +306,7 @@ object
 	ifnotset 5
 	ifset 6
 	type clock
-	color 236 236 236
+	color 239 239 239
 	x window.width-1-clock.width+1
 	y 8+3+7+(title.height-clock.height)/2
 end
@@ -314,7 +314,7 @@ object
 	ifnotset 5
 	ifset 6
 	type clock
-	color 236 236 236
+	color 239 239 239
 	x window.width-1-clock.width
 	y 8+3+7+(title.height-clock.height)/2+1
 end
@@ -322,7 +322,7 @@ object
 	ifnotset 5
 	ifset 6
 	type clock
-	color 236 236 236
+	color 239 239 239
 	x window.width-1-clock.width+1
 	y 8+3+7+(title.height-clock.height)/2+1
 end
@@ -333,7 +333,7 @@ object
 	ifset 5
 	ifset 6
 	type clock
-	color 0 0 0
+	color 63 63 63
 	x window.width-1-clock.width+1
 	y 8+3+7+(title.height-clock.height)/2
 end
@@ -342,7 +342,7 @@ object
 	ifset 5
 	ifset 6
 	type clock
-	color 0 0 0
+	color 63 63 63
 	x window.width-1-clock.width
 	y 8+3+7+(title.height-clock.height)/2+1
 end
@@ -351,7 +351,7 @@ object
 	ifset 5
 	ifset 6
 	type clock
-	color 0 0 0
+	color 63 63 63
 	x window.width-1-clock.width+1
 	y 8+3+7+(title.height-clock.height)/2+1
 end
@@ -388,7 +388,7 @@ object
 	ifnotset 5
 	ifset 6
 	type clock
-	color 0 0 0
+	color 63 63 63
 	x window.width-1-clock.width
 	y 8+3+7+(title.height-clock.height)/2
 end
@@ -406,7 +406,7 @@ object
 	ifset 5
 	ifset 6
 	type clock
-	color 236 236 236
+	color 239 239 239
 	x window.width-1-clock.width
 	y 8+3+7+(title.height-clock.height)/2
 end
@@ -416,21 +416,21 @@ end
 object
 	ifnotset 5
 	type title
-	color 236 236 236
+	color 239 239 239
 	x 3+5+icon.width+1+1
 	y 8+3+7
 end
 object
 	ifnotset 5
 	type title
-	color 236 236 236
+	color 239 239 239
 	x 3+5+icon.width+1
 	y 8+3+7+1
 end
 object
 	ifnotset 5
 	type title
-	color 236 236 236
+	color 239 239 239
 	x 3+5+icon.width+1+1
 	y 8+3+7+1
 end
@@ -440,7 +440,7 @@ object
 	ifnotset 4
 	ifset 5
 	type title
-	color 0 0 0
+	color 63 63 63
 	x 3+5+icon.width+1+1
 	y 8+3+7
 end
@@ -448,7 +448,7 @@ object
 	ifnotset 4
 	ifset 5
 	type title
-	color 0 0 0
+	color 63 63 63
 	x 3+5+icon.width+1
 	y 8+3+7+1
 end
@@ -456,7 +456,7 @@ object
 	ifnotset 4
 	ifset 5
 	type title
-	color 0 0 0
+	color 63 63 63
 	x 3+5+icon.width+1+1
 	y 8+3+7+1
 end
@@ -489,7 +489,7 @@ object
 	ifnotset 4
 	ifnotset 5
 	type title
-	color 0 0 0
+	color 63 63 63
 	x 3+5+icon.width+1
 	y 8+3+7
 end
@@ -505,7 +505,7 @@ end
 object
 	ifset 5
 	type title
-	color 236 236 236
+	color 239 239 239
 	x 3+5+icon.width+1
 	y 8+3+7
 end
@@ -589,7 +589,7 @@ object
 	ifnotset 4
 	ifnotset 9
 	type text
-	color 0 0 0
+	color 63 63 63
 	x 3+5+avatar.width
 	y 8+3+8+title.height+5+4
 	w window.width-(8+avatar.width+5)-8-5
@@ -608,7 +608,7 @@ object
 	ifnotset 4
 	ifset 9
 	type text
-	color 0 0 0
+	color 63 63 63
 	x 3+5
 	y 8+3+8+title.height+5+4
 	w window.width-(8+avatar.width+5)-8-5
