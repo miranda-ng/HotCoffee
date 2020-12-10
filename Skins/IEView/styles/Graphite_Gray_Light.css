@@ -5,21 +5,21 @@
 }
 
 input {
-	background: #F1F1F1;
-	border-top: 1px solid #FFFFFF;
-	border-left: 1px solid #FFFFFF;
-	border-bottom: 1px solid #B4B4B4;
-	border-right: 1px solid #B4B4B4;
-	color: #595959;
+	background: #D2D2D2;
+	border-top: 1px solid #F4F4F4;
+	border-left: 1px solid #F4F4F4;
+	border-bottom: 1px solid #808080;
+	border-right: 1px solid #808080;
+	color: #3A3A3A;
 }
 
 html {
-	scrollbar-face-color: #F1F1F1;
-	scrollbar-highlight-color: #F1F1F1;
-	scrollbar-shadow-color: #F1F1F1;
-	scrollbar-arrow-color: #595959;
-	scrollbar-3dlight-color: #FFFFFF;
-	scrollbar-darkshadow-color: #B4B4B4;
+	scrollbar-face-color: #D2D2D2;
+	scrollbar-highlight-color: #D2D2D2;
+	scrollbar-shadow-color: #D2D2D2;
+	scrollbar-arrow-color: #3A3A3A;
+	scrollbar-3dlight-color: #F4F4F4;
+	scrollbar-darkshadow-color: #808080;
 	scrollbar-track-color: #E4E4E4;
 	background: url(Light.png) fixed no-repeat bottom right;
 	background-color: #E4E4E4;
