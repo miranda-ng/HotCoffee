@@ -170,9 +170,12 @@ Top=1
 Right=1
 Bottom=1
 Item0=Buttonpressed
+Item1=InputArea
+Item2=MessageLog
+Item3=Userlist
 
 [$Buttonmouseover]
-Glyph=16,595,20,619
+Glyph=6,595,10,619
 Left=2
 Top=2
 Right=2
@@ -188,7 +191,7 @@ Bottom=2
 Item0=Tabpage
 
 [$Tabitem]
-Glyph=34,595,38,615
+Glyph=18,595,22,615
 Alpha=70
 Left=2
 Top=2
@@ -197,7 +200,7 @@ Bottom=1
 Item0=Tabitem
 
 [$Tabitem_hottrack]
-Glyph=40,595,44,615
+Glyph=24,595,28,615
 Left=2
 Top=2
 Right=2
@@ -205,7 +208,7 @@ Bottom=1
 Item0=Tabitem_hottrack
 
 [$Tabitem_active]
-Glyph=28,595,32,615
+Glyph=12,595,16,615
 Left=2
 Top=2
 Right=2
@@ -213,7 +216,7 @@ Bottom=2
 Item0=Tabitem_active
 
 [$Tabitem_bottom]
-Glyph=52,595,56,616
+Glyph=36,595,40,616
 Alpha=70
 Left=2
 Top=2
@@ -222,7 +225,7 @@ Bottom=2
 Item0=Tabitem_bottom
 
 [$Tabitem_hottrack_bottom]
-Glyph=58,595,62,616
+Glyph=42,595,46,616
 Left=2
 Top=2
 Right=2
@@ -230,19 +233,9 @@ Bottom=2
 Item0=Tabitem_hottrack_bottom
 
 [$Tabitem_active_bottom]
-Glyph=46,595,50,615
+Glyph=30,595,34,615
 Left=2
 Top=2
 Right=2
 Bottom=2
 Item0=Tabitem_active_bottom
-
-[$InputArea]
-Glyph=0,609,2,611
-Left=1
-Top=1
-Right=1
-Bottom=1
-Item0=InputArea
-Item1=MessageLog
-Item2=Userlist

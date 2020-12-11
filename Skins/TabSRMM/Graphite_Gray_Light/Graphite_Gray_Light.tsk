@@ -138,20 +138,22 @@ Bottom=1
 Item0=FrameInactive
 
 [$Titlebuttonpressed]
-Glyph=0,605,2,607
+Glyph=4,609,6,611
 Left=1
 Top=1
 Right=1
 Bottom=1
 Item0=Titlebuttonpressed
+Item1=Buttonpressed
 
 [$Titlebuttonmouseover]
-Glyph=0,601,2,603
+Glyph=4,605,6,607
 Left=1
 Top=1
 Right=1
 Bottom=1
 Item0=Titlebuttonmouseover
+Item1=Buttonmouseover
 
 [$Container]
 Glyph=6,27,696,586
@@ -162,7 +164,7 @@ Bottom=1
 Item0=Container
 
 [$Buttonnotpressed]
-Glyph=64,595,66,619
+Glyph=0,595,2,619
 Left=1
 Top=1
 Right=1
@@ -170,24 +172,8 @@ Bottom=1
 Item0=Buttonnotpressed
 Item1=InfoPanelBackground
 
-[$Buttonpressed]
-Glyph=0,605,2,607
-Left=1
-Top=1
-Right=1
-Bottom=1
-Item0=Buttonpressed
-
-[$Buttonmouseover]
-Glyph=0,601,2,603
-Left=1
-Top=1
-Right=1
-Bottom=1
-Item0=Buttonmouseover
-
 [$Tabpage]
-Glyph=68,595,72,599
+Glyph=4,595,8,599
 Left=2
 Top=2
 Right=2
@@ -195,7 +181,7 @@ Bottom=2
 Item0=Tabpage
 
 [$Tabitem]
-Glyph=74,595,127,615
+Glyph=65,595,118,615
 Alpha=70
 Left=2
 Top=2
@@ -204,7 +190,7 @@ Bottom=2
 Item0=Tabitem
 
 [$Tabitem_hottrack]
-Glyph=74,595,127,615
+Glyph=65,595,118,615
 Left=2
 Top=2
 Right=2
@@ -212,7 +198,7 @@ Bottom=2
 Item0=Tabitem_hottrack
 
 [$Tabitem_active]
-Glyph=74,595,127,619
+Glyph=10,595,63,619
 Left=2
 Top=2
 Right=2
@@ -220,7 +206,7 @@ Bottom=2
 Item0=Tabitem_active
 
 [$Tabitem_bottom]
-Glyph=184,595,237,615
+Glyph=175,595,228,615
 Alpha=70
 Left=2
 Top=2
@@ -229,7 +215,7 @@ Bottom=2
 Item0=Tabitem_bottom
 
 [$Tabitem_hottrack_bottom]
-Glyph=184,595,237,615
+Glyph=175,595,228,615
 Left=2
 Top=2
 Right=2
@@ -237,7 +223,7 @@ Bottom=2
 Item0=Tabitem_hottrack_bottom
 
 [$Tabitem_active_bottom]
-Glyph=129,595,182,618
+Glyph=120,595,173,618
 Left=2
 Top=2
 Right=2
@@ -245,7 +231,7 @@ Bottom=2
 Item0=Tabitem_active_bottom
 
 [$InputArea]
-Glyph=68,607,70,609
+Glyph=4,601,6,603
 Left=1
 Top=1
 Right=1
