@@ -6,10 +6,10 @@
 
 input {
 	background: #506779;
-	border-top: 1px solid #658198;
 	border-left: 1px solid #658198;
-	border-bottom: 1px solid #253038;
+	border-top: 1px solid #658198;
 	border-right: 1px solid #253038;
+	border-bottom: 1px solid #253038;
 	color: #D0E0EA;
 }
 
@@ -109,13 +109,11 @@ div.avatar {
 .MessageIn, .hMessageIn, .frame_MessageInGroupStart, .frame_hMessageInGroupStart {
 	border-top: 1px solid #658198;
 	border-bottom: 1px solid #253038;
-
 }
 
 .MessageOut, .hMessageOut, .frame_MessageOutGroupStart, .frame_hMessageOutGroupStart {
 	border-top: 1px solid #597286;
 	border-bottom: 1px solid #253038;
-
 }
 
 .MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {

@@ -6,10 +6,10 @@
 
 input {
 	background: #3D3838;
-	border-top: 1px solid #5A5353;
 	border-left: 1px solid #5A5353;
-	border-bottom: 1px solid #1D1F23;
+	border-top: 1px solid #5A5353;
 	border-right: 1px solid #1D1F23;
+	border-bottom: 1px solid #1D1F23;
 	color: #C2BEBE;
 }
 
