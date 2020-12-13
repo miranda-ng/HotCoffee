@@ -1021,7 +1021,7 @@ fntActionSet=b204
 fntActionSize=b-11
 fntActionSty=b0
 fntClock=sVerdana
-fntClockCol=d4144959
+fntClockCol=d2763306
 fntClockFlags=w32
 fntClockSet=b204
 fntClockSize=b-11
@@ -1033,13 +1033,13 @@ fntHovered actionSet=b204
 fntHovered actionSize=b-11
 fntHovered actionSty=b4
 fntText=sVerdana
-fntTextCol=d4144959
+fntTextCol=d2763306
 fntTextFlags=w32
 fntTextSet=b204
 fntTextSize=b-11
 fntTextSty=b0
 fntTitle=sVerdana
-fntTitleCol=d4144959
+fntTitleCol=d2763306
 fntTitleFlags=w32
 fntTitleSet=b204
 fntTitleSize=b-11
@@ -1658,15 +1658,15 @@ iPopUpColorBack=d8951900
 iPopUpColorFore=d2898437
 
 [ChangeKeyboardLayout]
-BackColor=d7632002
-TextColor=d2434352
+BackColor=d8421504
+TextColor=d2763306
 
 [Chat]
 PopupColorBG=d4622508
 PopupColorText=d12618
 
 [DBEditorpp]
-PopupColour=d6513086
+PopupColour=d8421504
 
 [GmailMNotifier]
 popupBgColor=d11959374
@@ -1677,12 +1677,12 @@ PopupBackColor=d4880565
 PopupTextColor=d9301
 
 [NewAwaySys]
-PopupBGColour=d7632002
-PopupTextColour=d2434352
+PopupBGColour=d8421504
+PopupTextColour=d2763306
 
 [NewStatusNotify]
-40071bg=d7632002
-40071tx=d2434352
+40071bg=d8421504
+40071tx=d2763306
 40072bg=d6332256
 40072tx=d1389845
 40073bg=d11959374
@@ -1707,8 +1707,8 @@ PopupTextColour=d2434352
 40082tx=d12618
 
 [PackUpdater]
-Popups0Bg=d7632002
-Popups0Tx=d2434352
+Popups0Bg=d8421504
+Popups0Tx=d2763306
 Popups1Bg=d6513086
 Popups1Tx=d986462
 Popups2Bg=d11959374
@@ -1735,20 +1735,20 @@ colorSect=d6435081
 [tabSRMM_NEN]
 ColorBackErr=d6513086
 ColorBackMsg=d4622508
-ColorBackOthers=d7632002
+ColorBackOthers=d8421504
 ColorTextErr=d986462
 ColorTextMsg=d12618
-ColorTextOthers=d2434352
+ColorTextOthers=d2763306
 
 [Twitter]
 Popup/ColorBack=d11959374
 Popup/ColorText=d6435081
 
 [TypingNotify]
-OFF_BG=d7632002
-OFF_TX=d2434352
-ON_BG=d7632002
-ON_TX=d2434352
+OFF_BG=d8421504
+OFF_TX=d2763306
+ON_BG=d8421504
+ON_TX=d2763306
 
 [UserInfoEx]
 PopupAnnivClrBack=d8951900
@@ -1757,8 +1757,8 @@ PopupBirthClrBirthBack=d11364199
 PopupBirthClrBirthText=d5380120
 
 [Weather]
-BackgroundColour=d7632002
-TextColour=d2434352
+BackgroundColour=d8421504
+TextColour=d2763306
 
 [WebView]
 PopBGClr=d11959374
