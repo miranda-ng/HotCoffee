@@ -40,8 +40,8 @@ Inner=4
 
 [WindowFrame]
 Caption=21
-Left=4
-Right=4
+Left=5
+Right=5
 Bottom=5
 ClipFrame=0
 RadiusTL=1
@@ -49,7 +49,7 @@ RadiusTR=1
 RadiusBL=1
 RadiusBR=1
 CaptionOffset=6
-CaptionPadding=7
+CaptionPadding=4
 TitleButtonWidth=15
 TitleButtonHeight=15
 TitleButtonTopOffset=5

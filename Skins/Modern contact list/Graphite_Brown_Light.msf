@@ -1642,7 +1642,7 @@ SkinName=uGraphite_Brown_Light
 [Popup]
 DropShadow=b0
 EnableShadowRegion=b0
-skin.Graphite_Brown_Light=d975
+skin.Graphite_Brown_Light=d991
 SkinPack=sGraphite_Brown_Light
 spacing=w0
 UseWinColors=b0
