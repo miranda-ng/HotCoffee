@@ -1,0 +1,55 @@
+[Skin_Description_Section]
+  Name=Native light [NotLayered]
+  SubStyle=Normal
+  Author= Name1ess0ne (ed. by ksunechkin for MIM Native)
+  Contact=ksunechkin@gmail.com
+  URL=http://mimnative.googlecode.com/
+  Description=2010-2011 ksunechkin	
+  SkinFolder=Native Light
+  Preview=preview.png
+  Version=1.1
+  
+[ModernSkin]
+
+; OBJECTS
+
+  $window=sGlyph,Fragment,sprites.png,178,1,102,115,StretchBoth,10,20,20,20,255
+  $statusbar=sGlyph,Fragment,sprites.png,124,8,8,17,StrechBoth,3,3,3,3,255
+  $eventarea=sGlyph,Fragment,sprites.png,124,8,8,14,StrechBoth,3,3,3,3,255
+  $framecaption=sGlyph,Fragment,sprites.png,113,29,22,22,StretchBoth,10,10,10,10,160
+
+  $toolbar=sGlyph,Fragment,sprites.png,113,1,7,24,StrechBoth,3,3,3,3,255
+  $toolbar_button_hovered=sGlyph,Fragment,sprites.png,62,1,30,26,StretchBoth,4,4,6,4,255
+  $toolbar_button_pressed=sGlyph,Fragment,sprites.png,32,1,30,26,StretchBoth,4,4,6,4,255
+
+  $hot_tracking=sGlyph,Fragment,sprites.png,113,29,22,22,StretchBoth,3,2,3,2,255
+  $selection=sGlyph,Fragment,sprites.png,113,55,22,22,StretchBoth,3,2,3,2,255
+
+  $scroll_back=sGlyph,Fragment,sprites.png,147,37,16,15,TileVert,4,0,1,0,255
+  $scroll_up=sGlyph,Fragment,sprites.png,147,2,17,17,TileHorz,0,0,15,16,255
+  $scroll_down=sGlyph,Fragment,sprites.png,147,20,17,17,TileHorz,0,0,15,16,255
+  $scroll_thumb=sGlyph,Fragment,sprites.png,148,53,15,13,TileVert,2,4,2,4,255
+
+  $opengroup=sGlyph,Fragment,sprites.png,113,81,22,27,StretchBoth,8,8,8,8,255
+  $closedgroup=sGlyph,Fragment,sprites.png,113,81,22,27,StretchBoth,8,8,8,8,255
+
+; RULES
+  @0=s$window:Main,ID=Background
+  @1=s$statusbar:Main,ID=StatusBar
+  @2=s$eventarea:Main,ID=EventArea
+  @3=s$framecaption:Main,ID=FrameCaption
+
+  @4=s$toolbar:Bar,ID=ToolBar,Part=Background
+  @5=s$toolbar_button_hovered:Button,Hovered=True
+  @6=s$toolbar_button_pressed:Button,Pressed=True
+
+  @7=s$hot_tracking:CL,ID=HotTracking
+  @8=s$selection:CL,ID=Selection
+
+  @9=s$scroll_back:Main,ID=ScrollBar,Part=Back
+  @10=s$scroll_up:Main,ID=ScrollBar,Part=UpLineButton
+  @11=s$scroll_down:Main,ID=ScrollBar,Part=DownLineButton
+  @12=s$scroll_thumb:Main,ID=ScrollBar,Part=Thumb
+
+  @13=s$opengroup:CL,ID=Row,Type=Group,Open=True
+  @14=s$closedgroup:CL,ID=Row,Type=Group,Open=False

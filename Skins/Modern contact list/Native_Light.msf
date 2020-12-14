@@ -1,12 +1,12 @@
 [Skin_Description_Section]
-Author=Favor, Dracosha
+Author=Ksunechkin, Favor, Dracosha
 Contact=im.hotcoffee@gmail.com
 Description=Skin for Modern contact list layered
 Name=Native_Light
 Preview=Preview.png
 SubStyle=Normal
 URL=https://miranda-ng.org/hotcoffee
-Version=1.0
+Version=2.0
 
 [ModernSkin]
 SkinFolder=uSkins\Modern contact list\Native_Light
