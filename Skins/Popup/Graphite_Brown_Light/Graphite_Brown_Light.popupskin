@@ -368,34 +368,6 @@ object
 	x window.width-1-clock.width+1
 	y 8+3+7+(title.height-clock.height)/2+1
 end
-
-# Standard digital clocks border foreground for dark title text
-object
-	ifnotset 1
-	ifnotset 5
-	ifset 6
-	type bitmap
-	source tt_dtt.png
-	layer
-	x window.width-1-clock.width
-	y 8+3+7+(title.height-clock.height)/2
-	w clock.width-3-2
-	h clock.height+1
-end
-object
-	ifset 1
-	ifnotset 5
-	ifset 6
-	type bitmap
-	source tt_dtt.png
-	mono
-	layer
-	x window.width-1-clock.width
-	y 8+3+7+(title.height-clock.height)/2
-	w clock.width-3-2
-	h clock.height+1
-end
-
 # ifnotset Color text, ifset Light title text
 object
 	ifnotset 4
@@ -448,6 +420,33 @@ object
 	type clock
 	x window.width-1-clock.width+1
 	y 8+3+7+(title.height-clock.height)/2+1
+end
+
+# Standard digital clocks border foreground for dark title text
+object
+	ifnotset 1
+	ifnotset 5
+	ifset 6
+	type bitmap
+	source tt_dtt.png
+	layer
+	x window.width-1-clock.width
+	y 8+3+7+(title.height-clock.height)/2
+	w clock.width-3-2
+	h clock.height+1
+end
+object
+	ifset 1
+	ifnotset 5
+	ifset 6
+	type bitmap
+	source tt_dtt.png
+	mono
+	layer
+	x window.width-1-clock.width
+	y 8+3+7+(title.height-clock.height)/2
+	w clock.width-3-2
+	h clock.height+1
 end
 
 #===========Standard digital clocks================================================================
@@ -503,59 +502,6 @@ object
 	x 3+5+icon.width+1+1
 	y 8+3+7+1
 end
-
-# Title text border foreground for dark title text
-object
-	ifnotset 1
-	ifnotset 5
-	ifnotset 6
-	type bitmap
-	source tt_dtt.png
-	layer
-	x 3+5+icon.width+1
-	y 8+3+7
-	w title.width-clock.width+2
-	h title.height
-end
-object
-	ifset 1
-	ifnotset 5
-	ifnotset 6
-	type bitmap
-	source tt_dtt.png
-	mono
-	layer
-	x 3+5+icon.width+1
-	y 8+3+7
-	w title.width-clock.width+2
-	h title.height+2
-end
-object
-	ifnotset 1
-	ifnotset 5
-	ifset 6
-	type bitmap
-	source tt_dtt.png
-	layer
-	x 3+5+icon.width+1
-	y 8+3+7
-	w title.width-clock.width+15
-	h title.height
-end
-object
-	ifset 1
-	ifnotset 5
-	ifset 6
-	type bitmap
-	source tt_dtt.png
-	mono
-	layer
-	x 3+5+icon.width+1
-	y 8+3+7
-	w title.width-clock.width+15
-	h title.height+2
-end
-
 # ifnotset Color text, ifset Light title text
 object
 	ifnotset 4
@@ -602,6 +548,58 @@ object
 	type title
 	x 3+5+icon.width+1+1
 	y 8+3+7+1
+end
+
+# Title text border foreground for dark title text
+object
+	ifnotset 1
+	ifnotset 5
+	ifnotset 6
+	type bitmap
+	source tt_dtt.png
+	layer
+	x 3+5+icon.width+1
+	y 8+3+7
+	w title.width-clock.width+2
+	h title.height+2
+end
+object
+	ifset 1
+	ifnotset 5
+	ifnotset 6
+	type bitmap
+	source tt_dtt.png
+	mono
+	layer
+	x 3+5+icon.width+1
+	y 8+3+7
+	w title.width-clock.width+2
+	h title.height+2
+end
+object
+	ifnotset 1
+	ifnotset 5
+	ifset 6
+	type bitmap
+	source tt_dtt.png
+	layer
+	x 3+5+icon.width+1
+	y 8+3+7
+	w title.width-clock.width+15
+	h title.height+2
+end
+object
+	ifset 1
+	ifnotset 5
+	ifset 6
+	type bitmap
+	source tt_dtt.png
+	mono
+	layer
+	x 3+5+icon.width+1
+	y 8+3+7
+	w title.width-clock.width+15
+	h title.height+2
 end
 
 #===========Title text=============================================================================
