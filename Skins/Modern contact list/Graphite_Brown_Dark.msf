@@ -761,26 +761,26 @@ Color1=d16777215
 Color2=d5849135
 Color3=d5197647
 Color4=d4210752
-Color5=d3554870
-Color6=d3554870
-Color7=d4274739
-Color8=d4274739
-Color9=d3487807
+Color5=d3818042
+Color6=d3818042
+Color7=d4537911
+Color8=d4537911
+Color9=d3750979
 Color10=l
-Color11=d3487807
-Color12=d3487807
-Color13=d3487807
-Color14=d3487807
-Color15=d4274739
-Color16=d3487807
+Color11=d3750979
+Color12=d3750979
+Color13=d3750979
+Color14=d3750979
+Color15=d4537911
+Color16=d3750979
 Color17=d4737096
-Color18=d3487807
-Color19=d3487807
+Color18=d3750979
+Color19=d3750979
 Color22=d4737096
-Color23=d3487807
-Color24=d3487807
-Color25=d3487807
-Color26=d3554870
+Color23=d3750979
+Color24=d3750979
+Color25=d3750979
+Color26=d3818042
 Color27=l
 Color28=l
 Color29=d14656885
@@ -1318,7 +1318,7 @@ ipfieldsbgHigh=d7237230
 oldinbg=d5197647
 oldoutbg=d4210752
 outbg=d4210752
-statbg=d3487807
+statbg=d3750979
 tbBgHigh=l
 tbBgLow=l
 Font0=sVerdana
@@ -1659,7 +1659,7 @@ iPopUpColorFore=d15201223
 
 [ChangeKeyboardLayout]
 BackColor=d8421504
-TextColor=d15527148
+TextColor=d14803425
 
 [Chat]
 PopupColorBG=d7580618
@@ -1678,11 +1678,11 @@ PopupTextColor=d12442109
 
 [NewAwaySys]
 PopupBGColour=d8421504
-PopupTextColour=d15527148
+PopupTextColour=d14803425
 
 [NewStatusNotify]
-40071bg=d11184810
-40071tx=d15000804
+40071bg=d8421504
+40071tx=d14803425
 40072bg=d8304766
 40072tx=d13299914
 40073bg=d13738876
@@ -1708,7 +1708,7 @@ PopupTextColour=d15527148
 
 [PackUpdater]
 Popups0Bg=d8421504
-Popups0Tx=d15527148
+Popups0Tx=d14803425
 Popups1Bg=d9605082
 Popups1Tx=d13355769
 Popups2Bg=d13738876
@@ -1738,7 +1738,7 @@ ColorBackMsg=d7580618
 ColorBackOthers=d8421504
 ColorTextErr=d13355769
 ColorTextMsg=d12380158
-ColorTextOthers=d15527148
+ColorTextOthers=d14803425
 
 [Twitter]
 Popup/ColorBack=d13738876
@@ -1746,9 +1746,9 @@ Popup/ColorText=d16769220
 
 [TypingNotify]
 OFF_BG=d8421504
-OFF_TX=d15527148
+OFF_TX=d14803425
 ON_BG=d8421504
-ON_TX=d15527148
+ON_TX=d14803425
 
 [UserInfoEx]
 PopupAnnivClrBack=d10662771
@@ -1758,7 +1758,7 @@ PopupBirthClrBirthText=d16767449
 
 [Weather]
 BackgroundColour=d8421504
-TextColour=d15527148
+TextColour=d14803425
 
 [WebView]
 PopBGClr=d13738876
