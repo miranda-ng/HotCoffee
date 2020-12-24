@@ -5,8 +5,8 @@ Preview = Preview.png
 [Background]
 Image = BG.png
 TM = TM_STRECH_ALL 
-Left = 15
-Top = 15
+Left = 13
+Top = 13
 Right = 9
 Bottom = 9
 
