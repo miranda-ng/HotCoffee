@@ -11,19 +11,19 @@ Right = 9
 Bottom = 9
 
 [Fonts]
-Title-color = 170 72 0
+Title-color = 182 119 73
 Title-effect = FONT_BOLD
 
-Label-color = 74 89 104
+Label-color = 192 192 192
 Label-effect = FONT_BOLD
 
-Value-color = 74 89 104
+Value-color = 192 192 192
 Value-effect = 0
 
-TrayTitle-color = 0 77 170
+TrayTitle-color = 97 139 190
 TrayTitle-effect = FONT_BOLD
 
-Divider-color = 159 170 181
+Divider-color = 53 53 53
 
 [Appearance]
 Inner-Avatar-padding = 2

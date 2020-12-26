@@ -3,16 +3,16 @@ Author=Ksunechkin, Favor, Dracosha
 Version=2.0
 
 [Theme]
-File=Native_7_Light.tabsrmm
+File=Native_7_Dark.tabsrmm
 
 ;--------Global---------
 
 [Avatars]
 BorderType=0
-BorderColor=000000
+BorderColor=FFFFFF
 
 [Global]
-Name=Native_7_Light
+Name=Native_7_Dark
 CloseGlyph=Close.ico
 MaximizeGlyph=Maximize.ico
 MinimizeGlyph=Minimize.ico
@@ -22,12 +22,12 @@ SbarHeight=22
 Signature=101
 TabSkinning=1
 Version=1
-FontColor=4A5968
-MenuBarBG=FCFCFC
-TabTextActive=4A5968
-TabTextHottrack=004DAA
-TabTextNormal=7B8A99
-TabTextUnread=AA4800
+FontColor=C0C0C0
+MenuBarBG=0E0E0E
+TabTextActive=FFFFFF
+TabTextHottrack=618BBE
+TabTextNormal=C0C0C0
+TabTextUnread=B5784A
 DarkShadow=000000
 LightShadow=FFFFFF
 
@@ -43,12 +43,12 @@ Inner=4
 [%Statusbar]
 
 [%Container]
-Color1=FCFCFC
-Color2=FCFCFC
+Color1=0E0E0E
+Color2=0E0E0E
 
 [%Buttonnotpressed]
-Color1=FFFFFF
-Color2=E9E9E9
+Color1=181818
+Color2=040404
 Gradient=down
 
 [%Buttonpressed]
@@ -56,8 +56,8 @@ Gradient=down
 [%Buttonmouseover]
 
 [%InfoPanelBackground]
-Color1=FFFFFF
-Color2=E9E9E9
+Color1=181818
+Color2=040404
 Gradient=down
 
 [%Tabpage]

@@ -127,9 +127,11 @@ Skins =
 	{ Name = 'Custom_Miranda_Dark', Description = 'Custom Miranda Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2B002' },
 	{ Name = 'Custom_Miranda_Light', Description = 'Custom Miranda Light',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2B003' },
 
-	{ Name = 'WinStyle_Dark',   Description = 'WinStyle Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2C001' },
-	{ Name = 'WinStyle_Light',   Description = 'WinStyle Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2C002' },
-	{ Name = 'Native_7_Light',   Description = 'Native 7 Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2C003' },
+	{ Name = 'Native_7_Dark',   Description = 'Native 7 Dark',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2C001' },
+	{ Name = 'Native_7_Light',   Description = 'Native 7 Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2C002' },
+
+	{ Name = 'WinStyle_Dark',   Description = 'WinStyle Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2C003' },
+	{ Name = 'WinStyle_Light',   Description = 'WinStyle Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2C004' },
 
 	{ Name = 'Diplomat_Dark',   Description = 'Diplomat Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AA01' },
 	{ Name = 'Diplomat_Light',   Description = 'Diplomat Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AA02' },

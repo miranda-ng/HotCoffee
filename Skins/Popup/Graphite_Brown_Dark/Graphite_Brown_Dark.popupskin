@@ -555,50 +555,108 @@ object
 	ifnotset 1
 	ifset 5
 	ifnotset 6
+	ifnotset 10
 	type bitmap
 	source tt_dtt.png
 	layer
 	x 3+5+icon.width+1
 	y 8+3+7
-	w title.width-clock.width+2
+	w window.width-(3+5+icon.width+1)-8-clock.width-2
 	h title.height+2
 end
 object
 	ifset 1
 	ifset 5
 	ifnotset 6
+	ifnotset 10
 	type bitmap
 	source tt_dtt.png
 	mono
 	layer
 	x 3+5+icon.width+1
 	y 8+3+7
-	w title.width-clock.width+2
+	w window.width-(3+5+icon.width+1)-8-clock.width-2
 	h title.height+2
 end
 object
 	ifnotset 1
 	ifset 5
 	ifset 6
+	ifnotset 10
 	type bitmap
 	source tt_dtt.png
 	layer
 	x 3+5+icon.width+1
 	y 8+3+7
-	w title.width-clock.width+15
+	w window.width-(3+5+icon.width+1)-1-clock.width-1
 	h title.height+2
 end
 object
 	ifset 1
 	ifset 5
 	ifset 6
+	ifnotset 10
 	type bitmap
 	source tt_dtt.png
 	mono
 	layer
 	x 3+5+icon.width+1
 	y 8+3+7
-	w title.width-clock.width+15
+	w window.width-(3+5+icon.width+1)-1-clock.width-1
+	h title.height+2
+end
+object
+	ifnotset 1
+	ifset 5
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source tt_dtt.png
+	layer
+	x 3+5+icon.width+1
+	y 8+3+7
+	w window.width-(3+5+icon.width+1)-8-clock.width-27-2
+	h title.height+2
+end
+object
+	ifset 1
+	ifset 5
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source tt_dtt.png
+	mono
+	layer
+	x 3+5+icon.width+1
+	y 8+3+7
+	w window.width-(3+5+icon.width+1)-8-clock.width-27-2
+	h title.height+2
+end
+object
+	ifnotset 1
+	ifset 5
+	ifset 6
+	ifset 10
+	type bitmap
+	source tt_dtt.png
+	layer
+	x 3+5+icon.width+1
+	y 8+3+7
+	w window.width-(3+5+icon.width+1)-1-clock.width-1
+	h title.height+2
+end
+object
+	ifset 1
+	ifset 5
+	ifset 6
+	ifset 10
+	type bitmap
+	source tt_dtt.png
+	mono
+	layer
+	x 3+5+icon.width+1
+	y 8+3+7
+	w window.width-(3+5+icon.width+1)-1-clock.width-1
 	h title.height+2
 end
 
