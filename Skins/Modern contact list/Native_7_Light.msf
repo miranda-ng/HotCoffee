@@ -220,7 +220,7 @@ $$Separator=s
 AvatarsBorderColor=d0
 AvatarsSize=w26
 AvatarsWidth=w26
-Width=d208
+Width=d206
 
 [CLUI]
 LeftClientMargin=b0

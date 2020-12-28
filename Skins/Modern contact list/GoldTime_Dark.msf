@@ -220,7 +220,7 @@ $$Separator=sGlyph,Fragment,BG.png,10,24,7,12,StretchBoth,3,3,3,3,255
 AvatarsBorderColor=d16777215
 AvatarsSize=w26
 AvatarsWidth=w26
-Width=d210
+Width=d208
 
 [CLUI]
 LeftClientMargin=b5
