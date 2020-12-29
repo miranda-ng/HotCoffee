@@ -31,16 +31,16 @@ $$SubGroup/Open/Hot=s
 $$SubGroup/Open/Selected=s
 $$SubGroup/Open=s
 ;
-$$Group/Closed/Hot=sGlyph,Fragment,BG.png,0,45,7,23,StretchBoth,3,2,3,2,255
-$$Group/Closed/Selected=sGlyph,Fragment,BG.png,0,45,7,23,StretchBoth,3,2,3,2,255
-$$Group/Closed=sGlyph,Fragment,BG.png,8,45,7,21,StretchBoth,3,2,3,2,255
+$$Group/Closed/Hot=sGlyph,Fragment,BG.png,14,45,1,23,StretchBoth,0,2,0,2,255
+$$Group/Closed/Selected=sGlyph,Fragment,BG.png,14,45,1,23,StretchBoth,0,2,0,2,255
+$$Group/Closed=sGlyph,Fragment,BG.png,10,45,1,23,StretchBoth,0,2,0,2,255
 ;
-$$Group/Open/Hot=sGlyph,Fragment,BG.png,0,45,7,23,StretchBoth,3,2,3,2,255
-$$Group/Open/Selected=sGlyph,Fragment,BG.png,0,45,7,23,StretchBoth,3,2,3,2,255
-$$Group/Open=sGlyph,Fragment,BG.png,8,45,7,21,StretchBoth,3,2,3,2,255
+$$Group/Open/Hot=sGlyph,Fragment,BG.png,14,45,1,23,StretchBoth,0,2,0,2,255
+$$Group/Open/Selected=sGlyph,Fragment,BG.png,14,45,1,23,StretchBoth,0,2,0,2,255
+$$Group/Open=sGlyph,Fragment,BG.png,10,45,1,23,StretchBoth,0,2,0,2,255
 ;
-$$Contact/Hot=sGlyph,Fragment,BG.png,24,45,5,21,StretchBoth,2,1,2,1,255
-$$Contact/Selected=sGlyph,Fragment,BG.png,24,45,5,21,StretchBoth,2,1,2,1,255
+$$Contact/Hot=sGlyph,Fragment,BG.png,16,45,1,21,StretchBoth,0,1,0,1,255
+$$Contact/Selected=sGlyph,Fragment,BG.png,16,45,1,21,StretchBoth,0,1,0,1,255
 $$Contact/Normal=s
 $$Contact/Last=s
 $$Contact/First=s
@@ -52,9 +52,9 @@ $$Scroll/BtnUp=sGlyph,Fragment,BG.png,110,45,17,17,StretchBoth,0,0,15,12,255
 $$Scroll/BtnDn=sGlyph,Fragment,BG.png,110,67,17,17,StretchBoth,0,12,15,0,255
 $$Scroll/Thumb=sGlyph,Fragment,BG.png,110,63,17,3,StretchBoth,0,1,14,1,255
 ;
-$$FrameTitleBar=sGlyph,Fragment,BG.png,25,45,3,21,StretchBoth,1,1,1,1,255
+$$FrameTitleBar=sGlyph,Fragment,BG.png,10,45,1,23,StretchBoth,0,2,0,2,255
 ;
-$$StatusBar=sGlyph,Fragment,BG.png,2,69,1,20,StretchBoth,0,0,0,0,255
+$$StatusBar=sGlyph,Fragment,BG.png,4,45,3,30,StretchBoth,1,0,1,1,255
 ;
 $$EventArea=s
 ;
@@ -96,10 +96,10 @@ $$ViewMode/ResetMode/Pressed=s
 $$ViewMode/ResetMode/Hot=s
 $$ViewMode/ResetMode=s
 ;
-$$ToolBar=sGlyph,Fragment,BG.png,0,69,1,30,StretchBoth,0,0,0,0,255
+$$ToolBar=sGlyph,Fragment,BG.png,0,45,3,30,StretchBoth,1,1,1,0,255
 ;
-$$BarButton/Pressed=sGlyph,Fragment,BG.png,17,45,5,21,StretchBoth,2,2,2,2,255
-$$BarButton/Hot=sGlyph,Fragment,BG.png,1,45,5,23,StretchBoth,2,2,2,2,255
+$$BarButton/Pressed=sGlyph,Fragment,BG.png,18,45,5,21,StretchBoth,2,2,2,2,255
+$$BarButton/Hot=sGlyph,Fragment,BG.png,8,45,5,23,StretchBoth,2,2,2,2,255
 $$BarButton=s
 ;
 $$Logo=s
@@ -238,8 +238,8 @@ GapBetweenFrames=d0
 GapBetweenTitleBar=d0
 
 [CLC]
-LeftMargin=b2
-RightMargin=b2
+LeftMargin=b1
+RightMargin=b1
 GammaCorrect=b0
 
 [ModernData]
