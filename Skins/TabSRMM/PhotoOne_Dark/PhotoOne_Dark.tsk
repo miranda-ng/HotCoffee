@@ -13,21 +13,21 @@ BorderColor=FFFFFF
 
 [Global]
 Name=PhotoOne_Dark
-CloseGlyph=close.ico
-MaximizeGlyph=maximize.ico
-MinimizeGlyph=minimize.ico
+CloseGlyph=Close.ico
+MaximizeGlyph=Maximize.ico
+MinimizeGlyph=Minimize.ico
 FrameLessMode=1
 NoScrollbars=0
 SbarHeight=22
 Signature=101
 TabSkinning=1
 Version=1
-FontColor=C8C8C8
+FontColor=D2CECC
 MenuBarBG=524F50
 TabTextActive=FFFFFF
-TabTextHottrack=FFFFFF
-TabTextNormal=C8C8C8
-TabTextUnread=FFFFBF
+TabTextHottrack=B1CCED
+TabTextNormal=D2CECC
+TabTextUnread=E9BFA0
 DarkShadow=000000
 LightShadow=FFFFFF
 
@@ -49,11 +49,11 @@ RadiusTR=9
 RadiusBL=9
 RadiusBR=9
 CaptionOffset=7
-CaptionPadding=7
+CaptionPadding=4
 TitleButtonWidth=15
 TitleButtonHeight=15
 TitleButtonTopOffset=5
-TitleBarLeftOffset=-6
+TitleBarLeftOffset=-5
 TitleBarRightOffset=-5
 
 ;--------Standard---------
