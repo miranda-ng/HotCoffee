@@ -5,20 +5,20 @@
 }
 
 input {
-	background: #4E4E4E;
-	border-left: 1px solid #817E80;
-	border-top: 1px solid #817E80;
+	background: #524F50;
+	border-left: 1px solid #807A7B;
+	border-top: 1px solid #807A7B;
 	border-right: 1px solid #333232;
 	border-bottom: 1px solid #333232;
 	color: #D2CECC;
 }
 
 html {
-	scrollbar-face-color: #4E4E4E;
-	scrollbar-highlight-color: #4E4E4E;
-	scrollbar-shadow-color: #4E4E4E;
+	scrollbar-face-color: #524F50;
+	scrollbar-highlight-color: #524F50;
+	scrollbar-shadow-color: #524F50;
 	scrollbar-arrow-color: #D2CECC;
-	scrollbar-3dlight-color: #817E80;
+	scrollbar-3dlight-color: #807A7B;
 	scrollbar-darkshadow-color: #333232;
 	scrollbar-track-color: #646263;
 	background: url(PhotoOne_Dark/picture.png) fixed no-repeat bottom right;
@@ -102,22 +102,22 @@ div.avatar {
 }
 
 .code {
-	border: 1px dashed #817E80;
+	border: 1px dashed #807A7B;
 	margin: -1px;
 }
 
 .MessageIn, .hMessageIn, .frame_MessageInGroupStart, .frame_hMessageInGroupStart {
-	border-top: 1px solid #817E80;
+	border-top: 1px solid #807A7B;
 	border-bottom: 1px solid #333232;
 }
 
 .MessageOut, .hMessageOut, .frame_MessageOutGroupStart, .frame_hMessageOutGroupStart {
-	border-top: 1px solid #817E80;
+	border-top: 1px solid #807A7B;
 	border-bottom: 1px solid #333232;
 }
 
 .MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
-	border-top: 1px dotted #817E80;
+	border-top: 1px dotted #807A7B;
 }
 
 .hMessageIn, .hMessageOut, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart, .hStatus, .hFileIn, .hFileOut, .hURL {

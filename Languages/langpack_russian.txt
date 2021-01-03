@@ -357,6 +357,8 @@ Last-Modified-Using: Miranda NG 0.95.13
 Закрыть окно по окончании передачи
 [Clear completed transfers on window closing]
 Очищать завершённые передачи при закрытии окна
+[Sort file transfers in the reverse order]
+Сортировать передачи файлов в обратном порядке
 [Virus scanner]
 Антивирус
 [Scan files:]
@@ -1174,6 +1176,8 @@ UIN, E-mail и т.д.
 Подтверждение удаления
 [Remove temporary contacts on exit]
 Удалять временные контакты при выходе
+[Search works as filter]
+Поиск по списку контактов с фильтрацией результатов
 ['Hide offline' means to hide:]
 'Скрыть отключённых' - скрыть:
 [Default settings for known event types]
@@ -2361,6 +2365,8 @@ xСтатус
 ;file \src\mir_app\src\menu_options.cpp
 [New submenu]
 Новое вложенное меню
+[Do you really want to delete this menu item?]
+Удалить этот пункт меню?
 [Menus]
 Меню
 ;file \src\mir_app\src\menu_tray.cpp
@@ -6666,8 +6672,6 @@ Ctrl+Левый клик вкл. фильтр по протоколу, клик 
 Разрешить внутренние запросы статусных сообщений
 [Remove status message if contact became offline]
 Удалить статусное сообщение, если контакт не в сети
-[Use improved search method in contact list]
-Поиск по списку контактов с фильтрацией результатов
 [Metacontacts stuff]
 Метаконтакты
 [Use 'Meta' protocol icons for metacontacts]
@@ -9813,7 +9817,7 @@ Miranda нашла повреждения в вашей базе. Miranda буд
 ;============================================================
 ;  File: Discord.dll
 ;  Plugin: Discord protocol
-;  Version: 0.6.2.5
+;  Version: 0.6.2.6
 ;  Authors: George Hazan
 ;============================================================
 [Discord support for Miranda NG.]
@@ -10103,7 +10107,7 @@ ID записи
 ;============================================================
 ;  File: Facebook.dll
 ;  Plugin: Facebook
-;  Version: 0.1.0.8
+;  Version: 0.1.0.10
 ;  Authors: Miranda NG Team
 ;============================================================
 [Facebook protocol support for Miranda NG.]
@@ -13650,6 +13654,8 @@ UIN/почта:
 [UIN/e-mail/phone]
 UIN/почта/телефон
 ;file \protocols\ICQ-WIM\src\server.cpp
+[SmileyAdd plugin required to support stickers]
+Для поддержки стикеров требуется плагин SmileyAdd
 [You have not entered an ICQ number or password.\nConfigure this in Options -> Network -> ICQ and try again.]
 Вы не ввели номер ICQ либо пароль.\nУкажите его в разделе "Настройки -> Сеть -> ICQ" и попробуйте снова.
 [Connection failed.\nYour ICQ number or password was rejected (%d).]
@@ -13666,8 +13672,6 @@ UIN/почта/телефон
 Неизвестный стикер
 [User sent a sticker:]
 Пользователь отправил стикер:
-[SmileyAdd plugin required to support stickers]
-Для поддержки стикеров требуется плагин SmileyAdd
 [Buddy addition failed]
 Не удалось добавить контакт
 
@@ -26407,7 +26411,7 @@ Miranda NG - Контекстное меню оболочки ОС (shellext.dll
 ;============================================================
 ;  File: SkypeWeb.dll
 ;  Plugin: Skype protocol (Web)
-;  Version: 0.95.12.3
+;  Version: 0.95.13.1
 ;  Authors: Miranda NG team
 ;============================================================
 [Skype protocol support for Miranda NG. Based on new Skype for Web.]
@@ -28816,10 +28820,10 @@ BBCode ([b][i][u])
 Расширенный режим 1
 [Extended mode 2]
 Расширенный режим 2
-[Selection background]
-Фон выбранного
-[Selected text]
-Выделенный текст
+[Selected nicklist background]
+Фон выделенного текста в списке пользователей
+[Selected nicklist text]
+Выделенный текст в списке пользователей
 [Incremental search highlight]
 Подсветка поиска
 [Fields background]
@@ -29024,8 +29028,6 @@ ID текущего контакта (если определён). Наприм
 включён
 [Sending typing notifications is %s.]
 Отправка уведомления о наборе: %s.
-[Session list.\nClick left for a list of open sessions.\nClick right to access favorites and quickly configure message window behavior]
-Список вкладок.\nНажмите левой кнопкой мыши, чтобы открыть список вкладок.\nНажмите правой кнопкой мыши, чтобы получить доступ к избранному и быстро настроить поведение окна сообщений
 [There are %d pending send jobs. Message length: %d bytes, message length limit: %d bytes\n\n%d messages are queued for later delivery]
 Отправляется %d сообщений. Длина сообщения: %d байт, ограничение длины: %d байт\n\n%d cообщений в очереди для последующей доставки
 ;file \plugins\TabSRMM\src\eventpopups.cpp

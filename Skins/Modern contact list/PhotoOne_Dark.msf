@@ -1013,7 +1013,7 @@ StatusMessageFontSty=b2
 
 [Popup]
 ColourAvatarBorder=d16777215
-ColourBg=d8421504
+ColourBg=d8289409
 fntAction=sVerdana
 fntActionCol=d16769211
 fntActionFlags=w288
@@ -1642,7 +1642,7 @@ SkinName=uPhotoOne_Dark
 [Popup]
 DropShadow=b0
 EnableShadowRegion=b0
-skin.PhotoOne_Dark=d975
+skin.PhotoOne_Dark=d974
 SkinPack=sPhotoOne_Dark
 spacing=w0
 UseWinColors=b0
@@ -1658,7 +1658,7 @@ iPopUpColorBack=d10662771
 iPopUpColorFore=d15201223
 
 [ChangeKeyboardLayout]
-BackColor=d8421504
+BackColor=d8289409
 TextColor=d15527148
 
 [Chat]
@@ -1666,7 +1666,7 @@ PopupColorBG=d7580618
 PopupColorText=d12380158
 
 [DBEditorpp]
-PopupColour=d8421504
+PopupColour=d8289409
 
 [GmailMNotifier]
 popupBgColor=d13738876
@@ -1677,7 +1677,7 @@ PopupBackColor=d7839184
 PopupTextColor=d12442109
 
 [NewAwaySys]
-PopupBGColour=d8421504
+PopupBGColour=d8289409
 PopupTextColour=d15527148
 
 [NewStatusNotify]
@@ -1707,7 +1707,7 @@ PopupTextColour=d15527148
 40082tx=d12380158
 
 [PackUpdater]
-Popups0Bg=d8421504
+Popups0Bg=d8289409
 Popups0Tx=d15527148
 Popups1Bg=d9605082
 Popups1Tx=d13355769
@@ -1735,7 +1735,7 @@ colorSect=d16769220
 [tabSRMM_NEN]
 ColorBackErr=d9605082
 ColorBackMsg=d7580618
-ColorBackOthers=d8421504
+ColorBackOthers=d8289409
 ColorTextErr=d13355769
 ColorTextMsg=d12380158
 ColorTextOthers=d15527148
@@ -1745,9 +1745,9 @@ Popup/ColorBack=d13738876
 Popup/ColorText=d16769220
 
 [TypingNotify]
-OFF_BG=d8421504
+OFF_BG=d8289409
 OFF_TX=d15527148
-ON_BG=d8421504
+ON_BG=d8289409
 ON_TX=d15527148
 
 [UserInfoEx]
@@ -1757,7 +1757,7 @@ PopupBirthClrBirthBack=d13212314
 PopupBirthClrBirthText=d16767449
 
 [Weather]
-BackgroundColour=d8421504
+BackgroundColour=d8289409
 TextColour=d15527148
 
 [WebView]
