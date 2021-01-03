@@ -26,11 +26,28 @@ popup-version 02010007
 object
 	ifnotset 1
 	type bitmap
+	source pixel:7C7C7C
+	x 3
+	y 8+3
+	w window.width-6
+	h window.height-(8+3)-3
+end
+object
+	ifset 1
+	type bitmap
+	source pixel:7C7C7C
+	mono
+	x 3
+	y 8+3
+	w window.width-6
+	h window.height-(8+3)-3
+end
+object
+	ifnotset 1
+	type bitmap
 	source bg_tl.png
 	x 0
 	y 8
-	w 6
-	h 6
 end
 object
 	ifset 1
@@ -39,8 +56,6 @@ object
 	mono
 	x 0
 	y 8
-	w 6
-	h 6
 end
 object
 	ifnotset 1
@@ -59,7 +74,6 @@ object
 	x 6
 	y 8
 	w window.width-6-6
-	h 3
 end
 object
 	ifnotset 1
@@ -67,8 +81,6 @@ object
 	source bg_tr.png
 	x window.width-6
 	y 8
-	w 6
-	h 6
 end
 object
 	ifset 1
@@ -77,8 +89,6 @@ object
 	mono
 	x window.width-6
 	y 8
-	w 6
-	h 6
 end
 object
 	ifnotset 1
@@ -86,7 +96,6 @@ object
 	source bg_l.png
 	x 0
 	y 6+6
-	w 3
 	h window.height-6-6
 end
 object
@@ -96,7 +105,6 @@ object
 	mono
 	x 0
 	y 6+6
-	w 3
 	h window.height-6-6
 end
 object
@@ -105,7 +113,6 @@ object
 	source bg_r.png
 	x window.width-3
 	y 6+6
-	w 3
 	h window.height-6-6
 end
 object
@@ -115,7 +122,6 @@ object
 	mono
 	x window.width-3
 	y 6+6
-	w 3
 	h window.height-6-6
 end
 object
@@ -124,8 +130,6 @@ object
 	source bg_bl.png
 	x 0
 	y window.height-6
-	w 6
-	h 6
 end
 object
 	ifset 1
@@ -134,8 +138,6 @@ object
 	mono
 	x 0
 	y window.height-6
-	w 6
-	h 6
 end
 object
 	ifnotset 1
@@ -144,7 +146,6 @@ object
 	x 6
 	y window.height-3
 	w window.width-6-6
-	h 3
 end
 object
 	ifset 1
@@ -154,7 +155,6 @@ object
 	x 6
 	y window.height-3
 	w window.width-6-6
-	h 3
 end
 object
 	ifnotset 1
@@ -162,8 +162,6 @@ object
 	source bg_br.png
 	x window.width-6
 	y window.height-6
-	w 6
-	h 6
 end
 object
 	ifset 1
@@ -172,48 +170,239 @@ object
 	mono
 	x window.width-6
 	y window.height-6
-	w 6
-	h 6
 end
 object
+	type bitmap
 	ifnotset 1
-	type bitmap
-	source bg.png
+	source pixel:A1A1A1
 	x 3
-	y 8+3
-	w window.width-6
-	h window.height-(8+3)-3
+	y 14
+	h -7
 end
 object
-	ifset 1
 	type bitmap
-	source bg.png
+	ifset 1
+	source pixel:A1A1A1
 	mono
 	x 3
-	y 8+3
-	w window.width-6
-	h window.height-(8+3)-3
+	y 14
+	h -7
+end
+object
+	type bitmap
+	ifnotset 1
+	source pixel:A1A1A1
+	x 6
+	y 11
+	w -7
+end
+object
+	type bitmap
+	ifset 1
+	source pixel:A1A1A1
+	mono
+	x 6
+	y 11
+	w -7
+end
+object
+	type bitmap
+	ifnotset 1
+	source pixel:A1A1A1
+	x -4
+	y 14
+	h -7
+end
+object
+	type bitmap
+	ifset 1
+	source pixel:A1A1A1
+	mono
+	x -4
+	y 14
+	h -7
+end
+object
+	type bitmap
+	ifnotset 1
+	source pixel:A1A1A1
+	x 6
+	y -4
+	w -7
+end
+object
+	type bitmap
+	ifset 1
+	source pixel:A1A1A1
+	mono
+	x 6
+	y -4
+	w -7
 end
 
 #===========Background Text area===================================================================
 object
 	ifnotset 2
 	type bitmap
-	source pixel:484848
-	x 3+5
-	y 8+3+8+title.height+8
-	w window.width-6-5-5
-	h window.height-(8+title.height+8)-8-3-8
+	source pixel:524F50
+	x 3+5+1
+	y 8+3+8+title.height+8+1
+	w window.width-6-5-5-2
+	h window.height-(8+title.height+8)-8-3-8-2
 end
 object
 	ifset 2
 	type bitmap
-	source pixel:484848
+	source pixel:524F50
 	mono
-	x 3+5
-	y 8+3+8+title.height+8
-	w window.width-6-5-5
-	h window.height-(8+title.height+8)-8-3-8
+	x 3+5+1
+	y 8+3+8+title.height+8+1
+	w window.width-6-5-5-2
+	h window.height-(8+title.height+8)-8-3-8-2
+end
+object
+	ifnotset 2
+	type bitmap
+	source text_bg_l.png
+	layer
+	x 7
+	y 8+3+8+title.height+9
+	h -11
+end
+object
+	ifset 2
+	type bitmap
+	source text_bg_l.png
+	mono
+	layer
+	x 7
+	y 8+3+8+title.height+9
+	h -11
+end
+object
+	ifnotset 2
+	type bitmap
+	source text_bg_tl.png
+	layer
+	x 7
+	y 8+3+8+title.height+7
+end
+object
+	ifset 2
+	type bitmap
+	source text_bg_tl.png
+	mono
+	layer
+	x 7
+	y 8+3+8+title.height+7
+end
+object
+	ifnotset 2
+	type bitmap
+	source text_bg_t.png
+	layer
+	x 9
+	y 8+3+8+title.height+7
+	w -11
+end
+object
+	ifset 2
+	type bitmap
+	source text_bg_t.png
+	mono
+	layer
+	x 9
+	y 8+3+8+title.height+7
+	w -11
+end
+object
+	ifnotset 2
+	type bitmap
+	source text_bg_tr.png
+	layer
+	x -10
+	y 8+3+8+title.height+7
+end
+object
+	ifset 2
+	type bitmap
+	source text_bg_tr.png
+	mono
+	layer
+	x -10
+	y 8+3+8+title.height+7
+end
+object
+	ifnotset 2
+	type bitmap
+	source text_bg_r.png
+	layer
+	x -9
+	y 8+3+8+title.height+9
+	h -11
+end
+object
+	ifset 2
+	type bitmap
+	source text_bg_r.png
+	mono
+	layer
+	x -9
+	y 8+3+8+title.height+9
+	h -11
+end
+object
+	ifnotset 2
+	type bitmap
+	source text_bg_bl.png
+	layer
+	x 7
+	y -10
+end
+object
+	ifset 2
+	type bitmap
+	source text_bg_bl.png
+	mono
+	layer
+	x 7
+	y -10
+end
+object
+	ifnotset 2
+	type bitmap
+	source text_bg_br.png
+	layer
+	x -10
+	y -10
+end
+object
+	ifset 2
+	type bitmap
+	source text_bg_br.png
+	mono
+	layer
+	x -10
+	y -10
+end
+object
+	ifnotset 2
+	type bitmap
+	source text_bg_b.png
+	layer
+	x 9
+	y -9
+	w -11
+end
+object
+	ifset 2
+	type bitmap
+	source text_bg_b.png
+	mono
+	layer
+	x 9
+	y -9
+	w -11
 end
 
 #===========Icon===================================================================================
@@ -374,7 +563,7 @@ object
 	ifset 5
 	ifset 6
 	type clock
-	color 225 225 225
+	color 236 236 236
 	x window.width-1-clock.width+1
 	y 8+3+7+(title.height-clock.height)/2
 end
@@ -383,7 +572,7 @@ object
 	ifset 5
 	ifset 6
 	type clock
-	color 225 225 225
+	color 236 236 236
 	x window.width-1-clock.width
 	y 8+3+7+(title.height-clock.height)/2+1
 end
@@ -392,7 +581,7 @@ object
 	ifset 5
 	ifset 6
 	type clock
-	color 225 225 225
+	color 236 236 236
 	x window.width-1-clock.width+1
 	y 8+3+7+(title.height-clock.height)/2+1
 end
@@ -456,7 +645,7 @@ object
 	ifnotset 5
 	ifset 6
 	type clock
-	color 225 225 225
+	color 236 236 236
 	x window.width-1-clock.width
 	y 8+3+7+(title.height-clock.height)/2
 end
@@ -507,7 +696,7 @@ object
 	ifnotset 4
 	ifset 5
 	type title
-	color 225 225 225
+	color 236 236 236
 	x 3+5+icon.width+1+1
 	y 8+3+7
 end
@@ -515,7 +704,7 @@ object
 	ifnotset 4
 	ifset 5
 	type title
-	color 225 225 225
+	color 236 236 236
 	x 3+5+icon.width+1
 	y 8+3+7+1
 end
@@ -523,7 +712,7 @@ object
 	ifnotset 4
 	ifset 5
 	type title
-	color 225 225 225
+	color 236 236 236
 	x 3+5+icon.width+1+1
 	y 8+3+7+1
 end
@@ -666,7 +855,7 @@ object
 	ifnotset 4
 	ifnotset 5
 	type title
-	color 225 225 225
+	color 236 236 236
 	x 3+5+icon.width+1
 	y 8+3+7
 end
@@ -766,7 +955,7 @@ object
 	ifnotset 4
 	ifnotset 9
 	type text
-	color 225 225 225
+	color 236 236 236
 	x 3+5+avatar.width
 	y 8+3+8+title.height+5+4
 	w window.width-(8+avatar.width+5)-8-5
@@ -785,7 +974,7 @@ object
 	ifnotset 4
 	ifset 9
 	type text
-	color 225 225 225
+	color 236 236 236
 	x 3+5
 	y 8+3+8+title.height+5+4
 	w window.width-(8+avatar.width+5)-8-5

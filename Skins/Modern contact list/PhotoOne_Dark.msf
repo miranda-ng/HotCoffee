@@ -1642,7 +1642,7 @@ SkinName=uPhotoOne_Dark
 [Popup]
 DropShadow=b0
 EnableShadowRegion=b0
-skin.PhotoOne_Dark=d973
+skin.PhotoOne_Dark=d975
 SkinPack=sPhotoOne_Dark
 spacing=w0
 UseWinColors=b0
