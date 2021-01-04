@@ -1,50 +1,51 @@
 /*--- Global ---*/
 
 .Link-Text, .tzerlink {
-	color: #004080;
+	color: #4470A6;
 }
 
 input {
 	background: #EDEAEB;
 	border-left: 1px solid #FFFFFF;
 	border-top: 1px solid #FFFFFF;
-	border-right: 1px solid #787979;
-	border-bottom: 1px solid #787979;
-	color: #454545;
+	border-right: 1px solid #B4B4B4;
+	border-bottom: 1px solid #B4B4B4;
+	color: #404040;
 }
 
 html {
 	scrollbar-face-color: #EDEAEB;
-	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-highlight-color: #EDEAEB;
 	scrollbar-shadow-color: #EDEAEB;
-	scrollbar-arrow-color: #454545;
-	scrollbar-base-color: #EDEAEB;
-	scrollbar-darkshadow-color: #787979;
+	scrollbar-arrow-color: #404040;
+	scrollbar-3dlight-color: #FFFFFF;
+	scrollbar-darkshadow-color: #B4B4B4;
+	scrollbar-track-color: #F4F2F3;
 	background: url(Light.png) fixed no-repeat bottom right;
 	background-color: #F4F2F3;
 	overflow: auto;
 	padding: 0px 0px 0px 0px;
 	margin: 0;
 	font-size: 13px;
-	color: #4F4F4F;
+	color: #404040;
 	zoom: 0 !important;
 }
 
 a, a:active {
-	color: #004080;
+	color: #4470A6;
 	text-decoration: none;
 	font-weight: normal;
 	cursor:pointer;
 }
 
 a:visited {
-	color: #C44305;
+	color: #A66D44;
 	text-decoration: none;
 	font-weight: normal;
 }
 
 a:hover {
-	color: #004080;
+	color: #4470A6;
 	text-decoration: underline;
 	font-weight: normal;
 }
@@ -77,7 +78,7 @@ div {
 }
 
 .time {
-	color: Gray;
+	color: #808080;
 	font-weight: normal;
 	float: right;
 	font-size: 11px;
@@ -105,8 +106,17 @@ div.avatar {
 	margin: -1px;
 }
 
-.MessageIn, .MessageOut, .hMessageIn, .hMessageOut, .frame_MessageInGroupStart, .frame_MessageOutGroupStart, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart {
+.MessageIn, .hMessageIn, .frame_MessageInGroupStart, .frame_hMessageInGroupStart {
+	border-left: 1px solid #FFFFFF;
 	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #B4B4B4;
+	border-bottom: 1px solid #B4B4B4;
+}
+
+.MessageOut, .hMessageOut, .frame_MessageOutGroupStart, .frame_hMessageOutGroupStart {
+	border-left: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #B4B4B4;
 	border-bottom: 1px solid #B4B4B4;
 }
 
@@ -121,7 +131,7 @@ div.avatar {
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
-	color: #C44305;
+	color: #A66D44;
 	background-image: url(PhotoOne_Light/in.png);
 }
 
@@ -132,7 +142,7 @@ div.avatar {
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
-	color: #054381;
+	color: #4470A6;
 	background-image: url(PhotoOne_Light/out.png);
 }
 
@@ -143,62 +153,68 @@ div.avatar {
 /* -------------------- status support -------------------- */
 
 .status .head {
-	color: #C44305;
+	color: #A66D44;
 	background-image: url(PhotoOne_Light/status.png);
 }
 
 .contentStatus, .contenthStatus {
-	color: #C44305;
+	color: #A66D44;
 	background-image: url(PhotoOne_Light/status.png);
 }
 
 .contentStatus .time, .contenthStatus .time {
-	color: #C38264;
+	color: #C48C64;
 }
 
 .Status, .hStatus {
-	border-top: 1px solid #A47D73;
-	border-bottom: 1px solid #3C2D28;
+	border-left: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #B4B4B4;
+	border-bottom: 1px solid #B4B4B4;
 }
 
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
-	color: green;
+	color: #488248;
 	background-image: url(PhotoOne_Light/file.png);
 }
 
 .contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
-	color: green;
+	color: #488248;
 	background-image: url(PhotoOne_Light/file.png);
 }
 
 .contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
-	color: #61A061;
+	color: #6DA76D;
 }
 
 .FileIn, .hFileIn, .FileOut, .hFileOut {
-	border-top: 1px solid #73A473;
-	border-bottom: 1px solid #273D27;
+	border-left: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #B4B4B4;
+	border-bottom: 1px solid #B4B4B4;
 }
 
 /* -------------------- URL support -------------------- */
 
 .inurl .head, .outurl .head {
-	color: #054381;
+	color: #4470A6;
 	background-image: url(PhotoOne_Light/url.png);
 }
 
 .contentURL, .contenthURL {
-	color: #054381;
+	color: #4470A6;
 	background-image: url(PhotoOne_Light/url.png);
 }
 
 .contentURL .time, .contenthURL .time {
-	color: #6482A1;
+	color: #6D93BC;
 }
 
 .URL, .hURL {
-	border-top: 1px solid #657AB1;
-	border-bottom: 1px solid #222B42;
+	border-left: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #B4B4B4;
+	border-bottom: 1px solid #B4B4B4;
 }

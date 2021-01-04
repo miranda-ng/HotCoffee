@@ -95,7 +95,7 @@ object
 	type bitmap
 	source bg_l.png
 	x 0
-	y 6+6
+	y 6+6+2
 	h window.height-6-6
 end
 object
@@ -104,7 +104,7 @@ object
 	source bg_l.png
 	mono
 	x 0
-	y 6+6
+	y 6+6+2
 	h window.height-6-6
 end
 object
@@ -112,7 +112,7 @@ object
 	type bitmap
 	source bg_r.png
 	x window.width-3
-	y 6+6
+	y 6+6+2
 	h window.height-6-6
 end
 object
@@ -121,7 +121,7 @@ object
 	source bg_r.png
 	mono
 	x window.width-3
-	y 6+6
+	y 6+6+2
 	h window.height-6-6
 end
 object

@@ -39,8 +39,8 @@ $$Group/Open/Hot=sGlyph,Fragment,BG.png,14,45,1,23,StretchBoth,0,2,0,2,255
 $$Group/Open/Selected=sGlyph,Fragment,BG.png,14,45,1,23,StretchBoth,0,2,0,2,255
 $$Group/Open=sGlyph,Fragment,BG.png,10,45,1,23,StretchBoth,0,2,0,2,255
 ;
-$$Contact/Hot=sGlyph,Fragment,BG.png,16,45,1,21,StretchBoth,0,1,0,1,255
-$$Contact/Selected=sGlyph,Fragment,BG.png,16,45,1,21,StretchBoth,0,1,0,1,255
+$$Contact/Hot=sGlyph,Fragment,BG.png,16,45,1,21,StretchBoth,0,1,0,2,255
+$$Contact/Selected=sGlyph,Fragment,BG.png,16,45,1,21,StretchBoth,0,1,0,2,255
 $$Contact/Normal=s
 $$Contact/Last=s
 $$Contact/First=s
