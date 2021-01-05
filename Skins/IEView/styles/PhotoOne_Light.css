@@ -10,14 +10,14 @@ input {
 	border-top: 1px solid #FFFFFF;
 	border-right: 1px solid #B4B4B4;
 	border-bottom: 1px solid #B4B4B4;
-	color: #404040;
+	color: #595959;
 }
 
 html {
 	scrollbar-face-color: #EDEAEB;
 	scrollbar-highlight-color: #EDEAEB;
 	scrollbar-shadow-color: #EDEAEB;
-	scrollbar-arrow-color: #404040;
+	scrollbar-arrow-color: #595959;
 	scrollbar-3dlight-color: #FFFFFF;
 	scrollbar-darkshadow-color: #B4B4B4;
 	scrollbar-track-color: #F4F2F3;
@@ -27,7 +27,7 @@ html {
 	padding: 0px 0px 0px 0px;
 	margin: 0;
 	font-size: 13px;
-	color: #404040;
+	color: #595959;
 	zoom: 0 !important;
 }
 
