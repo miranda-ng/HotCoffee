@@ -1,6 +1,6 @@
 [VersionSkin]
 Author=Favor, Dracosha
-Version=1.0
+Version=2.0
 
 [Theme]
 File=Surface_Black.tabsrmm
@@ -9,96 +9,76 @@ File=Surface_Black.tabsrmm
 
 [Avatars]
 BorderType=0
-BorderColor=000000
+BorderColor=FFFFFF
 
 [Global]
-Name=Surface Black
-CloseGlyph=close.ico
-MinimizeGlyph=minimize.ico
-MaximizeGlyph=maximize.ico
-SbarHeight=21
-FontColor=C8C8C8
-Version=1
-Signature=101
-NoScrollbars=0
+Name=Surface_Black
+CloseGlyph=Close.ico
+MaximizeGlyph=Maximize.ico
+MinimizeGlyph=Minimize.ico
 FrameLessMode=1
-CompositedWindow=0
+NoScrollbars=0
+SbarHeight=21
+Signature=101
 TabSkinning=1
-LightShadow=FFFFFF
-DarkShadow=000000
+Version=1
+FontColor=C8C8C8
 MenuBarBG=000000
-TabTextNormal=C8C8C8
 TabTextActive=FFFFFF
-TabTextUnread=FFFFBF
 TabTextHottrack=FFFFFF
+TabTextNormal=C8C8C8
+TabTextUnread=FFFFBF
+DarkShadow=000000
+LightShadow=FFFFFF
 
 [ClientArea]
-Top=0
-Bottom=0
 Left=0
+Top=0
 Right=0
+Bottom=0
 Inner=3
 
 [WindowFrame]
 Caption=22
-Bottom=4
 Left=4
 Right=4
+Bottom=4
 ClipFrame=0
 RadiusTL=2
 RadiusTR=2
 RadiusBL=2
 RadiusBR=2
-TitleButtonWidth=15
-TitleButtonHeight=15
-TitleButtonTopOffset=7
-TitleBarRightOffset=-4
-TitleBarLeftOffset=-4
-CaptionPadding=4
 CaptionOffset=7
+CaptionPadding=4
+TitleButtonWidth=17
+TitleButtonHeight=17
+TitleButtonTopOffset=7
+TitleBarLeftOffset=-4
+TitleBarRightOffset=-4
 
 ;--------Standard---------
 
-;[%Default]
-;Alpha=100
-;Perpixel=1
-;Color1=
-;Color2=
-;Color2_Transparent=0
-;TextColor=
-;Gradient=None
-;Corner=tl,tr,bl,br
-;Radius=0
-;BrderStyle=0
-;Top=0
-;Bottom=0
-;Left=0
-;Right=0
+[%Frame]
 
-;FillColor=
-;ColorKey=
+[%FrameInactive]
+
+[%Titlebuttonpressed]
+
+[%Titlebuttonmouseover]
 
 [%Container]
 Color1=000000
 Color2=000000
 
 [%Buttonnotpressed]
+Color1=000000
+Color2=191919
 
 [%Buttonpressed]
 
 [%Buttonmouseover]
-Color1=000000
-Color2=000000
 
 [%InfoPanelBackground]
-
-;[%Infopanelfield]
-
-;[%Titlebutton]
-
-[%Titlebuttonpressed]
-
-[%Titlebuttonmouseover]
 
 [%Tabpage]
 
@@ -120,35 +100,23 @@ Left=-1
 [%Tabitem_active_bottom]
 Top=-1
 
-;[%Toolbar]
-
-[%Frame]
-
-[%FrameInactive]
-
 [%InputArea]
-Top=4
-Bottom=1
 Left=1
+Top=4
 Right=1
+Bottom=1
 
 [%MessageLog]
-Top=1
-Bottom=1
 Left=1
+Top=1
 Right=1
-
-;[%Sidebar Background]
-
-;[%Statusbarpanel]
-
-;[%Statusbar]
+Bottom=1
 
 [%Userlist]
-Top=1
-Bottom=1
 Left=1
+Top=1
 Right=1
+Bottom=1
 
 ;--------Image---------
 
@@ -157,156 +125,84 @@ Image=BG.png
 Alpha=100
 Perpixel=1
 
-[$Container]
-
-[$Buttonnotpressed]
-Glyph=1,7,3,31
-Top=1
-Bottom=1
-Left=1
-Right=1
-Item0=Buttonnotpressed
-
-[$Buttonpressed]
-Glyph=5,7,7,31
-Top=1
-Bottom=1
-Left=1
-Right=1
-Item0=Buttonpressed
-
-[$Buttonmouseover]
-
-[$InfoPanelBackground]
-Glyph=13,8,15,30
-Top=1
-Bottom=1
-Left=1
-Right=1
-Item0=InfoPanelBackground
-
-[$Infopanelfield]
-
-[$Titlebutton]
+[$Frame]
+Glyph=0,0,4,4
+Left=2
+Top=2
+Right=2
+Bottom=2
+Item0=Frame
+Item1=FrameInactive
 
 [$Titlebuttonpressed]
-Glyph=5,7,7,31
-Top=1
-Bottom=1
+Glyph=0,6,2,8
 Left=1
+Top=1
 Right=1
+Bottom=1
 Item0=Titlebuttonpressed
+Item1=Buttonpressed
+Item2=Tabpage
+Item3=InputArea
+Item4=MessageLog
+Item5=Userlist
 
 [$Titlebuttonmouseover]
-Glyph=1,7,3,31
-Top=1
-Bottom=1
+Glyph=6,0,8,22
 Left=1
+Top=1
 Right=1
+Bottom=1
 Item0=Titlebuttonmouseover
-
-[$Tabpage]
-Glyph=8,2,10,4
-Top=1
-Bottom=1
-Left=1
-Right=1
-Item0=Tabpage
+Item1=Buttonmouseover
+Item2=InfoPanelBackground
 
 [$Tabitem]
-Glyph=5,7,7,30
+Glyph=10,0,12,24
 Alpha=70
-Top=1
-Bottom=1
 Left=1
+Top=1
 Right=1
+Bottom=1
 Item0=Tabitem
 
 [$Tabitem_hottrack]
-Glyph=21,7,23,30
-Top=1
-Bottom=1
+Glyph=14,0,16,24
 Left=1
+Top=1
 Right=1
+Bottom=1
 Item0=Tabitem_hottrack
 
 [$Tabitem_active]
-Glyph=21,7,23,31
-Top=1
-Bottom=1
+Glyph=18,0,20,2
 Left=1
+Top=1
 Right=1
+Bottom=1
 Item0=Tabitem_active
 
 [$Tabitem_bottom]
-Glyph=33,7,35,31
+Glyph=22,0,24,24
 Alpha=70
-Top=1
-Bottom=1
 Left=1
+Top=1
 Right=1
+Bottom=1
 Item0=Tabitem_bottom
 
 [$Tabitem_hottrack_bottom]
-Glyph=29,7,31,31
-Top=1
-Bottom=1
+Glyph=26,0,28,24
 Left=1
+Top=1
 Right=1
+Bottom=1
 Item0=Tabitem_hottrack_bottom
 
 [$Tabitem_active_bottom]
-Glyph=25,7,27,31
-Top=1
-Bottom=1
+Glyph=30,0,32,2
 Left=1
+Top=1
 Right=1
+Bottom=1
 Item0=Tabitem_active_bottom
-
-[$Toolbar]
-
-[$Frame]
-Glyph=1,1,5,5
-Top=2
-Bottom=2
-Left=2
-Right=2
-Item0=Frame
-
-[$FrameInactive]
-Glyph=1,1,5,5
-Top=2
-Bottom=2
-Left=2
-Right=2
-Item0=FrameInactive
-
-[$InputArea]
-Glyph=8,2,10,4
-Top=1
-Bottom=1
-Left=1
-Right=1
-Item0=InputArea
-
-[$MessageLog]
-Glyph=8,2,10,4
-Top=1
-Bottom=1
-Left=1
-Right=1
-Item0=MessageLog
-
-[$Sidebar Background]
-
-[$Statusbarpanel]
-
-[$Statusbar]
-
-[$Userlist]
-Glyph=8,2,10,4
-Top=1
-Bottom=1
-Left=1
-Right=1
-Item0=Userlist
