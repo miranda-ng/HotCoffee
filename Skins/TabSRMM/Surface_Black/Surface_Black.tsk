@@ -52,9 +52,9 @@ CaptionOffset=7
 CaptionPadding=4
 TitleButtonWidth=17
 TitleButtonHeight=17
-TitleButtonTopOffset=7
+TitleButtonTopOffset=4
 TitleBarLeftOffset=-4
-TitleBarRightOffset=-4
+TitleBarRightOffset=-6
 
 ;--------Standard---------
 
@@ -148,7 +148,7 @@ Item4=MessageLog
 Item5=Userlist
 
 [$Titlebuttonmouseover]
-Glyph=6,0,8,22
+Glyph=6,0,8,61
 Left=1
 Top=1
 Right=1

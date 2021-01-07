@@ -1667,6 +1667,7 @@ PopupColorText=d868702
 
 [DBEditorpp]
 PopupColour=d9211020
+PopupTextColour=d4144959
 
 [GmailMNotifier]
 popupBgColor=d9785109
