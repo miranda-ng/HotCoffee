@@ -11,7 +11,7 @@ Right = 2
 Bottom = 2
 
 [Sidebar]
-Image = sidebar.png
+Image = SideBar.png
 TM = TM_STRECH_ALL 
 Left = 7
 Top = 7
