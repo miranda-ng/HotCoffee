@@ -194,7 +194,7 @@ end
 object
 	ifnotset 2
 	type bitmap
-	source pixel:F5F7F8
+	source pixel:F6F8F9
 	x 8
 	y 14+title.height+14
 	w -9
@@ -203,7 +203,7 @@ end
 object
 	ifset 2
 	type bitmap
-	source pixel:F5F7F8
+	source pixel:F6F8F9
 	mono
 	x 8
 	y 14+title.height+14
