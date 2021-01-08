@@ -1,6 +1,7 @@
 [VersionSkin]
-Author=Favor, Dracosha
-Version=1.0
+About=Surface White skin for TabSRMM
+Author=Dracosha
+Version=1.1.0.1
 
 [Theme]
 File=Surface_White.tabsrmm
@@ -82,13 +83,11 @@ CaptionOffset=7
 Color1=FFFFFF
 Color2=FFFFFF
 
-[%Buttonnotpressed]
+;[%Buttonnotpressed]
 
 [%Buttonpressed]
 
 [%Buttonmouseover]
-Color1=FFFFFF
-Color2=FFFFFF
 
 [%InfoPanelBackground]
 
@@ -153,19 +152,13 @@ Right=1
 ;--------Image---------
 
 [$glyphs]
-Image=BG.png
+Image=BG0.png
 Alpha=100
 Perpixel=1
 
 [$Container]
 
 [$Buttonnotpressed]
-Glyph=1,7,3,31
-Top=1
-Bottom=1
-Left=1
-Right=1
-Item0=Buttonnotpressed
 
 [$Buttonpressed]
 Glyph=9,7,11,31
@@ -176,6 +169,12 @@ Right=1
 Item0=Buttonpressed
 
 [$Buttonmouseover]
+Glyph=1,7,3,31
+Top=1
+Bottom=1
+Left=1
+Right=1
+Item0=Buttonmouseover
 
 [$InfoPanelBackground]
 Glyph=13,8,15,30

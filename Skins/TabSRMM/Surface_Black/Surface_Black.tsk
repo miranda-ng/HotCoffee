@@ -17,8 +17,8 @@ CloseGlyph=Close.ico
 MaximizeGlyph=Maximize.ico
 MinimizeGlyph=Minimize.ico
 FrameLessMode=1
-NoScrollbars=0
-SbarHeight=21
+NoScrollbars=1
+SbarHeight=18
 Signature=101
 TabSkinning=1
 Version=1
@@ -39,22 +39,22 @@ Bottom=0
 Inner=3
 
 [WindowFrame]
-Caption=22
-Left=4
-Right=4
-Bottom=4
+Caption=28
+Left=7
+Right=7
+Bottom=7
 ClipFrame=0
 RadiusTL=2
 RadiusTR=2
 RadiusBL=2
 RadiusBR=2
-CaptionOffset=7
-CaptionPadding=4
+CaptionOffset=12
+CaptionPadding=7
 TitleButtonWidth=17
 TitleButtonHeight=17
-TitleButtonTopOffset=4
-TitleBarLeftOffset=-4
-TitleBarRightOffset=-6
+TitleButtonTopOffset=7
+TitleBarLeftOffset=-1
+TitleBarRightOffset=-3
 
 ;--------Standard---------
 
