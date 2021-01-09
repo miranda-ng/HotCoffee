@@ -1,50 +1,50 @@
 /*--- Global ---*/
 
 .Link-Text, .tzerlink {
-	color: #74B8E6;
+	color: #004080;
 }
 
 input {
-	background: #313131;
-	border-left: 1px solid #838383;
-	border-top: 1px solid #838383;
-	border-right: 1px solid #000000;
-	border-bottom: 1px solid #000000;
-	color: #D3D3D3;
+	background: #E3E2E2;
+	border-left: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #959595;
+	border-bottom: 1px solid #959595;
+	color: #5C5C5C;
 }
 
 html {
-	scrollbar-face-color: #313131;
-	scrollbar-highlight-color: #838383;
-	scrollbar-shadow-color: #313131;
-	scrollbar-arrow-color: #D3D3D3;
-	scrollbar-base-color: #313131;
-	scrollbar-darkshadow-color: #000000;
-	background: url(Dark.png) fixed no-repeat bottom right;
-	background-color: #454545;
+	scrollbar-face-color: #E3E2E2;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #E3E2E2;
+	scrollbar-arrow-color: #5C5C5C;
+	scrollbar-base-color: #E3E2E2;
+	scrollbar-darkshadow-color: #959595;
+	background: url(Light.png) fixed no-repeat bottom right;
+	background-color: #EDEBEC;
 	overflow: auto;
 	padding: 0px 0px 0px 0px;
 	margin: 0;
 	font-size: 13px;
-	color: Silver;
+	color: #4F4F4F;
 	zoom: 0 !important;
 }
 
 a, a:active {
-	color: #74B8E6;
+	color: #004080;
 	text-decoration: none;
 	font-weight: normal;
 	cursor:pointer;
 }
 
 a:visited {
-	color: #C87046;
+	color: #C44305;
 	text-decoration: none;
 	font-weight: normal;
 }
 
 a:hover {
-	color: #74B8E6;
+	color: #004080;
 	text-decoration: underline;
 	font-weight: normal;
 }
@@ -101,59 +101,59 @@ div.avatar {
 }
 
 .code {
-	border: 1px dashed #646464;
+	border: 1px dashed #B4B4B4;
 	margin: -1px;
 }
 
 .MessageIn, .MessageOut, .hMessageIn, .hMessageOut, .frame_MessageInGroupStart, .frame_MessageOutGroupStart, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart {
-	border-top: 1px solid #646464;
-	border-bottom: 1px solid #1E1E1E;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #B4B4B4;
 }
 
 .MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
-	border-top: 1px dotted #646464;
+	border-top: 1px dotted #B4B4B4;
 }
 
 .hMessageIn, .hMessageOut, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart, .hStatus, .hFileIn, .hFileOut, .hURL {
-	background: url(Textolite_Dark/history.png) no-repeat bottom right;
+	background: url(Textolite_Brown_Light/history.png) no-repeat bottom right;
 }
 
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
-	color: #C87046;
-	background-image: url(Textolite_Dark/in.png);
+	color: #C44305;
+	background-image: url(Textolite_Brown_Light/in.png);
 }
 
 .contentMessageIn, .contenthMessageIn, .contentMessageInGroupStart, .MessageInGroupInner, .contenthMessageInGroupStart, .hMessageInGroupInner {
-	background-image: url(Textolite_Dark/in.png);
+	background-image: url(Textolite_Brown_Light/in.png);
 }
 
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
-	color: #4E7DAD;
-	background-image: url(Textolite_Dark/out.png);
+	color: #054381;
+	background-image: url(Textolite_Brown_Light/out.png);
 }
 
 .contentMessageOut, .contenthMessageOut, .contentMessageOutGroupStart, .MessageOutGroupInner, .contenthMessageOutGroupStart, .hMessageOutGroupInner {
-	background-image: url(Textolite_Dark/out.png);
+	background-image: url(Textolite_Brown_Light/out.png);
 }
 
 /* -------------------- status support -------------------- */
 
 .status .head {
-	color: #C87046;
-	background-image: url(Textolite_Dark/status.png);
+	color: #C44305;
+	background-image: url(Textolite_Brown_Light/status.png);
 }
 
 .contentStatus, .contenthStatus {
-	color: #C87046;
-	background-image: url(Textolite_Dark/status.png);
+	color: #C44305;
+	background-image: url(Textolite_Brown_Light/status.png);
 }
 
 .contentStatus .time, .contenthStatus .time {
-	color: #A57D6B;
+	color: #C38264;
 }
 
 .Status, .hStatus {
@@ -164,17 +164,17 @@ div.avatar {
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
-	color: #469B46;
-	background-image: url(Textolite_Dark/file.png);
+	color: green;
+	background-image: url(Textolite_Brown_Light/file.png);
 }
 
 .contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
-	color: #469B46;
-	background-image: url(Textolite_Dark/file.png);
+	color: green;
+	background-image: url(Textolite_Brown_Light/file.png);
 }
 
 .contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
-	color: #6B916B;
+	color: #61A061;
 }
 
 .FileIn, .hFileIn, .FileOut, .hFileOut {
@@ -185,17 +185,17 @@ div.avatar {
 /* -------------------- URL support -------------------- */
 
 .inurl .head, .outurl .head {
-	color: #4E7DAD;
-	background-image: url(Textolite_Dark/url.png);
+	color: #054381;
+	background-image: url(Textolite_Brown_Light/url.png);
 }
 
 .contentURL, .contenthURL {
-	color: #4E7DAD;
-	background-image: url(Textolite_Dark/url.png);
+	color: #054381;
+	background-image: url(Textolite_Brown_Light/url.png);
 }
 
 .contentURL .time, .contenthURL .time {
-	color: #6E8399;
+	color: #6482A1;
 }
 
 .URL, .hURL {

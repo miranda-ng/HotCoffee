@@ -1,50 +1,51 @@
 /*--- Global ---*/
 
 .Link-Text, .tzerlink {
-	color: #004080;
+	color: #98BBE7;
 }
 
 input {
-	background: #E3E2E2;
-	border-left: 1px solid #FFFFFF;
-	border-top: 1px solid #FFFFFF;
-	border-right: 1px solid #959595;
-	border-bottom: 1px solid #959595;
-	color: #5C5C5C;
+	background: #313131;
+	border-left: 1px solid #545454;
+	border-top: 1px solid #545454;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	color: #C0C0C0;
 }
 
 html {
-	scrollbar-face-color: #E3E2E2;
-	scrollbar-highlight-color: #FFFFFF;
-	scrollbar-shadow-color: #E3E2E2;
-	scrollbar-arrow-color: #5C5C5C;
-	scrollbar-base-color: #E3E2E2;
-	scrollbar-darkshadow-color: #959595;
-	background: url(Light.png) fixed no-repeat bottom right;
-	background-color: #EDEBEC;
+	scrollbar-face-color: #313131;
+	scrollbar-highlight-color: #313131;
+	scrollbar-shadow-color: #313131;
+	scrollbar-arrow-color: #C0C0C0;
+	scrollbar-3dlight-color: #545454;
+	scrollbar-darkshadow-color: #000000;
+	scrollbar-track-color: #454545;
+	background: url(Dark.png) fixed no-repeat bottom right;
+	background-color: #454545;
 	overflow: auto;
 	padding: 0px 0px 0px 0px;
 	margin: 0;
 	font-size: 13px;
-	color: #4F4F4F;
+	color: #C0C0C0;
 	zoom: 0 !important;
 }
 
 a, a:active {
-	color: #004080;
+	color: #98BBE7;
 	text-decoration: none;
 	font-weight: normal;
 	cursor:pointer;
 }
 
 a:visited {
-	color: #C44305;
+	color: #E4BA8F;
 	text-decoration: none;
 	font-weight: normal;
 }
 
 a:hover {
-	color: #004080;
+	color: #98BBE7;
 	text-decoration: underline;
 	font-weight: normal;
 }
@@ -77,7 +78,7 @@ div {
 }
 
 .time {
-	color: Gray;
+	color: #808080;
 	font-weight: normal;
 	float: right;
 	font-size: 11px;
@@ -101,104 +102,119 @@ div.avatar {
 }
 
 .code {
-	border: 1px dashed #B4B4B4;
+	border: 1px dashed #646464;
 	margin: -1px;
 }
 
-.MessageIn, .MessageOut, .hMessageIn, .hMessageOut, .frame_MessageInGroupStart, .frame_MessageOutGroupStart, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart {
-	border-top: 1px solid #FFFFFF;
-	border-bottom: 1px solid #B4B4B4;
+.MessageIn, .hMessageIn, .frame_MessageInGroupStart, .frame_hMessageInGroupStart {
+	border-left: 1px solid #545454;
+	border-top: 1px solid #545454;
+	border-right: 1px solid #222222;
+	border-bottom: 1px solid #222222;
+}
+
+.MessageOut, .hMessageOut, .frame_MessageOutGroupStart, .frame_hMessageOutGroupStart {
+	border-left: 1px solid #474747;
+	border-top: 1px solid #474747;
+	border-right: 1px solid #1F1F1F;
+	border-bottom: 1px solid #1F1F1F;
 }
 
 .MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
-	border-top: 1px dotted #B4B4B4;
+	border-top: 1px dotted #646464;
 }
 
 .hMessageIn, .hMessageOut, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart, .hStatus, .hFileIn, .hFileOut, .hURL {
-	background: url(Textolite_Light/history.png) no-repeat bottom right;
+	background: url(Textolite_Gray_Dark/history.png) no-repeat bottom right;
 }
 
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
-	color: #C44305;
-	background-image: url(Textolite_Light/in.png);
+	color: #B5784A;
+	background-image: url(Textolite_Gray_Dark/in.png);
 }
 
 .contentMessageIn, .contenthMessageIn, .contentMessageInGroupStart, .MessageInGroupInner, .contenthMessageInGroupStart, .hMessageInGroupInner {
-	background-image: url(Textolite_Light/in.png);
+	background-image: url(Textolite_Gray_Dark/in.png);
 }
 
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
-	color: #054381;
-	background-image: url(Textolite_Light/out.png);
+	color: #618BBE;
+	background-image: url(Textolite_Gray_Dark/out.png);
 }
 
 .contentMessageOut, .contenthMessageOut, .contentMessageOutGroupStart, .MessageOutGroupInner, .contenthMessageOutGroupStart, .hMessageOutGroupInner {
-	background-image: url(Textolite_Light/out.png);
+	background-image: url(Textolite_Gray_Dark/out.png);
 }
 
 /* -------------------- status support -------------------- */
 
 .status .head {
-	color: #C44305;
-	background-image: url(Textolite_Light/status.png);
+	color: #B5784A;
+	background-image: url(Textolite_Gray_Dark/status.png);
 }
 
 .contentStatus, .contenthStatus {
-	color: #C44305;
-	background-image: url(Textolite_Light/status.png);
+	color: #E4BA8F;
+	background-image: url(Textolite_Gray_Dark/status.png);
 }
 
 .contentStatus .time, .contenthStatus .time {
-	color: #C38264;
+	color: #B98966;
 }
 
 .Status, .hStatus {
-	border-top: 1px solid #A47D73;
-	border-bottom: 1px solid #3C2D28;
+	border-left: 1px solid #5B514D;
+	border-top: 1px solid #5B514D;
+	border-right: 1px solid #25211F;
+	border-bottom: 1px solid #25211F;
 }
 
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
-	color: green;
-	background-image: url(Textolite_Light/file.png);
+	color: #699C4E;
+	background-image: url(Textolite_Gray_Dark/file.png);
 }
 
 .contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
-	color: green;
-	background-image: url(Textolite_Light/file.png);
+	color: #A3CF8B;
+	background-image: url(Textolite_Gray_Dark/file.png);
 }
 
 .contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
-	color: #61A061;
+	color: #82A76D;
 }
 
 .FileIn, .hFileIn, .FileOut, .hFileOut {
-	border-top: 1px solid #73A473;
-	border-bottom: 1px solid #273D27;
+	border-left: 1px solid #4E5A4E;
+	border-top: 1px solid #4E5A4E;
+	border-right: 1px solid #202420;
+	border-bottom: 1px solid #202420;
 }
 
 /* -------------------- URL support -------------------- */
 
 .inurl .head, .outurl .head {
-	color: #054381;
-	background-image: url(Textolite_Light/url.png);
+	color: #618BBE;
+	background-image: url(Textolite_Gray_Dark/url.png);
 }
 
 .contentURL, .contenthURL {
-	color: #054381;
-	background-image: url(Textolite_Light/url.png);
+	color: #98BBE7;
+	background-image: url(Textolite_Gray_Dark/url.png);
 }
 
 .contentURL .time, .contenthURL .time {
-	color: #6482A1;
+	color: #6D91BC;
 }
 
 .URL, .hURL {
-	border-top: 1px solid #657AB1;
-	border-bottom: 1px solid #222B42;
+	border-left: 1px solid #4D5763;
+	border-top: 1px solid #4D5763;
+	border-right: 1px solid #1F2328;
+	border-bottom: 1px solid #1F2328;
 }
