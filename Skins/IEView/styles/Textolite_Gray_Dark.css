@@ -8,8 +8,8 @@ input {
 	background: #313131;
 	border-left: 1px solid #545454;
 	border-top: 1px solid #545454;
-	border-right: 1px solid #000000;
-	border-bottom: 1px solid #000000;
+	border-right: 1px solid #141414;
+	border-bottom: 1px solid #141414;
 	color: #C0C0C0;
 }
 
@@ -19,7 +19,7 @@ html {
 	scrollbar-shadow-color: #313131;
 	scrollbar-arrow-color: #C0C0C0;
 	scrollbar-3dlight-color: #545454;
-	scrollbar-darkshadow-color: #000000;
+	scrollbar-darkshadow-color: #141414;
 	scrollbar-track-color: #454545;
 	background: url(Dark.png) fixed no-repeat bottom right;
 	background-color: #454545;
@@ -107,15 +107,15 @@ div.avatar {
 }
 
 .MessageIn, .hMessageIn, .frame_MessageInGroupStart, .frame_hMessageInGroupStart {
-	border-left: 1px solid #545454;
-	border-top: 1px solid #545454;
+	border-left: 1px solid #5A5A5A;
+	border-top: 1px solid #5A5A5A;
 	border-right: 1px solid #222222;
 	border-bottom: 1px solid #222222;
 }
 
 .MessageOut, .hMessageOut, .frame_MessageOutGroupStart, .frame_hMessageOutGroupStart {
-	border-left: 1px solid #474747;
-	border-top: 1px solid #474747;
+	border-left: 1px solid #4F4F4F;
+	border-top: 1px solid #4F4F4F;
 	border-right: 1px solid #1F1F1F;
 	border-bottom: 1px solid #1F1F1F;
 }
@@ -167,8 +167,8 @@ div.avatar {
 }
 
 .Status, .hStatus {
-	border-left: 1px solid #5B514D;
-	border-top: 1px solid #5B514D;
+	border-left: 1px solid #655A52;
+	border-top: 1px solid #655A52;
 	border-right: 1px solid #25211F;
 	border-bottom: 1px solid #25211F;
 }
@@ -190,8 +190,8 @@ div.avatar {
 }
 
 .FileIn, .hFileIn, .FileOut, .hFileOut {
-	border-left: 1px solid #4E5A4E;
-	border-top: 1px solid #4E5A4E;
+	border-left: 1px solid #536253;
+	border-top: 1px solid #536253;
 	border-right: 1px solid #202420;
 	border-bottom: 1px solid #202420;
 }
@@ -213,8 +213,8 @@ div.avatar {
 }
 
 .URL, .hURL {
-	border-left: 1px solid #4D5763;
-	border-top: 1px solid #4D5763;
+	border-left: 1px solid #525A65;
+	border-top: 1px solid #525A65;
 	border-right: 1px solid #1F2328;
 	border-bottom: 1px solid #1F2328;
 }

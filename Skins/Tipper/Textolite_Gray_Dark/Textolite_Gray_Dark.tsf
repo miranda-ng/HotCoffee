@@ -5,18 +5,18 @@ Preview = Preview.png
 [Background]
 Image = BG.png
 TM = TM_STRECH_ALL 
-Left = 10
-Top = 10
-Right = 10
-Bottom = 10
+Left = 12
+Top = 15
+Right = 12
+Bottom = 12
 
 [Sidebar]
 Image = SideBar.png
 TM = TM_STRECH_ALL 
-Left = 9
-Top = 9
-Right = 1
-Bottom = 9
+Left = 5
+Top = 11
+Right = 0
+Bottom = 8
 
 [Fonts]
 Title-color = 182 119 73
@@ -35,12 +35,12 @@ Divider-color = 78 78 78
 
 [Appearance]
 Inner-avatar-padding = 2
-Outer-avatar-padding = 11
-General-padding = 11
+Outer-avatar-padding = 13
+General-padding = 13
 Text-padding = 3
-Sidebar-width = 35
-Title-indent = 26
-Text-indent = 26
+Sidebar-width = 38
+Title-indent = 27
+Text-indent = 27
 Value-indent = 7
 
 [Other]
