@@ -39,7 +39,7 @@ Bottom=0
 Inner=4
 
 [WindowFrame]
-Caption=27
+Caption=21
 Left=6
 Right=6
 Bottom=9
@@ -53,7 +53,7 @@ CaptionPadding=6
 TitleButtonWidth=15
 TitleButtonHeight=15
 TitleButtonTopOffset=6
-TitleBarLeftOffset=-4
+TitleBarLeftOffset=-1
 TitleBarRightOffset=-4
 
 ;--------Standard---------
