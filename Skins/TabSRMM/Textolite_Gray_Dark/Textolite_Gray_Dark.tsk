@@ -69,8 +69,8 @@ TitleBarRightOffset=-4
 [%Container]
 
 [%Buttonnotpressed]
-;Color1=101010
-;Color2=383838
+;Color1=111111
+;Color2=2A2A2A
 
 [%Buttonpressed]
 
@@ -136,7 +136,7 @@ Item0=Frame
 Item1=FrameInactive
 
 [$Titlebuttonpressed]
-Glyph=10,264,12,266
+Glyph=6,268,8,270
 Left=1
 Top=1
 Right=1
@@ -160,7 +160,7 @@ Bottom=1
 Item0=Container
 
 [$Buttonnotpressed]
-Glyph=72,264,103,266
+Glyph=72,264,123,266
 Left=1
 Top=1
 Right=1
@@ -168,7 +168,7 @@ Bottom=1
 Item0=Buttonnotpressed
 
 [$Buttonpressed]
-Glyph=64,264,66,285
+Glyph=56,264,58,327
 Left=1
 Top=1
 Right=1
@@ -176,7 +176,7 @@ Bottom=1
 Item0=Buttonpressed
 
 [$Buttonmouseover]
-Glyph=50,264,54,295
+Glyph=50,264,54,327
 Left=2
 Top=2
 Right=2
@@ -184,7 +184,7 @@ Bottom=2
 Item0=Buttonmouseover
 
 [$InfoPanelBackground]
-Glyph=68,264,70,295
+Glyph=68,264,70,327
 Left=1
 Top=1
 Right=1
@@ -242,7 +242,7 @@ Bottom=2
 Item0=Tabitem_hottrack_bottom
 
 [$Tabitem_active_bottom]
-Glyph=32,264,36,287
+Glyph=32,264,36,288
 Left=2
 Top=2
 Right=2
@@ -250,7 +250,7 @@ Bottom=2
 Item0=Tabitem_active_bottom
 
 [$InputArea]
-Glyph=56,264,58,285
+Glyph=6,272,8,274
 Left=1
 Top=1
 Right=1
