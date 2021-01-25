@@ -138,7 +138,6 @@ Skins =
 
 	{ Name = 'Glamour_Aqua_Dark',    Description = 'Glamour Aqua Dark',    Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AB01' },
 	{ Name = 'Glamour_Aqua_Light',    Description = 'Glamour Aqua Light',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AB02' },
-
 	{ Name = 'Glamour_Dark',    Description = 'Glamour Dark',    Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AB03' },
 	{ Name = 'Glamour_Light',    Description = 'Glamour Light',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AB04' },
 
@@ -156,9 +155,8 @@ Skins =
 	{ Name = 'Surface_Black',    Description = 'Surface Black',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AF01' },
 	{ Name = 'Surface_White',    Description = 'Surface White',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AF02' },
 
-	{ Name = 'Textolite_Dark',  Description = 'Textolite Dark',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2BA01' },
-	{ Name = 'Textolite_Light',  Description = 'Textolite Light', Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2BA02' },
-
+	{ Name = 'Textolite_Brown_Dark',  Description = 'Textolite Brown Dark',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2BA01' },
+	{ Name = 'Textolite_Brown_Light',  Description = 'Textolite Brown Light', Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2BA02' },
 	{ Name = 'Textolite_Gray_Dark',  Description = 'Textolite Gray Dark',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2BB01' },
 	{ Name = 'Textolite_Gray_Light',  Description = 'Textolite Gray Light', Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2BB02' },
 }
@@ -167,7 +165,7 @@ function WriteTabSRMMSkin(skinName, fontName)
 	local pattern_1 = 'Custom_Miranda,Custom_Miranda_Dark,Custom_Miranda_Light'
 	local pattern_2 = 'Graphite_Brown_Dark,Graphite_Brown_Light,Graphite_Gray_Dark,Graphite_Gray_Light,Textolite_Dark,Textolite_Light'
 	local pattern_3 = 'Glamour_Aqua_Dark,Glamour_Aqua_Light,Glamour_Dark,Glamour_Light,GoldTime_Dark,GoldTime_Light,PhotoOne_Dark,PhotoOne_Light'
-	local pattern_4 = 'Diplomat_Dark,Diplomat_Light,Textolite_Gray_Dark,Textolite_Gray_Light'
+	local pattern_4 = 'Diplomat_Dark,Diplomat_Light,Textolite_Brown_Dark,Textolite_Brown_Light,Textolite_Gray_Dark,Textolite_Gray_Light'
 	local pattern_5 = 'Surface_Black,Surface_White'
 
 	local result = 0
