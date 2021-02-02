@@ -1568,7 +1568,7 @@ RBEdgesColor=d12632256
 ;IEView settings
 [IEVIEW]
 _default_.SRMMMode=b2
-_default_.SRMMTemplateFile=sSkins\IEView\Graphite_Gray_Light.ivt
+_default_.SRMMTemplateFile=sSkins\IEView\Textolite_Gray_Light.ivt
 GeneralFlags=d37
 
 
@@ -1620,7 +1620,7 @@ XMPP-filename=uSkins\Smileys\_light\kolobok\kolobok.msl
 
 ;TabSRMM settings
 [Tab_SRMsg]
-ContainerSkin=sGraphite_Gray_Light\Graphite_Gray_Light.tsk
+ContainerSkin=sTextolite_Gray_Light\Textolite_Gray_Light.tsk
 
 
 ;Tipper settings
@@ -1635,15 +1635,15 @@ TextIndent=d27
 ValueIndent=d7
 RoundCorners=b1
 SkinEngine=b1
-SkinName=uGraphite_Gray_Light
+SkinName=uTextolite_Gray_Light
 
 
 ;Popup settings
 [Popup]
 DropShadow=b0
 EnableShadowRegion=b0
-skin.Graphite_Gray_Light=d975
-SkinPack=sGraphite_Gray_Light
+skin.Textolite_Gray_Light=d975
+SkinPack=sTextolite_Gray_Light
 spacing=w0
 UseWinColors=b0
 
@@ -1772,4 +1772,4 @@ Foreground=d7156274
 
 ;PackInfo
 [PackInfo]
-Skin=uGraphite_Gray_Light
+Skin=uTextolite_Gray_Light
