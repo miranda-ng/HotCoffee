@@ -20,9 +20,9 @@ html {
 	scrollbar-arrow-color: #3A3A3A;
 	scrollbar-3dlight-color: #F4F4F4;
 	scrollbar-darkshadow-color: #808080;
-	scrollbar-track-color: #E4E4E4;
+	scrollbar-track-color: #D1D3D4;
 	background: url(Light.png) fixed no-repeat bottom right;
-	background-color: #E4E4E4;
+	background-color: #D1D3D4;
 	overflow: auto;
 	padding: 0px 0px 0px 0px;
 	margin: 0;
