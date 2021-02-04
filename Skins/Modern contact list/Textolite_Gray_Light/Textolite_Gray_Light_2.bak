@@ -274,7 +274,7 @@ FontWindowSty=b0
 ColorFrame=d13816530
 
 [CLC]
-BkColour=d15000804
+BkColour=d13947857
 HotTextColour=d10907716
 QuickSearchColour=d196757
 SelBkColour=l
@@ -521,8 +521,8 @@ Font23Size=b8
 Font23Sty=b0
 
 [Chat]
-ColorLogBG=d15000804
-ColorNicklistBG=d15000804
+ColorLogBG=d13947857
+ColorNicklistBG=d13947857
 NickColor0=d4289601
 NickColor1=d3174287
 NickColor2=d4605094
@@ -776,7 +776,7 @@ Color16=d15199990
 Color17=d16777215
 Color18=d15199990
 Color19=d15199990
-Color22=d15000804
+Color22=d13947857
 Color23=d15199990
 Color24=d15199990
 Color25=d15199990
@@ -1298,7 +1298,7 @@ fore_odd=l
 fore_sub=l
 
 [SmileyAdd]
-SelWndBkgClr=d15000804
+SelWndBkgClr=d13947857
 
 [StatusBar]
 BkColour=l
@@ -1306,15 +1306,15 @@ SelBkColour=l
 
 [TabSRMM_Fonts]
 aeroGlow=l
-BkgColour=d15000804
+BkgColour=d13947857
 cRichBorders=l
 fillColor=l
 genericTxtClr=l
 hgrid=d12632256
 inbg=d15724527
-inputbg=d15000804
-ipfieldsbg=d11447982
-ipfieldsbgHigh=d15132390
+inputbg=d13947857
+ipfieldsbg=d11579310
+ipfieldsbgHigh=d13224392
 oldinbg=d15724527
 oldoutbg=d14606046
 outbg=d14606046
@@ -1503,9 +1503,9 @@ tab_txt_unread=l
 [Tipper]
 AvBorderCol=d0
 BorderCol=d0
-ColourBg=d15000804
-DividerCol=d12632256
-SidebarCol=d12632256
+ColourBg=d13947857
+DividerCol=d13947857
+SidebarCol=d13947857
 FontFirst=sVerdana
 FontFirstCol=d4484518
 FontFirstFlags=w288
@@ -1560,7 +1560,7 @@ frame_back=d13816530
 
 ;Floating Contacts
 [FloatingContacts]
-BkColor=d15000804
+BkColor=d13947857
 LTEdgesColor=d16777215
 RBEdgesColor=d12632256
 

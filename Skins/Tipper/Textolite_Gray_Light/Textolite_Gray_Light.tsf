@@ -5,33 +5,33 @@ Preview = Preview.png
 [Background]
 Image = BG2a.png
 TM = TM_STRECH_ALL 
-Left = 11
-Top = 11
-Right = 11
-Bottom = 11
+Left = 12
+Top = 12
+Right = 12
+Bottom = 12
 
 [Sidebar]
 Image = SideBar2a.png
 TM = TM_STRECH_ALL 
 Left = 9
-Top = 11
-Right = 1
-Bottom = 11
+Top = 12
+Right = 2
+Bottom = 12
 
 [Fonts]
-Title-color = 182 119 73
+Title-color = 166 109 68
 Title-effect = FONT_BOLD
 
-Label-color = 192 192 192
+Label-color = 89 89 89
 Label-effect = FONT_BOLD
 
-Value-color = 192 192 192
+Value-color = 89 89 89
 Value-effect = 0
 
-TrayTitle-color = 97 139 190
+TrayTitle-color = 68 112 166
 TrayTitle-effect = FONT_BOLD
 
-Divider-color = 78 78 78
+Divider-color = 209 211 212
 
 [Appearance]
 Inner-avatar-padding = 2
