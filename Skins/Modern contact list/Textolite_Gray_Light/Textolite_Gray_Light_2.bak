@@ -1626,10 +1626,10 @@ ContainerSkin=sTextolite_Gray_Light\Textolite_Gray_Light.tsk
 ;Tipper settings
 [Tipper]
 InnerAvatarPadding=w2
-OuterAvatarPadding=w11
-Padding=w11
+OuterAvatarPadding=w13
+Padding=w13
 TextPadding=w3
-SidebarWidth=d35
+SidebarWidth=d38
 TitleIndent=d27
 TextIndent=d27
 ValueIndent=d7
