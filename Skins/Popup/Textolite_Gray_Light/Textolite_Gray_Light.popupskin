@@ -10,7 +10,7 @@ options
 	option	2	1	Color text background
 	option	3	1	Color logo & clocks
 	option	4	1	Color text
-	option	5	1	Light title text
+	option	5	0	Light title text
 	option	6	0	Standard digital clocks
 	option	7	1	Icon
 	option	8	1	Avatar
@@ -208,50 +208,31 @@ object
 	y -22
 	w -4
 end
-object
-	type bitmap
-	ifnotset 1
-	source pixel:E2E8EB
-	x 8
-	y 19+title.height+7
-	w -9
-	h -11
-end
-object
-	type bitmap
-	ifset 1
-	source pixel:E2E8EB
-	mono
-	x 8
-	y 19+title.height+7
-	w -9
-	h -11
-end
-object
-	type bitmap
-	ifnotset 1
-	source pixel:FFFFFF
-	x 9
-	y 19+title.height+8
-	w -9
-	h -11
-end
-object
-	type bitmap
-	ifset 1
-	source pixel:FFFFFF
-	mono
-	x 8
-	y 19+title.height+8
-	w -9
-	h -11
-end
 
 #===========Background Text area===================================================================
 object
+	ifnotset 1
+	type bitmap
+	source text_edges_light.png
+	x 8
+	y 19+title.height+7
+	w -9
+	h -11
+end
+object
+	ifset 1
+	type bitmap
+	source text_edges_light.png
+	mono
+	x 8
+	y 19+title.height+7
+	w -9
+	h -11
+end
+object
 	ifnotset 2
 	type bitmap
-	source text_bg.png
+	source text_edges_dark.png
 	x 9
 	y 19+title.height+8
 	w -10
@@ -260,12 +241,31 @@ end
 object
 	ifset 2
 	type bitmap
-	source text_bg.png
+	source text_edges_dark.png
 	mono
 	x 9
 	y 19+title.height+8
 	w -10
 	h -12
+end
+object
+	ifnotset 2
+	type bitmap
+	source text_bg.png
+	x 10
+	y 19+title.height+9
+	w -11
+	h -13
+end
+object
+	ifset 2
+	type bitmap
+	source text_bg.png
+	mono
+	x 10
+	y 19+title.height+9
+	w -11
+	h -13
 end
 
 #===========Icon===================================================================================
