@@ -18,7 +18,7 @@ options
 	option	10	1	Logo
 end
 
-h 8+5+8+title.height+5+(2+avatar.height>text.height+2)+2+8+1
+h 8+5+8+title.height+5+(2+avatar.height>text.height+2)+2+8+3
 
 popup-version 02010007
 
@@ -254,8 +254,8 @@ object
 	source text_bg.png
 	x 10
 	y 19+title.height+9
-	w -11
-	h -13
+	w -10
+	h -12
 end
 object
 	ifset 2
@@ -264,8 +264,8 @@ object
 	mono
 	x 10
 	y 19+title.height+9
-	w -11
-	h -13
+	w -10
+	h -12
 end
 
 #===========Icon===================================================================================
@@ -619,8 +619,8 @@ object
 	ifset 8
 	ifnotset 9
 	type avatar
-	x 8+2
-	y 19+title.height+5+4
+	x 8+3
+	y 19+title.height+5+5
 	w options.avatarsize
 	proportional 1
 end
@@ -629,8 +629,8 @@ object
 	ifset 8
 	ifset 9
 	type avatar
-	x window.width-avatar.width-3-5-2
-	y 19+title.height+5+4
+	x window.width-avatar.width-3-5-3
+	y 19+title.height+5+5
 	w options.avatarsize
 	proportional 1
 end
@@ -642,18 +642,18 @@ object
 	ifnotset 9
 	type text
 	color 63 63 63
-	x 8+avatar.width
-	y 19+title.height+5+3
-	w window.width-(8+avatar.width+5)-8-5
+	x 9+avatar.width
+	y 19+title.height+5+4
+	w window.width-(9+avatar.width+5)-8-5
 end
 # ifset Color text, ifnotset Avatar to right
 object
 	ifset 4
 	ifnotset 9
 	type text
-	x 8+avatar.width
-	y 19+title.height+5+3
-	w window.width-(8+avatar.width+5)-8-5
+	x 9+avatar.width
+	y 19+title.height+5+4
+	w window.width-(9+avatar.width+5)-8-5
 end
 # ifnotset Color text, ifset Avatar to right
 object
@@ -662,8 +662,8 @@ object
 	type text
 	color 63 63 63
 	x 8
-	y 19+title.height+5+3
-	w window.width-(8+avatar.width+5)-8-5
+	y 19+title.height+5+4
+	w window.width-(9+avatar.width+5)-8-5
 end
 # ifset Color text, ifset Avatar to right
 object
@@ -671,6 +671,6 @@ object
 	ifset 9
 	type text
 	x 8
-	y 19+title.height+5+3
-	w window.width-(8+avatar.width+5)-8-5
+	y 19+title.height+5+4
+	w window.width-(9+avatar.width+5)-8-5
 end

@@ -1,7 +1,7 @@
 [VersionSkin]
 About=Textolite Brown-Light skin for TabSRMM
 Author=Dracosha
-Version=2.1.0.1
+Version=2.1.1.1
 
 [Theme]
 File=TextoliteBL_v2.tabsrmm
@@ -56,7 +56,7 @@ TitleButtonTopOffset=5
 TitleBarRightOffset=-5
 TitleBarLeftOffset=-4
 CaptionPadding=7
-CaptionOffset=9
+CaptionOffset=6
 
 ;--------Standard---------
 
@@ -81,7 +81,7 @@ CaptionOffset=9
 
 [%Container]
 
-;[%Buttonnotpressed]
+[%Buttonnotpressed]
 
 [%Buttonpressed]
 
@@ -163,6 +163,12 @@ Right=1
 Item0=Container
 
 [$Buttonnotpressed]
+Glyph=1,301,3,303
+Top=1
+Bottom=1
+Left=1
+Right=1
+Item0=Buttonnotpressed
 
 [$Buttonpressed]
 Glyph=5,301,7,303
@@ -173,7 +179,7 @@ Right=1
 Item0=Buttonpressed
 
 [$Buttonmouseover]
-Glyph=1,301,3,303
+Glyph=21,301,23,321
 Top=1
 Bottom=1
 Left=1
