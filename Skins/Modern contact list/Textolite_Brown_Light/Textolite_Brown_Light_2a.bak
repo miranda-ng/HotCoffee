@@ -2,7 +2,7 @@
 Author=Egoist, Favor, Dracosha
 Contact=im.hotcoffee@gmail.com
 Description=Skin for Modern contact list layered
-Name=Textolite_Gray_Light
+Name=Textolite_Brown_Light
 Preview=Preview.png
 SubStyle=Normal
 URL=https://miranda-ng.org/hotcoffee
@@ -11,8 +11,8 @@ Version=2a
 [-ModernSkin]
 
 [ModernSkin]
-SkinFolder=uSkins\Modern contact list\Textolite_Gray_Light
-SkinFile=uSkins\Modern contact list\Textolite_Gray_Light.msf
+SkinFolder=uSkins\Modern contact list\Textolite_Brown_Light
+SkinFile=uSkins\Modern contact list\Textolite_Brown_Light.msf
 ;
 fProfFont=s
 tProfile0=s
@@ -1568,7 +1568,7 @@ RBEdgesColor=d12632256
 ;IEView settings
 [IEVIEW]
 _default_.SRMMMode=b2
-_default_.SRMMTemplateFile=sSkins\IEView\Textolite_Gray_Light.ivt
+_default_.SRMMTemplateFile=sSkins\IEView\Textolite_Brown_Light.ivt
 GeneralFlags=d37
 
 
@@ -1620,7 +1620,7 @@ XMPP-filename=uSkins\Smileys\_light\kolobok\kolobok.msl
 
 ;TabSRMM settings
 [Tab_SRMsg]
-ContainerSkin=sTextolite_Gray_Light\Textolite_Gray_Light.tsk
+ContainerSkin=sTextolite_Brown_Light\Textolite_Brown_Light.tsk
 
 
 ;Tipper settings
@@ -1635,15 +1635,15 @@ TextIndent=d28
 ValueIndent=d7
 RoundCorners=b1
 SkinEngine=b1
-SkinName=uTextolite_Gray_Light
+SkinName=uTextolite_Brown_Light
 
 
 ;Popup settings
 [Popup]
 DropShadow=b0
 EnableShadowRegion=b0
-skin.Textolite_Gray_Light=d974
-SkinPack=sTextolite_Gray_Light
+skin.Textolite_Brown_Light=d974
+SkinPack=sTextolite_Brown_Light
 spacing=w0
 UseWinColors=b0
 
@@ -1772,4 +1772,4 @@ Foreground=d7156274
 
 ;PackInfo
 [PackInfo]
-Skin=uTextolite_Gray_Light
+Skin=uTextolite_Brown_Light
