@@ -5,9 +5,9 @@ Preview = Preview.png
 [Background]
 Image = BG2.png
 TM = TM_STRECH_ALL 
-Left = 11
+Left = 53
 Top = 11
-Right = 11
+Right = 22
 Bottom = 11
 
 [Sidebar]

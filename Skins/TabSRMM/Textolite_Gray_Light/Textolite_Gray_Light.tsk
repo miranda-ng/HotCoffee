@@ -40,9 +40,9 @@ Inner=4
 
 [WindowFrame]
 Caption=28
-Bottom=11
 Left=9
 Right=9
+Bottom=11
 ClipFrame=0
 RadiusTL=11
 RadiusTR=11
@@ -69,17 +69,12 @@ TitleBarRightOffset=-4
 [%Container]
 
 [%Buttonnotpressed]
-;Color1=111111
-;Color2=2A2A2A
 
 [%Buttonpressed]
 
 [%Buttonmouseover]
 
 [%InfoPanelBackground]
-;Color1=434343
-;Color2=313131
-;Gradient=down
 
 [%Tabpage]
 

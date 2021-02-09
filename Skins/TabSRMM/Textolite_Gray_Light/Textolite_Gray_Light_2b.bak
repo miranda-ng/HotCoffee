@@ -40,9 +40,9 @@ Inner=4
 
 [WindowFrame]
 Caption=28
-Bottom=8
 Left=6
 Right=6
+Bottom=8
 ClipFrame=0
 RadiusTL=11
 RadiusTR=11
