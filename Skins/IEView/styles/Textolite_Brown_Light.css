@@ -5,7 +5,7 @@
 }
 
 input {
-	background: #E2E0E1;
+	background: #EBEAEA;
 	border-left: 1px solid #FFFFFF;
 	border-top: 1px solid #FFFFFF;
 	border-right: 1px solid #B4B4B4;
@@ -14,9 +14,9 @@ input {
 }
 
 html {
-	scrollbar-face-color: #E2E0E1;
-	scrollbar-highlight-color: #E2E0E1;
-	scrollbar-shadow-color: #E2E0E1;
+	scrollbar-face-color: #EBEAEA;
+	scrollbar-highlight-color: #EBEAEA;
+	scrollbar-shadow-color: #EBEAEA;
 	scrollbar-arrow-color: #454545;
 	scrollbar-3dlight-color: #FFFFFF;
 	scrollbar-darkshadow-color: #B4B4B4;
