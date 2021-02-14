@@ -6,11 +6,11 @@
 #===========Options================================================================================
 options
 	#option	id	val	title
-	option	1	0	Color frame
+	option	1	1	Color frame
 	option	2	1	Color text background
 	option	3	1	Color logo & clocks
 	option	4	1	Color text
-	option	5	0	Light title text
+	option	5	1	Light title text
 	option	6	0	Standard digital clocks
 	option	7	1	Icon
 	option	8	1	Avatar
@@ -338,6 +338,16 @@ end
 #===========Standard digital clocks border=========================================================
 # ifnotset Light title text
 object
+	ifset 1
+	ifnotset 5
+	ifset 6
+	type clock
+	color 255 254 255
+	x window.width-1-clock.width+1
+	y 8+3+7+(title.height-clock.height)/2
+end
+object
+	ifnotset 1
 	ifnotset 5
 	ifset 6
 	type clock
@@ -346,6 +356,16 @@ object
 	y 8+3+7+(title.height-clock.height)/2
 end
 object
+	ifset 1
+	ifnotset 5
+	ifset 6
+	type clock
+	color 255 254 255
+	x window.width-1-clock.width
+	y 8+3+7+(title.height-clock.height)/2+1
+end
+object
+	ifnotset 1
 	ifnotset 5
 	ifset 6
 	type clock
@@ -354,6 +374,16 @@ object
 	y 8+3+7+(title.height-clock.height)/2+1
 end
 object
+	ifset 1
+	ifnotset 5
+	ifset 6
+	type clock
+	color 255 254 255
+	x window.width-1-clock.width+1
+	y 8+3+7+(title.height-clock.height)/2+1
+end
+object
+	ifnotset 1
 	ifnotset 5
 	ifset 6
 	type clock
@@ -368,7 +398,7 @@ object
 	ifset 5
 	ifset 6
 	type clock
-	color 63 63 63
+	color 42 42 42
 	x window.width-1-clock.width+1
 	y 8+3+7+(title.height-clock.height)/2
 end
@@ -377,7 +407,7 @@ object
 	ifset 5
 	ifset 6
 	type clock
-	color 63 63 63
+	color 42 42 42
 	x window.width-1-clock.width
 	y 8+3+7+(title.height-clock.height)/2+1
 end
@@ -386,7 +416,7 @@ object
 	ifset 5
 	ifset 6
 	type clock
-	color 63 63 63
+	color 42 42 42
 	x window.width-1-clock.width+1
 	y 8+3+7+(title.height-clock.height)/2+1
 end
@@ -416,6 +446,21 @@ object
 	y 8+3+7+(title.height-clock.height)/2+1
 end
 
+# Standard digital clocks border foreground for dark title text
+object
+	ifset 1
+	ifnotset 5
+	ifset 6
+	type bitmap
+	source tt_dtt.png
+	mono
+	layer
+	x window.width-2-clock.width
+	y 8+3+7+(title.height-clock.height)/2
+	w clock.width-3-2
+	h clock.height+1
+end
+
 #===========Standard digital clocks================================================================
 # ifnotset Color text, ifnotset Light title text
 object
@@ -423,7 +468,7 @@ object
 	ifnotset 5
 	ifset 6
 	type clock
-	color 63 63 63
+	color 42 42 42
 	x window.width-1-clock.width
 	y 8+3+7+(title.height-clock.height)/2
 end
@@ -449,6 +494,15 @@ end
 #===========Title text border======================================================================
 # ifnotset Light title text
 object
+	ifset 1
+	ifnotset 5
+	type title
+	color 255 254 255
+	x 8+icon.width+1+1
+	y 8+3+7
+end
+object
+	ifnotset 1
 	ifnotset 5
 	type title
 	color 137 134 137
@@ -456,6 +510,15 @@ object
 	y 8+3+7
 end
 object
+	ifset 1
+	ifnotset 5
+	type title
+	color 255 254 255
+	x 8+icon.width+1
+	y 8+3+7+1
+end
+object
+	ifnotset 1
 	ifnotset 5
 	type title
 	color 137 134 137
@@ -463,6 +526,15 @@ object
 	y 8+3+7+1
 end
 object
+	ifset 1
+	ifnotset 5
+	type title
+	color 255 254 255
+	x 8+icon.width+1+1
+	y 8+3+7+1
+end
+object
+	ifnotset 1
 	ifnotset 5
 	type title
 	color 137 134 137
@@ -475,7 +547,7 @@ object
 	ifnotset 4
 	ifset 5
 	type title
-	color 63 63 63
+	color 42 42 42
 	x 8+icon.width+1+1
 	y 8+3+7
 end
@@ -483,7 +555,7 @@ object
 	ifnotset 4
 	ifset 5
 	type title
-	color 63 63 63
+	color 42 42 42
 	x 8+icon.width+1
 	y 8+3+7+1
 end
@@ -491,7 +563,7 @@ object
 	ifnotset 4
 	ifset 5
 	type title
-	color 63 63 63
+	color 42 42 42
 	x 8+icon.width+1+1
 	y 8+3+7+1
 end
@@ -518,13 +590,71 @@ object
 	y 8+3+7+1
 end
 
+# Title text border foreground for dark title text
+object
+	ifset 1
+	ifnotset 5
+	ifnotset 6
+	ifnotset 10
+	type bitmap
+	source tt_dtt.png
+	mono
+	layer
+	x 8+icon.width+1
+	y 8+3+7
+	w window.width-(8+icon.width+1)-8-clock.width-2
+	h title.height+2
+end
+object
+	ifset 1
+	ifnotset 5
+	ifset 6
+	ifnotset 10
+	type bitmap
+	source tt_dtt.png
+	mono
+	layer
+	x 8+icon.width+1
+	y 8+3+7
+	w window.width-(8+icon.width+1)-1-clock.width-1
+	h title.height+2
+end
+object
+	ifset 1
+	ifnotset 5
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source tt_dtt.png
+	mono
+	layer
+	x 8+icon.width+1
+	y 8+3+7
+	w window.width-(8+icon.width+1)-8-clock.width-27-2
+	h title.height+2
+end
+object
+	ifset 1
+	ifnotset 5
+	ifset 6
+	ifset 10
+	type bitmap
+	source tt_dtt.png
+	mono
+	layer
+	x 8+icon.width+1
+	y 8+3+7
+	w window.width-(8+icon.width+1)-1-clock.width-1
+	h title.height+2
+end
+
 #===========Title text=============================================================================
 # ifnotset Color text, ifnotset Light title text
 object
 	ifnotset 4
 	ifnotset 5
 	type title
-	color 63 63 63
+	color 42 42 42
 	x 8+icon.width+1
 	y 8+3+7
 end
@@ -549,28 +679,28 @@ object
 	ifnotset 6
 	ifnotset 10
 	type title
-	w window.width-(3+5+icon.width+1)-8-clock.width-2
+	w window.width-(8+icon.width+1)-8-clock.width-2
 end
 # ifset Standard digital clocks, ifnotset Logo
 object
 	ifset 6
 	ifnotset 10
 	type title
-	w window.width-(3+5+icon.width+1)-1-clock.width-1
+	w window.width-(8+icon.width+1)-1-clock.width-1
 end
 # ifnotset Standard digital clocks, ifset Logo
 object
 	ifnotset 6
 	ifset 10
 	type title
-	w window.width-(3+5+icon.width+1)-8-clock.width-27-2
+	w window.width-(8+icon.width+1)-8-clock.width-27-2
 end
 # ifset Standard digital clocks, ifset Logo
 object
 	ifset 6
 	ifset 10
 	type title
-	w window.width-(3+5+icon.width+1)-1-clock.width-1
+	w window.width-(8+icon.width+1)-1-clock.width-1
 end
 
 #===========Logo & Standard digital clocks=========================================================
@@ -624,7 +754,7 @@ object
 	ifnotset 4
 	ifnotset 9
 	type text
-	color 63 63 63
+	color 42 42 42
 	x 8+avatar.width
 	y 19+title.height+5+4
 	w window.width-(8+avatar.width+5)-8-5
@@ -643,7 +773,7 @@ object
 	ifnotset 4
 	ifset 9
 	type text
-	color 63 63 63
+	color 42 42 42
 	x 8
 	y 19+title.height+5+4
 	w window.width-(8+avatar.width+5)-8-5
