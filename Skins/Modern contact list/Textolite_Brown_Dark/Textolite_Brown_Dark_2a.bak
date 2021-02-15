@@ -52,11 +52,11 @@ $$Scroll/BtnUp=sGlyph,Fragment,BG2a.png,111,77,17,17,StretchBoth,0,1,15,12,255
 $$Scroll/BtnDn=sGlyph,Fragment,BG2a.png,111,282,17,17,StretchBoth,0,12,15,0,255
 $$Scroll/Thumb=sGlyph,Fragment,BG2a.png,111,95,17,186,StretchBoth,0,1,14,1,255
 ;
-$$FrameTitleBar=sGlyph,Fragment,BG2a.png,125,308,3,5,StretchBoth,1,2,1,2,255
+$$FrameTitleBar=sGlyph,Fragment,BG2a.png,127,308,1,3,StretchBoth,0,1,0,1,255
 ;
-$$StatusBar=sGlyph,Fragment,BG2a.png,125,308,3,3,StretchBoth,1,2,1,0,255
+$$StatusBar=sGlyph,Fragment,BG2a.png,127,308,1,2,StretchBoth,0,1,0,0,255
 ;
-$$EventArea=sGlyph,Fragment,BG2a.png,125,308,3,3,StretchBoth,1,2,1,0,255
+$$EventArea=sGlyph,Fragment,BG2a.png,127,308,1,2,StretchBoth,0,1,0,0,255
 ;
 $$Button/Close/Down=sGlyph,Fragment,BG2a.png,32,361,15,15,StretchBoth,0,0,0,0,255
 $$Button/Close/Hovered=sGlyph,Fragment,BG2a.png,16,361,15,15,StretchBoth,0,0,0,0,255
@@ -96,7 +96,7 @@ $$ViewMode/ResetMode/Pressed=sGlyph,Fragment,BG2a.png,125,304,3,3,StretchBoth,1,
 $$ViewMode/ResetMode/Hot=sGlyph,Fragment,BG2a.png,125,300,3,3,StretchBoth,1,1,1,1,255
 $$ViewMode/ResetMode=s
 ;
-$$ToolBar=sGlyph,Fragment,BG2a.png,125,310,3,3,StretchBoth,1,0,1,2,255
+$$ToolBar=sGlyph,Fragment,BG2a.png,127,309,1,2,StretchBoth,0,0,0,1,255
 ;
 $$BarButton/Pressed=sGlyph,Fragment,BG2a.png,125,304,3,3,StretchBoth,1,1,1,1,255
 $$BarButton/Hot=sGlyph,Fragment,BG2a.png,125,300,3,3,StretchBoth,1,1,1,1,255
