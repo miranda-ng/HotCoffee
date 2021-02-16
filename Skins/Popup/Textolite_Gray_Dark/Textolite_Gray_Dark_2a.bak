@@ -211,7 +211,7 @@ end
 object
 	type bitmap
 	ifnotset 1
-	source pixel:E2E8EB
+	source pixel:E7EDF0
 	x 8
 	y 19+title.height+7
 	w -9
@@ -220,29 +220,10 @@ end
 object
 	type bitmap
 	ifset 1
-	source pixel:E2E8EB
+	source pixel:E7EDF0
 	mono
 	x 8
 	y 19+title.height+7
-	w -9
-	h -11
-end
-object
-	type bitmap
-	ifnotset 1
-	source pixel:FFFFFF
-	x 9
-	y 19+title.height+8
-	w -9
-	h -11
-end
-object
-	type bitmap
-	ifset 1
-	source pixel:FFFFFF
-	mono
-	x 8
-	y 19+title.height+8
 	w -9
 	h -11
 end
