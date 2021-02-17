@@ -9,7 +9,7 @@ File=Textolite_Brown_Light.tabsrmm
 
 [Avatars]
 BorderType=0
-BorderColor=000000
+BorderColor=FFFFFF
 
 [Global]
 Name=Textolite_Brown_Light
@@ -22,12 +22,12 @@ SbarHeight=18
 Signature=101
 TabSkinning=1
 Version=1
-FontColor=313131
-MenuBarBG=D1D5D6
-TabTextActive=000000
-TabTextHottrack=4470A6
-TabTextNormal=3A3A3A
-TabTextUnread=A66D44
+FontColor=E2E2E2
+MenuBarBG=585556
+TabTextActive=FFFFFF
+TabTextHottrack=98BBE7
+TabTextNormal=E2E2E2
+TabTextUnread=E4BA8F
 DarkShadow=000000
 LightShadow=FFFFFF
 

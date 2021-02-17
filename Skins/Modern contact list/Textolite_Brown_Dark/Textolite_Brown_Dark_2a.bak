@@ -521,8 +521,8 @@ Font23Size=b8
 Font23Sty=b0
 
 [Chat]
-ColorLogBG=d4737096
-ColorNicklistBG=d4737096
+ColorLogBG=d4276547
+ColorNicklistBG=d4276547
 NickColor0=d9162635
 NickColor1=d7453909
 NickColor2=d10131687
@@ -1013,7 +1013,7 @@ StatusMessageFontSty=b2
 
 [Popup]
 ColourAvatarBorder=d16777215
-ColourBg=d8421504
+ColourBg=d8289408
 fntAction=sVerdana
 fntActionCol=d16769211
 fntActionFlags=w288
@@ -1298,7 +1298,7 @@ fore_odd=l
 fore_sub=l
 
 [SmileyAdd]
-SelWndBkgClr=d4737096
+SelWndBkgClr=d4276547
 
 [StatusBar]
 BkColour=l
@@ -1306,13 +1306,13 @@ SelBkColour=l
 
 [TabSRMM_Fonts]
 aeroGlow=l
-BkgColour=d4737096
+BkgColour=d4276547
 cRichBorders=l
 fillColor=l
 genericTxtClr=l
 hgrid=d6184542
 inbg=d5197647
-inputbg=d4737096
+inputbg=d4276547
 ipfieldsbg=d4868682
 ipfieldsbgHigh=d7237230
 oldinbg=d5197647
@@ -1504,7 +1504,7 @@ tab_txt_unread=l
 AvBorderCol=d16777215
 BorderCol=d0
 ColourBg=d4737096
-DividerCol=d6184542
+DividerCol=d4276547
 SidebarCol=d6184542
 FontFirst=sVerdana
 FontFirstCol=d4814774
@@ -1658,7 +1658,7 @@ iPopUpColorBack=d10662771
 iPopUpColorFore=d15201223
 
 [ChangeKeyboardLayout]
-BackColor=d8421504
+BackColor=d8289408
 TextColor=d14803425
 
 [Chat]
@@ -1666,7 +1666,7 @@ PopupColorBG=d7580618
 PopupColorText=d12380158
 
 [DBEditorpp]
-PopupColour=d8421504
+PopupColour=d8289408
 PopupTextColour=d14803425
 
 [GmailMNotifier]
@@ -1678,11 +1678,11 @@ PopupBackColor=d7839184
 PopupTextColor=d12442109
 
 [NewAwaySys]
-PopupBGColour=d8421504
+PopupBGColour=d8289408
 PopupTextColour=d14803425
 
 [NewStatusNotify]
-40071bg=d8421504
+40071bg=d8289408
 40071tx=d14803425
 40072bg=d8304766
 40072tx=d13299914
@@ -1708,7 +1708,7 @@ PopupTextColour=d14803425
 40082tx=d12380158
 
 [PackUpdater]
-Popups0Bg=d8421504
+Popups0Bg=d8289408
 Popups0Tx=d14803425
 Popups1Bg=d9605082
 Popups1Tx=d13355769
@@ -1736,7 +1736,7 @@ colorSect=d16769220
 [tabSRMM_NEN]
 ColorBackErr=d9605082
 ColorBackMsg=d7580618
-ColorBackOthers=d8421504
+ColorBackOthers=d8289408
 ColorTextErr=d13355769
 ColorTextMsg=d12380158
 ColorTextOthers=d14803425
@@ -1746,9 +1746,9 @@ Popup/ColorBack=d13738876
 Popup/ColorText=d16769220
 
 [TypingNotify]
-OFF_BG=d8421504
+OFF_BG=d8289408
 OFF_TX=d14803425
-ON_BG=d8421504
+ON_BG=d8289408
 ON_TX=d14803425
 
 [UserInfoEx]
@@ -1758,7 +1758,7 @@ PopupBirthClrBirthBack=d13212314
 PopupBirthClrBirthText=d16767449
 
 [Weather]
-BackgroundColour=d8421504
+BackgroundColour=d8289408
 TextColour=d14803425
 
 [WebView]
