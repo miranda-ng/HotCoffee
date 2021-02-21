@@ -220,6 +220,7 @@ $$Separator=s
 AvatarsBorderColor=d16777215
 AvatarsSize=w26
 AvatarsWidth=w26
+MinRowHeight=w30
 Width=d218
 
 [CLUI]
@@ -245,6 +246,11 @@ GammaCorrect=b0
 [ModernData]
 DisableEngine=l
 EnableLayering=b1
+
+[TopToolBar]
+BUTTGAP=d0
+BUTTHEIGHT=d22
+BUTTWIDTH=d22
 
 
 ;Colors
