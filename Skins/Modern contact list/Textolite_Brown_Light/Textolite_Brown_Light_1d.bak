@@ -1,4 +1,12 @@
-SETTINGS:
+[Skin_Description_Section]
+Author=Egoist, Favor, Dracosha
+Contact=im.hotcoffee@gmail.com
+Description=Skin for Modern contact list layered
+Name=Textolite_Brown_Light
+Preview=Preview.png
+SubStyle=Normal
+URL=https://miranda-ng.org/hotcoffee
+Version=1d
 
 [-ModernSkin]
 
