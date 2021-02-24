@@ -1,6 +1,6 @@
 [VersionSkin]
 Author=Egoist, Favor, Dracosha
-Version=2.0
+Version=1a
 
 [Theme]
 File=Textolite_Brown_Light.tabsrmm
@@ -117,7 +117,7 @@ Bottom=1
 ;--------Image---------
 
 [$glyphs]
-Image=BG2.png
+Image=BG_1a.png
 Alpha=100
 Perpixel=1
 

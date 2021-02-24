@@ -1,7 +1,7 @@
 #Author:	Egoist, Favor, Dracosha
 #Description:	Skin for Popup+ 2.1.0.7 or later
 #Name:		Textolite_Brown_Light
-#Version:	1d
+#Version:	1b
 
 #===========Options================================================================================
 options
@@ -232,7 +232,7 @@ end
 object
 	ifnotset 2
 	type bitmap
-	source text_bg.png
+	source pixel:434041
 	x 9
 	y 19+title.height+8
 	w -10
@@ -241,7 +241,7 @@ end
 object
 	ifset 2
 	type bitmap
-	source text_bg.png
+	source pixel:434041
 	mono
 	x 9
 	y 19+title.height+8
@@ -251,130 +251,21 @@ end
 object
 	ifnotset 2
 	type bitmap
-	source text_bg_glow_l.png
-	x 9
-	y 19+title.height+8+2
-	h -14
+	source text_bg.png
+	x 10
+	y 19+title.height+9
+	w -11
+	h -13
 end
 object
 	ifset 2
 	type bitmap
-	source text_bg_glow_l.png
+	source text_bg.png
 	mono
-	x 9
-	y 19+title.height+8+2
-	h -14
-end
-object
-	ifnotset 2
-	type bitmap
-	source text_bg_glow_tl.png
-	x 9
-	y 19+title.height+8
-end
-object
-	ifset 2
-	type bitmap
-	source text_bg_glow_tl.png
-	mono
-	x 9
-	y 19+title.height+8
-end
-object
-	ifnotset 2
-	type bitmap
-	source text_bg_glow_t.png
-	x 11
-	y 19+title.height+8
-	w -12
-end
-object
-	ifset 2
-	type bitmap
-	source text_bg_glow_t.png
-	mono
-	x 11
-	y 19+title.height+8
-	w -12
-end
-object
-	ifnotset 2
-	type bitmap
-	source text_bg_glow_tr.png
-	x -11
-	y 19+title.height+8
-end
-object
-	ifset 2
-	type bitmap
-	source text_bg_glow_tr.png
-	mono
-	x -11
-	y 19+title.height+8
-end
-object
-	ifnotset 2
-	type bitmap
-	source text_bg_glow_r.png
-	x -11
-	y 19+title.height+8+2
-	h -14
-end
-object
-	ifset 2
-	type bitmap
-	source text_bg_glow_r.png
-	mono
-	x -11
-	y 19+title.height+8+2
-	h -14
-end
-object
-	ifnotset 2
-	type bitmap
-	source text_bg_glow_bl.png
-	x 9
-	y -13
-end
-object
-	ifset 2
-	type bitmap
-	source text_bg_glow_bl.png
-	mono
-	x 9
-	y -13
-end
-object
-	ifnotset 2
-	type bitmap
-	source text_bg_glow_b.png
-	x 11
-	y -13
-	w -12
-end
-object
-	ifset 2
-	type bitmap
-	source text_bg_glow_b.png
-	mono
-	x 11
-	y -13
-	w -12
-end
-object
-	ifnotset 2
-	type bitmap
-	source text_bg_glow_br.png
-	x -11
-	y -13
-end
-object
-	ifset 2
-	type bitmap
-	source text_bg_glow_br.png
-	mono
-	x -11
-	y -13
+	x 10
+	y 19+title.height+9
+	w -11
+	h -13
 end
 
 #===========Icon===================================================================================
