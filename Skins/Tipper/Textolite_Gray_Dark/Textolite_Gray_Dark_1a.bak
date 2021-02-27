@@ -3,7 +3,7 @@ Author = Egoist, Favor, Dracosha
 Preview = Preview.png
 
 [Background]
-Image = BG2.png
+Image = BG_1a.png
 TM = TM_STRECH_ALL 
 Left = 53
 Top = 11
@@ -11,7 +11,7 @@ Right = 22
 Bottom = 11
 
 [Sidebar]
-Image = SideBar2.png
+Image = SideBar_1a.png
 TM = TM_STRECH_ALL 
 Left = 9
 Top = 11

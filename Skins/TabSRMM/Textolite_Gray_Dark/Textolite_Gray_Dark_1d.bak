@@ -1,6 +1,6 @@
 [VersionSkin]
 Author=Egoist, Favor, Dracosha
-Version=2a
+Version=1d
 
 [Theme]
 File=Textolite_Gray_Dark.tabsrmm
@@ -50,8 +50,8 @@ RadiusBL=11
 RadiusBR=11
 CaptionOffset=9
 CaptionPadding=8
-TitleButtonWidth=15
-TitleButtonHeight=15
+TitleButtonWidth=17
+TitleButtonHeight=17
 TitleButtonTopOffset=6
 TitleBarLeftOffset=-1
 TitleBarRightOffset=-4
@@ -117,15 +117,15 @@ Bottom=1
 ;--------Image---------
 
 [$glyphs]
-Image=BG2a.png
+Image=BG_1d.png
 Alpha=100
 Perpixel=1
 
 [$Frame]
 Glyph=2,2,121,260
-Left=7
+Left=9
 Top=51
-Right=7
+Right=9
 Bottom=20
 Item0=Frame
 Item1=FrameInactive
@@ -147,7 +147,7 @@ Bottom=1
 Item0=Titlebuttonmouseover
 
 [$Container]
-Glyph=10,34,113,249
+Glyph=11,34,112,249
 Left=1
 Top=1
 Right=1

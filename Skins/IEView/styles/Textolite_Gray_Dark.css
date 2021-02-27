@@ -5,24 +5,24 @@
 }
 
 input {
-	background: #313131;
-	border-left: 1px solid #545454;
-	border-top: 1px solid #545454;
+	background: #3F3F3F;
+	border-left: 1px solid #5A5A5A;
+	border-top: 1px solid #5A5A5A;
 	border-right: 1px solid #141414;
 	border-bottom: 1px solid #141414;
 	color: #C0C0C0;
 }
 
 html {
-	scrollbar-face-color: #313131;
-	scrollbar-highlight-color: #313131;
-	scrollbar-shadow-color: #313131;
+	scrollbar-face-color: #3F3F3F;
+	scrollbar-highlight-color: #3F3F3F;
+	scrollbar-shadow-color: #3F3F3F;
 	scrollbar-arrow-color: #C0C0C0;
-	scrollbar-3dlight-color: #545454;
+	scrollbar-3dlight-color: #5A5A5A;
 	scrollbar-darkshadow-color: #141414;
-	scrollbar-track-color: #454545;
+	scrollbar-track-color: #313131;
 	background: url(Dark.png) fixed no-repeat bottom right;
-	background-color: #454545;
+	background-color: #313131;
 	overflow: auto;
 	padding: 0px 0px 0px 0px;
 	margin: 0;
