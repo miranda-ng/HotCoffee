@@ -3,20 +3,20 @@ Author = Egoist, Favor, Dracosha
 Preview = Preview.png
 
 [Background]
-Image = BG2a.png
+Image = BG_1d.png
 TM = TM_STRECH_ALL 
 Left = 53
-Top = 12
+Top = 13
 Right = 22
-Bottom = 12
+Bottom = 13
 
 [Sidebar]
-Image = SideBar2a.png
+Image = SideBar_1d.png
 TM = TM_STRECH_ALL 
 Left = 9
-Top = 12
-Right = 2
-Bottom = 12
+Top = 13
+Right = 3
+Bottom = 13
 
 [Fonts]
 Title-color = 166 109 68
@@ -38,7 +38,7 @@ Inner-avatar-padding = 2
 Outer-avatar-padding = 13
 General-padding = 13
 Text-padding = 3
-Sidebar-width = 39
+Sidebar-width = 40
 Title-indent = 28
 Text-indent = 28
 Value-indent = 7

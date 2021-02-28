@@ -1,7 +1,7 @@
 #Author:	Egoist, Favor, Dracosha
 #Description:	Skin for Popup+ 2.1.0.7 or later
 #Name:		Textolite_Gray_Light
-#Version:	2.0
+#Version:	1b
 
 #===========Options================================================================================
 options
@@ -211,12 +211,50 @@ end
 
 #===========Background Text area===================================================================
 object
+	ifnotset 1
+	type bitmap
+	source text_edges_light.png
+	x 8
+	y 19+title.height+7
+	w -9
+	h -11
+end
+object
+	ifset 1
+	type bitmap
+	source text_edges_light.png
+	mono
+	x 8
+	y 19+title.height+7
+	w -9
+	h -11
+end
+object
+	ifnotset 2
+	type bitmap
+	source text_edges_dark.png
+	x 9
+	y 19+title.height+8
+	w -10
+	h -12
+end
+object
+	ifset 2
+	type bitmap
+	source text_edges_dark.png
+	mono
+	x 9
+	y 19+title.height+8
+	w -10
+	h -12
+end
+object
 	ifnotset 2
 	type bitmap
 	source text_bg.png
-	x 8
-	y 19+title.height+8
-	w -9
+	x 10
+	y 19+title.height+9
+	w -10
 	h -12
 end
 object
@@ -224,9 +262,9 @@ object
 	type bitmap
 	source text_bg.png
 	mono
-	x 8
-	y 19+title.height+8
-	w -9
+	x 10
+	y 19+title.height+9
+	w -10
 	h -12
 end
 
@@ -581,7 +619,7 @@ object
 	ifset 8
 	ifnotset 9
 	type avatar
-	x 8+2
+	x 8+3
 	y 19+title.height+5+5
 	w options.avatarsize
 	proportional 1
@@ -591,7 +629,7 @@ object
 	ifset 8
 	ifset 9
 	type avatar
-	x window.width-avatar.width-3-5-2
+	x window.width-avatar.width-3-5-3
 	y 19+title.height+5+5
 	w options.avatarsize
 	proportional 1
@@ -604,18 +642,18 @@ object
 	ifnotset 9
 	type text
 	color 63 63 63
-	x 8+avatar.width
+	x 9+avatar.width
 	y 19+title.height+5+4
-	w window.width-(8+avatar.width+5)-8-5
+	w window.width-(9+avatar.width+5)-8-5
 end
 # ifset Color text, ifnotset Avatar to right
 object
 	ifset 4
 	ifnotset 9
 	type text
-	x 8+avatar.width
+	x 9+avatar.width
 	y 19+title.height+5+4
-	w window.width-(8+avatar.width+5)-8-5
+	w window.width-(9+avatar.width+5)-8-5
 end
 # ifnotset Color text, ifset Avatar to right
 object
@@ -625,7 +663,7 @@ object
 	color 63 63 63
 	x 8
 	y 19+title.height+5+4
-	w window.width-(8+avatar.width+5)-8-5
+	w window.width-(9+avatar.width+5)-8-5
 end
 # ifset Color text, ifset Avatar to right
 object
@@ -634,5 +672,5 @@ object
 	type text
 	x 8
 	y 19+title.height+5+4
-	w window.width-(8+avatar.width+5)-8-5
+	w window.width-(9+avatar.width+5)-8-5
 end
