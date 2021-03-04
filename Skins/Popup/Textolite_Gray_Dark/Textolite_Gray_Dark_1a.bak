@@ -340,10 +340,8 @@ object
 	x window.width-1-clock.width+1
 	y 8+3+7+(title.height-clock.height)/2+1
 end
-
-# ifnotset Color text, ifset Dark title text
+# ifset Dark title text
 object
-	ifnotset 4
 	ifset 5
 	ifset 6
 	type clock
@@ -352,7 +350,6 @@ object
 	y 8+3+7+(title.height-clock.height)/2
 end
 object
-	ifnotset 4
 	ifset 5
 	ifset 6
 	type clock
@@ -361,36 +358,10 @@ object
 	y 8+3+7+(title.height-clock.height)/2+1
 end
 object
-	ifnotset 4
 	ifset 5
 	ifset 6
 	type clock
 	color 245 247 248
-	x window.width-1-clock.width+1
-	y 8+3+7+(title.height-clock.height)/2+1
-end
-# ifset Color text, ifset Dark title text
-object
-	ifset 4
-	ifset 5
-	ifset 6
-	type clock
-	x window.width-1-clock.width+1
-	y 8+3+7+(title.height-clock.height)/2
-end
-object
-	ifset 4
-	ifset 5
-	ifset 6
-	type clock
-	x window.width-1-clock.width
-	y 8+3+7+(title.height-clock.height)/2+1
-end
-object
-	ifset 4
-	ifset 5
-	ifset 6
-	type clock
 	x window.width-1-clock.width+1
 	y 8+3+7+(title.height-clock.height)/2+1
 end
@@ -448,10 +419,8 @@ object
 	x 8+icon.width+1+1
 	y 8+3+7+1
 end
-
-# ifnotset Color text, ifset Dark title text
+# ifset Dark title text
 object
-	ifnotset 4
 	ifset 5
 	type title
 	color 245 247 248
@@ -459,7 +428,6 @@ object
 	y 8+3+7
 end
 object
-	ifnotset 4
 	ifset 5
 	type title
 	color 245 247 248
@@ -467,32 +435,9 @@ object
 	y 8+3+7+1
 end
 object
-	ifnotset 4
 	ifset 5
 	type title
 	color 245 247 248
-	x 8+icon.width+1+1
-	y 8+3+7+1
-end
-# ifset Color text, ifset Dark title text
-object
-	ifset 4
-	ifset 5
-	type title
-	x 8+icon.width+1+1
-	y 8+3+7
-end
-object
-	ifset 4
-	ifset 5
-	type title
-	x 8+icon.width+1
-	y 8+3+7+1
-end
-object
-	ifset 4
-	ifset 5
-	type title
 	x 8+icon.width+1+1
 	y 8+3+7+1
 end
