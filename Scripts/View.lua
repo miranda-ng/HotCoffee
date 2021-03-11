@@ -209,7 +209,7 @@ function ApplySkin(skinName, fontName)
 	
 	WriteTabSRMMSkin(skinName, fontName)
 
-	local noTipperSkin = "Default_Miranda,Default_Windows,WinStyle_Dark,WinStyle_Light";
+	local noTipperSkin = "Default_Miranda,Default_Windows";
 	
 	m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\Skins\\"..skinName..".ini"), 0)
 	m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\UserSet\\Fonts\\"..fontName..".ini"), 0)
