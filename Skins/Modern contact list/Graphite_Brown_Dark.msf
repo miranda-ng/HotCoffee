@@ -1566,8 +1566,8 @@ frame_back=d6184542
 
 ;Floating Contacts
 [FloatingContacts]
-BkColor=d6184542
-LTEdgesColor=d3289650
+BkColor=d4737096
+LTEdgesColor=d0
 RBEdgesColor=d0
 
 
@@ -1702,8 +1702,8 @@ PopupTextColour=d14803425
 40076tx=d12442109
 40077bg=d7190176
 40077tx=d11989985
-40078bg=d11899863
-40078tx=d15258365
+40078bg=d12619200
+40078tx=d16436218
 40079bg=l
 40079tx=l
 40080bg=l
