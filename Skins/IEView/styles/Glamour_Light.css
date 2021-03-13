@@ -107,12 +107,16 @@ div.avatar {
 }
 
 .MessageIn, .hMessageIn, .frame_MessageInGroupStart, .frame_hMessageInGroupStart {
+	border-left: 1px solid #FFFFFF;
 	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #949494;
 	border-bottom: 1px solid #949494;
 }
 
 .MessageOut, .hMessageOut, .frame_MessageOutGroupStart, .frame_hMessageOutGroupStart {
+	border-left: 1px solid #FFFFFF;
 	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #949494;
 	border-bottom: 1px solid #949494;
 }
 
@@ -163,7 +167,9 @@ div.avatar {
 }
 
 .Status, .hStatus {
+	border-left: 1px solid #F9F4F1;
 	border-top: 1px solid #F9F4F1;
+	border-right: 1px solid #AD9F94;
 	border-bottom: 1px solid #AD9F94;
 }
 
@@ -184,7 +190,9 @@ div.avatar {
 }
 
 .FileIn, .hFileIn, .FileOut, .hFileOut {
+	border-left: 1px solid #F2F8F2;
 	border-top: 1px solid #F2F8F2;
+	border-right: 1px solid #91A292;
 	border-bottom: 1px solid #91A292;
 }
 
@@ -205,6 +213,8 @@ div.avatar {
 }
 
 .URL, .hURL {
+	border-left: 1px solid #F2F5F9;
 	border-top: 1px solid #F2F5F9;
+	border-right: 1px solid #949EAD;
 	border-bottom: 1px solid #949EAD;
 }
