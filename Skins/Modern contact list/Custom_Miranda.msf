@@ -221,6 +221,7 @@ AvatarsBorderColor=d0
 AvatarsSize=w29
 AvatarsWidth=w29
 MinRowHeight=w30
+ToolWindow=b0
 Width=d218
 
 [CLUI]
