@@ -23,7 +23,7 @@ function WriteTabSRMMSkin(skinName, fontName)
 	local pattern_2 = 'Graphite_Brown_Dark,Graphite_Brown_Light,Graphite_Gray_Dark,Graphite_Gray_Light,Textolite_Dark,Textolite_Light'
 	local pattern_3 = 'Glamour_Aqua_Dark,Glamour_Aqua_Light,Glamour_Dark,Glamour_Light,GoldTime_Dark,GoldTime_Light,PhotoOne_Dark,PhotoOne_Light'
 	local pattern_4 = 'Diplomat_Dark,Diplomat_Light,Textolite_Brown_Dark,Textolite_Brown_Light,Textolite_Gray_Dark,Textolite_Gray_Light'
-	local pattern_5 = 'Surface_Black,Surface_White'
+	local pattern_5 = 'WinStyle_Classic_Dark,WinStyle_Classic_Light,Surface_Black,Surface_White'
 
 	local result = 0
 

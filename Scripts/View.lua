@@ -130,8 +130,11 @@ Skins =
 	{ Name = 'Native_7_Dark',   Description = 'Native 7 Dark',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2C001' },
 	{ Name = 'Native_7_Light',   Description = 'Native 7 Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2C002' },
 
-	{ Name = 'WinStyle_Dark',   Description = 'WinStyle Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2C003' },
-	{ Name = 'WinStyle_Light',   Description = 'WinStyle Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2C004' },
+	{ Name = 'WinStyle_Classic_Dark',   Description = 'WinStyle Classic Dark',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2C003' },
+	{ Name = 'WinStyle_Classic_Light',   Description = 'WinStyle Classic Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2C004' },
+
+	{ Name = 'WinStyle_Dark',   Description = 'WinStyle Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2C005' },
+	{ Name = 'WinStyle_Light',   Description = 'WinStyle Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2C006' },
 
 	{ Name = 'Diplomat_Dark',   Description = 'Diplomat Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AA01' },
 	{ Name = 'Diplomat_Light',   Description = 'Diplomat Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AA02' },
@@ -166,7 +169,7 @@ function WriteTabSRMMSkin(skinName, fontName)
 	local pattern_2 = 'Graphite_Brown_Dark,Graphite_Brown_Light,Graphite_Gray_Dark,Graphite_Gray_Light,Textolite_Dark,Textolite_Light'
 	local pattern_3 = 'Glamour_Aqua_Dark,Glamour_Aqua_Light,Glamour_Dark,Glamour_Light,GoldTime_Dark,GoldTime_Light,PhotoOne_Dark,PhotoOne_Light'
 	local pattern_4 = 'Diplomat_Dark,Diplomat_Light,Textolite_Brown_Dark,Textolite_Brown_Light,Textolite_Gray_Dark,Textolite_Gray_Light'
-	local pattern_5 = 'Surface_Black,Surface_White'
+	local pattern_5 = 'WinStyle_Classic_Dark,WinStyle_Classic_Light,Surface_Black,Surface_White'
 
 	local result = 0
 
