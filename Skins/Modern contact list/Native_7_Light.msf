@@ -1697,7 +1697,7 @@ PopupTextColour=d4535589
 40073tx=d8403200
 40074bg=d9605082
 40074tx=d196736
-40075bg=d13212314
+40075bg=d13998489
 40075tx=d7877170
 40076bg=d7839184
 40076tx=d12917
@@ -1733,7 +1733,7 @@ Popups2Bg=d13738876
 Popups2Tx=d8403200
 
 [SecureIM]
-colorKeyb=d13212314
+colorKeyb=d13998489
 colorKeyt=d7877170
 colorSRb=d8304766
 colorSRt=d18944
@@ -1761,7 +1761,7 @@ ON_TX=d4535589
 [UserInfoEx]
 PopupAnnivClrBack=d10662771
 PopupAnnivClrText=d3557888
-PopupBirthClrBirthBack=d13212314
+PopupBirthClrBirthBack=d13998489
 PopupBirthClrBirthText=d7877170
 
 [Weather]
@@ -1773,7 +1773,7 @@ PopBGClr=d13738876
 PopTxtClr=d8403200
 
 [WhenWasIt]
-Background=d13212314
+Background=d13998489
 Foreground=d7877170
 
 
