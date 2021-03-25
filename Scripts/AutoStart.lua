@@ -22,8 +22,9 @@ function WriteTabSRMMSkin(skinName, fontName)
 	local pattern_1 = 'Custom_Miranda,Custom_Miranda_Dark,Custom_Miranda_Light'
 	local pattern_2 = 'Graphite_Brown_Dark,Graphite_Brown_Light,Graphite_Gray_Dark,Graphite_Gray_Light,Textolite_Dark,Textolite_Light'
 	local pattern_3 = 'Glamour_Aqua_Dark,Glamour_Aqua_Light,Glamour_Dark,Glamour_Light,GoldTime_Dark,GoldTime_Light,PhotoOne_Dark,PhotoOne_Light'
-	local pattern_4 = 'Diplomat_Dark,Diplomat_Light,Textolite_Brown_Dark,Textolite_Brown_Light,Textolite_Gray_Dark,Textolite_Gray_Light'
-	local pattern_5 = 'WinStyle_Classic_Dark,WinStyle_Classic_Light,Surface_Black,Surface_White'
+	local pattern_4 = 'WinStyle_Classic_Dark,WinStyle_Classic_Light'
+	local pattern_5 = 'Diplomat_Dark,Diplomat_Light,Textolite_Brown_Dark,Textolite_Brown_Light,Textolite_Gray_Dark,Textolite_Gray_Light'
+	local pattern_6 = 'Surface_Black,Surface_White'
 
 	local result = 0
 
@@ -40,12 +41,16 @@ function WriteTabSRMMSkin(skinName, fontName)
 	elseif pattern_3:find(skinName) and fontName == 'handwriting' then
 		result = 4
 	elseif pattern_4:find(skinName) and fontName == 'printing' then
-		result = 9
+		result = 8
 	elseif pattern_4:find(skinName) and fontName == 'handwriting' then
-		result = 6
+		result = 5
 	elseif pattern_5:find(skinName) and fontName == 'printing' then
-		result = 12
+		result = 9
 	elseif pattern_5:find(skinName) and fontName == 'handwriting' then
+		result = 6
+	elseif pattern_6:find(skinName) and fontName == 'printing' then
+		result = 12
+	elseif pattern_6:find(skinName) and fontName == 'handwriting' then
 		result = 9
 	end
 

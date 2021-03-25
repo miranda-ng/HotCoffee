@@ -39,7 +39,7 @@ Bottom=0
 Inner=4
 
 [WindowFrame]
-Caption=28
+Caption=23
 Left=5
 Right=5
 Bottom=5
@@ -48,7 +48,7 @@ RadiusTL=1
 RadiusTR=0
 RadiusBL=0
 RadiusBR=0
-CaptionOffset=12
+CaptionOffset=8
 CaptionPadding=4
 TitleButtonWidth=17
 TitleButtonHeight=15
@@ -175,7 +175,7 @@ Bottom=2
 Item0=Tabpage
 
 [$Tabitem]
-Glyph=14,29,18,32
+Glyph=16,29,20,32
 ;Alpha=70
 Left=2
 Top=2
@@ -184,7 +184,7 @@ Bottom=1
 Item0=Tabitem
 
 [$Tabitem_hottrack]
-Glyph=14,29,18,32
+Glyph=16,29,20,32
 Left=2
 Top=2
 Right=2
@@ -192,15 +192,15 @@ Bottom=1
 Item0=Tabitem_hottrack
 
 [$Tabitem_active]
-Glyph=8,29,12,32
-Left=2
-Top=2
-Right=2
+Glyph=8,29,14,33
+Left=3
+Top=3
+Right=3
 Bottom=1
 Item0=Tabitem_active
 
 [$Tabitem_bottom]
-Glyph=26,29,30,32
+Glyph=30,29,34,32
 ;Alpha=70
 Left=2
 Top=1
@@ -209,7 +209,7 @@ Bottom=2
 Item0=Tabitem_bottom
 
 [$Tabitem_hottrack_bottom]
-Glyph=26,29,30,32
+Glyph=30,29,34,32
 Left=2
 Top=1
 Right=2
@@ -217,9 +217,9 @@ Bottom=2
 Item0=Tabitem_hottrack_bottom
 
 [$Tabitem_active_bottom]
-Glyph=20,29,24,32
-Left=2
+Glyph=22,29,28,33
+Left=3
 Top=1
-Right=2
-Bottom=2
+Right=3
+Bottom=3
 Item0=Tabitem_active_bottom
