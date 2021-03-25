@@ -4,7 +4,7 @@
 #define fulltype 1                                                          ; full type: 0 - disable, 1 - enable
 #define freezecheckbox 0                                                    ; freezecheckbox: 0 - disable, 1 - enable
 
-#define AppId "HotCoffee™"
+#define AppId "HotCoffee"
 #define AppName "Miranda NG HotCoffee"
 #define AppPath "Miranda HotCoffee"
 #define AppShortName "HotCoffee"
@@ -35,14 +35,14 @@
 #define AppMirVer AppArch == "x86" ? AppShortVer + AppVerStatusBuild + AppVerRevis : AppShortVer + AppVerStatusBuild + AppVerRevis + " x64"
 #define AppDevOrStub AppStatus == "Final" ? "StableVersion" : "DevelopmentVersion"
 
-#define AppUpdateVersion "0.95.4.13028,0.95.5.15968,0.95.6.18429"           ; product version update range
+#define AppUpdateVersion "0.95.6.18429,0.96.1.23805"                        ; product version update range
 
 #define AppWidth "65"                                                       ; Increasing width of the client
 #define AppHeight "25"                                                      ; Increasing height of the client
 
 #define AppSkinUp "1"                                                       ; selective skin if IsUpdate: 0 - disable, 1 - enable
 
-#define AppPublisher "HotCoffee™"
+#define AppPublisher "HotCoffee"
 
 #define AppContacts "im.hotcoffee@gmail.com"
 #define AppLnk "HotCoffee"
@@ -187,8 +187,8 @@ Name: en; MessagesFile: Resources\english.isl,Resources\{#AppShortName}_en.isl; 
 Name: ru; MessagesFile: Resources\russian.isl,Resources\{#AppShortName}_ru.isl; LicenseFile: Resources\License_ru.rtf; InfoBeforeFile: Resources\InfoBefore_ru.rtf; InfoAfterFile: Resources\{#if AppStatus != "Test"}InfoAfter_ru{#else}InfoAfter_ru_Test{#endif}.rtf;
 
 [Messages]
-;BeveledLabel={#AppName} {#AppVer} ({#AppArch}){#if AppStatus = "Test"} Test{#endif} © {#AppPublisher}, 2010 - {#GetDateTimeString('yyyy', '', '')}
-BeveledLabel={#AppName} {#AppVer} {#AppStatus} {#AppRelease} ({#AppArch}) © {#AppPublisher}, 2010 - {#GetDateTimeString('yyyy', '', '')}
+;BeveledLabel={#AppName} {#AppVer} ({#AppArch}){#if AppStatus = "Test"} Test{#endif}  {#AppPublisher}, 2010 - {#GetDateTimeString('yyyy', '', '')}
+BeveledLabel={#AppName} {#AppVer} {#AppStatus} {#AppRelease} ({#AppArch})  {#AppPublisher}, 2010 - {#GetDateTimeString('yyyy', '', '')}
 
 [Types]
 Name: minimal; Description: {code:TypesHelper|MinimalInstall};
@@ -517,12 +517,12 @@ Source: {#AppArch}\Core\*; DestDir: {app}\Core; Flags: ignoreversion; Components
  ; Libs
 Source: {#AppArch}\Libs\*; DestDir: {app}\Libs; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\{#AppExeName}; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\fixme.cmd; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\mdbx_chk.exe; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\mdbx_dump.exe; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\mdbx_load.exe; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+;Source: {#AppArch}\fixme.cmd; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+;Source: {#AppArch}\mdbx_chk.exe; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+;Source: {#AppArch}\mdbx_dump.exe; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+;Source: {#AppArch}\mdbx_load.exe; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\pu_stub.exe; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\libmdbx.mir; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+;Source: {#AppArch}\libmdbx.mir; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 ;Source: {#AppArch}\libeay32.dll; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails; OnlyBelowVersion: 0,6.0;
 ;Source: {#AppArch}\ssleay32.dll; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails; OnlyBelowVersion: 0,6.0;
 Source: x86\Languages\langpack_russian.txt; DestDir: {app}\Languages; Languages: ru; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
@@ -576,6 +576,7 @@ Source: x86\Icons\*; DestDir: {app}\Icons; Flags: ignoreversion; Components: Mai
 Source: x86\Skins\Default_Miranda.ini; DestDir: {app}\Skins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Skins\Default_Windows.ini; DestDir: {app}\Skins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Skins\Avatars\no_avatar.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Skins\IconPacks\*; DestDir: {app}\Skins\IconPacks; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 ;Source: autoexec_pass.ini; DestDir: {app}\Profiles; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 
 ;Source: {#AppArch}\Plugins\Alarms.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
@@ -3364,10 +3365,10 @@ begin
       'TBVisile10':
         Result := Format('%d', [integer(n > 8)]);
     end;
-    // если параметр функции GetCLUIFrames равен EqualSections, ...
-    // то в зависимости от числа протоколов n ...
-    // результатом функции будет '1' (от 1 до 5 протоколов)...
-    // иначе '0' (6 или 7 протоколов)
+    // жІ«жЎЇб± н™‡нµіо«¶й¦ GetCLUIFrames сЎЈҐлџ…qualSections, ...
+    // у¬Ўў иЎўйІЁу¦Ў®рЎёЁт¬ћ рђ±®уЇ«®мЇў n ...
+    // с¦ЁімЅІбі®кЎґн±єн»¶й¦ вґ¤ж° '1' (п° 1 е¬ 5 рђ±®уЇ«®мЇў)...
+    // й® оЃЌнѕ§0' (6 й¬Ё 7 рђ±®уЇ«®мЇў)
     case Param of
       'EqualSections':
         case n of
@@ -3736,7 +3737,7 @@ begin
                   begin
                     Sorted := True;
                     Duplicates := dupIgnore;
-                    Add(Format(' • %s', [szFile]));
+                    Add(Format('  %s', [szFile]));
                   end;
                   //SaveStringToFile('{#SourcePath}\processes.log', Format('GrantedAccess: %x'#13#10'Process: %s'#13#10'File: %s'#13#10#13#10, [sht.GrantedAccess, szProcess, szFile]), True);
                 end;
