@@ -27,7 +27,7 @@ html {
 	padding: 0px 0px 0px 0px;
 	margin: 0;
 	font-size: 13px;
-	color: #4A5968;
+	color: #595451;
 	zoom: 0 !important;
 }
 
@@ -78,7 +78,7 @@ div {
 }
 
 .time {
-	color: #9FAAB5;
+	color: #A49E9B;
 	font-weight: normal;
 	float: right;
 	font-size: 11px;
@@ -102,7 +102,7 @@ div.avatar {
 }
 
 .code {
-	border: 1px dashed #808080;
+	border: 1px dashed #C2BEBC;
 	margin: -1px;
 }
 
@@ -121,7 +121,7 @@ div.avatar {
 }
 
 .MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
-	border-top: 1px dotted #808080;
+	border-top: 1px dotted #C2BEBC;
 }
 
 .hMessageIn, .hMessageOut, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart, .hStatus, .hFileIn, .hFileOut, .hURL {

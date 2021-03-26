@@ -6,8 +6,8 @@
 #===========Options================================================================================
 options
 	#option	id	val	title
-	option	1	0	Color frame
-	option	2	1	Color text background
+	option	1	0	Draw gradient background
+	option	2	0	Color text background
 	option	3	1	Color logo & clocks
 	option	4	1	Color text
 	option	5	0	Light title text
@@ -25,7 +25,7 @@ popup-version 02010007
 #===========Background=============================================================================
 object
 	type bitmap
-	ifnotset 1
+	ifnotset 2
 	source pixel:404040
 	x 0
 	y 8
@@ -34,7 +34,7 @@ object
 end
 object
 	type bitmap
-	ifset 1
+	ifset 2
 	source pixel:404040
 	mono
 	x 0
@@ -44,7 +44,7 @@ object
 end
 object
 	type bitmap
-	ifnotset 1
+	ifnotset 2
 	source pixel:AAA49B
 	x 0
 	y 8
@@ -53,7 +53,7 @@ object
 end
 object
 	type bitmap
-	ifset 1
+	ifset 2
 	source pixel:AAA49B
 	mono
 	x 0
@@ -101,6 +101,7 @@ object
 end
 object
 	type bitmap
+	ifnotset 1
 	ifnotset 2
 	source pixel:D4D0C8
 	x 2
@@ -110,8 +111,30 @@ object
 end
 object
 	type bitmap
+	ifnotset 1
 	ifset 2
 	source pixel:D4D0C8
+	mono
+	x 2
+	y 10
+	w -3
+	h -3
+end
+object
+	type bitmap
+	ifset 1
+	ifnotset 2
+	source gradient:v/C0BBAF/E8E6E1
+	x 2
+	y 10
+	w -3
+	h -3
+end
+object
+	type bitmap
+	ifset 1
+	ifset 2
+	source gradient:v/C0BBAF/E8E6E1
 	mono
 	x 2
 	y 10
@@ -129,7 +152,7 @@ end
 
 #===========Logo===================================================================================
 object
-	ifnotset 1
+	ifnotset 2
 	ifnotset 6
 	ifset 10
 	type bitmap
@@ -139,7 +162,7 @@ object
 	y 2
 end
 object
-	ifset 1
+	ifset 2
 	ifnotset 6
 	ifset 10
 	type bitmap
@@ -236,7 +259,7 @@ end
 
 #===========Clock==================================================================================
 object
-	ifnotset 1
+	ifnotset 2
 	ifnotset 6
 	ifnotset 10
 	type clock
@@ -247,7 +270,7 @@ object
 	y 8+1
 end
 object
-	ifset 1
+	ifset 2
 	ifnotset 6
 	ifnotset 10
 	type clock
@@ -259,7 +282,7 @@ object
 	y 8+1
 end
 object
-	ifnotset 1
+	ifnotset 2
 	ifnotset 6
 	ifset 10
 	type clock
@@ -270,7 +293,7 @@ object
 	y 8+1
 end
 object
-	ifset 1
+	ifset 2
 	ifnotset 6
 	ifset 10
 	type clock
@@ -406,7 +429,7 @@ object
 	ifset 5
 	ifset 6
 	type clock
-	color 53 53 53
+	color 89 84 81
 	x window.width-clock.width+1
 	y 8+7+(title.height-clock.height)/2
 end
@@ -415,7 +438,7 @@ object
 	ifset 5
 	ifset 6
 	type clock
-	color 53 53 53
+	color 89 84 81
 	x window.width-clock.width
 	y 8+7+(title.height-clock.height)/2+1
 end
@@ -424,7 +447,7 @@ object
 	ifset 5
 	ifset 6
 	type clock
-	color 53 53 53
+	color 89 84 81
 	x window.width-clock.width+1
 	y 8+7+(title.height-clock.height)/2+1
 end
@@ -461,7 +484,7 @@ object
 	ifnotset 5
 	ifset 6
 	type clock
-	color 53 53 53
+	color 89 84 81
 	x window.width-clock.width
 	y 8+7+(title.height-clock.height)/2
 end
@@ -512,7 +535,7 @@ object
 	ifnotset 4
 	ifset 5
 	type title
-	color 53 53 53
+	color 89 84 81
 	x 6+icon.width+1+1
 	y 8+7
 end
@@ -520,7 +543,7 @@ object
 	ifnotset 4
 	ifset 5
 	type title
-	color 53 53 53
+	color 89 84 81
 	x 6+icon.width+1
 	y 8+7+1
 end
@@ -528,7 +551,7 @@ object
 	ifnotset 4
 	ifset 5
 	type title
-	color 53 53 53
+	color 89 84 81
 	x 6+icon.width+1+1
 	y 8+7+1
 end
@@ -561,7 +584,7 @@ object
 	ifnotset 4
 	ifnotset 5
 	type title
-	color 53 53 53
+	color 89 84 81
 	x 6+icon.width+1
 	y 8+7
 end
@@ -703,7 +726,7 @@ object
 	ifnotset 4
 	ifnotset 9
 	type text
-	color 53 53 53
+	color 89 84 81
 	x 6+avatar.width+1
 	y 8+7+title.height+5+2
 	w window.width-(10+avatar.width+3)-8
@@ -722,7 +745,7 @@ object
 	ifnotset 4
 	ifset 9
 	type text
-	color 53 53 53
+	color 89 84 81
 	x 6+1
 	y 8+7+title.height+5+2
 	w window.width-(10+avatar.width+3)-8

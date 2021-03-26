@@ -14,16 +14,16 @@ Bottom = 5
 Title-color = 170 72 0
 Title-effect = FONT_BOLD
 
-Label-color = 74 89 104
+Label-color = 89 84 81
 Label-effect = FONT_BOLD
 
-Value-color = 74 89 104
+Value-color = 89 84 81
 Value-effect = 0
 
 TrayTitle-color = 0 77 170
 TrayTitle-effect = FONT_BOLD
 
-Divider-color = 159 170 181
+Divider-color = 194 190 188
 
 [Appearance]
 Inner-Avatar-padding = 2
