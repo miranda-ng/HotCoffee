@@ -1,6 +1,6 @@
 [VersionSkin]
 Author=Egoist, Favor, Dracosha
-Version=1d
+Version=2.0
 
 [Theme]
 File=Textolite_Gray_Dark.tabsrmm
@@ -117,7 +117,7 @@ Bottom=1
 ;--------Image---------
 
 [$glyphs]
-Image=BG_1d.png
+Image=BG.png
 Alpha=100
 Perpixel=1
 
