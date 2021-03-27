@@ -1,0 +1,210 @@
+/*--- Global ---*/
+
+.Link-Text, .tzerlink {
+	color: #98BBE7;
+}
+
+input {
+	background: #000000;
+	border-left: 1px solid #191919;
+	border-top: 1px solid #191919;
+	border-right: 1px solid #191919;
+	border-bottom: 1px solid #191919;
+	color: #C0C0C0;
+}
+
+html {
+	scrollbar-face-color: #000000;
+	scrollbar-highlight-color: #000000;
+	scrollbar-shadow-color: #000000;
+	scrollbar-arrow-color: #C0C0C0;
+	scrollbar-3dlight-color: #191919;
+	scrollbar-darkshadow-color: #191919;
+	scrollbar-track-color: #000000;
+	background: url(Dark.png) fixed no-repeat bottom right;
+	background-color: #000000;
+	overflow: auto;
+	padding: 0px 0px 0px 0px;
+	margin: 0;
+	font-size: 13px;
+	color: #C0C0C0;
+	zoom: 0 !important;
+}
+
+a, a:active {
+	color: #98BBE7;
+	text-decoration: none;
+	font-weight: normal;
+	cursor:pointer;
+}
+
+a:visited {
+	color: #E4BA8F;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+a:hover {
+	color: #98BBE7;
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+div {
+	width: auto;
+	word-wrap: break-word;
+}
+
+.img {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	vertical-align: middle;
+}
+
+.head {
+	border-bottom: 1px dotted;
+}
+
+.date {
+	font-weight: bold;
+	float: right;
+	font-size: 11px;
+	padding: 3px 5px 0px 5px;
+}
+
+.name {
+	font-weight: bold;
+	padding: 3px 5px 0px 5px;
+}
+
+.time {
+	color: #808080;
+	font-weight: normal;
+	float: right;
+	font-size: 11px;
+}
+
+.text {
+/*	word-break: break-all;*/
+	padding: 3px 5px 3px 5px;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+div.avatar {
+	display: none;
+	float: left;
+	padding: 0px 0px 0px 0px;
+}
+
+.avatar img {
+	height: 32;
+}
+
+.code {
+	border: 1px dashed #191919;
+	margin: -1px;
+}
+
+/*.MessageIn, .hMessageIn, .frame_MessageInGroupStart, .frame_hMessageInGroupStart {
+	border-top: 1px solid #191919;
+	border-bottom: 1px solid #191919;
+}
+
+.MessageOut, .hMessageOut, .frame_MessageOutGroupStart, .frame_hMessageOutGroupStart {
+	border-top: 1px solid #191919;
+	border-bottom: 1px solid #191919;
+}*/
+
+.MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
+	border-top: 1px dotted #191919;
+}
+
+.hMessageIn, .hMessageOut, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart, .hStatus, .hFileIn, .hFileOut, .hURL {
+	background: url(Surface_Black/history.png) no-repeat bottom right;
+}
+
+/* -------------------- incoming messagebox -------------------- */
+
+.in .head {
+	color: #B5784A;
+	background-image: url(Surface_Black/in.png);
+}
+
+.contentMessageIn, .contenthMessageIn, .contentMessageInGroupStart, .MessageInGroupInner, .contenthMessageInGroupStart, .hMessageInGroupInner {
+	background-image: url(Surface_Black/in.png);
+}
+
+/* -------------------- outgoing messagebox -------------------- */
+
+.out .head {
+	color: #618BBE;
+	background-image: url(Surface_Black/out.png);
+}
+
+.contentMessageOut, .contenthMessageOut, .contentMessageOutGroupStart, .MessageOutGroupInner, .contenthMessageOutGroupStart, .hMessageOutGroupInner {
+	background-image: url(Surface_Black/out.png);
+}
+
+/* -------------------- status support -------------------- */
+
+.status .head {
+	color: #B5784A;
+	background-image: url(Surface_Black/status.png);
+}
+
+.contentStatus, .contenthStatus {
+	color: #E4BA8F;
+	background-image: url(Surface_Black/status.png);
+}
+
+.contentStatus .time, .contenthStatus .time {
+	color: #B98966;
+}
+
+/*.Status, .hStatus {
+	border-top: 1px solid #42382E;
+	border-bottom: 1px solid #0F0D0B;
+}*/
+
+/* -------------------- file transfer support -------------------- */
+
+.infile .head, .outfile .head {
+	color: #699C4E;
+	background-image: url(Surface_Black/file.png);
+}
+
+.contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
+	color: #A3CF8B;
+	background-image: url(Surface_Black/file.png);
+}
+
+.contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
+	color: #82A76D;
+}
+
+/*.FileIn, .hFileIn, .FileOut, .hFileOut {
+	border-top: 1px solid #343F34;
+	border-bottom: 1px solid #0C0E0C;
+}*/
+
+/* -------------------- URL support -------------------- */
+
+.inurl .head, .outurl .head {
+	color: #618BBE;
+	background-image: url(Surface_Black/url.png);
+}
+
+.contentURL, .contenthURL {
+	color: #98BBE7;
+	background-image: url(Surface_Black/url.png);
+}
+
+.contentURL .time, .contenthURL .time {
+	color: #6D91BC;
+}
+
+/*.URL, .hURL {
+	border-top: 1px solid #2C3847;
+	border-bottom: 1px solid #0A0C10;
+}*/

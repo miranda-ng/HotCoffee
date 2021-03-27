@@ -1,0 +1,220 @@
+/*--- Global ---*/
+
+.Link-Text, .tzerlink {
+	color: #B1CCED;
+}
+
+input {
+	background: #506779;
+	border-left: 1px solid #658198;
+	border-top: 1px solid #658198;
+	border-right: 1px solid #253038;
+	border-bottom: 1px solid #253038;
+	color: #D0E0EA;
+}
+
+html {
+	scrollbar-face-color: #506779;
+	scrollbar-highlight-color: #506779;
+	scrollbar-shadow-color: #506779;
+	scrollbar-arrow-color: #D0E0EA;
+	scrollbar-3dlight-color: #658198;
+	scrollbar-darkshadow-color: #253038;
+	scrollbar-track-color: #405261;
+	background: url(Glamour_Aqua_Dark/picture.png) fixed no-repeat bottom right;
+	background-color: #405261;
+	overflow: auto;
+	padding: 0px 0px 0px 0px;
+	margin: 0;
+	font-size: 13px;
+	color: #D0E0EA;
+	zoom: 0 !important;
+}
+
+a, a:active {
+	color: #B1CCED;
+	text-decoration: none;
+	font-weight: normal;
+	cursor:pointer;
+}
+
+a:visited {
+	color: #E9C5A0;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+a:hover {
+	color: #B1CCED;
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+div {
+	width: auto;
+	word-wrap: break-word;
+}
+
+.img {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	vertical-align: middle;
+}
+
+/*.head {
+	border-bottom: 1px dotted;
+}*/
+
+.date {
+	font-weight: bold;
+	float: right;
+	font-size: 11px;
+	padding: 3px 5px 0px 5px;
+}
+
+.name {
+	font-weight: bold;
+	padding: 3px 5px 0px 5px;
+}
+
+.time {
+	color: #8EA5B0;
+	font-weight: normal;
+	float: right;
+	font-size: 11px;
+}
+
+.text {
+/*	word-break: break-all;*/
+	padding: 3px 5px 3px 5px;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+div.avatar {
+	display: none;
+	float: left;
+	padding: 0px 0px 0px 0px;
+}
+
+.avatar img {
+	height: 32;
+}
+
+.code {
+	border: 1px dashed #658198;
+	margin: -1px;
+}
+
+.MessageIn, .hMessageIn, .frame_MessageInGroupStart, .frame_hMessageInGroupStart {
+	border-left: 1px solid #658198;
+	border-top: 1px solid #658198;
+	border-right: 1px solid #253038;
+	border-bottom: 1px solid #253038;
+}
+
+.MessageOut, .hMessageOut, .frame_MessageOutGroupStart, .frame_hMessageOutGroupStart {
+	border-left: 1px solid #597286;
+	border-top: 1px solid #597286;
+	border-right: 1px solid #253038;
+	border-bottom: 1px solid #253038;
+}
+
+.MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
+	border-top: 1px dotted #658198;
+}
+
+.hMessageIn, .hMessageOut, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart, .hStatus, .hFileIn, .hFileOut, .hURL {
+	background: url(Glamour_Aqua_Dark/history.png) no-repeat bottom right;
+}
+
+/* -------------------- incoming messagebox -------------------- */
+
+.in .head {
+	color: #DFA375;
+	background-image: url(Glamour_Aqua_Dark/in.png);
+}
+
+.contentMessageIn, .contenthMessageIn, .contentMessageInGroupStart, .MessageInGroupInner, .contenthMessageInGroupStart, .hMessageInGroupInner {
+	background-image: url(Glamour_Aqua_Dark/in.png);
+}
+
+/* -------------------- outgoing messagebox -------------------- */
+
+.out .head {
+	color: #81ACE2;
+	background-image: url(Glamour_Aqua_Dark/out.png);
+}
+
+.contentMessageOut, .contenthMessageOut, .contentMessageOutGroupStart, .MessageOutGroupInner, .contenthMessageOutGroupStart, .hMessageOutGroupInner {
+	background-image: url(Glamour_Aqua_Dark/out.png);
+}
+
+/* -------------------- status support -------------------- */
+
+.status .head {
+	color: #DFA375;
+	background-image: url(Glamour_Aqua_Dark/status.png);
+}
+
+.contentStatus, .contenthStatus {
+	color: #E9C5A0;
+	background-image: url(Glamour_Aqua_Dark/status.png);
+}
+
+.contentStatus .time, .contenthStatus .time {
+	color: #B98966;
+}
+
+.Status, .hStatus {
+	border-left: 1px solid #956A4A;
+	border-top: 1px solid #956A4A;
+	border-right: 1px solid #3E2D20;
+	border-bottom: 1px solid #3E2D20;
+}
+
+/* -------------------- file transfer support -------------------- */
+
+.infile .head, .outfile .head {
+	color: #8BC26D;
+	background-image: url(Glamour_Aqua_Dark/file.png);
+}
+
+.contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
+	color: #B9D9A6;
+	background-image: url(Glamour_Aqua_Dark/file.png);
+}
+
+.contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
+	color: #7CA367;
+}
+
+.FileIn, .hFileIn, .FileOut, .hFileOut {
+	border-left: 1px solid #588758;
+	border-top: 1px solid #588758;
+	border-right: 1px solid #253825;
+	border-bottom: 1px solid #253825;
+}
+
+/* -------------------- URL support -------------------- */
+
+.inurl .head, .outurl .head {
+	color: #81ACE2;
+	background-image: url(Glamour_Aqua_Dark/url.png);
+}
+
+.contentURL, .contenthURL {
+	color: #B1CCED;
+	background-image: url(Glamour_Aqua_Dark/url.png);
+}
+
+.contentURL .time, .contenthURL .time {
+	color: #6D91BC;
+}
+
+.URL, .hURL {
+	border-left: 1px solid #4A6C95;
+	border-top: 1px solid #4A6C95;
+	border-right: 1px solid #1F2E3F;
+	border-bottom: 1px solid #1F2E3F;
+}
