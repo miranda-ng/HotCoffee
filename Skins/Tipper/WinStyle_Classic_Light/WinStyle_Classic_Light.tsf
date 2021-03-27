@@ -10,6 +10,14 @@ Top = 6
 Right = 5
 Bottom = 5
 
+[Sidebar]
+Image = SideBar.png
+TM = TM_STRECH_ALL 
+Left = 4
+Top = 7
+Right = 0
+Bottom = 7
+
 [Fonts]
 Title-color = 170 72 0
 Title-effect = FONT_BOLD
@@ -30,7 +38,7 @@ Inner-Avatar-padding = 2
 Outer-avatar-padding = 8
 General-padding = 8
 Text-padding = 3
-Sidebar-width = 0
+Sidebar-width = 28
 Title-indent = 23
 Text-indent = 23
 Value-indent = 7
