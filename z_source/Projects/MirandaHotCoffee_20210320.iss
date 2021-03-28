@@ -35,7 +35,7 @@
 #define AppMirVer AppArch == "x86" ? AppShortVer + AppVerStatusBuild + AppVerRevis : AppShortVer + AppVerStatusBuild + AppVerRevis + " x64"
 #define AppDevOrStub AppStatus == "Final" ? "StableVersion" : "DevelopmentVersion"
 
-#define AppUpdateVersion "0.95.6.18429,0.96.1.23805"                        ; product version update range
+#define AppUpdateVersion "0.96.1.23805"                                     ; product version update range
 
 #define AppWidth "65"                                                       ; Increasing width of the client
 #define AppHeight "25"                                                      ; Increasing height of the client
@@ -100,7 +100,7 @@
   "Protocols\Twitter," + \
   "Protocols\VKontakte"
 
-#dim theme[29]
+#dim theme[31]
 #define theme[0] "Default_Miranda"
 #define theme[1] "Default_Windows"
 #define theme[2] "Custom_Miranda"
@@ -108,28 +108,30 @@
 #define theme[4] "Custom_Miranda_Light"
 #define theme[5] "Native_7_Dark"
 #define theme[6] "Native_7_Light"
-#define theme[7] "WinStyle_Dark"
-#define theme[8] "WinStyle_Light"
-#define theme[9] "Diplomat_Dark"
-#define theme[10] "Diplomat_Light"
-#define theme[11] "Glamour_Aqua_Dark"
-#define theme[12] "Glamour_Aqua_Light"
-#define theme[13] "Glamour_Dark"
-#define theme[14] "Glamour_Light"
-#define theme[15] "GoldTime_Dark"
-#define theme[16] "GoldTime_Light"
-#define theme[17] "Graphite_Brown_Dark"
-#define theme[18] "Graphite_Brown_Light"
-#define theme[19] "Graphite_Gray_Dark"
-#define theme[20] "Graphite_Gray_Light"
-#define theme[21] "PhotoOne_Dark"
-#define theme[22] "PhotoOne_Light"
-#define theme[23] "Surface_Black"
-#define theme[24] "Surface_White"
-#define theme[25] "Textolite_Brown_Dark"
-#define theme[26] "Textolite_Brown_Light"
-#define theme[27] "Textolite_Gray_Dark"
-#define theme[28] "Textolite_Gray_Light"
+#define theme[7] "WinStyle_Classic_Dark"
+#define theme[8] "WinStyle_Classic_Light"
+#define theme[9] "WinStyle_Dark"
+#define theme[10] "WinStyle_Light"
+#define theme[11] "Diplomat_Dark"
+#define theme[12] "Diplomat_Light"
+#define theme[13] "Glamour_Aqua_Dark"
+#define theme[14] "Glamour_Aqua_Light"
+#define theme[15] "Glamour_Dark"
+#define theme[16] "Glamour_Light"
+#define theme[17] "GoldTime_Dark"
+#define theme[18] "GoldTime_Light"
+#define theme[19] "Graphite_Brown_Dark"
+#define theme[20] "Graphite_Brown_Light"
+#define theme[21] "Graphite_Gray_Dark"
+#define theme[22] "Graphite_Gray_Light"
+#define theme[23] "PhotoOne_Dark"
+#define theme[24] "PhotoOne_Light"
+#define theme[25] "Surface_Black"
+#define theme[26] "Surface_White"
+#define theme[27] "Textolite_Brown_Dark"
+#define theme[28] "Textolite_Brown_Light"
+#define theme[29] "Textolite_Gray_Dark"
+#define theme[30] "Textolite_Gray_Light"
 
 ; {#AppShortName}_{#AppArch}.ini
 #expr WriteIni(AddBackslash(SourcePath) + "x86\Profiles\" + AppShortName + "_" + AppArch + ".ini", "FileInfo_1", "FileVersion", '"' + GetDateTimeString('yyyy.m.d', '', '') + '"')
@@ -200,7 +202,6 @@ Name: custom; Description: {code:TypesHelper|CustomInstall}; Flags: iscustom;
 
 [Dirs]
 Name: {app}\Inbox;
-Name: {app}\Skins\Smileys\MSN; Components: Protocols\MSN and Resources\Smileys;
 
 #define ICQProtocols "Protocols\ICQ\ICQ and Protocols\ICQ\ICQ2 and Protocols\ICQ\ICQ3 and Protocols\ICQ\ICQ4 and Protocols\ICQ\ICQ5"
 #define JabberProtocols "Protocols\Jabber\GMail and Protocols\Jabber\Google and Protocols\Jabber\GTalk and Protocols\Jabber\Hangouts and Protocols\Jabber\Jabber and Protocols\Jabber\Jabberru and Protocols\Jabber\LJ and Protocols\Jabber\OK and Protocols\Jabber\XMPP"
@@ -209,9 +210,8 @@ Name: {app}\Skins\Smileys\MSN; Components: Protocols\MSN and Resources\Smileys;
  ; main
 Type: filesandordirs; Name: {app}\docs; Check: IsPortableSetupType and IsUpdate;
 Type: files; Name: {app}\{#AppExeOppName}; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\libeay32.dll; Check: IsPortableSetupType and IsUpdate; MinVersion: 0,6.0;
-Type: files; Name: {app}\ssleay32.dll; Check: IsPortableSetupType and IsUpdate; MinVersion: 0,6.0;
-;Type: files; Name: {app}\Plugins\OpenSSL.dll; Check: IsPortableSetupType and IsUpdate; MinVersion: 0,6.0;
+Type: files; Name: {app}\pu_stub.exe; Check: IsPortableSetupType and IsUpdate;
+Type: files; Name: {app}\mirandaboot.ini; Check: IsPortableSetupType and IsUpdate;
 Type: filesandordirs; Name: {app}\Plugins\Cryptors; Check: IsPortableSetupType and IsUpdate;
 Type: files; Name: {app}\Plugins\Dbx_mmap_sa.dll; Check: IsPortableSetupType and IsUpdate;
 Type: files; Name: {app}\Plugins\FlashAvatars.dll; Check: IsPortableSetupType and IsUpdate;
@@ -513,82 +513,65 @@ Source: Resources\fonts\segoepr.ttf; DestDir: {fonts}; FontInstall: Segoe Print;
 Source: Resources\fonts\segoeprb.ttf; DestDir: {fonts}; FontInstall: Segoe Print Bold; Flags: onlyifdoesntexist uninsneveruninstall;
  ; Core
 Source: {#AppArch}\Core\*; DestDir: {app}\Core; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+ ; Icons
+Source: x86\Icons\MirLua_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_conn.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_MetaContacts.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Icons\TabSRMM_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Icons\Toolbar_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+ ; Languages
+Source: x86\Languages\langpack_russian.txt; DestDir: {app}\Languages; Languages: ru; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
  ; Libs
 Source: {#AppArch}\Libs\*; DestDir: {app}\Libs; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\{#AppExeName}; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-;Source: {#AppArch}\fixme.cmd; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-;Source: {#AppArch}\mdbx_chk.exe; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-;Source: {#AppArch}\mdbx_dump.exe; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-;Source: {#AppArch}\mdbx_load.exe; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\pu_stub.exe; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-;Source: {#AppArch}\libmdbx.mir; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-;Source: {#AppArch}\libeay32.dll; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails; OnlyBelowVersion: 0,6.0;
-;Source: {#AppArch}\ssleay32.dll; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails; OnlyBelowVersion: 0,6.0;
-Source: x86\Languages\langpack_russian.txt; DestDir: {app}\Languages; Languages: ru; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\mirandaboot.ini; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+ ; Profiles
 Source: x86\Profiles\settings_en.ini; DestDir: {app}\Profiles; DestName: settings.ini; Languages: en; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Profiles\update_en.ini; DestDir: {app}\Profiles; DestName: update.ini; Languages: en; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Profiles\update_en.ini; DestDir: {app}\Profiles; DestName: autoexec_update.ini; Languages: en; Flags: ignoreversion; Components: MainCore; Check: IsUpdate; AfterInstall: AddDetails;
 Source: x86\Profiles\settings_ru.ini; DestDir: {app}\Profiles; DestName: settings.ini; Languages: ru; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Profiles\update_ru.ini; DestDir: {app}\Profiles; DestName: update.ini; Languages: ru; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Profiles\update_ru.ini; DestDir: {app}\Profiles; DestName: autoexec_update.ini; Languages: ru; Flags: ignoreversion; Components: MainCore; Check: IsUpdate; AfterInstall: AddDetails;
-;Source: x86\docs\*; DestDir: {app}\docs; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MainCore; AfterInstall: AddDetails;
-;Source: x86\Icons\Action_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons\MirLua_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_conn.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_MetaContacts.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons\TabSRMM_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons\Toolbar_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-;Source: {#AppArch}\Plugins\Actman.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-;Source: x86\Plugins\services.ini; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-;Source: {#AppArch}\Plugins\AdvAIMg.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-;Source: {#AppArch}\Plugins\advancedautoaway.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+ ; Plugins
+Source: {#AppArch}\Plugins\Import\*; DestDir: {app}\Plugins\Import; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\AVS.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Clist_modern.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+#if AppStatus == "Test"
+Source: {#AppArch}\Plugins\Console.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+#endif
 Source: {#AppArch}\Plugins\CrashDumper.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-;Source: {#AppArch}\Plugins\cryptors\*.dll; DestDir: {app}\Plugins\cryptors; Flags: ignoreversion; Components: MainCore; Check: IsUpdate and CheckUpdateVersion('0.94.3.4725,0.94.5.5220,0.94.6.6493'); AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Db_autobackups.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\DbChecker.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-;Source: {#AppArch}\Plugins\dbx_mmap_sa.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; Check: IsUpdate and CheckUpdateVersion('0.94.3.4725,0.94.5.5220,0.94.6.6493'); AfterInstall: AddDetails;
-;Source: {#AppArch}\Plugins\Dbx_mmap.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-;Source: {#AppArch}\Plugins\flashavatars.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\Dbx_mdbx.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\Dbx_sqlite.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\Dummy.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Folders.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Import.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\scripts\*.dll; DestDir: {app}\scripts; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\scripts\*.lua; DestDir: {app}\scripts; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\hny.mp3; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\MenuEx.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\MirLua.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\NewAwaySys.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-;Source: {#AppArch}\Plugins\openssl.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails; OnlyBelowVersion: 0,6.0;
 Source: {#AppArch}\Plugins\PackUpdater.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\PluginUpdater.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\pu_stub.exe; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\StatusManager.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\TabSRMM.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\TopToolBar.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Variables.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+ ; Scripts
+Source: {#AppArch}\Scripts\*.dll; DestDir: {app}\Scripts; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Scripts\*.lua; DestDir: {app}\scripts; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+ ; Skins
+Source: x86\Skins\Avatars\no_avatar.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Skins\IconPacks\*; DestDir: {app}\Skins\IconPacks; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Skins\Sounds\hny.mp3; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Skins\Default_Miranda.ini; DestDir: {app}\Skins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Skins\Default_Windows.ini; DestDir: {app}\Skins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+ ; UserSet
 Source: x86\UserSet\Fonts\*; DestDir: {app}\UserSet\Fonts; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\UserSet\Fonts\handwriting.ini; DestDir: {app}\Profiles; DestName: autoexec_zfont.ini; Flags: ignoreversion; Components: MainCore; Check: IsStyleChecked('FontHandwriting'); AfterInstall: AddDetails;
 Source: x86\UserSet\Fonts\printing.ini; DestDir: {app}\Profiles; DestName: autoexec_zfont.ini; Flags: ignoreversion; Components: MainCore; Check: IsStyleChecked('FontPrinting'); AfterInstall: AddDetails;
-Source: x86\Icons\*; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Skins\Default_Miranda.ini; DestDir: {app}\Skins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Skins\Default_Windows.ini; DestDir: {app}\Skins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Skins\Avatars\no_avatar.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Skins\IconPacks\*; DestDir: {app}\Skins\IconPacks; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-;Source: autoexec_pass.ini; DestDir: {app}\Profiles; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-
-;Source: {#AppArch}\Plugins\Alarms.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-#if AppStatus == "Test"
-Source: {#AppArch}\Plugins\Console.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-#endif
-;Source: {#AppArch}\Plugins\mydetails.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-
+ ;
+Source: {#AppArch}\{#AppExeName}; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\pu_stub.exe; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\mirandaboot.ini; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
  ; Protocols
- ; Protocols\AIM
-;Source: {#AppArch}\Plugins\AIM.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\AIM; AfterInstall: AddDetails;
-;Source: x86\Icons\Proto_AIM.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\AIM; AfterInstall: AddDetails;
-;Source: x86\Icons\Proto_conn_AIM.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\AIM; AfterInstall: AddDetails;
  ; Protocols\Facebook
 Source: {#AppArch}\Plugins\Facebook.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Facebook; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_conn_Facebook.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Facebook; AfterInstall: AddDetails;
@@ -602,7 +585,6 @@ Source: x86\Icons\Proto_GG.dll; DestDir: {app}\Icons; Flags: ignoreversion; Comp
 Source: {#AppArch}\Plugins\ICQ.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: {#ICQProtocol}; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_conn_ICQ.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: {#ICQProtocol}; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_ICQ.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: {#ICQProtocol}; AfterInstall: AddDetails;
-Source: x86\Icons\xStatus_ICQ.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: {#ICQProtocol}; AfterInstall: AddDetails;
  ; Protocols\ICQ\ICQ2
 Source: x86\Icons\Proto_conn_ICQ2.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\ICQ2; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_ICQ2.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\ICQ2; AfterInstall: AddDetails;
@@ -922,7 +904,7 @@ Source: x86\Skins\IEView\styles\{#theme[i]}\*; DestDir: {app}\Skins\IEView\style
 Source: x86\Skins\IEView\styles\{#theme[i]}.css; DestDir: {app}\Skins\IEView\styles; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]} and Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\{#theme[i]}.ivt; DestDir: {app}\Skins\IEView; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]} and Resources\IEView; AfterInstall: AddDetails;
 #endsub
-#for {i = 2; i < 29; i++} AddTheme
+#for {i = 2; i < 31; i++} AddTheme
 ;Source: x86\Skins\IEView\!tools\other\config.js; DestDir: {app}\Skins\IEView; Flags: ignoreversion; Components: Resources\IEView; BeforeInstall: AddDetails; AfterInstall: IEViewConfig
 
  ; copy autoexec_skin.ini for clean installation
@@ -936,6 +918,9 @@ Source: x86\Skins\Custom_Miranda_Light.ini; DestDir: {app}\Profiles; DestName: a
 ;
 Source: x86\Skins\Native_7_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Native_7_Dark') and not IsUpdate; AfterInstall: AddDetails;
 Source: x86\Skins\Native_7_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Native_7_Light') and not IsUpdate; AfterInstall: AddDetails;
+;
+Source: x86\Skins\WinStyle_Classic_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_WinStyle_Classic_Dark') and not IsUpdate; AfterInstall: AddDetails;
+Source: x86\Skins\WinStyle_Classic_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_WinStyle_Classic_Light') and not IsUpdate; AfterInstall: AddDetails;
 ;
 Source: x86\Skins\WinStyle_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_WinStyle_Dark') and not IsUpdate; AfterInstall: AddDetails;
 Source: x86\Skins\WinStyle_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_WinStyle_Light') and not IsUpdate; AfterInstall: AddDetails;
@@ -977,6 +962,9 @@ Source: x86\Skins\Custom_Miranda_Light.ini; DestDir: {app}\Profiles; DestName: a
 ;
 Source: x86\Skins\Native_7_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Native_7_Dark'); AfterInstall: AddDetails;
 Source: x86\Skins\Native_7_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Native_7_Light'); AfterInstall: AddDetails;
+;
+Source: x86\Skins\WinStyle_Classic_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_WinStyle_Classic_Dark'); AfterInstall: AddDetails;
+Source: x86\Skins\WinStyle_Classic_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_WinStyle_Classic_Light'); AfterInstall: AddDetails;
 ;
 Source: x86\Skins\WinStyle_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_WinStyle_Dark'); AfterInstall: AddDetails;
 Source: x86\Skins\WinStyle_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_WinStyle_Light'); AfterInstall: AddDetails;
@@ -1103,6 +1091,9 @@ Name: Resources\Themes\Custom_Miranda_Light; Description: {code:ComponentsHelper
 Name: Resources\Themes\Native_7_Dark; Description: {code:ComponentsHelper|Native_7_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Native_7_Light; Description: {code:ComponentsHelper|Native_7_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 ;
+Name: Resources\Themes\WinStyle_Classic_Dark; Description: {code:ComponentsHelper|WinStyle_Classic_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\WinStyle_Classic_Light; Description: {code:ComponentsHelper|WinStyle_Classic_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
+;
 Name: Resources\Themes\WinStyle_Dark; Description: {code:ComponentsHelper|WinStyle_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\WinStyle_Light; Description: {code:ComponentsHelper|WinStyle_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 ;
@@ -1226,6 +1217,9 @@ Name: Resources\Themes\Custom_Miranda_Light; Description: {code:ComponentsHelper
 Name: Resources\Themes\Native_7_Dark; Description: {code:ComponentsHelper|Native_7_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Native_7_Light; Description: {code:ComponentsHelper|Native_7_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 ;
+Name: Resources\Themes\WinStyle_Classic_Dark; Description: {code:ComponentsHelper|WinStyle_Classic_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\WinStyle_Classic_Light; Description: {code:ComponentsHelper|WinStyle_Classic_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
+;
 Name: Resources\Themes\WinStyle_Dark; Description: {code:ComponentsHelper|WinStyle_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\WinStyle_Light; Description: {code:ComponentsHelper|WinStyle_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 ;
@@ -1327,8 +1321,8 @@ Root: HKCU; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\
 Root: HKCU; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {userappdata}\Microsoft\Internet Explorer\Quick Launch\{#AppName}.lnk; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Tasks: curuser and quicklaunchicon; Check: IsRunAsAdmin
 Root: HKCU; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {userstartup}\{#AppLnk}.lnk; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Tasks: curuser and autorun; Check: IsRunAsAdmin
 
-#define DarkSkin "IsStyleChecked('Skin_Custom_Miranda_Dark') or IsStyleChecked('Skin_Diplomat_Dark') or IsStyleChecked('Skin_Glamour_Aqua_Dark') or IsStyleChecked('Skin_Glamour_Dark') or IsStyleChecked('Skin_GoldTime_Dark') or IsStyleChecked('Skin_Graphite_Brown_Dark') or IsStyleChecked('Skin_Graphite_Gray_Dark') or IsStyleChecked('Skin_Native_7_Dark') or IsStyleChecked('Skin_PhotoOne_Dark') or IsStyleChecked('Skin_Surface_Black') or IsStyleChecked('Skin_Textolite_Brown_Dark') or IsStyleChecked('Skin_Textolite_Gray_Dark') or IsStyleChecked('Skin_WinStyle_Dark')"
-#define LightSkin "IsStyleChecked('Skin_Custom_Miranda') or IsStyleChecked('Skin_Custom_Miranda_Light') or IsStyleChecked('Skin_Default_Miranda') or IsStyleChecked('Skin_Default_Windows') or IsStyleChecked('Skin_Diplomat_Light') or IsStyleChecked('Skin_Glamour_Aqua_Light') or IsStyleChecked('Skin_Glamour_Light') or IsStyleChecked('Skin_GoldTime_Light') or IsStyleChecked('Skin_Graphite_Brown_Light') or IsStyleChecked('Skin_Graphite_Gray_Light') or IsStyleChecked('Skin_Native_7_Light') or IsStyleChecked('Skin_PhotoOne_Light') or IsStyleChecked('Skin_Surface_White') or IsStyleChecked('Skin_Textolite_Brown_Light') or IsStyleChecked('Skin_Textolite_Gray_Light') or IsStyleChecked('Skin_WinStyle_Light')"
+#define DarkSkin "IsStyleChecked('Skin_Custom_Miranda_Dark') or IsStyleChecked('Skin_Native_7_Dark') or IsStyleChecked('WinStyle_Classic_Dark') or IsStyleChecked('Skin_WinStyle_Dark') or IsStyleChecked('Skin_Diplomat_Dark') or IsStyleChecked('Skin_Glamour_Aqua_Dark') or IsStyleChecked('Skin_Glamour_Dark') or IsStyleChecked('Skin_GoldTime_Dark') or IsStyleChecked('Skin_Graphite_Brown_Dark') or IsStyleChecked('Skin_Graphite_Gray_Dark') or IsStyleChecked('Skin_PhotoOne_Dark') or IsStyleChecked('Skin_Surface_Black') or IsStyleChecked('Skin_Textolite_Brown_Dark') or IsStyleChecked('Skin_Textolite_Gray_Dark')"
+#define LightSkin "IsStyleChecked('Skin_Custom_Miranda') or IsStyleChecked('Skin_Custom_Miranda_Light') or IsStyleChecked('Skin_Default_Miranda') or IsStyleChecked('Skin_Default_Windows') or IsStyleChecked('Skin_Native_7_Light') or IsStyleChecked('WinStyle_Classic_Light') or IsStyleChecked('Skin_WinStyle_Light') or IsStyleChecked('Skin_Diplomat_Light') or IsStyleChecked('Skin_Glamour_Aqua_Light') or IsStyleChecked('Skin_Glamour_Light') or IsStyleChecked('Skin_GoldTime_Light') or IsStyleChecked('Skin_Graphite_Brown_Light') or IsStyleChecked('Skin_Graphite_Gray_Light') or IsStyleChecked('Skin_PhotoOne_Light') or IsStyleChecked('Skin_Surface_White') or IsStyleChecked('Skin_Textolite_Brown_Light') or IsStyleChecked('Skin_Textolite_Gray_Light')"
 
 [INI]
 Filename: {app}\mirandaboot.ini; Section: Database; Key: ProfileDir; String: {#AppProfile}\Profiles; Check: IsDefaultSetupType;
@@ -1638,6 +1632,16 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; Stri
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uNative_7_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Native_7_Light');
 Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uNative_7_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Native_7_Light');
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uNative_7_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Native_7_Light') and IsUpdate;
+
+ ; WinStyle_Classic_Dark
+Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uWinStyle_Classic_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_WinStyle_Classic_Dark');
+Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uWinStyle_Classic_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_WinStyle_Classic_Dark');
+Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uWinStyle_Classic_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_WinStyle_Classic_Dark') and IsUpdate;
+
+ ; WinStyle_Classic_Light
+Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uWinStyle_Classic_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_WinStyle_Classic_Light');
+Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uWinStyle_Classic_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_WinStyle_Classic_Light');
+Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uWinStyle_Classic_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_WinStyle_Classic_Light') and IsUpdate;
 
  ; WinStyle_Dark
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uWinStyle_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_WinStyle_Dark');
@@ -2243,7 +2247,7 @@ Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Font
 Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b237; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,4');
 Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b235; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,5');
 #endsub
-#for {i = 2; i < 29; i++} AddThemeIni
+#for {i = 2; i < 31; i++} AddThemeIni
  ; LoadHistorySize
 Filename: {app}\Profiles\settings.ini; Section: SRMsg; Key: LoadCount; String: w5; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1');
 Filename: {app}\Profiles\settings.ini; Section: SRMsg; Key: LoadCount; String: w10; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2');
@@ -6077,6 +6081,8 @@ begin
       'Skin_Custom_Miranda_Light',
       'Skin_Native_7_Dark',
       'Skin_Native_7_Light',
+      'Skin_WinStyle_Classic_Dark',
+      'Skin_WinStyle_Classic_Light',
       'Skin_WinStyle_Dark',
       'Skin_WinStyle_Light',
       'Skin_Diplomat_Dark',
@@ -7233,6 +7239,8 @@ begin
       AddRadioButton(StylesHelper('Skin_Custom_Miranda_Light'), '', 1, False, True, nil);
       AddRadioButton(StylesHelper('Skin_Native_7_Dark'), '', 1, False, True, nil);
       AddRadioButton(StylesHelper('Skin_Native_7_Light'), '', 1, False, True, nil);
+      AddRadioButton(StylesHelper('Skin_WinStyle_Classic_Dark'), '', 1, False, True, nil);
+      AddRadioButton(StylesHelper('Skin_WinStyle_Classic_Light'), '', 1, False, True, nil);
       AddRadioButton(StylesHelper('Skin_WinStyle_Dark'), '', 1, False, True, nil);
       AddRadioButton(StylesHelper('Skin_WinStyle_Light'), '', 1, False, True, nil);
       AddRadioButton(StylesHelper('Skin_Diplomat_Dark'), '', 1, False, True, nil);
@@ -7764,6 +7772,8 @@ begin
                 'Skin_Custom_Miranda_Light',
                 'Skin_Native_7_Dark',
                 'Skin_Native_7_Light',
+                'Skin_WinStyle_Classic_Dark',
+                'Skin_WinStyle_Classic_Light',
                 'Skin_WinStyle_Dark',
                 'Skin_WinStyle_Light',
                 'Skin_Diplomat_Dark',
@@ -9309,6 +9319,8 @@ begin
           'Resources\Themes\Custom_Miranda_Light',
           'Resources\Themes\Native_7_Dark',
           'Resources\Themes\Native_7_Light',
+          'Resources\Themes\WinStyle_Classic_Dark',
+          'Resources\Themes\WinStyle_Classic_Light',
           'Resources\Themes\WinStyle_Dark',
           'Resources\Themes\WinStyle_Light',
           'Resources\Themes\Diplomat_Dark',
@@ -9481,6 +9493,8 @@ begin
           'Resources\Themes\Custom_Miranda_Light',
           'Resources\Themes\Native_7_Dark',
           'Resources\Themes\Native_7_Light',
+          'Resources\Themes\WinStyle_Classic_Dark',
+          'Resources\Themes\WinStyle_Classic_Light',
           'Resources\Themes\WinStyle_Dark',
           'Resources\Themes\WinStyle_Light',
           'Resources\Themes\Diplomat_Dark',
@@ -9973,6 +9987,10 @@ begin
             ItemEnabled[i] := IsComponentSelected('Resources\Themes\Native_7_Dark') and bUpdate;
           'Skin_Native_7_Light':
             ItemEnabled[i] := IsComponentSelected('Resources\Themes\Native_7_Light') and bUpdate;
+          'Skin_WinStyle_Classic_Dark':
+            ItemEnabled[i] := IsComponentSelected('Resources\Themes\WinStyle_Classic_Dark') and bUpdate;
+          'Skin_WinStyle_Classic_Light':
+            ItemEnabled[i] := IsComponentSelected('Resources\Themes\WinStyle_Classic_Light') and bUpdate;
           'Skin_WinStyle_Dark':
             ItemEnabled[i] := IsComponentSelected('Resources\Themes\WinStyle_Dark') and bUpdate;
           'Skin_WinStyle_Light':

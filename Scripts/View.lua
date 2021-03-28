@@ -160,8 +160,8 @@ Skins =
 
 	{ Name = 'Textolite_Brown_Dark',  Description = 'Textolite Brown Dark',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2BA01' },
 	{ Name = 'Textolite_Brown_Light',  Description = 'Textolite Brown Light', Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2BA02' },
-	{ Name = 'Textolite_Gray_Dark',  Description = 'Textolite Gray Dark',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2BB01' },
-	{ Name = 'Textolite_Gray_Light',  Description = 'Textolite Gray Light', Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2BB02' },
+	{ Name = 'Textolite_Gray_Dark',  Description = 'Textolite Gray Dark',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2BA03' },
+	{ Name = 'Textolite_Gray_Light',  Description = 'Textolite Gray Light', Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2BA04' },
 }
 
 function WriteTabSRMMSkin(skinName, fontName)
