@@ -39,16 +39,16 @@ Icons =
 		IEView =
 		{
 			Root = icolib.AddIcon('menuIEView', 'IEView', 'MirLua/View'),
-			Enabled = icolib.AddIcon('IEViewCBEnabled', 'Enabled', "MirLua/View/IEView"),
 			Disabled = icolib.AddIcon('IEViewCBDisabled', 'Disabled', "MirLua/View/IEView"),
+			Enabled = icolib.AddIcon('IEViewCBEnabled', 'Enabled', "MirLua/View/IEView"),
 		},
 		Chats =
 		{
 			Root = icolib.AddIcon('menuChats', 'Chats', 'MirLua/View'),
 			AutoSize =
 			{
-				Enabled = icolib.AddIcon('ChatsASEnabled', 'Auto size enabled', "MirLua/View/Chats"),
 				Disabled = icolib.AddIcon('ChatsASDisabled', 'Auto size disabled', "MirLua/View/Chats"),
+				Enabled = icolib.AddIcon('ChatsASEnabled', 'Auto size enabled', "MirLua/View/Chats"),
 			}
 		}
 	}
