@@ -1139,11 +1139,11 @@ Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 270; String: d70
 Filename: {app}\Profiles\update.ini; Section: OK; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
 Filename: {app}\Profiles\autoexec_update.ini; Section: OK; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK; Check: IsUpdate;
  ; Protocols\Skype
-Filename: {app}\Profiles\settings.ini; Section: Skype; Key: AM_BaseProto; String: sSkype; Flags: uninsdeleteentry; Components: Protocols\Skype;
+Filename: {app}\Profiles\settings.ini; Section: Skype; Key: AM_BaseProto; String: sSKYPE; Flags: uninsdeleteentry; Components: Protocols\Skype;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 75; String: sSkype; Flags: uninsdeleteentry; Components: Protocols\Skype;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 275; String: d75; Flags: uninsdeleteentry; Components: Protocols\Skype;
-Filename: {app}\Profiles\update.ini; Section: Skype; Key: AM_BaseProto; String: sSkype; Flags: uninsdeleteentry; Components: Protocols\Skype;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Skype; Key: AM_BaseProto; String: sSkype; Flags: uninsdeleteentry; Components: Protocols\Skype; Check: IsUpdate;
+Filename: {app}\Profiles\update.ini; Section: Skype; Key: AM_BaseProto; String: sSKYPE; Flags: uninsdeleteentry; Components: Protocols\Skype;
+Filename: {app}\Profiles\autoexec_update.ini; Section: Skype; Key: AM_BaseProto; String: sSKYPE; Flags: uninsdeleteentry; Components: Protocols\Skype; Check: IsUpdate;
  ; Protocols\Twitter
 Filename: {app}\Profiles\settings.ini; Section: Twitter; Key: AM_BaseProto; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 80; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter;
@@ -1599,13 +1599,13 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: Cus
 
  ; Settings Page
  ; on/off sending messages
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: SendOnShiftEnter; String: b{code:SetBoolSetting|SendShiftEnter}; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: sendonshiftenter; String: b{code:SetBoolSetting|SendShiftEnter}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: SendOnEnter; String: b{code:SetBoolSetting|SendEnter}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: SendOnDblEnter; String: b{code:SetBoolSetting|SendDoubleEnter}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: SendOnShiftEnter; String: b{code:SetBoolSetting|SendShiftEnter}; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: sendonshiftenter; String: b{code:SetBoolSetting|SendShiftEnter}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: SendOnEnter; String: b{code:SetBoolSetting|SendEnter}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: SendOnDblEnter; String: b{code:SetBoolSetting|SendDoubleEnter}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: SendOnShiftEnter; String: b{code:SetBoolSetting|SendShiftEnter}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: sendonshiftenter; String: b{code:SetBoolSetting|SendShiftEnter}; Flags: uninsdeleteentry; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: SendOnEnter; String: b{code:SetBoolSetting|SendEnter}; Flags: uninsdeleteentry; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: SendOnDblEnter; String: b{code:SetBoolSetting|SendDoubleEnter}; Flags: uninsdeleteentry; Check: IsUpdate;
  ; contactlist right
@@ -1621,9 +1621,9 @@ Filename: {app}\Profiles\settings.ini; Section: CList; Key: OnTop; String: b{cod
 Filename: {app}\Profiles\update.ini; Section: CList; Key: OnTop; String: b{code:SetBoolSetting|OnTop}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: CList; Key: OnTop; String: b{code:SetBoolSetting|OnTop}; Flags: uninsdeleteentry; Check: IsUpdate;
  ; view modes
-Filename: {app}\Profiles\settings.ini; Section: CLUIFrames; Key: Visible6; String: b{code:SetBoolSetting|ViewModes}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: CLUIFrames; Key: Visible6; String: b{code:SetBoolSetting|ViewModes}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: CLUIFrames; Key: Visible6; String: b{code:SetBoolSetting|ViewModes}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {app}\Profiles\settings.ini; Section: CLUIFrames; Key: Visible5; String: b{code:SetBoolSetting|ViewModes}; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\update.ini; Section: CLUIFrames; Key: Visible5; String: b{code:SetBoolSetting|ViewModes}; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\autoexec_update.ini; Section: CLUIFrames; Key: Visible5; String: b{code:SetBoolSetting|ViewModes}; Flags: uninsdeleteentry; Check: IsUpdate;
  ; compact mode
 Filename: {app}\Profiles\settings.ini; Section: CLC; Key: CompactMode; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: CList; Key: AlignLeftItemsToLeft; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry;
@@ -10351,6 +10351,6 @@ begin
   DeleteFile(ExpandConstant(strFile));
 end;
 
-//РєРѕРјРїРёР»СЏС†РёСЏ РїСЂРµСЂРІС‘С‚СЃСЏ, СЃРѕР·РґР°СЃС‚СЃСЏ С„Р°Р№Р» MirandaHotCoffee_full.iss РїРѕСЃР»Рµ РѕС‚СЂР°Р±РѕС‚РєРё РїСЂРµРїСЂРѕС†РµСЃСЃРѕСЂРѕРј, РІ С‚Р°РєРѕРј РІРёРґРµ СЃРєСЂРёРїС‚ СѓР¶Рµ РїРѕСЃС‚СѓРїР°РµС‚ РЅР° РѕР±СЂР°Р±РѕС‚РєСѓ РєРѕРјРїРёР»СЏС‚РѕСЂСѓ, РјРѕР¶РЅРѕ РїРѕСЃРјРѕС‚СЂРµС‚СЊ, С‡С‚Рѕ С‚Р°Рј РѕРЅРѕ РЅР°РіРµРЅРµСЂРёР»Рѕ.
+//компиляция прервётся, создастся файл MirandaHotCoffee_full.iss после отработки препроцессором, в таком виде скрипт уже поступает на обработку компилятору, можно посмотреть, что там оно нагенерило.
 //#expr SaveToFile(SourcePath + "MirandaHotCoffee_full.iss")
 //#pragma error "Stop compile"
