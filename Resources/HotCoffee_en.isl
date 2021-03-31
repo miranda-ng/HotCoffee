@@ -5,7 +5,7 @@ LanguageCodePage=0
 
 [CustomMessages]
 ; *** "Welcome" wizard page
-WelcomeMessageCaption=HotCoffee™ team wishes you to enjoy the communication, like the first cup of hot coffee in the morning.
+WelcomeMessageCaption=HotCoffee team wishes you to enjoy the communication, like the first cup of hot coffee in the morning.
 
 
 ; *** "License Agreement" wizard page
@@ -43,6 +43,7 @@ CoreFiles=MainCore | Miranda NG Core | Minimal set of files and complete set of 
 	; Protocols
 Protocols=Protocols | Protocols | Various messaging protocols (and not only them).
 ProtocolsAIM=Protocols\AIM | AIM | AIM protocol%n(AOL Instant Messenger).%n%nAIM.dll
+ProtocolsDiscord=Protocols\Discord | Discord | Discord protocol.%n%nDiscord.dll
 ProtocolsFacebook=Protocols\Facebook | Facebook | Facebook protocol of the facebook.com social network.%n%nFacebook.dll
 ProtocolsGG=Protocols\GG | GG | Gadu-Gadu protocol.%n%nGG.dll
 ProtocolsICQ=Protocols\ICQ | ICQ | ICQ - closed network protocol that provides access to the instant message & files exchange.%n%nICQ.dll
@@ -81,7 +82,7 @@ ProtocolsOtherDropbox=Protocols\other\Dropbox | Dropbox | Allows to transfer fil
 ProtocolsOtherMetaContacts=Protocols\other\MetaContacts | MetaContacts | Merges many contacts from various protocols into one MetaContact.%n%nMetaContacts.dll
 ProtocolsOthermRadio=Protocols\other\mRadio | mRadio | Plays and records Internet radio streams. Also local media files can be played.%n%nmRadio.dll
 ProtocolsOtherNewsAggregator=Protocols\other\NewsAggregator | NewsAggregator | RSS/Atom reader.%n%nNewsAggregator.dll
-ProtocolsOtherCurrencyRates=Protocols\other\quotes | Quotes | Show currency rates and economic quotes.%n%nQuotes.dll
+ProtocolsOtherCurrencyRates=Protocols\other\CurrencyRates | CurrencyRates | Show currency rates and economic quotes.%n%nCurrencyRates.dll
 ProtocolsOtherWeather=Protocols\other\Weather | Weather | Queries and displays weather information in a contact list.%n%nWeather.dll
 ProtocolsOtherYAMN=Protocols\other\YAMN | YAMN | Mail notifier and browser. POP3 & IMAP protocols included.%n%nYAMN.dll
 	; Plugins
@@ -349,8 +350,8 @@ ArchIncompatibleInfo=Warning: the installer detected some incompatible files and
 
 
 ; *** others
-UpdateWindowTitle=Update — %1
-UninstallWindowTitle=Uninstall — %1
+UpdateWindowTitle=Update  %1
+UninstallWindowTitle=Uninstall  %1
 DeleteUserProfiles=Remove user profiles?
 TypesListInfoCaption=Hover your mouse over the installation type's name to see its description.
 ComponentListInfoCaption=Hover your mouse over the component's name to see its description.

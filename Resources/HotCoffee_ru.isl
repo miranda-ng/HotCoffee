@@ -43,6 +43,7 @@ CoreFiles=MainCore | Ядро Miranda NG | Минимальный набор файлов и полный комплек
 	; Protocols
 Protocols=Protocols | Протоколы | Различные протоколы для обмена сообщениями (и не только).
 ProtocolsAIM=Protocols\AIM | AIM | Протокол AIM%n(AOL Instant Messenger).%n%nAIM.dll
+ProtocolsDiscord=Protocols\Discord | Discord | Протокол Discord.%n%nDiscord.dll
 ProtocolsFacebook=Protocols\Facebook | Facebook | Протокол Facebook (cоциальная сеть facebook.com).%n%nFacebook.dll
 ProtocolsGG=Protocols\GG | GG | Протокол Gadu-Gadu.%n%nGG.dll
 ProtocolsICQ=Protocols\ICQ | ICQ | ICQ — закрытый сетевой протокол, обеспечивающий обмен мгновенными и оффлайновыми текстовыми сообщениями и файлами.%n%nICQ.dll
@@ -81,7 +82,7 @@ ProtocolsOtherDropbox=Protocols\other\Dropbox | Dropbox | Загрузка и пересылка ф
 ProtocolsOtherMetaContacts=Protocols\other\MetaContacts | MetaContacts | Объединяет контакты одинаковых и разных протоколов в один Метаконтакт.%n%nMetaContacts.dll
 ProtocolsOthermRadio=Protocols\other\mRadio | mRadio | Позволяет прослушивать и записывать интернет-радио. Также может воспроизводить локальные файлы.%n%nmRadio.dll
 ProtocolsOtherNewsAggregator=Protocols\other\NewsAggregator | NewsAggregator | Позволяет читать ленты RSS/Atom.%n%nNewsAggregator.dll
-ProtocolsOtherCurrencyRates=Protocols\other\quotes | Quotes | Позволяет наблюдать за изменениями курсов валют и биржевых котировок.%n%nQuotes.dll
+ProtocolsOtherCurrencyRates=Protocols\other\CurrencyRates | CurrencyRates | Позволяет наблюдать за изменениями курсов валют и биржевых котировок.%n%nCurrencyRates.dll
 ProtocolsOtherWeather=Protocols\other\Weather | Weather | Запрос и отображение информации о погоде в вашем списке контактов.%n%nWeather.dll
 ProtocolsOtherYAMN=Protocols\other\YAMN | YAMN | Оповещение и просмотр новой почты для Miranda. Встроены протоколы POP3 и IMAP.%n%nYAMN.dll
 	; Plugins
