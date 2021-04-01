@@ -427,6 +427,7 @@ Source: x86\Skins\Default_Miranda.ini; DestDir: {app}\Skins; Flags: ignoreversio
 Source: x86\Skins\Default_Windows.ini; DestDir: {app}\Skins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
  ; UserSet
 Source: x86\UserSet\Fonts\*; DestDir: {app}\UserSet\Fonts; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\UserSet\ini\*; DestDir: {app}\UserSet\ini; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\UserSet\Fonts\handwriting.ini; DestDir: {app}\Profiles; DestName: autoexec_zfont.ini; Flags: ignoreversion; Components: MainCore; Check: IsStyleChecked('FontHandwriting'); AfterInstall: AddDetails;
 Source: x86\UserSet\Fonts\printing.ini; DestDir: {app}\Profiles; DestName: autoexec_zfont.ini; Flags: ignoreversion; Components: MainCore; Check: IsStyleChecked('FontPrinting'); AfterInstall: AddDetails;
  ; root
@@ -629,7 +630,7 @@ Source: x86\Skins\Sounds\reminders.wav; DestDir: {app}\Skins\Sounds; Flags: igno
 Source: x86\Skins\Sounds\stop.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
  ; Resources\SplashScreen
 Source: {#AppArch}\Plugins\SplashScreen.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Resources\SplashScreen; AfterInstall: AddDetails;
-Source: x86\Skins\SplashScreen\*; DestDir: {app}\Skins\SplashScreen; Flags: ignoreversion; Components: Resources\SplashScreen; AfterInstall: AddDetails;
+Source: x86\Skins\SplashScreen\*; DestDir: {app}\Skins\SplashScreen; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\SplashScreen; AfterInstall: AddDetails;
 Source: x86\Skins\SplashScreen\en\HotSplash5.png; DestDir: {app}\Skins\SplashScreen; DestName: HotSplash5.png; Languages: en; Flags: ignoreversion; Components: Resources\SplashScreen; AfterInstall: AddDetails;
 Source: x86\Skins\SplashScreen\ru\HotSplash5.png; DestDir: {app}\Skins\SplashScreen; DestName: HotSplash5.png; Languages: ru; Flags: ignoreversion; Components: Resources\SplashScreen; AfterInstall: AddDetails;
 Source: x86\Skins\Sounds\startup.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\SplashScreen and Resources\Sounds; AfterInstall: AddDetails;
@@ -647,98 +648,19 @@ Source: x86\Skins\{#theme[i]}.ini; DestDir: {app}\Skins; Flags: ignoreversion; C
 Source: x86\Skins\IEView\styles\{#theme[i]}\*; DestDir: {app}\Skins\IEView\styles\{#theme[i]}; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]} and Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\styles\{#theme[i]}.css; DestDir: {app}\Skins\IEView\styles; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]} and Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\{#theme[i]}.ivt; DestDir: {app}\Skins\IEView; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]} and Resources\IEView; AfterInstall: AddDetails;
-#endsub
-#for {i = 2; i < 31; i++} AddTheme
-
  ; copy autoexec_skin.ini for clean installation
 #if AppSkinUp == "0"
 Source: x86\Skins\Default_Miranda.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Default_Miranda') and not IsUpdate; AfterInstall: AddDetails;
 Source: x86\Skins\Default_Windows.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Default_Windows') and not IsUpdate; AfterInstall: AddDetails;
- ;
-Source: x86\Skins\Custom_Miranda.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Custom_Miranda') and not IsUpdate; AfterInstall: AddDetails;
-Source: x86\Skins\Custom_Miranda_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Custom_Miranda_Dark') and not IsUpdate; AfterInstall: AddDetails;
-Source: x86\Skins\Custom_Miranda_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Custom_Miranda_Light') and not IsUpdate; AfterInstall: AddDetails;
- ;
-Source: x86\Skins\Native_7_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Native_7_Dark') and not IsUpdate; AfterInstall: AddDetails;
-Source: x86\Skins\Native_7_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Native_7_Light') and not IsUpdate; AfterInstall: AddDetails;
- ;
-Source: x86\Skins\WinStyle_Classic_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_WinStyle_Classic_Dark') and not IsUpdate; AfterInstall: AddDetails;
-Source: x86\Skins\WinStyle_Classic_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_WinStyle_Classic_Light') and not IsUpdate; AfterInstall: AddDetails;
- ;
-Source: x86\Skins\WinStyle_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_WinStyle_Dark') and not IsUpdate; AfterInstall: AddDetails;
-Source: x86\Skins\WinStyle_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_WinStyle_Light') and not IsUpdate; AfterInstall: AddDetails;
- ;
-Source: x86\Skins\Diplomat_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Diplomat_Dark; Check: IsStyleChecked('Skin_Diplomat_Dark') and not IsUpdate; AfterInstall: AddDetails;
-Source: x86\Skins\Diplomat_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Diplomat_Light; Check: IsStyleChecked('Skin_Diplomat_Light') and not IsUpdate; AfterInstall: AddDetails;
- ;
-Source: x86\Skins\Glamour_Aqua_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Glamour_Aqua_Dark; Check: IsStyleChecked('Skin_Glamour_Aqua_Dark') and not IsUpdate; AfterInstall: AddDetails;
-Source: x86\Skins\Glamour_Aqua_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Glamour_Aqua_Light; Check: IsStyleChecked('Skin_Glamour_Aqua_Light') and not IsUpdate; AfterInstall: AddDetails;
-Source: x86\Skins\Glamour_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Glamour_Dark; Check: IsStyleChecked('Skin_Glamour_Dark') and not IsUpdate; AfterInstall: AddDetails;
-Source: x86\Skins\Glamour_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Glamour_Light; Check: IsStyleChecked('Skin_Glamour_Light') and not IsUpdate; AfterInstall: AddDetails;
- ;
-Source: x86\Skins\GoldTime_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\GoldTime_Dark; Check: IsStyleChecked('Skin_GoldTime_Dark') and not IsUpdate; AfterInstall: AddDetails;
-Source: x86\Skins\GoldTime_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\GoldTime_Light; Check: IsStyleChecked('Skin_GoldTime_Light') and not IsUpdate; AfterInstall: AddDetails;
- ;
-Source: x86\Skins\Graphite_Brown_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Graphite_Brown_Dark; Check: IsStyleChecked('Skin_Graphite_Brown_Dark') and not IsUpdate; AfterInstall: AddDetails;
-Source: x86\Skins\Graphite_Brown_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Graphite_Brown_Light; Check: IsStyleChecked('Skin_Graphite_Brown_Light') and not IsUpdate; AfterInstall: AddDetails;
-Source: x86\Skins\Graphite_Gray_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Graphite_Gray_Dark; Check: IsStyleChecked('Skin_Graphite_Gray_Dark') and not IsUpdate; AfterInstall: AddDetails;
-Source: x86\Skins\Graphite_Gray_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Graphite_Gray_Light; Check: IsStyleChecked('Skin_Graphite_Gray_Light') and not IsUpdate; AfterInstall: AddDetails;
- ;
-Source: x86\Skins\PhotoOne_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\PhotoOne_Dark; Check: IsStyleChecked('Skin_PhotoOne_Dark') and not IsUpdate; AfterInstall: AddDetails;
-Source: x86\Skins\PhotoOne_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\PhotoOne_Light; Check: IsStyleChecked('Skin_PhotoOne_Light') and not IsUpdate; AfterInstall: AddDetails;
- ;
-Source: x86\Skins\Surface_Black.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Surface_Black; Check: IsStyleChecked('Skin_Surface_Black') and not IsUpdate; AfterInstall: AddDetails;
-Source: x86\Skins\Surface_White.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Surface_White; Check: IsStyleChecked('Skin_Surface_White') and not IsUpdate; AfterInstall: AddDetails;
- ;
-Source: x86\Skins\Textolite_Brown_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Textolite_Brown_Dark; Check: IsStyleChecked('Skin_Textolite_Brown_Dark') and not IsUpdate; AfterInstall: AddDetails;
-Source: x86\Skins\Textolite_Brown_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Textolite_Brown_Light; Check: IsStyleChecked('Skin_Textolite_Brown_Light') and not IsUpdate; AfterInstall: AddDetails;
-Source: x86\Skins\Textolite_Gray_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Textolite_Gray_Dark; Check: IsStyleChecked('Skin_Textolite_Gray_Dark') and not IsUpdate; AfterInstall: AddDetails;
-Source: x86\Skins\Textolite_Gray_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Textolite_Gray_Light; Check: IsStyleChecked('Skin_Textolite_Gray_Light') and not IsUpdate; AfterInstall: AddDetails;
+Source: x86\Skins\{#theme[i]}.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_{#theme[i]}') and not IsUpdate; AfterInstall: AddDetails;
 #endif
 #if AppSkinUp == "1"
 Source: x86\Skins\Default_Miranda.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Default_Miranda'); AfterInstall: AddDetails;
 Source: x86\Skins\Default_Windows.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Default_Windows'); AfterInstall: AddDetails;
- ;
-Source: x86\Skins\Custom_Miranda.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Custom_Miranda'); AfterInstall: AddDetails;
-Source: x86\Skins\Custom_Miranda_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Custom_Miranda_Dark'); AfterInstall: AddDetails;
-Source: x86\Skins\Custom_Miranda_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Custom_Miranda_Light'); AfterInstall: AddDetails;
- ;
-Source: x86\Skins\Native_7_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Native_7_Dark'); AfterInstall: AddDetails;
-Source: x86\Skins\Native_7_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Native_7_Light'); AfterInstall: AddDetails;
- ;
-Source: x86\Skins\WinStyle_Classic_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_WinStyle_Classic_Dark'); AfterInstall: AddDetails;
-Source: x86\Skins\WinStyle_Classic_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_WinStyle_Classic_Light'); AfterInstall: AddDetails;
- ;
-Source: x86\Skins\WinStyle_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_WinStyle_Dark'); AfterInstall: AddDetails;
-Source: x86\Skins\WinStyle_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_WinStyle_Light'); AfterInstall: AddDetails;
- ;
-Source: x86\Skins\Diplomat_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Diplomat_Dark; Check: IsStyleChecked('Skin_Diplomat_Dark'); AfterInstall: AddDetails;
-Source: x86\Skins\Diplomat_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Diplomat_Light; Check: IsStyleChecked('Skin_Diplomat_Light'); AfterInstall: AddDetails;
- ;
-Source: x86\Skins\Glamour_Aqua_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Glamour_Aqua_Dark; Check: IsStyleChecked('Skin_Glamour_Aqua_Dark'); AfterInstall: AddDetails;
-Source: x86\Skins\Glamour_Aqua_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Glamour_Aqua_Light; Check: IsStyleChecked('Skin_Glamour_Aqua_Light'); AfterInstall: AddDetails;
-Source: x86\Skins\Glamour_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Glamour_Dark; Check: IsStyleChecked('Skin_Glamour_Dark'); AfterInstall: AddDetails;
-Source: x86\Skins\Glamour_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Glamour_Light; Check: IsStyleChecked('Skin_Glamour_Light'); AfterInstall: AddDetails;
- ;
-Source: x86\Skins\GoldTime_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\GoldTime_Dark; Check: IsStyleChecked('Skin_GoldTime_Dark'); AfterInstall: AddDetails;
-Source: x86\Skins\GoldTime_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\GoldTime_Light; Check: IsStyleChecked('Skin_GoldTime_Light'); AfterInstall: AddDetails;
- ;
-Source: x86\Skins\Graphite_Brown_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Graphite_Brown_Dark; Check: IsStyleChecked('Skin_Graphite_Brown_Dark'); AfterInstall: AddDetails;
-Source: x86\Skins\Graphite_Brown_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Graphite_Brown_Light; Check: IsStyleChecked('Skin_Graphite_Brown_Light'); AfterInstall: AddDetails;
-Source: x86\Skins\Graphite_Gray_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Graphite_Gray_Dark; Check: IsStyleChecked('Skin_Graphite_Gray_Dark'); AfterInstall: AddDetails;
-Source: x86\Skins\Graphite_Gray_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Graphite_Gray_Light; Check: IsStyleChecked('Skin_Graphite_Gray_Light'); AfterInstall: AddDetails;
- ;
-Source: x86\Skins\PhotoOne_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\PhotoOne_Dark; Check: IsStyleChecked('Skin_PhotoOne_Dark'); AfterInstall: AddDetails;
-Source: x86\Skins\PhotoOne_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\PhotoOne_Light; Check: IsStyleChecked('Skin_PhotoOne_Light'); AfterInstall: AddDetails;
- ;
-Source: x86\Skins\Surface_Black.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Surface_Black; Check: IsStyleChecked('Skin_Surface_Black'); AfterInstall: AddDetails;
-Source: x86\Skins\Surface_White.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Surface_White; Check: IsStyleChecked('Skin_Surface_White'); AfterInstall: AddDetails;
- ;
-Source: x86\Skins\Textolite_Brown_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Textolite_Brown_Dark; Check: IsStyleChecked('Skin_Textolite_Brown_Dark'); AfterInstall: AddDetails;
-Source: x86\Skins\Textolite_Brown_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Textolite_Brown_Light; Check: IsStyleChecked('Skin_Textolite_Brown_Light'); AfterInstall: AddDetails;
-Source: x86\Skins\Textolite_Gray_Dark.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Textolite_Gray_Dark; Check: IsStyleChecked('Skin_Textolite_Gray_Dark'); AfterInstall: AddDetails;
-Source: x86\Skins\Textolite_Gray_Light.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Components: Resources\Themes\Textolite_Gray_Light; Check: IsStyleChecked('Skin_Textolite_Gray_Light'); AfterInstall: AddDetails;
+Source: x86\Skins\{#theme[i]}.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_{#theme[i]}'); AfterInstall: AddDetails;
 #endif
+#endsub
+#for {i = 2; i < 31; i++} AddTheme
 #endif
 
 [Components]
@@ -798,29 +720,29 @@ Name: Resources\Tipper; Description: {code:ComponentsHelper|Tipper}; Types: mini
  ;
 Name: Resources\Themes; Description: {code:ComponentsHelper|Themes}; Types: advanced custom; Flags: collapsed disablenouninstallwarning;
  ;
-Name: Resources\Themes\Custom_Miranda; Description: {code:ComponentsHelper|Custom_Miranda}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Custom_Miranda_Dark; Description: {code:ComponentsHelper|Custom_Miranda_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Custom_Miranda_Light; Description: {code:ComponentsHelper|Custom_Miranda_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Custom_Miranda; Description: {code:ComponentsHelper|Custom_Miranda}; Types: advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Custom_Miranda_Dark; Description: {code:ComponentsHelper|Custom_Miranda_Dark}; Types: advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Custom_Miranda_Light; Description: {code:ComponentsHelper|Custom_Miranda_Light}; Types: advanced custom; Flags: disablenouninstallwarning;
  ;
-Name: Resources\Themes\Native_7_Dark; Description: {code:ComponentsHelper|Native_7_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Native_7_Light; Description: {code:ComponentsHelper|Native_7_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Native_7_Dark; Description: {code:ComponentsHelper|Native_7_Dark}; Types: advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Native_7_Light; Description: {code:ComponentsHelper|Native_7_Light}; Types: advanced custom; Flags: disablenouninstallwarning;
  ;
-Name: Resources\Themes\WinStyle_Classic_Dark; Description: {code:ComponentsHelper|WinStyle_Classic_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\WinStyle_Classic_Light; Description: {code:ComponentsHelper|WinStyle_Classic_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\WinStyle_Classic_Dark; Description: {code:ComponentsHelper|WinStyle_Classic_Dark}; Types: advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\WinStyle_Classic_Light; Description: {code:ComponentsHelper|WinStyle_Classic_Light}; Types: advanced custom; Flags: disablenouninstallwarning;
  ;
-Name: Resources\Themes\WinStyle_Dark; Description: {code:ComponentsHelper|WinStyle_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\WinStyle_Light; Description: {code:ComponentsHelper|WinStyle_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\WinStyle_Dark; Description: {code:ComponentsHelper|WinStyle_Dark}; Types: advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\WinStyle_Light; Description: {code:ComponentsHelper|WinStyle_Light}; Types: advanced custom; Flags: disablenouninstallwarning;
  ;
-Name: Resources\Themes\Diplomat_Dark; Description: {code:ComponentsHelper|Diplomat_Dark}; Types: advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Diplomat_Light; Description: {code:ComponentsHelper|Diplomat_Light}; Types: advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Diplomat_Dark; Description: {code:ComponentsHelper|Diplomat_Dark}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Diplomat_Light; Description: {code:ComponentsHelper|Diplomat_Light}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
  ;
 Name: Resources\Themes\Glamour_Aqua_Dark; Description: {code:ComponentsHelper|Glamour_Aqua_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Glamour_Aqua_Light; Description: {code:ComponentsHelper|Glamour_Aqua_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Glamour_Dark; Description: {code:ComponentsHelper|Glamour_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Glamour_Light; Description: {code:ComponentsHelper|Glamour_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
  ;
-Name: Resources\Themes\GoldTime_Dark; Description: {code:ComponentsHelper|GoldTime_Dark}; Types: advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\GoldTime_Light; Description: {code:ComponentsHelper|GoldTime_Light}; Types: advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\GoldTime_Dark; Description: {code:ComponentsHelper|GoldTime_Dark}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\GoldTime_Light; Description: {code:ComponentsHelper|GoldTime_Light}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
  ;
 Name: Resources\Themes\Graphite_Brown_Dark; Description: {code:ComponentsHelper|Graphite_Brown_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Graphite_Brown_Light; Description: {code:ComponentsHelper|Graphite_Brown_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
@@ -830,8 +752,8 @@ Name: Resources\Themes\Graphite_Gray_Light; Description: {code:ComponentsHelper|
 Name: Resources\Themes\PhotoOne_Dark; Description: {code:ComponentsHelper|PhotoOne_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\PhotoOne_Light; Description: {code:ComponentsHelper|PhotoOne_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
  ;
-Name: Resources\Themes\Surface_Black; Description: {code:ComponentsHelper|Surface_Black}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Surface_White; Description: {code:ComponentsHelper|Surface_White}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Surface_Black; Description: {code:ComponentsHelper|Surface_Black}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Surface_White; Description: {code:ComponentsHelper|Surface_White}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
  ;
 Name: Resources\Themes\Textolite_Brown_Dark; Description: {code:ComponentsHelper|Textolite_Brown_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Textolite_Brown_Light; Description: {code:ComponentsHelper|Textolite_Brown_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
@@ -895,29 +817,29 @@ Name: Resources\Tipper; Description: {code:ComponentsHelper|Tipper}; Types: mini
  ;
 Name: Resources\Themes; Description: {code:ComponentsHelper|Themes}; Types: advanced full custom; Flags: collapsed disablenouninstallwarning;
  ;
-Name: Resources\Themes\Custom_Miranda; Description: {code:ComponentsHelper|Custom_Miranda}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Custom_Miranda_Dark; Description: {code:ComponentsHelper|Custom_Miranda_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Custom_Miranda_Light; Description: {code:ComponentsHelper|Custom_Miranda_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Custom_Miranda; Description: {code:ComponentsHelper|Custom_Miranda}; Types: advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Custom_Miranda_Dark; Description: {code:ComponentsHelper|Custom_Miranda_Dark}; Types: advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Custom_Miranda_Light; Description: {code:ComponentsHelper|Custom_Miranda_Light}; Types: advanced full custom; Flags: disablenouninstallwarning;
  ;
-Name: Resources\Themes\Native_7_Dark; Description: {code:ComponentsHelper|Native_7_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Native_7_Light; Description: {code:ComponentsHelper|Native_7_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Native_7_Dark; Description: {code:ComponentsHelper|Native_7_Dark}; Types: advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Native_7_Light; Description: {code:ComponentsHelper|Native_7_Light}; Types: advanced full custom; Flags: disablenouninstallwarning;
  ;
-Name: Resources\Themes\WinStyle_Classic_Dark; Description: {code:ComponentsHelper|WinStyle_Classic_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\WinStyle_Classic_Light; Description: {code:ComponentsHelper|WinStyle_Classic_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\WinStyle_Classic_Dark; Description: {code:ComponentsHelper|WinStyle_Classic_Dark}; Types: advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\WinStyle_Classic_Light; Description: {code:ComponentsHelper|WinStyle_Classic_Light}; Types: advanced full custom; Flags: disablenouninstallwarning;
  ;
-Name: Resources\Themes\WinStyle_Dark; Description: {code:ComponentsHelper|WinStyle_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\WinStyle_Light; Description: {code:ComponentsHelper|WinStyle_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\WinStyle_Dark; Description: {code:ComponentsHelper|WinStyle_Dark}; Types: advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\WinStyle_Light; Description: {code:ComponentsHelper|WinStyle_Light}; Types: advanced full custom; Flags: disablenouninstallwarning;
  ;
-Name: Resources\Themes\Diplomat_Dark; Description: {code:ComponentsHelper|Diplomat_Dark}; Types: advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Diplomat_Light; Description: {code:ComponentsHelper|Diplomat_Light}; Types: advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Diplomat_Dark; Description: {code:ComponentsHelper|Diplomat_Dark}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Diplomat_Light; Description: {code:ComponentsHelper|Diplomat_Light}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
  ;
 Name: Resources\Themes\Glamour_Aqua_Dark; Description: {code:ComponentsHelper|Glamour_Aqua_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Glamour_Aqua_Light; Description: {code:ComponentsHelper|Glamour_Aqua_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Glamour_Dark; Description: {code:ComponentsHelper|Glamour_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Glamour_Light; Description: {code:ComponentsHelper|Glamour_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
  ;
-Name: Resources\Themes\GoldTime_Dark; Description: {code:ComponentsHelper|GoldTime_Dark}; Types: advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\GoldTime_Light; Description: {code:ComponentsHelper|GoldTime_Light}; Types: advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\GoldTime_Dark; Description: {code:ComponentsHelper|GoldTime_Dark}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\GoldTime_Light; Description: {code:ComponentsHelper|GoldTime_Light}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
  ;
 Name: Resources\Themes\Graphite_Brown_Dark; Description: {code:ComponentsHelper|Graphite_Brown_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Graphite_Brown_Light; Description: {code:ComponentsHelper|Graphite_Brown_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
@@ -927,8 +849,8 @@ Name: Resources\Themes\Graphite_Gray_Light; Description: {code:ComponentsHelper|
 Name: Resources\Themes\PhotoOne_Dark; Description: {code:ComponentsHelper|PhotoOne_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\PhotoOne_Light; Description: {code:ComponentsHelper|PhotoOne_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
  ;
-Name: Resources\Themes\Surface_Black; Description: {code:ComponentsHelper|Surface_Black}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Surface_White; Description: {code:ComponentsHelper|Surface_White}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Surface_Black; Description: {code:ComponentsHelper|Surface_Black}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Surface_White; Description: {code:ComponentsHelper|Surface_White}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
  ;
 Name: Resources\Themes\Textolite_Brown_Dark; Description: {code:ComponentsHelper|Textolite_Brown_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Textolite_Brown_Light; Description: {code:ComponentsHelper|Textolite_Brown_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
@@ -1518,39 +1440,6 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Font; Stri
 ;Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: IETemplateConfig; String: {code:FormatIEJSON}; Flags: uninsdeleteentry; Components: Resources\IEView;
 ;Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: IETemplateConfig; String: {code:FormatIEJSON}; Flags: uninsdeleteentry; Components: Resources\IEView; Check: IsUpdate;
 
- ; IEViewAnimation off
-;Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: Animation; String: b0; Flags: uninsdeleteentry; Components: Resources\IEView; Check: not IsStyleChecked('IEViewAnimation');
-;Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: Animation; String: b0; Flags: uninsdeleteentry; Components: Resources\IEView; Check: not IsStyleChecked('IEViewAnimation');
-;Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: Animation; String: b0; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: not IsStyleChecked('IEViewAnimation') and IsUpdate;
- ; IEViewAnimation on
-;Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: Animation; String: b1; Flags: uninsdeleteentry; Components: Resources\IEView; Check: IsStyleChecked('IEViewAnimation');
-;Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: Animation; String: b1; Flags: uninsdeleteentry; Components: Resources\IEView; Check: IsStyleChecked('IEViewAnimation');
-;Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: Animation; String: b1; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsStyleChecked('IEViewAnimation') and IsUpdate;
- ; IEViewAvatar off
-;Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: Avatars; String: b0; Flags: uninsdeleteentry; Components: Resources\IEView; Check: not IsStyleChecked('IEViewAvatar');
-;Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: Avatars; String: b0; Flags: uninsdeleteentry; Components: Resources\IEView; Check: not IsStyleChecked('IEViewAvatar');
-;Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: Avatars; String: b0; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: not IsStyleChecked('IEViewAvatar') and IsUpdate;
- ; IEViewAvatar on
-;Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: Avatars; String: b1; Flags: uninsdeleteentry; Components: Resources\IEView; Check: IsStyleChecked('IEViewAvatar');
-;Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: Avatars; String: b1; Flags: uninsdeleteentry; Components: Resources\IEView; Check: IsStyleChecked('IEViewAvatar');
-;Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: Avatars; String: b1; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsStyleChecked('IEViewAvatar') and IsUpdate;
- ; IEViewShortLink off
-;Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: ShortLinks; String: b0; Flags: uninsdeleteentry; Components: Resources\IEView; Check: not IsStyleChecked('IEViewShortLink');
-;Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: ShortLinks; String: b0; Flags: uninsdeleteentry; Components: Resources\IEView; Check: not IsStyleChecked('IEViewShortLink');
-;Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: ShortLinks; String: b0; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: not IsStyleChecked('IEViewShortLink') and IsUpdate;
- ; IEViewShortLink on
-;Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: ShortLinks; String: b1; Flags: uninsdeleteentry; Components: Resources\IEView; Check: IsStyleChecked('IEViewShortLink');
-;Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: ShortLinks; String: b1; Flags: uninsdeleteentry; Components: Resources\IEView; Check: IsStyleChecked('IEViewShortLink');
-;Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: ShortLinks; String: b1; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsStyleChecked('IEViewShortLink') and IsUpdate;
- ; IEViewContextMenu off
-;Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: CustomContextMenu; String: b0; Flags: uninsdeleteentry; Components: Resources\IEView; Check: not IsStyleChecked('IEViewContextMenu');
-;Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: CustomContextMenu; String: b0; Flags: uninsdeleteentry; Components: Resources\IEView; Check: not IsStyleChecked('IEViewContextMenu');
-;Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: CustomContextMenu; String: b0; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: not IsStyleChecked('IEViewContextMenu') and IsUpdate;
- ; IEViewContextMenu on
-;Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: CustomContextMenu; String: b1; Flags: uninsdeleteentry; Components: Resources\IEView; Check: IsStyleChecked('IEViewContextMenu');
-;Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: CustomContextMenu; String: b1; Flags: uninsdeleteentry; Components: Resources\IEView; Check: IsStyleChecked('IEViewContextMenu');
-;Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: CustomContextMenu; String: b1; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsStyleChecked('IEViewContextMenu') and IsUpdate;
-
  ; IEViewAnimation
 Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: Animation; String: b{code:SetBoolStyle|IEViewAnimation}; Flags: uninsdeleteentry; Components: Resources\IEView;
 Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: Animation; String: b{code:SetBoolStyle|IEViewAnimation}; Flags: uninsdeleteentry; Components: Resources\IEView;
@@ -1568,35 +1457,6 @@ Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: CustomCont
 Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: CustomContextMenu; String: b{code:SetBoolStyle|IEViewContextMenu}; Flags: uninsdeleteentry; Components: Resources\IEView;
 Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: CustomContextMenu; String: b{code:SetBoolStyle|IEViewContextMenu}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
 
- ; AutoSizeInputArea off
-;Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: TabSRMMAutoSizeInputArea; String: uAutoSizeInputArea0; Flags: uninsdeleteentry; Check: not IsSettingChecked('AutoSizeInputArea');
-;Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: TabSRMMAutoSizeInputArea; String: uAutoSizeInputArea0; Flags: uninsdeleteentry; Check: not IsSettingChecked('AutoSizeInputArea');
-;Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: TabSRMMAutoSizeInputArea; String: uAutoSizeInputArea0; Flags: uninsdeleteentry; Check: not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
- ; AutoSizeInputArea on
-;Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: TabSRMMAutoSizeInputArea; String: uAutoSizeInputArea1; Flags: uninsdeleteentry; Check: IsSettingChecked('AutoSizeInputArea');
-;Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: TabSRMMAutoSizeInputArea; String: uAutoSizeInputArea1; Flags: uninsdeleteentry; Check: IsSettingChecked('AutoSizeInputArea');
-;Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: TabSRMMAutoSizeInputArea; String: uAutoSizeInputArea1; Flags: uninsdeleteentry; Check: IsSettingChecked('AutoSizeInputArea') and IsUpdate;
- ; LocationTabsMessageWindow off if check not AutoSizeInputArea
-;Filename: {app}\Skins\TabSRMM\AutoSizeInputArea0.ini; Section: Tab_SRMsg; Key: CNTW_Def; String: n00 00 00 00 44 11 38 40 08 3C 00 02 FF 00 FF 00 25 00 00 00 3C 00 00 00 25 00 6E 00 20 00 2D 00 20 00 25 00 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and not IsSettingChecked('AutoSizeInputArea');
-;Filename: {app}\Skins\TabSRMM\AutoSizeInputArea0.ini; Section: Tab_SRMsg; Key: CNTW_Def; String: n00 00 00 00 44 11 38 44 08 3C 00 02 FF 00 FF 00 25 00 00 00 3C 00 00 00 25 00 6E 00 20 00 2D 00 20 00 25 00 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and not IsSettingChecked('AutoSizeInputArea');
-;Filename: {app}\Skins\TabSRMM\AutoSizeInputArea0.ini; Section: Tab_SRMsg; Key: CNTW_Def; String: n00 00 00 00 44 11 38 40 08 3D 00 02 FF 00 FF 00 25 00 00 00 3C 00 00 00 25 00 6E 00 20 00 2D 00 20 00 25 00 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea');
-;Filename: {app}\Skins\TabSRMM\AutoSizeInputArea0.ini; Section: Tab_SRMsg; Key: CNTW_Def; String: n00 00 00 00 44 11 38 40 08 3E 00 02 FF 00 FF 00 25 00 00 00 3C 00 00 00 25 00 6E 00 20 00 2D 00 20 00 25 00 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea');
- ; LocationTabsMessageWindow on if check not AutoSizeInputArea
-;Filename: {app}\Skins\TabSRMM\AutoSizeInputArea1.ini; Section: Tab_SRMsg; Key: CNTW_Def; String: n00 00 00 00 44 51 38 40 08 3C 00 02 FF 00 FF 00 25 00 00 00 3C 00 00 00 25 00 6E 00 20 00 2D 00 20 00 25 00 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and not IsSettingChecked('AutoSizeInputArea');
-;Filename: {app}\Skins\TabSRMM\AutoSizeInputArea1.ini; Section: Tab_SRMsg; Key: CNTW_Def; String: n00 00 00 00 44 51 38 44 08 3C 00 02 FF 00 FF 00 25 00 00 00 3C 00 00 00 25 00 6E 00 20 00 2D 00 20 00 25 00 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and not IsSettingChecked('AutoSizeInputArea');
-;Filename: {app}\Skins\TabSRMM\AutoSizeInputArea1.ini; Section: Tab_SRMsg; Key: CNTW_Def; String: n00 00 00 00 44 51 38 40 08 3D 00 02 FF 00 FF 00 25 00 00 00 3C 00 00 00 25 00 6E 00 20 00 2D 00 20 00 25 00 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea');
-;Filename: {app}\Skins\TabSRMM\AutoSizeInputArea1.ini; Section: Tab_SRMsg; Key: CNTW_Def; String: n00 00 00 00 44 51 38 40 08 3E 00 02 FF 00 FF 00 25 00 00 00 3C 00 00 00 25 00 6E 00 20 00 2D 00 20 00 25 00 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea');
- ; LocationTabsMessageWindow off if check AutoSizeInputArea
-;Filename: {app}\Skins\TabSRMM\AutoSizeInputArea0.ini; Section: Tab_SRMsg; Key: CNTW_Def; String: n00 00 00 00 44 11 38 40 08 3C 00 02 FF 00 FF 00 25 00 00 00 3C 00 00 00 25 00 6E 00 20 00 2D 00 20 00 25 00 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and IsSettingChecked('AutoSizeInputArea');
-;Filename: {app}\Skins\TabSRMM\AutoSizeInputArea0.ini; Section: Tab_SRMsg; Key: CNTW_Def; String: n00 00 00 00 44 11 38 44 08 3C 00 02 FF 00 FF 00 25 00 00 00 3C 00 00 00 25 00 6E 00 20 00 2D 00 20 00 25 00 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and IsSettingChecked('AutoSizeInputArea');
-;Filename: {app}\Skins\TabSRMM\AutoSizeInputArea0.ini; Section: Tab_SRMsg; Key: CNTW_Def; String: n00 00 00 00 44 11 38 40 08 3D 00 02 FF 00 FF 00 25 00 00 00 3C 00 00 00 25 00 6E 00 20 00 2D 00 20 00 25 00 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and IsSettingChecked('AutoSizeInputArea');
-;Filename: {app}\Skins\TabSRMM\AutoSizeInputArea0.ini; Section: Tab_SRMsg; Key: CNTW_Def; String: n00 00 00 00 44 11 38 40 08 3E 00 02 FF 00 FF 00 25 00 00 00 3C 00 00 00 25 00 6E 00 20 00 2D 00 20 00 25 00 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and IsSettingChecked('AutoSizeInputArea');
- ; LocationTabsMessageWindow on if check AutoSizeInputArea
-;Filename: {app}\Skins\TabSRMM\AutoSizeInputArea1.ini; Section: Tab_SRMsg; Key: CNTW_Def; String: n00 00 00 00 44 51 38 40 08 3C 00 02 FF 00 FF 00 25 00 00 00 3C 00 00 00 25 00 6E 00 20 00 2D 00 20 00 25 00 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and IsSettingChecked('AutoSizeInputArea');
-;Filename: {app}\Skins\TabSRMM\AutoSizeInputArea1.ini; Section: Tab_SRMsg; Key: CNTW_Def; String: n00 00 00 00 44 51 38 44 08 3C 00 02 FF 00 FF 00 25 00 00 00 3C 00 00 00 25 00 6E 00 20 00 2D 00 20 00 25 00 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and IsSettingChecked('AutoSizeInputArea');
-;Filename: {app}\Skins\TabSRMM\AutoSizeInputArea1.ini; Section: Tab_SRMsg; Key: CNTW_Def; String: n00 00 00 00 44 51 38 40 08 3D 00 02 FF 00 FF 00 25 00 00 00 3C 00 00 00 25 00 6E 00 20 00 2D 00 20 00 25 00 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and IsSettingChecked('AutoSizeInputArea');
-;Filename: {app}\Skins\TabSRMM\AutoSizeInputArea1.ini; Section: Tab_SRMsg; Key: CNTW_Def; String: n00 00 00 00 44 51 38 40 08 3E 00 02 FF 00 FF 00 25 00 00 00 3C 00 00 00 25 00 6E 00 20 00 2D 00 20 00 25 00 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and IsSettingChecked('AutoSizeInputArea');
-
  ; Settings Page
  ; on/off sending messages
 Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: sendonshiftenter; String: b{code:SetBoolSetting|SendShiftEnter}; Flags: uninsdeleteentry;
@@ -1608,14 +1468,6 @@ Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: SendOnDblEnter; St
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: sendonshiftenter; String: b{code:SetBoolSetting|SendShiftEnter}; Flags: uninsdeleteentry; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: SendOnEnter; String: b{code:SetBoolSetting|SendEnter}; Flags: uninsdeleteentry; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: SendOnDblEnter; String: b{code:SetBoolSetting|SendDoubleEnter}; Flags: uninsdeleteentry; Check: IsUpdate;
- ; contactlist right
-;Filename: {app}\Profiles\settings.ini; Section: CList; Key: x; String: d792; Flags: uninsdeleteentry; Check: IsSettingChecked('ClistRight');
-;Filename: {app}\Profiles\update.ini; Section: CList; Key: x; String: d792; Flags: uninsdeleteentry; Check: IsSettingChecked('ClistRight');
-;Filename: {app}\Profiles\autoexec_update.ini; Section: CList; Key: x; String: d792; Flags: uninsdeleteentry; Check: IsSettingChecked('ClistRight') and IsUpdate;
- ; contactlist left
-;Filename: {app}\Profiles\settings.ini; Section: CList; Key: x; String: d52; Flags: uninsdeleteentry; Check: IsSettingChecked('ClistLeft');
-;Filename: {app}\Profiles\update.ini; Section: CList; Key: x; String: d52; Flags: uninsdeleteentry; Check: IsSettingChecked('ClistLeft');
-;Filename: {app}\Profiles\autoexec_update.ini; Section: CList; Key: x; String: d52; Flags: uninsdeleteentry; Check: IsSettingChecked('ClistLeft') and IsUpdate;
  ; on top
 Filename: {app}\Profiles\settings.ini; Section: CList; Key: OnTop; String: b{code:SetBoolSetting|OnTop}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: CList; Key: OnTop; String: b{code:SetBoolSetting|OnTop}; Flags: uninsdeleteentry;
@@ -1646,10 +1498,6 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: SplashScreen; Key: PlaySo
 Filename: {app}\Profiles\settings.ini; Section: CLC; Key: NoVScrollBar; String: b{code:SetBoolSetting|!CLCNoVScrollBar}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: CLC; Key: NoVScrollBar; String: b{code:SetBoolSetting|!CLCNoVScrollBar}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: CLC; Key: NoVScrollBar; String: b{code:SetBoolSetting|!CLCNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
- ; AutoCreateNewTabs
-;Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: autotabs; String: b{code:SetBoolSetting|AutoCreateNewTabs}; Flags: uninsdeleteentry;
-;Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: autotabs; String: b{code:SetBoolSetting|AutoCreateNewTabs}; Flags: uninsdeleteentry;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: autotabs; String: b{code:SetBoolSetting|AutoCreateNewTabs}; Flags: uninsdeleteentry; Check: IsUpdate;
  ; LogStatusChanges
 Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: logstatuschanges; String: b{code:SetBoolSetting|LogStatusChanges}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: logstatuschanges; String: b{code:SetBoolSetting|LogStatusChanges}; Flags: uninsdeleteentry;
@@ -1665,27 +1513,11 @@ Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: disableVScroll; St
 Filename: {app}\Profiles\update.ini; Section: HistoryPlusPlus; Key: NoLogScrollBar; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: disableVScroll; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: HistoryPlusPlus; Key: NoLogScrollBar; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
-;#define public i 2
-;#sub AddTheme
-;Filename: {app}\Skins\TabSRMM\diplomatd\diplomatd.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Components: Resources\Themes\diplomatd;
-;Filename: {app}\Skins\TabSRMM\diplomatl\diplomatl.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Components: Resources\Themes\diplomatl;
-;Filename: {app}\Skins\TabSRMM\{#theme[i]}\{#theme[i]}.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]};
-;Filename: {app}\Skins\TabSRMM\glamourl\glamourl.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Components: Resources\Themes\glamourl;
-;Filename: {app}\Skins\TabSRMM\goldtimed\goldtimed.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Components: Resources\Themes\goldtimed;
-;Filename: {app}\Skins\TabSRMM\goldtimel\goldtimel.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Components: Resources\Themes\goldtimel;
-;Filename: {app}\Skins\TabSRMM\graphited\graphited.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Components: Resources\Themes\graphited;
-;Filename: {app}\Skins\TabSRMM\graphitel\graphitel.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Components: Resources\Themes\graphitel;
-;Filename: {app}\Skins\TabSRMM\photooned\photooned.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Components: Resources\Themes\photooned;
-;Filename: {app}\Skins\TabSRMM\photoonel\photoonel.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Components: Resources\Themes\photoonel;
-;Filename: {app}\Skins\TabSRMM\surfaceb\surfaceb.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Components: Resources\Themes\surfaceb;
-;Filename: {app}\Skins\TabSRMM\surfacew\surfacew.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Components: Resources\Themes\surfacew;
-;Filename: {app}\Skins\TabSRMM\textolited\textolited.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Components: Resources\Themes\textolited;
-;Filename: {app}\Skins\TabSRMM\textolitel\textolitel.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Components: Resources\Themes\textolitel;
-;Filename: {app}\Skins\TabSRMM\winstyled\winstyled.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Components: Resources\Themes\winstyled;
-;Filename: {app}\Skins\TabSRMM\winstylel\winstylel.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Components: Resources\Themes\winstylel;
-;#endsub
-;#for {i = 2; i < 29; i++} AddTheme
-;#endif
+#define public i 2
+#sub AddThemeIni
+Filename: {app}\Skins\TabSRMM\{#theme[i]}\{#theme[i]}.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]};
+#endsub
+#for {i = 2; i < 31; i++} AddThemeIni
  ; DialogStatusMessages off NewAwaySys
 Filename: {app}\Profiles\settings.ini; Section: NewAwaySys; Key: DontPopDlg; String: w1022; Flags: uninsdeleteentry; Check: not IsSettingChecked('DialogStatusMessages');
 Filename: {app}\Profiles\update.ini; Section: NewAwaySys; Key: DontPopDlg; String: w1022; Flags: uninsdeleteentry; Check: not IsSettingChecked('DialogStatusMessages');
