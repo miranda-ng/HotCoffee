@@ -990,100 +990,124 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: CLUIFrames; Key: Height12
 Filename: {app}\Profiles\autoexec_update.ini; Section: CLUIFrames; Key: TBVisile12; String: b{code:GetCLUIFrames|TBVisile12}; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: CLUI; Key: EqualSections; String: b{code:GetCLUIFrames|EqualSections}; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: CLUI; Key: StatusBarProtosPerLine; String: b{code:GetCLUIFrames|StatusBarProtosPerLine}; Check: IsUpdate;
- ; Protocols\other\NewsAggregator
-Filename: {app}\Profiles\settings.ini; Section: NewsAggregator; Key: AM_BaseProto; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\other\NewsAggregator;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 0; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\other\NewsAggregator;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 200; String: d0; Flags: uninsdeleteentry; Components: Protocols\other\NewsAggregator;
+
  ; Protocols\other\CurrencyRates
 Filename: {app}\Profiles\settings.ini; Section: CurrencyRates; Key: AM_BaseProto; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\other\CurrencyRates;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 1; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\other\CurrencyRates;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 201; String: d1; Flags: uninsdeleteentry; Components: Protocols\other\CurrencyRates;
- ; Protocols\other\Weather
-Filename: {app}\Profiles\settings.ini; Section: Weather; Key: AM_BaseProto; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\other\Weather;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 2; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\other\Weather;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 202; String: d2; Flags: uninsdeleteentry; Components: Protocols\other\Weather;
- ; Protocols\other\YAMN
-Filename: {app}\Profiles\settings.ini; Section: YAMN; Key: AM_BaseProto; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\other\YAMN;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 3; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\other\YAMN;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 203; String: d3; Flags: uninsdeleteentry; Components: Protocols\other\YAMN;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 0; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\other\CurrencyRates;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 200; String: d0; Flags: uninsdeleteentry; Components: Protocols\other\CurrencyRates;
  ; Protocols\Discord
 Filename: {app}\Profiles\settings.ini; Section: Discord; Key: AM_BaseProto; String: sDiscord; Flags: uninsdeleteentry; Components: Protocols\Discord;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 8; String: sDiscord; Flags: uninsdeleteentry; Components: Protocols\Discord;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 208; String: d8; Flags: uninsdeleteentry; Components: Protocols\Discord;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 4; String: sDiscord; Flags: uninsdeleteentry; Components: Protocols\Discord;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 204; String: d4; Flags: uninsdeleteentry; Components: Protocols\Discord;
 Filename: {app}\Profiles\update.ini; Section: Discord; Key: AM_BaseProto; String: sDiscord; Flags: uninsdeleteentry; Components: Protocols\Discord;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Discord; Key: AM_BaseProto; String: sDiscord; Flags: uninsdeleteentry; Components: Protocols\Discord; Check: IsUpdate;
+ ; CloudFile/Dropbox
+Filename: {app}\Profiles\settings.ini; Section: CurrencyRates; Key: AM_BaseProto; String: sCloudFile/Dropbox; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 8; String: sDropbox; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 208; String: d8; Flags: uninsdeleteentry;
  ; Protocols\Facebook
 Filename: {app}\Profiles\settings.ini; Section: Facebook; Key: AM_BaseProto; String: sFacebook; Flags: uninsdeleteentry; Components: Protocols\Facebook;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 10; String: sFacebook; Flags: uninsdeleteentry; Components: Protocols\Facebook;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 210; String: d10; Flags: uninsdeleteentry; Components: Protocols\Facebook;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 12; String: sFacebook; Flags: uninsdeleteentry; Components: Protocols\Facebook;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 212; String: d12; Flags: uninsdeleteentry; Components: Protocols\Facebook;
 Filename: {app}\Profiles\update.ini; Section: Facebook; Key: AM_BaseProto; String: sFacebook; Flags: uninsdeleteentry; Components: Protocols\Facebook;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Facebook; Key: AM_BaseProto; String: sFacebook; Flags: uninsdeleteentry; Components: Protocols\Facebook; Check: IsUpdate;
+ ; CloudFile/GDrive
+Filename: {app}\Profiles\settings.ini; Section: CurrencyRates; Key: AM_BaseProto; String: sCloudFile/GDrive; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 16; String: sGDrive; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 216; String: d16; Flags: uninsdeleteentry;
  ; Protocols\GG
 Filename: {app}\Profiles\settings.ini; Section: GG; Key: AM_BaseProto; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 15; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 215; String: d15; Flags: uninsdeleteentry; Components: Protocols\GG;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 20; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 220; String: d20; Flags: uninsdeleteentry; Components: Protocols\GG;
 Filename: {app}\Profiles\update.ini; Section: GG; Key: AM_BaseProto; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG;
 Filename: {app}\Profiles\autoexec_update.ini; Section: GG; Key: AM_BaseProto; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG; Check: IsUpdate;
  ; Protocols\ICQ\ICQ
 Filename: {app}\Profiles\settings.ini; Section: ICQ; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 30; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 230; String: d30; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 24; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 224; String: d24; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
 Filename: {app}\Profiles\update.ini; Section: ICQ; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
 Filename: {app}\Profiles\autoexec_update.ini; Section: ICQ; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ; Check: IsUpdate;
- ; Protocols\ICQ\MRA
-Filename: {app}\Profiles\settings.ini; Section: MRA; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 31; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 231; String: d31; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
-Filename: {app}\Profiles\update.ini; Section: MRA; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
-Filename: {app}\Profiles\autoexec_update.ini; Section: MRA; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA; Check: IsUpdate;
  ; Protocols\IRC
 Filename: {app}\Profiles\settings.ini; Section: IRC; Key: AM_BaseProto; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 35; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 235; String: d35; Flags: uninsdeleteentry; Components: Protocols\IRC;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 28; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 228; String: d28; Flags: uninsdeleteentry; Components: Protocols\IRC;
 Filename: {app}\Profiles\update.ini; Section: IRC; Key: AM_BaseProto; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC;
 Filename: {app}\Profiles\autoexec_update.ini; Section: IRC; Key: AM_BaseProto; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC; Check: IsUpdate;
  ; Protocols\Jabber\Jabber
 Filename: {app}\Profiles\settings.ini; Section: Jabber; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 40; String: sJabber; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 240; String: d40; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 32; String: sJabber; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 232; String: d32; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber;
 Filename: {app}\Profiles\update.ini; Section: Jabber; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Jabber; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber; Check: IsUpdate;
  ; Protocols\Jabber\Jabberru
 Filename: {app}\Profiles\settings.ini; Section: Jabberru; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 45; String: sJabberru; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 245; String: d45; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 36; String: sJabberru; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 236; String: d36; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
 Filename: {app}\Profiles\update.ini; Section: Jabberru; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Jabberru; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru; Check: IsUpdate;
+ ; Protocols\ICQ\MRA
+Filename: {app}\Profiles\settings.ini; Section: MRA; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 40; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 240; String: d40; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
+Filename: {app}\Profiles\update.ini; Section: MRA; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
+Filename: {app}\Profiles\autoexec_update.ini; Section: MRA; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA; Check: IsUpdate;
+ ; MetaContacts
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 44; String: sMetaContacts; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 244; String: d44; Flags: uninsdeleteentry;
+ ; Protocols\other\NewsAggregator
+Filename: {app}\Profiles\settings.ini; Section: NewsAggregator; Key: AM_BaseProto; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\other\NewsAggregator;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 48; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\other\NewsAggregator;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 248; String: d48; Flags: uninsdeleteentry; Components: Protocols\other\NewsAggregator;
  ; Protocols\Jabber\OK
 Filename: {app}\Profiles\settings.ini; Section: OK; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 70; String: sOK; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 270; String: d70; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 52; String: sOK; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 252; String: d52; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
 Filename: {app}\Profiles\update.ini; Section: OK; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
 Filename: {app}\Profiles\autoexec_update.ini; Section: OK; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK; Check: IsUpdate;
+ ; CloudFile/OneDrive
+Filename: {app}\Profiles\settings.ini; Section: CurrencyRates; Key: AM_BaseProto; String: sCloudFile/OneDrive; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 56; String: sOneDrive; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 256; String: d56; Flags: uninsdeleteentry;
  ; Protocols\Skype
 Filename: {app}\Profiles\settings.ini; Section: Skype; Key: AM_BaseProto; String: sSKYPE; Flags: uninsdeleteentry; Components: Protocols\Skype;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 75; String: sSkype; Flags: uninsdeleteentry; Components: Protocols\Skype;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 275; String: d75; Flags: uninsdeleteentry; Components: Protocols\Skype;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 60; String: sSkype; Flags: uninsdeleteentry; Components: Protocols\Skype;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 260; String: d60; Flags: uninsdeleteentry; Components: Protocols\Skype;
 Filename: {app}\Profiles\update.ini; Section: Skype; Key: AM_BaseProto; String: sSKYPE; Flags: uninsdeleteentry; Components: Protocols\Skype;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Skype; Key: AM_BaseProto; String: sSKYPE; Flags: uninsdeleteentry; Components: Protocols\Skype; Check: IsUpdate;
  ; Protocols\Twitter
 Filename: {app}\Profiles\settings.ini; Section: Twitter; Key: AM_BaseProto; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 80; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 280; String: d80; Flags: uninsdeleteentry; Components: Protocols\Twitter;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 64; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 264; String: d64; Flags: uninsdeleteentry; Components: Protocols\Twitter;
 Filename: {app}\Profiles\update.ini; Section: Twitter; Key: AM_BaseProto; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Twitter; Key: AM_BaseProto; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter; Check: IsUpdate;
- ; Protocols\Jabber\XMPP
-Filename: {app}\Profiles\settings.ini; Section: XMPP; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 85; String: sXMPP; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 285; String: d85; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
-Filename: {app}\Profiles\update.ini; Section: XMPP; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
-Filename: {app}\Profiles\autoexec_update.ini; Section: XMPP; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP; Check: IsUpdate;
  ; Protocols\VKontakte
 Filename: {app}\Profiles\settings.ini; Section: VKontakte; Key: AM_BaseProto; String: sVKontakte; Flags: uninsdeleteentry; Components: Protocols\VKontakte;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 87; String: sVKontakte; Flags: uninsdeleteentry; Components: Protocols\VKontakte;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 287; String: d87; Flags: uninsdeleteentry; Components: Protocols\VKontakte;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 68; String: sVKontakte; Flags: uninsdeleteentry; Components: Protocols\VKontakte;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 268; String: d68; Flags: uninsdeleteentry; Components: Protocols\VKontakte;
 Filename: {app}\Profiles\update.ini; Section: VKontakte; Key: AM_BaseProto; String: sVKontakte; Flags: uninsdeleteentry; Components: Protocols\VKontakte;
 Filename: {app}\Profiles\autoexec_update.ini; Section: VKontakte; Key: AM_BaseProto; String: sVKontakte; Flags: uninsdeleteentry; Components: Protocols\VKontakte; Check: IsUpdate;
+ ; Protocols\other\Weather
+Filename: {app}\Profiles\settings.ini; Section: Weather; Key: AM_BaseProto; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\other\Weather;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 72; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\other\Weather;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 272; String: d72; Flags: uninsdeleteentry; Components: Protocols\other\Weather;
+ ; Protocols\Jabber\XMPP
+Filename: {app}\Profiles\settings.ini; Section: XMPP; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 74; String: sXMPP; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 274; String: d74; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
+Filename: {app}\Profiles\update.ini; Section: XMPP; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
+Filename: {app}\Profiles\autoexec_update.ini; Section: XMPP; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP; Check: IsUpdate;
+ ; Protocols\other\YAMN
+Filename: {app}\Profiles\settings.ini; Section: YAMN; Key: AM_BaseProto; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\other\YAMN;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 78; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\other\YAMN;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 278; String: d78; Flags: uninsdeleteentry; Components: Protocols\other\YAMN;
+ ; CloudFile/YandexDisk
+Filename: {app}\Profiles\settings.ini; Section: CurrencyRates; Key: AM_BaseProto; String: sCloudFile/YandexDisk; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 82; String: sYandexDisk; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 282; String: d82; Flags: uninsdeleteentry;
+ ; Protocols\other\mRadio
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 86; String: smRadio; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 286; String: d86; Flags: uninsdeleteentry;
+
  ; Plugins\NewXstatusNotify
 Filename: {app}\Profiles\settings.ini; Section: Ignore; Key: Default1; String: d0; Flags: uninsdeleteentry; Components: Plugins\NewXstatusNotify;
 Filename: {app}\Profiles\settings.ini; Section: Ignore; Key: Default1; String: d8; Flags: uninsdeleteentry; Components: not Plugins\NewXstatusNotify;
@@ -1121,173 +1145,14 @@ Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: default_hpp; Strin
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: default_ieview; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and Plugins\HistoryPP; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: default_hpp; String: b1; Flags: uninsdeleteentry; Components: not Resources\IEView and Plugins\HistoryPP; Check: IsUpdate;
 
- ; Default_Miranda
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uDefault_Miranda; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Default_Miranda');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uDefault_Miranda; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Default_Miranda');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uDefault_Miranda; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Default_Miranda') and IsUpdate;
-
- ; Default_Windows
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uDefault_Windows; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Default_Windows');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uDefault_Windows; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Default_Windows');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uDefault_Windows; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Default_Windows') and IsUpdate;
-
- ; Custom_Miranda
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uCustom_Miranda; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Custom_Miranda');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uCustom_Miranda; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Custom_Miranda');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uCustom_Miranda; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Custom_Miranda') and IsUpdate;
-
- ; Custom_Miranda_Dark
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uCustom_Miranda_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Custom_Miranda_Dark');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uCustom_Miranda_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Custom_Miranda_Dark');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uCustom_Miranda_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Custom_Miranda_Dark') and IsUpdate;
-
- ; Custom_Miranda_Light
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uCustom_Miranda_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Custom_Miranda_Light');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uCustom_Miranda_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Custom_Miranda_Light');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uCustom_Miranda_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Custom_Miranda_Light') and IsUpdate;
-
- ; Native_7_Dark
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uNative_7_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Native_7_Dark');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uNative_7_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Native_7_Dark');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uNative_7_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Native_7_Dark') and IsUpdate;
-
- ; Native_7_Light
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uNative_7_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Native_7_Light');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uNative_7_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Native_7_Light');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uNative_7_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Native_7_Light') and IsUpdate;
-
- ; WinStyle_Classic_Dark
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uWinStyle_Classic_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_WinStyle_Classic_Dark');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uWinStyle_Classic_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_WinStyle_Classic_Dark');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uWinStyle_Classic_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_WinStyle_Classic_Dark') and IsUpdate;
-
- ; WinStyle_Classic_Light
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uWinStyle_Classic_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_WinStyle_Classic_Light');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uWinStyle_Classic_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_WinStyle_Classic_Light');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uWinStyle_Classic_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_WinStyle_Classic_Light') and IsUpdate;
-
- ; WinStyle_Dark
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uWinStyle_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_WinStyle_Dark');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uWinStyle_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_WinStyle_Dark');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uWinStyle_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_WinStyle_Dark') and IsUpdate;
-
- ; WinStyle_Light
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uWinStyle_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_WinStyle_Light');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uWinStyle_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_WinStyle_Light');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uWinStyle_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_WinStyle_Light') and IsUpdate;
-
- ; Diplomat_Dark
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uDiplomat_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Diplomat_Dark');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uDiplomat_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Diplomat_Dark');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uDiplomat_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Diplomat_Dark') and IsUpdate;
-
- ; Diplomat_Light
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uDiplomat_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Diplomat_Light');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uDiplomat_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Diplomat_Light');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uDiplomat_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Diplomat_Light') and IsUpdate;
-
- ; Glamour_Aqua_Dark
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uGlamour_Aqua_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Glamour_Aqua_Dark');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uGlamour_Aqua_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Glamour_Aqua_Dark');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uGlamour_Aqua_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Glamour_Aqua_Dark') and IsUpdate;
-
- ; Glamour_Aqua_Light
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uGlamour_Aqua_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Glamour_Aqua_Light');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uGlamour_Aqua_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Glamour_Aqua_Light');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uGlamour_Aqua_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Glamour_Aqua_Light') and IsUpdate;
-
- ; Glamour_Dark
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uGlamour_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Glamour_Dark');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uGlamour_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Glamour_Dark');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uGlamour_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Glamour_Dark') and IsUpdate;
-
- ; Glamour_Light
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uGlamour_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Glamour_Light');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uGlamour_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Glamour_Light');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uGlamour_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Glamour_Light') and IsUpdate;
-
- ; GoldTime_Dark
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uGoldTime_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_GoldTime_Dark');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uGoldTime_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_GoldTime_Dark');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uGoldTime_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_GoldTime_Dark') and IsUpdate;
-
- ; GoldTime_Light
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uGoldTime_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_GoldTime_Light');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uGoldTime_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_GoldTime_Light');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uGoldTime_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_GoldTime_Light') and IsUpdate;
-
- ; Graphite_Brown_Dark
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uGraphite_Brown_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Graphite_Brown_Dark');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uGraphite_Brown_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Graphite_Brown_Dark');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uGraphite_Brown_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Graphite_Brown_Dark') and IsUpdate;
-
- ; Graphite_Brown_Light
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uGraphite_Brown_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Graphite_Brown_Light');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uGraphite_Brown_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Graphite_Brown_Light');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uGraphite_Brown_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Graphite_Brown_Light') and IsUpdate;
-
- ; Graphite_Gray_Dark
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uGraphite_Gray_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Graphite_Gray_Dark');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uGraphite_Gray_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Graphite_Gray_Dark');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uGraphite_Gray_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Graphite_Gray_Dark') and IsUpdate;
-
- ; Graphite_Gray_Light
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uGraphite_Gray_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Graphite_Gray_Light');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uGraphite_Gray_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Graphite_Gray_Light');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uGraphite_Gray_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Graphite_Gray_Light') and IsUpdate;
-
- ; PhotoOne_Dark
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uPhotoOne_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_PhotoOne_Dark');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uPhotoOne_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_PhotoOne_Dark');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uPhotoOne_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_PhotoOne_Dark') and IsUpdate;
-
- ; PhotoOne_Light
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uPhotoOne_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_PhotoOne_Light');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uPhotoOne_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_PhotoOne_Light');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uPhotoOne_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_PhotoOne_Light') and IsUpdate;
-
- ; Surface_Black
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uSurface_Black; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Surface_Black');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uSurface_Black; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Surface_Black');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uSurface_Black; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Surface_Black') and IsUpdate;
-
- ; Surface_White
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uSurface_White; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Surface_White');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uSurface_White; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Surface_White');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uSurface_White; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Surface_White') and IsUpdate;
-
- ; Textolite_Brown_Dark
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uTextolite_Brown_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Textolite_Brown_Dark');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uTextolite_Brown_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Textolite_Brown_Dark');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uTextolite_Brown_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Textolite_Brown_Dark') and IsUpdate;
-
- ; Textolite_Brown_Light
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uTextolite_Brown_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Textolite_Brown_Light');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uTextolite_Brown_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Textolite_Brown_Light');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uTextolite_Brown_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Textolite_Brown_Light') and IsUpdate;
-
- ; Textolite_Gray_Dark
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uTextolite_Gray_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Textolite_Gray_Dark');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uTextolite_Gray_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Textolite_Gray_Dark');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uTextolite_Gray_Dark; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Textolite_Gray_Dark') and IsUpdate;
-
- ; Textolite_Gray_Light
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: uTextolite_Gray_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Textolite_Gray_Light');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: uTextolite_Gray_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Textolite_Gray_Light');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: uTextolite_Gray_Light; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_Textolite_Gray_Light') and IsUpdate;
-
- ; icons Fugue
-;Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: IconPack; String: uFugue; Flags: uninsdeleteentry; Check: IsStyleChecked('IconsFugue');
-;Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: IconPack; String: uFugue; Flags: uninsdeleteentry; Check: IsStyleChecked('IconsFugue');
-;Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: IconPack; String: uFugue; Flags: uninsdeleteentry; Check: IsStyleChecked('IconsFugue');
- ; icons Nova
-;Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: IconPack; String: uNova; Flags: uninsdeleteentry; Check: IsStyleChecked('IconsNova');
-;Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: IconPack; String: uNova; Flags: uninsdeleteentry; Check: IsStyleChecked('IconsNova');
-;Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: IconPack; String: uNova; Flags: uninsdeleteentry; Check: IsStyleChecked('IconsNova');
- ; icons Xpk
-;Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: IconPack; String: uXpk; Flags: uninsdeleteentry; Check: IsStyleChecked('IconsXpk');
-;Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: IconPack; String: uXpk; Flags: uninsdeleteentry; Check: IsStyleChecked('IconsXpk');
-;Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: IconPack; String: uXpk; Flags: uninsdeleteentry; Check: IsStyleChecked('IconsXpk');
+#define public i 0
+#sub AddThemeIni
+ ; theme ini
+Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: u{#theme[i]}; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_{#theme[i]}');
+Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: u{#theme[i]}; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_{#theme[i]}');
+Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: u{#theme[i]}; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_{#theme[i]}') and IsUpdate;
+#endsub
+#for {i = 0; i < 31; i++} AddThemeIni
 
  ; Smileys for the dark skin
 Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: clist-filename; String: uSkins\Smileys\_dark\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
@@ -1307,42 +1172,6 @@ Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: GTalk-filename; 
 Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: Hangouts-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
 Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: OK-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
 Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: Yandex-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
- ;
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: clist-filename; String: uSkins\Smileys\_dark\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: Standard-filename; String: uSkins\Smileys\_dark\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: Tipper-filename; String: uSkins\Smileys\_dark\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: AllProtoFacebook-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: AllProtoMRA-filename; String: uSkins\Smileys\_dark\MRA\MRA.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: AllProtoMSN-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: AllProtoSkype-filename; String: uSkins\Smileys\_dark\Skype\Skype.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: AllProtoTOX-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: AllProtoTwitter-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: AllProtoVKontakte-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: AllProtoWhatsApp-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: GMail-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: Google-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: GTalk-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: Hangouts-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: OK-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: Yandex-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
- ;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: clist-filename; String: uSkins\Smileys\_dark\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: ({#DarkSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: Standard-filename; String: uSkins\Smileys\_dark\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: ({#DarkSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: Tipper-filename; String: uSkins\Smileys\_dark\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: ({#DarkSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: AllProtoFacebook-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#DarkSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: AllProtoMRA-filename; String: uSkins\Smileys\_dark\MRA\MRA.msl; Flags: uninsdeleteentry; Check: ({#DarkSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: AllProtoMSN-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#DarkSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: AllProtoSkype-filename; String: uSkins\Smileys\_dark\Skype\Skype.msl; Flags: uninsdeleteentry; Check: ({#DarkSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: AllProtoTOX-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#DarkSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: AllProtoTwitter-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#DarkSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: AllProtoVKontakte-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#DarkSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: AllProtoWhatsApp-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#DarkSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: GMail-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#DarkSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: Google-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#DarkSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: GTalk-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#DarkSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: Hangouts-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#DarkSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: OK-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#DarkSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: Yandex-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#DarkSkin}) and IsUpdate;
  ; Smileys for the light skin
 Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: clist-filename; String: uSkins\Smileys\_light\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
 Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: Standard-filename; String: uSkins\Smileys\_light\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
@@ -1361,84 +1190,15 @@ Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: GTalk-filename; 
 Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: Hangouts-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
 Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: OK-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
 Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: Yandex-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
- ;
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: clist-filename; String: uSkins\Smileys\_light\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: Standard-filename; String: uSkins\Smileys\_light\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: Tipper-filename; String: uSkins\Smileys\_light\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: AllProtoFacebook-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: AllProtoMRA-filename; String: uSkins\Smileys\_light\MRA\MRA.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: AllProtoMSN-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: AllProtoSkype-filename; String: uSkins\Smileys\_light\Skype\Skype.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: AllProtoTOX-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: AllProtoTwitter-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: AllProtoVKontakte-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: AllProtoWhatsApp-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: GMail-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: Google-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: GTalk-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: Hangouts-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: OK-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-;Filename: {app}\Profiles\update.ini; Section: SmileyAdd; Key: Yandex-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
- ;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: clist-filename; String: uSkins\Smileys\_light\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: ({#LightSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: Standard-filename; String: uSkins\Smileys\_light\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: ({#LightSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: Tipper-filename; String: uSkins\Smileys\_light\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: ({#LightSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: AllProtoFacebook-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#LightSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: AllProtoMRA-filename; String: uSkins\Smileys\_light\MRA\MRA.msl; Flags: uninsdeleteentry; Check: ({#LightSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: AllProtoMSN-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#LightSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: AllProtoSkype-filename; String: uSkins\Smileys\_light\Skype\Skype.msl; Flags: uninsdeleteentry; Check: ({#LightSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: AllProtoTOX-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#LightSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: AllProtoTwitter-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#LightSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: AllProtoVKontakte-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#LightSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: AllProtoWhatsApp-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#LightSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: GMail-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#LightSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: Google-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#LightSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: GTalk-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#LightSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: Hangouts-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#LightSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: OK-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#LightSkin}) and IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SmileyAdd; Key: Yandex-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: ({#LightSkin}) and IsUpdate;
+
  ; handwriting font
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Font; String: uhandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting');
 Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Font; String: uhandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting');
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Font; String: uhandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting') and IsUpdate;
- ;
-;Filename: {app}\Skins\TabSRMM\glamourd\glamourd.tsk; Section: WindowFrame; Key: CaptionOffset; String: 4; Flags: uninsdeleteentry; Components: Resources\Themes\glamourd; Check: IsStyleChecked('FontHandwriting');
-;Filename: {app}\Skins\TabSRMM\glamourl\glamourl.tsk; Section: WindowFrame; Key: CaptionOffset; String: 4; Flags: uninsdeleteentry; Components: Resources\Themes\glamourl; Check: IsStyleChecked('FontHandwriting');
-;Filename: {app}\Skins\TabSRMM\goldtimed\goldtimed.tsk; Section: WindowFrame; Key: CaptionOffset; String: 4; Flags: uninsdeleteentry; Components: Resources\Themes\goldtimed; Check: IsStyleChecked('FontHandwriting');
-;Filename: {app}\Skins\TabSRMM\goldtimel\goldtimel.tsk; Section: WindowFrame; Key: CaptionOffset; String: 4; Flags: uninsdeleteentry; Components: Resources\Themes\goldtimel; Check: IsStyleChecked('FontHandwriting');
-;Filename: {app}\Skins\TabSRMM\photooned\photooned.tsk; Section: WindowFrame; Key: CaptionOffset; String: 4; Flags: uninsdeleteentry; Components: Resources\Themes\photooned; Check: IsStyleChecked('FontHandwriting');
-;Filename: {app}\Skins\TabSRMM\photoonel\photoonel.tsk; Section: WindowFrame; Key: CaptionOffset; String: 4; Flags: uninsdeleteentry; Components: Resources\Themes\photoonel; Check: IsStyleChecked('FontHandwriting');
-;Filename: {app}\Skins\TabSRMM\surfaceb\surfaceb.tsk; Section: WindowFrame; Key: CaptionOffset; String: 4; Flags: uninsdeleteentry; Components: Resources\Themes\surfaceb; Check: IsStyleChecked('FontHandwriting');
-;Filename: {app}\Skins\TabSRMM\surfacew\surfacew.tsk; Section: WindowFrame; Key: CaptionOffset; String: 4; Flags: uninsdeleteentry; Components: Resources\Themes\surfacew; Check: IsStyleChecked('FontHandwriting');
- ;
-;Filename: {app}\Skins\TabSRMM\graphited\graphited.tsk; Section: WindowFrame; Key: CaptionOffset; String: 3; Flags: uninsdeleteentry; Components: Resources\Themes\graphited; Check: IsStyleChecked('FontHandwriting');
-;Filename: {app}\Skins\TabSRMM\graphitel\graphitel.tsk; Section: WindowFrame; Key: CaptionOffset; String: 3; Flags: uninsdeleteentry; Components: Resources\Themes\graphitel; Check: IsStyleChecked('FontHandwriting');
-;Filename: {app}\Skins\TabSRMM\textolited\textolited.tsk; Section: WindowFrame; Key: CaptionOffset; String: 3; Flags: uninsdeleteentry; Components: Resources\Themes\textolited; Check: IsStyleChecked('FontHandwriting');
-;Filename: {app}\Skins\TabSRMM\textolitel\textolitel.tsk; Section: WindowFrame; Key: CaptionOffset; String: 3; Flags: uninsdeleteentry; Components: Resources\Themes\textolitel; Check: IsStyleChecked('FontHandwriting');
  ; printing font
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Font; String: uprinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting');
 Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Font; String: uprinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting');
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Font; String: uprinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting') and IsUpdate;
- ;
-;Filename: {app}\Skins\TabSRMM\diplomatd\diplomatd.tsk; Section: WindowFrame; Key: CaptionOffset; String: 7; Flags: uninsdeleteentry; Components: Resources\Themes\diplomatd; Check: IsStyleChecked('FontPrinting');
-;Filename: {app}\Skins\TabSRMM\diplomatl\diplomatl.tsk; Section: WindowFrame; Key: CaptionOffset; String: 7; Flags: uninsdeleteentry; Components: Resources\Themes\diplomatl; Check: IsStyleChecked('FontPrinting');
-;Filename: {app}\Skins\TabSRMM\glamourd\glamourd.tsk; Section: WindowFrame; Key: CaptionOffset; String: 7; Flags: uninsdeleteentry; Components: Resources\Themes\glamourd; Check: IsStyleChecked('FontPrinting');
-;Filename: {app}\Skins\TabSRMM\glamourl\glamourl.tsk; Section: WindowFrame; Key: CaptionOffset; String: 7; Flags: uninsdeleteentry; Components: Resources\Themes\glamourl; Check: IsStyleChecked('FontPrinting');
-;Filename: {app}\Skins\TabSRMM\goldtimed\goldtimed.tsk; Section: WindowFrame; Key: CaptionOffset; String: 7; Flags: uninsdeleteentry; Components: Resources\Themes\goldtimed; Check: IsStyleChecked('FontPrinting');
-;Filename: {app}\Skins\TabSRMM\goldtimel\goldtimel.tsk; Section: WindowFrame; Key: CaptionOffset; String: 7; Flags: uninsdeleteentry; Components: Resources\Themes\goldtimel; Check: IsStyleChecked('FontPrinting');
-;Filename: {app}\Skins\TabSRMM\photooned\photooned.tsk; Section: WindowFrame; Key: CaptionOffset; String: 7; Flags: uninsdeleteentry; Components: Resources\Themes\photooned; Check: IsStyleChecked('FontPrinting');
-;Filename: {app}\Skins\TabSRMM\photoonel\photoonel.tsk; Section: WindowFrame; Key: CaptionOffset; String: 7; Flags: uninsdeleteentry; Components: Resources\Themes\photoonel; Check: IsStyleChecked('FontPrinting');
-;Filename: {app}\Skins\TabSRMM\surfaceb\surfaceb.tsk; Section: WindowFrame; Key: CaptionOffset; String: 7; Flags: uninsdeleteentry; Components: Resources\Themes\surfaceb; Check: IsStyleChecked('FontPrinting');
-;Filename: {app}\Skins\TabSRMM\surfacew\surfacew.tsk; Section: WindowFrame; Key: CaptionOffset; String: 7; Flags: uninsdeleteentry; Components: Resources\Themes\surfacew; Check: IsStyleChecked('FontPrinting');
- ;
-;Filename: {app}\Skins\TabSRMM\graphited\graphited.tsk; Section: WindowFrame; Key: CaptionOffset; String: 6; Flags: uninsdeleteentry; Components: Resources\Themes\graphited; Check: IsStyleChecked('FontPrinting');
-;Filename: {app}\Skins\TabSRMM\graphitel\graphitel.tsk; Section: WindowFrame; Key: CaptionOffset; String: 6; Flags: uninsdeleteentry; Components: Resources\Themes\graphitel; Check: IsStyleChecked('FontPrinting');
-;Filename: {app}\Skins\TabSRMM\textolited\textolited.tsk; Section: WindowFrame; Key: CaptionOffset; String: 6; Flags: uninsdeleteentry; Components: Resources\Themes\textolited; Check: IsStyleChecked('FontPrinting');
-;Filename: {app}\Skins\TabSRMM\textolitel\textolitel.tsk; Section: WindowFrame; Key: CaptionOffset; String: 6; Flags: uninsdeleteentry; Components: Resources\Themes\textolitel; Check: IsStyleChecked('FontPrinting');
- ; IETemplateConfig
-;Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: IETemplateConfig; String: {code:FormatIEJSON}; Flags: uninsdeleteentry; Components: Resources\IEView;
-;Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: IETemplateConfig; String: {code:FormatIEJSON}; Flags: uninsdeleteentry; Components: Resources\IEView;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: IETemplateConfig; String: {code:FormatIEJSON}; Flags: uninsdeleteentry; Components: Resources\IEView; Check: IsUpdate;
 
  ; IEViewAnimation
 Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: Animation; String: b{code:SetBoolStyle|IEViewAnimation}; Flags: uninsdeleteentry; Components: Resources\IEView;
@@ -1652,18 +1412,6 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font1
 Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b235; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5') and IsUpdate;
  ; ini
 #define public i 0
-#sub AddDefaultThemeIni
- ; default theme ini
-Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b244; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
-Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b243; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
-Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b241; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
-Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b240; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
-Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b237; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
-Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b235; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
-#endsub
-#for {i = 0; i < 2; i++} AddDefaultThemeIni
-
-#define public i 2
 #sub AddThemeIni
  ; theme ini
 Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b244; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,0');
@@ -1680,7 +1428,8 @@ Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Font
 Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b237; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,4');
 Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b235; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,5');
 #endsub
-#for {i = 2; i < 31; i++} AddThemeIni
+#for {i = 0; i < 31; i++} AddThemeIni
+
  ; LoadHistorySize
 Filename: {app}\Profiles\settings.ini; Section: SRMsg; Key: LoadCount; String: w5; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1');
 Filename: {app}\Profiles\settings.ini; Section: SRMsg; Key: LoadCount; String: w10; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2');
