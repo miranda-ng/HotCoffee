@@ -17,7 +17,7 @@ function isDir(name)	return (os.rename(name,name) and not isFile(name))	end
 ----------------------------------------------
 
 function ShowNotification(text)
-	m.CallService('Popup/ShowMessageW', m.Utf8DecodeW(text), 2)
+	m.CallService('Popup/ShowMessageW', toucs2(text), 2)
 end
 
 function OpenFailed(isGlobalFolder)
