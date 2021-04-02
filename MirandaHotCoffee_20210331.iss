@@ -192,181 +192,22 @@ Name: custom; Description: {code:TypesHelper|CustomInstall}; Flags: iscustom;
 [Dirs]
 Name: {app}\Inbox;
 
-#define ICQProtocols "Protocols\ICQ\ICQ and Protocols\ICQ\MRA"
-#define JabberProtocols "Protocols\Jabber\Jabber and Protocols\Jabber\Jabberru and Protocols\Jabber\OK and Protocols\Jabber\XMPP"
-
 [InstallDelete]
- ; main
-Type: filesandordirs; Name: {app}\docs; Check: IsPortableSetupType and IsUpdate;
+Type: filesandordirs; Name: {app}\Core; Check: IsPortableSetupType and IsUpdate;
+Type: filesandordirs; Name: {app}\Icons; Check: IsPortableSetupType and IsUpdate;
+Type: filesandordirs; Name: {app}\Languages; Check: IsPortableSetupType and IsUpdate;
+Type: filesandordirs; Name: {app}\Libs; Check: IsPortableSetupType and IsUpdate;
+Type: filesandordirs; Name: {app}\Plugins; Check: IsPortableSetupType and IsUpdate;
+Type: filesandordirs; Name: {app}\Profiles\Buffer; Check: IsPortableSetupType and IsUpdate;
+Type: filesandordirs; Name: {app}\Profiles\PluginUpdater; Check: IsPortableSetupType and IsUpdate;
+Type: files; Name: {app}\Profiles\*.ini; Check: IsPortableSetupType and IsUpdate;
+Type: filesandordirs; Name: {app}\Scripts; Check: IsPortableSetupType and IsUpdate;
+Type: filesandordirs; Name: {app}\Skins; Check: IsPortableSetupType and IsUpdate;
+Type: filesandordirs; Name: {app}\UserSet; Check: IsPortableSetupType and IsUpdate;
+Type: files; Name: {app}\{#AppExeName}; Check: IsPortableSetupType and IsUpdate;
 Type: files; Name: {app}\{#AppExeOppName}; Check: IsPortableSetupType and IsUpdate;
 Type: files; Name: {app}\pu_stub.exe; Check: IsPortableSetupType and IsUpdate;
 Type: files; Name: {app}\mirandaboot.ini; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Plugins\Cryptors; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Plugins\Dbx_mmap_sa.dll; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Plugins\FlashAvatars.dll; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\langpack_russian.txt; Languages: en; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Languages\langpack_russian.txt; Languages: en; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Languages; Languages: en; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\uninstall; Check: IsPortableSetupType and IsUpdate;
- ; Protocols
- ; Protocols\Discord
-Type: files; Name: {app}\Plugins\Discord.dll; Components: not Protocols\Discord; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_Discord.dll; Components: not Protocols\Discord; Check: IsPortableSetupType and IsUpdate;
- ; Protocols\Facebook
-Type: files; Name: {app}\Plugins\Facebook.dll; Components: not Protocols\Facebook; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_Facebook.dll; Components: not Protocols\Facebook; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_conn_Facebook.dll; Components: not Protocols\Facebook; Check: IsPortableSetupType and IsUpdate;
- ; Protocols\GG
-Type: files; Name: {app}\Plugins\GG.dll; Components: not Protocols\GG; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_GG.dll; Components: not Protocols\GG; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_conn_GG.dll; Components: not Protocols\GG; Check: IsPortableSetupType and IsUpdate;
- ; Protocols\ICQ\ICQ
-Type: files; Name: {app}\Plugins\ICQ.dll; Components: not ({#ICQProtocols}); Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_ICQ.dll; Components: not ({#ICQProtocols}); Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_conn_ICQ.dll; Components: not ({#ICQProtocols}); Check: IsPortableSetupType and IsUpdate;
- ; Protocols\ICQ\MRA
-Type: files; Name: {app}\Icons\Proto_MRA.dll; Components: not Protocols\ICQ\MRA; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_conn_MRA.dll; Components: not Protocols\ICQ\MRA; Check: IsPortableSetupType and IsUpdate;
- ; Protocols\IRC
-Type: files; Name: {app}\Plugins\IRC.dll; Components: not Protocols\IRC; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_IRC.dll; Components: not Protocols\IRC; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_conn_IRC.dll; Components: not Protocols\IRC; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Skins\Avatars\IRC.png; Components: not Protocols\IRC; Check: IsPortableSetupType and IsUpdate;
- ; Protocols\Jabber
-Type: files; Name: {app}\Plugins\Jabber.dll; Components: not ({#JabberProtocols}); Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\xStatus_Jabber.dll; Components: not ({#JabberProtocols}); Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Skins\Avatars\Jabber.png; Components: not ({#JabberProtocols}); Check: IsPortableSetupType and IsUpdate;
- ; Protocols\Jabber\Jabber
-Type: files; Name: {app}\Icons\Proto_Jabber.dll; Components: not Protocols\Jabber\Jabber; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_conn_Jabber.dll; Components: not Protocols\Jabber\Jabber; Check: IsPortableSetupType and IsUpdate;
- ; Protocols\Jabber\Jabberru
-Type: files; Name: {app}\Icons\Proto_Jabberru.dll; Components: not Protocols\Jabber\Jabberru; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_conn_Jabberru.dll; Components: not Protocols\Jabber\Jabberru; Check: IsPortableSetupType and IsUpdate;
- ; Protocols\Jabber\OK
-Type: files; Name: {app}\Icons\Proto_OK.dll; Components: not Protocols\Jabber\OK; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_conn_OK.dll; Components: not Protocols\Jabber\OK; Check: IsPortableSetupType and IsUpdate;
- ; Protocols\Jabber\XMPP
-Type: files; Name: {app}\Icons\Proto_XMPP.dll; Components: not Protocols\Jabber\XMPP; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_conn_XMPP.dll; Components: not Protocols\Jabber\XMPP; Check: IsPortableSetupType and IsUpdate;
- ; Protocols\Skype
-Type: files; Name: {app}\Plugins\SkypeWeb.dll; Components: not Protocols\Skype; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_conn_Skype.dll; Components: not Protocols\Skype; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_Skype.dll; Components: not Protocols\Skype; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Skins\Smileys\flags; Components: not Protocols\Skype; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Skins\Smileys\Skype; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Skins\Smileys\_dark\Skype; Components: not Protocols\Skype; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Skins\Smileys\_light\Skype; Components: not Protocols\Skype; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Skins\Sounds\call_in.wav; Components: not Protocols\Skype; Check: IsPortableSetupType and IsUpdate;
- ; Protocols\Twitter
-Type: files; Name: {app}\Plugins\Twitter.dll; Components: not Protocols\Twitter; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_Twitter.dll; Components: not Protocols\Twitter; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_conn_Twitter.dll; Components: not Protocols\Twitter; Check: IsPortableSetupType and IsUpdate;
- ; Protocols\VKontakte
-Type: files; Name: {app}\Plugins\VKontakte.dll; Components: not Protocols\VKontakte; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_VKontakte.dll; Components: not Protocols\VKontakte; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_conn_VKontakte.dll; Components: not Protocols\VKontakte; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Skins\Smileys\stickers\VK; Components: not Protocols\VKontakte; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Skins\Smileys\VK; Check: IsPortableSetupType and IsUpdate;
- ; Protocols\other
- ; Protocols\other\mRadio
-Type: files; Name: {app}\Icons\Proto_mRadio.dll; Components: not Protocols\other\mRadio; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Plugins\mRadio\mRadio.ini; Components: not Protocols\other\mRadio; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Plugins\mRadio\Player.ini; Components: not Protocols\other\mRadio; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Plugins\mRadio.dll; Components: not Protocols\other\mRadio; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Skins\Avatars\mRadio.png; Components: not Protocols\other\mRadio; Check: IsPortableSetupType and IsUpdate;
- ; Protocols\other\NewsAggregator
-Type: files; Name: {app}\Plugins\NewsAggregator.dll; Components: not Protocols\other\NewsAggregator; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_NewsAggregator.dll; Components: not Protocols\other\NewsAggregator; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Skins\Avatars\rss.png; Components: not Protocols\other\NewsAggregator; Check: IsPortableSetupType and IsUpdate;
- ; Protocols\other\CurrencyRates
-Type: files; Name: {app}\Plugins\CurrencyRates.dll; Components: not Protocols\other\CurrencyRates; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_CurrencyRates.dll; Components: not Protocols\other\CurrencyRates; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Skins\Avatars\CurrencyRates.png; Components: not Protocols\other\CurrencyRates; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Plugins\CurrencyRates; Components: not Protocols\other\CurrencyRates; Check: IsPortableSetupType and IsUpdate;
- ; Protocols\other\Weather
-Type: files; Name: {app}\Plugins\Weather.dll; Components: not Protocols\other\Weather; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_Weather.dll; Components: not Protocols\other\Weather; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Plugins\Weather; Components: not Protocols\other\Weather; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Skins\Sounds\update.wav; Components: not Protocols\other\Weather; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Skins\Sounds\alert.wav; Components: not Protocols\other\Weather; Check: IsPortableSetupType and IsUpdate;
- ; Protocols\other\YAMN
-Type: files; Name: {app}\Plugins\YAMN.dll; Components: not Protocols\other\YAMN; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Proto_YAMN.dll; Components: not Protocols\other\YAMN; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\YAMN_icons.dll; Check: IsPortableSetupType and IsUpdate;
- ; Plugins
- ; Plugins\BossKey
-Type: files; Name: {app}\Plugins\BossKey.dll; Components: not Plugins\BossKey; Check: IsPortableSetupType and IsUpdate;
- ; Plugins\DbEditorPP
-Type: files; Name: {app}\Plugins\DbEditorPP.dll; Components: not Plugins\DbEditorPP; Check: IsPortableSetupType and IsUpdate;
- ; Plugins\Fingerprint
-Type: files; Name: {app}\Plugins\Fingerprint.dll; Components: not Plugins\Fingerprint; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Fp_icons.dll; Components: not Plugins\Fingerprint; Check: IsPortableSetupType and IsUpdate;
- ; Plugins\Flags
-Type: files; Name: {app}\Plugins\Flags.dll; Components: not Plugins\Flags; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Flag_icons.dll; Components: not Plugins\Flags; Check: IsPortableSetupType and IsUpdate;
- ; Plugins\HistoryPP
-Type: files; Name: {app}\Plugins\HistoryPP.dll; Components: not Plugins\HistoryPP; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\HistoryPP_icons.dll; Components: not Plugins\HistoryPP; Check: IsPortableSetupType and IsUpdate;
- ; Plugins\MessageState
-Type: files; Name: {app}\Plugins\MessageState.dll; Components: not (Protocols\Facebook and Protocols\VKontakte); Check: IsPortableSetupType and IsUpdate;
- ; Plugins\NewXstatusNotify
-Type: files; Name: {app}\Plugins\NewXstatusNotify.dll; Components: not Plugins\NewXstatusNotify; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Skins\Sounds\away.wav; Components: not Plugins\NewXstatusNotify; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Skins\Sounds\changex.wav; Components: not Plugins\NewXstatusNotify; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Skins\Sounds\scan.wav; Components: not Plugins\NewXstatusNotify; Check: IsPortableSetupType and IsUpdate;
- ; Plugins\QuickMessages
-Type: files; Name: {app}\Plugins\QuickMessages.dll; Components: not Plugins\QuickMessages; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\QuickMessages_icons.dll; Components: not Plugins\QuickMessages; Check: IsPortableSetupType and IsUpdate;
- ; Plugins\QuickSearch
-Type: files; Name: {app}\Plugins\QuickSearch.dll; Components: not Plugins\QuickSearch; Check: IsPortableSetupType and IsUpdate;
- ; Plugins\Sessions
-Type: files; Name: {app}\Plugins\Sessions.dll; Components: not Plugins\Sessions; Check: IsPortableSetupType and IsUpdate;
- ; Plugins\SpellChecker
-Type: files; Name: {app}\Plugins\SpellChecker.dll; Components: not Plugins\SpellChecker; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Plugins\Dictionaries; Components: not Plugins\SpellChecker; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\Flags_icons.dll; Components: not Plugins\SpellChecker; Check: IsPortableSetupType and IsUpdate;
- ; Plugins\UInfoEx
-Type: files; Name: {app}\Plugins\UInfoEx.dll; Components: not Plugins\UInfoEx; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Icons\UInfoEx_icons.dll; Components: not Plugins\UInfoEx; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Skins\Sounds\birthday.wav; Components: not (Plugins\WhenWasIt and Plugins\UInfoEx); Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Skins\Sounds\birthdaycoming.wav; Components: not (Plugins\WhenWasIt and Plugins\UInfoEx); Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Skins\Sounds\reminder.wav; Components: not Plugins\UInfoEx; Check: IsPortableSetupType and IsUpdate;
- ; Plugins\WhenWasIt
-Type: files; Name: {app}\Plugins\WhenWasIt.dll; Components: not Plugins\WhenWasIt; Check: IsPortableSetupType and IsUpdate;
- ; resources
- ; Resources\IEView
-Type: files; Name: {app}\Plugins\IEView.dll; Components: not Resources\IEView; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Skins\IEView; Components: not Resources\IEView; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Skins\IEView\!tools\fonts\*.css; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Skins\IEView\!tools\other; Check: IsPortableSetupType and IsUpdate;
- ; IEViewAnimation old
-Type: files; Name: {app}\Skins\IEView\!tools\skripte\animation0.js; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Skins\IEView\!tools\skripte\animation1.js; Check: IsPortableSetupType and IsUpdate;
- ; Resources\PopupPlus
-Type: files; Name: {app}\Plugins\PopupPlus.dll; Components: not Resources\PopupPlus; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Plugins\mTextControl.dll; Components: not Resources\PopupPlus; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Skins\Popup; Components: not Resources\PopupPlus; Check: IsPortableSetupType and IsUpdate;
- ; Resources\Smileys
-Type: files; Name: {app}\Plugins\SmileyAdd.dll; Components: not Resources\Smileys; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Skins\Smileys; Components: not Resources\Smileys; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Skins\Smileys\_flash; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Skins\Smileys\dark_skin; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Skins\Smileys\light_skin; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Skins\Smileys\other; Check: IsPortableSetupType and IsUpdate;
- ; Resources\Sounds
-Type: files; Name: {app}\Plugins\BASS_interface.dll; Components: not Resources\Sounds; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Plugins\BASS; Components: not (Resources\Sounds and Protocols\other\mRadio); Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Skins\Sounds; Components: not Resources\Sounds; Check: IsPortableSetupType and IsUpdate;
- ; Resources\SplashScreen
-Type: files; Name: {app}\Plugins\SplashScreen.dll; Components: not Resources\SplashScreen; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Skins\SplashScreen; Components: not Resources\SplashScreen; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\Skins\Sounds\startup.wav; Components: not Resources\SplashScreen; Check: IsPortableSetupType and IsUpdate;
- ; Resources\Tipper
-Type: files; Name: {app}\Plugins\Tipper.dll; Components: not Resources\Tipper; Check: IsPortableSetupType and IsUpdate;
-Type: filesandordirs; Name: {app}\Skins\Tipper; Components: not Resources\Tipper; Check: IsPortableSetupType and IsUpdate;
-
-#define ICQProtocol "Protocols\ICQ\ICQ or Protocols\ICQ\MRA"
-#define JabberProtocol "Protocols\Jabber\Jabber or Protocols\Jabber\Jabberru or Protocols\Jabber\OK or Protocols\Jabber\XMPP"
 
 [Files]
  ; image resources
@@ -412,6 +253,7 @@ Source: {#AppArch}\Plugins\Dbx_sqlite.dll; DestDir: {app}\Plugins; Flags: ignore
 Source: {#AppArch}\Plugins\Dummy.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Folders.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Import.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\MessageState.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\MenuEx.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\MirLua.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\NewAwaySys.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
@@ -453,7 +295,7 @@ Source: {#AppArch}\Plugins\GG.dll; DestDir: {app}\Plugins; Flags: ignoreversion;
 Source: x86\Icons\Proto_conn_GG.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\GG; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_GG.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\GG; AfterInstall: AddDetails;
  ; Protocols\ICQ
-Source: {#AppArch}\Plugins\ICQ.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: {#ICQProtocol}; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\ICQ.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\ICQ; AfterInstall: AddDetails;
  ; Protocols\ICQ\ICQ
 Source: x86\Icons\Proto_conn_ICQ.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\ICQ; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_ICQ.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\ICQ; AfterInstall: AddDetails;
@@ -466,9 +308,9 @@ Source: x86\Icons\Proto_conn_IRC.dll; DestDir: {app}\Icons; Flags: ignoreversion
 Source: x86\Icons\Proto_IRC.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\IRC; AfterInstall: AddDetails;
 Source: x86\Skins\Avatars\IRC.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\IRC; AfterInstall: AddDetails;
  ; Protocols\Jabber
-Source: {#AppArch}\Plugins\Jabber.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: {#JabberProtocol}; AfterInstall: AddDetails;
-Source: x86\Icons\xStatus_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: {#JabberProtocol}; AfterInstall: AddDetails;
-Source: x86\Skins\Avatars\Jabber.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: {#JabberProtocol}; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\Jabber.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
+Source: x86\Icons\xStatus_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
+Source: x86\Skins\Avatars\Jabber.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
  ; Protocols\Jabber\Jabber
 Source: x86\Icons\Proto_conn_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Jabber; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Jabber; AfterInstall: AddDetails;
@@ -542,8 +384,6 @@ Source: x86\Icons\Flag_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Co
  ; Plugins\HistoryPP
 Source: x86\Icons\HistoryPP_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\HistoryPP.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\HistoryPP; AfterInstall: AddDetails;
- ; Plugins\MessageState
-Source: {#AppArch}\Plugins\MessageState.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Facebook or Protocols\VKontakte; AfterInstall: AddDetails;
  ; Plugins\NewXstatusNotify
 Source: {#AppArch}\Plugins\NewXstatusNotify.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\NewXstatusNotify; AfterInstall: AddDetails;
 Source: x86\Skins\Sounds\away.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Plugins\NewXstatusNotify; AfterInstall: AddDetails;
@@ -573,7 +413,7 @@ Source: x86\Skins\Sounds\reminder.wav; DestDir: {app}\Skins\Sounds; Flags: ignor
  ; Plugins\WhenWasIt
 Source: {#AppArch}\Plugins\WhenWasIt.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\WhenWasIt; AfterInstall: AddDetails;
 
- ; resources
+ ; Resources
  ; Resources\IEView
 Source: {#AppArch}\Plugins\IEView.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\!tools\filetypes\*; DestDir: {app}\Skins\IEView\!tools\filetypes; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\IEView; AfterInstall: AddDetails;
