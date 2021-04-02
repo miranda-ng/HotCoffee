@@ -301,9 +301,14 @@ Type: files; Name: {app}\Plugins\DbEditorPP.dll; Components: not Plugins\DbEdito
  ; Plugins\Fingerprint
 Type: files; Name: {app}\Plugins\Fingerprint.dll; Components: not Plugins\Fingerprint; Check: IsPortableSetupType and IsUpdate;
 Type: files; Name: {app}\Icons\Fp_icons.dll; Components: not Plugins\Fingerprint; Check: IsPortableSetupType and IsUpdate;
+ ; Plugins\Flags
+Type: files; Name: {app}\Plugins\Flags.dll; Components: not Plugins\Flags; Check: IsPortableSetupType and IsUpdate;
+Type: files; Name: {app}\Icons\Flag_icons.dll; Components: not Plugins\Flags; Check: IsPortableSetupType and IsUpdate;
  ; Plugins\HistoryPP
 Type: files; Name: {app}\Plugins\HistoryPP.dll; Components: not Plugins\HistoryPP; Check: IsPortableSetupType and IsUpdate;
 Type: files; Name: {app}\Icons\HistoryPP_icons.dll; Components: not Plugins\HistoryPP; Check: IsPortableSetupType and IsUpdate;
+ ; Plugins\MessageState
+Type: files; Name: {app}\Plugins\MessageState.dll; Components: not (Protocols\Facebook and Protocols\VKontakte); Check: IsPortableSetupType and IsUpdate;
  ; Plugins\NewXstatusNotify
 Type: files; Name: {app}\Plugins\NewXstatusNotify.dll; Components: not Plugins\NewXstatusNotify; Check: IsPortableSetupType and IsUpdate;
 Type: files; Name: {app}\Skins\Sounds\away.wav; Components: not Plugins\NewXstatusNotify; Check: IsPortableSetupType and IsUpdate;
@@ -531,9 +536,14 @@ Source: {#AppArch}\Plugins\DbEditorPP.dll; DestDir: {app}\Plugins; Flags: ignore
  ; Plugins\Fingerprint
 Source: x86\Icons\Fp_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Plugins\Fingerprint; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Fingerprint.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\Fingerprint; AfterInstall: AddDetails;
+ ; Plugins\Flags
+Source: {#AppArch}\Plugins\Flags.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\Flags; AfterInstall: AddDetails;
+Source: x86\Icons\Flag_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Plugins\Flags; AfterInstall: AddDetails;
  ; Plugins\HistoryPP
 Source: x86\Icons\HistoryPP_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\HistoryPP.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\HistoryPP; AfterInstall: AddDetails;
+ ; Plugins\MessageState
+Source: {#AppArch}\Plugins\MessageState.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Facebook or Protocols\VKontakte; AfterInstall: AddDetails;
  ; Plugins\NewXstatusNotify
 Source: {#AppArch}\Plugins\NewXstatusNotify.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\NewXstatusNotify; AfterInstall: AddDetails;
 Source: x86\Skins\Sounds\away.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Plugins\NewXstatusNotify; AfterInstall: AddDetails;
@@ -697,6 +707,7 @@ Name: Plugins; Description: {code:ComponentsHelper|PluginsFiles}; Types: minimal
 Name: Plugins\BossKey; Description: {code:ComponentsHelper|BossKey}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\DbEditorPP; Description: {code:ComponentsHelper|DbEditorPP}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\Fingerprint; Description: {code:ComponentsHelper|Fingerprint}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Plugins\Flags; Description: {code:ComponentsHelper|Flags}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\HistoryPP; Description: {code:ComponentsHelper|HistoryPP}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\NewXstatusNotify; Description: {code:ComponentsHelper|NewXstatusNotify}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\QuickMessages; Description: {code:ComponentsHelper|QuickMessages}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
@@ -794,6 +805,7 @@ Name: Plugins; Description: {code:ComponentsHelper|PluginsFiles}; Types: minimal
 Name: Plugins\BossKey; Description: {code:ComponentsHelper|BossKey}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\DbEditorPP; Description: {code:ComponentsHelper|DbEditorPP}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\Fingerprint; Description: {code:ComponentsHelper|Fingerprint}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Plugins\Flags; Description: {code:ComponentsHelper|Flags}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\HistoryPP; Description: {code:ComponentsHelper|HistoryPP}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\NewXstatusNotify; Description: {code:ComponentsHelper|NewXstatusNotify}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\QuickMessages; Description: {code:ComponentsHelper|QuickMessages}; Types: full custom; Flags: disablenouninstallwarning;
@@ -1002,7 +1014,7 @@ Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 204; String: d4;
 Filename: {app}\Profiles\update.ini; Section: Discord; Key: AM_BaseProto; String: sDiscord; Flags: uninsdeleteentry; Components: Protocols\Discord;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Discord; Key: AM_BaseProto; String: sDiscord; Flags: uninsdeleteentry; Components: Protocols\Discord; Check: IsUpdate;
  ; CloudFile/Dropbox
-Filename: {app}\Profiles\settings.ini; Section: CurrencyRates; Key: AM_BaseProto; String: sCloudFile/Dropbox; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Dropbox; Key: AM_BaseProto; String: sCloudFile/Dropbox; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 8; String: sDropbox; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 208; String: d8; Flags: uninsdeleteentry;
  ; Protocols\Facebook
@@ -1012,7 +1024,7 @@ Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 212; String: d12
 Filename: {app}\Profiles\update.ini; Section: Facebook; Key: AM_BaseProto; String: sFacebook; Flags: uninsdeleteentry; Components: Protocols\Facebook;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Facebook; Key: AM_BaseProto; String: sFacebook; Flags: uninsdeleteentry; Components: Protocols\Facebook; Check: IsUpdate;
  ; CloudFile/GDrive
-Filename: {app}\Profiles\settings.ini; Section: CurrencyRates; Key: AM_BaseProto; String: sCloudFile/GDrive; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: GDrive; Key: AM_BaseProto; String: sCloudFile/GDrive; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 16; String: sGDrive; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 216; String: d16; Flags: uninsdeleteentry;
  ; Protocols\GG
@@ -1065,7 +1077,7 @@ Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 252; String: d52
 Filename: {app}\Profiles\update.ini; Section: OK; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
 Filename: {app}\Profiles\autoexec_update.ini; Section: OK; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK; Check: IsUpdate;
  ; CloudFile/OneDrive
-Filename: {app}\Profiles\settings.ini; Section: CurrencyRates; Key: AM_BaseProto; String: sCloudFile/OneDrive; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: OneDrive; Key: AM_BaseProto; String: sCloudFile/OneDrive; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 56; String: sOneDrive; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 256; String: d56; Flags: uninsdeleteentry;
  ; Protocols\Skype
@@ -1101,7 +1113,7 @@ Filename: {app}\Profiles\settings.ini; Section: YAMN; Key: AM_BaseProto; String:
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 78; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\other\YAMN;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 278; String: d78; Flags: uninsdeleteentry; Components: Protocols\other\YAMN;
  ; CloudFile/YandexDisk
-Filename: {app}\Profiles\settings.ini; Section: CurrencyRates; Key: AM_BaseProto; String: sCloudFile/YandexDisk; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: YandexDisk; Key: AM_BaseProto; String: sCloudFile/YandexDisk; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 82; String: sYandexDisk; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 282; String: d82; Flags: uninsdeleteentry;
  ; Protocols\other\mRadio
@@ -1273,11 +1285,13 @@ Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: disableVScroll; St
 Filename: {app}\Profiles\update.ini; Section: HistoryPlusPlus; Key: NoLogScrollBar; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: disableVScroll; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: HistoryPlusPlus; Key: NoLogScrollBar; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
+ ;
 #define public i 2
-#sub AddThemeIni
+#sub AddThemeTskNoScrollbars
 Filename: {app}\Skins\TabSRMM\{#theme[i]}\{#theme[i]}.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]};
 #endsub
-#for {i = 2; i < 31; i++} AddThemeIni
+#for {i = 2; i < 31; i++} AddThemeTskNoScrollbars
+
  ; DialogStatusMessages off NewAwaySys
 Filename: {app}\Profiles\settings.ini; Section: NewAwaySys; Key: DontPopDlg; String: w1022; Flags: uninsdeleteentry; Check: not IsSettingChecked('DialogStatusMessages');
 Filename: {app}\Profiles\update.ini; Section: NewAwaySys; Key: DontPopDlg; String: w1022; Flags: uninsdeleteentry; Check: not IsSettingChecked('DialogStatusMessages');
@@ -1388,7 +1402,14 @@ Filename: {app}\Profiles\update.ini; Section: TabSRMM_Fonts; Key: Font16Size; St
 Filename: {app}\Profiles\update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b240; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
 Filename: {app}\Profiles\update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b237; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
 Filename: {app}\Profiles\update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b235; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
+Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b244; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0') and IsUpdate;
+Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b243; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1') and IsUpdate;
+Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b241; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2') and IsUpdate;
+Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b240; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3') and IsUpdate;
+Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b237; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4') and IsUpdate;
+Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b235; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5') and IsUpdate;
 #if AppSkinUp == "0"
+ ;
 Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b244; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0') and not IsUpdate;
 Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b243; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1') and not IsUpdate;
 Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b241; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2') and not IsUpdate;
@@ -1397,6 +1418,7 @@ Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16S
 Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b235; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5') and not IsUpdate;
 #endif
 #if AppSkinUp == "1"
+ ;
 Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b244; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
 Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b243; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
 Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b241; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
@@ -1404,15 +1426,20 @@ Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16S
 Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b237; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
 Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b235; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
 #endif
-Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b244; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b243; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b241; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b240; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b237; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b235; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5') and IsUpdate;
- ; ini
 #define public i 0
-#sub AddThemeIni
+#sub AddDefaultThemeIni
+ ; default theme ini
+Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b244; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
+Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b243; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
+Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b241; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
+Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b240; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
+Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b237; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
+Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b235; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
+#endsub
+#for {i = 0; i < 2; i++} AddDefaultThemeIni
+
+#define public i 2
+#sub AddCustomThemeIni
  ; theme ini
 Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b244; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,0');
 Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b243; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,1');
@@ -1428,7 +1455,7 @@ Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Font
 Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b237; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,4');
 Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b235; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,5');
 #endsub
-#for {i = 0; i < 31; i++} AddThemeIni
+#for {i = 2; i < 31; i++} AddCustomThemeIni
 
  ; LoadHistorySize
 Filename: {app}\Profiles\settings.ini; Section: SRMsg; Key: LoadCount; String: w5; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1');

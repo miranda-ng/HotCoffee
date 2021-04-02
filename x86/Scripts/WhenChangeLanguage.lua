@@ -46,7 +46,7 @@ function OnLanguageChanged(langpack)
     else
         splashScreenPathFrom = splashScreenPathFrom .. '\\' .. 'en'
     end
-    local batch = "xcopy /Y {splashScreenPathFrom} {splashScreenPathTo}" % {
+    local batch = "xcopy /Y \"{splashScreenPathFrom}\" \"{splashScreenPathTo}\"" % {
         ["splashScreenPathFrom"] = splashScreenPathFrom,
         ["splashScreenPathTo"] = splashScreenPathTo
     }
