@@ -272,6 +272,7 @@ IconsNova=Nova | Nova icon set. | * | Icons_Nova.bmp
 IconsXpk=Xpk | Xpk icon set. | * | Icons_Xpk.bmp
 	; IEView settings
 IEViewSettings=IEView settings | IEView template settings.
+IEViewScrollBar=Scroll bar | Enable/Disable scroll bar. | * | * | *
 IEViewAnimation=Animation | Enable/Disable animation. | * | animation_1.gif | animation_0.gif
 IEViewAvatar=Avatars | Enable/Disable avatars. | * | avatar_1.bmp | avatar_0.bmp
 IEViewShortLink=Shortened links | Enable/Disable shortened links. | * | shortlink_1.bmp | shortlink_0.bmp

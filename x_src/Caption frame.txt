@@ -7,7 +7,7 @@ Caption frame high
 когда юзер жмет на пункт Caption frame х, то
 определяем значения для всех скинов:
 
-	local pattern_1 = 'Custom_Miranda,Custom_Miranda_Dark,Custom_Miranda_Light'
+	local pattern_1 = 'Custom_Miranda,Custom_Miranda_Dark,Custom_Miranda_Light,Default_Miranda'
 
 	local pattern_2 = 'Graphite_Brown_Dark,Graphite_Gray_Light'
 

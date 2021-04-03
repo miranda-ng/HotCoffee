@@ -61,7 +61,7 @@
   "SendCtrlEnter,SendEnter,AutoSizeInputArea,TabSRMMNoVScrollBar," + \
   "AutoAwayDetection,AutoIdleDetection"
 #define SelectedStyleSettingsDefault \
-  "Skin_Default_Windows,IconsXpk,IEViewAnimation,IEViewShortLink,FontPrinting"
+  "Skin_Default_Windows,IconsXpk,IEViewScrollBar,IEViewAnimation,IEViewShortLink,IEViewContextMenu,FontPrinting"
 
 #define IncompatibleDir "{app}\incompatible"                                ; incompatible dir
 #define ExcludeList \
@@ -269,7 +269,7 @@ Source: x86\Scripts\*.lua; DestDir: {app}\scripts; Flags: ignoreversion; Compone
  ; Skins
 Source: x86\Skins\Avatars\no_avatar.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Skins\IconPacks\*; DestDir: {app}\Skins\IconPacks; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\hny.mp3; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Skins\TabSRMM\Default_Miranda\*; DestDir: {app}\Skins\TabSRMM\Default_Miranda; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Skins\Default_Miranda.ini; DestDir: {app}\Skins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Skins\Default_Windows.ini; DestDir: {app}\Skins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
  ; UserSet
@@ -334,7 +334,6 @@ Source: x86\Skins\Smileys\_dark\Skype\Skype_small_pack.msl; DestDir: {app}\Skins
 Source: x86\Skins\Smileys\_light\Skype\*; DestDir: {app}\Skins\Smileys\_light\Skype; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Protocols\Skype and Resources\Smileys; AfterInstall: AddDetails;
 Source: x86\Skins\Smileys\_light\Skype\Skype_big_pack.msl; DestDir: {app}\Skins\Smileys\_light\Skype; DestName: Skype.msl; Flags: ignoreversion; Components: Protocols\Skype and Resources\Smileys\big_pack; AfterInstall: AddDetails;
 Source: x86\Skins\Smileys\_light\Skype\Skype_small_pack.msl; DestDir: {app}\Skins\Smileys\_light\Skype; DestName: Skype.msl; Flags: ignoreversion; Components: Protocols\Skype and Resources\Smileys\small_pack; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\call_in.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Protocols\Skype; AfterInstall: AddDetails;
  ; Protocols\Twitter
 Source: {#AppArch}\Plugins\Twitter.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Twitter; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_conn_Twitter.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Twitter; AfterInstall: AddDetails;
@@ -364,8 +363,6 @@ Source: x86\Skins\Avatars\CurrencyRates.png; DestDir: {app}\Skins\Avatars; Flags
 Source: {#AppArch}\Plugins\Weather.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\other\Weather; AfterInstall: AddDetails;
 Source: x86\Plugins\Weather\*; DestDir: {app}\Plugins\Weather; Flags: ignoreversion; Components: Protocols\other\Weather; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Weather.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\other\Weather; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\update.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Protocols\other\Weather and Resources\Sounds; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\alert.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Protocols\other\Weather and Resources\Sounds; AfterInstall: AddDetails;
  ; Protocols\other\YAMN
 Source: {#AppArch}\Plugins\YAMN.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\other\YAMN; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_YAMN.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\other\YAMN; AfterInstall: AddDetails;
@@ -386,9 +383,6 @@ Source: x86\Icons\HistoryPP_icons.dll; DestDir: {app}\Icons; Flags: ignoreversio
 Source: {#AppArch}\Plugins\HistoryPP.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\HistoryPP; AfterInstall: AddDetails;
  ; Plugins\NewXstatusNotify
 Source: {#AppArch}\Plugins\NewXstatusNotify.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\NewXstatusNotify; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\away.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Plugins\NewXstatusNotify; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\changex.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Plugins\NewXstatusNotify; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\scan.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Plugins\NewXstatusNotify; AfterInstall: AddDetails;
  ; Plugins\QuickMessages
 Source: x86\Icons\QuickMessages_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Plugins\QuickMessages; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\QuickMessages.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\QuickMessages; AfterInstall: AddDetails;
@@ -407,9 +401,6 @@ Source: {#AppArch}\Plugins\StopSpam.dll; DestDir: {app}\Plugins; Flags: ignoreve
  ; Plugins\UInfoEx
 Source: x86\Icons\UInfoEx_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Plugins\UInfoEx; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\UInfoEx.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\UInfoEx; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\birthday.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Plugins\WhenWasIt or Plugins\UInfoEx and Resources\Sounds; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\birthdaycoming.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Plugins\WhenWasIt or Plugins\UInfoEx and Resources\Sounds; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\reminder.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Plugins\UInfoEx and Resources\Sounds; AfterInstall: AddDetails;
  ; Plugins\WhenWasIt
 Source: {#AppArch}\Plugins\WhenWasIt.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\WhenWasIt; AfterInstall: AddDetails;
 
@@ -426,14 +417,15 @@ Source: x86\Skins\IEView\!tools\player\*; DestDir: {app}\Skins\IEView\!tools\pla
 Source: x86\Skins\IEView\!tools\scripts\*; DestDir: {app}\Skins\IEView\!tools\scripts; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\!tools\tZersFiles\animationen\*; DestDir: {app}\Skins\IEView\!tools\tZersFiles\animationen; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\!tools\tZersFiles\grafiken\*; DestDir: {app}\Skins\IEView\!tools\tZersFiles\grafiken; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
-Source: x86\Skins\IEView\Default_Windows.ivt; DestDir: {app}\Skins\IEView; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
-Source: x86\Skins\IEView\styles\Default_Windows.css; DestDir: {app}\Skins\IEView\styles; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\styles\Default_Windows\*; DestDir: {app}\Skins\IEView\styles\Default_Windows; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
+Source: x86\Skins\IEView\styles\Default_Windows.css; DestDir: {app}\Skins\IEView\styles; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\styles\*.png; DestDir: {app}\Skins\IEView\styles; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\config.css; DestDir: {app}\Skins\IEView; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\noavatar.png; DestDir: {app}\Skins\IEView; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
+Source: x86\Skins\IEView\Default_Windows.ivt; DestDir: {app}\Skins\IEView; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
  ; Resources\PopupPlus
 Source: {#AppArch}\Plugins\PopupPlus.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Resources\PopupPlus; AfterInstall: AddDetails;
+Source: x86\Skins\Popup\Default_Miranda\*; DestDir: {app}\Skins\Popup\Default_Miranda; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\PopupPlus; AfterInstall: AddDetails;
  ; Resources\Smileys
 Source: {#AppArch}\Plugins\SmileyAdd.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Resources\Smileys; AfterInstall: AddDetails;
 Source: x86\Skins\Smileys\_dark\emoji\*; DestDir: {app}\Skins\Smileys\_dark\emoji; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\Smileys; AfterInstall: AddDetails;
@@ -457,60 +449,53 @@ Source: x86\Skins\Smileys\_light\kolobok\kolobok_small_pack.msl; DestDir: {app}\
  ; Resources\Sounds
 Source: {#AppArch}\Plugins\BASS\*; DestDir: {app}\Plugins\BASS; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\BASS_interface.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\add.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\back.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\change.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\del.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\error.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\event.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\file.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\global.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\in.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\notification.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\out.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\press.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\read.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\request.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\typing.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\url.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
- ;
-Source: x86\Skins\Sounds\calling.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\denied.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\reminders.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\stop.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
+Source: x86\Skins\Sounds\*; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
  ; Resources\SplashScreen
 Source: {#AppArch}\Plugins\SplashScreen.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Resources\SplashScreen; AfterInstall: AddDetails;
 Source: x86\Skins\SplashScreen\*; DestDir: {app}\Skins\SplashScreen; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\SplashScreen; AfterInstall: AddDetails;
 Source: x86\Skins\SplashScreen\en\HotSplash5.png; DestDir: {app}\Skins\SplashScreen; DestName: HotSplash5.png; Languages: en; Flags: ignoreversion; Components: Resources\SplashScreen; AfterInstall: AddDetails;
 Source: x86\Skins\SplashScreen\ru\HotSplash5.png; DestDir: {app}\Skins\SplashScreen; DestName: HotSplash5.png; Languages: ru; Flags: ignoreversion; Components: Resources\SplashScreen; AfterInstall: AddDetails;
-Source: x86\Skins\Sounds\startup.wav; DestDir: {app}\Skins\Sounds; Flags: ignoreversion; Components: Resources\SplashScreen and Resources\Sounds; AfterInstall: AddDetails;
  ; Resources\Tipper
 Source: {#AppArch}\Plugins\Tipper.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Resources\Tipper; AfterInstall: AddDetails;
- ; Resources\Themes
+Source: x86\Skins\Tipper\Default_Miranda\*; DestDir: {app}\Skins\Tipper\Default_Miranda; Flags: ignoreversion; Components: Resources\Tipper; AfterInstall: AddDetails;
 #define public i 2
 #sub AddTheme
-Source: x86\Skins\Modern contact list\{#theme[i]}\*; DestDir: {app}\Skins\Modern contact list\{#theme[i]}; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\Themes\{#theme[i]}; AfterInstall: AddDetails;
+ ; Resources\Themes
+Source: x86\Skins\Modern contact list\{#theme[i]}\*; DestDir: {app}\Skins\Modern contact list\{#theme[i]}; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]}; AfterInstall: AddDetails;
 Source: x86\Skins\Modern contact list\{#theme[i]}.msf; DestDir: {app}\Skins\Modern contact list; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]}; AfterInstall: AddDetails;
-Source: x86\Skins\TabSRMM\{#theme[i]}\*; DestDir: {app}\Skins\TabSRMM\{#theme[i]}; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\Themes\{#theme[i]}; AfterInstall: AddDetails;
-Source: x86\Skins\Tipper\{#theme[i]}\*; DestDir: {app}\Skins\Tipper\{#theme[i]}; Flags: ignoreversion recursesubdirs createallsubdirs skipifsourcedoesntexist; Components: Resources\Themes\{#theme[i]} and Resources\Tipper; AfterInstall: AddDetails;
+Source: x86\Skins\TabSRMM\{#theme[i]}\*; DestDir: {app}\Skins\TabSRMM\{#theme[i]}; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]}; AfterInstall: AddDetails;
+Source: x86\Skins\Tipper\{#theme[i]}\*; DestDir: {app}\Skins\Tipper\{#theme[i]}; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]} and Resources\Tipper; AfterInstall: AddDetails;
 Source: x86\Skins\Popup\{#theme[i]}\*; DestDir: {app}\Skins\Popup\{#theme[i]}; Flags: ignoreversion recursesubdirs createallsubdirs skipifsourcedoesntexist; Components: Resources\Themes\{#theme[i]} and Resources\PopupPlus; AfterInstall: AddDetails;
-Source: x86\Skins\{#theme[i]}.ini; DestDir: {app}\Skins; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]}; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\styles\{#theme[i]}\*; DestDir: {app}\Skins\IEView\styles\{#theme[i]}; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]} and Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\styles\{#theme[i]}.css; DestDir: {app}\Skins\IEView\styles; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]} and Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\{#theme[i]}.ivt; DestDir: {app}\Skins\IEView; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]} and Resources\IEView; AfterInstall: AddDetails;
- ; copy autoexec_skin.ini for clean installation
+Source: x86\Skins\{#theme[i]}.ini; DestDir: {app}\Skins; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]}; AfterInstall: AddDetails;
+#endsub
+#for {i = 2; i < 31; i++} AddTheme
+ ; copy autoexec_skin.ini for clean installation default themes
 #if AppSkinUp == "0"
 Source: x86\Skins\Default_Miranda.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Default_Miranda') and not IsUpdate; AfterInstall: AddDetails;
 Source: x86\Skins\Default_Windows.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Default_Windows') and not IsUpdate; AfterInstall: AddDetails;
-Source: x86\Skins\{#theme[i]}.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_{#theme[i]}') and not IsUpdate; AfterInstall: AddDetails;
 #endif
 #if AppSkinUp == "1"
 Source: x86\Skins\Default_Miranda.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Default_Miranda'); AfterInstall: AddDetails;
 Source: x86\Skins\Default_Windows.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Default_Windows'); AfterInstall: AddDetails;
-Source: x86\Skins\{#theme[i]}.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_{#theme[i]}'); AfterInstall: AddDetails;
 #endif
+ ; copy autoexec_skin.ini for clean installation custom themes
+#if AppSkinUp == "0"
+#define public i 2
+#sub AddThemeAutoexecSkin
+Source: x86\Skins\{#theme[i]}.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_{#theme[i]}') and not IsUpdate; AfterInstall: AddDetails;
 #endsub
-#for {i = 2; i < 31; i++} AddTheme
+#for {i = 2; i < 31; i++} AddThemeAutoexecSkin
+#endif
+#if AppSkinUp == "1"
+#define public i 2
+#sub AddThemeAutoexecSkin
+Source: x86\Skins\{#theme[i]}.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_{#theme[i]}'); AfterInstall: AddDetails;
+#endsub
+#for {i = 2; i < 31; i++} AddThemeAutoexecSkin
+#endif
 #endif
 
 [Components]
@@ -565,47 +550,47 @@ Name: Resources\PopupPlus; Description: {code:ComponentsHelper|PopupPlus}; Types
 Name: Resources\Smileys; Description: {code:ComponentsHelper|Smileys}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Smileys\big_pack; Description: {code:ComponentsHelper|SmileysBigPack}; Flags: exclusive disablenouninstallwarning;
 Name: Resources\Smileys\small_pack; Description: {code:ComponentsHelper|SmileysSmallPack}; Types: minimal optimal advanced custom; Flags: exclusive disablenouninstallwarning;
-Name: Resources\Sounds; Description: {code:ComponentsHelper|Sounds}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Sounds; Description: {code:ComponentsHelper|Sounds}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\SplashScreen; Description: {code:ComponentsHelper|SplashScreen}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Tipper; Description: {code:ComponentsHelper|Tipper}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
- ;
+ ; Resources\Themes
 Name: Resources\Themes; Description: {code:ComponentsHelper|Themes}; Types: advanced custom; Flags: collapsed disablenouninstallwarning;
- ;
+ ; Resources\Themes\Custom_Miranda
 Name: Resources\Themes\Custom_Miranda; Description: {code:ComponentsHelper|Custom_Miranda}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Custom_Miranda_Dark; Description: {code:ComponentsHelper|Custom_Miranda_Dark}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Custom_Miranda_Light; Description: {code:ComponentsHelper|Custom_Miranda_Light}; Types: advanced custom; Flags: disablenouninstallwarning;
- ;
+ ; Resources\Themes\Native_7
 Name: Resources\Themes\Native_7_Dark; Description: {code:ComponentsHelper|Native_7_Dark}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Native_7_Light; Description: {code:ComponentsHelper|Native_7_Light}; Types: advanced custom; Flags: disablenouninstallwarning;
- ;
+ ; Resources\Themes\WinStyle_Classic
 Name: Resources\Themes\WinStyle_Classic_Dark; Description: {code:ComponentsHelper|WinStyle_Classic_Dark}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\WinStyle_Classic_Light; Description: {code:ComponentsHelper|WinStyle_Classic_Light}; Types: advanced custom; Flags: disablenouninstallwarning;
- ;
+ ; Resources\Themes\WinStyle
 Name: Resources\Themes\WinStyle_Dark; Description: {code:ComponentsHelper|WinStyle_Dark}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\WinStyle_Light; Description: {code:ComponentsHelper|WinStyle_Light}; Types: advanced custom; Flags: disablenouninstallwarning;
- ;
+ ; Resources\Themes\Diplomat
 Name: Resources\Themes\Diplomat_Dark; Description: {code:ComponentsHelper|Diplomat_Dark}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Diplomat_Light; Description: {code:ComponentsHelper|Diplomat_Light}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
- ;
+ ; Resources\Themes\Glamour
 Name: Resources\Themes\Glamour_Aqua_Dark; Description: {code:ComponentsHelper|Glamour_Aqua_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Glamour_Aqua_Light; Description: {code:ComponentsHelper|Glamour_Aqua_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Glamour_Dark; Description: {code:ComponentsHelper|Glamour_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Glamour_Light; Description: {code:ComponentsHelper|Glamour_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
- ;
+ ; Resources\Themes\GoldTime
 Name: Resources\Themes\GoldTime_Dark; Description: {code:ComponentsHelper|GoldTime_Dark}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\GoldTime_Light; Description: {code:ComponentsHelper|GoldTime_Light}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
- ;
+ ; Resources\Themes\Graphite
 Name: Resources\Themes\Graphite_Brown_Dark; Description: {code:ComponentsHelper|Graphite_Brown_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Graphite_Brown_Light; Description: {code:ComponentsHelper|Graphite_Brown_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Graphite_Gray_Dark; Description: {code:ComponentsHelper|Graphite_Gray_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Graphite_Gray_Light; Description: {code:ComponentsHelper|Graphite_Gray_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
- ;
+ ; Resources\Themes\PhotoOne
 Name: Resources\Themes\PhotoOne_Dark; Description: {code:ComponentsHelper|PhotoOne_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\PhotoOne_Light; Description: {code:ComponentsHelper|PhotoOne_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
- ;
+ ; Resources\Themes\Surface
 Name: Resources\Themes\Surface_Black; Description: {code:ComponentsHelper|Surface_Black}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Surface_White; Description: {code:ComponentsHelper|Surface_White}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
- ;
+ ; Resources\Themes\Textolite
 Name: Resources\Themes\Textolite_Brown_Dark; Description: {code:ComponentsHelper|Textolite_Brown_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Textolite_Brown_Light; Description: {code:ComponentsHelper|Textolite_Brown_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Textolite_Gray_Dark; Description: {code:ComponentsHelper|Textolite_Gray_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
@@ -663,47 +648,47 @@ Name: Resources\PopupPlus; Description: {code:ComponentsHelper|PopupPlus}; Types
 Name: Resources\Smileys; Description: {code:ComponentsHelper|Smileys}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Smileys\big_pack; Description: {code:ComponentsHelper|SmileysBigPack}; Flags: exclusive disablenouninstallwarning;
 Name: Resources\Smileys\small_pack; Description: {code:ComponentsHelper|SmileysSmallPack}; Types: minimal optimal advanced full custom; Flags: exclusive disablenouninstallwarning;
-Name: Resources\Sounds; Description: {code:ComponentsHelper|Sounds}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Sounds; Description: {code:ComponentsHelper|Sounds}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\SplashScreen; Description: {code:ComponentsHelper|SplashScreen}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Tipper; Description: {code:ComponentsHelper|Tipper}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
- ;
+ ; Resources\Themes
 Name: Resources\Themes; Description: {code:ComponentsHelper|Themes}; Types: advanced full custom; Flags: collapsed disablenouninstallwarning;
- ;
+ ; Resources\Themes\Custom_Miranda
 Name: Resources\Themes\Custom_Miranda; Description: {code:ComponentsHelper|Custom_Miranda}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Custom_Miranda_Dark; Description: {code:ComponentsHelper|Custom_Miranda_Dark}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Custom_Miranda_Light; Description: {code:ComponentsHelper|Custom_Miranda_Light}; Types: advanced full custom; Flags: disablenouninstallwarning;
- ;
+ ; Resources\Themes\Native_7
 Name: Resources\Themes\Native_7_Dark; Description: {code:ComponentsHelper|Native_7_Dark}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Native_7_Light; Description: {code:ComponentsHelper|Native_7_Light}; Types: advanced full custom; Flags: disablenouninstallwarning;
- ;
+ ; Resources\Themes\WinStyle_Classic
 Name: Resources\Themes\WinStyle_Classic_Dark; Description: {code:ComponentsHelper|WinStyle_Classic_Dark}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\WinStyle_Classic_Light; Description: {code:ComponentsHelper|WinStyle_Classic_Light}; Types: advanced full custom; Flags: disablenouninstallwarning;
- ;
+ ; Resources\Themes\WinStyle
 Name: Resources\Themes\WinStyle_Dark; Description: {code:ComponentsHelper|WinStyle_Dark}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\WinStyle_Light; Description: {code:ComponentsHelper|WinStyle_Light}; Types: advanced full custom; Flags: disablenouninstallwarning;
- ;
+ ; Resources\Themes\Diplomat
 Name: Resources\Themes\Diplomat_Dark; Description: {code:ComponentsHelper|Diplomat_Dark}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Diplomat_Light; Description: {code:ComponentsHelper|Diplomat_Light}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
- ;
+ ; Resources\Themes\Glamour
 Name: Resources\Themes\Glamour_Aqua_Dark; Description: {code:ComponentsHelper|Glamour_Aqua_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Glamour_Aqua_Light; Description: {code:ComponentsHelper|Glamour_Aqua_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Glamour_Dark; Description: {code:ComponentsHelper|Glamour_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Glamour_Light; Description: {code:ComponentsHelper|Glamour_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
- ;
+ ; Resources\Themes\GoldTime
 Name: Resources\Themes\GoldTime_Dark; Description: {code:ComponentsHelper|GoldTime_Dark}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\GoldTime_Light; Description: {code:ComponentsHelper|GoldTime_Light}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
- ;
+ ; Resources\Themes\Graphite
 Name: Resources\Themes\Graphite_Brown_Dark; Description: {code:ComponentsHelper|Graphite_Brown_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Graphite_Brown_Light; Description: {code:ComponentsHelper|Graphite_Brown_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Graphite_Gray_Dark; Description: {code:ComponentsHelper|Graphite_Gray_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Graphite_Gray_Light; Description: {code:ComponentsHelper|Graphite_Gray_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
- ;
+ ; Resources\Themes\PhotoOne
 Name: Resources\Themes\PhotoOne_Dark; Description: {code:ComponentsHelper|PhotoOne_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\PhotoOne_Light; Description: {code:ComponentsHelper|PhotoOne_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
- ;
+ ; Resources\Themes\Surface
 Name: Resources\Themes\Surface_Black; Description: {code:ComponentsHelper|Surface_Black}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Surface_White; Description: {code:ComponentsHelper|Surface_White}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
- ;
+ ; Resources\Themes\Textolite
 Name: Resources\Themes\Textolite_Brown_Dark; Description: {code:ComponentsHelper|Textolite_Brown_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Textolite_Brown_Light; Description: {code:ComponentsHelper|Textolite_Brown_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Textolite_Gray_Dark; Description: {code:ComponentsHelper|Textolite_Gray_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
@@ -722,7 +707,7 @@ Name: pintostartmenu; Description: {code:TasksHelper|PinToStartMenuIcon}; GroupD
 Name: autorun; Description: {code:TasksHelper|CreateAutorunIcon}; GroupDescription: {cm:AdditionalIcons}; Flags: unchecked;
 
 [Icons]
- ; allusers
+ ; all users
 Name: {group}\{#AppLnk}; Filename: {app}\{#AppExeName}; Tasks: alluser; Check: not WizardNoIcons;
 Name: {group}\{cm:Dbtool}; Filename: {app}\{#AppExeName}; Parameters: /svc:dbchecker; IconFilename: {app}\Plugins\DbChecker.dll; Tasks: alluser; Check: not WizardNoIcons;
 Name: {group}\{cm:Homepage}; Filename: {cm:AppURL}; Tasks: alluser; Check: not WizardNoIcons;
@@ -767,7 +752,7 @@ Filename: {cm:AppSupportBlogURL}; Description: {cm:AppSupportBlogURLOpen}; Flags
 Filename: {cm:AppFaqURL}; Description: {cm:AppFaqURLOpen}; Flags: nowait postinstall skipifsilent shellexec unchecked;
 
 [Registry]
- ; allusers
+ ; all users
 Root: HKLM; Subkey: SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {app}\{#AppExeName}; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Check: IsRunAsAdmin
 Root: HKLM; Subkey: SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {group}\{#AppLnk}.lnk; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Tasks: alluser; Check: not WizardNoIcons and IsRunAsAdmin
 Root: HKLM; Subkey: SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {commondesktop}\{#AppName}.lnk; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Tasks: alluser and desktopicon; Check: IsRunAsAdmin
@@ -784,17 +769,16 @@ Root: HKCU; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\
 #define LightSkin "IsStyleChecked('Skin_Custom_Miranda') or IsStyleChecked('Skin_Custom_Miranda_Light') or IsStyleChecked('Skin_Default_Miranda') or IsStyleChecked('Skin_Default_Windows') or IsStyleChecked('Skin_Native_7_Light') or IsStyleChecked('WinStyle_Classic_Light') or IsStyleChecked('Skin_WinStyle_Light') or IsStyleChecked('Skin_Diplomat_Light') or IsStyleChecked('Skin_Glamour_Aqua_Light') or IsStyleChecked('Skin_Glamour_Light') or IsStyleChecked('Skin_GoldTime_Light') or IsStyleChecked('Skin_Graphite_Brown_Light') or IsStyleChecked('Skin_Graphite_Gray_Light') or IsStyleChecked('Skin_PhotoOne_Light') or IsStyleChecked('Skin_Surface_White') or IsStyleChecked('Skin_Textolite_Brown_Light') or IsStyleChecked('Skin_Textolite_Gray_Light')"
 
 [INI]
+ ; mirandaboot.ini
 Filename: {app}\mirandaboot.ini; Section: Database; Key: ProfileDir; String: {#AppProfile}\Profiles; Check: IsDefaultSetupType;
 Filename: {app}\mirandaboot.ini; Section: Language; Key: DefaultLanguage; String: langpack_russian.txt; Languages: ru;
  ; settings.ini
 Filename: {app}\Profiles\settings.ini; Section: Langpack; Key: Current; String: udefault; Languages: en;
 Filename: {app}\Profiles\settings.ini; Section: Langpack; Key: Current; String: ulangpack_russian.txt; Languages: ru;
- ;
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: "Name"; String: u{#AppName};
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Version; String: u{#AppVer} {#AppStatus} {#AppRelease};
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Architecture; String: u{#AppArch};
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: MirVer; String: u{#AppMirVer};
-;Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Production; String: u{#AppPublisher};
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@XMPP.ru;
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")};
 Filename: {app}\Profiles\settings.ini; Section: PackUpdater; Key: File_VersionURL; String: uhttp://im-hotcoffee.narod.ru/hotcoffee_{#AppArch}.ini;
@@ -808,11 +792,10 @@ Filename: {app}\Profiles\settings.ini; Section: CLUI; Key: StatusBarProtosPerLin
  ; update.ini
 Filename: {app}\Profiles\update.ini; Section: Langpack; Key: Current; String: udefault; Languages: en;
 Filename: {app}\Profiles\update.ini; Section: Langpack; Key: Current; String: ulangpack_russian.txt; Languages: ru;
- ;
 Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: "Name"; String: u{#AppName};
 Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Version; String: u{#AppVer} {#AppStatus} {#AppRelease};
 Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Architecture; String: u{#AppArch};
-;Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Production; String: u{#AppPublisher};
+Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: MirVer; String: u{#AppMirVer};
 Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@XMPP.ru;
 Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")};
 Filename: {app}\Profiles\update.ini; Section: PackUpdater; Key: File_VersionURL; String: uhttp://im-hotcoffee.narod.ru/hotcoffee_{#AppArch}.ini;
@@ -826,12 +809,10 @@ Filename: {app}\Profiles\update.ini; Section: CLUI; Key: StatusBarProtosPerLine;
  ; autoexec_update.ini
 Filename: {app}\Profiles\autoexec_update.ini; Section: Langpack; Key: Current; String: udefault; Languages: en; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Langpack; Key: Current; String: ulangpack_russian.txt; Languages: ru; Check: IsUpdate;
- ;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: "Name"; String: u{#AppName}; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Version; String: u{#AppVer} {#AppStatus} {#AppRelease}; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Architecture; String: u{#AppArch}; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: MirVer; String: u{#AppMirVer}; Check: IsUpdate;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Production; String: u{#AppPublisher}; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@XMPP.ru; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")}; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackUpdater; Key: File_VersionURL; String: uhttp://im-hotcoffee.narod.ru/hotcoffee_{#AppArch}.ini; Check: IsUpdate;
@@ -1052,6 +1033,10 @@ Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Font; String: upr
 Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Font; String: uprinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting');
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Font; String: uprinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting') and IsUpdate;
 
+ ; IEViewScrollBar
+Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry; Components: Resources\IEView;
+Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry; Components: Resources\IEView;
+Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
  ; IEViewAnimation
 Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: Animation; String: b{code:SetBoolStyle|IEViewAnimation}; Flags: uninsdeleteentry; Components: Resources\IEView;
 Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: Animation; String: b{code:SetBoolStyle|IEViewAnimation}; Flags: uninsdeleteentry; Components: Resources\IEView;
@@ -1080,15 +1065,15 @@ Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: SendOnDblEnter; St
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: sendonshiftenter; String: b{code:SetBoolSetting|SendShiftEnter}; Flags: uninsdeleteentry; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: SendOnEnter; String: b{code:SetBoolSetting|SendEnter}; Flags: uninsdeleteentry; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: SendOnDblEnter; String: b{code:SetBoolSetting|SendDoubleEnter}; Flags: uninsdeleteentry; Check: IsUpdate;
- ; on top
+ ; OnTop
 Filename: {app}\Profiles\settings.ini; Section: CList; Key: OnTop; String: b{code:SetBoolSetting|OnTop}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: CList; Key: OnTop; String: b{code:SetBoolSetting|OnTop}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: CList; Key: OnTop; String: b{code:SetBoolSetting|OnTop}; Flags: uninsdeleteentry; Check: IsUpdate;
- ; view modes
+ ; ViewModes
 Filename: {app}\Profiles\settings.ini; Section: CLUIFrames; Key: Visible5; String: b{code:SetBoolSetting|ViewModes}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: CLUIFrames; Key: Visible5; String: b{code:SetBoolSetting|ViewModes}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: CLUIFrames; Key: Visible5; String: b{code:SetBoolSetting|ViewModes}; Flags: uninsdeleteentry; Check: IsUpdate;
- ; compact mode
+ ; CompactMode
 Filename: {app}\Profiles\settings.ini; Section: CLC; Key: CompactMode; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: CList; Key: AlignLeftItemsToLeft; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: CList; Key: AlignRightItemsToRight; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry;
@@ -1098,15 +1083,15 @@ Filename: {app}\Profiles\update.ini; Section: CList; Key: AlignRightItemsToRight
 Filename: {app}\Profiles\autoexec_update.ini; Section: CLC; Key: CompactMode; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: CList; Key: AlignLeftItemsToLeft; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: CList; Key: AlignRightItemsToRight; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry; Check: IsUpdate;
- ; Sounds
+ ; UseSound
 Filename: {app}\Profiles\settings.ini; Section: Skin; Key: UseSound; String: b{code:SetBoolSetting|UseSound}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: Skin; Key: UseSound; String: b{code:SetBoolSetting|UseSound}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Skin; Key: UseSound; String: b{code:SetBoolSetting|UseSound}; Flags: uninsdeleteentry; Check: IsUpdate;
- ;
+ ; UseSound for SplashScreen
 Filename: {app}\Profiles\settings.ini; Section: SplashScreen; Key: PlaySound; String: b{code:SetBoolSetting|UseSound}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: SplashScreen; Key: PlaySound; String: b{code:SetBoolSetting|UseSound}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: SplashScreen; Key: PlaySound; String: b{code:SetBoolSetting|UseSound}; Flags: uninsdeleteentry; Check: IsUpdate;
- ; scroll bar
+ ; CLCNoVScrollBar
 Filename: {app}\Profiles\settings.ini; Section: CLC; Key: NoVScrollBar; String: b{code:SetBoolSetting|!CLCNoVScrollBar}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: CLC; Key: NoVScrollBar; String: b{code:SetBoolSetting|!CLCNoVScrollBar}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: CLC; Key: NoVScrollBar; String: b{code:SetBoolSetting|!CLCNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
@@ -1114,18 +1099,20 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: CLC; Key: NoVScrollBar; S
 Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: logstatuschanges; String: b{code:SetBoolSetting|LogStatusChanges}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: logstatuschanges; String: b{code:SetBoolSetting|LogStatusChanges}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: logstatuschanges; String: b{code:SetBoolSetting|LogStatusChanges}; Flags: uninsdeleteentry; Check: IsUpdate;
- ; typing notification
+ ; TypingNotification
 Filename: {app}\Profiles\settings.ini; Section: TypingNotify; Key: Disabled; String: b{code:SetBoolSetting|!TypingNotification}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: TypingNotify; Key: Disabled; String: b{code:SetBoolSetting|!TypingNotification}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: TypingNotify; Key: Disabled; String: b{code:SetBoolSetting|!TypingNotification}; Flags: uninsdeleteentry; Check: IsUpdate;
- ; tab scroll bar
+ ; TabSRMMNoVScrollBar
 Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: disableVScroll; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: HistoryPlusPlus; Key: NoLogScrollBar; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: disableVScroll; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: HistoryPlusPlus; Key: NoLogScrollBar; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: disableVScroll; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: HistoryPlusPlus; Key: NoLogScrollBar; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
- ;
+
+ ; TabSRMMNoVScrollBar for TabSRMM Skin
+Filename: {app}\Skins\TabSRMM\Default_Miranda\Default_Miranda.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
 #define public i 2
 #sub AddThemeTskNoScrollbars
 Filename: {app}\Skins\TabSRMM\{#theme[i]}\{#theme[i]}.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]};
@@ -1183,23 +1170,23 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: AdvancedAutoAway; Key: AL
 Filename: {app}\Profiles\settings.ini; Section: AdvancedAutoAway; Key: ALLPROTOS_OptionFlags; String: w183; Flags: uninsdeleteentry; Check: IsSettingChecked('AutoAwayDetection');
 Filename: {app}\Profiles\update.ini; Section: AdvancedAutoAway; Key: ALLPROTOS_OptionFlags; String: w183; Flags: uninsdeleteentry; Check: IsSettingChecked('AutoAwayDetection');
 Filename: {app}\Profiles\autoexec_update.ini; Section: AdvancedAutoAway; Key: ALLPROTOS_OptionFlags; String: w183; Flags: uninsdeleteentry; Check: IsSettingChecked('AutoAwayDetection') and IsUpdate;
- ; AutoIdleDetection
+ ; AutoIdleDetection IdleOnFullScr
 Filename: {app}\Profiles\settings.ini; Section: Idle; Key: IdleOnFullScr; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: Idle; Key: IdleOnFullScr; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Idle; Key: IdleOnFullScr; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry; Check: IsUpdate;
- ;
+ ; AutoIdleDetection IdleOnLock
 Filename: {app}\Profiles\settings.ini; Section: Idle; Key: IdleOnLock; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: Idle; Key: IdleOnLock; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Idle; Key: IdleOnLock; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry; Check: IsUpdate;
- ;
+ ; AutoIdleDetection IdleOnSaver
 Filename: {app}\Profiles\settings.ini; Section: Idle; Key: IdleOnSaver; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: Idle; Key: IdleOnSaver; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Idle; Key: IdleOnSaver; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry; Check: IsUpdate;
- ;
+ ; AutoIdleDetection IdleOnTerminalDisconnect
 Filename: {app}\Profiles\settings.ini; Section: Idle; Key: IdleOnTerminalDisconnect; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: Idle; Key: IdleOnTerminalDisconnect; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Idle; Key: IdleOnTerminalDisconnect; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry; Check: IsUpdate;
- ;
+ ; AutoIdleDetection UserIdleCheck
 Filename: {app}\Profiles\settings.ini; Section: Idle; Key: UserIdleCheck; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: Idle; Key: UserIdleCheck; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Idle; Key: UserIdleCheck; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry; Check: IsUpdate;
@@ -1209,8 +1196,8 @@ Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: UpdateOnStar
 Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: UpdateOnStartup; String: b{code:SetBoolSetting|CheckUpdates}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: UpdateOnStartup; String: b{code:SetBoolSetting|CheckUpdates}; Flags: uninsdeleteentry; Check: IsUpdate;
 #endif
- ; StableVersion
 #if AppStatus != "Test" && AppStatus != "Alpha" && AppStatus != "Beta"
+ ; StableVersion
 Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: UpdateMode; String: b1; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: UpdateMode; String: b1; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: UpdateMode; String: b1; Flags: uninsdeleteentry; Check: IsUpdate;
@@ -1230,70 +1217,81 @@ Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: DontSwitchToSt
 Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b1; Flags: uninsdeleteentry; Check: IsUpdate;
 #endif
  ; DialogFontSize
-Filename: {app}\Profiles\settings.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b244; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
-Filename: {app}\Profiles\settings.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b243; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
-Filename: {app}\Profiles\settings.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b241; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
-Filename: {app}\Profiles\settings.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b240; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
-Filename: {app}\Profiles\settings.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b237; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
-Filename: {app}\Profiles\settings.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b235; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
-Filename: {app}\Profiles\update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b244; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
-Filename: {app}\Profiles\update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b243; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
-Filename: {app}\Profiles\update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b241; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
-Filename: {app}\Profiles\update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b240; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
-Filename: {app}\Profiles\update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b237; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
-Filename: {app}\Profiles\update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b235; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
-Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b244; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b243; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b241; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b240; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b237; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b235; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5') and IsUpdate;
+Filename: {app}\UserSet\Fonts\handwriting.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
+Filename: {app}\UserSet\Fonts\handwriting.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
+Filename: {app}\UserSet\Fonts\handwriting.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
+Filename: {app}\UserSet\Fonts\handwriting.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
+Filename: {app}\UserSet\Fonts\handwriting.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
+Filename: {app}\UserSet\Fonts\handwriting.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
+Filename: {app}\UserSet\Fonts\printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
+Filename: {app}\UserSet\Fonts\printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
+Filename: {app}\UserSet\Fonts\printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
+Filename: {app}\UserSet\Fonts\printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
+Filename: {app}\UserSet\Fonts\printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
+Filename: {app}\UserSet\Fonts\printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
+Filename: {app}\Profiles\settings.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
+Filename: {app}\Profiles\settings.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
+Filename: {app}\Profiles\settings.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
+Filename: {app}\Profiles\settings.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
+Filename: {app}\Profiles\settings.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
+Filename: {app}\Profiles\settings.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
+Filename: {app}\Profiles\update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
+Filename: {app}\Profiles\update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
+Filename: {app}\Profiles\update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
+Filename: {app}\Profiles\update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
+Filename: {app}\Profiles\update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
+Filename: {app}\Profiles\update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
+Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0') and IsUpdate;
+Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1') and IsUpdate;
+Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2') and IsUpdate;
+Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3') and IsUpdate;
+Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4') and IsUpdate;
+Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5') and IsUpdate;
 #if AppSkinUp == "0"
- ;
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b244; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0') and not IsUpdate;
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b243; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1') and not IsUpdate;
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b241; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2') and not IsUpdate;
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b240; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3') and not IsUpdate;
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b237; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4') and not IsUpdate;
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b235; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5') and not IsUpdate;
+Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0') and not IsUpdate;
+Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1') and not IsUpdate;
+Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2') and not IsUpdate;
+Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3') and not IsUpdate;
+Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4') and not IsUpdate;
+Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5') and not IsUpdate;
 #endif
 #if AppSkinUp == "1"
- ;
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b244; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b243; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b241; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b240; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b237; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b235; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
+Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
+Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
+Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
+Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
+Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
+Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
 #endif
+
 #define public i 0
 #sub AddDefaultThemeIni
  ; default theme ini
-Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b244; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
-Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b243; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
-Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b241; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
-Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b240; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
-Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b237; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
-Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b235; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
+Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
+Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
+Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
+Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
+Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
+Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
 #endsub
 #for {i = 0; i < 2; i++} AddDefaultThemeIni
 
 #define public i 2
 #sub AddCustomThemeIni
- ; theme ini
-Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b244; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,0');
-Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b243; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,1');
-Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b241; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,2');
-Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b240; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,3');
-Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b237; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,4');
-Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b235; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,5');
- ; theme msf
-Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b244; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,0');
-Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b243; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,1');
-Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b241; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,2');
-Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b240; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,3');
-Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b237; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,4');
-Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b235; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,5');
+ ; custom theme ini
+Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,0');
+Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,1');
+Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,2');
+Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,3');
+Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,4');
+Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,5');
+ ; custom theme msf
+Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,0');
+Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,1');
+Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,2');
+Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,3');
+Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,4');
+Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,5');
 #endsub
 #for {i = 2; i < 31; i++} AddCustomThemeIni
 
@@ -6321,6 +6319,7 @@ begin
 
       // add ieview items
       AddGroup(StylesHelper('IEViewSettings'), '', 0, nil);
+      AddCheckBox(StylesHelper('IEViewScrollBar'), '', 1, False, True, False, False, nil);
       AddCheckBox(StylesHelper('IEViewAnimation'), '', 1, False, True, False, False, nil);
       AddCheckBox(StylesHelper('IEViewAvatar'), '', 1, False, True, False, False, nil);
       AddCheckBox(StylesHelper('IEViewShortLink'), '', 1, False, True, False, False, nil);
@@ -9086,9 +9085,11 @@ begin
             ItemEnabled[i] := IsComponentSelected('Resources\Themes\Textolite_Gray_Light') and bUpdate;
 
           { enabled/disabled IEView settings }
+          'IEViewScrollBar',
           'IEViewAnimation',
           'IEViewAvatar',
-          'IEViewShortLink':
+          'IEViewShortLink',
+          'IEViewContextMenu':
             ItemEnabled[i] := IsComponentSelected('Resources\IEView');
 
 //          { enabled/disabled Font settings }

@@ -18,8 +18,10 @@ assert(winapi)
 local globals = require('GlobalFunctions')
 assert(globals)
 
+db.WriteSetting(_, 'mRadio', 'Volume', 100, 1)
+
 function WriteTabSRMMSkin(skinName, fontName)
-	local pattern_1 = 'Custom_Miranda,Custom_Miranda_Dark,Custom_Miranda_Light'
+	local pattern_1 = 'Custom_Miranda,Custom_Miranda_Dark,Custom_Miranda_Light,Default_Miranda'
 	local pattern_2 = 'Graphite_Brown_Dark,Graphite_Brown_Light,Graphite_Gray_Dark,Graphite_Gray_Light,Textolite_Dark,Textolite_Light'
 	local pattern_3 = 'Glamour_Aqua_Dark,Glamour_Aqua_Light,Glamour_Dark,Glamour_Light,GoldTime_Dark,GoldTime_Light,PhotoOne_Dark,PhotoOne_Light'
 	local pattern_4 = 'WinStyle_Classic_Dark,WinStyle_Classic_Light'
