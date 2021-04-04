@@ -37906,10 +37906,10 @@ Cвернуть
 Поддержать проект
 [About pack]
 О сборке
-[Miranda style]
-Стиль Miranda
-[Windows style]
-Стиль Windows
+[Default Miranda style]
+Стандартный стиль Miranda
+[Current Windows style]
+Текущий стиль Windows
 [Core]
 Ядро
 [Open program folder]

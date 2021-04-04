@@ -61,7 +61,7 @@
   "SendCtrlEnter,SendEnter,AutoSizeInputArea,TabSRMMNoVScrollBar," + \
   "AutoAwayDetection,AutoIdleDetection"
 #define SelectedStyleSettingsDefault \
-  "Skin_Default_Windows,IconsXpk,IEViewScrollBar,IEViewAnimation,IEViewShortLink,IEViewContextMenu,FontPrinting"
+  "Skin_Current_Windows,IconsXpk,IEViewScrollBar,IEViewAnimation,IEViewShortLink,IEViewContextMenu,FontPrinting"
 
 #define IncompatibleDir "{app}\incompatible"                                ; incompatible dir
 #define ExcludeList \
@@ -91,7 +91,7 @@
 
 #dim theme[31]
 #define theme[0] "Default_Miranda"
-#define theme[1] "Default_Windows"
+#define theme[1] "Current_Windows"
 #define theme[2] "Custom_Miranda"
 #define theme[3] "Custom_Miranda_Dark"
 #define theme[4] "Custom_Miranda_Light"
@@ -271,7 +271,7 @@ Source: x86\Skins\Avatars\no_avatar.png; DestDir: {app}\Skins\Avatars; Flags: ig
 Source: x86\Skins\IconPacks\*; DestDir: {app}\Skins\IconPacks; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Skins\TabSRMM\Default_Miranda\*; DestDir: {app}\Skins\TabSRMM\Default_Miranda; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Skins\Default_Miranda.ini; DestDir: {app}\Skins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Skins\Default_Windows.ini; DestDir: {app}\Skins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Skins\Current_Windows.ini; DestDir: {app}\Skins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
  ; UserSet
 Source: x86\UserSet\Fonts\*; DestDir: {app}\UserSet\Fonts; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\UserSet\ini\*; DestDir: {app}\UserSet\ini; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
@@ -343,29 +343,30 @@ Source: {#AppArch}\Plugins\VKontakte.dll; DestDir: {app}\Plugins; Flags: ignorev
 Source: x86\Icons\Proto_conn_VKontakte.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\VKontakte; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_VKontakte.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\VKontakte; AfterInstall: AddDetails;
 Source: x86\Skins\Smileys\stickers\VK\*; DestDir: {app}\Skins\Smileys\stickers\VK; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Protocols\VKontakte and Resources\Smileys; AfterInstall: AddDetails;
- ; Protocols\other\mRadio
-Source: {#AppArch}\Plugins\mRadio.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\other\mRadio; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\BASS\*; DestDir: {app}\Plugins\BASS; Flags: ignoreversion; Components: Protocols\other\mRadio; AfterInstall: AddDetails;
-Source: x86\Plugins\mRadio\*; DestDir: {app}\Plugins\mRadio; Flags: ignoreversion; Components: Protocols\other\mRadio; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_mRadio.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\other\mRadio; AfterInstall: AddDetails;
-Source: x86\Skins\Avatars\mRadio.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\other\mRadio; AfterInstall: AddDetails;
- ; Protocols\other\NewsAggregator
-Source: {#AppArch}\Plugins\NewsAggregator.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\other\NewsAggregator; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_NewsAggregator.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\other\NewsAggregator; AfterInstall: AddDetails;
-Source: x86\Skins\Avatars\rss.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\other\NewsAggregator; AfterInstall: AddDetails;
- ; Protocols\other\CurrencyRates
-Source: {#AppArch}\Plugins\CurrencyRates\*.exe; DestDir: {app}\Plugins\CurrencyRates; Flags: ignoreversion; Components: Protocols\other\CurrencyRates; AfterInstall: AddDetails;
-Source: x86\Plugins\CurrencyRates\*.xml; DestDir: {app}\Plugins\CurrencyRates; Flags: ignoreversion; Components: Protocols\other\CurrencyRates; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_CurrencyRates.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\other\CurrencyRates; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\CurrencyRates.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\other\CurrencyRates; AfterInstall: AddDetails;
-Source: x86\Skins\Avatars\CurrencyRates.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\other\CurrencyRates; AfterInstall: AddDetails;
- ; Protocols\other\Weather
-Source: {#AppArch}\Plugins\Weather.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\other\Weather; AfterInstall: AddDetails;
-Source: x86\Plugins\Weather\*; DestDir: {app}\Plugins\Weather; Flags: ignoreversion; Components: Protocols\other\Weather; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_Weather.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\other\Weather; AfterInstall: AddDetails;
- ; Protocols\other\YAMN
-Source: {#AppArch}\Plugins\YAMN.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\other\YAMN; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_YAMN.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\other\YAMN; AfterInstall: AddDetails;
+ ; Protocols\Pseudo
+ ; Protocols\Pseudo\CurrencyRates
+Source: {#AppArch}\Plugins\CurrencyRates.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\CurrencyRates; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\CurrencyRates\*.exe; DestDir: {app}\Plugins\CurrencyRates; Flags: ignoreversion; Components: Protocols\Pseudo\CurrencyRates; AfterInstall: AddDetails;
+Source: x86\Plugins\CurrencyRates\*.xml; DestDir: {app}\Plugins\CurrencyRates; Flags: ignoreversion; Components: Protocols\Pseudo\CurrencyRates; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_CurrencyRates.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Pseudo\CurrencyRates; AfterInstall: AddDetails;
+Source: x86\Skins\Avatars\CurrencyRates.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\Pseudo\CurrencyRates; AfterInstall: AddDetails;
+ ; Protocols\Pseudo\mRadio
+Source: {#AppArch}\Plugins\mRadio.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\BASS\*; DestDir: {app}\Plugins\BASS; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
+Source: x86\Plugins\mRadio\*; DestDir: {app}\Plugins\mRadio; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_mRadio.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
+Source: x86\Skins\Avatars\mRadio.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
+ ; Protocols\Pseudo\NewsAggregator
+Source: {#AppArch}\Plugins\NewsAggregator.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\NewsAggregator; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_NewsAggregator.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Pseudo\NewsAggregator; AfterInstall: AddDetails;
+Source: x86\Skins\Avatars\rss.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\Pseudo\NewsAggregator; AfterInstall: AddDetails;
+ ; Protocols\Pseudo\Weather
+Source: {#AppArch}\Plugins\Weather.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\Weather; AfterInstall: AddDetails;
+Source: x86\Plugins\Weather\*; DestDir: {app}\Plugins\Weather; Flags: ignoreversion; Components: Protocols\Pseudo\Weather; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_Weather.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Pseudo\Weather; AfterInstall: AddDetails;
+ ; Protocols\Pseudo\YAMN
+Source: {#AppArch}\Plugins\YAMN.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\YAMN; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_YAMN.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Pseudo\YAMN; AfterInstall: AddDetails;
 
  ; Plugins
  ; Plugins\BossKey
@@ -417,12 +418,12 @@ Source: x86\Skins\IEView\!tools\player\*; DestDir: {app}\Skins\IEView\!tools\pla
 Source: x86\Skins\IEView\!tools\scripts\*; DestDir: {app}\Skins\IEView\!tools\scripts; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\!tools\tZersFiles\animationen\*; DestDir: {app}\Skins\IEView\!tools\tZersFiles\animationen; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\!tools\tZersFiles\grafiken\*; DestDir: {app}\Skins\IEView\!tools\tZersFiles\grafiken; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
-Source: x86\Skins\IEView\styles\Default_Windows\*; DestDir: {app}\Skins\IEView\styles\Default_Windows; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
-Source: x86\Skins\IEView\styles\Default_Windows.css; DestDir: {app}\Skins\IEView\styles; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
+Source: x86\Skins\IEView\styles\Current_Windows\*; DestDir: {app}\Skins\IEView\styles\Current_Windows; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
+Source: x86\Skins\IEView\styles\Current_Windows.css; DestDir: {app}\Skins\IEView\styles; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\styles\*.png; DestDir: {app}\Skins\IEView\styles; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\config.css; DestDir: {app}\Skins\IEView; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\noavatar.png; DestDir: {app}\Skins\IEView; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
-Source: x86\Skins\IEView\Default_Windows.ivt; DestDir: {app}\Skins\IEView; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
+Source: x86\Skins\IEView\Current_Windows.ivt; DestDir: {app}\Skins\IEView; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
  ; Resources\PopupPlus
 Source: {#AppArch}\Plugins\PopupPlus.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Resources\PopupPlus; AfterInstall: AddDetails;
 Source: x86\Skins\Popup\Default_Miranda\*; DestDir: {app}\Skins\Popup\Default_Miranda; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\PopupPlus; AfterInstall: AddDetails;
@@ -475,11 +476,11 @@ Source: x86\Skins\{#theme[i]}.ini; DestDir: {app}\Skins; Flags: ignoreversion; C
  ; copy autoexec_skin.ini for clean installation default themes
 #if AppSkinUp == "0"
 Source: x86\Skins\Default_Miranda.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Default_Miranda') and not IsUpdate; AfterInstall: AddDetails;
-Source: x86\Skins\Default_Windows.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Default_Windows') and not IsUpdate; AfterInstall: AddDetails;
+Source: x86\Skins\Current_Windows.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Current_Windows') and not IsUpdate; AfterInstall: AddDetails;
 #endif
 #if AppSkinUp == "1"
 Source: x86\Skins\Default_Miranda.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Default_Miranda'); AfterInstall: AddDetails;
-Source: x86\Skins\Default_Windows.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Default_Windows'); AfterInstall: AddDetails;
+Source: x86\Skins\Current_Windows.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Current_Windows'); AfterInstall: AddDetails;
 #endif
  ; copy autoexec_skin.ini for clean installation custom themes
 #if AppSkinUp == "0"
@@ -520,12 +521,12 @@ Name: Protocols\Jabber\XMPP; Description: {code:ComponentsHelper|ProtocolsJabber
 Name: Protocols\Skype; Description: {code:ComponentsHelper|ProtocolsSkype}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Protocols\Twitter; Description: {code:ComponentsHelper|ProtocolsTwitter}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\VKontakte; Description: {code:ComponentsHelper|ProtocolsVKontakte}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\other; Description: {code:ComponentsHelper|ProtocolsOther}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
-Name: Protocols\other\mRadio; Description: {code:ComponentsHelper|ProtocolsOthermRadio}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\other\NewsAggregator; Description: {code:ComponentsHelper|ProtocolsOtherNewsAggregator}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\other\CurrencyRates; Description: {code:ComponentsHelper|ProtocolsOtherCurrencyRates}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\other\Weather; Description: {code:ComponentsHelper|ProtocolsOtherWeather}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\other\YAMN; Description: {code:ComponentsHelper|ProtocolsOtherYAMN}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Pseudo; Description: {code:ComponentsHelper|ProtocolsPseudo}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
+Name: Protocols\Pseudo\CurrencyRates; Description: {code:ComponentsHelper|ProtocolsPseudoCurrencyRates}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Pseudo\mRadio; Description: {code:ComponentsHelper|ProtocolsPseudomRadio}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Pseudo\NewsAggregator; Description: {code:ComponentsHelper|ProtocolsPseudoNewsAggregator}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Pseudo\Weather; Description: {code:ComponentsHelper|ProtocolsPseudoWeather}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Pseudo\YAMN; Description: {code:ComponentsHelper|ProtocolsPseudoYAMN}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 
  ; Plugins
 Name: Plugins; Description: {code:ComponentsHelper|PluginsFiles}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
@@ -618,12 +619,12 @@ Name: Protocols\Jabber\XMPP; Description: {code:ComponentsHelper|ProtocolsJabber
 Name: Protocols\Skype; Description: {code:ComponentsHelper|ProtocolsSkype}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Twitter; Description: {code:ComponentsHelper|ProtocolsTwitter}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\VKontakte; Description: {code:ComponentsHelper|ProtocolsVKontakte}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\other; Description: {code:ComponentsHelper|ProtocolsOther}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
-Name: Protocols\other\mRadio; Description: {code:ComponentsHelper|ProtocolsOthermRadio}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\other\NewsAggregator; Description: {code:ComponentsHelper|ProtocolsOtherNewsAggregator}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\other\CurrencyRates; Description: {code:ComponentsHelper|ProtocolsOtherCurrencyRates}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\other\Weather; Description: {code:ComponentsHelper|ProtocolsOtherWeather}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\other\YAMN; Description: {code:ComponentsHelper|ProtocolsOtherYAMN}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Pseudo; Description: {code:ComponentsHelper|ProtocolsPseudo}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
+Name: Protocols\Pseudo\CurrencyRates; Description: {code:ComponentsHelper|ProtocolsPseudoCurrencyRates}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Pseudo\mRadio; Description: {code:ComponentsHelper|ProtocolsPseudomRadio}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Pseudo\NewsAggregator; Description: {code:ComponentsHelper|ProtocolsPseudoNewsAggregator}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Pseudo\Weather; Description: {code:ComponentsHelper|ProtocolsPseudoWeather}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Pseudo\YAMN; Description: {code:ComponentsHelper|ProtocolsPseudoYAMN}; Types: full custom; Flags: disablenouninstallwarning;
 
  ; Plugins
 Name: Plugins; Description: {code:ComponentsHelper|PluginsFiles}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
@@ -766,7 +767,7 @@ Root: HKCU; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\
 Root: HKCU; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {userstartup}\{#AppLnk}.lnk; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Tasks: curuser and autorun; Check: IsRunAsAdmin
 
 #define DarkSkin "IsStyleChecked('Skin_Custom_Miranda_Dark') or IsStyleChecked('Skin_Native_7_Dark') or IsStyleChecked('WinStyle_Classic_Dark') or IsStyleChecked('Skin_WinStyle_Dark') or IsStyleChecked('Skin_Diplomat_Dark') or IsStyleChecked('Skin_Glamour_Aqua_Dark') or IsStyleChecked('Skin_Glamour_Dark') or IsStyleChecked('Skin_GoldTime_Dark') or IsStyleChecked('Skin_Graphite_Brown_Dark') or IsStyleChecked('Skin_Graphite_Gray_Dark') or IsStyleChecked('Skin_PhotoOne_Dark') or IsStyleChecked('Skin_Surface_Black') or IsStyleChecked('Skin_Textolite_Brown_Dark') or IsStyleChecked('Skin_Textolite_Gray_Dark')"
-#define LightSkin "IsStyleChecked('Skin_Custom_Miranda') or IsStyleChecked('Skin_Custom_Miranda_Light') or IsStyleChecked('Skin_Default_Miranda') or IsStyleChecked('Skin_Default_Windows') or IsStyleChecked('Skin_Native_7_Light') or IsStyleChecked('WinStyle_Classic_Light') or IsStyleChecked('Skin_WinStyle_Light') or IsStyleChecked('Skin_Diplomat_Light') or IsStyleChecked('Skin_Glamour_Aqua_Light') or IsStyleChecked('Skin_Glamour_Light') or IsStyleChecked('Skin_GoldTime_Light') or IsStyleChecked('Skin_Graphite_Brown_Light') or IsStyleChecked('Skin_Graphite_Gray_Light') or IsStyleChecked('Skin_PhotoOne_Light') or IsStyleChecked('Skin_Surface_White') or IsStyleChecked('Skin_Textolite_Brown_Light') or IsStyleChecked('Skin_Textolite_Gray_Light')"
+#define LightSkin "IsStyleChecked('Skin_Custom_Miranda') or IsStyleChecked('Skin_Custom_Miranda_Light') or IsStyleChecked('Skin_Default_Miranda') or IsStyleChecked('Skin_Current_Windows') or IsStyleChecked('Skin_Native_7_Light') or IsStyleChecked('WinStyle_Classic_Light') or IsStyleChecked('Skin_WinStyle_Light') or IsStyleChecked('Skin_Diplomat_Light') or IsStyleChecked('Skin_Glamour_Aqua_Light') or IsStyleChecked('Skin_Glamour_Light') or IsStyleChecked('Skin_GoldTime_Light') or IsStyleChecked('Skin_Graphite_Brown_Light') or IsStyleChecked('Skin_Graphite_Gray_Light') or IsStyleChecked('Skin_PhotoOne_Light') or IsStyleChecked('Skin_Surface_White') or IsStyleChecked('Skin_Textolite_Brown_Light') or IsStyleChecked('Skin_Textolite_Gray_Light')"
 
 [INI]
  ; mirandaboot.ini
@@ -824,10 +825,10 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: CLUIFrames; Key: TBVisile
 Filename: {app}\Profiles\autoexec_update.ini; Section: CLUI; Key: EqualSections; String: b{code:GetCLUIFrames|EqualSections}; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: CLUI; Key: StatusBarProtosPerLine; String: b{code:GetCLUIFrames|StatusBarProtosPerLine}; Check: IsUpdate;
 
- ; Protocols\other\CurrencyRates
-Filename: {app}\Profiles\settings.ini; Section: CurrencyRates; Key: AM_BaseProto; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\other\CurrencyRates;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 0; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\other\CurrencyRates;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 200; String: d0; Flags: uninsdeleteentry; Components: Protocols\other\CurrencyRates;
+ ; Protocols\Pseudo\CurrencyRates
+Filename: {app}\Profiles\settings.ini; Section: CurrencyRates; Key: AM_BaseProto; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 0; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 200; String: d0; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
  ; Protocols\Discord
 Filename: {app}\Profiles\settings.ini; Section: Discord; Key: AM_BaseProto; String: sDiscord; Flags: uninsdeleteentry; Components: Protocols\Discord;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 4; String: sDiscord; Flags: uninsdeleteentry; Components: Protocols\Discord;
@@ -887,10 +888,10 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: MRA; Key: AM_BaseProto; S
  ; MetaContacts
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 44; String: sMetaContacts; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 244; String: d44; Flags: uninsdeleteentry;
- ; Protocols\other\NewsAggregator
-Filename: {app}\Profiles\settings.ini; Section: NewsAggregator; Key: AM_BaseProto; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\other\NewsAggregator;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 48; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\other\NewsAggregator;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 248; String: d48; Flags: uninsdeleteentry; Components: Protocols\other\NewsAggregator;
+ ; Protocols\Pseudo\NewsAggregator
+Filename: {app}\Profiles\settings.ini; Section: NewsAggregator; Key: AM_BaseProto; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 48; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 248; String: d48; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
  ; Protocols\Jabber\OK
 Filename: {app}\Profiles\settings.ini; Section: OK; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 52; String: sOK; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
@@ -919,25 +920,25 @@ Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 68; String: sVKo
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 268; String: d68; Flags: uninsdeleteentry; Components: Protocols\VKontakte;
 Filename: {app}\Profiles\update.ini; Section: VKontakte; Key: AM_BaseProto; String: sVKontakte; Flags: uninsdeleteentry; Components: Protocols\VKontakte;
 Filename: {app}\Profiles\autoexec_update.ini; Section: VKontakte; Key: AM_BaseProto; String: sVKontakte; Flags: uninsdeleteentry; Components: Protocols\VKontakte; Check: IsUpdate;
- ; Protocols\other\Weather
-Filename: {app}\Profiles\settings.ini; Section: Weather; Key: AM_BaseProto; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\other\Weather;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 72; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\other\Weather;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 272; String: d72; Flags: uninsdeleteentry; Components: Protocols\other\Weather;
+ ; Protocols\Pseudo\Weather
+Filename: {app}\Profiles\settings.ini; Section: Weather; Key: AM_BaseProto; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 72; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 272; String: d72; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
  ; Protocols\Jabber\XMPP
 Filename: {app}\Profiles\settings.ini; Section: XMPP; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 74; String: sXMPP; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 274; String: d74; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
 Filename: {app}\Profiles\update.ini; Section: XMPP; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
 Filename: {app}\Profiles\autoexec_update.ini; Section: XMPP; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP; Check: IsUpdate;
- ; Protocols\other\YAMN
-Filename: {app}\Profiles\settings.ini; Section: YAMN; Key: AM_BaseProto; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\other\YAMN;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 78; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\other\YAMN;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 278; String: d78; Flags: uninsdeleteentry; Components: Protocols\other\YAMN;
+ ; Protocols\Pseudo\YAMN
+Filename: {app}\Profiles\settings.ini; Section: YAMN; Key: AM_BaseProto; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 78; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 278; String: d78; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
  ; CloudFile/YandexDisk
 Filename: {app}\Profiles\settings.ini; Section: YandexDisk; Key: AM_BaseProto; String: sCloudFile/YandexDisk; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 82; String: sYandexDisk; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 282; String: d82; Flags: uninsdeleteentry;
- ; Protocols\other\mRadio
+ ; Protocols\Pseudo\mRadio
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 86; String: smRadio; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 286; String: d86; Flags: uninsdeleteentry;
 
@@ -1024,14 +1025,14 @@ Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: Hangouts-filenam
 Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: OK-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
 Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: Yandex-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
 
- ; handwriting font
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Font; String: uhandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Font; String: uhandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Font; String: uhandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting') and IsUpdate;
- ; printing font
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Font; String: uprinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Font; String: uprinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Font; String: uprinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting') and IsUpdate;
+ ; Handwriting font
+Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Font; String: uHandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting');
+Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Font; String: uHandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting');
+Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Font; String: uHandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting') and IsUpdate;
+ ; Printing font
+Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Font; String: uPrinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting');
+Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Font; String: uPrinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting');
+Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Font; String: uPrinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting') and IsUpdate;
 
  ; IEViewScrollBar
 Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry; Components: Resources\IEView;
@@ -3274,7 +3275,7 @@ end;
 
   // radiobuttons
 //  if IsStyleChecked('FontPrinting') then
-//    StringChangeEx(Source, '!font!', 'printing', True)
+//    StringChangeEx(Source, '!font!', 'Printing', True)
 //  else if IsStyleChecked('FontHandwritting') then
 //    StringChangeEx(Source, '!font!', 'handwritting', True);
 
@@ -6280,7 +6281,7 @@ begin
       // add skin items
       AddGroup(StylesHelper('Skin'), '', 0, nil);
       AddRadioButton(StylesHelper('Skin_Default_Miranda'), '', 1, False, True, nil);
-      AddRadioButton(StylesHelper('Skin_Default_Windows'), '', 1, False, True, nil);
+      AddRadioButton(StylesHelper('Skin_Current_Windows'), '', 1, False, True, nil);
       AddRadioButton(StylesHelper('Skin_Custom_Miranda'), '', 1, False, True, nil);
       AddRadioButton(StylesHelper('Skin_Custom_Miranda_Dark'), '', 1, False, True, nil);
       AddRadioButton(StylesHelper('Skin_Custom_Miranda_Light'), '', 1, False, True, nil);
@@ -9022,7 +9023,7 @@ begin
           { enabled/disabled skins }
         #if AppSkinUp == "0"
           'Skin_Default_Miranda',
-          'Skin_Default_Windows':
+          'Skin_Current_Windows':
             ItemEnabled[i] := bUpdate;
         #endif
           'Skin_Custom_Miranda':
@@ -9768,9 +9769,9 @@ end;
 //	Font: string;
 //begin
 //	if IsStyleChecked('FontPrinting') then
-//		Font := 'printing'
+//		Font := 'Printing'
 //	else
-//		Font := 'handwriting';
+//		Font := 'Handwriting';
 //	Result := Format(
 //    'u{"animation":{"enable":%s,"on_window_open":false},' +
 //    '"avatars":{"enable":%s},' +

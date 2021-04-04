@@ -77,18 +77,18 @@ ProtocolsTwitter=Protocols\Twitter | Twitter | Twitter protocol.%n%nTwitter.dll
 ProtocolsVKontakte=Protocols\VKontakte | VKontakte | VKontakte protocol of the vk.com social network.%n%nVKontakte.dll
 ProtocolsWhatsApp=Protocols\WhatsApp | WhatsApp | WhatsApp protocol.%n%nWhatsApp.dll
 ProtocolsYAHOO=Protocols\Yahoo | YAHOO | Yahoo protocol%n(Yahoo! Messenger).%n%nYahoo.dll
-ProtocolsOther=Protocols\other | Others | Additional pseudo-protocols.
-ProtocolsOtherDropbox=Protocols\other\Dropbox | Dropbox | Allows to transfer files via Dropbox.%n%nDropbox.dll
-ProtocolsOtherMetaContacts=Protocols\other\MetaContacts | MetaContacts | Merges many contacts from various protocols into one MetaContact.%n%nMetaContacts.dll
-ProtocolsOthermRadio=Protocols\other\mRadio | mRadio | Plays and records Internet radio streams. Also local media files can be played.%n%nmRadio.dll
-ProtocolsOtherNewsAggregator=Protocols\other\NewsAggregator | NewsAggregator | RSS/Atom reader.%n%nNewsAggregator.dll
-ProtocolsOtherCurrencyRates=Protocols\other\CurrencyRates | CurrencyRates | Show currency rates and economic quotes.%n%nCurrencyRates.dll
-ProtocolsOtherWeather=Protocols\other\Weather | Weather | Queries and displays weather information in a contact list.%n%nWeather.dll
-ProtocolsOtherYAMN=Protocols\other\YAMN | YAMN | Mail notifier and browser. POP3 & IMAP protocols included.%n%nYAMN.dll
+ProtocolsPseudo=Protocols\Pseudo | Pseudo-protocols | Additional pseudo-protocols.
+ProtocolsPseudoCurrencyRates=Protocols\Pseudo\CurrencyRates | CurrencyRates | Show currency rates and economic quotes.%n%nCurrencyRates.dll
+ProtocolsPseudoDropbox=Protocols\Pseudo\Dropbox | Dropbox | Allows to transfer files via Dropbox.%n%nDropbox.dll
+ProtocolsPseudoMetaContacts=Protocols\Pseudo\MetaContacts | MetaContacts | Merges many contacts from various protocols into one MetaContact.%n%nMetaContacts.dll
+ProtocolsPseudomRadio=Protocols\Pseudo\mRadio | mRadio | Plays and records Internet radio streams. Also local media files can be played.%n%nmRadio.dll
+ProtocolsPseudoNewsAggregator=Protocols\Pseudo\NewsAggregator | NewsAggregator | RSS/Atom reader.%n%nNewsAggregator.dll
+ProtocolsPseudoWeather=Protocols\Pseudo\Weather | Weather | Queries and displays weather information in a contact list.%n%nWeather.dll
+ProtocolsPseudoYAMN=Protocols\Pseudo\YAMN | YAMN | Mail notifier and browser. POP3 & IMAP protocols included.%n%nYAMN.dll
 	; Plugins
 PluginsFiles=Plugins | Plugins | Additional plugins that extend the functionality of the program.
 AuthState=Plugins\AuthState | Authorization state | If a contact didn't authorize you this plugin puts an icon in front of the contact's name.%n%nAuthState.dll
-BossKey=Plugins\BossKey | BossKey+ | Allows you to hide Miranda's window by pressing a 'Ctrl+F12' hotkey.%n%nBossKey.dll
+BossKey=Plugins\BossKey | BossKey | Allows you to hide Miranda's window by pressing a 'Ctrl+F12' hotkey.%n%nBossKey.dll
 BuddyExpectator=Plugins\BuddyExpectator | Buddy expectator | Reacts to the return of contacts, or to the extended absence of contacts, with notifications and other actions.%n%nBuddyExpectator.dll
 ChangeKeyboardLayout=Plugins\ChangeKeyboardLayout | Change keyboard layout | Plugins for keyboard layout changing, in case of incorrectly typed text or transliteration or changing case of the entered text.%n%nChangeKeyboardLayout.dll%nTranslitSwitcher.dll
 DbEditorPP=Plugins\DbEditorPP | Database editor++ | Database editor (profile editor).%n%nDbEditorPP.dll
@@ -232,15 +232,15 @@ LocationTabsMessageWindowDefaultValue=LocationTabsMessageWindowValueTop
 WizardStyles=Appearance
 WizardStylesDesc=Which appearance do you prefer to set by default?
 	; styles settings: style display name | style description | style preview bitmap | style selected bitmap | style unselected bitmap
-	; skins
+	; Skins
 Skin=Theme | Choose a theme.
-Skin_Default_Miranda=Miranda Style | Default Miranda theme. | * | Default_Miranda.bmp
-Skin_Default_Windows=Windows Style | Default Windows theme. Organically fits into any OS theme. | * | Default_Windows.bmp
-Skin_Custom_Miranda=Miranda Custom Style | Custom Miranda theme. | * | Custom_Miranda.bmp
-Skin_Custom_Miranda_Dark=Miranda Custom Dark Style | Custom Dark Miranda theme. | * | Custom_Miranda_Dark.bmp
-Skin_Custom_Miranda_Light=Miranda Custom Light Style | Custom Light Miranda theme. | * | Custom_Miranda_Light.bmp
-Skin_Native_7_Dark=Native 7 Dark Style | Native 7 Dark theme. Organically fits into dark OS Windows 7 theme. | * | Native_7_Dark.bmp
-Skin_Native_7_Light=Native 7 Light Style | Native 7 Light theme. Organically fits into light OS Windows 7 theme. | * | Native_7_Light.bmp
+Skin_Default_Miranda=Default Miranda Style | Default Miranda theme. | * | Default_Miranda.bmp
+Skin_Current_Windows=Current Windows Style | Current Windows theme. Organically fits into any OS theme. | * | Current_Windows.bmp
+Skin_Custom_Miranda=Custom Miranda | Custom Miranda theme. | * | Custom_Miranda.bmp
+Skin_Custom_Miranda_Dark=Custom Miranda Dark | Custom Dark Miranda theme. | * | Custom_Miranda_Dark.bmp
+Skin_Custom_Miranda_Light=Custom Miranda Light | Custom Light Miranda theme. | * | Custom_Miranda_Light.bmp
+Skin_Native_7_Dark=Native 7 Dark | Native 7 Dark theme. Organically fits into dark OS Windows 7 theme. | * | Native_7_Dark.bmp
+Skin_Native_7_Light=Native 7 Light | Native 7 Light theme. Organically fits into light OS Windows 7 theme. | * | Native_7_Light.bmp
 Skin_WinStyle_Classic_Dark=WinStyle Classic Dark | WinStyle Classic Dark theme. Organically fits into classic dark OS theme. | * | WinStyle_Classic_Dark.bmp
 Skin_WinStyle_Classic_Light=WinStyle Classic Light | WinStyle Classic Light theme. Organically fits into classic light OS theme. | * | WinStyle_Classic_Light.bmp
 Skin_WinStyle_Dark=WinStyle Dark | WinStyle Dark theme. Organically fits into any dark OS theme. | * | WinStyle_Dark.bmp
@@ -265,7 +265,7 @@ Skin_Textolite_Brown_Dark=Textolite Brown Dark | Textolite Brown Dark theme. | *
 Skin_Textolite_Brown_Light=Textolite Brown Light | Textolite Brown Light theme. | Skin_Textolite_Brown_Light.bmp | Textolite_Brown_Light.bmp
 Skin_Textolite_Gray_Dark=Textolite Gray Dark | Textolite Gray Dark theme. | Skin_Textolite_Gray_Dark.bmp | Textolite_Gray_Dark.bmp
 Skin_Textolite_Gray_Light=Textolite Gray Light | Textolite Gray Light theme. | * | Textolite_Gray_Light.bmp
-	; iconpatcher
+	; IconPatcher
 Icons=Icons | Icons replacement.
 IconsFugue=Fugue | Fugue icon set. | * | Icons_Fugue.bmp
 IconsNova=Nova | Nova icon set. | * | Icons_Nova.bmp
@@ -277,7 +277,7 @@ IEViewAnimation=Animation | Enable/Disable animation. | * | Animation_On.gif | A
 IEViewAvatar=Avatars | Enable/Disable avatars. | * | Avatar_On.bmp | Avatar_Off.bmp
 IEViewShortLink=Shortened links | Enable/Disable shortened links. | * | ShortLink_On.bmp | ShortLink_Off.bmp
 IEViewContextMenu=Context menu | Enable/Disable context menu. | * | ContextMenu_On.bmp | ContextMenu_Off.bmp
-	; fonts
+	; Fonts
 Font=Font | Fonts.
 FontHandwriting=Handwriting | Handwriting font. | * | Font_Handwriting.bmp
 FontPrinting=Printing | Printing font. | * | Font_Printing.bmp
@@ -350,7 +350,7 @@ NotMirandaFolderNameError=Warning: if the installation directory's name doesn't 
 ArchIncompatibleInfo=Warning: the installer detected some incompatible files and moved them to the 'incompatible' folder.
 
 
-; *** others
+; *** Others
 UpdateWindowTitle=Update  %1
 UninstallWindowTitle=Uninstall  %1
 DeleteUserProfiles=Remove user profiles?

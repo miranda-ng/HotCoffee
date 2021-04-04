@@ -77,14 +77,14 @@ ProtocolsTwitter=Protocols\Twitter | Twitter | Протокол Twitter.%n%nTwitter.dll
 ProtocolsVKontakte=Protocols\VKontakte | VKontakte | Протокол VKontakte (социальная сеть vk.com).%n%nVKontakte.dll
 ProtocolsWhatsApp=Protocols\WhatsApp | WhatsApp | Протокол WhatsApp.%n%nWhatsApp.dll
 ProtocolsYAHOO=Protocols\Yahoo | YAHOO | Протокол Yahoo%n(Yahoo! Messenger).%n%nYahoo.dll
-ProtocolsOther=Protocols\other | Другие | Дополнительные псевдопротоколы.
-ProtocolsOtherDropbox=Protocols\other\Dropbox | Dropbox | Загрузка и пересылка файлов с помощью Dropbox.%n%nDropbox.dll
-ProtocolsOtherMetaContacts=Protocols\other\MetaContacts | MetaContacts | Объединяет контакты одинаковых и разных протоколов в один Метаконтакт.%n%nMetaContacts.dll
-ProtocolsOthermRadio=Protocols\other\mRadio | mRadio | Позволяет прослушивать и записывать интернет-радио. Также может воспроизводить локальные файлы.%n%nmRadio.dll
-ProtocolsOtherNewsAggregator=Protocols\other\NewsAggregator | NewsAggregator | Позволяет читать ленты RSS/Atom.%n%nNewsAggregator.dll
-ProtocolsOtherCurrencyRates=Protocols\other\CurrencyRates | CurrencyRates | Позволяет наблюдать за изменениями курсов валют и биржевых котировок.%n%nCurrencyRates.dll
-ProtocolsOtherWeather=Protocols\other\Weather | Weather | Запрос и отображение информации о погоде в вашем списке контактов.%n%nWeather.dll
-ProtocolsOtherYAMN=Protocols\other\YAMN | YAMN | Оповещение и просмотр новой почты для Miranda. Встроены протоколы POP3 и IMAP.%n%nYAMN.dll
+ProtocolsPseudo=Protocols\Pseudo | Псевдо-протоколы | Дополнительные псевдо-протоколы.
+ProtocolsPseudoCurrencyRates=Protocols\Pseudo\CurrencyRates | CurrencyRates | Позволяет наблюдать за изменениями курсов валют и биржевых котировок.%n%nCurrencyRates.dll
+ProtocolsPseudoDropbox=Protocols\Pseudo\Dropbox | Dropbox | Загрузка и пересылка файлов с помощью Dropbox.%n%nDropbox.dll
+ProtocolsPseudoMetaContacts=Protocols\Pseudo\MetaContacts | MetaContacts | Объединяет контакты одинаковых и разных протоколов в один Метаконтакт.%n%nMetaContacts.dll
+ProtocolsPseudomRadio=Protocols\Pseudo\mRadio | mRadio | Позволяет прослушивать и записывать интернет-радио. Также может воспроизводить локальные файлы.%n%nmRadio.dll
+ProtocolsPseudoNewsAggregator=Protocols\Pseudo\NewsAggregator | NewsAggregator | Позволяет читать ленты RSS/Atom.%n%nNewsAggregator.dll
+ProtocolsPseudoWeather=Protocols\Pseudo\Weather | Weather | Запрос и отображение информации о погоде в вашем списке контактов.%n%nWeather.dll
+ProtocolsPseudoYAMN=Protocols\Pseudo\YAMN | YAMN | Оповещение и просмотр новой почты для Miranda. Встроены протоколы POP3 и IMAP.%n%nYAMN.dll
 	; Plugins
 PluginsFiles=Plugins | Плагины | Дополнительные плагины, расширяющие функционал программы.
 AuthState=Plugins\AuthState | Состояние авторизации | Этот плагин поместит значок рядом с именем контакта, если он не авторизовал вас, или вы не авторизовали его.%n%nAuthState.dll
@@ -232,15 +232,15 @@ LocationTabsMessageWindowDefaultValue=LocationTabsMessageWindowValueTop
 WizardStyles=Оформление
 WizardStylesDesc=Какое оформление вы предпочитаете установить по умолчанию?
 	; styles settings: style display name | style description | style preview bitmap | style selected bitmap | style unselected bitmap
-	; skins
+	; Skins
 Skin=Тема | Выберите тему.
-Skin_Default_Miranda=Miranda Style | Стандартная тема Miranda. | * | Default_Miranda.bmp
-Skin_Default_Windows=Windows Style | Стандартная тема Windows. Органично впишется в любую тему оформления ОС. | * | Default_Windows.bmp
-Skin_Custom_Miranda=Miranda Custom Style | Модифицированная тема Miranda. | * | Custom_Miranda.bmp
-Skin_Custom_Miranda_Dark=Miranda Custom Dark Style | Модифицированная тёмная тема Miranda. | * | Custom_Miranda_Dark.bmp
-Skin_Custom_Miranda_Light=Miranda Custom Light Style | Модифицированная светлая тема Miranda. | * | Custom_Miranda_Light.bmp
-Skin_Native_7_Dark=Native 7 Dark Style | Тёмная тема Native 7 Dark. Органично впишется в тёмную тему оформления ОС Windows 7. | * | Native_7_Dark.bmp
-Skin_Native_7_Light=Native 7 Light Style | Светлая тема Native 7 Light. Органично впишется в светлую тему оформления ОС Windows 7. | * | Native_7_Light.bmp
+Skin_Default_Miranda=Default Miranda Style | Стандартная тема Miranda. | * | Default_Miranda.bmp
+Skin_Current_Windows=Current Windows Style | Текущая тема Windows. Органично впишется в любую тему оформления ОС. | * | Current_Windows.bmp
+Skin_Custom_Miranda=Custom Miranda | Модифицированная тема Miranda. | * | Custom_Miranda.bmp
+Skin_Custom_Miranda_Dark=Custom Miranda Dark | Модифицированная тёмная тема Miranda. | * | Custom_Miranda_Dark.bmp
+Skin_Custom_Miranda_Light=Custom Miranda Light | Модифицированная светлая тема Miranda. | * | Custom_Miranda_Light.bmp
+Skin_Native_7_Dark=Native 7 Dark | Тёмная тема Native 7 Dark. Органично впишется в тёмную тему оформления ОС Windows 7. | * | Native_7_Dark.bmp
+Skin_Native_7_Light=Native 7 Light | Светлая тема Native 7 Light. Органично впишется в светлую тему оформления ОС Windows 7. | * | Native_7_Light.bmp
 Skin_WinStyle_Classic_Dark=WinStyle Classic Dark | Тёмная тема WinStyle Classic Dark. Органично впишется в классическую тёмную тему оформления ОС. | * | WinStyle_Classic_Dark.bmp
 Skin_WinStyle_Classic_Light=WinStyle Classic Light | Светлая тема WinStyle Classic Light. Органично впишется в классическую светлую тему оформления ОС. | * | WinStyle_Classic_Light.bmp
 Skin_WinStyle_Dark=WinStyle Dark | Тёмная тема WinStyle Dark. Органично впишется в любую тёмную тему оформления ОС. | * | WinStyle_Dark.bmp
@@ -265,7 +265,7 @@ Skin_Textolite_Brown_Dark=Textolite Brown Dark | Тёмная тема Textolite Brown Dar
 Skin_Textolite_Brown_Light=Textolite Brown Light | Светлая тема Textolite Brown Light. | Skin_Textolite_Brown_Light.bmp | Textolite_Brown_Light.bmp
 Skin_Textolite_Gray_Dark=Textolite Gray Dark | Тёмная тема Textolite Gray Dark. | Skin_Textolite_Gray_Dark.bmp | Textolite_Gray_Dark.bmp
 Skin_Textolite_Gray_Light=Textolite Gray Light | Светлая тема Textolite Gray Light. | * | Textolite_Gray_Light.bmp
-	; iconpatcher
+	; IconPatcher
 Icons=Значки | Замена значков.
 IconsFugue=Fugue | Набор значков Fugue. | * | Icons_Fugue.bmp
 IconsNova=Nova | Набор значков Nova. | * | Icons_Nova.bmp
@@ -277,7 +277,7 @@ IEViewAnimation=Анимация | Включить/Выключить анимацию. | * | Animation_On.gif |
 IEViewAvatar=Аватары | Включить/Выключить аватары. | * | Avatar_On.bmp | Avatar_Off.bmp
 IEViewShortLink=Короткие ссылки | Включить/Выключить короткие ссылки. | * | ShortLink_On.bmp | ShortLink_Off.bmp
 IEViewContextMenu=Контекстное меню | Включить/Выключить контекстное меню. | * | ContextMenu_On.bmp | ContextMenu_Off.bmp
-	; fonts
+	; Fonts
 Font=Шрифт | Шрифты.
 FontHandwriting=Рукописный | Рукописный шрифт. | * | Font_Handwriting.bmp
 FontPrinting=Печатный | Печатный шрифт. | * | Font_Printing.bmp
@@ -350,7 +350,7 @@ NotMirandaFolderNameError=Внимание! Если имя папки для установки не содержит сло
 ArchIncompatibleInfo=Внимание! Программа установки обнаружила архитектурно несовместимые файлы и переместила их в папку "incompatible".
 
 
-; *** others
+; *** Others
 UpdateWindowTitle=Обновление — %1
 UninstallWindowTitle=Удаление — %1
 DeleteUserProfiles=Удалить пользовательские профили?
