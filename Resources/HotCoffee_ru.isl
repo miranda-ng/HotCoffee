@@ -234,8 +234,8 @@ WizardStylesDesc=Какое оформление вы предпочитаете установить по умолчанию?
 	; styles settings: style display name | style description | style preview bitmap | style selected bitmap | style unselected bitmap
 	; Skins
 Skin=Тема | Выберите тему.
-Skin_Default_Miranda=Default Miranda Style | Стандартная тема Miranda. | * | Default_Miranda.bmp
-Skin_Current_Windows=Current Windows Style | Текущая тема Windows. Органично впишется в любую тему оформления ОС. | * | Current_Windows.bmp
+Skin_Default_Miranda=Default Miranda | Стандартная тема Miranda. | * | Default_Miranda.bmp
+Skin_Current_Windows=Current Windows | Текущая тема Windows. Органично впишется в любую тему оформления ОС. | * | Current_Windows.bmp
 Skin_Custom_Miranda=Custom Miranda | Модифицированная тема Miranda. | * | Custom_Miranda.bmp
 Skin_Custom_Miranda_Dark=Custom Miranda Dark | Модифицированная тёмная тема Miranda. | * | Custom_Miranda_Dark.bmp
 Skin_Custom_Miranda_Light=Custom Miranda Light | Модифицированная светлая тема Miranda. | * | Custom_Miranda_Light.bmp

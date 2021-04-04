@@ -2390,31 +2390,27 @@ end;
 function GetCLUIFrames(const Param: string): string;
 var
   i, n: Integer;
+  LCLUIFrames: string;
 begin
   with TStringList.Create do
   begin
     Sorted := True;
     CommaText := WizardSelectedComponents(False);
+    LCLUIFrames := LowerCase(',{#CLUIFrames},');
     for i := 0 to Count - 1 do
-      if Pos(Format(',%s,', [Strings[i]]), ',{#CLUIFrames},') > 0 then
+      if Pos(Format(',%s,', [Strings[i]]), LCLUIFrames) > 0 then
         n := n + 1;
     case Param of
 //      'Height12':
 //        Result := Format('%d', [4 * (n + (5 - (n mod 5)) mod 5) + 1]);
       'Height12':
         case n of
-          1..8: Result := '21';
-          9..16: Result := '39';
-          17, 18: Result := '57';
-          19, 20: Result := '57';
-          21..24: Result := '57';
-          25: Result := '75';
-          26..32: Result := '75';
-          33..40: Result := '93';
-          41..48: Result := '111';
+          1..11: Result := '21';
+          12..22: Result := '39';
+          23..33: Result := '57';
         end;
       'TBVisile12':
-        Result := Format('%d', [integer(n > 8)]);
+        Result := Format('%d', [integer(n > 22)]);
     end;
     // если параметр функции GetCLUIFrames равен EqualSections, ...
     // то в зависимости от числа протоколов n ...
@@ -2423,39 +2419,30 @@ begin
     case Param of
       'EqualSections':
         case n of
-          1..5: Result := '1';
-          6..8: Result := '0';
-          9, 10: Result := '1';
-          11, 12: Result := '0';
-          13, 14: Result := '0';
-          15, 16: Result := '0';
-          17, 18: Result := '0';
-          19, 20: Result := '0';
-          21..24: Result := '0';
-          25: Result := '0';
-          26..48: Result := '0';
+          1..8: Result := '1';
+          9..11: Result := '0';
+          12..16: Result := '1';
+          17..22: Result := '0';
+          23, 24: Result := '1';
+          25..33: Result := '0';
         end;
     end;
     case Param of
       'StatusBarProtosPerLine':
         case n of
-          1..5: Result := '5';
-          6..8: Result := '8';
-          9, 10: Result := '5';
-          11, 12: Result := '6';
+          1..11: Result := '11';
+          12: Result := '6';
           13, 14: Result := '7';
           15, 16: Result := '8';
-          17, 18: Result := '6';
-          19, 20: Result := '7';
-          21: Result := '7';
-          22..24: Result := '8';
-          25: Result := '7';
-          26..28: Result := '7';
-          29..32: Result := '8';
-          33..35: Result := '7';
-          36..40: Result := '8';
-          41, 42: Result := '7';
-          43..48: Result := '8';
+          13, 14: Result := '7';
+          15, 16: Result := '8';
+          17, 18: Result := '9';
+          19, 20: Result := '10';
+          21..22: Result := '11';
+          23, 24: Result := '8';
+          25..27: Result := '9';
+          28..30: Result := '10';
+          31..33: Result := '11';
         end;
     end;
     Free;

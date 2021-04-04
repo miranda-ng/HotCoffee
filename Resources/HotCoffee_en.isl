@@ -234,8 +234,8 @@ WizardStylesDesc=Which appearance do you prefer to set by default?
 	; styles settings: style display name | style description | style preview bitmap | style selected bitmap | style unselected bitmap
 	; Skins
 Skin=Theme | Choose a theme.
-Skin_Default_Miranda=Default Miranda Style | Default Miranda theme. | * | Default_Miranda.bmp
-Skin_Current_Windows=Current Windows Style | Current Windows theme. Organically fits into any OS theme. | * | Current_Windows.bmp
+Skin_Default_Miranda=Default Miranda | Default Miranda theme. | * | Default_Miranda.bmp
+Skin_Current_Windows=Current Windows | Current Windows theme. Organically fits into any OS theme. | * | Current_Windows.bmp
 Skin_Custom_Miranda=Custom Miranda | Custom Miranda theme. | * | Custom_Miranda.bmp
 Skin_Custom_Miranda_Dark=Custom Miranda Dark | Custom Dark Miranda theme. | * | Custom_Miranda_Dark.bmp
 Skin_Custom_Miranda_Light=Custom Miranda Light | Custom Light Miranda theme. | * | Custom_Miranda_Light.bmp

@@ -37845,10 +37845,6 @@ OpenSSL не загружен.
 Поддержать проект
 [About pack]
 О сборке
-[Default Miranda style]
-Стандартный стиль Miranda
-[Current Windows style]
-Текущий стиль Windows
 [Core]
 Ядро
 [Open program folder]
