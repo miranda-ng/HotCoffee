@@ -2405,7 +2405,7 @@ begin
 //        Result := Format('%d', [4 * (n + (5 - (n mod 5)) mod 5) + 1]);
       'Height12':
         case n of
-          1..11: Result := '21';
+          1..11: Result := '25';
           12..22: Result := '39';
           23..33: Result := '57';
         end;
