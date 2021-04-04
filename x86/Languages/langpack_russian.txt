@@ -1224,10 +1224,10 @@ UIN, E-mail и т.д.
 Стандартный
 [Total]
 Полный
-[Only critical data are encrypted (passwords, security tokens, etc). All other settings and history remains unencrypted. Fast and effective, suitable for the most cases]
-Шифрование только критических данных (пароли, токены авторизации и т.п.). Остальные настройки и история, остаются незашифрованными. Быстрый и эффективный, подходит в большинстве случаев
-[All string settings and all events in histories are encrypted. It also makes Miranda much slower and creates a risk of losing everything you've stored in a database in case of losing password. Recommended only for paranoid users]
-Все настройки и все события истории зашифрованы. Замедляет работу программы, а также создаёт риск потери всего сохранённого в базе в случае утери пароля. Рекомендуется только параноидальным пользователям
+[Only critical data are encrypted (passwords, security tokens, etc). All other settings and history remains unencrypted]
+Шифрование только критических данных (пароли, токены авторизации и т.п.). Остальные настройки и история остаются незашифрованными
+[All string settings and all events in histories are encrypted. It also makes Miranda much slower and creates a risk of losing everything you've stored in a database in case of losing password]
+Шифрование всех строковых настроек и событий истории. Замедляет работу программы, а в случае утери пароля создаёт риск потери всего сохранённого в базе
 [Set password]
 Установить пароль
 [&Hide/Show]
@@ -9716,7 +9716,7 @@ Miranda нашла повреждения в вашей базе. Miranda буд
 [Error creating backup folder]
 Ошибка при создании папки для резервного копирования
 [Next backup is scheduled to]
-Следующее резервное копирование состоится
+Следующее резервирование:
 [Select backup folder]
 Выберите папку для хранения резервных копий
 ;file \plugins\Db_autobackups\src\zip.cpp
@@ -37798,67 +37798,6 @@ OpenSSL не загружен.
 ;==============================================================================================================
 ;  This file is for lines that jpgen.js doesn't add to english templates but nevertheless must be translated.
 ;==============================================================================================================
-;==============================================================================
-;  Clist_modern
-;==============================================================================
-[Show main menu]
-Главное меню
-[Minimize Miranda]
-Cвернуть
-;==============================================================================
-;  Popup
-;==============================================================================
-[Flat borders]
-Плоские границы
-[Draw gradient background]
-Фон с градиентом
-[Show icon]
-Показывать значок
-[Show avatars]
-Показывать аватары
-[Error (colors only)]
-Ошибка (только цвета)
-[Notification (colors only)]
-Уведомление (только цвета)
-[Warning (colors only)]
-Предупреждение (только цвета)
-;==============================================================================
-;  Various actions and Tipper items not included in source code.
-;==============================================================================
-[Last seen:]
-Последнее появление:
-[Online since:]
-В сети с:
-[Away since:]
-Отсутствует с:
-[NA since:]
-Недоступен с:
-[Registered:]
-Зарегистрирован:
-[Idle ago:]
-Неактивен с:
-[Messages received]
-Принято сообщений
-[Messages sent]
-Отправлено сообщений
-[Total messages: %sys:msg_count_all%]
-Всего сообщений: %sys:msg_count_all%
-[Last message: (%sys:last_msg_reltime% along)]
-Последнее сообщение: (%sys:last_msg_reltime% назад)
-[(received: %sys:msg_count_in%,sent: %sys:msg_count_out%)]
-(принято: %sys:msg_count_in%, послано: %sys:msg_count_out%)
-[Coordinates]
-Координаты
-[Import from database]
-Импорт из базы данных
-[Current = %r\\nPrevious = %p]
-Текущий = %r\\nПредыдущий = %p
-[Langpack reload]
-Перезагрузка языкового пакета
-
-;==============================================================================================================
-;  This file is for lines that jpgen.js doesn't add to english templates but nevertheless must be translated.
-;==============================================================================================================
 ;=======================================================================
 ;  Actman
 ;=======================================================================
@@ -37918,6 +37857,8 @@ Cвернуть
 Открыть папку принятых файлов
 [Skin]
 Скин
+[Scroll bar]
+Полоса прокрутки
 [Short links]
 Короткие ссылки
 [Printing]
@@ -38191,6 +38132,54 @@ Cвернуть
 ;============================================================
 ;  NewAwaySys
 ;============================================================
+[Available.]
+Свободен(а).
+[I've been on the phone since]
+Разговариваю по телефону с
+[give me a sec!]
+подождите немного!
+[Gone]
+Ушел(а)
+[eating supper]
+ужинать
+[eating dinner]
+обедать
+[eating breakfast]
+завтракать
+[eating]
+кушать
+[ since]
+ в
+[Been fragging since]
+Копычу фраги с
+[I'll message you later when the adrenaline ends up.]
+Отвечу позже, когда адреналин закончится.
+[My master]
+Мой хозяин
+[has been]
+был
+[ &since]
+ с
+[When he gets back, I'll tell him you've been here...]
+Когда он вернется, я ему передам, чтобы он с вами связался...
+[Been gone since]
+Отошел(а) в
+[will be back later.]
+буду позже.
+[&Gone fragging]
+Играю в стрелялку
+[&Creepy]
+Устрашающий
+[NA]
+Недоступен
+[DND]
+Не беспокоить
+[is reading your message]
+читает ваше сообщение
+[teller machine]
+это автоответчик
+[asked me to tell you]
+просил(а) вам передать
 [?cinfo(%subject%,display) (?cinfo(%subject%,id)) is reading your %nas_statdesc% message:?crlf()%extratext%]
 ?cinfo(%subject%,display) (?cinfo(%subject%,id)) читает ваше %nas_statdesc% сообщение:?crlf()%extratext%
 [?if2(!cinfo(%subject%,first),!cinfo(%subject%,display)) - an answering machine >  %nas_mynick%  asked me to tell you: %extratext%]
