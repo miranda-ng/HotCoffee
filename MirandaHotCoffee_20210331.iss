@@ -164,7 +164,7 @@ Uninstallable=IsDefaultSetupType
 Compression=lzma2/ultra
 InternalCompressLevel=ultra
 SolidCompression=true
-BitmapResource=splash:"Resources\images\logo.bmp"|border:"Resources\images\border.bmp"
+BitmapResource=splash:"Resources\images\Logo.bmp"|border:"Resources\images\Border.bmp"
 RawDataResource=WizardSmallImage:"Resources\images\WizardSmallImage.bmp"
 
  ; image resources
@@ -174,8 +174,8 @@ RawDataResource=WizardSmallImage:"Resources\images\WizardSmallImage.bmp"
 #define RecycleLogo "Recycle.bmp"
 
 [Languages]
-Name: en; MessagesFile: Resources\english.isl,Resources\{#AppShortName}_en.isl; LicenseFile: Resources\License_en.rtf; InfoBeforeFile: Resources\InfoBefore_en.rtf; InfoAfterFile: Resources\{#if AppStatus != "Test"}InfoAfter_en{#else}InfoAfter_en_Test{#endif}.rtf;
-Name: ru; MessagesFile: Resources\russian.isl,Resources\{#AppShortName}_ru.isl; LicenseFile: Resources\License_ru.rtf; InfoBeforeFile: Resources\InfoBefore_ru.rtf; InfoAfterFile: Resources\{#if AppStatus != "Test"}InfoAfter_ru{#else}InfoAfter_ru_Test{#endif}.rtf;
+Name: en; MessagesFile: Resources\English.isl,Resources\{#AppShortName}_en.isl; LicenseFile: Resources\License_en.rtf; InfoBeforeFile: Resources\InfoBefore_en.rtf; InfoAfterFile: Resources\{#if AppStatus != "Test"}InfoAfter_en{#else}InfoAfter_en_Test{#endif}.rtf;
+Name: ru; MessagesFile: Resources\Russian.isl,Resources\{#AppShortName}_ru.isl; LicenseFile: Resources\License_ru.rtf; InfoBeforeFile: Resources\InfoBefore_ru.rtf; InfoAfterFile: Resources\{#if AppStatus != "Test"}InfoAfter_ru{#else}InfoAfter_ru_Test{#endif}.rtf;
 
 [Messages]
 BeveledLabel={#AppName} {#AppVer} {#AppStatus} {#AppRelease} ({#AppArch}) © {#AppPublisher}, 2010 - {#GetDateTimeString('yyyy', '', '')}
