@@ -215,9 +215,9 @@ Source: Resources\7za.exe; Flags: dontcopy;
 Source: Resources\images\*.*; Flags: dontcopy;
 #if debug == 0
  ; fonts
-Source: Resources\fonts\monotype_corsiva.ttf; DestDir: {fonts}; FontInstall: Monotype Corsiva; Flags: onlyifdoesntexist uninsneveruninstall;
-Source: Resources\fonts\segoepr.ttf; DestDir: {fonts}; FontInstall: Segoe Print; Flags: onlyifdoesntexist uninsneveruninstall;
-Source: Resources\fonts\segoeprb.ttf; DestDir: {fonts}; FontInstall: Segoe Print Bold; Flags: onlyifdoesntexist uninsneveruninstall;
+Source: Resources\fonts\Monotype_Corsiva.ttf; DestDir: {fonts}; FontInstall: Monotype Corsiva; Flags: onlyifdoesntexist uninsneveruninstall;
+Source: Resources\fonts\SegoePr.ttf; DestDir: {fonts}; FontInstall: Segoe Print; Flags: onlyifdoesntexist uninsneveruninstall;
+Source: Resources\fonts\SegoePrB.ttf; DestDir: {fonts}; FontInstall: Segoe Print Bold; Flags: onlyifdoesntexist uninsneveruninstall;
 
  ; Main
  ; Core
@@ -265,7 +265,7 @@ Source: {#AppArch}\Plugins\TopToolBar.dll; DestDir: {app}\Plugins; Flags: ignore
 Source: {#AppArch}\Plugins\Variables.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
  ; Scripts
 Source: {#AppArch}\Scripts\*.dll; DestDir: {app}\Scripts; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Scripts\*.lua; DestDir: {app}\scripts; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Scripts\*.lua; DestDir: {app}\Scripts; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
  ; Skins
 Source: x86\Skins\Avatars\no_avatar.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Skins\IconPacks\*; DestDir: {app}\Skins\IconPacks; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
@@ -275,8 +275,8 @@ Source: x86\Skins\Default_Windows.ini; DestDir: {app}\Skins; Flags: ignoreversio
  ; UserSet
 Source: x86\UserSet\Fonts\*; DestDir: {app}\UserSet\Fonts; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\UserSet\ini\*; DestDir: {app}\UserSet\ini; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\UserSet\Fonts\handwriting.ini; DestDir: {app}\Profiles; DestName: autoexec_zfont.ini; Flags: ignoreversion; Components: MainCore; Check: IsStyleChecked('FontHandwriting'); AfterInstall: AddDetails;
-Source: x86\UserSet\Fonts\printing.ini; DestDir: {app}\Profiles; DestName: autoexec_zfont.ini; Flags: ignoreversion; Components: MainCore; Check: IsStyleChecked('FontPrinting'); AfterInstall: AddDetails;
+Source: x86\UserSet\Fonts\Handwriting.ini; DestDir: {app}\Profiles; DestName: autoexec_zfont.ini; Flags: ignoreversion; Components: MainCore; Check: IsStyleChecked('FontHandwriting'); AfterInstall: AddDetails;
+Source: x86\UserSet\Fonts\Printing.ini; DestDir: {app}\Profiles; DestName: autoexec_zfont.ini; Flags: ignoreversion; Components: MainCore; Check: IsStyleChecked('FontPrinting'); AfterInstall: AddDetails;
  ; root
 Source: {#AppArch}\{#AppExeName}; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\pu_stub.exe; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
@@ -1217,18 +1217,18 @@ Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: DontSwitchToSt
 Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b1; Flags: uninsdeleteentry; Check: IsUpdate;
 #endif
  ; DialogFontSize
-Filename: {app}\UserSet\Fonts\handwriting.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
-Filename: {app}\UserSet\Fonts\handwriting.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
-Filename: {app}\UserSet\Fonts\handwriting.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
-Filename: {app}\UserSet\Fonts\handwriting.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
-Filename: {app}\UserSet\Fonts\handwriting.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
-Filename: {app}\UserSet\Fonts\handwriting.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
-Filename: {app}\UserSet\Fonts\printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
-Filename: {app}\UserSet\Fonts\printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
-Filename: {app}\UserSet\Fonts\printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
-Filename: {app}\UserSet\Fonts\printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
-Filename: {app}\UserSet\Fonts\printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
-Filename: {app}\UserSet\Fonts\printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
+Filename: {app}\UserSet\Fonts\Handwriting.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
+Filename: {app}\UserSet\Fonts\Handwriting.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
+Filename: {app}\UserSet\Fonts\Handwriting.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
+Filename: {app}\UserSet\Fonts\Handwriting.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
+Filename: {app}\UserSet\Fonts\Handwriting.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
+Filename: {app}\UserSet\Fonts\Handwriting.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
+Filename: {app}\UserSet\Fonts\Printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
+Filename: {app}\UserSet\Fonts\Printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
+Filename: {app}\UserSet\Fonts\Printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
+Filename: {app}\UserSet\Fonts\Printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
+Filename: {app}\UserSet\Fonts\Printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
+Filename: {app}\UserSet\Fonts\Printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
 Filename: {app}\Profiles\settings.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
 Filename: {app}\Profiles\settings.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
 Filename: {app}\Profiles\settings.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');

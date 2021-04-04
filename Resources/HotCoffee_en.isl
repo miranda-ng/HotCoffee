@@ -273,14 +273,14 @@ IconsXpk=Xpk | Xpk icon set. | * | Icons_Xpk.bmp
 	; IEView settings
 IEViewSettings=IEView settings | IEView template settings.
 IEViewScrollBar=Scroll bar | Enable/Disable scroll bar. | * | * | *
-IEViewAnimation=Animation | Enable/Disable animation. | * | animation_1.gif | animation_0.gif
-IEViewAvatar=Avatars | Enable/Disable avatars. | * | avatar_1.bmp | avatar_0.bmp
-IEViewShortLink=Shortened links | Enable/Disable shortened links. | * | shortlink_1.bmp | shortlink_0.bmp
-IEViewContextMenu=Context menu | Enable/Disable context menu. | * | contextmenu_1.bmp | contextmenu_0.bmp
+IEViewAnimation=Animation | Enable/Disable animation. | * | Animation_On.gif | Animation_Off.gif
+IEViewAvatar=Avatars | Enable/Disable avatars. | * | Avatar_On.bmp | Avatar_Off.bmp
+IEViewShortLink=Shortened links | Enable/Disable shortened links. | * | ShortLink_On.bmp | ShortLink_Off.bmp
+IEViewContextMenu=Context menu | Enable/Disable context menu. | * | ContextMenu_On.bmp | ContextMenu_Off.bmp
 	; fonts
 Font=Font | Fonts.
-FontHandwriting=Handwriting | Handwriting font. | * | font_handwriting.bmp
-FontPrinting=Printing | Printing font. | * | font_printing.bmp
+FontHandwriting=Handwriting | Handwriting font. | * | Font_Handwriting.bmp
+FontPrinting=Printing | Printing font. | * | Font_Printing.bmp
 	;
 FullView=Preview
 FullViewCaption=Appearance

@@ -273,14 +273,14 @@ IconsXpk=Xpk | Набор значков Xpk. | * | Icons_Xpk.bmp
 	; IEView settings
 IEViewSettings=Настройки IEView | Настройки шаблона IEView.
 IEViewScrollBar=Полоса прокрутки | Включить/Выключить полосу прокрутки. | * | * | *
-IEViewAnimation=Анимация | Включить/Выключить анимацию. | * | animation_1.gif | animation_0.gif
-IEViewAvatar=Аватары | Включить/Выключить аватары. | * | avatar_1.bmp | avatar_0.bmp
-IEViewShortLink=Короткие ссылки | Включить/Выключить короткие ссылки. | * | shortlink_1.bmp | shortlink_0.bmp
-IEViewContextMenu=Контекстное меню | Включить/Выключить контекстное меню. | * | contextmenu_1.bmp | contextmenu_0.bmp
+IEViewAnimation=Анимация | Включить/Выключить анимацию. | * | Animation_On.gif | Animation_Off.gif
+IEViewAvatar=Аватары | Включить/Выключить аватары. | * | Avatar_On.bmp | Avatar_Off.bmp
+IEViewShortLink=Короткие ссылки | Включить/Выключить короткие ссылки. | * | ShortLink_On.bmp | ShortLink_Off.bmp
+IEViewContextMenu=Контекстное меню | Включить/Выключить контекстное меню. | * | ContextMenu_On.bmp | ContextMenu_Off.bmp
 	; fonts
 Font=Шрифт | Шрифты.
-FontHandwriting=Рукописный | Рукописный шрифт. | * | font_handwriting.bmp
-FontPrinting=Печатный | Печатный шрифт. | * | font_printing.bmp
+FontHandwriting=Рукописный | Рукописный шрифт. | * | Font_Handwriting.bmp
+FontPrinting=Печатный | Печатный шрифт. | * | Font_Printing.bmp
 	;
 FullView=Предпросмотр
 FullViewCaption=Оформление
