@@ -115,41 +115,41 @@ div.avatar {
 }
 
 .hMessageIn, .hMessageOut, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart, .hStatus, .hFileIn, .hFileOut, .hURL {
-	background: url(Default_Windows/history.png) no-repeat bottom right;
+	background: url(Current_Windows/history.png) no-repeat bottom right;
 }
 
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
 	color: #C44305;
-	background-image: url(Default_Windows/in.png);
+	background-image: url(Current_Windows/in.png);
 }
 
 .contentMessageIn, .contenthMessageIn, .contentMessageInGroupStart, .MessageInGroupInner, .contenthMessageInGroupStart, .hMessageInGroupInner {
-	background-image: url(Default_Windows/in.png);
+	background-image: url(Current_Windows/in.png);
 }
 
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
 	color: #054381;
-	background-image: url(Default_Windows/out.png);
+	background-image: url(Current_Windows/out.png);
 }
 
 .contentMessageOut, .contenthMessageOut, .contentMessageOutGroupStart, .MessageOutGroupInner, .contenthMessageOutGroupStart, .hMessageOutGroupInner {
-	background-image: url(Default_Windows/out.png);
+	background-image: url(Current_Windows/out.png);
 }
 
 /* -------------------- status support -------------------- */
 
 .status .head {
 	color: #C44305;
-	background-image: url(Default_Windows/status.png);
+	background-image: url(Current_Windows/status.png);
 }
 
 .contentStatus, .contenthStatus {
 	color: #C44305;
-	background-image: url(Default_Windows/status.png);
+	background-image: url(Current_Windows/status.png);
 }
 
 .contentStatus .time, .contenthStatus .time {
@@ -165,12 +165,12 @@ div.avatar {
 
 .infile .head, .outfile .head {
 	color: #008000;
-	background-image: url(Default_Windows/file.png);
+	background-image: url(Current_Windows/file.png);
 }
 
 .contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
 	color: #008000;
-	background-image: url(Default_Windows/file.png);
+	background-image: url(Current_Windows/file.png);
 }
 
 .contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
@@ -186,12 +186,12 @@ div.avatar {
 
 .inurl .head, .outurl .head {
 	color: #054381;
-	background-image: url(Default_Windows/url.png);
+	background-image: url(Current_Windows/url.png);
 }
 
 .contentURL, .contenthURL {
 	color: #054381;
-	background-image: url(Default_Windows/url.png);
+	background-image: url(Current_Windows/url.png);
 }
 
 .contentURL .time, .contenthURL .time {
