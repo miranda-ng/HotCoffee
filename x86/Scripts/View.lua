@@ -42,6 +42,11 @@ Icons =
 			Disabled = icolib.AddIcon('IEViewCBDisabled', 'Disabled', "MirLua/View/IEView"),
 			Enabled = icolib.AddIcon('IEViewCBEnabled', 'Enabled', "MirLua/View/IEView"),
 		},
+		TabCaption =
+		{
+			Disabled = icolib.AddIcon('captionDisabled', 'Caption disabled', 'MirLua/View/Chats'),
+			Enabled = icolib.AddIcon('captionEnabled', 'Caption enabled', 'MirLua/View/Chats')
+		},
 		Chats =
 		{
 			Root = icolib.AddIcon('menuChats', 'Chats', 'MirLua/View'),
@@ -480,3 +485,93 @@ PreBuildMenuFuncs["Chats"] = function()
 	genmenu.ModifyMenuItem(hChatsAutoSizeInput, nil, ((db.GetSetting(_, "Tab_SRMsg", "CNTW_Def_Flags") & 16384) == 0) and Icons.Menu.Chats.AutoSize.Disabled or Icons.Menu.Chats.AutoSize.Enabled , -1)
 end
 ----- /Chats --------------------------------------------------------------------------------------
+----- TabCaption ----------------------------------------------------------------------------------
+function WriteTabSRMMSkinTabCaption(skinName, CaptionSize)
+	local pattern_1 = 'Custom_Miranda,Custom_Miranda_Dark,Custom_Miranda_Light,Default_Miranda'
+	local pattern_2 = 'Graphite_Brown_Dark,Graphite_Gray_Light'
+	local pattern_3 = 'Glamour_Aqua_Dark,Glamour_Aqua_Light,Glamour_Dark,Glamour_Light'
+	local pattern_4 = 'WinStyle_Classic_Dark,WinStyle_Classic_Light'
+	local pattern_5 = 'Diplomat_Dark,Diplomat_Light'
+	local pattern_6 = 'Surface_Black,Surface_White,Textolite_Brown_Dark,Textolite_Brown_Light,Textolite_Gray_Dark,Textolite_Gray_Light'
+	local pattern_7 = 'GoldTime_Dark,GoldTime_Light'
+	local pattern_8 = 'Graphite_Brown_Light,Graphite_Gray_Dark,PhotoOne_Dark,PhotoOne_Light'
+
+	local result = 0
+
+	if pattern_1:find(skinName) and CaptionSize == 'CaptionLow' then
+		result = 15
+	elseif pattern_1:find(skinName) and CaptionSize == 'CaptionHigh' then
+		result = 19
+
+	elseif pattern_2:find(skinName) and CaptionSize == 'CaptionLow' then
+		result = 17
+	elseif pattern_2:find(skinName) and CaptionSize == 'CaptionHigh' then
+		result = 21
+
+	elseif pattern_3:find(skinName) and CaptionSize == 'CaptionLow' then
+		result = 43
+	elseif pattern_3:find(skinName) and CaptionSize == 'CaptionHigh' then
+		result = 47
+
+	elseif pattern_4:find(skinName) and CaptionSize == 'CaptionLow' then
+		result = 19
+	elseif pattern_4:find(skinName) and CaptionSize == 'CaptionHigh' then
+		result = 23
+
+	elseif pattern_5:find(skinName) and CaptionSize == 'CaptionLow' then
+		result = 28
+	elseif pattern_5:find(skinName) and CaptionSize == 'CaptionHigh' then
+		result = 32
+
+	elseif pattern_6:find(skinName) and CaptionSize == 'CaptionLow' then
+		result = 24
+	elseif pattern_6:find(skinName) and CaptionSize == 'CaptionHigh' then
+		result = 28
+
+	elseif pattern_7:find(skinName) and CaptionSize == 'CaptionLow' then
+		result = 29
+	elseif pattern_7:find(skinName) and CaptionSize == 'CaptionHigh' then
+		result = 33
+
+	elseif pattern_8:find(skinName) and CaptionSize == 'CaptionLow' then
+		result = 18
+	elseif pattern_8:find(skinName) and CaptionSize == 'CaptionHigh' then
+		result = 22
+	end
+
+	if result > 0 then
+		winapi.SetIniValue(m.Parse('%miranda_path%\\Skins\\TabSRMM\\'..skinName..'\\'..skinName..'.tsk'), 'WindowFrame', 'Caption', result)
+	end
+end
+
+TabCaptions =
+{
+	{ Name = "CaptionLow",  Description = "Caption low",     Uid = '808EBF36-8A4B-472B-956A-FF4DB4EEF7E1' },
+	{ Name = "CaptionHigh", Description = "Caption high",    Uid = '801EBF36-8A4B-472B-956A-FF4DB4EEF7E1' }
+}
+
+function ApplyTabCaption(fontName)
+	m.ForkThread(function()
+		db.WriteSetting(_, 'PackInfo', 'TabCaption', fontName)
+		WriteTabSRMMSkinTabCaption(db.GetSetting(_, 'PackInfo', 'Skin'), fontName)
+		m.CallService("TabSRMsg/ReloadSkin", 0, 0)
+		m.CallService("Font/ReloadSvc", 0, 0)
+		m.CallService("Colour/ReloadSvc", 0, 0)
+	end)
+end
+
+for i, v in ipairs(TabCaptions) do
+	local serviceName = "MirLua/Scripts/ApplyTabCaption/" .. v.Name
+	v.hMenuItem = clist.AddMainMenuItem({ Name = v.Description, Service = serviceName, Parent = hChatsRoot, Icon = Icons.Menu.TabCaption.Disabled, Position = i, Uid = v.Uid })
+	m.CreateServiceFunction(serviceName, function()
+		ApplyTabCaption(v.Name)
+	end)
+end
+
+PreBuildMenuFuncs["TabCaption"] = function()
+	for i, v in ipairs(TabCaptions) do
+		local fontName = db.GetSetting(_, 'PackInfo', 'TabCaption')
+		genmenu.ModifyMenuItem(v.hMenuItem, nil, v.Name == fontName and Icons.Menu.TabCaption.Enabled or Icons.Menu.TabCaption.Disabled, -1)
+	end
+end
+----- /TabCaption ---------------------------------------------------------------------------------

@@ -12,7 +12,7 @@ MainMenuItems =
 ContactMenuItems = 
 {
 	{ Name = 'Settings', Uid = '299D3276-02BF-40B3-8D2E-63DA2F663CF3' },
-	{ Name = 'History', Uid = 'a6bf0371-97ed-48cb-ae2d-486b6036f71c', IsVisible = function(w, l) local hContact = tonumber(w); return db.GetEventCount(hContact) ~= 0 or db.GetSetting(hContact, db.GetSetting(hContact, "Protocol", "p"), "ChatRoom", 0) ~= 0 end },
+	{ Name = 'History', Uid = 'a6bf0371-97ed-48cb-ae2d-486b6036f71c', IsVisible = function(w, l) local hContact = tonumber(w); return db.GetEventCount(hContact) ~= 0 or (db.GetSetting(hContact, "Protocol", "p") ~= nil and db.GetSetting(hContact, db.GetSetting(hContact, "Protocol", "p"), "ChatRoom", 0) ~= 0) end },
 	{ Name = 'Visibility', Uid = '998a216e-aa88-4fb7-a9c5-fca4ff47dc51' }
 }
 

@@ -63,6 +63,68 @@ end
 
 WriteTabSRMMSkin(db.GetSetting(_, 'PackInfo', 'Skin'), db.GetSetting(_, 'PackInfo', 'Font'))
 
+
+function WriteTabSRMMSkinTabCaption(skinName, CaptionSize)
+	local pattern_1 = 'Custom_Miranda,Custom_Miranda_Dark,Custom_Miranda_Light,Default_Miranda'
+	local pattern_2 = 'Graphite_Brown_Dark,Graphite_Gray_Light'
+	local pattern_3 = 'Glamour_Aqua_Dark,Glamour_Aqua_Light,Glamour_Dark,Glamour_Light'
+	local pattern_4 = 'WinStyle_Classic_Dark,WinStyle_Classic_Light'
+	local pattern_5 = 'Diplomat_Dark,Diplomat_Light'
+	local pattern_6 = 'Surface_Black,Surface_White,Textolite_Brown_Dark,Textolite_Brown_Light,Textolite_Gray_Dark,Textolite_Gray_Light'
+	local pattern_7 = 'GoldTime_Dark,GoldTime_Light'
+	local pattern_8 = 'Graphite_Brown_Light,Graphite_Gray_Dark,PhotoOne_Dark,PhotoOne_Light'
+
+	local result = 0
+
+	if pattern_1:find(skinName) and CaptionSize == 'CaptionLow' then
+		result = 15
+	elseif pattern_1:find(skinName) and CaptionSize == 'CaptionHigh' then
+		result = 19
+
+	elseif pattern_2:find(skinName) and CaptionSize == 'CaptionLow' then
+		result = 17
+	elseif pattern_2:find(skinName) and CaptionSize == 'CaptionHigh' then
+		result = 21
+
+	elseif pattern_3:find(skinName) and CaptionSize == 'CaptionLow' then
+		result = 43
+	elseif pattern_3:find(skinName) and CaptionSize == 'CaptionHigh' then
+		result = 47
+
+	elseif pattern_4:find(skinName) and CaptionSize == 'CaptionLow' then
+		result = 19
+	elseif pattern_4:find(skinName) and CaptionSize == 'CaptionHigh' then
+		result = 23
+
+	elseif pattern_5:find(skinName) and CaptionSize == 'CaptionLow' then
+		result = 28
+	elseif pattern_5:find(skinName) and CaptionSize == 'CaptionHigh' then
+		result = 32
+
+	elseif pattern_6:find(skinName) and CaptionSize == 'CaptionLow' then
+		result = 24
+	elseif pattern_6:find(skinName) and CaptionSize == 'CaptionHigh' then
+		result = 28
+
+	elseif pattern_7:find(skinName) and CaptionSize == 'CaptionLow' then
+		result = 29
+	elseif pattern_7:find(skinName) and CaptionSize == 'CaptionHigh' then
+		result = 33
+
+	elseif pattern_8:find(skinName) and CaptionSize == 'CaptionLow' then
+		result = 18
+	elseif pattern_8:find(skinName) and CaptionSize == 'CaptionHigh' then
+		result = 22
+	end
+
+	if result > 0 then
+		winapi.SetIniValue(m.Parse('%miranda_path%\\Skins\\TabSRMM\\'..skinName..'\\'..skinName..'.tsk'), 'WindowFrame', 'Caption', result)
+	end
+end
+
+WriteTabSRMMSkinTabCaption(db.GetSetting(_, 'PackInfo', 'Skin'), db.GetSetting(_, 'PackInfo', 'TabCaption'))
+
+
 if db.GetSetting(_, 'FirstRun', 'Lua_FirstRun') == 1 then
   local path = m.Parse('%miranda_path%\\Profiles\\update.ini')
   local hFile = io.open(path, "r")
