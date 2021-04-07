@@ -37865,6 +37865,10 @@ OpenSSL не загружен.
 Печатный шрифт
 [Handwriting font]
 Рукописный шрифт
+[Caption frame low]
+Фрейм заголовка узкий
+[Caption frame high]
+Фрейм заголовка широкий
 [Auto-size input area]
 Авто-размер области ввода
 [&Auto-size input area]

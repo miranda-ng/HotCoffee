@@ -44,8 +44,8 @@ Icons =
 		},
 		TabCaption =
 		{
-			Disabled = icolib.AddIcon('captionDisabled', 'Caption disabled', 'MirLua/View/Chats'),
-			Enabled = icolib.AddIcon('captionEnabled', 'Caption enabled', 'MirLua/View/Chats')
+			Disabled = icolib.AddIcon('TabCaptionDisabled', 'Caption frame disabled', 'MirLua/View/Chats'),
+			Enabled = icolib.AddIcon('TabCaptionEnabled', 'Caption frame enabled', 'MirLua/View/Chats')
 		},
 		Chats =
 		{
@@ -546,8 +546,8 @@ end
 
 TabCaptions =
 {
-	{ Name = "CaptionLow",  Description = "Caption low",     Uid = '808EBF36-8A4B-472B-956A-FF4DB4EEF7E1' },
-	{ Name = "CaptionHigh", Description = "Caption high",    Uid = '801EBF36-8A4B-472B-956A-FF4DB4EEF7E1' }
+	{ Name = "CaptionLow",  Description = "Caption frame low",     Uid = '808EBF36-8A4B-472B-956A-FF4DB4EEF7E1' },
+	{ Name = "CaptionHigh", Description = "Caption frame high",    Uid = '801EBF36-8A4B-472B-956A-FF4DB4EEF7E1' }
 }
 
 function ApplyTabCaption(fontName)
