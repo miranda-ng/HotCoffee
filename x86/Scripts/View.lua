@@ -226,6 +226,7 @@ function ApplySkin(skinName, fontName)
 	
 	m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\Skins\\"..skinName..".ini"), 0)
 	m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\UserSet\\Fonts\\"..fontName..".ini"), 0)
+	WriteTabSRMMSkinTabCaption(db.GetSetting(_, 'PackInfo', 'Skin'), db.GetSetting(_, 'PackInfo', 'TabCaption'))
 
 	m.CallService("TabSRMsg/ReloadSkin")
 	m.CallService("IEView/ReloadOptions")

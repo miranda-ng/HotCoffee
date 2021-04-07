@@ -57,8 +57,9 @@
 #define TypeDefault "optimal"
 #define SelectedTasksDefault "curuser"
 #define SelectedSettingsDefault \
-  "UpdateSettings,AppDevOrStub,ContactList,CompactMode,UseSound,CLCNoVScrollBar,SendingMessage," + \
-  "SendCtrlEnter,SendEnter,AutoSizeInputArea,TabSRMMNoVScrollBar," + \
+  "UpdateSettings,AppDevOrStub," + \
+  "CompactMode,UseSound,CLCNoVScrollBar," + \
+  "SendCtrlEnter,SendEnter,AutoSizeInputArea,TabCaptionLow,TabSRMMNoVScrollBar," + \
   "AutoAwayDetection,AutoIdleDetection"
 #define SelectedStyleSettingsDefault \
   "Skin_Current_Windows,IconsXpk,IEViewScrollBar,IEViewAnimation,IEViewShortLink,IEViewContextMenu,FontPrinting"
@@ -243,35 +244,42 @@ Source: {#AppArch}\Plugins\AVS.dll; DestDir: {app}\Plugins; Flags: ignoreversion
 Source: {#AppArch}\Plugins\Clist_modern.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\CloudFile.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 #if AppStatus == "Test"
-Source: {#AppArch}\Plugins\Alarms.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\AssocMgr.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\AuthState.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\BuddyExpectator.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\BuddyPounce.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\ChangeKeyboardLayout.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\Console.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\CryptoPP.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\EmLanProto.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\FavContacts.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\FltContacts.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\GmailNotifier.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\HistorySweeperLight.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\ICQCorp.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\IgnoreState.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\KeyboardNotify.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\ListeningTo.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\ListeningTo\*; DestDir: {app}\Plugins\ListeningTo; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\MirOTR.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\Msg_Export.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\MyDetails.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\Nudge.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\Omegle.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\Sametime.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\SecureIM.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\Steam.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\TranslitSwitcher.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\WebView.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\WinterSpeak.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\Alarms.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\AssocMgr.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\AuthState.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\BuddyExpectator.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\BuddyPounce.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\ChangeKeyboardLayout.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\Console.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\CryptoPP.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\EmLanProto.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Icons_\Proto_EM_LAN_PROTO.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\FavContacts.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\FltContacts.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\GmailNotifier.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\HistorySweeperLight.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\ICQCorp.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Icons_\Proto_ICQCorp.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\IgnoreState.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\KeyboardNotify.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\ListeningTo.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\ListeningTo\*; DestDir: {app}\Plugins\ListeningTo; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\MirOTR.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\Msg_Export.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\MyDetails.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\Nudge.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\Omegle.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Icons_\Proto_Omegle.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\Sametime.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Icons_\Proto_Sametime.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\SecureIM.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Icons_\SecureIM_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\Steam.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Icons_\Proto_Steam.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\TranslitSwitcher.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\WebView.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Icons_\Proto_WebView.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins_\WinterSpeak.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 #endif
 Source: {#AppArch}\Plugins\CrashDumper.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Db_autobackups.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
@@ -977,11 +985,11 @@ Filename: {app}\Profiles\update.ini; Section: Ignore; Key: Default1; String: d0;
 Filename: {app}\Profiles\update.ini; Section: Ignore; Key: Default1; String: d8; Flags: uninsdeleteentry; Components: not Plugins\NewXstatusNotify;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Ignore; Key: Default1; String: d0; Flags: uninsdeleteentry; Components: Plugins\NewXstatusNotify; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Ignore; Key: Default1; String: d8; Flags: uninsdeleteentry; Components: not Plugins\NewXstatusNotify; Check: IsUpdate;
- ; UserInfoEx RemindEnabled - on
+ ; Plugins\UserInfoEx RemindEnabled - on
 Filename: {app}\Profiles\settings.ini; Section: UserInfoEx; Key: RemindEnabled; String: b3; Flags: uninsdeleteentry; Components: (Plugins\UInfoEx and not Plugins\WhenWasIt) or not (Plugins\UInfoEx and Plugins\WhenWasIt);
 Filename: {app}\Profiles\update.ini; Section: UserInfoEx; Key: RemindEnabled; String: b3; Flags: uninsdeleteentry; Components: (Plugins\UInfoEx and not Plugins\WhenWasIt) or not (Plugins\UInfoEx and Plugins\WhenWasIt);
 Filename: {app}\Profiles\autoexec_update.ini; Section: UserInfoEx; Key: RemindEnabled; String: b3; Flags: uninsdeleteentry; Components: (Plugins\UInfoEx and not Plugins\WhenWasIt) or not (Plugins\UInfoEx and Plugins\WhenWasIt); Check: IsUpdate;
- ; UserInfoEx RemindEnabled - off
+ ; Plugins\UserInfoEx RemindEnabled - off
 Filename: {app}\Profiles\settings.ini; Section: UserInfoEx; Key: RemindEnabled; String: b2; Flags: uninsdeleteentry; Components: Plugins\WhenWasIt or (Plugins\UInfoEx and Plugins\WhenWasIt);
 Filename: {app}\Profiles\update.ini; Section: UserInfoEx; Key: RemindEnabled; String: b2; Flags: uninsdeleteentry; Components: Plugins\WhenWasIt or (Plugins\UInfoEx and Plugins\WhenWasIt);
 Filename: {app}\Profiles\autoexec_update.ini; Section: UserInfoEx; Key: RemindEnabled; String: b2; Flags: uninsdeleteentry; Components: Plugins\WhenWasIt or (Plugins\UInfoEx and Plugins\WhenWasIt); Check: IsUpdate;
@@ -992,14 +1000,14 @@ Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: default_ieview; St
 Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: default_hpp; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and not Plugins\HistoryPP;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: default_ieview; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and not Plugins\HistoryPP; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: default_hpp; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and not Plugins\HistoryPP; Check: IsUpdate;
- ; Tab_SRMsg IEView
+ ; IEView default
 Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: default_ieview; String: b1; Flags: uninsdeleteentry; Components: (Resources\IEView and Plugins\HistoryPP) or (Resources\IEView and not Plugins\HistoryPP);
 Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: default_hpp; String: b0; Flags: uninsdeleteentry; Components: (Resources\IEView and Plugins\HistoryPP) or (Resources\IEView and not Plugins\HistoryPP);
 Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: default_ieview; String: b1; Flags: uninsdeleteentry; Components: (Resources\IEView and Plugins\HistoryPP) or (Resources\IEView and not Plugins\HistoryPP);
 Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: default_hpp; String: b0; Flags: uninsdeleteentry; Components: (Resources\IEView and Plugins\HistoryPP) or (Resources\IEView and not Plugins\HistoryPP);
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: default_ieview; String: b1; Flags: uninsdeleteentry; Components: (Resources\IEView and Plugins\HistoryPP) or (Resources\IEView and not Plugins\HistoryPP); Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: default_hpp; String: b0; Flags: uninsdeleteentry; Components: (Resources\IEView and Plugins\HistoryPP) or (Resources\IEView and not Plugins\HistoryPP); Check: IsUpdate;
- ; Tab_SRMsg history++
+ ; History++ default
 Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: default_ieview; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and Plugins\HistoryPP;
 Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: default_hpp; String: b1; Flags: uninsdeleteentry; Components: not Resources\IEView and Plugins\HistoryPP;
 Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: default_ieview; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and Plugins\HistoryPP;
@@ -1009,7 +1017,7 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: default_h
 
 #define public i 0
 #sub AddThemeIni
- ; theme ini
+ ; write the default theme name to ini
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: u{#theme[i]}; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_{#theme[i]}');
 Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: u{#theme[i]}; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_{#theme[i]}');
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: u{#theme[i]}; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_{#theme[i]}') and IsUpdate;
@@ -1053,47 +1061,35 @@ Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: Hangouts-filenam
 Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: OK-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
 Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: Yandex-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
 
- ; Handwriting font
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Font; String: uHandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Font; String: uHandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Font; String: uHandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting') and IsUpdate;
- ; Printing font
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Font; String: uPrinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Font; String: uPrinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Font; String: uPrinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting') and IsUpdate;
+ ; Settings Page \ Check for updates
+ ; CheckUpdates
+#if AppStatus == "Final"
+Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: UpdateOnStartup; String: b{code:SetBoolSetting|CheckUpdates}; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: UpdateOnStartup; String: b{code:SetBoolSetting|CheckUpdates}; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: UpdateOnStartup; String: b{code:SetBoolSetting|CheckUpdates}; Flags: uninsdeleteentry; Check: IsUpdate;
+#endif
+#if AppStatus != "Test" && AppStatus != "Alpha" && AppStatus != "Beta"
+ ; StableVersion
+Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: UpdateMode; String: b1; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: UpdateMode; String: b1; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: UpdateMode; String: b1; Flags: uninsdeleteentry; Check: IsUpdate;
+ ; DontSwitchToStable
+Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b0; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b0; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b0; Flags: uninsdeleteentry; Check: IsUpdate;
+#endif
+#if AppStatus != "Final"
+ ; DevelopmentVersion
+Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: UpdateMode; String: b2; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: UpdateMode; String: b2; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: UpdateMode; String: b2; Flags: uninsdeleteentry; Check: IsUpdate;
+ ; DontSwitchToStable
+Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b1; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b1; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b1; Flags: uninsdeleteentry; Check: IsUpdate;
+#endif
 
- ; IEViewScrollBar
-Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
- ; IEViewAnimation
-Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: Animation; String: b{code:SetBoolStyle|IEViewAnimation}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: Animation; String: b{code:SetBoolStyle|IEViewAnimation}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: Animation; String: b{code:SetBoolStyle|IEViewAnimation}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
- ; IEViewAvatar
-Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: Avatars; String: b{code:SetBoolStyle|IEViewAvatar}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: Avatars; String: b{code:SetBoolStyle|IEViewAvatar}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: Avatars; String: b{code:SetBoolStyle|IEViewAvatar}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
- ; IEViewShortLink
-Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: ShortLinks; String: b{code:SetBoolStyle|IEViewShortLink}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: ShortLinks; String: b{code:SetBoolStyle|IEViewShortLink}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: ShortLinks; String: b{code:SetBoolStyle|IEViewShortLink}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
- ; IEViewContextMenu
-Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: CustomContextMenu; String: b{code:SetBoolStyle|IEViewContextMenu}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: CustomContextMenu; String: b{code:SetBoolStyle|IEViewContextMenu}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: CustomContextMenu; String: b{code:SetBoolStyle|IEViewContextMenu}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
-
- ; Settings Page
- ; on/off sending messages
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: sendonshiftenter; String: b{code:SetBoolSetting|SendShiftEnter}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: SendOnEnter; String: b{code:SetBoolSetting|SendEnter}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: SendOnDblEnter; String: b{code:SetBoolSetting|SendDoubleEnter}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: sendonshiftenter; String: b{code:SetBoolSetting|SendShiftEnter}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: SendOnEnter; String: b{code:SetBoolSetting|SendEnter}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: SendOnDblEnter; String: b{code:SetBoolSetting|SendDoubleEnter}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: sendonshiftenter; String: b{code:SetBoolSetting|SendShiftEnter}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: SendOnEnter; String: b{code:SetBoolSetting|SendEnter}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: SendOnDblEnter; String: b{code:SetBoolSetting|SendDoubleEnter}; Flags: uninsdeleteentry; Check: IsUpdate;
+ ; Settings Page \ Contact list
  ; OnTop
 Filename: {app}\Profiles\settings.ini; Section: CList; Key: OnTop; String: b{code:SetBoolSetting|OnTop}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: CList; Key: OnTop; String: b{code:SetBoolSetting|OnTop}; Flags: uninsdeleteentry;
@@ -1124,6 +1120,19 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: SplashScreen; Key: PlaySo
 Filename: {app}\Profiles\settings.ini; Section: CLC; Key: NoVScrollBar; String: b{code:SetBoolSetting|!CLCNoVScrollBar}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: CLC; Key: NoVScrollBar; String: b{code:SetBoolSetting|!CLCNoVScrollBar}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: CLC; Key: NoVScrollBar; String: b{code:SetBoolSetting|!CLCNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
+
+ ; Settings Page \ Message sessions
+ ; on/off sending messages
+Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: sendonshiftenter; String: b{code:SetBoolSetting|SendShiftEnter}; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: SendOnEnter; String: b{code:SetBoolSetting|SendEnter}; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: SendOnDblEnter; String: b{code:SetBoolSetting|SendDoubleEnter}; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: sendonshiftenter; String: b{code:SetBoolSetting|SendShiftEnter}; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: SendOnEnter; String: b{code:SetBoolSetting|SendEnter}; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: SendOnDblEnter; String: b{code:SetBoolSetting|SendDoubleEnter}; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: sendonshiftenter; String: b{code:SetBoolSetting|SendShiftEnter}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: SendOnEnter; String: b{code:SetBoolSetting|SendEnter}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: SendOnDblEnter; String: b{code:SetBoolSetting|SendDoubleEnter}; Flags: uninsdeleteentry; Check: IsUpdate;
+ ; Automatically size input area... Serch to down
  ; LogStatusChanges
 Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: logstatuschanges; String: b{code:SetBoolSetting|LogStatusChanges}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: logstatuschanges; String: b{code:SetBoolSetting|LogStatusChanges}; Flags: uninsdeleteentry;
@@ -1132,6 +1141,14 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: logstatus
 Filename: {app}\Profiles\settings.ini; Section: TypingNotify; Key: Disabled; String: b{code:SetBoolSetting|!TypingNotification}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: TypingNotify; Key: Disabled; String: b{code:SetBoolSetting|!TypingNotification}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: TypingNotify; Key: Disabled; String: b{code:SetBoolSetting|!TypingNotification}; Flags: uninsdeleteentry; Check: IsUpdate;
+ ; TabCaptionLow
+Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: TabCaption; String: uCaptionLow; Flags: uninsdeleteentry; Check: IsSettingChecked('TabCaptionLow') or not IsSettingChecked('TabCaptionHigh');
+Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: TabCaption; String: uCaptionLow; Flags: uninsdeleteentry; Check: IsSettingChecked('TabCaptionLow') or not IsSettingChecked('TabCaptionHigh');
+Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: TabCaption; String: uCaptionLow; Flags: uninsdeleteentry; Check: IsSettingChecked('TabCaptionLow') or not IsSettingChecked('TabCaptionHigh') and IsUpdate;
+ ; TabCaptionHigh
+Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: TabCaption; String: uCaptionHigh; Flags: uninsdeleteentry; Check: IsSettingChecked('TabCaptionHigh');
+Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: TabCaption; String: uCaptionHigh; Flags: uninsdeleteentry; Check: IsSettingChecked('TabCaptionHigh');
+Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: TabCaption; String: uCaptionHigh; Flags: uninsdeleteentry; Check: IsSettingChecked('TabCaptionHigh') and IsUpdate;
  ; TabSRMMNoVScrollBar
 Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: disableVScroll; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: HistoryPlusPlus; Key: NoLogScrollBar; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
@@ -1139,7 +1156,6 @@ Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: disableVScroll; St
 Filename: {app}\Profiles\update.ini; Section: HistoryPlusPlus; Key: NoLogScrollBar; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: disableVScroll; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: HistoryPlusPlus; Key: NoLogScrollBar; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
-
  ; TabSRMMNoVScrollBar for TabSRMM Skin
 Filename: {app}\Skins\TabSRMM\Default_Miranda\Default_Miranda.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
 #define public i 2
@@ -1148,6 +1164,7 @@ Filename: {app}\Skins\TabSRMM\{#theme[i]}\{#theme[i]}.tsk; Section: Global; Key:
 #endsub
 #for {i = 2; i < 31; i++} AddThemeTskNoScrollbars
 
+ ; Settings Page \ Status
  ; DialogStatusMessages off NewAwaySys
 Filename: {app}\Profiles\settings.ini; Section: NewAwaySys; Key: DontPopDlg; String: w1022; Flags: uninsdeleteentry; Check: not IsSettingChecked('DialogStatusMessages');
 Filename: {app}\Profiles\update.ini; Section: NewAwaySys; Key: DontPopDlg; String: w1022; Flags: uninsdeleteentry; Check: not IsSettingChecked('DialogStatusMessages');
@@ -1219,32 +1236,8 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: Idle; Key: IdleOnTerminal
 Filename: {app}\Profiles\settings.ini; Section: Idle; Key: UserIdleCheck; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: Idle; Key: UserIdleCheck; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Idle; Key: UserIdleCheck; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry; Check: IsUpdate;
- ; CheckUpdates
-#if AppStatus == "Final"
-Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: UpdateOnStartup; String: b{code:SetBoolSetting|CheckUpdates}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: UpdateOnStartup; String: b{code:SetBoolSetting|CheckUpdates}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: UpdateOnStartup; String: b{code:SetBoolSetting|CheckUpdates}; Flags: uninsdeleteentry; Check: IsUpdate;
-#endif
-#if AppStatus != "Test" && AppStatus != "Alpha" && AppStatus != "Beta"
- ; StableVersion
-Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: UpdateMode; String: b1; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: UpdateMode; String: b1; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: UpdateMode; String: b1; Flags: uninsdeleteentry; Check: IsUpdate;
- ; DontSwitchToStable
-Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b0; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b0; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b0; Flags: uninsdeleteentry; Check: IsUpdate;
-#endif
-#if AppStatus != "Final"
- ; DevelopmentVersion
-Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: UpdateMode; String: b2; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: UpdateMode; String: b2; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: UpdateMode; String: b2; Flags: uninsdeleteentry; Check: IsUpdate;
- ; DontSwitchToStable
-Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b1; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b1; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b1; Flags: uninsdeleteentry; Check: IsUpdate;
-#endif
+
+ ; Additional settings Page
  ; DialogFontSize
 Filename: {app}\UserSet\Fonts\Handwriting.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
 Filename: {app}\UserSet\Fonts\Handwriting.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
@@ -1292,10 +1285,9 @@ Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16S
 Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
 Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
 #endif
-
 #define public i 0
 #sub AddDefaultThemeIni
- ; default theme ini
+ ; Write DialogFontSize to default theme.ini
 Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
 Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
 Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
@@ -1304,17 +1296,16 @@ Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; 
 Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
 #endsub
 #for {i = 0; i < 2; i++} AddDefaultThemeIni
-
 #define public i 2
 #sub AddCustomThemeIni
- ; custom theme ini
+ ; Write DialogFontSize to custom theme.ini
 Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,0');
 Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,1');
 Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,2');
 Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,3');
 Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,4');
 Filename: {app}\Skins\{#theme[i]}.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,5');
- ; custom theme msf
+ ; Write DialogFontSize to custom theme.msf
 Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,0');
 Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,1');
 Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,2');
@@ -1323,7 +1314,6 @@ Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Font
 Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,5');
 #endsub
 #for {i = 2; i < 31; i++} AddCustomThemeIni
-
  ; LoadHistorySize
 Filename: {app}\Profiles\settings.ini; Section: SRMsg; Key: LoadCount; String: w5; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1');
 Filename: {app}\Profiles\settings.ini; Section: SRMsg; Key: LoadCount; String: w10; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2');
@@ -1408,6 +1398,38 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: CNTW_Def_
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570056; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570312; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
+
+ ; Appearance Page \ IEView settings
+ ; Scroll bar
+Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry; Components: Resources\IEView;
+Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry; Components: Resources\IEView;
+Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
+ ; Animation
+Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: Animation; String: b{code:SetBoolStyle|IEViewAnimation}; Flags: uninsdeleteentry; Components: Resources\IEView;
+Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: Animation; String: b{code:SetBoolStyle|IEViewAnimation}; Flags: uninsdeleteentry; Components: Resources\IEView;
+Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: Animation; String: b{code:SetBoolStyle|IEViewAnimation}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
+ ; Avatars
+Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: Avatars; String: b{code:SetBoolStyle|IEViewAvatar}; Flags: uninsdeleteentry; Components: Resources\IEView;
+Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: Avatars; String: b{code:SetBoolStyle|IEViewAvatar}; Flags: uninsdeleteentry; Components: Resources\IEView;
+Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: Avatars; String: b{code:SetBoolStyle|IEViewAvatar}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
+ ; Shortened links
+Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: ShortLinks; String: b{code:SetBoolStyle|IEViewShortLink}; Flags: uninsdeleteentry; Components: Resources\IEView;
+Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: ShortLinks; String: b{code:SetBoolStyle|IEViewShortLink}; Flags: uninsdeleteentry; Components: Resources\IEView;
+Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: ShortLinks; String: b{code:SetBoolStyle|IEViewShortLink}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
+ ; Context Menu
+Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: CustomContextMenu; String: b{code:SetBoolStyle|IEViewContextMenu}; Flags: uninsdeleteentry; Components: Resources\IEView;
+Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: CustomContextMenu; String: b{code:SetBoolStyle|IEViewContextMenu}; Flags: uninsdeleteentry; Components: Resources\IEView;
+Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: CustomContextMenu; String: b{code:SetBoolStyle|IEViewContextMenu}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
+
+ ; Appearance Page \ Font
+ ; Handwriting
+Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Font; String: uHandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting');
+Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Font; String: uHandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting');
+Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Font; String: uHandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting') and IsUpdate;
+ ; Printing
+Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Font; String: uPrinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting');
+Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Font; String: uPrinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting');
+Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Font; String: uPrinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting') and IsUpdate;
 
 [UninstallDelete]
 Type: dirifempty; Name: {#SetupSetting("UninstallFilesDir")};
@@ -6041,13 +6063,12 @@ begin
           AddRadioButton(SettingsHelper('DevelopmentVersion'), '', 1, False, True, nil);
           #endif
           AddCheckBox(SettingsHelper('ContactList'), '', 0, False, True, False, True, nil);
-//          AddRadioButton(SettingsHelper('ClistRight'), '', 1, False, True, nil);
-//          AddRadioButton(SettingsHelper('ClistLeft'), '', 1, False, True, nil);
           AddCheckBox(SettingsHelper('OnTop'), '', 1, False, True, True, False, nil);
-          AddCheckBox(SettingsHelper('ViewModes'), '', 1, False, True, True, True, nil);
+          AddCheckBox(SettingsHelper('ViewModes'), '', 1, False, True, True, False, nil);
           AddCheckBox(SettingsHelper('CompactMode'), '', 1, False, True, True, True, nil);
           AddCheckBox(SettingsHelper('UseSound'), '', 1, False, True, True, True, nil);
           AddCheckBox(SettingsHelper('CLCNoVScrollBar'), '', 1, False, True, True, True, nil);
+
           AddCheckBox(SettingsHelper('MessageSessions'), '', 0, False, True, True, True, nil);
           AddCheckBoxEx(SettingsHelper('SendingMessage'), '', 1, False, True, True, True, nil, False);
           AddCheckBox(SettingsHelper('SendCtrlEnter'), '', 2, False, False, True, True, nil);
@@ -6055,10 +6076,12 @@ begin
           AddCheckBox(SettingsHelper('SendEnter'), '', 2, False, True, True, True, nil);
           AddCheckBox(SettingsHelper('SendDoubleEnter'), '', 2, False, True, True, False, nil);
           AddCheckBox(SettingsHelper('AutoSizeInputArea'), '', 1, False, True, True, True, nil);
-//          AddCheckBox(SettingsHelper('AutoCreateNewTabs'), '', 1, False, True, True, True, nil);
           AddCheckBox(SettingsHelper('LogStatusChanges'), '', 1, False, True, True, False, nil);
           AddCheckBox(SettingsHelper('TypingNotification'), '', 1, False, True, True, False, nil);
+          AddRadioButton(SettingsHelper('TabCaptionLow'), '', 1, False, True, nil);
+          AddRadioButton(SettingsHelper('TabCaptionHigh'), '', 1, False, True, nil);
           AddCheckBox(SettingsHelper('TabSRMMNoVScrollBar'), '', 1, False, True, True, True, nil);
+
           AddCheckBox(SettingsHelper('Status'), '', 0, False, True, False, True, nil);
           AddCheckBox(SettingsHelper('DialogStatusMessages'), '', 1, False, True, True, True, nil);
           AddCheckBox(SettingsHelper('Autoreply'), '', 1, False, True, True, True, nil);
