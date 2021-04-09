@@ -77,18 +77,24 @@
 
 #define CLUIFrames \
   "Protocols\Discord," + \
+  "Protocols\EmLanProto," + \
   "Protocols\Facebook," + \
   "Protocols\GG," + \
   "Protocols\ICQ\ICQ," + \
   "Protocols\ICQ\MRA," + \
+  "Protocols\ICQCorp," + \
   "Protocols\IRC," + \
   "Protocols\Jabber\Jabber," + \
   "Protocols\Jabber\Jabberru," + \
   "Protocols\Jabber\OK," + \
   "Protocols\Jabber\XMPP," + \
+  "Protocols\Omegle," + \
+  "Protocols\Sametime," + \
   "Protocols\Skype," + \
+  "Protocols\Steam," + \
   "Protocols\Twitter," + \
-  "Protocols\VKontakte"
+  "Protocols\VKontakte," + \
+  "Protocols\Pseudo\WebView"
 
 #dim theme[31]
 #define theme[0] "Default_Miranda"
@@ -244,26 +250,8 @@ Source: {#AppArch}\Plugins\AVS.dll; DestDir: {app}\Plugins; Flags: ignoreversion
 Source: {#AppArch}\Plugins\Clist_modern.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\CloudFile.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 #if AppStatus == "Test"
-Source: {#AppArch}\Plugins_\Alarms.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins_\AssocMgr.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins_\BuddyPounce.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins_\Console.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins_\EmLanProto.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons_\Proto_EM_LAN_PROTO.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins_\GmailNotifier.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins_\ICQCorp.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons_\Proto_ICQCorp.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins_\Msg_Export.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins_\MyDetails.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins_\Omegle.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons_\Proto_Omegle.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins_\Sametime.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons_\Proto_Sametime.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins_\Steam.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons_\Proto_Steam.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins_\WebView.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons_\Proto_WebView.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins_\WinterSpeak.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\Console.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\MyDetails.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 #endif
 Source: {#AppArch}\Plugins\CrashDumper.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Db_autobackups.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
@@ -307,6 +295,9 @@ Source: x86\mirandaboot.ini; DestDir: {app}; Flags: ignoreversion; Components: M
  ; Protocols\Discord
 Source: {#AppArch}\Plugins\Discord.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Discord; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Discord.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Discord; AfterInstall: AddDetails;
+ ; Protocols\EmLanProto
+Source: {#AppArch}\Plugins\EmLanProto.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\EmLanProto; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_EM_LAN_PROTO.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\EmLanProto; AfterInstall: AddDetails;
  ; Protocols\Facebook
 Source: {#AppArch}\Plugins\Facebook.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Facebook; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_conn_Facebook.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Facebook; AfterInstall: AddDetails;
@@ -323,6 +314,9 @@ Source: x86\Icons\Proto_ICQ.dll; DestDir: {app}\Icons; Flags: ignoreversion; Com
  ; Protocols\ICQ\MRA
 Source: x86\Icons\Proto_conn_MRA.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\MRA; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_MRA.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\MRA; AfterInstall: AddDetails;
+ ; Protocols\ICQCorp
+Source: {#AppArch}\Plugins\ICQCorp.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\ICQCorp; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_ICQCorp.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQCorp; AfterInstall: AddDetails;
  ; Protocols\IRC
 Source: {#AppArch}\Plugins\IRC.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\IRC; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_conn_IRC.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\IRC; AfterInstall: AddDetails;
@@ -344,6 +338,12 @@ Source: x86\Icons\Proto_OK.dll; DestDir: {app}\Icons; Flags: ignoreversion; Comp
  ; Protocols\Jabber\XMPP
 Source: x86\Icons\Proto_conn_XMPP.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\XMPP; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_XMPP.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\XMPP; AfterInstall: AddDetails;
+ ; Protocols\Omegle
+Source: {#AppArch}\Plugins\Omegle.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Omegle; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_Omegle.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Omegle; AfterInstall: AddDetails;
+ ; Protocols\Sametime
+Source: {#AppArch}\Plugins\Sametime.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Sametime; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_Sametime.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Sametime; AfterInstall: AddDetails;
  ; Protocols\Skype
 Source: {#AppArch}\Plugins\SkypeWeb.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Skype; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_conn_Skype.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Skype; AfterInstall: AddDetails;
@@ -355,6 +355,9 @@ Source: x86\Skins\Smileys\_dark\Skype\Skype_small_pack.msl; DestDir: {app}\Skins
 Source: x86\Skins\Smileys\_light\Skype\*; DestDir: {app}\Skins\Smileys\_light\Skype; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Protocols\Skype and Resources\Smileys; AfterInstall: AddDetails;
 Source: x86\Skins\Smileys\_light\Skype\Skype_big_pack.msl; DestDir: {app}\Skins\Smileys\_light\Skype; DestName: Skype.msl; Flags: ignoreversion; Components: Protocols\Skype and Resources\Smileys\big_pack; AfterInstall: AddDetails;
 Source: x86\Skins\Smileys\_light\Skype\Skype_small_pack.msl; DestDir: {app}\Skins\Smileys\_light\Skype; DestName: Skype.msl; Flags: ignoreversion; Components: Protocols\Skype and Resources\Smileys\small_pack; AfterInstall: AddDetails;
+ ; Protocols\Steam
+Source: {#AppArch}\Plugins\Steam.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Steam; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_Steam.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Steam; AfterInstall: AddDetails;
  ; Protocols\Twitter
 Source: {#AppArch}\Plugins\Twitter.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Twitter; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_conn_Twitter.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Twitter; AfterInstall: AddDetails;
@@ -385,17 +388,26 @@ Source: x86\Skins\Avatars\rss.png; DestDir: {app}\Skins\Avatars; Flags: ignoreve
 Source: {#AppArch}\Plugins\Weather.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\Weather; AfterInstall: AddDetails;
 Source: x86\Plugins\Weather\*; DestDir: {app}\Plugins\Weather; Flags: ignoreversion; Components: Protocols\Pseudo\Weather; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Weather.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Pseudo\Weather; AfterInstall: AddDetails;
+ ; Protocols\Pseudo\WebView
+Source: {#AppArch}\Plugins\WebView.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\WebView; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_WebView.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Pseudo\WebView; AfterInstall: AddDetails;
  ; Protocols\Pseudo\YAMN
 Source: {#AppArch}\Plugins\YAMN.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\YAMN; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_YAMN.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Pseudo\YAMN; AfterInstall: AddDetails;
 
  ; Plugins
+ ; Plugins\Alarms
+Source: {#AppArch}\Plugins\Alarms.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\Alarms; AfterInstall: AddDetails;
+ ; Plugins\AssocMgr
+Source: {#AppArch}\Plugins\AssocMgr.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\AssocMgr; AfterInstall: AddDetails;
  ; Plugins\AuthState
 Source: {#AppArch}\Plugins\AuthState.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\AuthState; AfterInstall: AddDetails;
  ; Plugins\BossKey
 Source: {#AppArch}\Plugins\BossKey.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\BossKey; AfterInstall: AddDetails;
  ; Plugins\BuddyExpectator
 Source: {#AppArch}\Plugins\BuddyExpectator.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\BuddyExpectator; AfterInstall: AddDetails;
+ ; Plugins\BuddyPounce
+Source: {#AppArch}\Plugins\BuddyPounce.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\BuddyPounce; AfterInstall: AddDetails;
  ; Plugins\ChangeKeyboardLayout
 Source: {#AppArch}\Plugins\ChangeKeyboardLayout.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\ChangeKeyboardLayout; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\TranslitSwitcher.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\ChangeKeyboardLayout; AfterInstall: AddDetails;
@@ -404,8 +416,8 @@ Source: {#AppArch}\Plugins\DbEditorPP.dll; DestDir: {app}\Plugins; Flags: ignore
  ; Plugins\FavContacts
 Source: {#AppArch}\Plugins\FavContacts.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\FavContacts; AfterInstall: AddDetails;
  ; Plugins\Fingerprint
-Source: x86\Icons\Fp_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Plugins\Fingerprint; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Fingerprint.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\Fingerprint; AfterInstall: AddDetails;
+Source: x86\Icons\Fp_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Plugins\Fingerprint; AfterInstall: AddDetails;
  ; Plugins\Flags
 Source: {#AppArch}\Plugins\Flags.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\Flags; AfterInstall: AddDetails;
 Source: x86\Icons\Flag_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Plugins\Flags; AfterInstall: AddDetails;
@@ -450,6 +462,8 @@ Source: {#AppArch}\Plugins\UInfoEx.dll; DestDir: {app}\Plugins; Flags: ignorever
 Source: x86\Icons\UInfoEx_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Plugins\UInfoEx; AfterInstall: AddDetails;
  ; Plugins\WhenWasIt
 Source: {#AppArch}\Plugins\WhenWasIt.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\WhenWasIt; AfterInstall: AddDetails;
+ ; Plugins\WinterSpeak
+Source: {#AppArch}\Plugins\WinterSpeak.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\WinterSpeak; AfterInstall: AddDetails;
 
  ; Resources
  ; Resources\IEView
@@ -553,18 +567,23 @@ Name: MainCore; Description: {code:ComponentsHelper|CoreFiles}; Types: minimal o
  ; Protocols
 Name: Protocols; Description: {code:ComponentsHelper|Protocols}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Protocols\Discord; Description: {code:ComponentsHelper|ProtocolsDiscord}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\EmLanProto; Description: {code:ComponentsHelper|ProtocolsEmLanProto}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Facebook; Description: {code:ComponentsHelper|ProtocolsFacebook}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\GG; Description: {code:ComponentsHelper|ProtocolsGG}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\ICQ; Description: {code:ComponentsHelper|ProtocolsICQ}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
 Name: Protocols\ICQ\ICQ; Description: {code:ComponentsHelper|Protocols_ICQ}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Protocols\ICQ\MRA; Description: {code:ComponentsHelper|Protocols_MRA}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\ICQCorp; Description: {code:ComponentsHelper|ProtocolsICQCorp}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\IRC; Description: {code:ComponentsHelper|ProtocolsIRC}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber; Description: {code:ComponentsHelper|ProtocolsJabber}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
 Name: Protocols\Jabber\Jabber; Description: {code:ComponentsHelper|ProtocolsJabberJabber}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\Jabberru; Description: {code:ComponentsHelper|ProtocolsJabberJabberru}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber\OK; Description: {code:ComponentsHelper|ProtocolsJabberOK}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber\XMPP; Description: {code:ComponentsHelper|ProtocolsJabberXMPP}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Omegle; Description: {code:ComponentsHelper|ProtocolsOmegle}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Sametime; Description: {code:ComponentsHelper|ProtocolsSametime}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Skype; Description: {code:ComponentsHelper|ProtocolsSkype}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Protocols\Steam; Description: {code:ComponentsHelper|ProtocolsSteam}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Twitter; Description: {code:ComponentsHelper|ProtocolsTwitter}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\VKontakte; Description: {code:ComponentsHelper|ProtocolsVKontakte}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Pseudo; Description: {code:ComponentsHelper|ProtocolsPseudo}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
@@ -572,12 +591,16 @@ Name: Protocols\Pseudo\CurrencyRates; Description: {code:ComponentsHelper|Protoc
 Name: Protocols\Pseudo\mRadio; Description: {code:ComponentsHelper|ProtocolsPseudomRadio}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Pseudo\NewsAggregator; Description: {code:ComponentsHelper|ProtocolsPseudoNewsAggregator}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Pseudo\Weather; Description: {code:ComponentsHelper|ProtocolsPseudoWeather}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Pseudo\WebView; Description: {code:ComponentsHelper|ProtocolsPseudoWebView}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Pseudo\YAMN; Description: {code:ComponentsHelper|ProtocolsPseudoYAMN}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 
  ; Plugins
 Name: Plugins; Description: {code:ComponentsHelper|PluginsFiles}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
+Name: Plugins\Alarms; Description: {code:ComponentsHelper|Alarms}; Types: advanced custom; Flags: disablenouninstallwarning;
+Name: Plugins\AssocMgr; Description: {code:ComponentsHelper|AssocMgr}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Plugins\AuthState; Description: {code:ComponentsHelper|AuthState}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\BuddyExpectator; Description: {code:ComponentsHelper|BuddyExpectator}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Plugins\BuddyPounce; Description: {code:ComponentsHelper|BuddyPounce}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Plugins\BossKey; Description: {code:ComponentsHelper|BossKey}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\ChangeKeyboardLayout; Description: {code:ComponentsHelper|ChangeKeyboardLayout}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\DbEditorPP; Description: {code:ComponentsHelper|DbEditorPP}; Types: advanced custom; Flags: disablenouninstallwarning;
@@ -600,43 +623,44 @@ Name: Plugins\SpellChecker; Description: {code:ComponentsHelper|SpellChecker}; T
 Name: Plugins\StopSpam; Description: {code:ComponentsHelper|StopSpam}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\UInfoEx; Description: {code:ComponentsHelper|UInfoEx}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\WhenWasIt; Description: {code:ComponentsHelper|WhenWasIt}; Types: advanced custom; Flags: disablenouninstallwarning;
+Name: Plugins\WinterSpeak; Description: {code:ComponentsHelper|WinterSpeak}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 
  ; Resources
 Name: Resources; Description: {code:ComponentsHelper|Resources}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
-Name: Resources\IEView; Description: {code:ComponentsHelper|IEView}; Types: advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\PopupPlus; Description: {code:ComponentsHelper|PopupPlus}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\IEView; Description: {code:ComponentsHelper|IEView}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\PopupPlus; Description: {code:ComponentsHelper|PopupPlus}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Smileys; Description: {code:ComponentsHelper|Smileys}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Smileys\big_pack; Description: {code:ComponentsHelper|SmileysBigPack}; Flags: exclusive disablenouninstallwarning;
 Name: Resources\Smileys\small_pack; Description: {code:ComponentsHelper|SmileysSmallPack}; Types: minimal optimal advanced custom; Flags: exclusive disablenouninstallwarning;
 Name: Resources\Sounds; Description: {code:ComponentsHelper|Sounds}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\SplashScreen; Description: {code:ComponentsHelper|SplashScreen}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\SplashScreen; Description: {code:ComponentsHelper|SplashScreen}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Tipper; Description: {code:ComponentsHelper|Tipper}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
  ; Resources\Themes
 Name: Resources\Themes; Description: {code:ComponentsHelper|Themes}; Types: advanced custom; Flags: collapsed disablenouninstallwarning;
  ; Resources\Themes\Custom_Miranda
-Name: Resources\Themes\Custom_Miranda; Description: {code:ComponentsHelper|Custom_Miranda}; Types: advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Custom_Miranda_Dark; Description: {code:ComponentsHelper|Custom_Miranda_Dark}; Types: advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Custom_Miranda_Light; Description: {code:ComponentsHelper|Custom_Miranda_Light}; Types: advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Custom_Miranda; Description: {code:ComponentsHelper|Custom_Miranda}; Types: custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Custom_Miranda_Dark; Description: {code:ComponentsHelper|Custom_Miranda_Dark}; Types: custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Custom_Miranda_Light; Description: {code:ComponentsHelper|Custom_Miranda_Light}; Types: custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\Native_7
-Name: Resources\Themes\Native_7_Dark; Description: {code:ComponentsHelper|Native_7_Dark}; Types: advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Native_7_Light; Description: {code:ComponentsHelper|Native_7_Light}; Types: advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Native_7_Dark; Description: {code:ComponentsHelper|Native_7_Dark}; Types: custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Native_7_Light; Description: {code:ComponentsHelper|Native_7_Light}; Types: custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\WinStyle_Classic
 Name: Resources\Themes\WinStyle_Classic_Dark; Description: {code:ComponentsHelper|WinStyle_Classic_Dark}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\WinStyle_Classic_Light; Description: {code:ComponentsHelper|WinStyle_Classic_Light}; Types: advanced custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\WinStyle
-Name: Resources\Themes\WinStyle_Dark; Description: {code:ComponentsHelper|WinStyle_Dark}; Types: advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\WinStyle_Light; Description: {code:ComponentsHelper|WinStyle_Light}; Types: advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\WinStyle_Dark; Description: {code:ComponentsHelper|WinStyle_Dark}; Types: custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\WinStyle_Light; Description: {code:ComponentsHelper|WinStyle_Light}; Types: custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\Diplomat
-Name: Resources\Themes\Diplomat_Dark; Description: {code:ComponentsHelper|Diplomat_Dark}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Diplomat_Light; Description: {code:ComponentsHelper|Diplomat_Light}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Diplomat_Dark; Description: {code:ComponentsHelper|Diplomat_Dark}; Types: advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Diplomat_Light; Description: {code:ComponentsHelper|Diplomat_Light}; Types: advanced custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\Glamour
-Name: Resources\Themes\Glamour_Aqua_Dark; Description: {code:ComponentsHelper|Glamour_Aqua_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Glamour_Aqua_Light; Description: {code:ComponentsHelper|Glamour_Aqua_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Glamour_Dark; Description: {code:ComponentsHelper|Glamour_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Glamour_Light; Description: {code:ComponentsHelper|Glamour_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Glamour_Aqua_Dark; Description: {code:ComponentsHelper|Glamour_Aqua_Dark}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Glamour_Aqua_Light; Description: {code:ComponentsHelper|Glamour_Aqua_Light}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Glamour_Dark; Description: {code:ComponentsHelper|Glamour_Dark}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Glamour_Light; Description: {code:ComponentsHelper|Glamour_Light}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\GoldTime
-Name: Resources\Themes\GoldTime_Dark; Description: {code:ComponentsHelper|GoldTime_Dark}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\GoldTime_Light; Description: {code:ComponentsHelper|GoldTime_Light}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\GoldTime_Dark; Description: {code:ComponentsHelper|GoldTime_Dark}; Types: advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\GoldTime_Light; Description: {code:ComponentsHelper|GoldTime_Light}; Types: advanced custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\Graphite
 Name: Resources\Themes\Graphite_Brown_Dark; Description: {code:ComponentsHelper|Graphite_Brown_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Graphite_Brown_Light; Description: {code:ComponentsHelper|Graphite_Brown_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
@@ -646,8 +670,8 @@ Name: Resources\Themes\Graphite_Gray_Light; Description: {code:ComponentsHelper|
 Name: Resources\Themes\PhotoOne_Dark; Description: {code:ComponentsHelper|PhotoOne_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\PhotoOne_Light; Description: {code:ComponentsHelper|PhotoOne_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\Surface
-Name: Resources\Themes\Surface_Black; Description: {code:ComponentsHelper|Surface_Black}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Surface_White; Description: {code:ComponentsHelper|Surface_White}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Surface_Black; Description: {code:ComponentsHelper|Surface_Black}; Types: custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Surface_White; Description: {code:ComponentsHelper|Surface_White}; Types: custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\Textolite
 Name: Resources\Themes\Textolite_Brown_Dark; Description: {code:ComponentsHelper|Textolite_Brown_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Textolite_Brown_Light; Description: {code:ComponentsHelper|Textolite_Brown_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
@@ -662,18 +686,23 @@ Name: MainCore; Description: {code:ComponentsHelper|CoreFiles}; Types: minimal o
  ; Protocols
 Name: Protocols; Description: {code:ComponentsHelper|Protocols}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Discord; Description: {code:ComponentsHelper|ProtocolsDiscord}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\EmLanProto; Description: {code:ComponentsHelper|ProtocolsEmLanProto}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Facebook; Description: {code:ComponentsHelper|ProtocolsFacebook}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\GG; Description: {code:ComponentsHelper|ProtocolsGG}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\ICQ; Description: {code:ComponentsHelper|ProtocolsICQ}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
 Name: Protocols\ICQ\ICQ; Description: {code:ComponentsHelper|Protocols_ICQ}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Protocols\ICQ\MRA; Description: {code:ComponentsHelper|Protocols_MRA}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\ICQCorp; Description: {code:ComponentsHelper|ProtocolsICQCorp}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\IRC; Description: {code:ComponentsHelper|ProtocolsIRC}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber; Description: {code:ComponentsHelper|ProtocolsJabber}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
 Name: Protocols\Jabber\Jabber; Description: {code:ComponentsHelper|ProtocolsJabberJabber}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\Jabberru; Description: {code:ComponentsHelper|ProtocolsJabberJabberru}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\OK; Description: {code:ComponentsHelper|ProtocolsJabberOK}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\XMPP; Description: {code:ComponentsHelper|ProtocolsJabberXMPP}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Omegle; Description: {code:ComponentsHelper|ProtocolsOmegle}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Sametime; Description: {code:ComponentsHelper|ProtocolsSametime}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Skype; Description: {code:ComponentsHelper|ProtocolsSkype}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Steam; Description: {code:ComponentsHelper|ProtocolsSteam}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Twitter; Description: {code:ComponentsHelper|ProtocolsTwitter}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\VKontakte; Description: {code:ComponentsHelper|ProtocolsVKontakte}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Pseudo; Description: {code:ComponentsHelper|ProtocolsPseudo}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
@@ -681,12 +710,16 @@ Name: Protocols\Pseudo\CurrencyRates; Description: {code:ComponentsHelper|Protoc
 Name: Protocols\Pseudo\mRadio; Description: {code:ComponentsHelper|ProtocolsPseudomRadio}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Pseudo\NewsAggregator; Description: {code:ComponentsHelper|ProtocolsPseudoNewsAggregator}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Pseudo\Weather; Description: {code:ComponentsHelper|ProtocolsPseudoWeather}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Pseudo\WebView; Description: {code:ComponentsHelper|ProtocolsPseudoWebView}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Pseudo\YAMN; Description: {code:ComponentsHelper|ProtocolsPseudoYAMN}; Types: full custom; Flags: disablenouninstallwarning;
 
  ; Plugins
 Name: Plugins; Description: {code:ComponentsHelper|PluginsFiles}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
+Name: Plugins\Alarms; Description: {code:ComponentsHelper|Alarms}; Types: advanced full custom; Flags: disablenouninstallwarning;
+Name: Plugins\AssocMgr; Description: {code:ComponentsHelper|AssocMgr}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Plugins\AuthState; Description: {code:ComponentsHelper|AuthState}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\BuddyExpectator; Description: {code:ComponentsHelper|BuddyExpectator}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Plugins\BuddyPounce; Description: {code:ComponentsHelper|BuddyPounce}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Plugins\BossKey; Description: {code:ComponentsHelper|BossKey}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\ChangeKeyboardLayout; Description: {code:ComponentsHelper|ChangeKeyboardLayout}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\DbEditorPP; Description: {code:ComponentsHelper|DbEditorPP}; Types: advanced full custom; Flags: disablenouninstallwarning;
@@ -709,43 +742,44 @@ Name: Plugins\SpellChecker; Description: {code:ComponentsHelper|SpellChecker}; T
 Name: Plugins\StopSpam; Description: {code:ComponentsHelper|StopSpam}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\UInfoEx; Description: {code:ComponentsHelper|UInfoEx}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\WhenWasIt; Description: {code:ComponentsHelper|WhenWasIt}; Types: advanced full custom; Flags: disablenouninstallwarning;
+Name: Plugins\WinterSpeak; Description: {code:ComponentsHelper|WinterSpeak}; Types: full custom; Flags: disablenouninstallwarning;
 
  ; Resources
 Name: resources; Description: {code:ComponentsHelper|Resources}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
-Name: Resources\IEView; Description: {code:ComponentsHelper|IEView}; Types: advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\PopupPlus; Description: {code:ComponentsHelper|PopupPlus}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\IEView; Description: {code:ComponentsHelper|IEView}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\PopupPlus; Description: {code:ComponentsHelper|PopupPlus}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Smileys; Description: {code:ComponentsHelper|Smileys}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Smileys\big_pack; Description: {code:ComponentsHelper|SmileysBigPack}; Flags: exclusive disablenouninstallwarning;
 Name: Resources\Smileys\small_pack; Description: {code:ComponentsHelper|SmileysSmallPack}; Types: minimal optimal advanced full custom; Flags: exclusive disablenouninstallwarning;
 Name: Resources\Sounds; Description: {code:ComponentsHelper|Sounds}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\SplashScreen; Description: {code:ComponentsHelper|SplashScreen}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\SplashScreen; Description: {code:ComponentsHelper|SplashScreen}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Tipper; Description: {code:ComponentsHelper|Tipper}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
  ; Resources\Themes
 Name: Resources\Themes; Description: {code:ComponentsHelper|Themes}; Types: advanced full custom; Flags: collapsed disablenouninstallwarning;
  ; Resources\Themes\Custom_Miranda
-Name: Resources\Themes\Custom_Miranda; Description: {code:ComponentsHelper|Custom_Miranda}; Types: advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Custom_Miranda_Dark; Description: {code:ComponentsHelper|Custom_Miranda_Dark}; Types: advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Custom_Miranda_Light; Description: {code:ComponentsHelper|Custom_Miranda_Light}; Types: advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Custom_Miranda; Description: {code:ComponentsHelper|Custom_Miranda}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Custom_Miranda_Dark; Description: {code:ComponentsHelper|Custom_Miranda_Dark}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Custom_Miranda_Light; Description: {code:ComponentsHelper|Custom_Miranda_Light}; Types: full custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\Native_7
-Name: Resources\Themes\Native_7_Dark; Description: {code:ComponentsHelper|Native_7_Dark}; Types: advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Native_7_Light; Description: {code:ComponentsHelper|Native_7_Light}; Types: advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Native_7_Dark; Description: {code:ComponentsHelper|Native_7_Dark}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Native_7_Light; Description: {code:ComponentsHelper|Native_7_Light}; Types: full custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\WinStyle_Classic
 Name: Resources\Themes\WinStyle_Classic_Dark; Description: {code:ComponentsHelper|WinStyle_Classic_Dark}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\WinStyle_Classic_Light; Description: {code:ComponentsHelper|WinStyle_Classic_Light}; Types: advanced full custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\WinStyle
-Name: Resources\Themes\WinStyle_Dark; Description: {code:ComponentsHelper|WinStyle_Dark}; Types: advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\WinStyle_Light; Description: {code:ComponentsHelper|WinStyle_Light}; Types: advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\WinStyle_Dark; Description: {code:ComponentsHelper|WinStyle_Dark}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\WinStyle_Light; Description: {code:ComponentsHelper|WinStyle_Light}; Types: full custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\Diplomat
-Name: Resources\Themes\Diplomat_Dark; Description: {code:ComponentsHelper|Diplomat_Dark}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Diplomat_Light; Description: {code:ComponentsHelper|Diplomat_Light}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Diplomat_Dark; Description: {code:ComponentsHelper|Diplomat_Dark}; Types: advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Diplomat_Light; Description: {code:ComponentsHelper|Diplomat_Light}; Types: advanced full custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\Glamour
-Name: Resources\Themes\Glamour_Aqua_Dark; Description: {code:ComponentsHelper|Glamour_Aqua_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Glamour_Aqua_Light; Description: {code:ComponentsHelper|Glamour_Aqua_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Glamour_Dark; Description: {code:ComponentsHelper|Glamour_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Glamour_Light; Description: {code:ComponentsHelper|Glamour_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Glamour_Aqua_Dark; Description: {code:ComponentsHelper|Glamour_Aqua_Dark}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Glamour_Aqua_Light; Description: {code:ComponentsHelper|Glamour_Aqua_Light}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Glamour_Dark; Description: {code:ComponentsHelper|Glamour_Dark}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Glamour_Light; Description: {code:ComponentsHelper|Glamour_Light}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\GoldTime
-Name: Resources\Themes\GoldTime_Dark; Description: {code:ComponentsHelper|GoldTime_Dark}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\GoldTime_Light; Description: {code:ComponentsHelper|GoldTime_Light}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\GoldTime_Dark; Description: {code:ComponentsHelper|GoldTime_Dark}; Types: advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\GoldTime_Light; Description: {code:ComponentsHelper|GoldTime_Light}; Types: advanced full custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\Graphite
 Name: Resources\Themes\Graphite_Brown_Dark; Description: {code:ComponentsHelper|Graphite_Brown_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Graphite_Brown_Light; Description: {code:ComponentsHelper|Graphite_Brown_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
@@ -755,8 +789,8 @@ Name: Resources\Themes\Graphite_Gray_Light; Description: {code:ComponentsHelper|
 Name: Resources\Themes\PhotoOne_Dark; Description: {code:ComponentsHelper|PhotoOne_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\PhotoOne_Light; Description: {code:ComponentsHelper|PhotoOne_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\Surface
-Name: Resources\Themes\Surface_Black; Description: {code:ComponentsHelper|Surface_Black}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Surface_White; Description: {code:ComponentsHelper|Surface_White}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Surface_Black; Description: {code:ComponentsHelper|Surface_Black}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Surface_White; Description: {code:ComponentsHelper|Surface_White}; Types: full custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\Textolite
 Name: Resources\Themes\Textolite_Brown_Dark; Description: {code:ComponentsHelper|Textolite_Brown_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Textolite_Brown_Light; Description: {code:ComponentsHelper|Textolite_Brown_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
@@ -939,6 +973,12 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: Discord; Key: AM_BaseProt
 Filename: {app}\Profiles\settings.ini; Section: Dropbox; Key: AM_BaseProto; String: sCloudFile/Dropbox; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 8; String: sDropbox; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 208; String: d8; Flags: uninsdeleteentry;
+ ; Protocols\EmLanProto
+Filename: {app}\Profiles\settings.ini; Section: EM_LAN_PROTO; Key: AM_BaseProto; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 9; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 209; String: d9; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
+Filename: {app}\Profiles\update.ini; Section: EM_LAN_PROTO; Key: AM_BaseProto; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
+Filename: {app}\Profiles\autoexec_update.ini; Section: EM_LAN_PROTO; Key: AM_BaseProto; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto; Check: IsUpdate;
  ; Protocols\Facebook
 Filename: {app}\Profiles\settings.ini; Section: Facebook; Key: AM_BaseProto; String: sFacebook; Flags: uninsdeleteentry; Components: Protocols\Facebook;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 12; String: sFacebook; Flags: uninsdeleteentry; Components: Protocols\Facebook;
@@ -961,6 +1001,12 @@ Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 24; String: sICQ
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 224; String: d24; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
 Filename: {app}\Profiles\update.ini; Section: ICQ; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
 Filename: {app}\Profiles\autoexec_update.ini; Section: ICQ; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ; Check: IsUpdate;
+ ; Protocols\ICQCorp
+Filename: {app}\Profiles\settings.ini; Section: ICQCorp; Key: AM_BaseProto; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 26; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 226; String: d26; Flags: uninsdeleteentry; Components: Protocols\ICQCorp;
+Filename: {app}\Profiles\update.ini; Section: ICQCorp; Key: AM_BaseProto; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp;
+Filename: {app}\Profiles\autoexec_update.ini; Section: ICQCorp; Key: AM_BaseProto; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp; Check: IsUpdate;
  ; Protocols\IRC
 Filename: {app}\Profiles\settings.ini; Section: IRC; Key: AM_BaseProto; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 28; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC;
@@ -998,16 +1044,34 @@ Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 52; String: sOK;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 252; String: d52; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
 Filename: {app}\Profiles\update.ini; Section: OK; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
 Filename: {app}\Profiles\autoexec_update.ini; Section: OK; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK; Check: IsUpdate;
+ ; Protocols\Omegle
+Filename: {app}\Profiles\settings.ini; Section: Omegle; Key: AM_BaseProto; String: sOmegle; Flags: uninsdeleteentry; Components: Protocols\Omegle;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 54; String: sOmegle; Flags: uninsdeleteentry; Components: Protocols\Omegle;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 254; String: d54; Flags: uninsdeleteentry; Components: Protocols\Omegle;
+Filename: {app}\Profiles\update.ini; Section: Omegle; Key: AM_BaseProto; String: sOmegle; Flags: uninsdeleteentry; Components: Protocols\Omegle;
+Filename: {app}\Profiles\autoexec_update.ini; Section: Omegle; Key: AM_BaseProto; String: sOmegle; Flags: uninsdeleteentry; Components: Protocols\Omegle; Check: IsUpdate;
  ; CloudFile/OneDrive
 Filename: {app}\Profiles\settings.ini; Section: OneDrive; Key: AM_BaseProto; String: sCloudFile/OneDrive; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 56; String: sOneDrive; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 256; String: d56; Flags: uninsdeleteentry;
+ ; Protocols\Sametime
+Filename: {app}\Profiles\settings.ini; Section: Sametime; Key: AM_BaseProto; String: sSametime; Flags: uninsdeleteentry; Components: Protocols\Sametime;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 58; String: sSametime; Flags: uninsdeleteentry; Components: Protocols\Sametime;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 258; String: d58; Flags: uninsdeleteentry; Components: Protocols\Sametime;
+Filename: {app}\Profiles\update.ini; Section: Sametime; Key: AM_BaseProto; String: sSametime; Flags: uninsdeleteentry; Components: Protocols\Sametime;
+Filename: {app}\Profiles\autoexec_update.ini; Section: Sametime; Key: AM_BaseProto; String: sSametime; Flags: uninsdeleteentry; Components: Protocols\Sametime; Check: IsUpdate;
  ; Protocols\Skype
 Filename: {app}\Profiles\settings.ini; Section: Skype; Key: AM_BaseProto; String: sSKYPE; Flags: uninsdeleteentry; Components: Protocols\Skype;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 60; String: sSkype; Flags: uninsdeleteentry; Components: Protocols\Skype;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 260; String: d60; Flags: uninsdeleteentry; Components: Protocols\Skype;
 Filename: {app}\Profiles\update.ini; Section: Skype; Key: AM_BaseProto; String: sSKYPE; Flags: uninsdeleteentry; Components: Protocols\Skype;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Skype; Key: AM_BaseProto; String: sSKYPE; Flags: uninsdeleteentry; Components: Protocols\Skype; Check: IsUpdate;
+ ; Protocols\Steam
+Filename: {app}\Profiles\settings.ini; Section: Steam; Key: AM_BaseProto; String: sSTEAM; Flags: uninsdeleteentry; Components: Protocols\Steam;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 62; String: sSteam; Flags: uninsdeleteentry; Components: Protocols\Steam;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 262; String: d62; Flags: uninsdeleteentry; Components: Protocols\Steam;
+Filename: {app}\Profiles\update.ini; Section: Steam; Key: AM_BaseProto; String: sSTEAM; Flags: uninsdeleteentry; Components: Protocols\Steam;
+Filename: {app}\Profiles\autoexec_update.ini; Section: Steam; Key: AM_BaseProto; String: sSTEAM; Flags: uninsdeleteentry; Components: Protocols\Steam; Check: IsUpdate;
  ; Protocols\Twitter
 Filename: {app}\Profiles\settings.ini; Section: Twitter; Key: AM_BaseProto; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 64; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter;
@@ -1024,6 +1088,10 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: VKontakte; Key: AM_BasePr
 Filename: {app}\Profiles\settings.ini; Section: Weather; Key: AM_BaseProto; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 72; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 272; String: d72; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
+ ; Protocols\Pseudo\WebView
+Filename: {app}\Profiles\settings.ini; Section: WebView; Key: AM_BaseProto; String: sWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 73; String: sWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 273; String: d73; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
  ; Protocols\Jabber\XMPP
 Filename: {app}\Profiles\settings.ini; Section: XMPP; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 74; String: sXMPP; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;

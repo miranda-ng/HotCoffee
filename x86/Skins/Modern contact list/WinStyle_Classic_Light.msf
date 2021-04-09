@@ -1028,7 +1028,7 @@ fntActionSet=b204
 fntActionSize=b-11
 fntActionSty=b0
 fntClock=sVerdana
-fntClockCol=d5330009
+fntClockCol=d3290168
 fntClockFlags=w32
 fntClockSet=b204
 fntClockSize=b-11
@@ -1040,13 +1040,13 @@ fntHovered actionSet=b204
 fntHovered actionSize=b-11
 fntHovered actionSty=b4
 fntText=sVerdana
-fntTextCol=d5330009
+fntTextCol=d3290168
 fntTextFlags=w32
 fntTextSet=b204
 fntTextSize=b-11
 fntTextSty=b0
 fntTitle=sVerdana
-fntTitleCol=d5330009
+fntTitleCol=d3290168
 fntTitleFlags=w32
 fntTitleSet=b204
 fntTitleSize=b-11
@@ -1666,7 +1666,7 @@ iPopUpColorFore=d3557888
 
 [ChangeKeyboardLayout]
 BackColor=d6387586
-TextColor=d5330009
+TextColor=d3290168
 
 [Chat]
 PopupColorBG=d24981
@@ -1674,7 +1674,7 @@ PopupColorText=d16224
 
 [DBEditorpp]
 PopupColour=d6387586
-PopupTextColour=d5330009
+PopupTextColour=d3290168
 
 [GmailMNotifier]
 popupBgColor=d11160832
@@ -1686,7 +1686,7 @@ PopupTextColor=d12917
 
 [NewAwaySys]
 PopupBGColour=d6387586
-PopupTextColour=d5330009
+PopupTextColour=d3290168
 
 [NewStatusNotify]
 40071bg=d4868682
@@ -1716,7 +1716,7 @@ PopupTextColour=d5330009
 
 [PackUpdater]
 Popups0Bg=d6387586
-Popups0Tx=d5330009
+Popups0Tx=d3290168
 Popups1Bg=d262314
 Popups1Tx=d196736
 Popups2Bg=d11160832
@@ -1746,7 +1746,7 @@ ColorBackMsg=d24981
 ColorBackOthers=d6387586
 ColorTextErr=d196736
 ColorTextMsg=d16224
-ColorTextOthers=d5330009
+ColorTextOthers=d3290168
 
 [Twitter]
 Popup/ColorBack=d11160832
@@ -1754,9 +1754,9 @@ Popup/ColorText=d8403200
 
 [TypingNotify]
 OFF_BG=d6387586
-OFF_TX=d5330009
+OFF_TX=d3290168
 ON_BG=d6387586
-ON_TX=d5330009
+ON_TX=d3290168
 
 [UserInfoEx]
 PopupAnnivClrBack=d5600512
@@ -1766,7 +1766,7 @@ PopupBirthClrBirthText=d7877170
 
 [Weather]
 BackgroundColour=d6387586
-TextColour=d5330009
+TextColour=d3290168
 
 [WebView]
 PopBGClr=d11160832
