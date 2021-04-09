@@ -118,7 +118,7 @@ WhenWasIt=Plugins\WhenWasIt | Birthday reminder | Plugin for notification about 
 	; Resources
 Resources=Resources | Resources | Additional resources (sounds, smileys, templates and themes).
 IEView=Resources\IEView | IEView | Plugin allows the use of modern skins in the message window (IE based chat log).%n%nIEView.dll
-PopupPlus=Resources\PopupPlus | PopUp plus | Provides popup notification services for different plugins.%n%nmTextControl.dll%nPopupPlus.dll
+PopupPlus=Resources\PopupPlus | Popup plus | Provides popup notification services for different plugins.%n%nPopupPlus.dll
 Smileys=Resources\Smileys | Smileys | Smileys support.%n%nSmileyAdd.dll
 SmileysBigPack=Resources\Smileys\big_pack | Big pack | Big pack of smileys.
 SmileysSmallPack=Resources\Smileys\small_pack | Small pack | Small pack of smileys.

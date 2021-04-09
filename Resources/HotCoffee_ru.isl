@@ -118,7 +118,7 @@ WhenWasIt=Plugins\WhenWasIt | Дни рождения | Плагин для оповещения о предстоящих
 	; Resources
 Resources=Resources | Ресурсы | Дополнительные ресурсы (звуки, смайлы, шаблоны и темы).
 IEView=Resources\IEView | IEView | Плагин позволяет использовать современные шаблоны в окне сообщений (журнал на движке IE).%n%nIEView.dll
-PopupPlus=Resources\PopupPlus | Всплывающие окна | Предоставляет сервис всплывающих окон для различных плагинов.%n%nmTextControl.dll%nPopupPlus.dll
+PopupPlus=Resources\PopupPlus | Всплывающие окна | Предоставляет сервис всплывающих окон для различных плагинов.%n%nPopupPlus.dll
 Smileys=Resources\Smileys | Смайлы | Поддержка смайлов.%n%nSmileyAdd.dll
 SmileysBigPack=Resources\Smileys\big_pack | Большой набор | Большой набор смайлов.
 SmileysSmallPack=Resources\Smileys\small_pack | Малый набор | Малый набор смайлов.
