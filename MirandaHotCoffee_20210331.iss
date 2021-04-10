@@ -1,5 +1,6 @@
-#define debug 0                                                             ; for developers only: 0 - debug off, 1 - debug on
-#define splash 1                                                            ; splash screen: 0 - splash off, 1 - splash on
+#define debug 0                                                             ; only for developers: 0 - debug off, 1 - debug on
+#define generatecheck 0                                                     ; only for developers: 0 - generatecheck off, 1 - generatecheck on
+#define splash 0                                                            ; splash screen: 0 - splash off, 1 - splash on
 #define aero 0                                                              ; aero theme: 0 - disable, 1 - full, 2 - top, 3 - bottom, 4 - top/bottom.
 #define fulltype 1                                                          ; full type: 0 - disable, 1 - enable
 #define freezecheckbox 0                                                    ; freezecheckbox: 0 - disable, 1 - enable
@@ -24,7 +25,7 @@
 #define AppVerMajor "0"
 #define AppVerMinor "96"
 #define AppVerBuild "1"
-#define AppVerRevis "23805"
+#define AppVerRevis "23894"
 #define AppVerStatusBuild " alpha build #"
 #define AppStatus "Test"                                                    ; must be Test, Alpha, Beta or Final
 #define AppRelease "R56"
@@ -57,12 +58,12 @@
 #define TypeDefault "optimal"
 #define SelectedTasksDefault "curuser"
 #define SelectedSettingsDefault \
-  "CheckUpdates" + "," + AppDevOrStab + "," + \
+  "UpdateSettings" + "," + AppDevOrStab + "," + \
   "CompactMode,UseSound,CLCNoVScrollBar," + \
   "SendCtrlEnter,SendEnter,AutoSizeInputArea,TabCaptionLow,TabSRMMNoVScrollBar," + \
   "AutoAwayDetection,AutoIdleDetection"
 #define SelectedStyleSettingsDefault \
-  "Skin_Current_Windows,IconsXpk,IEViewScrollBar,IEViewAnimation,IEViewShortLink,IEViewContextMenu,FontPrinting"
+  "Skin_Current_Windows,IconsXpk,IEViewAnimation,IEViewShortLink,IEViewContextMenu,IEViewScrollBar,FontPrinting"
 
 #define IncompatibleDir "{app}\incompatible"                                ; incompatible dir
 #define ExcludeList \
@@ -604,17 +605,17 @@ Name: Plugins\BuddyPounce; Description: {code:ComponentsHelper|BuddyPounce}; Typ
 Name: Plugins\BossKey; Description: {code:ComponentsHelper|BossKey}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\ChangeKeyboardLayout; Description: {code:ComponentsHelper|ChangeKeyboardLayout}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\DbEditorPP; Description: {code:ComponentsHelper|DbEditorPP}; Types: advanced custom; Flags: disablenouninstallwarning;
-Name: Plugins\FavContacts; Description: {code:ComponentsHelper|FavContacts}; Types: advanced custom; Flags: disablenouninstallwarning;
+Name: Plugins\FavContacts; Description: {code:ComponentsHelper|FavContacts}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Plugins\Fingerprint; Description: {code:ComponentsHelper|Fingerprint}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\Flags; Description: {code:ComponentsHelper|Flags}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Plugins\FltContacts; Description: {code:ComponentsHelper|FltContacts}; Types: advanced custom; Flags: disablenouninstallwarning;
+Name: Plugins\FltContacts; Description: {code:ComponentsHelper|FltContacts}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Plugins\HistoryPP; Description: {code:ComponentsHelper|HistoryPP}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\HistorySweeperLight; Description: {code:ComponentsHelper|HistorySweeperLight}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\IgnoreState; Description: {code:ComponentsHelper|IgnoreState}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\KeyboardNotify; Description: {code:ComponentsHelper|KeyboardNotify}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\ListeningTo; Description: {code:ComponentsHelper|ListeningTo}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Plugins\NewXstatusNotify; Description: {code:ComponentsHelper|NewXstatusNotify}; Types: advanced custom; Flags: disablenouninstallwarning;
-Name: Plugins\QuickMessages; Description: {code:ComponentsHelper|QuickMessages}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Plugins\QuickMessages; Description: {code:ComponentsHelper|QuickMessages}; Types: optimal advanced custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Plugins\QuickSearch; Description: {code:ComponentsHelper|QuickSearch}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\MirOTR; Description: {code:ComponentsHelper|MirOTR}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Plugins\SecureIM; Description: {code:ComponentsHelper|SecureIM}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
@@ -627,13 +628,13 @@ Name: Plugins\WinterSpeak; Description: {code:ComponentsHelper|WinterSpeak}; Typ
 
  ; Resources
 Name: Resources; Description: {code:ComponentsHelper|Resources}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
-Name: Resources\IEView; Description: {code:ComponentsHelper|IEView}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\PopupPlus; Description: {code:ComponentsHelper|PopupPlus}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\IEView; Description: {code:ComponentsHelper|IEView}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\PopupPlus; Description: {code:ComponentsHelper|PopupPlus}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Smileys; Description: {code:ComponentsHelper|Smileys}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Smileys\big_pack; Description: {code:ComponentsHelper|SmileysBigPack}; Flags: exclusive disablenouninstallwarning;
 Name: Resources\Smileys\small_pack; Description: {code:ComponentsHelper|SmileysSmallPack}; Types: minimal optimal advanced custom; Flags: exclusive disablenouninstallwarning;
-Name: Resources\Sounds; Description: {code:ComponentsHelper|Sounds}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\SplashScreen; Description: {code:ComponentsHelper|SplashScreen}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Sounds; Description: {code:ComponentsHelper|Sounds}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\SplashScreen; Description: {code:ComponentsHelper|SplashScreen}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Tipper; Description: {code:ComponentsHelper|Tipper}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
  ; Resources\Themes
 Name: Resources\Themes; Description: {code:ComponentsHelper|Themes}; Types: advanced custom; Flags: collapsed disablenouninstallwarning;
@@ -651,24 +652,24 @@ Name: Resources\Themes\WinStyle_Classic_Light; Description: {code:ComponentsHelp
 Name: Resources\Themes\WinStyle_Dark; Description: {code:ComponentsHelper|WinStyle_Dark}; Types: custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\WinStyle_Light; Description: {code:ComponentsHelper|WinStyle_Light}; Types: custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\Diplomat
-Name: Resources\Themes\Diplomat_Dark; Description: {code:ComponentsHelper|Diplomat_Dark}; Types: advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Diplomat_Light; Description: {code:ComponentsHelper|Diplomat_Light}; Types: advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Diplomat_Dark; Description: {code:ComponentsHelper|Diplomat_Dark}; Types: custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Diplomat_Light; Description: {code:ComponentsHelper|Diplomat_Light}; Types: custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\Glamour
-Name: Resources\Themes\Glamour_Aqua_Dark; Description: {code:ComponentsHelper|Glamour_Aqua_Dark}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Glamour_Aqua_Light; Description: {code:ComponentsHelper|Glamour_Aqua_Light}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Glamour_Dark; Description: {code:ComponentsHelper|Glamour_Dark}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Glamour_Light; Description: {code:ComponentsHelper|Glamour_Light}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Glamour_Aqua_Dark; Description: {code:ComponentsHelper|Glamour_Aqua_Dark}; Types: advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Glamour_Aqua_Light; Description: {code:ComponentsHelper|Glamour_Aqua_Light}; Types: advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Glamour_Dark; Description: {code:ComponentsHelper|Glamour_Dark}; Types: advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Glamour_Light; Description: {code:ComponentsHelper|Glamour_Light}; Types: advanced custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\GoldTime
-Name: Resources\Themes\GoldTime_Dark; Description: {code:ComponentsHelper|GoldTime_Dark}; Types: advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\GoldTime_Light; Description: {code:ComponentsHelper|GoldTime_Light}; Types: advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\GoldTime_Dark; Description: {code:ComponentsHelper|GoldTime_Dark}; Types: custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\GoldTime_Light; Description: {code:ComponentsHelper|GoldTime_Light}; Types: custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\Graphite
-Name: Resources\Themes\Graphite_Brown_Dark; Description: {code:ComponentsHelper|Graphite_Brown_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Graphite_Brown_Light; Description: {code:ComponentsHelper|Graphite_Brown_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Graphite_Gray_Dark; Description: {code:ComponentsHelper|Graphite_Gray_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Graphite_Gray_Light; Description: {code:ComponentsHelper|Graphite_Gray_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Graphite_Brown_Dark; Description: {code:ComponentsHelper|Graphite_Brown_Dark}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Graphite_Brown_Light; Description: {code:ComponentsHelper|Graphite_Brown_Light}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Graphite_Gray_Dark; Description: {code:ComponentsHelper|Graphite_Gray_Dark}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Graphite_Gray_Light; Description: {code:ComponentsHelper|Graphite_Gray_Light}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\PhotoOne
-Name: Resources\Themes\PhotoOne_Dark; Description: {code:ComponentsHelper|PhotoOne_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\PhotoOne_Light; Description: {code:ComponentsHelper|PhotoOne_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\PhotoOne_Dark; Description: {code:ComponentsHelper|PhotoOne_Dark}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\PhotoOne_Light; Description: {code:ComponentsHelper|PhotoOne_Light}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\Surface
 Name: Resources\Themes\Surface_Black; Description: {code:ComponentsHelper|Surface_Black}; Types: custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Surface_White; Description: {code:ComponentsHelper|Surface_White}; Types: custom; Flags: disablenouninstallwarning;
@@ -723,17 +724,17 @@ Name: Plugins\BuddyPounce; Description: {code:ComponentsHelper|BuddyPounce}; Typ
 Name: Plugins\BossKey; Description: {code:ComponentsHelper|BossKey}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\ChangeKeyboardLayout; Description: {code:ComponentsHelper|ChangeKeyboardLayout}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\DbEditorPP; Description: {code:ComponentsHelper|DbEditorPP}; Types: advanced full custom; Flags: disablenouninstallwarning;
-Name: Plugins\FavContacts; Description: {code:ComponentsHelper|FavContacts}; Types: advanced full custom; Flags: disablenouninstallwarning;
+Name: Plugins\FavContacts; Description: {code:ComponentsHelper|FavContacts}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Plugins\Fingerprint; Description: {code:ComponentsHelper|Fingerprint}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\Flags; Description: {code:ComponentsHelper|Flags}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Plugins\FltContacts; Description: {code:ComponentsHelper|FltContacts}; Types: advanced full custom; Flags: disablenouninstallwarning;
+Name: Plugins\FltContacts; Description: {code:ComponentsHelper|FltContacts}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Plugins\HistoryPP; Description: {code:ComponentsHelper|HistoryPP}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\HistorySweeperLight; Description: {code:ComponentsHelper|HistorySweeperLight}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\IgnoreState; Description: {code:ComponentsHelper|IgnoreState}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\KeyboardNotify; Description: {code:ComponentsHelper|KeyboardNotify}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\ListeningTo; Description: {code:ComponentsHelper|ListeningTo}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Plugins\NewXstatusNotify; Description: {code:ComponentsHelper|NewXstatusNotify}; Types: advanced full custom; Flags: disablenouninstallwarning;
-Name: Plugins\QuickMessages; Description: {code:ComponentsHelper|QuickMessages}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Plugins\QuickMessages; Description: {code:ComponentsHelper|QuickMessages}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\QuickSearch; Description: {code:ComponentsHelper|QuickSearch}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\MirOTR; Description: {code:ComponentsHelper|MirOTR}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Plugins\SecureIM; Description: {code:ComponentsHelper|SecureIM}; Types: full custom; Flags: disablenouninstallwarning;
@@ -746,13 +747,13 @@ Name: Plugins\WinterSpeak; Description: {code:ComponentsHelper|WinterSpeak}; Typ
 
  ; Resources
 Name: resources; Description: {code:ComponentsHelper|Resources}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
-Name: Resources\IEView; Description: {code:ComponentsHelper|IEView}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\PopupPlus; Description: {code:ComponentsHelper|PopupPlus}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\IEView; Description: {code:ComponentsHelper|IEView}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\PopupPlus; Description: {code:ComponentsHelper|PopupPlus}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Smileys; Description: {code:ComponentsHelper|Smileys}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Smileys\big_pack; Description: {code:ComponentsHelper|SmileysBigPack}; Flags: exclusive disablenouninstallwarning;
 Name: Resources\Smileys\small_pack; Description: {code:ComponentsHelper|SmileysSmallPack}; Types: minimal optimal advanced full custom; Flags: exclusive disablenouninstallwarning;
-Name: Resources\Sounds; Description: {code:ComponentsHelper|Sounds}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\SplashScreen; Description: {code:ComponentsHelper|SplashScreen}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Sounds; Description: {code:ComponentsHelper|Sounds}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\SplashScreen; Description: {code:ComponentsHelper|SplashScreen}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Tipper; Description: {code:ComponentsHelper|Tipper}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
  ; Resources\Themes
 Name: Resources\Themes; Description: {code:ComponentsHelper|Themes}; Types: advanced full custom; Flags: collapsed disablenouninstallwarning;
@@ -770,24 +771,24 @@ Name: Resources\Themes\WinStyle_Classic_Light; Description: {code:ComponentsHelp
 Name: Resources\Themes\WinStyle_Dark; Description: {code:ComponentsHelper|WinStyle_Dark}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\WinStyle_Light; Description: {code:ComponentsHelper|WinStyle_Light}; Types: full custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\Diplomat
-Name: Resources\Themes\Diplomat_Dark; Description: {code:ComponentsHelper|Diplomat_Dark}; Types: advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Diplomat_Light; Description: {code:ComponentsHelper|Diplomat_Light}; Types: advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Diplomat_Dark; Description: {code:ComponentsHelper|Diplomat_Dark}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Diplomat_Light; Description: {code:ComponentsHelper|Diplomat_Light}; Types: full custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\Glamour
-Name: Resources\Themes\Glamour_Aqua_Dark; Description: {code:ComponentsHelper|Glamour_Aqua_Dark}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Glamour_Aqua_Light; Description: {code:ComponentsHelper|Glamour_Aqua_Light}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Glamour_Dark; Description: {code:ComponentsHelper|Glamour_Dark}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Glamour_Light; Description: {code:ComponentsHelper|Glamour_Light}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Glamour_Aqua_Dark; Description: {code:ComponentsHelper|Glamour_Aqua_Dark}; Types: advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Glamour_Aqua_Light; Description: {code:ComponentsHelper|Glamour_Aqua_Light}; Types: advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Glamour_Dark; Description: {code:ComponentsHelper|Glamour_Dark}; Types: advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Glamour_Light; Description: {code:ComponentsHelper|Glamour_Light}; Types: advanced full custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\GoldTime
-Name: Resources\Themes\GoldTime_Dark; Description: {code:ComponentsHelper|GoldTime_Dark}; Types: advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\GoldTime_Light; Description: {code:ComponentsHelper|GoldTime_Light}; Types: advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\GoldTime_Dark; Description: {code:ComponentsHelper|GoldTime_Dark}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\GoldTime_Light; Description: {code:ComponentsHelper|GoldTime_Light}; Types: full custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\Graphite
-Name: Resources\Themes\Graphite_Brown_Dark; Description: {code:ComponentsHelper|Graphite_Brown_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Graphite_Brown_Light; Description: {code:ComponentsHelper|Graphite_Brown_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Graphite_Gray_Dark; Description: {code:ComponentsHelper|Graphite_Gray_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Graphite_Gray_Light; Description: {code:ComponentsHelper|Graphite_Gray_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Graphite_Brown_Dark; Description: {code:ComponentsHelper|Graphite_Brown_Dark}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Graphite_Brown_Light; Description: {code:ComponentsHelper|Graphite_Brown_Light}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Graphite_Gray_Dark; Description: {code:ComponentsHelper|Graphite_Gray_Dark}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Graphite_Gray_Light; Description: {code:ComponentsHelper|Graphite_Gray_Light}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\PhotoOne
-Name: Resources\Themes\PhotoOne_Dark; Description: {code:ComponentsHelper|PhotoOne_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\PhotoOne_Light; Description: {code:ComponentsHelper|PhotoOne_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\PhotoOne_Dark; Description: {code:ComponentsHelper|PhotoOne_Dark}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\PhotoOne_Light; Description: {code:ComponentsHelper|PhotoOne_Light}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\Surface
 Name: Resources\Themes\Surface_Black; Description: {code:ComponentsHelper|Surface_Black}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Surface_White; Description: {code:ComponentsHelper|Surface_White}; Types: full custom; Flags: disablenouninstallwarning;
@@ -1198,14 +1199,6 @@ Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: Yandex-filename;
 Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: UpdateOnStartup; String: b{code:SetBoolSetting|CheckUpdates}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: UpdateOnStartup; String: b{code:SetBoolSetting|CheckUpdates}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: UpdateOnStartup; String: b{code:SetBoolSetting|CheckUpdates}; Flags: uninsdeleteentry; Check: IsUpdate;
- ; Settings Page \ Check for updates \ DevelopmentVersion
-Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: UpdateMode; String: b2; Flags: uninsdeleteentry; Check: IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion');
-Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: UpdateMode; String: b2; Flags: uninsdeleteentry; Check: IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: UpdateMode; String: b2; Flags: uninsdeleteentry; Check: (IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion')) and IsUpdate;
- ; DevelopmentVersion & DontSwitchToStable
-Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b1; Flags: uninsdeleteentry; Check: IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion');
-Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b1; Flags: uninsdeleteentry; Check: IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b1; Flags: uninsdeleteentry; Check: (IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion')) and IsUpdate;
  ; Settings Page \ Check for updates \ StableVersion
 Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: UpdateMode; String: b1; Flags: uninsdeleteentry; Check: IsSettingChecked('StableVersion');
 Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: UpdateMode; String: b1; Flags: uninsdeleteentry; Check: IsSettingChecked('StableVersion');
@@ -1214,6 +1207,14 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: Updat
 Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b0; Flags: uninsdeleteentry; Check: IsSettingChecked('StableVersion');
 Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b0; Flags: uninsdeleteentry; Check: IsSettingChecked('StableVersion');
 Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b0; Flags: uninsdeleteentry; Check: IsSettingChecked('StableVersion') and IsUpdate;
+ ; Settings Page \ Check for updates \ DevelopmentVersion
+Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: UpdateMode; String: b2; Flags: uninsdeleteentry; Check: IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion');
+Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: UpdateMode; String: b2; Flags: uninsdeleteentry; Check: IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion');
+Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: UpdateMode; String: b2; Flags: uninsdeleteentry; Check: (IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion')) and IsUpdate;
+ ; DevelopmentVersion & DontSwitchToStable
+Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b1; Flags: uninsdeleteentry; Check: IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion');
+Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b1; Flags: uninsdeleteentry; Check: IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion');
+Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b1; Flags: uninsdeleteentry; Check: (IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion')) and IsUpdate;
 
  ; Settings Page \ Contact list \ OnTop
 Filename: {app}\Profiles\settings.ini; Section: CList; Key: OnTop; String: b{code:SetBoolSetting|OnTop}; Flags: uninsdeleteentry;
@@ -6177,10 +6178,10 @@ begin
 
           { add settings }
 //          #if AppStatus == "Final"
-          AddCheckBox(SettingsHelper('UpdateSettings'), '', 0, False, True, False, True, nil);
+          AddCheckBox(SettingsHelper('UpdateSettings'), '', 0, False, False, False, True, nil);
           AddCheckBox(SettingsHelper('CheckUpdates'), '', 1, False, True, True, False, nil);
-          AddRadioButton(SettingsHelper('DevelopmentVersion'), '', 1, False, True, nil);
           AddRadioButton(SettingsHelper('StableVersion'), '', 1, False, True, nil);
+          AddRadioButton(SettingsHelper('DevelopmentVersion'), '', 1, False, True, nil);
 //          #endif
           AddCheckBox(SettingsHelper('ContactList'), '', 0, False, True, False, True, nil);
           AddCheckBox(SettingsHelper('OnTop'), '', 1, False, True, True, False, nil);
@@ -9959,6 +9960,8 @@ begin
   DeleteFile(ExpandConstant(strFile));
 end;
 
-//компиляция прервётся, создастся файл MirandaHotCoffee_full.iss после отработки препроцессором, в таком виде скрипт уже поступает на обработку компилятору, можно посмотреть, что там оно нагенерило.
-//#expr SaveToFile(SourcePath + "MirandaHotCoffee_full.iss")
-//#pragma error "Stop compile"
+//компиляция прервётся, создастся файл MirandaHotCoffee_generatecheck.iss после отработки препроцессором, в таком виде скрипт уже поступает на обработку компилятору, можно посмотреть, что там оно нагенерило.
+#if generatecheck == 1
+#expr SaveToFile(SourcePath + "MirandaHotCoffee_generatecheck.iss")
+#pragma error "Stop compile"
+#endif

@@ -284,11 +284,11 @@ IconsNova=Nova | Набор значков Nova. | * | Icons_Nova.bmp
 IconsXpk=Xpk | Набор значков Xpk. | * | Icons_Xpk.bmp
 	; IEView settings
 IEViewSettings=Настройки IEView | Настройки шаблона IEView.
-IEViewScrollBar=Полоса прокрутки | Включить/Выключить полосу прокрутки. | * | * | *
 IEViewAnimation=Анимация | Включить/Выключить анимацию. | * | Animation_On.gif | Animation_Off.gif
 IEViewAvatar=Аватары | Включить/Выключить аватары. | * | Avatar_On.bmp | Avatar_Off.bmp
 IEViewShortLink=Короткие ссылки | Включить/Выключить короткие ссылки. | * | ShortLink_On.bmp | ShortLink_Off.bmp
 IEViewContextMenu=Контекстное меню | Включить/Выключить контекстное меню. | * | ContextMenu_On.bmp | ContextMenu_Off.bmp
+IEViewScrollBar=Полоса прокрутки | Включить/Выключить полосу прокрутки. | * | * | *
 	; Fonts
 Font=Шрифт | Шрифты.
 FontHandwriting=Рукописный | Рукописный шрифт. | * | Font_Handwriting.bmp
