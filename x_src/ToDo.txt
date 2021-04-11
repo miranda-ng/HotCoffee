@@ -18,7 +18,9 @@ lua
 
 icons
 CloudFile
-WebView
+Omegle
+Sametime
+Steam
 
 
 ini

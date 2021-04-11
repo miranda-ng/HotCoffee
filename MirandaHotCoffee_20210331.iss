@@ -36,7 +36,7 @@
 #define AppMirVer AppArch == "x86" ? AppShortVer + AppVerStatusBuild + AppVerRevis : AppShortVer + AppVerStatusBuild + AppVerRevis + " x64"
 #define AppDevOrStab AppStatus == "Final" ? "StableVersion" : "DevelopmentVersion"
 
-#define AppUpdateVersion "0.96.1.23805"                                     ; product version update range
+#define AppUpdateVersion "0.96.1.23894"                                     ; product version update range
 
 #define AppWidth "65"                                                       ; Increasing width of the client
 #define AppHeight "25"                                                      ; Increasing height of the client
@@ -82,17 +82,22 @@
   "Protocols\Facebook," + \
   "Protocols\GG," + \
   "Protocols\ICQ\ICQ," + \
+  "Protocols\ICQ\ICQ2," + \
   "Protocols\ICQ\MRA," + \
+  "Protocols\ICQ\MRA2," + \
   "Protocols\ICQCorp," + \
   "Protocols\IRC," + \
+  "Protocols\Jabber\Hangouts," + \
   "Protocols\Jabber\Jabber," + \
   "Protocols\Jabber\Jabberru," + \
+  "Protocols\Jabber\LJ," + \
   "Protocols\Jabber\OK," + \
   "Protocols\Jabber\XMPP," + \
   "Protocols\Omegle," + \
   "Protocols\Sametime," + \
   "Protocols\Skype," + \
   "Protocols\Steam," + \
+  "Protocols\Tox," + \
   "Protocols\Twitter," + \
   "Protocols\VKontakte," + \
   "Protocols\Pseudo\WebView"
@@ -312,11 +317,18 @@ Source: {#AppArch}\Plugins\ICQ.dll; DestDir: {app}\Plugins; Flags: ignoreversion
  ; Protocols\ICQ\ICQ
 Source: x86\Icons\Proto_conn_ICQ.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\ICQ; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_ICQ.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\ICQ; AfterInstall: AddDetails;
+ ; Protocols\ICQ\ICQ2
+Source: x86\Icons\Proto_conn_ICQ2.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\ICQ2; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_ICQ2.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\ICQ2; AfterInstall: AddDetails;
  ; Protocols\ICQ\MRA
 Source: x86\Icons\Proto_conn_MRA.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\MRA; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_MRA.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\MRA; AfterInstall: AddDetails;
+ ; Protocols\ICQ\MRA2
+Source: x86\Icons\Proto_conn_MRA2.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\MRA2; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_MRA2.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\MRA2; AfterInstall: AddDetails;
  ; Protocols\ICQCorp
 Source: {#AppArch}\Plugins\ICQCorp.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\ICQCorp; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_conn_ICQCorp.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQCorp; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_ICQCorp.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQCorp; AfterInstall: AddDetails;
  ; Protocols\IRC
 Source: {#AppArch}\Plugins\IRC.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\IRC; AfterInstall: AddDetails;
@@ -327,12 +339,18 @@ Source: x86\Skins\Avatars\IRC.png; DestDir: {app}\Skins\Avatars; Flags: ignoreve
 Source: {#AppArch}\Plugins\Jabber.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
 Source: x86\Icons\xStatus_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
 Source: x86\Skins\Avatars\Jabber.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
+ ; Protocols\Jabber\Hangouts
+Source: x86\Icons\Proto_conn_Hangouts.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Hangouts; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_Hangouts.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Hangouts; AfterInstall: AddDetails;
  ; Protocols\Jabber\Jabber
 Source: x86\Icons\Proto_conn_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Jabber; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Jabber; AfterInstall: AddDetails;
  ; Protocols\Jabber\Jabberru
 Source: x86\Icons\Proto_conn_Jabberru.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Jabberru; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Jabberru.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Jabberru; AfterInstall: AddDetails;
+ ; Protocols\Jabber\LJ
+Source: x86\Icons\Proto_conn_LJ.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\LJ; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_LJ.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\LJ; AfterInstall: AddDetails;
  ; Protocols\Jabber\OK
 Source: x86\Icons\Proto_conn_OK.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\OK; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_OK.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\OK; AfterInstall: AddDetails;
@@ -359,6 +377,10 @@ Source: x86\Skins\Smileys\_light\Skype\Skype_small_pack.msl; DestDir: {app}\Skin
  ; Protocols\Steam
 Source: {#AppArch}\Plugins\Steam.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Steam; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Steam.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Steam; AfterInstall: AddDetails;
+ ; Protocols\Tox
+Source: {#AppArch}\Plugins\Tox.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Tox; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_conn_Tox.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Tox; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_Tox.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Tox; AfterInstall: AddDetails;
  ; Protocols\Twitter
 Source: {#AppArch}\Plugins\Twitter.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Twitter; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_conn_Twitter.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Twitter; AfterInstall: AddDetails;
@@ -567,33 +589,38 @@ Name: MainCore; Description: {code:ComponentsHelper|CoreFiles}; Types: minimal o
 
  ; Protocols
 Name: Protocols; Description: {code:ComponentsHelper|Protocols}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Protocols\Discord; Description: {code:ComponentsHelper|ProtocolsDiscord}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\EmLanProto; Description: {code:ComponentsHelper|ProtocolsEmLanProto}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Facebook; Description: {code:ComponentsHelper|ProtocolsFacebook}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\GG; Description: {code:ComponentsHelper|ProtocolsGG}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\ICQ; Description: {code:ComponentsHelper|ProtocolsICQ}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
-Name: Protocols\ICQ\ICQ; Description: {code:ComponentsHelper|Protocols_ICQ}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Protocols\ICQ\MRA; Description: {code:ComponentsHelper|Protocols_MRA}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\ICQCorp; Description: {code:ComponentsHelper|ProtocolsICQCorp}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\IRC; Description: {code:ComponentsHelper|ProtocolsIRC}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Jabber; Description: {code:ComponentsHelper|ProtocolsJabber}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
-Name: Protocols\Jabber\Jabber; Description: {code:ComponentsHelper|ProtocolsJabberJabber}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Protocols\Jabber\Jabberru; Description: {code:ComponentsHelper|ProtocolsJabberJabberru}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Jabber\OK; Description: {code:ComponentsHelper|ProtocolsJabberOK}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Jabber\XMPP; Description: {code:ComponentsHelper|ProtocolsJabberXMPP}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Omegle; Description: {code:ComponentsHelper|ProtocolsOmegle}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Sametime; Description: {code:ComponentsHelper|ProtocolsSametime}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Skype; Description: {code:ComponentsHelper|ProtocolsSkype}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Protocols\Steam; Description: {code:ComponentsHelper|ProtocolsSteam}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Twitter; Description: {code:ComponentsHelper|ProtocolsTwitter}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\VKontakte; Description: {code:ComponentsHelper|ProtocolsVKontakte}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Pseudo; Description: {code:ComponentsHelper|ProtocolsPseudo}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
-Name: Protocols\Pseudo\CurrencyRates; Description: {code:ComponentsHelper|ProtocolsPseudoCurrencyRates}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Pseudo\mRadio; Description: {code:ComponentsHelper|ProtocolsPseudomRadio}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Pseudo\NewsAggregator; Description: {code:ComponentsHelper|ProtocolsPseudoNewsAggregator}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Pseudo\Weather; Description: {code:ComponentsHelper|ProtocolsPseudoWeather}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Pseudo\WebView; Description: {code:ComponentsHelper|ProtocolsPseudoWebView}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Pseudo\YAMN; Description: {code:ComponentsHelper|ProtocolsPseudoYAMN}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Discord; Description: {code:ComponentsHelper|Discord_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\EmLanProto; Description: {code:ComponentsHelper|EmLanProto_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Facebook; Description: {code:ComponentsHelper|Facebook_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\GG; Description: {code:ComponentsHelper|GG_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\ICQ; Description: {code:ComponentsHelper|ICQ_Protocol}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
+Name: Protocols\ICQ\ICQ; Description: {code:ComponentsHelper|ICQ_Protocol_ICQ}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Protocols\ICQ\ICQ2; Description: {code:ComponentsHelper|ICQ_Protocol_ICQ2}; Types: custom; Flags: disablenouninstallwarning;
+Name: Protocols\ICQ\MRA; Description: {code:ComponentsHelper|ICQ_Protocol_MRA}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\ICQ\MRA2; Description: {code:ComponentsHelper|ICQ_Protocol_MRA2}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\ICQCorp; Description: {code:ComponentsHelper|ICQCorp_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\IRC; Description: {code:ComponentsHelper|IRC_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
+Name: Protocols\Jabber\Hangouts; Description: {code:ComponentsHelper|Jabber_Protocol_Hangouts}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol_Jabber}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Protocols\Jabber\Jabberru; Description: {code:ComponentsHelper|Jabber_Protocol_Jabberru}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\LJ; Description: {code:ComponentsHelper|Jabber_Protocol_LJ}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\OK; Description: {code:ComponentsHelper|Jabber_Protocol_OK}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\XMPP; Description: {code:ComponentsHelper|Jabber_Protocol_XMPP}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Omegle; Description: {code:ComponentsHelper|Omegle_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Sametime; Description: {code:ComponentsHelper|Sametime_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Skype; Description: {code:ComponentsHelper|Skype_Protocol}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Protocols\Steam; Description: {code:ComponentsHelper|Steam_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Tox; Description: {code:ComponentsHelper|Tox_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Twitter; Description: {code:ComponentsHelper|Twitter_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\VKontakte; Description: {code:ComponentsHelper|VKontakte_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Pseudo; Description: {code:ComponentsHelper|Pseudo_Protocols}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
+Name: Protocols\Pseudo\CurrencyRates; Description: {code:ComponentsHelper|CurrencyRates_Pseudo_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Pseudo\mRadio; Description: {code:ComponentsHelper|mRadio_Pseudo_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Pseudo\NewsAggregator; Description: {code:ComponentsHelper|NewsAggregator_Pseudo_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Pseudo\Weather; Description: {code:ComponentsHelper|Weather_Pseudo_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Pseudo\WebView; Description: {code:ComponentsHelper|WebView_Pseudo_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Pseudo\YAMN; Description: {code:ComponentsHelper|YAMN_Pseudo_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 
  ; Plugins
 Name: Plugins; Description: {code:ComponentsHelper|PluginsFiles}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
@@ -686,33 +713,38 @@ Name: MainCore; Description: {code:ComponentsHelper|CoreFiles}; Types: minimal o
 
  ; Protocols
 Name: Protocols; Description: {code:ComponentsHelper|Protocols}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Discord; Description: {code:ComponentsHelper|ProtocolsDiscord}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\EmLanProto; Description: {code:ComponentsHelper|ProtocolsEmLanProto}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Facebook; Description: {code:ComponentsHelper|ProtocolsFacebook}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\GG; Description: {code:ComponentsHelper|ProtocolsGG}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\ICQ; Description: {code:ComponentsHelper|ProtocolsICQ}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
-Name: Protocols\ICQ\ICQ; Description: {code:ComponentsHelper|Protocols_ICQ}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Protocols\ICQ\MRA; Description: {code:ComponentsHelper|Protocols_MRA}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\ICQCorp; Description: {code:ComponentsHelper|ProtocolsICQCorp}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\IRC; Description: {code:ComponentsHelper|ProtocolsIRC}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Jabber; Description: {code:ComponentsHelper|ProtocolsJabber}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
-Name: Protocols\Jabber\Jabber; Description: {code:ComponentsHelper|ProtocolsJabberJabber}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Jabber\Jabberru; Description: {code:ComponentsHelper|ProtocolsJabberJabberru}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Jabber\OK; Description: {code:ComponentsHelper|ProtocolsJabberOK}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Jabber\XMPP; Description: {code:ComponentsHelper|ProtocolsJabberXMPP}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Omegle; Description: {code:ComponentsHelper|ProtocolsOmegle}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Sametime; Description: {code:ComponentsHelper|ProtocolsSametime}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Skype; Description: {code:ComponentsHelper|ProtocolsSkype}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Steam; Description: {code:ComponentsHelper|ProtocolsSteam}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Twitter; Description: {code:ComponentsHelper|ProtocolsTwitter}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\VKontakte; Description: {code:ComponentsHelper|ProtocolsVKontakte}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Pseudo; Description: {code:ComponentsHelper|ProtocolsPseudo}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
-Name: Protocols\Pseudo\CurrencyRates; Description: {code:ComponentsHelper|ProtocolsPseudoCurrencyRates}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Pseudo\mRadio; Description: {code:ComponentsHelper|ProtocolsPseudomRadio}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Pseudo\NewsAggregator; Description: {code:ComponentsHelper|ProtocolsPseudoNewsAggregator}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Pseudo\Weather; Description: {code:ComponentsHelper|ProtocolsPseudoWeather}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Pseudo\WebView; Description: {code:ComponentsHelper|ProtocolsPseudoWebView}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Pseudo\YAMN; Description: {code:ComponentsHelper|ProtocolsPseudoYAMN}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Discord; Description: {code:ComponentsHelper|Discord_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\EmLanProto; Description: {code:ComponentsHelper|EmLanProto_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Facebook; Description: {code:ComponentsHelper|Facebook_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\GG; Description: {code:ComponentsHelper|GG_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\ICQ; Description: {code:ComponentsHelper|ICQ_Protocol}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
+Name: Protocols\ICQ\ICQ; Description: {code:ComponentsHelper|ICQ_Protocol_ICQ}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Protocols\ICQ\ICQ2; Description: {code:ComponentsHelper|ICQ_Protocol_ICQ2}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\ICQ\MRA; Description: {code:ComponentsHelper|ICQ_Protocol_MRA}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\ICQ\MRA2; Description: {code:ComponentsHelper|ICQ_Protocol_MRA2}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\ICQCorp; Description: {code:ComponentsHelper|ICQCorp_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\IRC; Description: {code:ComponentsHelper|IRC_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
+Name: Protocols\Jabber\Hangouts; Description: {code:ComponentsHelper|Jabber_Protocol_Hangouts}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Jabber\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol_Jabber}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Jabber\Jabberru; Description: {code:ComponentsHelper|Jabber_Protocol_Jabberru}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Jabber\LJ; Description: {code:ComponentsHelper|Jabber_Protocol_LJ}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Jabber\OK; Description: {code:ComponentsHelper|Jabber_Protocol_OK}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Jabber\XMPP; Description: {code:ComponentsHelper|Jabber_Protocol_XMPP}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Omegle; Description: {code:ComponentsHelper|Omegle_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Sametime; Description: {code:ComponentsHelper|Sametime_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Skype; Description: {code:ComponentsHelper|Skype_Protocol}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Steam; Description: {code:ComponentsHelper|Steam_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Tox; Description: {code:ComponentsHelper|Tox_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Twitter; Description: {code:ComponentsHelper|Twitter_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\VKontakte; Description: {code:ComponentsHelper|VKontakte_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Pseudo; Description: {code:ComponentsHelper|Pseudo_Protocols}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
+Name: Protocols\Pseudo\CurrencyRates; Description: {code:ComponentsHelper|CurrencyRates_Pseudo_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Pseudo\mRadio; Description: {code:ComponentsHelper|mRadio_Pseudo_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Pseudo\NewsAggregator; Description: {code:ComponentsHelper|NewsAggregator_Pseudo_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Pseudo\Weather; Description: {code:ComponentsHelper|Weather_Pseudo_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Pseudo\WebView; Description: {code:ComponentsHelper|WebView_Pseudo_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Pseudo\YAMN; Description: {code:ComponentsHelper|YAMN_Pseudo_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 
  ; Plugins
 Name: Plugins; Description: {code:ComponentsHelper|PluginsFiles}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
@@ -996,12 +1028,24 @@ Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 20; String: sGG;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 220; String: d20; Flags: uninsdeleteentry; Components: Protocols\GG;
 Filename: {app}\Profiles\update.ini; Section: GG; Key: AM_BaseProto; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG;
 Filename: {app}\Profiles\autoexec_update.ini; Section: GG; Key: AM_BaseProto; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG; Check: IsUpdate;
+ ; Protocols\Jabber\Hangouts
+Filename: {app}\Profiles\settings.ini; Section: Hangouts; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Hangouts;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 22; String: sHangouts; Flags: uninsdeleteentry; Components: Protocols\Jabber\Hangouts;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 222; String: d22; Flags: uninsdeleteentry; Components: Protocols\Jabber\Hangouts;
+Filename: {app}\Profiles\update.ini; Section: Hangouts; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Hangouts;
+Filename: {app}\Profiles\autoexec_update.ini; Section: Hangouts; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Hangouts; Check: IsUpdate;
  ; Protocols\ICQ\ICQ
 Filename: {app}\Profiles\settings.ini; Section: ICQ; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 24; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 224; String: d24; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
 Filename: {app}\Profiles\update.ini; Section: ICQ; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
 Filename: {app}\Profiles\autoexec_update.ini; Section: ICQ; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ; Check: IsUpdate;
+ ; Protocols\ICQ\ICQ2
+Filename: {app}\Profiles\settings.ini; Section: ICQ2; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 25; String: sICQ2; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 225; String: d25; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2;
+Filename: {app}\Profiles\update.ini; Section: ICQ2; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2;
+Filename: {app}\Profiles\autoexec_update.ini; Section: ICQ2; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2; Check: IsUpdate;
  ; Protocols\ICQCorp
 Filename: {app}\Profiles\settings.ini; Section: ICQCorp; Key: AM_BaseProto; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 26; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp;
@@ -1026,12 +1070,24 @@ Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 36; String: sJab
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 236; String: d36; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
 Filename: {app}\Profiles\update.ini; Section: Jabberru; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Jabberru; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru; Check: IsUpdate;
+ ; Protocols\Jabber\LJ
+Filename: {app}\Profiles\settings.ini; Section: LJ; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 38; String: sLJ; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 238; String: d38; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ;
+Filename: {app}\Profiles\update.ini; Section: LJ; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ;
+Filename: {app}\Profiles\autoexec_update.ini; Section: LJ; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ; Check: IsUpdate;
  ; Protocols\ICQ\MRA
 Filename: {app}\Profiles\settings.ini; Section: MRA; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 40; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 240; String: d40; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
 Filename: {app}\Profiles\update.ini; Section: MRA; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
 Filename: {app}\Profiles\autoexec_update.ini; Section: MRA; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA; Check: IsUpdate;
+ ; Protocols\ICQ\MRA2
+Filename: {app}\Profiles\settings.ini; Section: MRA2; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 43; String: sMRA2; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 243; String: d43; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2;
+Filename: {app}\Profiles\update.ini; Section: MRA2; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2;
+Filename: {app}\Profiles\autoexec_update.ini; Section: MRA2; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2; Check: IsUpdate;
  ; MetaContacts
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 44; String: sMetaContacts; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 244; String: d44; Flags: uninsdeleteentry;
@@ -1073,6 +1129,12 @@ Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 62; String: sSte
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 262; String: d62; Flags: uninsdeleteentry; Components: Protocols\Steam;
 Filename: {app}\Profiles\update.ini; Section: Steam; Key: AM_BaseProto; String: sSTEAM; Flags: uninsdeleteentry; Components: Protocols\Steam;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Steam; Key: AM_BaseProto; String: sSTEAM; Flags: uninsdeleteentry; Components: Protocols\Steam; Check: IsUpdate;
+ ; Protocols\Tox
+Filename: {app}\Profiles\settings.ini; Section: Tox; Key: AM_BaseProto; String: sTOX; Flags: uninsdeleteentry; Components: Protocols\Tox;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 63; String: sTox; Flags: uninsdeleteentry; Components: Protocols\Tox;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 263; String: d63; Flags: uninsdeleteentry; Components: Protocols\Tox;
+Filename: {app}\Profiles\update.ini; Section: Tox; Key: AM_BaseProto; String: sTOX; Flags: uninsdeleteentry; Components: Protocols\Tox;
+Filename: {app}\Profiles\autoexec_update.ini; Section: Tox; Key: AM_BaseProto; String: sTOX; Flags: uninsdeleteentry; Components: Protocols\Tox; Check: IsUpdate;
  ; Protocols\Twitter
 Filename: {app}\Profiles\settings.ini; Section: Twitter; Key: AM_BaseProto; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 64; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter;
@@ -2576,12 +2638,14 @@ begin
 //        Result := Format('%d', [4 * (n + (5 - (n mod 5)) mod 5) + 1]);
       'Height12':
         case n of
-          1..11: Result := '25';
-          12..22: Result := '39';
-          23..33: Result := '57';
+          1..10: Result := '25';
+          11..20: Result := '39';
+          21..30: Result := '57';
+          31..40: Result := '75';
+          41..50: Result := '93';
         end;
       'TBVisile12':
-        Result := Format('%d', [integer(n > 22)]);
+        Result := Format('%d', [integer(n > 20)]);
     end;
     // если параметр функции GetCLUIFrames равен EqualSections, ...
     // то в зависимости от числа протоколов n ...
@@ -2591,29 +2655,33 @@ begin
       'EqualSections':
         case n of
           1..8: Result := '1';
-          9..11: Result := '0';
-          12..16: Result := '1';
-          17..22: Result := '0';
-          23, 24: Result := '1';
-          25..33: Result := '0';
+          9, 10: Result := '0';
+          11..16: Result := '1';
+          17..20: Result := '0';
+          21..24: Result := '1';
+          25..30: Result := '0';
+          31, 32: Result := '1';
+          33..50: Result := '0';
         end;
     end;
     case Param of
       'StatusBarProtosPerLine':
         case n of
-          1..11: Result := '11';
-          12: Result := '6';
-          13, 14: Result := '7';
-          15, 16: Result := '8';
+          1..10: Result := '10';
+          11..12: Result := '6';
           13, 14: Result := '7';
           15, 16: Result := '8';
           17, 18: Result := '9';
           19, 20: Result := '10';
-          21..22: Result := '11';
-          23, 24: Result := '8';
+          21: Result := '7';
+          22..24: Result := '8';
           25..27: Result := '9';
           28..30: Result := '10';
-          31..33: Result := '11';
+          31, 32: Result := '8';
+          33..36: Result := '9';
+          37..40: Result := '10';
+          41..45: Result := '9';
+          46..50: Result := '10';
         end;
     end;
     Free;
@@ -9245,11 +9313,11 @@ begin
             ItemEnabled[i] := IsComponentSelected('Resources\Themes\Textolite_Gray_Light') and bUpdate;
 
           { enabled/disabled IEView settings }
-          'IEViewScrollBar',
           'IEViewAnimation',
           'IEViewAvatar',
           'IEViewShortLink',
-          'IEViewContextMenu':
+          'IEViewContextMenu',
+          'IEViewScrollBar':
             ItemEnabled[i] := IsComponentSelected('Resources\IEView');
 
 //          { enabled/disabled Font settings }
@@ -9960,8 +10028,8 @@ begin
   DeleteFile(ExpandConstant(strFile));
 end;
 
-//компиляция прервётся, создастся файл MirandaHotCoffee_generatecheck.iss после отработки препроцессором, в таком виде скрипт уже поступает на обработку компилятору, можно посмотреть, что там оно нагенерило.
+//компиляция прервётся, создастся файл GenerateCheck.iss после отработки препроцессором, в таком виде скрипт уже поступает на обработку компилятору, можно посмотреть, что там оно нагенерило.
 #if generatecheck == 1
-#expr SaveToFile(SourcePath + "MirandaHotCoffee_generatecheck.iss")
+#expr SaveToFile(SourcePath + "GenerateCheck.iss")
 #pragma error "Stop compile"
 #endif
