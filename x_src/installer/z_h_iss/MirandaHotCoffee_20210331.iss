@@ -703,10 +703,10 @@ Name: Resources\Themes\PhotoOne_Light; Description: {code:ComponentsHelper|Photo
 Name: Resources\Themes\Surface_Black; Description: {code:ComponentsHelper|Surface_Black}; Types: custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Surface_White; Description: {code:ComponentsHelper|Surface_White}; Types: custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\Textolite
-Name: Resources\Themes\Textolite_Brown_Dark; Description: {code:ComponentsHelper|Textolite_Brown_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Textolite_Brown_Light; Description: {code:ComponentsHelper|Textolite_Brown_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Textolite_Gray_Dark; Description: {code:ComponentsHelper|Textolite_Gray_Dark}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Textolite_Gray_Light; Description: {code:ComponentsHelper|Textolite_Gray_Light}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Textolite_Brown_Dark; Description: {code:ComponentsHelper|Textolite_Brown_Dark}; Types: minimal optimal advanced custom; Flags: fixed disablenouninstallwarning;
+Name: Resources\Themes\Textolite_Brown_Light; Description: {code:ComponentsHelper|Textolite_Brown_Light}; Types: minimal optimal advanced custom; Flags: fixed disablenouninstallwarning;
+Name: Resources\Themes\Textolite_Gray_Dark; Description: {code:ComponentsHelper|Textolite_Gray_Dark}; Types: minimal optimal advanced custom; Flags: fixed disablenouninstallwarning;
+Name: Resources\Themes\Textolite_Gray_Light; Description: {code:ComponentsHelper|Textolite_Gray_Light}; Types: minimal optimal advanced custom; Flags: fixed disablenouninstallwarning;
 #endif
 
 #if fulltype == 1
@@ -827,10 +827,10 @@ Name: Resources\Themes\PhotoOne_Light; Description: {code:ComponentsHelper|Photo
 Name: Resources\Themes\Surface_Black; Description: {code:ComponentsHelper|Surface_Black}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Surface_White; Description: {code:ComponentsHelper|Surface_White}; Types: full custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\Textolite
-Name: Resources\Themes\Textolite_Brown_Dark; Description: {code:ComponentsHelper|Textolite_Brown_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Textolite_Brown_Light; Description: {code:ComponentsHelper|Textolite_Brown_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Textolite_Gray_Dark; Description: {code:ComponentsHelper|Textolite_Gray_Dark}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Textolite_Gray_Light; Description: {code:ComponentsHelper|Textolite_Gray_Light}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Textolite_Brown_Dark; Description: {code:ComponentsHelper|Textolite_Brown_Dark}; Types: minimal optimal advanced full custom; Flags: fixed disablenouninstallwarning;
+Name: Resources\Themes\Textolite_Brown_Light; Description: {code:ComponentsHelper|Textolite_Brown_Light}; Types: minimal optimal advanced full custom; Flags: fixed disablenouninstallwarning;
+Name: Resources\Themes\Textolite_Gray_Dark; Description: {code:ComponentsHelper|Textolite_Gray_Dark}; Types: minimal optimal advanced full custom; Flags: fixed disablenouninstallwarning;
+Name: Resources\Themes\Textolite_Gray_Light; Description: {code:ComponentsHelper|Textolite_Gray_Light}; Types: minimal optimal advanced full custom; Flags: fixed disablenouninstallwarning;
 #endif
 
 [Tasks]
