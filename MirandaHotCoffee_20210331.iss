@@ -613,7 +613,7 @@ Name: Protocols\Omegle; Description: {code:ComponentsHelper|Omegle_Protocol}; Ty
 Name: Protocols\Sametime; Description: {code:ComponentsHelper|Sametime_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Skype; Description: {code:ComponentsHelper|Skype_Protocol}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Protocols\Steam; Description: {code:ComponentsHelper|Steam_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Tox; Description: {code:ComponentsHelper|Tox_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Tox; Description: {code:ComponentsHelper|TOX_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Twitter; Description: {code:ComponentsHelper|Twitter_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\VKontakte; Description: {code:ComponentsHelper|VKontakte_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Pseudo; Description: {code:ComponentsHelper|Pseudo_Protocols}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
@@ -737,7 +737,7 @@ Name: Protocols\Omegle; Description: {code:ComponentsHelper|Omegle_Protocol}; Ty
 Name: Protocols\Sametime; Description: {code:ComponentsHelper|Sametime_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Skype; Description: {code:ComponentsHelper|Skype_Protocol}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Steam; Description: {code:ComponentsHelper|Steam_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Tox; Description: {code:ComponentsHelper|Tox_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Tox; Description: {code:ComponentsHelper|TOX_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Twitter; Description: {code:ComponentsHelper|Twitter_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\VKontakte; Description: {code:ComponentsHelper|VKontakte_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Pseudo; Description: {code:ComponentsHelper|Pseudo_Protocols}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
@@ -1132,11 +1132,11 @@ Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 262; String: d62
 Filename: {app}\Profiles\update.ini; Section: Steam; Key: AM_BaseProto; String: sSTEAM; Flags: uninsdeleteentry; Components: Protocols\Steam;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Steam; Key: AM_BaseProto; String: sSTEAM; Flags: uninsdeleteentry; Components: Protocols\Steam; Check: IsUpdate;
  ; Protocols\Tox
-Filename: {app}\Profiles\settings.ini; Section: Tox; Key: AM_BaseProto; String: sTOX; Flags: uninsdeleteentry; Components: Protocols\Tox;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 63; String: sTox; Flags: uninsdeleteentry; Components: Protocols\Tox;
+Filename: {app}\Profiles\settings.ini; Section: TOX; Key: AM_BaseProto; String: sTOX; Flags: uninsdeleteentry; Components: Protocols\Tox;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 63; String: sTOX; Flags: uninsdeleteentry; Components: Protocols\Tox;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 263; String: d63; Flags: uninsdeleteentry; Components: Protocols\Tox;
-Filename: {app}\Profiles\update.ini; Section: Tox; Key: AM_BaseProto; String: sTOX; Flags: uninsdeleteentry; Components: Protocols\Tox;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tox; Key: AM_BaseProto; String: sTOX; Flags: uninsdeleteentry; Components: Protocols\Tox; Check: IsUpdate;
+Filename: {app}\Profiles\update.ini; Section: TOX; Key: AM_BaseProto; String: sTOX; Flags: uninsdeleteentry; Components: Protocols\Tox;
+Filename: {app}\Profiles\autoexec_update.ini; Section: TOX; Key: AM_BaseProto; String: sTOX; Flags: uninsdeleteentry; Components: Protocols\Tox; Check: IsUpdate;
  ; Protocols\Twitter
 Filename: {app}\Profiles\settings.ini; Section: Twitter; Key: AM_BaseProto; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 64; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter;
