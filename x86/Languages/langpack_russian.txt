@@ -11,7 +11,7 @@ Authors: Mataes, Mikel-Ard-Ri, mitrich, Navy, NightFox, Oleg Makovski, PoWeR, Ra
 Authors: Sergey Morozov, SergoZD, Sledge, theMIROn, thundred, Valery Bragin,
 Authors: Viktor Shanin, Vjacheslav Ogrenich, Vladimir Rozhkovskiy aka Voron, watcher,
 Authors: Yevgeny, YurasiK, Yury A. Marcinchick
-Last-Modified-Using: Miranda NG 0.95.13
+Last-Modified-Using: Miranda NG 0.96.1
 
 
 ;============================================================
@@ -1224,10 +1224,10 @@ UIN, E-mail и т.д.
 Стандартный
 [Total]
 Полный
-[Only critical data are encrypted (passwords, security tokens, etc). All other settings and history remains unencrypted]
-Шифрование только критических данных (пароли, токены авторизации и т.п.). Остальные настройки и история остаются незашифрованными
-[All string settings and all events in histories are encrypted. It also makes Miranda much slower and creates a risk of losing everything you've stored in a database in case of losing password]
-Шифрование всех строковых настроек и событий истории. Замедляет работу программы, а в случае утери пароля создаёт риск потери всего сохранённого в базе
+[Only critical data are encrypted (passwords, security tokens, etc). All other settings and history remains unencrypted.]
+Шифрование только критических данных (пароли, токены авторизации и т.п.). Остальные настройки и история остаются незашифрованными.
+[All string settings and all events in histories are encrypted. It also makes Miranda much slower and creates a risk of losing everything you've stored in a database in case of losing password.]
+Шифрование всех строковых настроек и событий истории. Замедляет работу программы, а в случае утери пароля создаёт риск потери всего сохранённого в базе.
 [Set password]
 Установить пароль
 [&Hide/Show]
@@ -2122,6 +2122,10 @@ Miranda не смогла загрузить встроенную систему
 Подключение
 [Connecting (attempt %d)]
 Подключение (попытка %d)
+[&Accounts...]
+&Учётные записи...
+[&Options...]
+&Настройки...
 ;file \src\mir_app\src\clistopts.cpp
 [Common]
 Общие
@@ -2213,11 +2217,11 @@ Miranda не может распознать этот профиль
 [Invalid setting type for '%s'. The first character of every value must be b, w, d, l, s, e, u, g, h or n.]
 Неверный тип настройки для '%s'. Первая буква любого значения должна быть b, w, d, l, s, e, u, g, h или n.
 ;file \src\mir_app\src\db_upgrade.cpp
-[This database is in old format that isn't supported anymore. Press Yes to convert it to the new format or No to return back]
+[This database is in the old format that isn't supported anymore. Press Yes to convert it to the new format or No to return]
 Формат вашей базы является устаревшим. Нажмите "Да", чтобы преобразовать её в новый формат или "Нет", чтобы вернуться назад
-[To open this database you need to install the Dbx_sqlite plugin. Click Yes to download it from Miranda NG's site or No to return back]
+[To open this database you need to install the Dbx_sqlite plugin. Click Yes to download it from Miranda NG's site or No to return]
 Для открытия этой базы требуется плагин Dbx_sqlite. Нажмите "Да", чтобы загрузить его с сайта Miranda NG, либо "Нет", чтобы вернуться назад
-[To open this database you need to install the Import plugin. Click Yes to download it from Miranda NG's site or No to return back]
+[To open this database you need to install the Import plugin. Click Yes to download it from Miranda NG's site or No to return]
 Для открытия этой базы требуется плагин Import. Нажмите "Да", чтобы загрузить его с сайта Miranda NG, либо "Нет", чтобы вернуться назад
 [Cannot move old profile '%s' to '%s': error %d]
 Не удалось переместить старый профиль '%s'в '%s': ошибка %d
@@ -2436,8 +2440,6 @@ xСтатус
 Меню в трее
 [&Hide/show]
 С&крыть/Показать
-[&Options...]
-&Настройки...
 [&About]
 О &программе
 ;file \src\mir_app\src\menu_utils.cpp
@@ -2575,8 +2577,8 @@ xСтатус
 ;file \src\mir_app\src\newplugins.cpp
 [No messaging plugins loaded. Please install/enable one of the messaging plugins, for instance, "StdMsg.dll"]
 Не найден плагин окна сообщений. Пожалуйста установите/задействуйте один из подобных плагинов, например "StdMsg.dll"
-['%s' is disabled, re-enable?]
-'%s' отключён, включить?
+['%S' is disabled, re-enable?]
+'%S' отключён, включить?
 [Re-enable Miranda plugin?]
 Включить плагин?
 [Core plugin '%s' cannot be loaded or missing. Miranda will exit now]
@@ -2713,8 +2715,6 @@ ID учётной записи
 Ошибка учётной записи
 [Account name has to be unique. Please enter unique name.]
 Имя учётной записи должно быть уникальным. Введите уникальное имя.
-[&Accounts...]
-&Учётные записи...
 ;file \src\mir_app\src\proto_order.cpp
 ;file \src\mir_app\src\searchresults.cpp
 [Could not start a search on '%s', there was a problem - is %s connected?]
@@ -9189,7 +9189,7 @@ HTTP-подключения CurrencyRates
 ;============================================================
 ;  File: DbEditorPP.dll
 ;  Plugin: Database editor++
-;  Version: 4.0.2.1
+;  Version: 4.0.2.2
 ;  Authors: Bio, Jonathan Gordon
 ;============================================================
 [Advanced Database Editor.]
@@ -9511,8 +9511,10 @@ ID пользователя
 Размер
 [Unable to store value in this data type!]
 Невозможно сохранить значение, используя этот тип данных!
-[Are you sure you want to delete setting(s): %d?]
-Удалить настройку(и) %d?
+[Are you sure you want to delete %d contact(s)?]
+Удалить контакт(ы): %d?
+[Are you sure you want to delete %d setting(s)?]
+Удалить настройку(и): %d?
 [*** encrypted ***]
 *** зашифровано ***
 [*** buggy resident ***]
@@ -9589,22 +9591,20 @@ Miranda нашла повреждения в вашей базе. Miranda буд
 ;============================================================
 ;  File: Dbx_sqlite.dll
 ;  Plugin: Miranda NG SQLite database driver
-;  Version: 0.96.1.1
+;  Version: 0.96.1.2
 ;  Authors: Miranda-NG project
 ;============================================================
 [Provides Miranda database support: global settings, contacts, history, settings per contact.]
 Поддержка базы Miranda NG: глобальные настройки, контакты, история, настройки контактов и т.п.
-;file \plugins\Dbx_sqlite\res\dbx_sqlite.rc
-[Database encryption mode]
-Режим шифрования базы
-[Standard]
-Стандартный
-[Total]
-Полный
-[Only critical data are encrypted (passwords, security tokens, etc). All other settings and history remains unencrypted. Fast and effective, suitable for the most cases]
-Шифрование только критических данных (пароли, токены авторизации и т.п.). Остальные настройки и история, остаются незашифрованными. Быстрый и эффективный, подходит в большинстве случаев
-[All string settings and all events in histories are encrypted. It also makes Miranda much slower and creates a risk of losing everything you've stored in a database in case of losing password. Recommended only for paranoid users]
-Все настройки и все события истории зашифрованы. Замедляет работу программы, а также создаёт риск потери всего сохранённого в базе в случае утери пароля. Рекомендуется только параноидальным пользователям
+;file \plugins\Dbx_sqlite\src\dbcheck.cpp
+[Orphaned event with wrong contact ID %d, deleting]
+Потерянное событие с некорректным идентификатором контакта %d, удаляем
+[Orphaned sorting event with wrong event ID %d:%08X, deleting]
+Потерянное событие сортировки с некорректным идентификатором события %d:%08X, удаляем
+[Orphaned event with wrong event ID %d:%08X, deleting]
+Потерянное событие с некорректным идентификатором события %d:%08X, удаляем
+[Orphaned setting [%S:%S] with wrong contact ID %d, deleting]
+Потерянная настройка [%S:%S] с некорректным идентификатором контакта %d, удаляем
 
 #muuid {81c220a6-0226-4ad6-bfca-217b17a16053}
 ;============================================================
@@ -9727,7 +9727,7 @@ Miranda нашла повреждения в вашей базе. Miranda буд
 ;============================================================
 ;  File: Discord.dll
 ;  Plugin: Discord protocol
-;  Version: 0.6.2.8
+;  Version: 0.6.2.10
 ;  Authors: George Hazan
 ;============================================================
 [Discord support for Miranda NG.]
@@ -9749,6 +9749,8 @@ Miranda нашла повреждения в вашей базе. Miranda буд
 Не открывать окна комнат чата при создании
 [Use subgroups for server channels (requires restart)]
 Создавать подгруппы для каждого сервера (требуется перезапуск)
+[Delete messages in Miranda when they are deleted from server]
+Удалять сообщения из истории Миранды, если они удалены с сервера
 [Nick:]
 Ник:
 ;file \protocols\Discord\src\dispatch.cpp
@@ -14006,6 +14008,8 @@ UIN/почта/телефон
 Пропуск не-IM контакта (%S)
 [Skipping duplicate %S contact %s]
 Пропуск дубликата %S контакт %s
+[Failed to create contact %s (%s)]
+Не удалось создать контакт %s (%s)
 [Failed to add %S contact %s]
 Не удалось добавить %S контакт %s
 [Added %S contact %s, '%s']
@@ -19213,7 +19217,7 @@ ID пользователя
 ;============================================================
 ;  File: NewAwaySys.dll
 ;  Plugin: New Away System Mod
-;  Version: 0.4.0.4
+;  Version: 0.4.0.5
 ;  Authors: NightFox, Deathdemon, XF007, Goblineye Entertainment
 ;============================================================
 [Allows you to handle your status messages in a convenient way.]
@@ -19313,8 +19317,6 @@ ID пользователя
 Запоминать последнее сообщение для контакта...
 [Store contact autoreply/ignore settings for each status separately]
 Хранить настройки автоответчика/игнорирования контакта для каждого статуса отдельно
-[Enable contact menu items]
-Включить меню контакта
 [Use protocol specific nick for %nas_mynick%]
 Использовать особый псевдоним протокола для %nas_mynick%
 [Update status messages for non-ICQ protocols every]
@@ -21218,7 +21220,7 @@ GPG не удалось расшифровать входящее сообщен
 ;============================================================
 ;  File: NotesReminders.dll
 ;  Plugin: Sticky Notes & Reminders
-;  Version: 0.2.2.0
+;  Version: 0.2.2.1
 ;  Authors: Joe Kucera, Lubomir Kolev Ivanov, Georg Fischer
 ;============================================================
 [Sticky Notes & Reminders Implementation for Miranda NG.]
@@ -21473,14 +21475,14 @@ GPG не удалось расшифровать входящее сообщен
 [Plugins]
 Плагины
 ;file \plugins\NotesAndReminders\src\reminders.cpp
+[The specified time is invalid.]
+Указанное время неверно.
 [Minutes]
 Минут
 [Hours]
 Часов
 [The specified time is invalid due to begin of daylight saving (summer time).]
 Указанное время недействительно из-за перехода на «летнее время»
-[The specified time is invalid.]
-Указанное время неверно.
 [Hour]
 Час
 [Day]
@@ -22332,7 +22334,7 @@ TCP соединение
 ;============================================================
 ;  File: PluginUpdater.dll
 ;  Plugin: Plugin updater
-;  Version: 0.2.0.11
+;  Version: 0.2.0.12
 ;  Authors: Mataes, George Hazan
 ;============================================================
 [Installs and updates plugins and other Miranda NG components.]
@@ -22518,17 +22520,19 @@ TCP соединение
 ;file \plugins\PluginUpdater\src\PluginUpdater.cpp
 [Check for updates]
 Проверить обновления
-[Available components list]
-Компоненты для установки
-[Update completed]
-Обновление завершено
-[Update failed]
-Сбой обновления
-;file \plugins\PluginUpdater\src\Utils.cpp
 [Plugin info]
 Информация о плагинах
 [Plugin Updater HTTP connections]
 HTTP-подключения Plugin Updater
+[Available components list]
+Компоненты для установки
+[Update failed]
+Сбой обновления
+[Update completed]
+Обновление завершено
+;file \plugins\PluginUpdater\src\Utils.cpp
+[Updates are temporarily disabled, try again later.]
+Обновления временно отключены, попробуйте позже.
 [An error occurred while checking for new updates.]
 Во время проверки обновления произошла ошибка.
 ;file \plugins\PluginUpdater\src\Compat\compat.h
@@ -25963,7 +25967,7 @@ Miranda NG - Контекстное меню оболочки ОС (shellext.dll
 ;============================================================
 ;  File: SimpleStatusMsg.dll
 ;  Plugin: Simple status message
-;  Version: 1.9.0.8
+;  Version: 1.9.0.9
 ;  Authors: Bartosz 'Dezeath' Białek, Harven
 ;============================================================
 [Provides a simple way to set status and away messages.]
@@ -26051,8 +26055,6 @@ Miranda NG - Контекстное меню оболочки ОС (shellext.dll
 Помнить последнее положение окна
 [Remove Carriage Return (CR = '\\r' = #0D) chars from status messages]
 Удалять символы возврата каретки (CR = '\\r' = #0D) из сообщений статуса
-[Show 'Status message...' item in status menu]
-Показывать 'Сообщение статуса...' в контекстном меню
 [Clear History]
 Очистить
 [Clear Predefined]
@@ -27314,8 +27316,8 @@ Cтатус-профиль
 Создать кнопку Панели кнопок
 [Show confirm dialog when loading]
 Подтверждать при загрузке
-[Create a main menu item]
-Пункт в главном меню
+[Create a status menu item]
+Создать пункт в меню статусов
 [Status profiles]
 Профили статусов
 [Hotkey]
@@ -27432,8 +27434,6 @@ Cтатус-профиль
 размер: %d x %d
 [loc: %d x %d]
 позиция: %d x %d
-[Create a status menu item]
-Создать пункт в меню
 [unknown]
 неизвестно
 [At least one profile must exist]
@@ -36464,7 +36464,7 @@ ID города
 ;============================================================
 ;  File: Webview.dll
 ;  Plugin: Webview
-;  Version: 0.1.3.2
+;  Version: 0.1.3.3
 ;  Authors: Vincent Joyce
 ;============================================================
 [Adds web pages as contacts to your contact list and can display text and/or issue change alerts from those pages in a window.]
@@ -36482,8 +36482,6 @@ ID города
 секунд
 [Hide icon on status bar]
 Скрыть значок в панели статусов
-[Disable main menu items]
-Откл. пункты главного меню
 [Load page on window open]
 Загр. страницу при открытии окна
 [Update data on startup]
@@ -36672,10 +36670,6 @@ URL:
 ;file \protocols\WebView\src\webview.cpp
 [All Webview sites have been updated.]
 
-[Network]
-Сеть
-[Popups]
-Всплывающие окна
 ;file \protocols\WebView\src\webview_alerts.cpp
 [Cannot write to file]
 Невозможно записать в файл
@@ -36768,6 +36762,24 @@ URL:
 [Alert test conditions not met; press the refresh button to view content.]
 
 ;file \protocols\WebView\src\webview_opts.cpp
+[This is a preview popup.]
+Это всплывающее окно предпросмотра.
+[Network]
+Сеть
+[Popups]
+Всплывающие окна
+;file \protocols\WebView\src\webview_services.cpp
+[Invalid symbol present in contact name.]
+Недопустимый символ в имени контакта.
+[Cache folder does not exist.]
+Папка кэша не существует.
+[Missing "psite.bat" file.]
+Отсутствует файл "psite.bat".
+[Site URL]
+Адрес веб-страницы
+[Please select site in Find/Add contacts...]
+Пожалуйста, выберите страницу в Добавить контакты...
+;file \protocols\WebView\src\webview_ui.cpp
 [No whitespace removal]
 Не удалять пробелы
 [Minimal level of whitespace removal]
@@ -36788,8 +36800,6 @@ URL:
 
 [A specific part of web page changes]
 
-[This is a preview popup.]
-Это всплывающее окно предпросмотра.
 [You need to supply a search string.]
 необходимо указать строку для поиска.
 [You need to supply a start string.]
@@ -36802,17 +36812,6 @@ URL:
 необходимо указать URL.
 [You need to supply a name for the contact.]
 необходимо указать имя контакта.
-[Invalid symbol present in contact name.]
-Недопустимый символ в имени контакта.
-;file \protocols\WebView\src\webview_services.cpp
-[Cache folder does not exist.]
-Папка кэша не существует.
-[Missing "psite.bat" file.]
-Отсутствует файл "psite.bat".
-[Site URL]
-Адрес веб-страницы
-[Please select site in Find/Add contacts...]
-Пожалуйста, выберите страницу в Добавить контакты...
 
 #muuid {2ff96c84-b0b5-470e-bbf9-907b9f3f5d2f}
 ;============================================================
