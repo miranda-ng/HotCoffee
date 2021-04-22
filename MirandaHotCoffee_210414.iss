@@ -209,6 +209,7 @@ Name: {app}\Inbox;
 
 [InstallDelete]
 Type: filesandordirs; Name: {app}\Core; Check: IsPortableSetupType and IsUpdate;
+Type: filesandordirs; Name: {app}\Gadgets; Check: IsPortableSetupType and IsUpdate;
 Type: filesandordirs; Name: {app}\Icons; Check: IsPortableSetupType and IsUpdate;
 Type: filesandordirs; Name: {app}\Languages; Check: IsPortableSetupType and IsUpdate;
 Type: filesandordirs; Name: {app}\Libs; Check: IsPortableSetupType and IsUpdate;
@@ -218,6 +219,7 @@ Type: filesandordirs; Name: {app}\Profiles\PluginUpdater; Check: IsPortableSetup
 Type: files; Name: {app}\Profiles\*.ini; Check: IsPortableSetupType and IsUpdate;
 Type: filesandordirs; Name: {app}\Scripts; Check: IsPortableSetupType and IsUpdate;
 Type: filesandordirs; Name: {app}\Skins; Check: IsPortableSetupType and IsUpdate;
+Type: filesandordirs; Name: {app}\Sounds; Check: IsPortableSetupType and IsUpdate;
 Type: filesandordirs; Name: {app}\UserSet; Check: IsPortableSetupType and IsUpdate;
 Type: files; Name: {app}\{#AppExeName}; Check: IsPortableSetupType and IsUpdate;
 Type: files; Name: {app}\{#AppExeOppName}; Check: IsPortableSetupType and IsUpdate;
