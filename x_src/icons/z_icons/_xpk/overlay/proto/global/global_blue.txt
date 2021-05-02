@@ -1,3 +1,0 @@
-Articons
-global_green
-оттенок: -120

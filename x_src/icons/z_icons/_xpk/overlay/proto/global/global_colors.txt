@@ -1,0 +1,58 @@
+global_blue
+Articons
+global_green
+оттенок: -120
+
+global_cyan
+IcoFX
+global_green
+циан: -100
+
+global_gray
+Axialis IconWorkshop
+global_green
+оттенки серого
+оттенок/насыщенность
+Яркость: 15
+
+global_gray_blue
+Axialis IconWorkshop
+global_green
+оттенки серого
+оттенок/насыщенность
+чекбокс Палитра
+Оттенок: 30
+Насыщенность: -70
+Яркость: 15
+
+global_light_blue
+IcoFX
+global_green
+желтый: 70
+
+global_purple
+IcoFX
+global_green
+циан: 40
+магента: -35
+желтый: 50
+
+global_red
+IcoFX
+global_green
+циан: 40
+магента: -45
+желтый: -45
+
+global_red2
+IcoFX
+global_green
+циан: 40
+магента: -30
+желтый: -30
+
+global_yelow
+IcoFX
+global_green
+циан: 50
+желтый: -100

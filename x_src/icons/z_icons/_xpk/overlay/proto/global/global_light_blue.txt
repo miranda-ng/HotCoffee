@@ -1,3 +1,0 @@
-IcoFX
-global_green
-желтый: 70

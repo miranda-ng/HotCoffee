@@ -1,4 +1,0 @@
-IcoFX
-global_green
-циан: 50
-желтый: -100
