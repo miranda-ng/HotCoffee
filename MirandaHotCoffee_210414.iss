@@ -465,8 +465,6 @@ Source: x86\Icons\HistoryPP_icons.dll; DestDir: {app}\Icons; Flags: ignoreversio
 Source: {#AppArch}\Plugins\HistorySweeperLight.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\HistorySweeperLight; AfterInstall: AddDetails;
  ; Plugins\IgnoreState
 Source: {#AppArch}\Plugins\IgnoreState.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\IgnoreState; AfterInstall: AddDetails;
- ; Plugins\KeyboardNotify
-Source: {#AppArch}\Plugins\KeyboardNotify.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\KeyboardNotify; AfterInstall: AddDetails;
  ; Plugins\ListeningTo
 Source: {#AppArch}\Plugins\ListeningTo.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\ListeningTo; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\ListeningTo\*; DestDir: {app}\Plugins\ListeningTo; Flags: ignoreversion; Components: Plugins\ListeningTo; AfterInstall: AddDetails;
@@ -653,7 +651,6 @@ Name: Plugins\FltContacts; Description: {code:ComponentsHelper|FltContacts}; Typ
 Name: Plugins\HistoryPP; Description: {code:ComponentsHelper|HistoryPP}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\HistorySweeperLight; Description: {code:ComponentsHelper|HistorySweeperLight}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\IgnoreState; Description: {code:ComponentsHelper|IgnoreState}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Plugins\KeyboardNotify; Description: {code:ComponentsHelper|KeyboardNotify}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\ListeningTo; Description: {code:ComponentsHelper|ListeningTo}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Plugins\NewXstatusNotify; Description: {code:ComponentsHelper|NewXstatusNotify}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\QuickMessages; Description: {code:ComponentsHelper|QuickMessages}; Types: optimal advanced custom; Flags: dontinheritcheck disablenouninstallwarning;
@@ -779,7 +776,6 @@ Name: Plugins\FltContacts; Description: {code:ComponentsHelper|FltContacts}; Typ
 Name: Plugins\HistoryPP; Description: {code:ComponentsHelper|HistoryPP}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\HistorySweeperLight; Description: {code:ComponentsHelper|HistorySweeperLight}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\IgnoreState; Description: {code:ComponentsHelper|IgnoreState}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Plugins\KeyboardNotify; Description: {code:ComponentsHelper|KeyboardNotify}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\ListeningTo; Description: {code:ComponentsHelper|ListeningTo}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Plugins\NewXstatusNotify; Description: {code:ComponentsHelper|NewXstatusNotify}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\QuickMessages; Description: {code:ComponentsHelper|QuickMessages}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
