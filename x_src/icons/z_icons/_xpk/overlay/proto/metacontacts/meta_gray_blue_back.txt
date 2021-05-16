@@ -1,0 +1,6 @@
+meta_gray_blue_back
+Axialis IconWorkshop
+meta_gray_blue
+яркость/контрастность
+контрастность: 20
+гамма-коррекция: 20
