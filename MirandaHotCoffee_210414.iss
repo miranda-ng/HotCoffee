@@ -465,6 +465,8 @@ Source: x86\Icons\HistoryPP_icons.dll; DestDir: {app}\Icons; Flags: ignoreversio
 Source: {#AppArch}\Plugins\HistorySweeperLight.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\HistorySweeperLight; AfterInstall: AddDetails;
  ; Plugins\IgnoreState
 Source: {#AppArch}\Plugins\IgnoreState.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\IgnoreState; AfterInstall: AddDetails;
+ ; Plugins\KeyboardNotify
+Source: {#AppArch}\Plugins\KeyboardNotify.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\KeyboardNotify; AfterInstall: AddDetails;
  ; Plugins\ListeningTo
 Source: {#AppArch}\Plugins\ListeningTo.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\ListeningTo; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\ListeningTo\*; DestDir: {app}\Plugins\ListeningTo; Flags: ignoreversion; Components: Plugins\ListeningTo; AfterInstall: AddDetails;
@@ -628,6 +630,7 @@ Name: Protocols\Twitter; Description: {code:ComponentsHelper|Twitter_Protocol}; 
 Name: Protocols\VKontakte; Description: {code:ComponentsHelper|VKontakte_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Pseudo; Description: {code:ComponentsHelper|Pseudo_Protocols}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
 Name: Protocols\Pseudo\CurrencyRates; Description: {code:ComponentsHelper|CurrencyRates_Pseudo_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Pseudo\GmailNotifier; Description: {code:ComponentsHelper|GmailNotifier_Pseudo_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Pseudo\mRadio; Description: {code:ComponentsHelper|mRadio_Pseudo_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Pseudo\NewsAggregator; Description: {code:ComponentsHelper|NewsAggregator_Pseudo_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Pseudo\Weather; Description: {code:ComponentsHelper|Weather_Pseudo_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
@@ -651,6 +654,7 @@ Name: Plugins\FltContacts; Description: {code:ComponentsHelper|FltContacts}; Typ
 Name: Plugins\HistoryPP; Description: {code:ComponentsHelper|HistoryPP}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\HistorySweeperLight; Description: {code:ComponentsHelper|HistorySweeperLight}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\IgnoreState; Description: {code:ComponentsHelper|IgnoreState}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Plugins\KeyboardNotify; Description: {code:ComponentsHelper|KeyboardNotify}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\ListeningTo; Description: {code:ComponentsHelper|ListeningTo}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Plugins\NewXstatusNotify; Description: {code:ComponentsHelper|NewXstatusNotify}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\QuickMessages; Description: {code:ComponentsHelper|QuickMessages}; Types: optimal advanced custom; Flags: dontinheritcheck disablenouninstallwarning;
@@ -753,6 +757,7 @@ Name: Protocols\Twitter; Description: {code:ComponentsHelper|Twitter_Protocol}; 
 Name: Protocols\VKontakte; Description: {code:ComponentsHelper|VKontakte_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Pseudo; Description: {code:ComponentsHelper|Pseudo_Protocols}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
 Name: Protocols\Pseudo\CurrencyRates; Description: {code:ComponentsHelper|CurrencyRates_Pseudo_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Pseudo\GmailNotifier; Description: {code:ComponentsHelper|GmailNotifier_Pseudo_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Pseudo\mRadio; Description: {code:ComponentsHelper|mRadio_Pseudo_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Pseudo\NewsAggregator; Description: {code:ComponentsHelper|NewsAggregator_Pseudo_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Pseudo\Weather; Description: {code:ComponentsHelper|Weather_Pseudo_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
@@ -777,6 +782,7 @@ Name: Plugins\HistoryPP; Description: {code:ComponentsHelper|HistoryPP}; Types: 
 Name: Plugins\HistorySweeperLight; Description: {code:ComponentsHelper|HistorySweeperLight}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\IgnoreState; Description: {code:ComponentsHelper|IgnoreState}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\ListeningTo; Description: {code:ComponentsHelper|ListeningTo}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Plugins\KeyboardNotify; Description: {code:ComponentsHelper|KeyboardNotify}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\NewXstatusNotify; Description: {code:ComponentsHelper|NewXstatusNotify}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\QuickMessages; Description: {code:ComponentsHelper|QuickMessages}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\QuickSearch; Description: {code:ComponentsHelper|QuickSearch}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
@@ -1101,17 +1107,17 @@ Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 238; String: d38
 Filename: {app}\Profiles\update.ini; Section: LJ; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ;
 Filename: {app}\Profiles\autoexec_update.ini; Section: LJ; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ; Check: IsUpdate;
  ; Protocols\ICQ\MRA
-Filename: {app}\Profiles\settings.ini; Section: MRA; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
+Filename: {app}\Profiles\settings.ini; Section: MRA; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 40; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 240; String: d40; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
-Filename: {app}\Profiles\update.ini; Section: MRA; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
-Filename: {app}\Profiles\autoexec_update.ini; Section: MRA; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA; Check: IsUpdate;
+Filename: {app}\Profiles\update.ini; Section: MRA; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
+Filename: {app}\Profiles\autoexec_update.ini; Section: MRA; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA; Check: IsUpdate;
  ; Protocols\ICQ\MRA2
-Filename: {app}\Profiles\settings.ini; Section: MRA2; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2;
+Filename: {app}\Profiles\settings.ini; Section: MRA2; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 43; String: sMRA2; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 243; String: d43; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2;
-Filename: {app}\Profiles\update.ini; Section: MRA2; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2;
-Filename: {app}\Profiles\autoexec_update.ini; Section: MRA2; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2; Check: IsUpdate;
+Filename: {app}\Profiles\update.ini; Section: MRA2; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2;
+Filename: {app}\Profiles\autoexec_update.ini; Section: MRA2; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2; Check: IsUpdate;
  ; MetaContacts
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 44; String: sMetaContacts; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 244; String: d44; Flags: uninsdeleteentry;
