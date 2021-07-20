@@ -83,6 +83,7 @@ YAHOO_Protocol=Protocols\Yahoo | YAHOO | Yahoo protocol%n(Yahoo! Messenger).%n%n
 ; Pseudo-protocols
 Pseudo_Protocols=Protocols\Pseudo | Pseudo-protocols | Additional pseudo-protocols.
 CurrencyRates_Pseudo_Protocol=Protocols\Pseudo\CurrencyRates | CurrencyRates | Show currency rates and economic quotes.%n%nCurrencyRates.dll
+GmailNotifier_Pseudo_Protocol=Protocols\Pseudo\GmailNotifier | GmailNotifier | Checking incoming Gmail.%n%nGmailNotifier.dll
 Dropbox_Pseudo_Protocol=Protocols\Pseudo\Dropbox | Dropbox | Allows to transfer files via Dropbox.%n%nDropbox.dll
 MetaContacts_Pseudo_Protocol=Protocols\Pseudo\MetaContacts | MetaContacts | Merges many contacts from various protocols into one MetaContact.%n%nMetaContacts.dll
 mRadio_Pseudo_Protocol=Protocols\Pseudo\mRadio | mRadio | Plays and records Internet radio streams. Also local media files can be played.%n%nmRadio.dll

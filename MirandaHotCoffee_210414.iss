@@ -409,6 +409,8 @@ Source: {#AppArch}\Plugins\CurrencyRates\*.exe; DestDir: {app}\Plugins\CurrencyR
 Source: x86\Plugins\CurrencyRates\*.xml; DestDir: {app}\Plugins\CurrencyRates; Flags: ignoreversion; Components: Protocols\Pseudo\CurrencyRates; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_CurrencyRates.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Pseudo\CurrencyRates; AfterInstall: AddDetails;
 Source: x86\Skins\Avatars\CurrencyRates.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\Pseudo\CurrencyRates; AfterInstall: AddDetails;
+ ; Protocols\Pseudo\GmailNotifier
+Source: {#AppArch}\Plugins\GmailNotifier.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\GmailNotifier; AfterInstall: AddDetails;
  ; Protocols\Pseudo\mRadio
 Source: {#AppArch}\Plugins\mRadio.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\BASS\*; DestDir: {app}\Plugins\BASS; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
@@ -1048,10 +1050,14 @@ Filename: {app}\Profiles\update.ini; Section: GG; Key: AM_BaseProto; String: sGG
 Filename: {app}\Profiles\autoexec_update.ini; Section: GG; Key: AM_BaseProto; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG; Check: IsUpdate;
  ; Protocols\Jabber\GMail
 Filename: {app}\Profiles\settings.ini; Section: GMail; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\GMail;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 20; String: sGMail; Flags: uninsdeleteentry; Components: Protocols\Jabber\GMail;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 220; String: d20; Flags: uninsdeleteentry; Components: Protocols\Jabber\GMail;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 19; String: sGMail; Flags: uninsdeleteentry; Components: Protocols\Jabber\GMail;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 219; String: d19; Flags: uninsdeleteentry; Components: Protocols\Jabber\GMail;
 Filename: {app}\Profiles\update.ini; Section: GMail; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\GMail;
 Filename: {app}\Profiles\autoexec_update.ini; Section: GMail; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\GMail; Check: IsUpdate;
+ ; Protocols\Pseudo\GmailNotifier
+Filename: {app}\Profiles\settings.ini; Section: GmailMNotifier; Key: AM_BaseProto; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 20; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 220; String: d20; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
  ; Protocols\Jabber\GTalk
 Filename: {app}\Profiles\settings.ini; Section: GTalk; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\GTalk;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 21; String: sGTalk; Flags: uninsdeleteentry; Components: Protocols\Jabber\GTalk;
