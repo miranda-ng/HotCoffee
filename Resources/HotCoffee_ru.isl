@@ -112,6 +112,7 @@ KeepStatus=Plugins\KeepStatus | Автоподключение | Плагин проверяет состояние под
 KeyboardNotify=Plugins\KeyboardNotify | Оповещение клавиатуры | Плагин добавляет мигание светодиодов клавиатуры при входящих сообщениях.%n%nKeyboardNotify.dll
 ListeningTo=Plugins\ListeningTo | Сейчас слушаю | Плагин выводит в xСтатус информацию о проигрываемой музыке.%n%nListeningTo.dll
 ModernOpt=Plugins\ModernOpt | Упрощенные настройки | Плагин добавляет упрощенный вид настроек.%n%nModernOpt.dll
+MyDetails=Plugins\MyDetails | Мои данные | Показывает во фрейме ваши данные (ник, аватар, статус) для всех учётных записей и позволяет их редактировать.%n%nMyDetails.dll
 NewXstatusNotify=Plugins\NewXstatusNotify | Смена статусов | Плагин оповещает вас об изменениях статуса и xСтатуса, а также об изменениях сообщений статуса и xСтатуса ваших контактов.%n%nNewXstatusNotify.dll
 QuickMessages=Plugins\QuickMessages | Быстрые сообщения | Плагин позволяет вставлять предварительно заготовленные фразы в окно сообщений.%n%nQuickMessages.dll
 QuickSearch=Plugins\QuickSearch | Быстрый поиск | Плагин позволит вам быстро найти ник, имя, фамилию, e-mail, uin в вашем списке контактов. Теперь вы можете добавить любую настройку для отображения. Например версии Miranda, группы или города.%n%nQuickSearch.dll

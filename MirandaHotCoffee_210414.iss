@@ -25,9 +25,9 @@
 #define AppVerMajor "0"
 #define AppVerMinor "96"
 #define AppVerBuild "1"
-#define AppVerRevis "23894"
+#define AppVerRevis "24167"
 #define AppVerStatusBuild " alpha build #"
-#define AppStatus "Test"                                                    ; must be Test, Alpha, Beta or Final
+#define AppStatus "Alpha"                                                   ; must be Test, Alpha, Beta or Final
 #define AppRelease "R56"
 
 #define AppShortVer AppVerMajor + "." + AppVerMinor + "." + AppVerBuild
@@ -36,7 +36,7 @@
 #define AppMirVer AppArch == "x86" ? AppShortVer + AppVerStatusBuild + AppVerRevis : AppShortVer + AppVerStatusBuild + AppVerRevis + " x64"
 #define AppDevOrStab AppStatus == "Final" ? "StableVersion" : "DevelopmentVersion"
 
-#define AppUpdateVersion "0.96.1.23894"                                     ; product version update range
+#define AppUpdateVersion "0.96.1.24167"                                     ; product version update range
 
 #define AppWidth "65"                                                       ; Increasing width of the client
 #define AppHeight "25"                                                      ; Increasing height of the client
@@ -263,7 +263,6 @@ Source: {#AppArch}\Plugins\Clist_modern.dll; DestDir: {app}\Plugins; Flags: igno
 Source: {#AppArch}\Plugins\CloudFile.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 #if AppStatus == "Test"
 Source: {#AppArch}\Plugins\Console.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\MyDetails.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 #endif
 Source: {#AppArch}\Plugins\CrashDumper.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Db_autobackups.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
@@ -472,6 +471,8 @@ Source: {#AppArch}\Plugins\KeyboardNotify.dll; DestDir: {app}\Plugins; Flags: ig
  ; Plugins\ListeningTo
 Source: {#AppArch}\Plugins\ListeningTo.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\ListeningTo; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\ListeningTo\*; DestDir: {app}\Plugins\ListeningTo; Flags: ignoreversion; Components: Plugins\ListeningTo; AfterInstall: AddDetails;
+ ; Plugins\MyDetails
+Source: {#AppArch}\Plugins\MyDetails.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\MyDetails; AfterInstall: AddDetails;
  ; Plugins\NewXstatusNotify
 Source: {#AppArch}\Plugins\NewXstatusNotify.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\NewXstatusNotify; AfterInstall: AddDetails;
  ; Plugins\QuickMessages
@@ -658,6 +659,7 @@ Name: Plugins\HistorySweeperLight; Description: {code:ComponentsHelper|HistorySw
 Name: Plugins\IgnoreState; Description: {code:ComponentsHelper|IgnoreState}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\KeyboardNotify; Description: {code:ComponentsHelper|KeyboardNotify}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\ListeningTo; Description: {code:ComponentsHelper|ListeningTo}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Plugins\MyDetails; Description: {code:ComponentsHelper|MyDetails}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Plugins\NewXstatusNotify; Description: {code:ComponentsHelper|NewXstatusNotify}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\QuickMessages; Description: {code:ComponentsHelper|QuickMessages}; Types: optimal advanced custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Plugins\QuickSearch; Description: {code:ComponentsHelper|QuickSearch}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
@@ -783,8 +785,9 @@ Name: Plugins\FltContacts; Description: {code:ComponentsHelper|FltContacts}; Typ
 Name: Plugins\HistoryPP; Description: {code:ComponentsHelper|HistoryPP}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\HistorySweeperLight; Description: {code:ComponentsHelper|HistorySweeperLight}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\IgnoreState; Description: {code:ComponentsHelper|IgnoreState}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Plugins\ListeningTo; Description: {code:ComponentsHelper|ListeningTo}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Plugins\KeyboardNotify; Description: {code:ComponentsHelper|KeyboardNotify}; Types: advanced full custom; Flags: disablenouninstallwarning;
+Name: Plugins\ListeningTo; Description: {code:ComponentsHelper|ListeningTo}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Plugins\MyDetails; Description: {code:ComponentsHelper|MyDetails}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Plugins\NewXstatusNotify; Description: {code:ComponentsHelper|NewXstatusNotify}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\QuickMessages; Description: {code:ComponentsHelper|QuickMessages}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\QuickSearch; Description: {code:ComponentsHelper|QuickSearch}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;

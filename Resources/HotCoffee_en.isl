@@ -112,6 +112,7 @@ KeepStatus=Plugins\KeepStatus | Keep status | Plugin checks the status of the co
 KeyboardNotify=Plugins\KeyboardNotify | Keyboard notify | Plugin flashes your keyboard LEDs when message arrives.%n%nKeyboardNotify.dll
 ListeningTo=Plugins\ListeningTo | ListeningTo | Plugin displays information about the currently playing music in xStatus.%n%nListeningTo.dll
 ModernOpt=Plugins\ModernOpt | Modern options | Plugin adds the simplified options look.%n%nModernOpt.dll
+MyDetails=Plugins\MyDetails | My details | Shows and allows you to edit your details (nick, avatar, status) for all accounts.%n%nMyDetails.dll
 NewXstatusNotify=Plugins\NewXstatusNotify | xStatus Notify | Plugin notifies you about changes of status and xStatus, as well as about changes of status and xStatus messages of your contacts.%n%nNewXstatusNotify.dll
 QuickMessages=Plugins\QuickMessages | Quick messages | Plugin allows you to quickly insert predefined phrases into the message editor.%n%nQuickMessages.dll
 QuickSearch=Plugins\QuickSearch | Quick search | Plugin allows you to quick search for nickname, firstname, lastname, email, uin in your contact list. And now you may add any setting to display - for example user's version of Miranda, group or city.%n%nQuickSearch.dll
