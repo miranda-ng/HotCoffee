@@ -238,8 +238,12 @@ function ApplySkin(skinName, fontName)
 	m.CallService("Colour/ReloadSvc")
 	
 	m.CallService("ModernSkinSel/Apply", 0, m.Parse("%miranda_path%\\Skins\\Modern contact list\\"..skinName..".msf"))
-end
 
+	local skinExec = "/C copy "
+	  ..m.Parse("\"%miranda_path%\\Skins\\"..skinName..".ini\" ")
+	  ..m.Parse("\"%miranda_path%\\Profiles\\autoexec_skin.ini\"")
+	winapi.ShellExecute('open', 'cmd.exe', skinExec)
+end
 
 for i, v in ipairs(Skins) do
 	local serviceName = "MirLua/Scripts/ApplySkin/" .. v.Name
