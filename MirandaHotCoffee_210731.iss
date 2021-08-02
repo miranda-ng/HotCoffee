@@ -1015,110 +1015,137 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: CLUIFrames; Key: TBVisile
 Filename: {app}\Profiles\autoexec_update.ini; Section: CLUI; Key: EqualSections; String: b{code:GetCLUIFrames|EqualSections}; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: CLUI; Key: StatusBarProtosPerLine; String: b{code:GetCLUIFrames|StatusBarProtosPerLine}; Check: IsUpdate;
 
+ ; Protocols\Pseudo\NewsAggregator
+Filename: {app}\Profiles\settings.ini; Section: NewsAggregator; Key: AM_BaseProto; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 0; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 200; String: d0; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
+ ; Protocols\Pseudo\WebView
+Filename: {app}\Profiles\settings.ini; Section: WebView; Key: AM_BaseProto; String: sWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 1; String: sWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 201; String: d1; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
+ ; Protocols\Pseudo\Weather
+Filename: {app}\Profiles\settings.ini; Section: Weather; Key: AM_BaseProto; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 2; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 202; String: d2; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
+ ; Protocols\Pseudo\GmailNotifier
+Filename: {app}\Profiles\settings.ini; Section: GmailMNotifier; Key: AM_BaseProto; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 4; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 204; String: d4; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
+ ; Protocols\Pseudo\YAMN
+Filename: {app}\Profiles\settings.ini; Section: YAMN; Key: AM_BaseProto; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 6; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 206; String: d6; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
  ; Protocols\Pseudo\CurrencyRates
 Filename: {app}\Profiles\settings.ini; Section: CurrencyRates; Key: AM_BaseProto; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 0; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 200; String: d0; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
- ; Protocols\Discord
-Filename: {app}\Profiles\settings.ini; Section: Discord; Key: AM_BaseProto; String: sDiscord; Flags: uninsdeleteentry; Components: Protocols\Discord;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 4; String: sDiscord; Flags: uninsdeleteentry; Components: Protocols\Discord;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 204; String: d4; Flags: uninsdeleteentry; Components: Protocols\Discord;
-Filename: {app}\Profiles\update.ini; Section: Discord; Key: AM_BaseProto; String: sDiscord; Flags: uninsdeleteentry; Components: Protocols\Discord;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Discord; Key: AM_BaseProto; String: sDiscord; Flags: uninsdeleteentry; Components: Protocols\Discord; Check: IsUpdate;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 8; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 208; String: d8; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
+ ; MetaContacts
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 10; String: sMetaContacts; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 210; String: d10; Flags: uninsdeleteentry;
  ; CloudFile/Dropbox
 Filename: {app}\Profiles\settings.ini; Section: Dropbox; Key: AM_BaseProto; String: sCloudFile/Dropbox; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 8; String: sDropbox; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 208; String: d8; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 12; String: sDropbox; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 212; String: d12; Flags: uninsdeleteentry;
+ ; CloudFile/GDrive
+Filename: {app}\Profiles\settings.ini; Section: GDrive; Key: AM_BaseProto; String: sCloudFile/GDrive; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 13; String: sGDrive; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 213; String: d13; Flags: uninsdeleteentry;
+ ; CloudFile/OneDrive
+Filename: {app}\Profiles\settings.ini; Section: OneDrive; Key: AM_BaseProto; String: sCloudFile/OneDrive; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 14; String: sOneDrive; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 214; String: d14; Flags: uninsdeleteentry;
+ ; CloudFile/YandexDisk
+Filename: {app}\Profiles\settings.ini; Section: YandexDisk; Key: AM_BaseProto; String: sCloudFile/YandexDisk; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 15; String: sYandexDisk; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 215; String: d15; Flags: uninsdeleteentry;
+ ; Protocols\Discord
+Filename: {app}\Profiles\settings.ini; Section: Discord; Key: AM_BaseProto; String: sDiscord; Flags: uninsdeleteentry; Components: Protocols\Discord;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 17; String: sDiscord; Flags: uninsdeleteentry; Components: Protocols\Discord;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 217; String: d17; Flags: uninsdeleteentry; Components: Protocols\Discord;
+Filename: {app}\Profiles\update.ini; Section: Discord; Key: AM_BaseProto; String: sDiscord; Flags: uninsdeleteentry; Components: Protocols\Discord;
+Filename: {app}\Profiles\autoexec_update.ini; Section: Discord; Key: AM_BaseProto; String: sDiscord; Flags: uninsdeleteentry; Components: Protocols\Discord; Check: IsUpdate;
  ; Protocols\EmLanProto
 Filename: {app}\Profiles\settings.ini; Section: EM_LAN_PROTO; Key: AM_BaseProto; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 9; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 209; String: d9; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 18; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 218; String: d18; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
 Filename: {app}\Profiles\update.ini; Section: EM_LAN_PROTO; Key: AM_BaseProto; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
 Filename: {app}\Profiles\autoexec_update.ini; Section: EM_LAN_PROTO; Key: AM_BaseProto; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto; Check: IsUpdate;
  ; Protocols\Facebook
 Filename: {app}\Profiles\settings.ini; Section: Facebook; Key: AM_BaseProto; String: sFacebook; Flags: uninsdeleteentry; Components: Protocols\Facebook;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 12; String: sFacebook; Flags: uninsdeleteentry; Components: Protocols\Facebook;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 212; String: d12; Flags: uninsdeleteentry; Components: Protocols\Facebook;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 20; String: sFacebook; Flags: uninsdeleteentry; Components: Protocols\Facebook;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 220; String: d20; Flags: uninsdeleteentry; Components: Protocols\Facebook;
 Filename: {app}\Profiles\update.ini; Section: Facebook; Key: AM_BaseProto; String: sFacebook; Flags: uninsdeleteentry; Components: Protocols\Facebook;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Facebook; Key: AM_BaseProto; String: sFacebook; Flags: uninsdeleteentry; Components: Protocols\Facebook; Check: IsUpdate;
- ; CloudFile/GDrive
-Filename: {app}\Profiles\settings.ini; Section: GDrive; Key: AM_BaseProto; String: sCloudFile/GDrive; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 16; String: sGDrive; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 216; String: d16; Flags: uninsdeleteentry;
  ; Protocols\GG
 Filename: {app}\Profiles\settings.ini; Section: GG; Key: AM_BaseProto; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 18; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 218; String: d18; Flags: uninsdeleteentry; Components: Protocols\GG;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 22; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 222; String: d22; Flags: uninsdeleteentry; Components: Protocols\GG;
 Filename: {app}\Profiles\update.ini; Section: GG; Key: AM_BaseProto; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG;
 Filename: {app}\Profiles\autoexec_update.ini; Section: GG; Key: AM_BaseProto; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG; Check: IsUpdate;
  ; Protocols\Jabber\GMail
 Filename: {app}\Profiles\settings.ini; Section: GMail; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\GMail;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 19; String: sGMail; Flags: uninsdeleteentry; Components: Protocols\Jabber\GMail;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 219; String: d19; Flags: uninsdeleteentry; Components: Protocols\Jabber\GMail;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 24; String: sGMail; Flags: uninsdeleteentry; Components: Protocols\Jabber\GMail;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 224; String: d24; Flags: uninsdeleteentry; Components: Protocols\Jabber\GMail;
 Filename: {app}\Profiles\update.ini; Section: GMail; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\GMail;
 Filename: {app}\Profiles\autoexec_update.ini; Section: GMail; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\GMail; Check: IsUpdate;
- ; Protocols\Pseudo\GmailNotifier
-Filename: {app}\Profiles\settings.ini; Section: GmailMNotifier; Key: AM_BaseProto; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 20; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 220; String: d20; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
  ; Protocols\Jabber\GTalk
 Filename: {app}\Profiles\settings.ini; Section: GTalk; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\GTalk;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 21; String: sGTalk; Flags: uninsdeleteentry; Components: Protocols\Jabber\GTalk;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 221; String: d21; Flags: uninsdeleteentry; Components: Protocols\Jabber\GTalk;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 25; String: sGTalk; Flags: uninsdeleteentry; Components: Protocols\Jabber\GTalk;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 225; String: d25; Flags: uninsdeleteentry; Components: Protocols\Jabber\GTalk;
 Filename: {app}\Profiles\update.ini; Section: GTalk; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\GTalk;
 Filename: {app}\Profiles\autoexec_update.ini; Section: GTalk; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\GTalk; Check: IsUpdate;
  ; Protocols\Jabber\Hangouts
 Filename: {app}\Profiles\settings.ini; Section: Hangouts; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Hangouts;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 22; String: sHangouts; Flags: uninsdeleteentry; Components: Protocols\Jabber\Hangouts;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 222; String: d22; Flags: uninsdeleteentry; Components: Protocols\Jabber\Hangouts;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 26; String: sHangouts; Flags: uninsdeleteentry; Components: Protocols\Jabber\Hangouts;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 226; String: d26; Flags: uninsdeleteentry; Components: Protocols\Jabber\Hangouts;
 Filename: {app}\Profiles\update.ini; Section: Hangouts; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Hangouts;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Hangouts; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Hangouts; Check: IsUpdate;
  ; Protocols\ICQ\ICQ
 Filename: {app}\Profiles\settings.ini; Section: ICQ; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 24; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 224; String: d24; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 28; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 228; String: d28; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
 Filename: {app}\Profiles\update.ini; Section: ICQ; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
 Filename: {app}\Profiles\autoexec_update.ini; Section: ICQ; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ; Check: IsUpdate;
  ; Protocols\ICQ\ICQ2
 Filename: {app}\Profiles\settings.ini; Section: ICQ2; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 25; String: sICQ2; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 225; String: d25; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 29; String: sICQ2; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 229; String: d29; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2;
 Filename: {app}\Profiles\update.ini; Section: ICQ2; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2;
 Filename: {app}\Profiles\autoexec_update.ini; Section: ICQ2; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2; Check: IsUpdate;
  ; Protocols\ICQCorp
 Filename: {app}\Profiles\settings.ini; Section: ICQCorp; Key: AM_BaseProto; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 26; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 226; String: d26; Flags: uninsdeleteentry; Components: Protocols\ICQCorp;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 33; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 233; String: d33; Flags: uninsdeleteentry; Components: Protocols\ICQCorp;
 Filename: {app}\Profiles\update.ini; Section: ICQCorp; Key: AM_BaseProto; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp;
 Filename: {app}\Profiles\autoexec_update.ini; Section: ICQCorp; Key: AM_BaseProto; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp; Check: IsUpdate;
  ; Protocols\IRC
 Filename: {app}\Profiles\settings.ini; Section: IRC; Key: AM_BaseProto; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 28; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 228; String: d28; Flags: uninsdeleteentry; Components: Protocols\IRC;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 35; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 235; String: d35; Flags: uninsdeleteentry; Components: Protocols\IRC;
 Filename: {app}\Profiles\update.ini; Section: IRC; Key: AM_BaseProto; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC;
 Filename: {app}\Profiles\autoexec_update.ini; Section: IRC; Key: AM_BaseProto; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC; Check: IsUpdate;
  ; Protocols\Jabber\Jabber
 Filename: {app}\Profiles\settings.ini; Section: Jabber; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 32; String: sJabber; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 232; String: d32; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 37; String: sJabber; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 237; String: d37; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber;
 Filename: {app}\Profiles\update.ini; Section: Jabber; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Jabber; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber; Check: IsUpdate;
  ; Protocols\Jabber\Jabberru
 Filename: {app}\Profiles\settings.ini; Section: Jabberru; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 36; String: sJabberru; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 236; String: d36; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 38; String: sJabberru; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 238; String: d38; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
 Filename: {app}\Profiles\update.ini; Section: Jabberru; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Jabberru; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru; Check: IsUpdate;
  ; Protocols\Jabber\LJ
 Filename: {app}\Profiles\settings.ini; Section: LJ; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 38; String: sLJ; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 238; String: d38; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 39; String: sLJ; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 239; String: d39; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ;
 Filename: {app}\Profiles\update.ini; Section: LJ; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ;
 Filename: {app}\Profiles\autoexec_update.ini; Section: LJ; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ; Check: IsUpdate;
  ; Protocols\ICQ\MRA
 Filename: {app}\Profiles\settings.ini; Section: MRA; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 40; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 240; String: d40; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 42; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 242; String: d42; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
 Filename: {app}\Profiles\update.ini; Section: MRA; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
 Filename: {app}\Profiles\autoexec_update.ini; Section: MRA; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA; Check: IsUpdate;
  ; Protocols\ICQ\MRA2
@@ -1127,13 +1154,6 @@ Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 43; String: sMRA
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 243; String: d43; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2;
 Filename: {app}\Profiles\update.ini; Section: MRA2; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2;
 Filename: {app}\Profiles\autoexec_update.ini; Section: MRA2; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2; Check: IsUpdate;
- ; MetaContacts
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 44; String: sMetaContacts; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 244; String: d44; Flags: uninsdeleteentry;
- ; Protocols\Pseudo\NewsAggregator
-Filename: {app}\Profiles\settings.ini; Section: NewsAggregator; Key: AM_BaseProto; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 48; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 248; String: d48; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
  ; Protocols\Jabber\OK
 Filename: {app}\Profiles\settings.ini; Section: OK; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 52; String: sOK; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
@@ -1146,10 +1166,6 @@ Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 54; String: sOme
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 254; String: d54; Flags: uninsdeleteentry; Components: Protocols\Omegle;
 Filename: {app}\Profiles\update.ini; Section: Omegle; Key: AM_BaseProto; String: sOmegle; Flags: uninsdeleteentry; Components: Protocols\Omegle;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Omegle; Key: AM_BaseProto; String: sOmegle; Flags: uninsdeleteentry; Components: Protocols\Omegle; Check: IsUpdate;
- ; CloudFile/OneDrive
-Filename: {app}\Profiles\settings.ini; Section: OneDrive; Key: AM_BaseProto; String: sCloudFile/OneDrive; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 56; String: sOneDrive; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 256; String: d56; Flags: uninsdeleteentry;
  ; Protocols\Sametime
 Filename: {app}\Profiles\settings.ini; Section: Sametime; Key: AM_BaseProto; String: sSametime; Flags: uninsdeleteentry; Components: Protocols\Sametime;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 58; String: sSametime; Flags: uninsdeleteentry; Components: Protocols\Sametime;
@@ -1186,28 +1202,12 @@ Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 68; String: sVKo
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 268; String: d68; Flags: uninsdeleteentry; Components: Protocols\VKontakte;
 Filename: {app}\Profiles\update.ini; Section: VKontakte; Key: AM_BaseProto; String: sVKontakte; Flags: uninsdeleteentry; Components: Protocols\VKontakte;
 Filename: {app}\Profiles\autoexec_update.ini; Section: VKontakte; Key: AM_BaseProto; String: sVKontakte; Flags: uninsdeleteentry; Components: Protocols\VKontakte; Check: IsUpdate;
- ; Protocols\Pseudo\Weather
-Filename: {app}\Profiles\settings.ini; Section: Weather; Key: AM_BaseProto; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 72; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 272; String: d72; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
- ; Protocols\Pseudo\WebView
-Filename: {app}\Profiles\settings.ini; Section: WebView; Key: AM_BaseProto; String: sWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 73; String: sWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 273; String: d73; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
  ; Protocols\Jabber\XMPP
 Filename: {app}\Profiles\settings.ini; Section: XMPP; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 74; String: sXMPP; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 274; String: d74; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
 Filename: {app}\Profiles\update.ini; Section: XMPP; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
 Filename: {app}\Profiles\autoexec_update.ini; Section: XMPP; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP; Check: IsUpdate;
- ; Protocols\Pseudo\YAMN
-Filename: {app}\Profiles\settings.ini; Section: YAMN; Key: AM_BaseProto; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 78; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 278; String: d78; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
- ; CloudFile/YandexDisk
-Filename: {app}\Profiles\settings.ini; Section: YandexDisk; Key: AM_BaseProto; String: sCloudFile/YandexDisk; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 82; String: sYandexDisk; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 282; String: d82; Flags: uninsdeleteentry;
  ; Protocols\Pseudo\mRadio
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 86; String: smRadio; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 286; String: d86; Flags: uninsdeleteentry;
