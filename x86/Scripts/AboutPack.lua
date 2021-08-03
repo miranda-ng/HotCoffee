@@ -100,8 +100,7 @@ end
 local openAbout = function()
   local text = ''
     .. m.Translate('Handle') .. ': ' .. db.GetSetting(_, 'PackInfo', 'Name') .. '\r\n'
-    .. m.Translate('Version') .. ': ' .. db.GetSetting(_, 'PackInfo', 'Version') .. ' ('
-      .. db.GetSetting(_, 'PackInfo', 'Architecture') .. ')\r\n'
+    .. m.Translate('Version') .. ': ' .. db.GetSetting(_, 'PackInfo', 'Version') .. '\r\n'
     .. m.Translate('Release date') .. ': ' .. db.GetSetting(_, 'PackInfo', 'ReleaseDate') .. '\r\n'
     .. m.Translate('Core') .. ': ' .. m.Version .. '\r\n' .. '\r\n'
     .. m.Translate('Production') .. ': ' .. db.GetSetting(_, 'PackInfo', 'Production') .. '\r\n'

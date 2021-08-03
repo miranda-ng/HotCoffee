@@ -969,7 +969,6 @@ Filename: {app}\Profiles\settings.ini; Section: Langpack; Key: Current; String: 
 Filename: {app}\Profiles\settings.ini; Section: Langpack; Key: Current; String: ulangpack_russian.txt; Languages: ru;
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: "Name"; String: u{#AppName};
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Version; String: u{#AppVer} {#AppStatus} {#AppRelease};
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Architecture; String: u{#AppArch};
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: MirVer; String: u{#AppMirVer};
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@xmpp.ru;
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")};
@@ -986,7 +985,6 @@ Filename: {app}\Profiles\update.ini; Section: Langpack; Key: Current; String: ud
 Filename: {app}\Profiles\update.ini; Section: Langpack; Key: Current; String: ulangpack_russian.txt; Languages: ru;
 Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: "Name"; String: u{#AppName};
 Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Version; String: u{#AppVer} {#AppStatus} {#AppRelease};
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Architecture; String: u{#AppArch};
 Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: MirVer; String: u{#AppMirVer};
 Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@xmpp.ru;
 Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")};
@@ -1003,7 +1001,6 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: Langpack; Key: Current; S
 Filename: {app}\Profiles\autoexec_update.ini; Section: Langpack; Key: Current; String: ulangpack_russian.txt; Languages: ru; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: "Name"; String: u{#AppName}; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Version; String: u{#AppVer} {#AppStatus} {#AppRelease}; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Architecture; String: u{#AppArch}; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: MirVer; String: u{#AppMirVer}; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@xmpp.ru; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")}; Check: IsUpdate;
