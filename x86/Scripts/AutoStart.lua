@@ -124,6 +124,22 @@ end
 
 WriteTabSRMMSkinTabCaption(db.GetSetting(_, 'PackInfo', 'Skin'), db.GetSetting(_, 'PackInfo', 'TabCaption'))
 
+function WriteScrollBar()
+    local current = db.GetSetting(_, "PackInfo", "TabScrollBar")
+    local new = current
+    
+    db.WriteSetting(_, "Tab_SRMsg", "disableVScroll", 1 - new, db.DBVT_BYTE)
+    db.WriteSetting(_, "HistoryPlusPlus", "NoLogScrollBar", 1 - new, db.DBVT_BYTE)
+    db.WriteSetting(_, "PackInfo", "TabScrollBar", new, db.DBVT_BYTE)
+    
+    local skinName = db.GetSetting(_, 'PackInfo', 'Skin')
+    winapi.SetIniValue(m.Parse('%miranda_path%\\Skins\\TabSRMM\\'..skinName..'\\'..skinName..'.tsk'), 'Global', 'NoScrollbars', 1 - new)
+    
+    m.CallService("TabSRMsg/ReloadSkin", 0, 0)
+end
+
+WriteScrollBar()
+
 
 if db.GetSetting(_, 'FirstRun', 'Lua_FirstRun') == 1 then
   local path = m.Parse('%miranda_path%\\Profiles\\update.ini')

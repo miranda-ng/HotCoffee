@@ -33,7 +33,8 @@
 #define AppShortVer AppVerMajor + "." + AppVerMinor + "." + AppVerBuild
 #define AppVer AppVerMajor + "." + AppVerMinor + "." + AppVerBuild + "." + AppVerRevis
 #define AppFullVer AppVerMajor + "." + AppVerMinor + "." + AppVerBuild + "." + AppVerRevis + " " + AppStatus + " " + AppRelease
-#define AppMirVer AppArch == "x86" ? AppShortVer + AppVerStatusBuild + AppVerRevis : AppShortVer + AppVerStatusBuild + AppVerRevis + " x64"
+#define AppMirVer AppShortVer + AppVerStatusBuild + AppVerRevis
+;#define AppMirVer AppArch == "x86" ? AppShortVer + AppVerStatusBuild + AppVerRevis : AppShortVer + AppVerStatusBuild + AppVerRevis + " x64"
 #define AppDevOrStab AppStatus == "Final" ? "StableVersion" : "DevelopmentVersion"
 
 #define AppUpdateVersion "0.96.1.24167"                                     ; product version update range
@@ -1376,10 +1377,13 @@ Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: TabCaption; Strin
 Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: TabCaption; String: uCaptionHigh; Flags: uninsdeleteentry; Check: IsSettingChecked('TabCaptionHigh');
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: TabCaption; String: uCaptionHigh; Flags: uninsdeleteentry; Check: IsSettingChecked('TabCaptionHigh') and IsUpdate;
  ; Settings Page \ Message sessions \ TabSRMMNoVScrollBar
+Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: TabScrollBar; String: b{code:SetBoolSetting|TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: disableVScroll; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: HistoryPlusPlus; Key: NoLogScrollBar; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: TabScrollBar; String: b{code:SetBoolSetting|TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: disableVScroll; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\update.ini; Section: HistoryPlusPlus; Key: NoLogScrollBar; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: TabScrollBar; String: b{code:SetBoolSetting|TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: disableVScroll; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: HistoryPlusPlus; Key: NoLogScrollBar; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
  ; Settings Page \ Message sessions \ TabSRMMNoVScrollBar for TabSRMM Skin

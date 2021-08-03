@@ -42,11 +42,6 @@ Icons =
 			Disabled = icolib.AddIcon('IEViewCBDisabled', 'Disabled', "MirLua/View/IEView"),
 			Enabled = icolib.AddIcon('IEViewCBEnabled', 'Enabled', "MirLua/View/IEView"),
 		},
-		TabCaption =
-		{
-			Disabled = icolib.AddIcon('TabCaptionDisabled', 'Caption frame disabled', 'MirLua/View/Chats'),
-			Enabled = icolib.AddIcon('TabCaptionEnabled', 'Caption frame enabled', 'MirLua/View/Chats')
-		},
 		Chats =
 		{
 			Root = icolib.AddIcon('menuChats', 'Chats', 'MirLua/View'),
@@ -54,6 +49,16 @@ Icons =
 			{
 				Disabled = icolib.AddIcon('ChatsASDisabled', 'Auto size disabled', "MirLua/View/Chats"),
 				Enabled = icolib.AddIcon('ChatsASEnabled', 'Auto size enabled', "MirLua/View/Chats"),
+			},
+			TabCaption =
+			{
+				Disabled = icolib.AddIcon('TabCaptionDisabled', 'Caption frame disabled', 'MirLua/View/Chats'),
+				Enabled = icolib.AddIcon('TabCaptionEnabled', 'Caption frame enabled', 'MirLua/View/Chats')
+			},
+			ScrollBar =
+			{
+				Disabled = icolib.AddIcon('ScrollBarDisabled', 'Scroll bar disabled', 'MirLua/View/Chats'),
+				Enabled = icolib.AddIcon('ScrollBarEnabled', 'Scroll bar enabled', 'MirLua/View/Chats')
 			}
 		}
 	}
@@ -465,7 +470,7 @@ hChatsAutoSizeInput = clist.AddMainMenuItem({
 	Uid = 'a6bf0371-97ed-48cb-ae2d-497b6036f71d',
 	Parent = hChatsRoot,
 	Service = 'Scripts/View/AutoSizeArea',
-	Position = 100
+	Position = 100300
 })
 assert(hChatsAutoSizeInput)
 
@@ -490,6 +495,35 @@ PreBuildMenuFuncs["Chats"] = function()
 	genmenu.ModifyMenuItem(hChatsAutoSizeInput, nil, ((db.GetSetting(_, "Tab_SRMsg", "CNTW_Def_Flags") & 16384) == 0) and Icons.Menu.Chats.AutoSize.Disabled or Icons.Menu.Chats.AutoSize.Enabled , -1)
 end
 ----- /Chats --------------------------------------------------------------------------------------
+----- ScrollBar -----------------------------------------------------------------------------------
+hScrollBarEnabled = clist.AddMainMenuItem({
+	Name = 'Scroll bar',
+	Icon = Icons.Menu.Chats.ScrollBar.Disabled,
+	Uid = 'a6bf0fff-97ed-48cb-ae2d-497b6036f71d',
+	Parent = hChatsRoot,
+	Service = 'Scripts/View/ScrollBar',
+	Position = 200400
+})
+assert(hScrollBarEnabled)
+
+m.CreateServiceFunction('Scripts/View/ScrollBar', function()
+    local current = db.GetSetting(_, "PackInfo", "TabScrollBar", 1)
+    local new = 1 - (current or 1)
+    
+    db.WriteSetting(_, "Tab_SRMsg", "disableVScroll", 1 - new, db.DBVT_BYTE)
+    db.WriteSetting(_, "HistoryPlusPlus", "NoLogScrollBar", 1 - new, db.DBVT_BYTE)
+    db.WriteSetting(_, "PackInfo", "TabScrollBar", new, db.DBVT_BYTE)
+    
+    local skinName = db.GetSetting(_, 'PackInfo', 'Skin')
+    winapi.SetIniValue(m.Parse('%miranda_path%\\Skins\\TabSRMM\\'..skinName..'\\'..skinName..'.tsk'), 'Global', 'NoScrollbars', 1 - new)
+    
+    m.CallService("TabSRMsg/ReloadSkin", 0, 0)
+end)
+
+PreBuildMenuFuncs["ScrollBar"] = function()
+	genmenu.ModifyMenuItem(hScrollBarEnabled, nil, db.GetSetting(_, "PackInfo", "TabScrollBar") == 1 and Icons.Menu.Chats.ScrollBar.Enabled or Icons.Menu.Chats.ScrollBar.Disabled , -1)
+end
+----- /ScrollBar ----------------------------------------------------------------------------------
 ----- TabCaption ----------------------------------------------------------------------------------
 function WriteTabSRMMSkinTabCaption(skinName, CaptionSize)
 	local pattern_1 = 'Custom_Miranda,Custom_Miranda_Dark,Custom_Miranda_Light,Default_Miranda'
@@ -567,7 +601,7 @@ end
 
 for i, v in ipairs(TabCaptions) do
 	local serviceName = "MirLua/Scripts/ApplyTabCaption/" .. v.Name
-	v.hMenuItem = clist.AddMainMenuItem({ Name = v.Description, Service = serviceName, Parent = hChatsRoot, Icon = Icons.Menu.TabCaption.Disabled, Position = i, Uid = v.Uid })
+	v.hMenuItem = clist.AddMainMenuItem({ Name = v.Description, Service = serviceName, Parent = hChatsRoot, Icon = Icons.Menu.Chats.TabCaption.Disabled, Position = i, Uid = v.Uid })
 	m.CreateServiceFunction(serviceName, function()
 		ApplyTabCaption(v.Name)
 	end)
@@ -576,7 +610,7 @@ end
 PreBuildMenuFuncs["TabCaption"] = function()
 	for i, v in ipairs(TabCaptions) do
 		local fontName = db.GetSetting(_, 'PackInfo', 'TabCaption')
-		genmenu.ModifyMenuItem(v.hMenuItem, nil, v.Name == fontName and Icons.Menu.TabCaption.Enabled or Icons.Menu.TabCaption.Disabled, -1)
+		genmenu.ModifyMenuItem(v.hMenuItem, nil, v.Name == fontName and Icons.Menu.Chats.TabCaption.Enabled or Icons.Menu.Chats.TabCaption.Disabled, -1)
 	end
 end
 ----- /TabCaption ---------------------------------------------------------------------------------
