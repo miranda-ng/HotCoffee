@@ -232,6 +232,7 @@ function ApplySkin(skinName, fontName)
 	m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\Skins\\"..skinName..".ini"), 0)
 	m.CallService("DB/Ini/ImportFile", m.Parse("%miranda_path%\\UserSet\\Fonts\\"..fontName..".ini"), 0)
 	WriteTabSRMMSkinTabCaption(db.GetSetting(_, 'PackInfo', 'Skin'), db.GetSetting(_, 'PackInfo', 'TabCaption'))
+	WriteScrollBar(db.GetSetting(_, "PackInfo", "TabScrollBar", 1))
 
 	m.CallService("TabSRMsg/ReloadSkin")
 	m.CallService("IEView/ReloadOptions")
@@ -506,10 +507,7 @@ hScrollBarEnabled = clist.AddMainMenuItem({
 })
 assert(hScrollBarEnabled)
 
-m.CreateServiceFunction('Scripts/View/ScrollBar', function()
-    local current = db.GetSetting(_, "PackInfo", "TabScrollBar", 1)
-    local new = 1 - (current or 1)
-    
+function WriteScrollBar(new)
     db.WriteSetting(_, "Tab_SRMsg", "disableVScroll", 1 - new, db.DBVT_BYTE)
     db.WriteSetting(_, "HistoryPlusPlus", "NoLogScrollBar", 1 - new, db.DBVT_BYTE)
     db.WriteSetting(_, "PackInfo", "TabScrollBar", new, db.DBVT_BYTE)
@@ -518,6 +516,13 @@ m.CreateServiceFunction('Scripts/View/ScrollBar', function()
     winapi.SetIniValue(m.Parse('%miranda_path%\\Skins\\TabSRMM\\'..skinName..'\\'..skinName..'.tsk'), 'Global', 'NoScrollbars', 1 - new)
     
     m.CallService("TabSRMsg/ReloadSkin", 0, 0)
+end
+
+m.CreateServiceFunction('Scripts/View/ScrollBar', function()
+    local current = db.GetSetting(_, "PackInfo", "TabScrollBar", 1)
+    local new = 1 - (current or 1)
+    
+    WriteScrollBar(new)
 end)
 
 PreBuildMenuFuncs["ScrollBar"] = function()
