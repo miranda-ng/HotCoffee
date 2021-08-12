@@ -327,8 +327,9 @@ assert(hIconsRoot)
 IconPacks =
 {
 	{ Name = 'Fugue', Description = 'Fugue', Uid = '332BB7E0-B39A-4938-AEA1-A6A8FE713101' },
-	{ Name = 'Nova',  Description = 'Nova',  Uid = '332BB7E0-B39A-4938-AEA1-A6A8FE713102' },
-	{ Name = 'Xpk',   Description = 'Xpk',   Uid = '332BB7E0-B39A-4938-AEA1-A6A8FE713103' },
+	{ Name = 'Ice',   Description = 'Ice',   Uid = '332BB7E0-B39A-4938-AEA1-A6A8FE713102' },
+	{ Name = 'Nova',  Description = 'Nova',  Uid = '332BB7E0-B39A-4938-AEA1-A6A8FE713103' },
+	{ Name = 'Xpk',   Description = 'Xpk',   Uid = '332BB7E0-B39A-4938-AEA1-A6A8FE713104' },
 }
 
 function MakeCmdLine(batch)
