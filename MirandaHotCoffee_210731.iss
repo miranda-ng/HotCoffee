@@ -13,7 +13,7 @@
 #define AppNameSetup "HotCoffeeSetup"
 #define AppNameInstall "MirandaHotCoffee"
 
-#define AppArch "x64"                                                       ; must be x86 or x64
+#define AppArch "x86"                                                       ; must be x86 or x64
 
 #ifdef AppArchx64
  #define AppArch "x64"
