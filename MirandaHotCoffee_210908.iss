@@ -520,6 +520,7 @@ Source: x86\Skins\IEView\!tools\filetypes\*; DestDir: {app}\Skins\IEView\!tools\
 Source: x86\Skins\IEView\!tools\fonts\*; DestDir: {app}\Skins\IEView\!tools\fonts; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\!tools\Icons\*; DestDir: {app}\Skins\IEView\!tools\Icons; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\!tools\Icons\packs\fugue.7z; DestDir: {app}\Skins\IEView\!tools\Icons; Check: IsStyleChecked('IconsFugue'); AfterInstall: Extract();
+Source: x86\Skins\IEView\!tools\Icons\packs\ice.7z; DestDir: {app}\Skins\IEView\!tools\Icons; Check: IsStyleChecked('IconsNova'); AfterInstall: Extract();
 Source: x86\Skins\IEView\!tools\Icons\packs\nova.7z; DestDir: {app}\Skins\IEView\!tools\Icons; Check: IsStyleChecked('IconsNova'); AfterInstall: Extract();
 Source: x86\Skins\IEView\!tools\Icons\packs\xpk.7z; DestDir: {app}\Skins\IEView\!tools\Icons; Check: IsStyleChecked('IconsXpk'); AfterInstall: Extract();
 Source: x86\Skins\IEView\!tools\player\*; DestDir: {app}\Skins\IEView\!tools\player; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
@@ -909,6 +910,8 @@ Name: {userstartup}\{#AppLnk}; Filename: {app}\{#AppExeName}; Tasks: curuser and
  ; patcher
 Filename: {app}\Skins\IconPacks\IconPatcher.exe; Parameters: "/bin=""{app}\{#AppExeName}"" /arc=Fugue /SILENT"; Flags: runhidden; Check: IsStyleChecked('IconsFugue');
 Filename: {app}\Skins\IconPacks\IconPatcher.exe; Parameters: "/bin=""{app}\{#AppExeName}"" /arc=Fugue_HotCoffee /VERYSILENT"; Flags: runhidden; Check: IsStyleChecked('IconsFugue');
+Filename: {app}\Skins\IconPacks\IconPatcher.exe; Parameters: "/bin=""{app}\{#AppExeName}"" /arc=Ice /SILENT"; Flags: runhidden; Check: IsStyleChecked('IconsIce');
+Filename: {app}\Skins\IconPacks\IconPatcher.exe; Parameters: "/bin=""{app}\{#AppExeName}"" /arc=Ice_HotCoffee /VERYSILENT"; Flags: runhidden; Check: IsStyleChecked('IconsIce');
 Filename: {app}\Skins\IconPacks\IconPatcher.exe; Parameters: "/bin=""{app}\{#AppExeName}"" /arc=Nova /SILENT"; Flags: runhidden; Check: IsStyleChecked('IconsNova');
 Filename: {app}\Skins\IconPacks\IconPatcher.exe; Parameters: "/bin=""{app}\{#AppExeName}"" /arc=Nova_HotCoffee /VERYSILENT"; Flags: runhidden; Check: IsStyleChecked('IconsNova');
 ;Filename: {app}\Skins\IconPacks\IconPatcher.exe; Parameters: "/bin=""{app}\{#AppExeName}"" /arc=Xpk /SILENT"; Flags: runhidden; Check: IsStyleChecked('IconsXpk');
@@ -6599,6 +6602,7 @@ begin
       // add icon patcher items
       AddGroup(StylesHelper('Icons'), '', 0, nil);
       AddRadioButton(StylesHelper('IconsFugue'), '', 1, False, True, nil);
+      AddRadioButton(StylesHelper('IconsIce'), '', 1, False, True, nil);
       AddRadioButton(StylesHelper('IconsNova'), '', 1, False, True, nil);
       AddRadioButton(StylesHelper('IconsXpk'), '', 1, False, True, nil);
 

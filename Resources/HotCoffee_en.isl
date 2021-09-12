@@ -281,6 +281,7 @@ Skin_Textolite_Gray_Light=Textolite Gray Light | Textolite Gray Light theme. | *
 	; IconPatcher
 Icons=Icons | Icons replacement.
 IconsFugue=Fugue | Fugue icon set. | * | Icons_Fugue.bmp
+IconsIce=Ice | Ice icon set. | * | Icons_Ice.bmp
 IconsNova=Nova | Nova icon set. | * | Icons_Nova.bmp
 IconsXpk=Xpk | Xpk icon set. | * | Icons_Xpk.bmp
 	; IEView settings

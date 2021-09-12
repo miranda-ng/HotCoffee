@@ -281,6 +281,7 @@ Skin_Textolite_Gray_Light=Textolite Gray Light | Светлая тема Textolite Gray Lig
 	; IconPatcher
 Icons=Значки | Замена значков.
 IconsFugue=Fugue | Набор значков Fugue. | * | Icons_Fugue.bmp
+IconsIce=Ice | Набор значков Ice. | * | Icons_Ice.bmp
 IconsNova=Nova | Набор значков Nova. | * | Icons_Nova.bmp
 IconsXpk=Xpk | Набор значков Xpk. | * | Icons_Xpk.bmp
 	; IEView settings
