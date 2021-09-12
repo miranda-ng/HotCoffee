@@ -37905,41 +37905,34 @@ OpenSSL не загружен.
 ;==============================================================================================================
 ;  This file too is for lines that jpgen.js doesn't add to english templates but nevertheless must be translated.
 ;==============================================================================================================
+;============================================================
+;  Clist_modern
+;============================================================
+[On/Off On Top]
+Вкл/Выкл Поверх всех окон
 ;=======================================================================
-;  Actman
+;  MirLua
 ;=======================================================================
 [Release date]
 Дата выпуска
 [Donate]
 Пожертвовать
-[Quick search]
-Поиск по списку
 [Happy New Year]
 С Новым Годом
 [Happy New Year to you!\nMay every great new day\nBring you sweet surprises -\nA happiness buffet.\n\nHappy New Year to you\nAnd when the new year's done\nMay the next year be even better\nFull of pleasure, joy and fun.]
 Прошел еще один прекрасный год,\nВ котором пелось и грустилось,\nА то, что в нем не уместилось,\nПусть в новом все произойдет.\n\nИдут часы, проходят дни, -\nТакой закон природы,\nИ мы сегодня вас хотим\nПоздравить с Hовым Годом!\n\nЖелаем вам от всей души\nВ грядущем новом годе\nЗдоровья, счастья, новых сил,\nУспехов на работе.
-[Notifications status default]
-Уведомления статуса по умолчанию
 [Some modules will not be able to work simultaneously in two or more advanced profiles. Continue?]
 Некоторые модули не смогут работать одновременно в двух и более запущенных профилях. Продолжить?
 [Show status message dialog]
 Показывать диалог сообщений статуса
 [Hide status message dialog]
 Скрывать диалог сообщений статуса
-[Refresh Quotes]
-Обновить курсы валют
-[Translate this page into English?]
-Перевести эту страницу на английский язык?
-[Do you want to open this page via Google translator?]
-Открыть эту страницу с помощью переводчика Google?
 [Wiki on Miranda NG]
 Вики на Miranda NG
 [Support on Miranda NG]
 Поддержка на Miranda NG
 [Support on Ru-Board]
 Поддержка на Ru-Board
-[Support on Miranda Planet]
-Поддержка на Miranda Planet
 [Blog]
 Блог
 [Support]
@@ -37948,8 +37941,6 @@ OpenSSL не загружен.
 Полезно знать
 [FAQ]
 ЧаВо
-[Support the project]
-Поддержать проект
 [About pack]
 О сборке
 [Core]
@@ -37968,48 +37959,20 @@ OpenSSL не загружен.
 Печатный
 [Handwriting]
 Рукописный
-[Printing font]
-Печатный шрифт
-[Handwriting font]
-Рукописный шрифт
 [Caption frame low]
 Фрейм заголовка узкий
 [Caption frame high]
 Фрейм заголовка широкий
 [Auto-size input area]
 Авто-размер области ввода
-[&Auto-size input area]
-Авто-размер области ввода
 [Big pack]
-Большой набор
-[&Big pack]
 Большой набор
 [Small pack]
 Малый набор
-[&Small pack]
-Малый набор
 [Open profile folder]
 Открыть папку профиля
-[Profile editor]
-Редактор профиля
 [Production]
 Производство
-[Contacts]
-Контакты
-[nospam]
-я не спамер
-[Congratulations! You just passed human/robot test. Now you can write me a message.]
-Поздравляю! Вы прошли тест человека/робота.\r\nТеперь вы можете написать мне сообщение.\r\nCongratulations! You just passed human/robot test.\r\nNow you can write me a message.
-[StopSpam: send a message and reply to an anti-spam bot question.]
-Антиспам: отправьте сообщение и ответьте на вопрос антиспам-робота.\r\nStopSpam: send a message and reply to an anti-spam bot question.
-[Spammers made me to install small anti-spam system you are now speaking with.]
-Спамеры вынудили меня установить систему антиспам, с которой вы сейчас общаетесь.
-[Please reply "nospam" without quotes and spaces if you want to contact me.]
-Если вы хотите общаться со мной, напишите пожалуйста "я не спамер" без кавычек.\r\n\r\nSpammers made me to install small anti-spam system you are now speaking with.\r\nPlease reply "я не спамер" without quotes if you want to contact me.
-[Change Last Message Layout]
-Изменить раскладку последнего сообщения
-[Change Last Message Layout and Send]
-Изменить раскладку последнего сообщения и отправить
 [Add to autostart]
 Добавить в автозагрузку
 [Remove from autostart]
@@ -38030,64 +37993,26 @@ OpenSSL не загружен.
 Да — при загрузке автоматически будет запущен профиль
 [No - while loading as usually will be opened profile manager]
 Нет — при загрузке как обычно будет открыто управление профилями
-[You can't send files to contact which is offline!]
-Вы не можете передавать файлы контакту, который находится не в сети!
-[History of the room does not exist, open the folder of the rooms' histories?]
-История комнаты не существует, открыть папку истории комнат?
 [Autologin bookmarks and conferences enabled]
 Автовход в закладки и конференции включен
 [Autologin bookmarks and conferences disabled]
 Автовход в закладки и конференции выключен
-[Check for plugin updates]
-Проверить обновления плагинов
-[&Import history]
-Импорт истории
-[Additional menu]
-Дополнительное меню
 [Do you really want to close]
 Вы действительно хотите закрыть
 [To continue the program should be closed. Continue?]
 Для продолжения программа будет закрыта. Продолжить?
-[History folder doesn't exist]
-Папка истории не существует
-[Tomorrow]
-Завтра
-[Day after tomorrow]
-Послезавтра
-[days to birthday]
-дней до праздника
+[Common folder for received files doesn't exist.]
+Общая папка принятых файлов не существует.
+[Contact's folder doesn't exist.\nOpening common folder for received files.]
+Папка контакта не существует.\nОткрываю общую папку принятых файлов.
 [Enable Always on top]
 Включить "Поверх всех окон"
 [Disable Always on top]
 Выключить "Поверх всех окон"
-[Check Gmail Inboxes]
-Проверить почту Gmail
-[Enable MetaContacts]
-Включить метаконтакты
-[Disable MetaContacts]
-Выключить метаконтакты
-[&Send Screenshot]
-Отправить скриншот
-[&Chess4Net]
-Шахматы
-[Play &Chess4Net]
-Играть в шахматы
-[Set personal status message]
-Уст. свое сообщение статуса
-[Custom Action]
-Политика пользователя
-[History Disabled]
-История выключена
 [Disable autoreply]
-Выключить автоответчик
-[&Disable autoreply]
 Выключить автоответчик
 [Enable autoreply]
 Включить автоответчик
-[&Enable autoreply]
-Включить автоответчик
-[Autoreply default]
-Автоотвечик по умолчанию
 [Enable auto-away detection]
 Включить авто-отсутствие
 [Disable auto-away detection]
@@ -38096,146 +38021,18 @@ OpenSSL не загружен.
 Включить авто-простой
 [Disable auto-idle detection]
 Выключить авто-простой
-[&Advanced]
-Дополнительно
-[&Janus]
-Выбрать игру...
 [Receive files automatically]
 Принимать файлы автоматически
 [Receive files asking]
 Принимать файлы через запрос
-[Sounds default]
-Звуки по умолчанию
-[Show scrollbar]
-Показать полосу прокрутки
-[Hide scrollbar]
-Скрыть полосу прокрутки
-[Continue?]
-Продолжить?
-[&View news]
-Смотреть новости
-[&Show even if offline]
-Показывать, даже если не в сети
-[Rate none]
-Нет рейтинга
-[&Rate none]
-Нет рейтинга
-[&Rate low]
-Низкий рейтинг
-[&Rate medium]
-Средний рейтинг
-[&Rate high]
-Высокий рейтинг
-[&Always visible]
-Всегда видимый
-[&Always invisible]
-Всегда невидимый
-[&Hide from list]
-Скрыть из списка
-[&Show in list]
-Показывать в списке
-[&All events]
-Все события
-[&Messages]
-Сообщения
-[&URLs]
-Ссылки
-[&Files]
-Файлы
-[&Online notification]
-Уведомление "В сети"
-[&Auth requests]
-Запросы авторизации
-[&You were added]
-Уведомление о добавлении
-[&Typing]
-Набор текста
-[Open ignore list]
-Открыть список игнорирования
-[Use "Options->Contacts->Ignore" to unhide contacts.]
-Чтобы вернуть отображение контакта, используйте «Настройки->Контакты->Игнорировать»
 [Changes...]
 Изменения...
 [The changes will take effect only after restarting program. Continue?]
 Изменения вступят в силу только после перезапуска программы. Продолжить?
 [The changes will take effect only after closing all dialog windows. Continue?]
 Изменения вступят в силу только после закрытия всех диалоговых окон. Продолжить?
-[Received files]
-Принятые файлы
-[&Received files]
-Принятые файлы
-[Common folder for received files doesn't exist.]
-Общая папка принятых файлов не существует.
-[Contact's folder doesn't exist.\nOpening common folder for received files.]
-Папка контакта не существует.\nОткрываю общую папку принятых файлов.
 [Remove temporary contacts]
 Удалить временные контакты
-[Chatroom, bookmark on/off]
-Комнаты, закладки вкл/выкл
-[Black skin]
-Черный скин
-[Blue skin]
-Синий скин
-[Green skin]
-Зеленый скин
-[Red skin]
-Красный скин
-[Violet skin]
-Фиолетовый скин
-[Yellow skin]
-Желтый скин
-;============================================================
-;  Clist_modern
-;============================================================
-[Enable/Disable Popups]
-Вкл/Выкл всплывающие окна
-[Show/Hide Groups]
-Показать/Скрыть группы
-[View/Change my details]
-Просмотр/Изменение моих данных
-[On/Off On Top]
-Вкл/Выкл Поверх всех окон
-;============================================================
-;  HistorySweeper
-;============================================================
-[delete all events]
-удалять все события
-[delete older than 1 Day]
-старше 1 дня
-[delete older than 3 Days]
-старше 3 дней
-[delete older than 7 Days]
-старше 7 дней
-[delete older than 2 Weeks (14 days)]
-старше 2 недель (14 дней)
-[delete older than 1 Month (30 days)]
-старше 1 месяца (30 дней)
-[delete older than 3 Months (90 days)]
-старше 3 месяцев (90 дней)
-[delete older than 6 Months (180 days)]
-старше 6 месяцев (180 дней)
-[delete older than 1 Year (364 days)]
-старше 1 года (364 дня)
-[delete all]
-удалять все
-[keep 2 last events]
-оставить 2 последних события
-[keep 5 last events]
-оставить 5 последних событий
-[keep 10 last events]
-оставить 10 последних событий
-[keep 20 last events]
-оставить 20 последних событий
-[keep 50 last events]
-оставить 50 последних событий
-[Show in Main Menu *]
-Пункт в главном меню *
-[Show in Contact Menu *]
-Пункт в меню контакта *
-[Use UNSAFE mode]
-НЕБЕЗОПАСНЫЙ режим
-[Clicking on the icon in status bar will change settings]
-Нажатие на иконку будет менять настройки
 ;============================================================
 ;  NewAwaySys
 ;============================================================
@@ -38273,54 +38070,51 @@ OpenSSL не загружен.
 Отошел(а) в
 [will be back later.]
 буду позже.
-[&Gone fragging]
-Играю в стрелялку
-[&Creepy]
-Устрашающий
-[NA]
-Недоступен
-[DND]
-Не беспокоить
 [is reading your message]
 читает ваше сообщение
 [teller machine]
 это автоответчик
 [asked me to tell you]
 просил(а) вам передать
-[?cinfo(%subject%,display) (?cinfo(%subject%,id)) is reading your %nas_statdesc% message:?crlf()%extratext%]
-?cinfo(%subject%,display) (?cinfo(%subject%,id)) читает ваше %nas_statdesc% сообщение:?crlf()%extratext%
-[?if2(!cinfo(%subject%,first),!cinfo(%subject%,display)) - an answering machine >  %nas_mynick%  asked me to tell you: %extratext%]
-?if2(!cinfo(%subject%,first),!cinfo(%subject%,display)) - это Автоответчик >  %nas_mynick%  просил передать вам: %extratext%
-;============================================================
-;  PackUpdater
-;============================================================
-[New version of the pack is available!]
-Доступна новая версия!
 ;============================================================
 ;  Popup
 ;============================================================
-[Use different colors]
-Разные цвета для окон
-[Avatars to right]
-Аватары справа
-[Use different colors for logo and clock]
-Использовать цветные лого и часы
-[Use different colors for text]
-Использовать цветной текст
+[Color frame]
+Цветная рамка
+[Color text background]
+Цветной текст заголовка
+[Color logo & clocks]
+Цветные лого и часы
+[Color text]
+Цветной текст
+[Light title text]
+Светлый текст заголовка
+[Dark title text]
+Темный текст заголовка
+[Standard digital clocks]
+Стандартные часы
+[Avatar to right]
+Аватар справа
 [Logo]
 Лого
-[Use different colors for background]
-Использовать цветной фон
 ;============================================================
 ;  QuickMessages
 ;============================================================
+[Additional menu]
+Дополнительное меню
 [Send file (Right Click - Received files)]
 Отправить файл (Правый клик — Принятые файлы)
 [Font size]
 Размер
 ;============================================================
-;  Various actions and Tipper items not included in source code.
+;  Tipper
 ;============================================================
+[Tomorrow]
+Завтра
+[Day after tomorrow]
+Послезавтра
+[days to birthday]
+дней до праздника
 [UIN registered]
 Зарегистрирован
 [ago]
@@ -38333,8 +38127,6 @@ OpenSSL не загружен.
 был
 [in the]
 в
-[qipStatus]
-qipСтатус
 [Current activity]
 Текущая активность
 [Messaging activity]
@@ -38357,10 +38149,3 @@ qipСтатус
 Всего сообщений
 [Last message received]
 Последнее сообщение принято
-;============================================================
-;  TrafficCounter
-;============================================================
-[Now]
-Сейчас
-[Total]
-Всего
