@@ -520,7 +520,7 @@ Source: x86\Skins\IEView\!tools\filetypes\*; DestDir: {app}\Skins\IEView\!tools\
 Source: x86\Skins\IEView\!tools\fonts\*; DestDir: {app}\Skins\IEView\!tools\fonts; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\!tools\Icons\*; DestDir: {app}\Skins\IEView\!tools\Icons; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\!tools\Icons\packs\fugue.7z; DestDir: {app}\Skins\IEView\!tools\Icons; Check: IsStyleChecked('IconsFugue'); AfterInstall: Extract();
-Source: x86\Skins\IEView\!tools\Icons\packs\ice.7z; DestDir: {app}\Skins\IEView\!tools\Icons; Check: IsStyleChecked('IconsNova'); AfterInstall: Extract();
+Source: x86\Skins\IEView\!tools\Icons\packs\ice.7z; DestDir: {app}\Skins\IEView\!tools\Icons; Check: IsStyleChecked('IconsIce'); AfterInstall: Extract();
 Source: x86\Skins\IEView\!tools\Icons\packs\nova.7z; DestDir: {app}\Skins\IEView\!tools\Icons; Check: IsStyleChecked('IconsNova'); AfterInstall: Extract();
 Source: x86\Skins\IEView\!tools\Icons\packs\xpk.7z; DestDir: {app}\Skins\IEView\!tools\Icons; Check: IsStyleChecked('IconsXpk'); AfterInstall: Extract();
 Source: x86\Skins\IEView\!tools\player\*; DestDir: {app}\Skins\IEView\!tools\player; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
