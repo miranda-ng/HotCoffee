@@ -89,7 +89,6 @@
   "Protocols\ICQCorp," + \
   "Protocols\IRC," + \
   "Protocols\Jabber\GMail," + \
-  "Protocols\Jabber\Google," + \
   "Protocols\Jabber\GTalk," + \
   "Protocols\Jabber\Hangouts," + \
   "Protocols\Jabber\Jabber," + \
@@ -354,9 +353,6 @@ Source: x86\Skins\Avatars\Jabber.png; DestDir: {app}\Skins\Avatars; Flags: ignor
  ; Protocols\Jabber\GMail
 Source: x86\Icons\Proto_conn_GMail.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\GMail; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_GMail.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\GMail; AfterInstall: AddDetails;
- ; Protocols\Jabber\Google
-Source: x86\Icons\Proto_conn_Google.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Google; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_Google.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Google; AfterInstall: AddDetails;
  ; Protocols\Jabber\GTalk
 Source: x86\Icons\Proto_conn_GTalk.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\GTalk; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_GTalk.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\GTalk; AfterInstall: AddDetails;
@@ -628,7 +624,6 @@ Name: Protocols\ICQCorp; Description: {code:ComponentsHelper|ICQCorp_Protocol}; 
 Name: Protocols\IRC; Description: {code:ComponentsHelper|IRC_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
 Name: Protocols\Jabber\GMail; Description: {code:ComponentsHelper|Jabber_Protocol_GMail}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Jabber\Google; Description: {code:ComponentsHelper|Jabber_Protocol_Google}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber\GTalk; Description: {code:ComponentsHelper|Jabber_Protocol_GTalk}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber\Hangouts; Description: {code:ComponentsHelper|Jabber_Protocol_Hangouts}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol_Jabber}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
@@ -757,7 +752,6 @@ Name: Protocols\ICQCorp; Description: {code:ComponentsHelper|ICQCorp_Protocol}; 
 Name: Protocols\IRC; Description: {code:ComponentsHelper|IRC_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
 Name: Protocols\Jabber\GMail; Description: {code:ComponentsHelper|Jabber_Protocol_GMail}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Jabber\Google; Description: {code:ComponentsHelper|Jabber_Protocol_Google}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\GTalk; Description: {code:ComponentsHelper|Jabber_Protocol_GTalk}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\Hangouts; Description: {code:ComponentsHelper|Jabber_Protocol_Hangouts}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol_Jabber}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
@@ -1100,12 +1094,6 @@ Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 24; String: sGMa
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 224; String: d24; Flags: uninsdeleteentry; Components: Protocols\Jabber\GMail;
 Filename: {app}\Profiles\update.ini; Section: GMail; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\GMail;
 Filename: {app}\Profiles\autoexec_update.ini; Section: GMail; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\GMail; Check: IsUpdate;
- ; Protocols\Jabber\Google
-Filename: {app}\Profiles\settings.ini; Section: Google; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Google;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 25; String: sGoogle; Flags: uninsdeleteentry; Components: Protocols\Jabber\Google;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 225; String: d25; Flags: uninsdeleteentry; Components: Protocols\Jabber\Google;
-Filename: {app}\Profiles\update.ini; Section: Google; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Google;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Google; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Google; Check: IsUpdate;
  ; Protocols\Jabber\GTalk
 Filename: {app}\Profiles\settings.ini; Section: GTalk; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\GTalk;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 26; String: sGTalk; Flags: uninsdeleteentry; Components: Protocols\Jabber\GTalk;
