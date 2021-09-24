@@ -243,7 +243,7 @@ Source: Resources\fonts\SegoePrB.ttf; DestDir: {fonts}; FontInstall: Segoe Print
  ; Core
 Source: {#AppArch}\Core\*; DestDir: {app}\Core; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
  ; Icons
-Source: x86\Icons\MirLua_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Icons\Custom_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_conn.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Dummy.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_MetaContacts.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
