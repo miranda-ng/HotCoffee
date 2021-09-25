@@ -348,6 +348,8 @@ Source: x86\Icons\Proto_IRC.dll; DestDir: {app}\Icons; Flags: ignoreversion; Com
 Source: x86\Skins\Avatars\IRC.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\IRC; AfterInstall: AddDetails;
  ; Protocols\Jabber
 Source: {#AppArch}\Plugins\Jabber.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_conn_Google.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_Google.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
 Source: x86\Icons\xStatus_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
 Source: x86\Skins\Avatars\Jabber.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
  ; Protocols\Jabber\GMail
@@ -483,7 +485,6 @@ Source: {#AppArch}\Plugins\MyDetails.dll; DestDir: {app}\Plugins; Flags: ignorev
 Source: {#AppArch}\Plugins\NewXstatusNotify.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\NewXstatusNotify; AfterInstall: AddDetails;
  ; Plugins\QuickMessages
 Source: {#AppArch}\Plugins\QuickMessages.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\QuickMessages; AfterInstall: AddDetails;
-Source: x86\Icons\QuickMessages_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Plugins\QuickMessages; AfterInstall: AddDetails;
  ; Plugins\QuickSearch
 Source: {#AppArch}\Plugins\QuickSearch.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\QuickSearch; AfterInstall: AddDetails;
  ; Plugins\MirOTR
