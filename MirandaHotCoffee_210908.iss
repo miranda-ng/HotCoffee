@@ -1235,6 +1235,15 @@ Filename: {app}\Profiles\settings.ini; Section: UserInfoEx; Key: RemindEnabled; 
 Filename: {app}\Profiles\update.ini; Section: UserInfoEx; Key: RemindEnabled; String: b2; Flags: uninsdeleteentry; Components: Plugins\WhenWasIt or (Plugins\UInfoEx and Plugins\WhenWasIt);
 Filename: {app}\Profiles\autoexec_update.ini; Section: UserInfoEx; Key: RemindEnabled; String: b2; Flags: uninsdeleteentry; Components: Plugins\WhenWasIt or (Plugins\UInfoEx and Plugins\WhenWasIt); Check: IsUpdate;
 
+; Resources\PopupPlus Popup - on
+Filename: {app}\Profiles\settings.ini; Section: Popup; Key: ModuleIsEnabled; String: b1; Flags: uninsdeleteentry; Components: Resources\PopupPlus;
+Filename: {app}\Profiles\update.ini; Section: Popup; Key: ModuleIsEnabled; String: b1; Flags: uninsdeleteentry; Components: Resources\PopupPlus;
+Filename: {app}\Profiles\autoexec_update.ini; Section: Popup; Key: ModuleIsEnabled; String: b1; Flags: uninsdeleteentry; Components: Resources\PopupPlus;
+; Resources\PopupPlus Popup - off
+Filename: {app}\Profiles\settings.ini; Section: Popup; Key: ModuleIsEnabled; String: b0; Flags: uninsdeleteentry; Components: not Resources\PopupPlus;
+Filename: {app}\Profiles\update.ini; Section: Popup; Key: ModuleIsEnabled; String: b0; Flags: uninsdeleteentry; Components: not Resources\PopupPlus;
+Filename: {app}\Profiles\autoexec_update.ini; Section: Popup; Key: ModuleIsEnabled; String: b0; Flags: uninsdeleteentry; Components: not Resources\PopupPlus;
+
  ; Tab_SRMsg default
 Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: default_ieview; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and not Plugins\HistoryPP;
 Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: default_hpp; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and not Plugins\HistoryPP;
