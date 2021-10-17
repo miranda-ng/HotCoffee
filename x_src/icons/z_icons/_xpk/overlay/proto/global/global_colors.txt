@@ -3,6 +3,11 @@ Articons
 global_green
 оттенок: -120
 
+global_blue_light
+IcoFX
+global_green
+желтый: 70
+
 global_cyan
 IcoFX
 global_green
@@ -25,10 +30,12 @@ global_green
 Насыщенность: -70
 Яркость: 15
 
-global_light_blue
+global_orange
 IcoFX
 global_green
-желтый: 70
+циан: 40
+магента: -30
+желтый: -30
 
 global_purple
 IcoFX
@@ -43,13 +50,6 @@ global_green
 циан: 40
 магента: -45
 желтый: -45
-
-global_red2
-IcoFX
-global_green
-циан: 40
-магента: -30
-желтый: -30
 
 global_yelow
 IcoFX
