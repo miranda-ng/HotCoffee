@@ -25,7 +25,7 @@
 #define AppVerMajor "0"
 #define AppVerMinor "96"
 #define AppVerBuild "1"
-#define AppVerRevis "24211"
+#define AppVerRevis "24264"
 #define AppVerStatusBuild " alpha build #"
 #define AppStatus "Alpha"                                                   ; must be Test, Alpha, Beta or Final
 #define AppRelease "R56"
@@ -37,7 +37,7 @@
 ;#define AppMirVer AppArch == "x86" ? AppShortVer + AppVerStatusBuild + AppVerRevis : AppShortVer + AppVerStatusBuild + AppVerRevis + " x64"
 #define AppDevOrStab AppStatus == "Final" ? "StableVersion" : "DevelopmentVersion"
 
-#define AppUpdateVersion "0.96.1.24211"                                     ; product version update range
+#define AppUpdateVersion "0.96.1.24264"                                     ; product version update range
 
 #define AppWidth "65"                                                       ; Increasing width of the client
 #define AppHeight "25"                                                      ; Increasing height of the client
