@@ -6,11 +6,11 @@ local t = {}
 
 t.Restart = function(w, l)
   m.CallService('Miranda/System/Restart', w, l)
-  local batch = "timeout /t 3 /nobreak && taskkill /f /pid {processId} && start {processName}" % {
+  local batch = "timeout /t 7 /nobreak && taskkill /f /pid {processId} && start \"\" \"{processName}\"" % {
     ["processId"] = winapi.GetCurrentProcessId(),
     ["processName"] = m.GetFullPath()
   }
-  winapi.ShellExecute(hasAccess(m.Parse("%miranda_path%\\miranda.test")) and "open" or "runas", 'cmd.exe', '/C '.. batch)
+  winapi.ShellExecute(t.HasAccess() and "open" or "runas", 'cmd.exe', '/C '.. batch)
 end
 
 t.HasAccess = function(path)
