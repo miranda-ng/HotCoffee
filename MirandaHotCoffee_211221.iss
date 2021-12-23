@@ -25,7 +25,7 @@
 #define AppVerMajor "0"
 #define AppVerMinor "96"
 #define AppVerBuild "1"
-#define AppVerRevis "24264"
+#define AppVerRevis "24282"
 #define AppVerStatusBuild " alpha build #"
 #define AppStatus "Alpha"                                                   ; must be Test, Alpha, Beta or Final
 #define AppRelease "R56"
@@ -37,7 +37,7 @@
 ;#define AppMirVer AppArch == "x86" ? AppShortVer + AppVerStatusBuild + AppVerRevis : AppShortVer + AppVerStatusBuild + AppVerRevis + " x64"
 #define AppDevOrStab AppStatus == "Final" ? "StableVersion" : "DevelopmentVersion"
 
-#define AppUpdateVersion "0.96.1.24264"                                     ; product version update range
+#define AppUpdateVersion "0.96.1.24282"                                     ; product version update range
 
 #define AppWidth "65"                                                       ; Increasing width of the client
 #define AppHeight "25"                                                      ; Increasing height of the client
@@ -664,7 +664,7 @@ Name: Plugins\Flags; Description: {code:ComponentsHelper|Flags}; Types: optimal 
 Name: Plugins\FltContacts; Description: {code:ComponentsHelper|FltContacts}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Plugins\HistoryPP; Description: {code:ComponentsHelper|HistoryPP}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\HistorySweeperLight; Description: {code:ComponentsHelper|HistorySweeperLight}; Types: advanced custom; Flags: disablenouninstallwarning;
-Name: Plugins\IgnoreState; Description: {code:ComponentsHelper|IgnoreState}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Plugins\IgnoreState; Description: {code:ComponentsHelper|IgnoreState}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\KeyboardNotify; Description: {code:ComponentsHelper|KeyboardNotify}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\ListeningTo; Description: {code:ComponentsHelper|ListeningTo}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Plugins\MyDetails; Description: {code:ComponentsHelper|MyDetails}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
@@ -792,7 +792,7 @@ Name: Plugins\Flags; Description: {code:ComponentsHelper|Flags}; Types: optimal 
 Name: Plugins\FltContacts; Description: {code:ComponentsHelper|FltContacts}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Plugins\HistoryPP; Description: {code:ComponentsHelper|HistoryPP}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\HistorySweeperLight; Description: {code:ComponentsHelper|HistorySweeperLight}; Types: advanced full custom; Flags: disablenouninstallwarning;
-Name: Plugins\IgnoreState; Description: {code:ComponentsHelper|IgnoreState}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Plugins\IgnoreState; Description: {code:ComponentsHelper|IgnoreState}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\KeyboardNotify; Description: {code:ComponentsHelper|KeyboardNotify}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\ListeningTo; Description: {code:ComponentsHelper|ListeningTo}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Plugins\MyDetails; Description: {code:ComponentsHelper|MyDetails}; Types: full custom; Flags: disablenouninstallwarning;
