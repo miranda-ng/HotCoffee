@@ -1,9 +1,9 @@
 #define debug 0                                                             ; only for developers: 0 - debug off, 1 - debug on
 #define generatecheck 0                                                     ; only for developers: 0 - generatecheck off, 1 - generatecheck on
-#define splash 0                                                            ; splash screen: 0 - splash off, 1 - splash on
+#define splash 1                                                            ; splash screen: 0 - splash off, 1 - splash on
 #define aero 0                                                              ; aero theme: 0 - disable, 1 - full, 2 - top, 3 - bottom, 4 - top/bottom.
-#define fulltype 1                                                          ; full type: 0 - disable, 1 - enable
-#define freezecheckbox 0                                                    ; freezecheckbox: 0 - disable, 1 - enable
+#define fulltype 0                                                          ; full type: 0 - disable, 1 - enable
+#define freezecheckbox 1                                                    ; freezecheckbox: 0 - disable, 1 - enable
 
 #define AppId "HotCoffee™"
 #define AppName "Miranda NG HotCoffee"
