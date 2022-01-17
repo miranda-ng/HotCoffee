@@ -27,8 +27,8 @@
 #define AppVerBuild "1"
 #define AppVerRevis "24291"
 #define AppVerStatusBuild " alpha build #"
-#define AppStatus "Alpha"                                                   ; must be Test, Alpha, Beta or Final
-#define AppRelease "R56"
+#define AppStatus "Test"                                                    ; must be Test, Alpha, Beta or Final
+#define AppRelease "R57"
 
 #define AppShortVer AppVerMajor + "." + AppVerMinor + "." + AppVerBuild
 #define AppVer AppVerMajor + "." + AppVerMinor + "." + AppVerBuild + "." + AppVerRevis
@@ -421,7 +421,7 @@ Source: {#AppArch}\Plugins\GmailNotifier.dll; DestDir: {app}\Plugins; Flags: ign
  ; Protocols\Pseudo\mRadio
 Source: {#AppArch}\Plugins\mRadio.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\BASS\*; DestDir: {app}\Plugins\BASS; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
-Source: x86\Plugins\mRadio\*; DestDir: {app}\Plugins\mRadio; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
+Source: x86\Plugins\mRadio\*; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_mRadio.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
 Source: x86\Skins\Avatars\mRadio.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
  ; Protocols\Pseudo\NewsAggregator

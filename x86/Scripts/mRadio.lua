@@ -18,7 +18,7 @@ end
 
 schedule.At(os.time() + 2400).Do(function()
   if db.GetSetting(_, 'FirstRun', 'Lua_mRadio', 0) == 0 then
-    local mRadioIniPath = toansi(m.Parse('%miranda_path%\\Plugins\\mRadio\\mRadio.ini'))
+    local mRadioIniPath = toansi(m.Parse('%miranda_path%\\Plugins\\mRadio.ini'))
     m.CallService('mRadio/Import', 0, mRadioIniPath)
     db.WriteSetting(_, 'FirstRun', 'Lua_mRadio', 1, db.DBVT_BYTE)
     db.WriteSetting(_, 'mRadio', 'Volume', 100, db.DBVT_BYTE)
