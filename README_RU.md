@@ -4,7 +4,7 @@
 
 Универсальный интернет-пейджер созданный на основе проекта [Miranda NG][1].
 
-## Links ##
+## Ссылки ##
 
 - [Домашняя страница](https://www.miranda-ng.org/hotcoffee/)
 - [Форум](https://forum.miranda-ng.org/index.php?topic=45.50000#lastPost)
