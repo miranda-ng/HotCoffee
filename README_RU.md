@@ -1,6 +1,6 @@
 # Miranda HotCoffee #
 
-([README in english](https://github.com/miranda-ng/HotCoffee/README.md))
+([README in english](https://github.com/miranda-ng/HotCoffee/blob/master/README.md))
 
 Универсальный интернет-пейджер созданный на основе проекта [Miranda NG][1].
 

@@ -1,6 +1,6 @@
 # Miranda HotCoffee #
 
-([README на русском](https://github.com/miranda-ng/HotCoffee/README_RU.md))
+([README на русском](https://github.com/miranda-ng/HotCoffee/blob/master/README_RU.md))
 
 [Miranda NG][1]-based universal internet pager.
 
