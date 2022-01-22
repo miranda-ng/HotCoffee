@@ -2,6 +2,10 @@
 
 Универсальный интернет-пейджер созданный на основе проекта [Miranda NG][1].
 
+<details><summary>Внешний вид</summary>
+<a href="https://www.miranda-ng.org/hotcoffee/images/view/Skin_Glamour_Dark.png"><img src="https://www.miranda-ng.org/hotcoffee/images/view/Skin_Glamour_Dark.png"></img></a>
+</details>
+
 ## Ссылки ##
 
 * [Домашняя страница](https://www.miranda-ng.org/hotcoffee/)

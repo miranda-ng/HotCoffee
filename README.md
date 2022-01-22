@@ -2,6 +2,10 @@
 
 [Miranda NG][1]-based universal internet pager.
 
+<details><summary>Appearance</summary>
+<a href="https://www.miranda-ng.org/hotcoffee/images/view/Skin_Glamour_Dark.png"><img src="https://www.miranda-ng.org/hotcoffee/images/view/Skin_Glamour_Dark.png"></img></a>
+</details>
+  
 ## Links ##
 
 * [Homepage](https://www.miranda-ng.org/hotcoffee/)
