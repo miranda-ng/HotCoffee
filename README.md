@@ -1,6 +1,4 @@
-<a href="https://github.com/miranda-ng/HotCoffee/blob/master/README_RU.md"><img align="right" src="https://www.miranda-ng.org/hotcoffee/images/flags/ru.png" alt="Russian"></img></a>
-
-<h1 align="center">Miranda HotCoffee</h1>
+<h1>Miranda HotCoffee<a href="https://github.com/miranda-ng/HotCoffee/blob/master/README_RU.md"><img align="right" src="https://www.miranda-ng.org/hotcoffee/images/flags/ru.png" alt="Russian"></img></a></h1>
 
 [Miranda NG][1]-based universal internet pager.
 

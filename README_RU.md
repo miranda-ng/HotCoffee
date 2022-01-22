@@ -1,6 +1,4 @@
-<a href="https://github.com/miranda-ng/HotCoffee/blob/master/README.md"><img align="right" src="https://www.miranda-ng.org/hotcoffee/images/flags/us.png" alt="English"></img></a>
-
-<h1 align="center">Miranda HotCoffee</h1>
+<h1>Miranda HotCoffee<a href="https://github.com/miranda-ng/HotCoffee/blob/master/README.md"><img align="right" src="https://www.miranda-ng.org/hotcoffee/images/flags/us.png" alt="English"></img></a></h1>
 
 Универсальный интернет-пейджер созданный на основе проекта [Miranda NG][1].
 
