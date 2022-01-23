@@ -520,8 +520,6 @@ Source: x86\Skins\IEView\!tools\Icons\packs\nova.7z; DestDir: {app}\Skins\IEView
 Source: x86\Skins\IEView\!tools\Icons\packs\xpk.7z; DestDir: {app}\Skins\IEView\!tools\Icons; Check: IsStyleChecked('IconsXpk'); AfterInstall: Extract();
 Source: x86\Skins\IEView\!tools\player\*; DestDir: {app}\Skins\IEView\!tools\player; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\!tools\scripts\*; DestDir: {app}\Skins\IEView\!tools\scripts; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\IEView; AfterInstall: AddDetails;
-Source: x86\Skins\IEView\!tools\tZersFiles\animationen\*; DestDir: {app}\Skins\IEView\!tools\tZersFiles\animationen; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
-Source: x86\Skins\IEView\!tools\tZersFiles\grafiken\*; DestDir: {app}\Skins\IEView\!tools\tZersFiles\grafiken; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\styles\Current_Windows\*; DestDir: {app}\Skins\IEView\styles\Current_Windows; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\styles\Current_Windows.css; DestDir: {app}\Skins\IEView\styles; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\styles\*.png; DestDir: {app}\Skins\IEView\styles; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
@@ -538,7 +536,6 @@ Source: x86\Skins\Smileys\_light\emoji\*; DestDir: {app}\Skins\Smileys\_light\em
 Source: x86\Skins\Smileys\_dark\kolobok\*; DestDir: {app}\Skins\Smileys\_dark\kolobok; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\Smileys; AfterInstall: AddDetails;
 Source: x86\Skins\Smileys\_light\kolobok\*; DestDir: {app}\Skins\Smileys\_light\kolobok; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\Smileys; AfterInstall: AddDetails;
 Source: x86\Skins\Smileys\emoji\*; DestDir: {app}\Skins\Smileys\emoji; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\Smileys; AfterInstall: AddDetails;
-Source: x86\Skins\Smileys\flash\*; DestDir: {app}\Skins\Smileys\flash; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\Smileys; AfterInstall: AddDetails;
  ; Resources\Smileys\big_pack emoji
 Source: x86\Skins\Smileys\_dark\emoji\emoji_big_pack.msl; DestDir: {app}\Skins\Smileys\_dark\emoji; DestName: emoji.msl; Flags: ignoreversion; Components: Resources\Smileys\big_pack; AfterInstall: AddDetails;
 Source: x86\Skins\Smileys\_light\emoji\emoji_big_pack.msl; DestDir: {app}\Skins\Smileys\_light\emoji; DestName: emoji.msl; Flags: ignoreversion; Components: Resources\Smileys\big_pack; AfterInstall: AddDetails;
