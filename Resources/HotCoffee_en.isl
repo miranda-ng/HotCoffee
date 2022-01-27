@@ -315,19 +315,19 @@ CreateAutorunIcon=autorun | Create a &Startup icon | Startup icon.
 Dbtool=Check database
 Support=Support
 Homepage=Homepage
-AppURL=http://www.miranda-ng.org/hotcoffee/
+AppURL=https://www.miranda-ng.org/hotcoffee/
 AppURLOpen=Open homepage
 SupportWiki=Miranda NG Wiki
-AppURLWiki=http://wiki.miranda-ng.org/index.php?title=Packs_(en)/Miranda_NG_HotCoffee
+AppURLWiki=https://wiki.miranda-ng.org/index.php?title=Packs_(en)/Miranda_NG_HotCoffee
 AppURLWikiOpen=Open Miranda NG Wiki
 SupportMNG=Miranda NG Support
-AppURLMNG=http://forum.miranda-ng.org/index.php?topic=45.50000
+AppURLMNG=https://forum.miranda-ng.org/index.php?topic=45.50000#lastPost
 AppURLMNGOpen=Open Miranda NG support web page
 SupportMP=Miranda Planet support
 AppURLMP=http://miranda-planet.com/packs/1670-miranda-im-hotcoffee.html
 AppURLMPOpen=Open Miranda Planet support web page
 SupportFaq=FAQ
-AppFaqURL=http://www.miranda-ng.org/hotcoffee/en/faq/
+AppFaqURL=https://www.miranda-ng.org/hotcoffee/en/faq/
 AppFaqURLOpen=Open Frequently Asked Questions web page
 SupportBlog=Blog
 AppSupportBlogURL=http://im-hotcoffee.blogspot.com/

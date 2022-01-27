@@ -27,7 +27,7 @@
 #define AppVerBuild "1"
 #define AppVerRevis "24291"
 #define AppVerStatusBuild " alpha build #"
-#define AppStatus "Alpha"                                                    ; must be Test, Alpha, Beta or Final
+#define AppStatus "Alpha"                                                   ; must be Test, Alpha, Beta or Final
 #define AppRelease "R56"
 
 #define AppShortVer AppVerMajor + "." + AppVerMinor + "." + AppVerBuild
@@ -190,8 +190,8 @@ RawDataResource=WizardSmallImage:"Resources\images\WizardSmallImage.bmp"
 #define RecycleLogo "Recycle.bmp"
 
 [Languages]
-Name: en; MessagesFile: Resources\English.isl,Resources\{#AppShortName}_en.isl; LicenseFile: Resources\License_en.rtf; InfoBeforeFile: Resources\InfoBefore_en.rtf; InfoAfterFile: Resources\{#if AppStatus != "Test"}InfoAfter_en{#else}InfoAfter_en_Test{#endif}.rtf;
-Name: ru; MessagesFile: Resources\Russian.isl,Resources\{#AppShortName}_ru.isl; LicenseFile: Resources\License_ru.rtf; InfoBeforeFile: Resources\InfoBefore_ru.rtf; InfoAfterFile: Resources\{#if AppStatus != "Test"}InfoAfter_ru{#else}InfoAfter_ru_Test{#endif}.rtf;
+Name: en; MessagesFile: Resources\English.isl,Resources\{#AppShortName}_en.isl; LicenseFile: Resources\License_en.rtf; InfoBeforeFile: Resources\InfoBefore_en.rtf; InfoAfterFile: Resources\InfoAfter_en.rtf;
+Name: ru; MessagesFile: Resources\Russian.isl,Resources\{#AppShortName}_ru.isl; LicenseFile: Resources\License_ru.rtf; InfoBeforeFile: Resources\InfoBefore_ru.rtf; InfoAfterFile: Resources\InfoAfter_ru.rtf;
 
 [Messages]
 BeveledLabel={#AppName} {#AppVer} {#AppStatus} {#AppRelease} ({#AppArch}) © {#AppPublisher}, 2010 - {#GetDateTimeString('yyyy', '', '')}
@@ -274,6 +274,7 @@ Source: {#AppArch}\Plugins\CrashDumper.dll; DestDir: {app}\Plugins; Flags: ignor
 Source: {#AppArch}\Plugins\Db_autobackups.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\DbChecker.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Dbx_mdbx.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\Dbx_mmap.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Dbx_sqlite.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Dummy.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Folders.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
@@ -421,7 +422,7 @@ Source: {#AppArch}\Plugins\GmailNotifier.dll; DestDir: {app}\Plugins; Flags: ign
  ; Protocols\Pseudo\mRadio
 Source: {#AppArch}\Plugins\mRadio.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\BASS\*; DestDir: {app}\Plugins\BASS; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
-Source: x86\Plugins\mRadio\*; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
+Source: x86\Plugins\mRadio\*; DestDir: {app}\Plugins\mRadio; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_mRadio.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
 Source: x86\Skins\Avatars\mRadio.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
  ; Protocols\Pseudo\NewsAggregator
@@ -1231,11 +1232,11 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: UserInfoEx; Key: RemindEn
 ; Resources\PopupPlus Popup - on
 Filename: {app}\Profiles\settings.ini; Section: Popup; Key: ModuleIsEnabled; String: b1; Flags: uninsdeleteentry; Components: Resources\PopupPlus;
 Filename: {app}\Profiles\update.ini; Section: Popup; Key: ModuleIsEnabled; String: b1; Flags: uninsdeleteentry; Components: Resources\PopupPlus;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Popup; Key: ModuleIsEnabled; String: b1; Flags: uninsdeleteentry; Components: Resources\PopupPlus;
+Filename: {app}\Profiles\autoexec_update.ini; Section: Popup; Key: ModuleIsEnabled; String: b1; Flags: uninsdeleteentry; Components: Resources\PopupPlus; Check: IsUpdate;
 ; Resources\PopupPlus Popup - off
 Filename: {app}\Profiles\settings.ini; Section: Popup; Key: ModuleIsEnabled; String: b0; Flags: uninsdeleteentry; Components: not Resources\PopupPlus;
 Filename: {app}\Profiles\update.ini; Section: Popup; Key: ModuleIsEnabled; String: b0; Flags: uninsdeleteentry; Components: not Resources\PopupPlus;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Popup; Key: ModuleIsEnabled; String: b0; Flags: uninsdeleteentry; Components: not Resources\PopupPlus;
+Filename: {app}\Profiles\autoexec_update.ini; Section: Popup; Key: ModuleIsEnabled; String: b0; Flags: uninsdeleteentry; Components: not Resources\PopupPlus; Check: IsUpdate;
 
  ; Tab_SRMsg default
 Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: default_ieview; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and not Plugins\HistoryPP;
@@ -6296,12 +6297,12 @@ begin
           BorderStyle := bsNone;
 
           { add settings }
-//          #if AppStatus == "Final"
           AddCheckBox(SettingsHelper('UpdateSettings'), '', 0, False, False, False, True, nil);
           AddCheckBox(SettingsHelper('CheckUpdates'), '', 1, False, True, True, False, nil);
+          #if AppStatus == "Final"
           AddRadioButton(SettingsHelper('StableVersion'), '', 1, False, True, nil);
+          #endif
           AddRadioButton(SettingsHelper('DevelopmentVersion'), '', 1, False, True, nil);
-//          #endif
           AddCheckBox(SettingsHelper('ContactList'), '', 0, False, True, False, True, nil);
           AddCheckBox(SettingsHelper('OnTop'), '', 1, False, True, True, False, nil);
           AddCheckBox(SettingsHelper('ViewModes'), '', 1, False, True, True, False, nil);

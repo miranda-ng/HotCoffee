@@ -811,11 +811,11 @@ Last-Modified-Using: Miranda NG 0.96.1
 [What do you want to do with the file now?]
 Что сделать с файлом?
 [&Recycle]
-&Использовать снова
+&В корзину
 [&Delete]
 &Удалить
-[&Move/Rename]
-&Переместить/Переименовать
+[&Move]
+&Переместить
 [&Leave]
 &Оставить
 [Netlib log options]
@@ -2176,8 +2176,8 @@ Miranda не смогла загрузить встроенную систему
 База данных
 [Database compaction failed]
 Не удалось сжать базу
-[Compact]
-Сжать
+[Compact database]
+Сжать базу
 [Miranda is unable to open '%s' because you do not have any profile plugins installed.\nYou need to install dbx_mdbx.dll]
 Miranda не может открыть '%s', так как плагины для поддержки профилей не установлены.\nНеобходимо установить плагин dbx_mdbx.dll
 [Miranda was unable to open '%s', it's in an unknown format.]
@@ -2212,6 +2212,8 @@ Miranda не может распознать этот профиль
 Это изменение потенциально опасно.
 [This change is not known to be safe.]
 Неизвестно, будет ли изменение безопасным.
+[File names must be different]
+Имена файлов должны отличаться
 [Invalid setting type for '%s'. The first character of every value must be b, w, d, l, s, e, u, g, h or n.]
 Неверный тип настройки для '%s'. Первая буква любого значения должна быть b, w, d, l, s, e, u, g, h или n.
 ;file \src\mir_app\src\db_upgrade.cpp
@@ -8634,7 +8636,7 @@ utf8:'%s'
 ;============================================================
 ;  File: CrashDumper.dll
 ;  Plugin: Crash dumper
-;  Version: 0.1.0.4
+;  Version: 0.2.0.1
 ;  Authors: borkra
 ;============================================================
 [Crash Dumper and Version Information for Miranda NG.]
@@ -8648,14 +8650,6 @@ utf8:'%s'
 Копировать в буфер
 [To File]
 В файл
-[Support for vi.miranda-ng.org]
-Поддержка vi.miranda-ng.org
-[Username]
-Имя пользователя
-[Password]
-Пароль
-[Upload automatically when changed]
-Загружать автоматически при изменениях
 [Crash reports]
 Отчёты о проблемах
 [Generate crash reports]
@@ -8687,8 +8681,6 @@ utf8:'%s'
 Версии в файл
 [Show Version Information]
 Показать версии
-[Upload Version Information]
-Загрузить версии
 [Version Information]
 Версии
 [Copy to clipboard]
@@ -8698,20 +8690,18 @@ utf8:'%s'
 [Show]
 Показать
 [Show with DLLs]
-С библиотеками
-[Upload]
-Загрузить
-[Copy link to clipboard]
-Копировать ссылку в буфер обмена
+Показать с библиотеками
 [Open crash report directory]
 Папка сохранения отчётов
-[Open online Version Info]
-Открыть онлайн информацию о версиях
 [Copy Version Info to clipboard]
 Копировать версии в буфер обмена
 [Show Version Info]
 Показать версии
 ;file \plugins\CrashDumper\src\crshdmp_icons.cpp
+[Upload]
+Загрузить
+[Copy link to clipboard]
+Копировать ссылку в буфер обмена
 [Crash Dumper]
 Отчёты о проблемах и версии
 ;file \plugins\CrashDumper\src\exhndlr.cpp
@@ -8724,21 +8714,6 @@ Miranda NG была завершена аварийно. Отчёт сохран
 Информация о версиях (с библиотеками)
 [Services]
 Службы
-;file \plugins\CrashDumper\src\upload.cpp
-[Version Info upload successful.]
-Версии успешно загружены.
-[Cannot upload Version Info. Incorrect username or password]
-Нельзя загрузить информацию о версиях. Неправильное имя пользователя или пароль
-[Cannot upload Version Info. User is banned]
-Нельзя загрузить информацию о версиях. Пользователь забанен
-[Cannot upload Version Info. Daily upload limit exceeded]
-Нельзя загрузить информацию о версиях. Исчерпано дневное ограничение количества загрузок
-[Cannot upload Version Info. Unknown error]
-Нельзя загрузить информацию о версиях. Неизвестная ошибка
-[Cannot upload Version Info. Host unreachable.]
-Нельзя загрузить информацию о версиях. Хост недоступен
-[Crash Dumper HTTP connections]
-HTTP-подключения Crash Dumper
 
 #muuid {3613F2D9-C040-4361-A44F-DF7B5AAACF6E}
 ;============================================================
@@ -9082,8 +9057,6 @@ ID пользователя
 ;file \protocols\CurrencyRates\src\HTTPSession.cpp
 [This plugin requires a personal key. Press Yes to obtain it at the site and then enter the result in the Options dialog, otherwise this plugin will fail.]
 Для использования онлайн-сервиса конвертации валют требуется получить персональный ключ. Нажмите "Да", чтобы запросить его через веб-сайт, и введите ключ в настройках плагина.
-[CurrencyRates HTTP connections]
-HTTP-подключения CurrencyRates
 ;file \protocols\CurrencyRates\src\ImportExport.cpp
 [XML File (*.xml)]
 Файл XML (*.xml)
@@ -9724,137 +9697,11 @@ Miranda нашла повреждения в вашей базе. Miranda буд
 [Miranda NG [%s] database backup]
 Резервная копия базы Miranda NG [%s]
 
-#muuid {88928401-2ce8-4568-aaa7-226141870cbf}
-;============================================================
-;  File: Discord.dll
-;  Plugin: Discord protocol
-;  Version: 0.6.2.11
-;  Authors: George Hazan
-;============================================================
-[Discord support for Miranda NG.]
-Поддержка протокола Discord в Miranda NG.
-;file \protocols\Discord\res\discord.rc
-[User details]
-О пользователе
-[E-mail:]
-Почта:
-[Password:]
-Пароль:
-[Contacts]
-Контакты
-[Default group:]
-Группа:
-[Enable guilds (servers)]
-Включить поддержку гильдий (серверов)
-[Do not open chat windows on creation]
-Не открывать окна комнат чата при создании
-[Use subgroups for server channels (requires restart)]
-Создавать подгруппы для каждого сервера (требуется перезапуск)
-[Delete messages in Miranda when they are deleted from server]
-Удалять сообщения из истории Миранды, если они удалены с сервера
-[Nick:]
-Ник:
-;file \protocols\Discord\src\dispatch.cpp
-[edited at]
-изменено в
-;file \protocols\Discord\src\groupchat.cpp
-[Change &nickname]
-Изменить &ник
-[Channel control]
-Управление комнатой чата
-[Change &topic]
-&Изменить тему
-[&Rename channel]
-&Переименовать комнату чата
-[&Destroy channel]
-&Удалить комнату чата
-[Copy ID]
-Копировать ID
-[Do you really want to destroy this channel? This action is non-revertable.]
-Удалить этот канал? Удаление невозможно будет отменить.
-[Enter new channel name:]
-Укажите новое имя комнаты чата:
-[Enter new topic:]
-Укажите новую тему
-[Enter your new nick name:]
-Введите свой новый ник:
-;file \protocols\Discord\src\main.cpp
-[Main icon]
-Главный значок
-[Group chats]
-Чаты
-[Call]
-Звонок
-[Call ended]
-Звонок завершён
-;file \protocols\Discord\src\menus.cpp
-[Enter channel name]
-Укажите имя комнаты чаты
-[Enter invitation code you received]
-Введите полученный код приглашения
-[Do you really want to leave the guild?]
-Вы действительно хотите покинуть гильдию?
-[Disable sync]
-Выключить синхронизацию
-[Enable sync]
-Включить синхронизацию
-[Join guild]
-Присоединиться к гильдии
-[Copy my Discord ID]
-Копировать Discord ID
-[Leave guild]
-Покинуть гильдию
-[Create new channel]
-Создать новую комнату чата
-[Copy Discord ID]
-Копировать Discord ID
-[Enable guild sync]
-Вкл. синхронизацию для этого сервера
-;file \protocols\Discord\src\options.cpp
-[Network]
-Сеть
-[Account]
-Учётная запись
-;file \protocols\Discord\src\proto.cpp
-[Incoming call]
-Входящий звонок
-[%s server connection]
-%s подключение к серверу
-[%s gateway connection]
-%s подключение к шлюзу
-[Discord voice call]
-Голосовой вызов Discord
-[User ID]
-ID пользователя
-[Message send failed]
-Не удалось отправить сообщение
-[Protocol is offline or user isn't authorized yet]
-Протокол не в сети или пользователь ещё не авторизовался
-;file \protocols\Discord\src\server.cpp
-[The server requires you to enter the captcha. Miranda will redirect you to a browser now]
-Сервер требует ввести капчу. Сейчас Миранда перенаправит вас в браузер
-[Connection failed.\n%s (%s).]
-Ошибка подключения.\n%s (%s).
-;file \protocols\Discord\src\utils.cpp
-[Owners]
-Владельцы
-[Participants]
-Участники
-[Attachment]
-Вложение
-[Embed]
-Встроенное изображение
-[Preview]
-Предварительный просмотр
-;file \protocols\Discord\src\voice.cpp
-[Call ended, %d seconds long]
-Звонок завершён, длительность - %d секунд
-
 #muuid {2a1081d1-aee3-4091-b70d-ae46d09f9a7f}
 ;============================================================
 ;  File: Dummy.dll
 ;  Plugin: Dummy protocol
-;  Version: 0.2.0.0
+;  Version: 0.2.0.1
 ;  Authors: Robert Pösel
 ;============================================================
 [Dummy protocol for Miranda NG. Could be used for holding contacts and history from deprecated protocols or for creating virtual contacts.]
@@ -9874,11 +9721,13 @@ ID пользователя
 Для применения настроек нужен перезапуск.
 [Allow sending messages to contacts]
 Разрешить отправку сообщений
-;file \protocols\Dummy\src\dummy.h
+;file \protocols\Dummy\src\dummy_proto.cpp
 [Custom]
 Настроить
 [Screen name]
 Ник
+[Discord ID]
+Discord ID
 [User name]
 Имя пользователя
 [Facebook ID]
@@ -9911,7 +9760,6 @@ Tox ID
 VKontakte ID
 [WhatsApp ID]
 WhatsApp ID
-;file \protocols\Dummy\src\dummy_proto.cpp
 [This Dummy account has disabled sending messages. Enable it in account options.]
 Отправка сообщений запрещена. Включите её в настройках этой учётной записи-заглушки.
 
@@ -10075,8 +9923,6 @@ ID записи
 [Account]
 Учётная запись
 ;file \protocols\Facebook\src\proto.cpp
-[%s server connection]
-Подключение к серверу %s
 [Protocol is offline or user isn't authorized yet]
 Протокол не в сети или пользователь ещё не авторизовался
 ;file \protocols\Facebook\src\server.cpp
@@ -11236,8 +11082,6 @@ HTTP неизвестная ошибка
 [Contact list]
 Список контактов
 ;file \protocols\Gadu-Gadu\src\gg_proto.cpp
-[%s connection]
-%s подключение
 [Images]
 Изображения
 [Gadu-Gadu Number]
@@ -11499,8 +11343,8 @@ IP адрес
 Другое
 [Gmail: New thread(s)]
 Gmail: Новая почта
-[Gmail Notifier connection]
-Подключение Gmail Notifier
+[Gmail Notifier]
+Уведомление о почте Gmail
 [&Check all Gmail inboxes]
 Проверить все ящики Gmail
 [&Check Gmail inbox]
@@ -12194,6 +12038,8 @@ Wiki-страница дополнительных параметров
 Исходящие события
 [Unused]
 Не используется
+[Can not apply default toolbar configuration.]
+Невозможно применить конфигурацию панели инструментов по умолчанию.
 
 #muuid {f184f5a0-c198-4454-a9b4-f6e2fd534133}
 ;============================================================
@@ -13457,7 +13303,7 @@ Hardware HotKeys
 ;============================================================
 ;  File: ICQ.dll
 ;  Plugin: ICQ-WIM protocol
-;  Version: 0.96.1.6
+;  Version: 0.96.1.7
 ;  Authors: George Hazan
 ;============================================================
 [ICQ protocol support for Miranda NG.]
@@ -13540,8 +13386,6 @@ UIN/почта:
 [You have %d unread emails]
 Непрочитанных писем: %d
 ;file \protocols\ICQ-WIM\src\proto.cpp
-[%s server connection]
-%s подключение к серверу
 [Synchronize server groups]
 Синхронизировать группы с сервером
 [Name]
@@ -14094,7 +13938,7 @@ UIN/почта/телефон
 ;============================================================
 ;  File: IRC.dll
 ;  Plugin: IRC protocol
-;  Version: 0.96.1.3
+;  Version: 0.96.1.4
 ;  Authors: Miranda team
 ;============================================================
 [Internet Relay Chat (IRC) protocol support for Miranda NG.]
@@ -14475,10 +14319,10 @@ DCC: Запрос на продолжение закачки файла от %s 
 [DCC ERROR: Unable to bind local port for passive file transfer]
 Ошибка DCC: Невозможно выполнить привязку к локальному порту для пассивной передачи файлов
 ;file \protocols\IRCG\src\ircproto.cpp
-[%s server connection]
-%s подключение к серверу
-[%s client-to-client connections]
-%s подключения между пользователями
+[%s (server)]
+%s (сервер)	
+[%s (client-to-client)]
+%s (между пользователями)
 [Nickname]
 Ник
 [DCC ERROR: No valid files specified]
@@ -16761,9 +16605,6 @@ Jabber vCard: редактирование телефона
 Контакты
 [Note]
 Заметка
-;file \protocols\JabberG\src\jabber_ws.cpp
-[%s connection]
-%s подключение
 ;file \protocols\JabberG\src\jabber_xstatus.cpp
 [<advanced status slot>]
 <слот расширенного статуса>
@@ -17638,7 +17479,7 @@ foobar2000 (установите плагин вручную)
 ;============================================================
 ;  File: LotusNotify.dll
 ;  Plugin: LotusNotify
-;  Version: 0.1.23.0
+;  Version: 0.1.23.1
 ;  Authors: MaKaRSoFT - http://maciej.wycik.pl/miranda
 ;============================================================
 [Notify about new mail in Lotus Database]
@@ -17725,6 +17566,13 @@ foobar2000 (установите плагин вручную)
 Выполняется проверка Lotus, повторите попытку позже
 [Attachments: %d bytes]
 Вложения: %d байт
+[&Check Lotus]
+&Проверить Lotus
+[Lotus Notify]
+Lotus Notify
+[New Lotus document detected]
+Обнаружен новый документ Lotus
+;file \protocols\LotusNotify\src\options.cpp
 [Status]
 Статус
 [Plugins]
@@ -17735,12 +17583,6 @@ foobar2000 (установите плагин вручную)
 Всплывающие окна
 [Miscellaneous]
 Прочее
-[&Check Lotus]
-&Проверить Lotus
-[Lotus Notify]
-Lotus Notify
-[New Lotus document detected]
-Обнаружен новый документ Lotus
 
 #muuid {08c01613-24c8-486f-bdae-2c3ddcaf9347}
 ;============================================================
@@ -17947,8 +17789,6 @@ Miranda была закрыта или произошла ошибка при о
 [Protocol icon]
 Значок протокола
 ;file \protocols\MinecraftDynmap\src\proto.cpp
-[%s server connection]
-%s подключение к серверу
 [Unable to initialize Netlib for %s.]
 Невозможно создать подключение Netlib для %s.
 [Visible name]
@@ -18215,8 +18055,6 @@ MirFox/Ошибка
 [Accounts]
 Учётные записи
 ;file \plugins\MirFox\src\MirandaUtils.cpp
-[MirFox log]
-Лог MirFox
 [Message sent to %s]
 Сообщение для %s отправлено
 [Message sent to %s (%s)]
@@ -19832,9 +19670,6 @@ URL страницы с комментариями к новости.
 Аватары
 [Enable/disable auto update]
 Вкл/Выкл автообновление
-;file \protocols\NewsAggregator\Src\Utils.cpp
-[NewsAggregator HTTP connections]
-HTTP-подключения каналов новостей
 
 #muuid {1ad11c86-caab-4372-a0a4-8b1168d51b9e}
 ;============================================================
@@ -21778,8 +21613,6 @@ Omegle - отличный способ найти новых друзей!
 [You both speak the same language.]
 Вы говорите на одном языке.
 ;file \protocols\Omegle\src\proto.cpp
-[%s server connection]
-Подключение к серверу %s
 [Unable to initialize Netlib for %s.]
 Невозможно создать подключение Netlib для %s.
 [Stranger is typing]
@@ -21966,8 +21799,6 @@ Omegle - отличный способ найти новых друзей!
 Кнопка 'Да'
 ['No' Button]
 Кнопка 'Нет'
-[Pack Updater HTTP connections]
-HTTP-подключения Pack Updater
 [URL for checking updates not found.]
 Ссылка для проверки обновлений не найдена.
 [Downloading version info...]
@@ -22107,8 +21938,6 @@ Web-страница
 Разместить из буфера
 [Paste from file]
 Разместить из файла
-[Paste It HTTP connections]
-HTTP-подключения Paste It
 ;file \plugins\PasteIt\src\PasteToWeb.cpp
 [You can only paste 1 file]
 Вы можете разместить только 1 файл
@@ -22151,7 +21980,7 @@ HTTP-подключения Paste It
 ;============================================================
 ;  File: Ping.dll
 ;  Plugin: Ping
-;  Version: 0.9.1.1
+;  Version: 0.9.1.2
 ;  Authors: Scott Ellis
 ;============================================================
 [Ping labelled IP addresses or domain names.]
@@ -22251,23 +22080,21 @@ TCP соединение
 [Ping]
 Пинг
 ;file \plugins\Ping\src\options.cpp
+[<none>]
+<нет>
+[<all>]
+<все>
 [Text Files (*.txt)]
 Текстовые файлы (*.txt)
 [All Files]
 Все файлы
 [Open log file]
 Открыть журнал
-[<none>]
-<нет>
-[<all>]
-<все>
 [Settings]
 Настройки
 [Hosts]
 Хосты
 ;file \plugins\Ping\src\ping.cpp
-[Ping Plugin]
-Плагин Ping
 [Responding]
 Отвечает
 [Not Responding]
@@ -22513,8 +22340,6 @@ TCP соединение
 Проверить обновления
 [Plugin info]
 Информация о плагинах
-[Plugin Updater HTTP connections]
-HTTP-подключения Plugin Updater
 [Available components list]
 Установка компонентов...
 [Update failed]
@@ -23686,9 +23511,6 @@ ID и версия клиента
 Уведомление
 [Error]
 Ошибка
-;file \protocols\Sametime\src\sametime_proto.cpp
-[%s connection]
-Соединение %s
 ;file \protocols\Sametime\src\sametime_session.cpp
 [Sametime administrator message]
 Сообщение администратора Sametime
@@ -25651,8 +25473,6 @@ BBCode
 Не удалось создать папку для скриншотов (код ошибки: %d):\n%s\nУ вас точно есть права на запись?
 [Could not create main dialog.]
 Невозможно создать главный диалог.
-[SendSS HTTP connections]
-HTTP-подключения SendSS
 [SendSS]
 Отправить скриншот
 [Screenshots]
@@ -26438,8 +26258,6 @@ URI объект
 [Calls]
 Звонки
 ;file \protocols\SkypeWeb\src\skype_proto.cpp
-[%s connection]
-%s подключение
 [Incoming call canceled]
 Отмена входящего звонка
 [Skypename]
@@ -26503,8 +26321,6 @@ URI объект
 [Show smiley selection window]
 Показать окно для выбора смайла
 ;file \plugins\SmileyAdd\src\download.cpp
-[SmileyAdd HTTP connections]
-HTTP-подключения SmileyAdd
 [SmileyAdd]
 Смайлы
 [Smiley packs' folder]
@@ -27545,8 +27361,6 @@ Cтатус-профиль
 Значок протокола
 [Gaming icon]
 Игровой значок
-[%s connection]
-%s подключение
 [You cannot send messages when you are offline.]
 Вы не можете отправлять сообщения без подключения к сети.
 ;file \protocols\Steam\src\steam_utils.cpp
@@ -30688,9 +30502,6 @@ IPv6 адрес (необязательно)
 Действие
 [You cannot send when you are offline.]
 Вы не можете отправлять сообщения без подключения к сети.
-;file \protocols\Tox\src\tox_netlib.cpp
-[%s connection]
-%s подключение
 ;file \protocols\Tox\src\tox_options.cpp
 [Tox profile]
 Профиль Tox
@@ -31046,12 +30857,12 @@ ID контакта не соответствует ни одному конта
 [You're missing the Nick key in the database. This isn't really a big deal, but you'll notice some minor quirks (self contact in list, no group chat outgoing message highlighting, etc). To fix it either add it manually or recreate your Miranda Twitter account]
 В базе отсутствует настройка "Nick". Это не страшно, но чревато некоторыми ошибками (вы заметите самого себя в списке, отсутствие подсветки исходящих сообщений в групповых чатах). Чтобы это исправить, добавьте недостающую настройку самостоятельно или пересоздайте свою учётную запись в Miranda NG
 ;file \protocols\Twitter\src\proto.cpp
-[%s server connection]
-%s подключение к серверу
+[%s (server)]
+%s (сервер)
 [Unable to initialize Netlib for %s.]
 Невозможно создать подключение Netlib для %s.
-[%s avatar connection]
-%s подключение аватаров
+[%s (avatar)]
+%s (аватар)
 [Twitter (avatars)]
 Twitter (аватары)
 [User name]
@@ -33246,8 +33057,6 @@ ID получателя ошибочен или неизвестен
 [This message has been deleted by sender in %s:\n]
 Отправитель удалил это сообщение в %s:\n
 ;file \protocols\VKontakte\src\vk_proto.cpp
-[%s server connection]
-Подключение к серверу %s
 [Newsfeed & notification event]
 Новости и уведомления
 [Mark messages as read]
@@ -34024,9 +33833,6 @@ MPD хост
 Порт
 [Password]
 Пароль
-;file \plugins\Watrack_MPD\src\init.cpp
-[Watrack MPD connection]
-Подключение Watrack MPD
 ;file \plugins\Watrack_MPD\src\options.cpp
 [Winamp Track]
 Сейчас играет (WATrack)
@@ -34496,9 +34302,6 @@ INI файл погоды для этой станции не найден (20)
 <Введите название города>
 [Error when obtaining data: %s]
 Ошибка при получении данных: %s
-;file \protocols\Weather\src\weather_http.cpp
-[Weather HTTP connections]
-HTTP-подключения Weather
 ;file \protocols\Weather\src\weather_info.cpp
 [Name]
 Имя
@@ -37610,9 +37413,6 @@ YAMN
 Ошибка перевода заголовка
 [Part]
 Часть
-;file \protocols\YAMN\src\proto\netlib.cpp
-[%s connection]
-%s подключение
 ;file \protocols\YAMN\src\proto\pop3\pop3comm.cpp
 [Disconnected]
 Отключён
