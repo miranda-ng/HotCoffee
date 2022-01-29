@@ -1,0 +1,114 @@
+﻿нужен универсальный батник build.bat, для изготовления горячего кофе из свежемолотых зёрен арабики ;)
+
+задачи батника:
+
+проверяем папку .tools\InnoUltra на наличие в ней компилятора Compil32.exe
+	если есть пропускаем
+	если нету, то скачиваем архив отсюда: https://miranda-ng.org/distr/packs/HotCoffee/.tools.7z и распаковываем в папку .tools
+1.
+// минимальный архив Miranda последней Stable версии 32bit лежит по адресу: https://miranda-ng.org/distr/stable/miranda-ng-v0.95.13.1.7z
+// минимальный архив Miranda последней Stable версии 64bit лежит по адресу: https://miranda-ng.org/distr/stable/miranda-ng-v0.95.13.1_x64.7z
+
+// минимальный архив Miranda последней Development версии 32bit лежит по адресу: https://miranda-ng.org/distr/miranda-ng-alpha-latest.7z
+// минимальный архив Miranda последней Development версии 64bit лежит по адресу: https://miranda-ng.org/distr/miranda-ng-alpha-latest_x64.7z
+
+2.
+// русский лангпак Stable версии лежит по адресу: https://miranda-ng.org/distr/stable/x32/Languages/langpack_russian.zip
+// русский лангпак Development версии лежит по адресу: https://miranda-ng.org/distr/x32/Languages/langpack_russian.zip
+
+3.
+// компоненты Stable 32bit лежат по адресу: https://miranda-ng.org/distr/stable/x32/Plugins/имя компонента.zip
+// компоненты Stable 64bit лежат по адресу: https://miranda-ng.org/distr/stable/x64/Plugins/имя компонента.zip
+
+// компоненты Development 32bit лежат по адресу: https://miranda-ng.org/distr/x32/Plugins/имя компонента.zip
+// компоненты Development 64bit лежат по адресу: https://miranda-ng.org/distr/x64/Plugins/имя компонента.zip
+
+задаём вопрос...
+какую версию мы хотим скомпилировать? Stable или Development...
+и на основании выбора определяем какую версию будем скачивать...
+скачиваем оба минимальных архива Miranda и распаковываем их в папки x86 и x64 соответственно
+скачиваем лангпак и распаковываем его в папку x86\Languages
+
+если Development то так:
+
+set url="https://www.miranda-ng.org/distr/miranda-ng-alpha-latest.7z"
+set dest="x86\miranda-ng.7z"
+call ".tools\curl.exe" %url% --output %dest%
+call ".tools\7z.exe" x %dest% -aoa -o"x86\" -x!mirandaboot.ini -y
+del %dest%
+
+set url="https://www.miranda-ng.org/distr/miranda-ng-alpha-latest_x64.7z"
+set dest="x64\miranda-ng.7z"
+call ".tools\curl.exe" %url% --output %dest%
+call ".tools\7z.exe" x %dest% -aoa -o"x64\" -x!mirandaboot.ini -y
+del %dest%
+
+set url="https://miranda-ng.org/distr/x32/Languages/langpack_russian.zip"
+set dest="x86\langpack_russian.zip"
+call ".tools\curl.exe" %url% --output %dest%
+call ".tools\7z.exe" x %dest% -aoa -o"x86\" -y
+del %dest%
+
+если Stable то так:
+
+set url="https://miranda-ng.org/distr/stable/miranda-ng-v0.95.13.1.7z"
+set dest="x86\miranda-ng.7z"
+call ".tools\curl.exe" %url% --output %dest%
+call ".tools\7z.exe" x %dest% -aoa -o"x86\" -x!mirandaboot.ini -y
+del %dest%
+
+set url="https://miranda-ng.org/distr/stable/miranda-ng-v0.95.13.1_x64.7z"
+set dest="x64\miranda-ng.7z"
+call ".tools\curl.exe" %url% --output %dest%
+call ".tools\7z.exe" x %dest% -aoa -o"x64\" -x!mirandaboot.ini -y
+del %dest%
+
+set url="https://miranda-ng.org/distr/stable/x32/Languages/langpack_russian.zip"
+set dest="x86\langpack_russian.zip"
+call ".tools\curl.exe" %url% --output %dest%
+call ".tools\7z.exe" x %dest% -aoa -o"x86\" -y
+del %dest%
+
+// если батник такое умеет, то нужно создать переменную с перечислением требующихся имён компонентов
+скачиваем все перечисленные компоненты и распаковываем их в папки x86 и x64 соответственно
+
+если Development то так:
+
+set url="https://miranda-ng.org/distr/x32/Plugins/имя компонента.zip"
+set dest="x86\имя компонента.zip"
+call ".tools\curl.exe" %url% --output %dest%
+call ".tools\7z.exe" x %dest% -aoa -o"x86\" -y
+del %dest%
+
+set url="https://miranda-ng.org/distr/x64/Plugins/имя компонента.zip"
+set dest="x64\имя компонента.zip"
+call ".tools\curl.exe" %url% --output %dest%
+call ".tools\7z.exe" x %dest% -aoa -o"x64\" -y
+del %dest%
+
+если Stable то так:
+
+set url="https://miranda-ng.org/distr/stable/x32/Plugins/имя компонента.zip"
+set dest="x86\имя компонента.zip"
+call ".tools\curl.exe" %url% --output %dest%
+call ".tools\7z.exe" x %dest% -aoa -o"x86\" -y
+del %dest%
+
+set url="https://miranda-ng.org/distr/stable/x64/Plugins/имя компонента.zip"
+set dest="x64\имя компонента.zip"
+call ".tools\curl.exe" %url% --output %dest%
+call ".tools\7z.exe" x %dest% -aoa -o"x64\" -y
+del %dest%
+
+из папки Sources копируем всё содиржимое в папку x86
+
+запускаем патчер иконок "Sources\Skins\IconPacks\IconPatcher.exe" с ключиком /verysilent и патчим набором xpk обе версии миранды x64 и x86
+после завершения патчера снова запускаем патчер иконок с ключиком /verysilent и патчим уже набором xpk_hotcoffee (обязательно в такой последовательности: сразу xpk потом xpk_hotcoffee)
+
+после завершения патчера запускаем компиляцию на основе файла MirandaHotCoffee.iss
+
+сначала компилим например версию x64, а после завершения компилим x86 соответственно
+
+по окончании компиляции удаляем папки x64 и x86
+
+и на последок открываем папку output в проводнике

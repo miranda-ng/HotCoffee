@@ -1,0 +1,47 @@
+[About]
+Author = Favor, Dracosha
+Preview = Preview.png
+
+[Background]
+Image = BG.png
+TM = TM_STRECH_ALL 
+Left = 7
+Top = 7
+Right = 7
+Bottom = 7
+
+[Sidebar]
+Image = SideBar.png
+TM = TM_STRECH_ALL
+Left = 0
+Top = 6
+Right = 8
+Bottom = 6
+
+[Fonts]
+Title-color = 182 119 73
+Title-effect = FONT_BOLD
+
+Label-color = 185 187 200
+Label-effect = FONT_BOLD
+
+Value-color = 185 187 200
+Value-effect = 0
+
+TrayTitle-color = 97 139 190
+TrayTitle-effect = FONT_BOLD
+
+Divider-color = 109 112 124
+
+[Appearance]
+Inner-avatar-padding = 2
+Outer-avatar-padding = 8
+General-padding = 8
+Text-padding = 3
+Sidebar-width = 35
+Title-indent = 28
+Text-indent = 28
+Value-indent = 7
+
+[Other]
+Enable-coloring = TRUE

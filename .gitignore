@@ -1,3 +1,12 @@
 .tools/
 output/*HotCoffee*.exe
 x64/
+x86/
+x_srcs/dll/
+x_srcs/Icons/
+x_srcs/ini/
+x_srcs/Installer/
+x_srcs/Profiles/
+x_srcs/Scripts/
+x_srcs/Skins/
+x_srcs/UserSet/

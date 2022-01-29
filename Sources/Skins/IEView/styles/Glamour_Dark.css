@@ -1,0 +1,220 @@
+/*--- Global ---*/
+
+.Link-Text, .tzerlink {
+	color: #B1CCED;
+}
+
+input {
+	background: #4E4E4E;
+	border-left: 1px solid #817E80;
+	border-top: 1px solid #817E80;
+	border-right: 1px solid #333232;
+	border-bottom: 1px solid #333232;
+	color: #D2CECC;
+}
+
+html {
+	scrollbar-face-color: #4E4E4E;
+	scrollbar-highlight-color: #4E4E4E;
+	scrollbar-shadow-color: #4E4E4E;
+	scrollbar-arrow-color: #D2CECC;
+	scrollbar-3dlight-color: #817E80;
+	scrollbar-darkshadow-color: #333232;
+	scrollbar-track-color: #646263;
+	background: url(Glamour_Dark/picture.png) fixed no-repeat bottom right;
+	background-color: #646263;
+	overflow: auto;
+	padding: 0px 0px 0px 0px;
+	margin: 0;
+	font-size: 13px;
+	color: #D2CECC;
+	zoom: 0 !important;
+}
+
+a, a:active {
+	color: #B1CCED;
+	text-decoration: none;
+	font-weight: normal;
+	cursor:pointer;
+}
+
+a:visited {
+	color: #E9C5A0;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+a:hover {
+	color: #B1CCED;
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+div {
+	width: auto;
+	word-wrap: break-word;
+}
+
+.img {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	vertical-align: middle;
+}
+
+/*.head {
+	border-bottom: 1px dotted;
+}*/
+
+.date {
+	font-weight: bold;
+	float: right;
+	font-size: 11px;
+	padding: 3px 5px 0px 5px;
+}
+
+.name {
+	font-weight: bold;
+	padding: 3px 5px 0px 5px;
+}
+
+.time {
+	color: #A69D99;
+	font-weight: normal;
+	float: right;
+	font-size: 11px;
+}
+
+.text {
+/*	word-break: break-all;*/
+	padding: 3px 5px 3px 5px;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+div.avatar {
+	display: none;
+	float: left;
+	padding: 0px 0px 0px 0px;
+}
+
+.avatar img {
+	height: 32;
+}
+
+.code {
+	border: 1px dashed #817E80;
+	margin: -1px;
+}
+
+.MessageIn, .hMessageIn, .frame_MessageInGroupStart, .frame_hMessageInGroupStart {
+	border-left: 1px solid #817E80;
+	border-top: 1px solid #817E80;
+	border-right: 1px solid #333232;
+	border-bottom: 1px solid #333232;
+}
+
+.MessageOut, .hMessageOut, .frame_MessageOutGroupStart, .frame_hMessageOutGroupStart {
+	border-left: 1px solid #817E80;
+	border-top: 1px solid #817E80;
+	border-right: 1px solid #333232;
+	border-bottom: 1px solid #333232;
+}
+
+.MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
+	border-top: 1px dotted #817E80;
+}
+
+.hMessageIn, .hMessageOut, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart, .hStatus, .hFileIn, .hFileOut, .hURL {
+	background: url(Glamour_Dark/history.png) no-repeat bottom right;
+}
+
+/* -------------------- incoming messagebox -------------------- */
+
+.in .head {
+	color: #DFA375;
+	background-image: url(Glamour_Dark/in.png);
+}
+
+.contentMessageIn, .contenthMessageIn, .contentMessageInGroupStart, .MessageInGroupInner, .contenthMessageInGroupStart, .hMessageInGroupInner {
+	background-image: url(Glamour_Dark/in.png);
+}
+
+/* -------------------- outgoing messagebox -------------------- */
+
+.out .head {
+	color: #81ACE2;
+	background-image: url(Glamour_Dark/out.png);
+}
+
+.contentMessageOut, .contenthMessageOut, .contentMessageOutGroupStart, .MessageOutGroupInner, .contenthMessageOutGroupStart, .hMessageOutGroupInner {
+	background-image: url(Glamour_Dark/out.png);
+}
+
+/* -------------------- status support -------------------- */
+
+.status .head {
+	color: #DFA375;
+	background-image: url(Glamour_Dark/status.png);
+}
+
+.contentStatus, .contenthStatus {
+	color: #E9C5A0;
+	background-image: url(Glamour_Dark/status.png);
+}
+
+.contentStatus .time, .contenthStatus .time {
+	color: #B98966;
+}
+
+.Status, .hStatus {
+	border-left: 1px solid #867468;
+	border-top: 1px solid #867468;
+	border-right: 1px solid #3D352F;
+	border-bottom: 1px solid #3D352F;
+}
+
+/* -------------------- file transfer support -------------------- */
+
+.infile .head, .outfile .head {
+	color: #8BC26D;
+	background-image: url(Glamour_Dark/file.png);
+}
+
+.contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
+	color: #B9D9A6;
+	background-image: url(Glamour_Dark/file.png);
+}
+
+.contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
+	color: #7CA367;
+}
+
+.FileIn, .hFileIn, .FileOut, .hFileOut {
+	border-left: 1px solid #6B836B;
+	border-top: 1px solid #6B836B;
+	border-right: 1px solid #303C30;
+	border-bottom: 1px solid #303C30;
+}
+
+/* -------------------- URL support -------------------- */
+
+.inurl .head, .outurl .head {
+	color: #81ACE2;
+	background-image: url(Glamour_Dark/url.png);
+}
+
+.contentURL, .contenthURL {
+	color: #B1CCED;
+	background-image: url(Glamour_Dark/url.png);
+}
+
+.contentURL .time, .contenthURL .time {
+	color: #6D91BC;
+}
+
+.URL, .hURL {
+	border-left: 1px solid #66768B;
+	border-top: 1px solid #66768B;
+	border-right: 1px solid #2E363F;
+	border-bottom: 1px solid #2E363F;
+}

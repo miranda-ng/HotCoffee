@@ -37,7 +37,7 @@
 ;#define AppMirVer AppArch == "x86" ? AppShortVer + AppVerStatusBuild + AppVerRevis : AppShortVer + AppVerStatusBuild + AppVerRevis + " x64"
 #define AppDevOrStab AppStatus == "Final" ? "StableVersion" : "DevelopmentVersion"
 
-#define AppUpdateVersion "0.96.1.24291"                                     ; product version update range
+#define AppUpdateVersion "0.95.13.23830,0.96.1.24291"                       ; product version update range
 
 #define AppWidth "65"                                                       ; Increasing width of the client
 #define AppHeight "25"                                                      ; Increasing height of the client
@@ -78,7 +78,6 @@
   {app}\Plugins\ListeningTo\gen_mlt.dll"
 
 #define CLUIFrames \
-  "Protocols\Discord," + \
   "Protocols\EmLanProto," + \
   "Protocols\Facebook," + \
   "Protocols\GG," + \
@@ -245,6 +244,7 @@ Source: {#AppArch}\Core\*; DestDir: {app}\Core; Flags: ignoreversion; Components
  ; Icons
 Source: x86\Icons\Custom_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_conn.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_Discord.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Dummy.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_MetaContacts.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\TabSRMM_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
@@ -310,9 +310,6 @@ Source: {#AppArch}\pu_stub.exe; DestDir: {app}; Flags: ignoreversion; Components
 Source: x86\mirandaboot.ini; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 
  ; Protocols
- ; Protocols\Discord
-Source: {#AppArch}\Plugins\Discord.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Discord; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_Discord.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Discord; AfterInstall: AddDetails;
  ; Protocols\EmLanProto
 Source: {#AppArch}\Plugins\EmLanProto.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\EmLanProto; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_EM_LAN_PROTO.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\EmLanProto; AfterInstall: AddDetails;
@@ -608,7 +605,6 @@ Name: MainCore; Description: {code:ComponentsHelper|CoreFiles}; Types: minimal o
 
  ; Protocols
 Name: Protocols; Description: {code:ComponentsHelper|Protocols}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Protocols\Discord; Description: {code:ComponentsHelper|Discord_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\EmLanProto; Description: {code:ComponentsHelper|EmLanProto_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Facebook; Description: {code:ComponentsHelper|Facebook_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\GG; Description: {code:ComponentsHelper|GG_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
@@ -735,7 +731,6 @@ Name: MainCore; Description: {code:ComponentsHelper|CoreFiles}; Types: minimal o
 
  ; Protocols
 Name: Protocols; Description: {code:ComponentsHelper|Protocols}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Discord; Description: {code:ComponentsHelper|Discord_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\EmLanProto; Description: {code:ComponentsHelper|EmLanProto_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Facebook; Description: {code:ComponentsHelper|Facebook_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\GG; Description: {code:ComponentsHelper|GG_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
@@ -1059,12 +1054,6 @@ Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 214; String: d14
 Filename: {app}\Profiles\settings.ini; Section: YandexDisk; Key: AM_BaseProto; String: sCloudFile/YandexDisk; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 15; String: sYandexDisk; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 215; String: d15; Flags: uninsdeleteentry;
- ; Protocols\Discord
-Filename: {app}\Profiles\settings.ini; Section: Discord; Key: AM_BaseProto; String: sDiscord; Flags: uninsdeleteentry; Components: Protocols\Discord;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 17; String: sDiscord; Flags: uninsdeleteentry; Components: Protocols\Discord;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 217; String: d17; Flags: uninsdeleteentry; Components: Protocols\Discord;
-Filename: {app}\Profiles\update.ini; Section: Discord; Key: AM_BaseProto; String: sDiscord; Flags: uninsdeleteentry; Components: Protocols\Discord;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Discord; Key: AM_BaseProto; String: sDiscord; Flags: uninsdeleteentry; Components: Protocols\Discord; Check: IsUpdate;
  ; Protocols\EmLanProto
 Filename: {app}\Profiles\settings.ini; Section: EM_LAN_PROTO; Key: AM_BaseProto; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 18; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;

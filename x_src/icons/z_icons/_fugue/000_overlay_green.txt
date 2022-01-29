@@ -1,7 +1,0 @@
-green
-open red icon
-Axialis IconWorkshop
-оттенок/насыщенность
-оттенок: 120
-яркость: -10
-гамма-коррекция: -30

@@ -1,0 +1,220 @@
+/*--- Global ---*/
+
+.Link-Text, .tzerlink {
+	color: #98BBE7;
+}
+
+input {
+	background: #1D1D1D;
+	border-left: 1px solid #373737;
+	border-top: 1px solid #373737;
+	border-right: 1px solid #0C0C0C;
+	border-bottom: 1px solid #0C0C0C;
+	color: #C0C0C0;
+}
+
+html {
+	scrollbar-face-color: #1D1D1D;
+	scrollbar-highlight-color: #1D1D1D;
+	scrollbar-shadow-color: #1D1D1D;
+	scrollbar-arrow-color: #C0C0C0;
+	scrollbar-3dlight-color: #373737;
+	scrollbar-darkshadow-color: #0C0C0C;
+	scrollbar-track-color: #252525;
+	background: url(Dark.png) fixed no-repeat bottom right;
+	background-color: #252525;
+	overflow: auto;
+	padding: 0px 0px 0px 0px;
+	margin: 0;
+	font-size: 13px;
+	color: #C0C0C0;
+	zoom: 0 !important;
+}
+
+a, a:active {
+	color: #98BBE7;
+	text-decoration: none;
+	font-weight: normal;
+	cursor:pointer;
+}
+
+a:visited {
+	color: #E4BA8F;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+a:hover {
+	color: #98BBE7;
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+div {
+	width: auto;
+	word-wrap: break-word;
+}
+
+.img {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	vertical-align: middle;
+}
+
+/*.head {
+	border-bottom: 1px dotted;
+}*/
+
+.date {
+	font-weight: bold;
+	float: right;
+	font-size: 11px;
+	padding: 3px 5px 0px 5px;
+}
+
+.name {
+	font-weight: bold;
+	padding: 3px 5px 0px 5px;
+}
+
+.time {
+	color: #808080;
+	font-weight: normal;
+	float: right;
+	font-size: 11px;
+}
+
+.text {
+/*	word-break: break-all;*/
+	padding: 3px 5px 3px 5px;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+div.avatar {
+	display: none;
+	float: left;
+	padding: 0px 0px 0px 0px;
+}
+
+.avatar img {
+	height: 32;
+}
+
+.code {
+	border: 1px dashed #373737;
+	margin: -1px;
+}
+
+.MessageIn, .hMessageIn, .frame_MessageInGroupStart, .frame_hMessageInGroupStart {
+	border-left: 1px solid #373737;
+	border-top: 1px solid #373737;
+	border-right: 1px solid #0C0C0C;
+	border-bottom: 1px solid #0C0C0C;
+}
+
+.MessageOut, .hMessageOut, .frame_MessageOutGroupStart, .frame_hMessageOutGroupStart {
+	border-left: 1px solid #373737;
+	border-top: 1px solid #373737;
+	border-right: 1px solid #0C0C0C;
+	border-bottom: 1px solid #0C0C0C;
+}
+
+.MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
+	border-top: 1px dotted #373737;
+}
+
+.hMessageIn, .hMessageOut, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart, .hStatus, .hFileIn, .hFileOut, .hURL {
+	background: url(Custom_Miranda_Dark/history.png) no-repeat bottom right;
+}
+
+/* -------------------- incoming messagebox -------------------- */
+
+.in .head {
+	color: #B5784A;
+	background-image: url(Custom_Miranda_Dark/in.png);
+}
+
+.contentMessageIn, .contenthMessageIn, .contentMessageInGroupStart, .MessageInGroupInner, .contenthMessageInGroupStart, .hMessageInGroupInner {
+	background-image: url(Custom_Miranda_Dark/in.png);
+}
+
+/* -------------------- outgoing messagebox -------------------- */
+
+.out .head {
+	color: #618BBE;
+	background-image: url(Custom_Miranda_Dark/out.png);
+}
+
+.contentMessageOut, .contenthMessageOut, .contentMessageOutGroupStart, .MessageOutGroupInner, .contenthMessageOutGroupStart, .hMessageOutGroupInner {
+	background-image: url(Custom_Miranda_Dark/out.png);
+}
+
+/* -------------------- status support -------------------- */
+
+.status .head {
+	color: #B5784A;
+	background-image: url(Custom_Miranda_Dark/status.png);
+}
+
+.contentStatus, .contenthStatus {
+	color: #E4BA8F;
+	background-image: url(Custom_Miranda_Dark/status.png);
+}
+
+.contentStatus .time, .contenthStatus .time {
+	color: #B98966;
+}
+
+.Status, .hStatus {
+	border-left: 1px solid #42382E;
+	border-top: 1px solid #42382E;
+	border-right: 1px solid #0F0D0B;
+	border-bottom: 1px solid #0F0D0B;
+}
+
+/* -------------------- file transfer support -------------------- */
+
+.infile .head, .outfile .head {
+	color: #699C4E;
+	background-image: url(Custom_Miranda_Dark/file.png);
+}
+
+.contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
+	color: #A3CF8B;
+	background-image: url(Custom_Miranda_Dark/file.png);
+}
+
+.contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
+	color: #82A76D;
+}
+
+.FileIn, .hFileIn, .FileOut, .hFileOut {
+	border-left: 1px solid #343F34;
+	border-top: 1px solid #343F34;
+	border-right: 1px solid #0C0E0C;
+	border-bottom: 1px solid #0C0E0C;
+}
+
+/* -------------------- URL support -------------------- */
+
+.inurl .head, .outurl .head {
+	color: #618BBE;
+	background-image: url(Custom_Miranda_Dark/url.png);
+}
+
+.contentURL, .contenthURL {
+	color: #98BBE7;
+	background-image: url(Custom_Miranda_Dark/url.png);
+}
+
+.contentURL .time, .contenthURL .time {
+	color: #6D91BC;
+}
+
+.URL, .hURL {
+	border-left: 1px solid #2C3847;
+	border-top: 1px solid #2C3847;
+	border-right: 1px solid #0A0C10;
+	border-bottom: 1px solid #0A0C10;
+}
