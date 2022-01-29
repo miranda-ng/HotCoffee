@@ -2,9 +2,9 @@
 
 задачи батника:
 
-проверяем наличие компилятора: ".tools\InnoUltra\Compil32.exe"
+проверяем наличие компилятора: ".tools\InnoRT\Compil32.exe"
 	если есть пропускаем
-	если нет, тогда скачиваем архив отсюда: https://miranda-ng.org/distr/packs/HotCoffee/.tools.7z и распаковываем в папку .tools
+	если нет, тогда скачиваем архив отсюда: https://miranda-ng.org/distr/packs/HotCoffee/.InnoRT.7z и распаковываем в папку .tools\InnoRT
 1.
 // минимальный архив Miranda последней Stable версии 32bit лежит по адресу: https://miranda-ng.org/distr/stable/miranda-ng-v0.95.13.1.7z
 // минимальный архив Miranda последней Stable версии 64bit лежит по адресу: https://miranda-ng.org/distr/stable/miranda-ng-v0.95.13.1_x64.7z

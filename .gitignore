@@ -1,5 +1,6 @@
-.tools/InnoUltra/
+.tools/InnoRT/
 .x_srcs/
 output/*HotCoffee*.exe
 x64/
 x86/
+InnoRT.bat
