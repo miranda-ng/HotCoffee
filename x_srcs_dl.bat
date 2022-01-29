@@ -6,4 +6,4 @@ call ".tools\curl.exe" %url% --output %dest%
 call ".tools\7z.exe" x %dest% -aoa -o".x_srcs\" -y
 del %dest%
 
-::goto :eof
+goto :eof
