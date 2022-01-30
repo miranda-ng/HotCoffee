@@ -52,7 +52,7 @@ del %dest%
 set url="https://www.miranda-ng.org/distr/miranda-ng-alpha-latest_x64.7z"
 set dest="x64\miranda-ng.7z"
 call ".tools\curl.exe" %url% --output %dest%
-call ".tools\7z.exe" x %dest% -aoa -o"x64\" -x!mirandaboot.ini -y
+call ".tools\7z.exe" x %dest% -aoa -o"x64\" -x!Icons -x!Plugins\Import -x!mirandaboot.ini -y
 del %dest%
 
 если Stable то так:
@@ -66,7 +66,7 @@ del %dest%
 set url="https://miranda-ng.org/distr/stable/miranda-ng-v0.95.13.1_x64.7z"
 set dest="x64\miranda-ng.7z"
 call ".tools\curl.exe" %url% --output %dest%
-call ".tools\7z.exe" x %dest% -aoa -o"x64\" -x!mirandaboot.ini -y
+call ".tools\7z.exe" x %dest% -aoa -o"x64\" -x!Icons -x!Plugins\Import -x!mirandaboot.ini -y
 del %dest%
 
 	3.2.
@@ -102,7 +102,7 @@ del %dest%
 set url="https://miranda-ng.org/distr/x64/Plugins/имя компонента.zip"
 set dest="x64\имя компонента.zip"
 call ".tools\curl.exe" %url% --output %dest%
-call ".tools\7z.exe" x %dest% -aoa -o"x64\" -y
+call ".tools\7z.exe" x %dest% -aoa -o"x64\" -x!Icons -x!Plugins\CurrencyRates\*.xml -x!Plugins\Weather -y
 del %dest%
 
 если Stable то так:
@@ -116,7 +116,7 @@ del %dest%
 set url="https://miranda-ng.org/distr/stable/x64/Plugins/имя компонента.zip"
 set dest="x64\имя компонента.zip"
 call ".tools\curl.exe" %url% --output %dest%
-call ".tools\7z.exe" x %dest% -aoa -o"x64\" -y
+call ".tools\7z.exe" x %dest% -aoa -o"x64\" -x!Icons -x!Plugins\CurrencyRates\*.xml -x!Plugins\Weather -y
 del %dest%
 
 	3.4.

@@ -1,3 +1,5 @@
+:: это старый батник, когда-то давно он работал, но тогда в системе была установлена студия,
+:: и этот батник сразу компилил миранду, а потом всё остальное.
 @echo off
 set build_type=%1
 if "%build_type%"=="" (echo "please specify target platform x32 or x64!" && pause && goto :eof)

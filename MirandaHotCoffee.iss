@@ -34,7 +34,6 @@
 #define AppVer AppVerMajor + "." + AppVerMinor + "." + AppVerBuild + "." + AppVerRevis
 #define AppFullVer AppVerMajor + "." + AppVerMinor + "." + AppVerBuild + "." + AppVerRevis + " " + AppStatus + " " + AppRelease
 #define AppMirVer AppShortVer + AppVerStatusBuild + AppVerRevis
-;#define AppMirVer AppArch == "x86" ? AppShortVer + AppVerStatusBuild + AppVerRevis : AppShortVer + AppVerStatusBuild + AppVerRevis + " x64"
 #define AppDevOrStab AppStatus == "Final" ? "StableVersion" : "DevelopmentVersion"
 
 #define AppUpdateVersion "0.95.13.23830,0.96.1.24291"                       ; product version update range
@@ -283,7 +282,6 @@ Source: {#AppArch}\Plugins\MessageState.dll; DestDir: {app}\Plugins; Flags: igno
 Source: {#AppArch}\Plugins\MenuEx.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\MirLua.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\NewAwaySys.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\Nudge.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\PackUpdater.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\PluginUpdater.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\StatusManager.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
@@ -438,57 +436,32 @@ Source: {#AppArch}\Plugins\YAMN.dll; DestDir: {app}\Plugins; Flags: ignoreversio
 Source: x86\Icons\Proto_YAMN.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Pseudo\YAMN; AfterInstall: AddDetails;
 
  ; Plugins
- ; Plugins\Alarms
-Source: {#AppArch}\Plugins\Alarms.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\Alarms; AfterInstall: AddDetails;
- ; Plugins\AssocMgr
-Source: {#AppArch}\Plugins\AssocMgr.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\AssocMgr; AfterInstall: AddDetails;
  ; Plugins\AuthState
 Source: {#AppArch}\Plugins\AuthState.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\AuthState; AfterInstall: AddDetails;
  ; Plugins\BossKey
 Source: {#AppArch}\Plugins\BossKey.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\BossKey; AfterInstall: AddDetails;
  ; Plugins\BuddyExpectator
 Source: {#AppArch}\Plugins\BuddyExpectator.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\BuddyExpectator; AfterInstall: AddDetails;
- ; Plugins\BuddyPounce
-Source: {#AppArch}\Plugins\BuddyPounce.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\BuddyPounce; AfterInstall: AddDetails;
  ; Plugins\ChangeKeyboardLayout
 Source: {#AppArch}\Plugins\ChangeKeyboardLayout.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\ChangeKeyboardLayout; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\TranslitSwitcher.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\ChangeKeyboardLayout; AfterInstall: AddDetails;
  ; Plugins\DbEditorPP
 Source: {#AppArch}\Plugins\DbEditorPP.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\DbEditorPP; AfterInstall: AddDetails;
- ; Plugins\FavContacts
-Source: {#AppArch}\Plugins\FavContacts.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\FavContacts; AfterInstall: AddDetails;
  ; Plugins\Fingerprint
 Source: {#AppArch}\Plugins\Fingerprint.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\Fingerprint; AfterInstall: AddDetails;
 Source: x86\Icons\Fp_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Plugins\Fingerprint; AfterInstall: AddDetails;
  ; Plugins\Flags
 Source: {#AppArch}\Plugins\Flags.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\Flags; AfterInstall: AddDetails;
 Source: x86\Icons\Flag_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Plugins\Flags; AfterInstall: AddDetails;
- ; Plugins\FltContacts
-Source: {#AppArch}\Plugins\FltContacts.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\FltContacts; AfterInstall: AddDetails;
  ; Plugins\HistoryPP
 Source: {#AppArch}\Plugins\HistoryPP.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\HistoryPP; AfterInstall: AddDetails;
 Source: x86\Icons\HistoryPP_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
- ; Plugins\HistorySweeperLight
-Source: {#AppArch}\Plugins\HistorySweeperLight.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\HistorySweeperLight; AfterInstall: AddDetails;
- ; Plugins\KeyboardNotify
-Source: {#AppArch}\Plugins\KeyboardNotify.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\KeyboardNotify; AfterInstall: AddDetails;
- ; Plugins\ListeningTo
-Source: {#AppArch}\Plugins\ListeningTo.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\ListeningTo; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\ListeningTo\*; DestDir: {app}\Plugins\ListeningTo; Flags: ignoreversion; Components: Plugins\ListeningTo; AfterInstall: AddDetails;
- ; Plugins\MyDetails
-Source: {#AppArch}\Plugins\MyDetails.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\MyDetails; AfterInstall: AddDetails;
  ; Plugins\NewXstatusNotify
 Source: {#AppArch}\Plugins\NewXstatusNotify.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\NewXstatusNotify; AfterInstall: AddDetails;
  ; Plugins\QuickMessages
 Source: {#AppArch}\Plugins\QuickMessages.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\QuickMessages; AfterInstall: AddDetails;
  ; Plugins\QuickSearch
 Source: {#AppArch}\Plugins\QuickSearch.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\QuickSearch; AfterInstall: AddDetails;
- ; Plugins\MirOTR
-Source: {#AppArch}\Plugins\MirOTR.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\MirOTR; AfterInstall: AddDetails;
- ; Plugins\SecureIM
-Source: {#AppArch}\Plugins\SecureIM.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\SecureIM; AfterInstall: AddDetails;
-Source: {#AppArch}\Plugins\CryptoPP.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\SecureIM; AfterInstall: AddDetails;
-Source: x86\Icons\SecureIM_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Plugins\SecureIM; AfterInstall: AddDetails;
  ; Plugins\Sessions
 Source: {#AppArch}\Plugins\Sessions.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\Sessions; AfterInstall: AddDetails;
  ; Plugins\SpellChecker
@@ -503,8 +476,6 @@ Source: {#AppArch}\Plugins\UInfoEx.dll; DestDir: {app}\Plugins; Flags: ignorever
 Source: x86\Icons\UInfoEx_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Plugins\UInfoEx; AfterInstall: AddDetails;
  ; Plugins\WhenWasIt
 Source: {#AppArch}\Plugins\WhenWasIt.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\WhenWasIt; AfterInstall: AddDetails;
- ; Plugins\WinterSpeak
-Source: {#AppArch}\Plugins\WinterSpeak.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\WinterSpeak; AfterInstall: AddDetails;
 
  ; Resources
  ; Resources\IEView
@@ -642,34 +613,22 @@ Name: Protocols\Pseudo\YAMN; Description: {code:ComponentsHelper|YAMN_Pseudo_Pro
 
  ; Plugins
 Name: Plugins; Description: {code:ComponentsHelper|PluginsFiles}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
-Name: Plugins\Alarms; Description: {code:ComponentsHelper|Alarms}; Types: advanced custom; Flags: disablenouninstallwarning;
-Name: Plugins\AssocMgr; Description: {code:ComponentsHelper|AssocMgr}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Plugins\AuthState; Description: {code:ComponentsHelper|AuthState}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\BuddyExpectator; Description: {code:ComponentsHelper|BuddyExpectator}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Plugins\BuddyPounce; Description: {code:ComponentsHelper|BuddyPounce}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Plugins\BossKey; Description: {code:ComponentsHelper|BossKey}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\ChangeKeyboardLayout; Description: {code:ComponentsHelper|ChangeKeyboardLayout}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\DbEditorPP; Description: {code:ComponentsHelper|DbEditorPP}; Types: advanced custom; Flags: disablenouninstallwarning;
-Name: Plugins\FavContacts; Description: {code:ComponentsHelper|FavContacts}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Plugins\Fingerprint; Description: {code:ComponentsHelper|Fingerprint}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\Flags; Description: {code:ComponentsHelper|Flags}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Plugins\FltContacts; Description: {code:ComponentsHelper|FltContacts}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Plugins\HistoryPP; Description: {code:ComponentsHelper|HistoryPP}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Plugins\HistorySweeperLight; Description: {code:ComponentsHelper|HistorySweeperLight}; Types: advanced custom; Flags: disablenouninstallwarning;
-Name: Plugins\KeyboardNotify; Description: {code:ComponentsHelper|KeyboardNotify}; Types: advanced custom; Flags: disablenouninstallwarning;
-Name: Plugins\ListeningTo; Description: {code:ComponentsHelper|ListeningTo}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Plugins\MyDetails; Description: {code:ComponentsHelper|MyDetails}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Plugins\NewXstatusNotify; Description: {code:ComponentsHelper|NewXstatusNotify}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\QuickMessages; Description: {code:ComponentsHelper|QuickMessages}; Types: optimal advanced custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Plugins\QuickSearch; Description: {code:ComponentsHelper|QuickSearch}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Plugins\MirOTR; Description: {code:ComponentsHelper|MirOTR}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Plugins\SecureIM; Description: {code:ComponentsHelper|SecureIM}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Plugins\Sessions; Description: {code:ComponentsHelper|Sessions}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Plugins\SpellChecker; Description: {code:ComponentsHelper|SpellChecker}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\StopSpam; Description: {code:ComponentsHelper|StopSpam}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\UInfoEx; Description: {code:ComponentsHelper|UInfoEx}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\WhenWasIt; Description: {code:ComponentsHelper|WhenWasIt}; Types: advanced custom; Flags: disablenouninstallwarning;
-Name: Plugins\WinterSpeak; Description: {code:ComponentsHelper|WinterSpeak}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 
  ; Resources
 Name: Resources; Description: {code:ComponentsHelper|Resources}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
@@ -768,34 +727,22 @@ Name: Protocols\Pseudo\YAMN; Description: {code:ComponentsHelper|YAMN_Pseudo_Pro
 
  ; Plugins
 Name: Plugins; Description: {code:ComponentsHelper|PluginsFiles}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
-Name: Plugins\Alarms; Description: {code:ComponentsHelper|Alarms}; Types: advanced full custom; Flags: disablenouninstallwarning;
-Name: Plugins\AssocMgr; Description: {code:ComponentsHelper|AssocMgr}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Plugins\AuthState; Description: {code:ComponentsHelper|AuthState}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\BuddyExpectator; Description: {code:ComponentsHelper|BuddyExpectator}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Plugins\BuddyPounce; Description: {code:ComponentsHelper|BuddyPounce}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Plugins\BossKey; Description: {code:ComponentsHelper|BossKey}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\ChangeKeyboardLayout; Description: {code:ComponentsHelper|ChangeKeyboardLayout}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\DbEditorPP; Description: {code:ComponentsHelper|DbEditorPP}; Types: advanced full custom; Flags: disablenouninstallwarning;
-Name: Plugins\FavContacts; Description: {code:ComponentsHelper|FavContacts}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Plugins\Fingerprint; Description: {code:ComponentsHelper|Fingerprint}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\Flags; Description: {code:ComponentsHelper|Flags}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Plugins\FltContacts; Description: {code:ComponentsHelper|FltContacts}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Plugins\HistoryPP; Description: {code:ComponentsHelper|HistoryPP}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Plugins\HistorySweeperLight; Description: {code:ComponentsHelper|HistorySweeperLight}; Types: advanced full custom; Flags: disablenouninstallwarning;
-Name: Plugins\KeyboardNotify; Description: {code:ComponentsHelper|KeyboardNotify}; Types: advanced full custom; Flags: disablenouninstallwarning;
-Name: Plugins\ListeningTo; Description: {code:ComponentsHelper|ListeningTo}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Plugins\MyDetails; Description: {code:ComponentsHelper|MyDetails}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Plugins\NewXstatusNotify; Description: {code:ComponentsHelper|NewXstatusNotify}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\QuickMessages; Description: {code:ComponentsHelper|QuickMessages}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\QuickSearch; Description: {code:ComponentsHelper|QuickSearch}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Plugins\MirOTR; Description: {code:ComponentsHelper|MirOTR}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Plugins\SecureIM; Description: {code:ComponentsHelper|SecureIM}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Plugins\Sessions; Description: {code:ComponentsHelper|Sessions}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Plugins\SpellChecker; Description: {code:ComponentsHelper|SpellChecker}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\StopSpam; Description: {code:ComponentsHelper|StopSpam}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\UInfoEx; Description: {code:ComponentsHelper|UInfoEx}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\WhenWasIt; Description: {code:ComponentsHelper|WhenWasIt}; Types: advanced full custom; Flags: disablenouninstallwarning;
-Name: Plugins\WinterSpeak; Description: {code:ComponentsHelper|WinterSpeak}; Types: full custom; Flags: disablenouninstallwarning;
 
  ; Resources
 Name: resources; Description: {code:ComponentsHelper|Resources}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
