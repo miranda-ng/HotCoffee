@@ -73,4 +73,6 @@
 
 document.createElement("btn");
 document.createElement("hklmb");
+document.createElement("hkmmb");
 document.createElement("hkrmb");
+document.createElement("hksw");

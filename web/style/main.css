@@ -325,8 +325,26 @@ hklmb {
 	font-size: 12px;
 }
 
+hkmmb {
+	background: #eee url("../images/mouse/Mouse_MMB.png") no-repeat right;
+	border: 1px outset #ccc;
+	padding: 2px 17px 2px 4px;
+	line-height: 2.3;
+	list-style: none;
+	font-size: 12px;
+}
+
 hkrmb {
 	background: #eee url("../images/mouse/Mouse_RMB.png") no-repeat right;
+	border: 1px outset #ccc;
+	padding: 2px 17px 2px 4px;
+	line-height: 2.3;
+	list-style: none;
+	font-size: 12px;
+}
+
+hksw {
+	background: #eee url("../images/mouse/Mouse_SW.png") no-repeat right;
 	border: 1px outset #ccc;
 	padding: 2px 17px 2px 4px;
 	line-height: 2.3;
