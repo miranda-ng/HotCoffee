@@ -204,7 +204,7 @@ Name: full; Description: {code:TypesHelper|FullInstall};
 Name: custom; Description: {code:TypesHelper|CustomInstall}; Flags: iscustom;
 
 [Dirs]
-Name: {app}\Inbox;
+Name: {app}\Inbox; Check: IsPortableSetupType;
 
 [InstallDelete]
 Type: filesandordirs; Name: {app}\Core; Check: IsPortableSetupType and IsUpdate;
@@ -1173,6 +1173,11 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: Popup; Key: ModuleIsEnabl
 Filename: {app}\Profiles\settings.ini; Section: Popup; Key: ModuleIsEnabled; String: b0; Flags: uninsdeleteentry; Components: not Resources\PopupPlus;
 Filename: {app}\Profiles\update.ini; Section: Popup; Key: ModuleIsEnabled; String: b0; Flags: uninsdeleteentry; Components: not Resources\PopupPlus;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Popup; Key: ModuleIsEnabled; String: b0; Flags: uninsdeleteentry; Components: not Resources\PopupPlus; Check: IsUpdate;
+
+ ; Received files directory advanced - IsDefaultSetupType
+;Filename: {app}\Profiles\settings.ini; Section: SRFile; Key: RecvFilesDirAdv; String: u%USERPROFILE%\Downloads\HotCoffee\%userid% (%nick%)\; Flags: uninsdeleteentry; Check: IsDefaultSetupType;
+;Filename: {app}\Profiles\update.ini; Section: SRFile; Key: RecvFilesDirAdv; String: u%USERPROFILE%\Downloads\HotCoffee\%userid% (%nick%)\; Flags: uninsdeleteentry; Check: IsDefaultSetupType;
+;Filename: {app}\Profiles\autoexec_update.ini; Section: SRFile; Key: RecvFilesDirAdv; String: u%USERPROFILE%\Downloads\HotCoffee\%userid% (%nick%)\; Flags: uninsdeleteentry; Check: IsDefaultSetupType and IsUpdate;
 
  ; Tab_SRMsg default
 Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: default_ieview; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and not Plugins\HistoryPP;
