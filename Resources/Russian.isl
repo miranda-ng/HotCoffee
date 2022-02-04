@@ -80,7 +80,7 @@ ButtonNewFolder=&Создать папку
 
 ; *** "Select Language" dialog messages
 SelectLanguageTitle=Выберите язык
-SelectLanguageLabel=Выберите язык, который будет использован в  процессе установки:
+SelectLanguageLabel=Выберите язык, который будет использован как в процессе установки так и в Miranda HotCoffee:
 
 ; *** Common wizard text
 ClickNext=Нажмите «Далее», чтобы продолжить, или «Отмена», чтобы выйти из программы установки.
