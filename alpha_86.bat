@@ -163,6 +163,12 @@ call ".tools\curl.exe" %url% --output %dest%
 call ".tools\7z.exe" x %dest% -aoa -o"x86\" -y
 del %dest%
 
+set url="https://miranda-ng.org/distr/x32/Plugins/neweventnotify.zip"
+set dest="x86\neweventnotify.zip"
+call ".tools\curl.exe" %url% --output %dest%
+call ".tools\7z.exe" x %dest% -aoa -o"x86\" -y
+del %dest%
+
 set url="https://miranda-ng.org/distr/x32/Plugins/newsaggregator.zip"
 set dest="x86\newsaggregator.zip"
 call ".tools\curl.exe" %url% --output %dest%
