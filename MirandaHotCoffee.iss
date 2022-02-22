@@ -1,9 +1,9 @@
 #define debug 0                                                             ; only for developers: 0 - debug off, 1 - debug on
 #define generatecheck 0                                                     ; only for developers: 0 - generatecheck off, 1 - generatecheck on
-#define splash 1                                                            ; splash screen: 0 - splash off, 1 - splash on
+#define splash 0                                                            ; splash screen: 0 - splash off, 1 - splash on
 #define aero 0                                                              ; aero theme: 0 - disable, 1 - full, 2 - top, 3 - bottom, 4 - top/bottom.
-#define fulltype 0                                                          ; full type: 0 - disable, 1 - enable
-#define freezecheckbox 1                                                    ; freezecheckbox: 0 - disable, 1 - enable
+#define fulltype 1                                                          ; full type: 0 - disable, 1 - enable
+#define freezecheckbox 0                                                    ; freezecheckbox: 0 - disable, 1 - enable
 
 #define AppId "HotCoffee™"
 #define AppName "Miranda NG HotCoffee"
@@ -13,7 +13,7 @@
 #define AppNameSetup "HotCoffeeSetup"
 #define AppNameInstall "MirandaHotCoffee"
 
-#define AppArch "x86"                                                       ; must be x86 or x64
+;#define AppArch "x86"                                                      ; must be x86 or x64
 
 #ifdef AppArchx64
  #define AppArch "x64"
@@ -26,9 +26,9 @@
 #define AppVerMinor "96"
 #define AppVerBuild "1"
 #define AppVerRevis "24291"
-#define AppVerStatusBuild " alpha build #"
-#define AppStatus "Alpha"                                                   ; must be Test, Alpha, Beta or Final
+#define AppStatus "Test"                                                   ; must be Test, Alpha, Beta or Final
 #define AppRelease "R56"
+#define AppVerStatusBuild AppStatus == "Final" ? " build #" : " alpha build #"
 
 #define AppShortVer AppVerMajor + "." + AppVerMinor + "." + AppVerBuild
 #define AppVer AppVerMajor + "." + AppVerMinor + "." + AppVerBuild + "." + AppVerRevis
@@ -59,7 +59,7 @@
 #define SelectedTasksDefault "curuser"
 #define SelectedSettingsDefault \
   "UpdateSettings" + "," + AppDevOrStab + "," + \
-  "CompactMode,UseSound,CLCNoVScrollBar," + \
+  "OnTop,CompactMode,UseSound,CLCNoVScrollBar," + \
   "SendCtrlEnter,SendEnter,AutoSizeInputArea,TabCaptionLow,TabSRMMNoVScrollBar," + \
   "AutoAwayDetection,AutoIdleDetection"
 #define SelectedStyleSettingsDefault \
@@ -266,9 +266,6 @@ Source: x86\Plugins\Import\*; DestDir: {app}\Plugins\Import; Flags: ignoreversio
 Source: {#AppArch}\Plugins\AVS.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Clist_modern.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\CloudFile.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-#if AppStatus == "Test"
-Source: {#AppArch}\Plugins\Console.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-#endif
 Source: {#AppArch}\Plugins\CrashDumper.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Db_autobackups.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\DbChecker.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
@@ -288,6 +285,25 @@ Source: {#AppArch}\Plugins\StatusManager.dll; DestDir: {app}\Plugins; Flags: ign
 Source: {#AppArch}\Plugins\TabSRMM.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\TopToolBar.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Variables.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+#if AppStatus == "Test"
+Source: {#AppArch}\Plugins\Alarms.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\AssocMgr.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\BuddyPounce.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\Console.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\FavContacts.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\FltContacts.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\HistorySweeperLight.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\KeyboardNotify.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\ListeningTo.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\ListeningTo\*; DestDir: {app}\Plugins\ListeningTo; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\MyDetails.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\MirOTR.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\Nudge.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\SecureIM.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\CryptoPP.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Icons\SecureIM_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\WinterSpeak.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+#endif
  ; Scripts
 Source: {#AppArch}\Scripts\*.dll; DestDir: {app}\Scripts; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Scripts\*.lua; DestDir: {app}\Scripts; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
