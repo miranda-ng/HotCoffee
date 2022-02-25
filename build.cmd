@@ -63,9 +63,11 @@ rd /s /q x64 2>nul&md x64 2>nul
 
 rem Downloads
 set "components=authstate bass_interface bosskey buddyexpectator changekeyboardlayout cloudfile currencyrates dbeditorpp dbx_mdbx dbx_mmap emlanproto fingerprint flags folders gg gmailnotifier historypp icqcorp ieview menuex messagestate mirlua mradio newawaysys neweventnotify newsaggregator newxstatusnotify omegle packupdater popupplus quickmessages quicksearch sametime sessions skypeweb smileyadd spellchecker splashscreen statusmanager steam stopspam tipper tox translitswitcher twitter uinfoex variables vkontakte weather webview whenwasit yamn alarms assocmgr buddypounce console favcontacts fltcontacts historysweeperlight keyboardnotify listeningto mydetails mirotr nudge secureim cryptopp winterspeak"
+goto start
 set query=
 set /p "query=%queryversionprompt%"
 if /i "%query%" == "d" (
+:start
 	set "dest=%~dp0x86\miranda-ng.7z"
 	call :download "https://www.miranda-ng.org/distr/miranda-ng-alpha-latest.7z" "%%dest%%"
 	call :extract "%%dest%%" "%~dp0x86" "-x!mirandaboot.ini"
@@ -92,6 +94,7 @@ if /i "%query%" == "d" (
 		call :extract "%%dest%%" "%~dp0x64" "-x!Gadgets -x!Icons -x!Plugins\CurrencyRates\*.xml -x!Plugins\Weather -x!Sounds"
 		call del /q "%%dest%%" 2>nul
 	)	
+goto start
 ) else (
 	set "dest=%~dp0x86\miranda-ng.7z"
 	call :download "https://miranda-ng.org/distr/stable/miranda-ng-v0.95.13.1.7z" "%%dest%%"
@@ -120,6 +123,7 @@ if /i "%query%" == "d" (
 		call del /q "%%dest%%" 2>nul
 	)	
 )
+:start
 
 rem Download sources
 set "dest=%~dp0Sources.7z"
