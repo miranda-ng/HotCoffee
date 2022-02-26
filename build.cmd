@@ -5,7 +5,7 @@ rem UI query
 set /p ui="e = English, r = Russian [e]: "
 if /i "%ui%" == "r" (
 	:: ru
-	set done=Ваш горячий кофе готов. Он был приготовлен из свежемолотых зёрен арабики. Теперь вы можете наслаждаться его вкусом и ароматом в любое удобное для вас время ;)
+	set "done=Ваш горячий кофе готов. Он был приготовлен из свежемолотых зёрен арабики. Теперь вы можете наслаждаться его вкусом и ароматом в любое удобное для вас время ;)"
 	set downloading=Загрузка
 	set extracting=Извлечение
 	set fail=Неудача
@@ -20,7 +20,7 @@ if /i "%ui%" == "r" (
 	set "deletedirsprompt=Удалить папки x64 и x86 (y/n)? [y]: "
 ) else (
 	:: en
-	set done=Your hot coffee is ready. It was made from freshly ground arabica beans. Now you can enjoy its taste and aroma at any time convenient for you ;)
+	set "done=Your hot coffee is ready. It was made from freshly ground arabica beans. Now you can enjoy its taste and aroma at any time convenient for you ;)"
 	set downloading=Downloading
 	set extracting=Extracting
 	set fail=FAIL
