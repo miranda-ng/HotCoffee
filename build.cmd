@@ -5,7 +5,7 @@ rem UI query
 set /p ui="e = English, r = Russian [e]: "
 if /i "%ui%" == "r" (
 	:: ru
-	set done=Готово
+	set done=Ваш горячий кофе готов. Он был приготовлен из свежемолотых зёрен арабики. Теперь вы можете наслаждаться его вкусом и ароматом в любое удобное для вас время ;)
 	set downloading=Загрузка
 	set extracting=Извлечение
 	set fail=Неудача
@@ -20,7 +20,7 @@ if /i "%ui%" == "r" (
 	set "deletedirsprompt=Удалить папки x64 и x86 (y/n)? [y]: "
 ) else (
 	:: en
-	set done=Done
+	set done=Your hot coffee is ready. It was made from freshly ground arabica beans. Now you can enjoy its taste and aroma at any time convenient for you ;)
 	set downloading=Downloading
 	set extracting=Extracting
 	set fail=FAIL
@@ -150,9 +150,12 @@ rem Compile
 ) 2>err&&echo:OK||(echo:%fail%&type err)
 
 rem Delete x86, x64 dirs
+goto start
 set query=y
 set /p "query=%deletedirsprompt%"
 if /i "%query%" == "y" rd /s /q x86 2>nul&rd /s /q x64 2>nul
+:start
+rd /s /q x86 2>nul&rd /s /q x64 2>nul
 del /f /q "%~dp0err"
 
 :err_0
