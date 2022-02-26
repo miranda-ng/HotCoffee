@@ -11,12 +11,12 @@ if /i "%ui%" == "r" (
 	set fail=Неудача
 	set no7zerror=[ERROR] Файл 7z.exe не найден!
 	set no7zinfo=[INFO] Установите 7-Zip или разместите 7z.exe и 7z.dll в папке "%~dp0.tools"
-	set nocurlerror=[ERROR] Файл curl.exe не найден!	
+	set nocurlerror=[ERROR] Файл curl.exe не найден!
 	set nocurlinfo=[INFO] Разместите curl.exe в папке "%~dp0.tools"
 	set "needcompilerprompt=Для продолжения требуется компилятор Inno Setup ResTools. Продолжить (y/n)? [y]: "
 	set "queryversionprompt=Какую версию вы предпочитаете (s = Стабильную, d = В разработке)? [s]: "
 	set "patchingicons=Патч иконок . . . "
-	set "compilesetup=Сборка установщика . . . "	
+	set "compilesetup=Сборка установщика . . . "
 	set "deletedirsprompt=Удалить папки x64 и x86 (y/n)? [y]: "
 ) else (
 	:: en
@@ -77,7 +77,7 @@ if /i "%query%" == "d" (
 	call :download "https://www.miranda-ng.org/distr/miranda-ng-alpha-latest_x64.7z" "%%dest%%"
 	call :extract "%%dest%%" "%~dp0x64" "-x!Icons -x!Plugins\Import -x!mirandaboot.ini"
 	call del /q "%%dest%%" 2>nul
-	
+
 	set "dest=%~dp0x86\langpack_russian.zip"
 	call :download "https://miranda-ng.org/distr/x32/Languages/langpack_russian.zip" "%%dest%%"
 	call :extract "%%dest%%" "%~dp0x86"
@@ -88,12 +88,12 @@ if /i "%query%" == "d" (
 		call :download "https://miranda-ng.org/distr/x32/Plugins/%%?.zip" "%%dest%%"
 		call :extract "%%dest%%" "%~dp0x86" "-x!Gadgets -x!Sounds"
 		call del /q "%%dest%%" 2>nul
-	
+
 		set "dest=%~dp0x64\%%?.zip"
 		call :download "https://miranda-ng.org/distr/x64/Plugins/%%?.zip" "%%dest%%"
 		call :extract "%%dest%%" "%~dp0x64" "-x!Gadgets -x!Icons -x!Plugins\CurrencyRates\*.xml -x!Plugins\Weather -x!Sounds"
 		call del /q "%%dest%%" 2>nul
-	)	
+	)
 goto start
 ) else (
 	set "dest=%~dp0x86\miranda-ng.7z"
@@ -105,23 +105,23 @@ goto start
 	call :download "https://miranda-ng.org/distr/stable/miranda-ng-v0.95.13.1_x64.7z" "%%dest%%"
 	call :extract "%%dest%%" "%~dp0x64" "-x!Icons -x!Plugins\Import -x!mirandaboot.ini"
 	call del /q "%%dest%%" 2>nul
-	
+
 	set "dest=%~dp0x86\langpack_russian.zip"
 	call :download "https://miranda-ng.org/distr/stable/x32/Languages/langpack_russian.zip" "%%dest%%"
 	call :extract "%%dest%%" "%~dp0x86"
 	call del /q "%%dest%%" 2>nul
-	
+
 	for %%? in (%components%) do (
 		set "dest=%~dp0x86\%%?.zip"
 		call :download "https://miranda-ng.org/distr/stable/x32/Plugins/%%?.zip" "%%dest%%"
 		call :extract "%%dest%%" "%~dp0x86" "-x!Gadgets -x!Sounds"
 		call del /q "%%dest%%" 2>nul
-		
+
 		set "dest=%~dp0x64\%%?.zip"
 		call :download "https://miranda-ng.org/distr/stable/x64/Plugins/%%?.zip" "%%dest%%"
 		call :extract "%%dest%%" "%~dp0x64" "-x!Gadgets -x!Icons -x!Plugins\CurrencyRates\*.xml -x!Plugins\Weather -x!Sounds"
 		call del /q "%%dest%%" 2>nul
-	)	
+	)
 )
 :start
 
