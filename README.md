@@ -11,6 +11,6 @@
 
 #
 
-build.cmd - file for making hot coffee ;)
+build.cmd - file for making hot coffee from freshly ground arabica beans ;)
 
 [1]: https://www.miranda-ng.org/
