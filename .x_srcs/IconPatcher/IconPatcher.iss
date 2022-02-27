@@ -33,7 +33,7 @@
 
 #define AppName "IconPatcher"
 #define AppFullName "Miranda icon patcher"
-#define AppVerName "1.0"
+#define AppVerName "1.1"
 #define AppPublisher "El Sanchez"
 
 [Setup]
@@ -253,6 +253,8 @@ function DrawIconEx(hdc: Longint; xLeft, yTop: Integer; hIcon: HICON; cxWidth, c
 function CreateDIBSection(hdc: THandle; const pbmi: BITMAPINFO; iUsage: UINT; out ppvBits: Longint; hSection: THandle; dwOffset: DWORD): HBITMAP; external 'CreateDIBSection@gdi32.dll stdcall';
 
 function ShowWindow(hWnd: HWND; nCmdShow: Integer): BOOL; external 'ShowWindow@user32.dll stdcall';
+
+procedure ExitProcess(uExitCode: UINT); external 'ExitProcess@kernel32.dll stdcall';
 
 var
   UpdateForm: TForm;
@@ -1162,6 +1164,12 @@ function InitializeSetup: Boolean;
 begin
   Result := False;
   if not DisplayHelp then
+  begin
     if CheckSource then
+    begin
       CreateUpdateForm;
+      ExitProcess(0);
+    end;
+  end else
+    ExitProcess(0);
 end;

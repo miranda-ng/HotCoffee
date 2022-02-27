@@ -5,10 +5,6 @@ rem UI query
 set /p ui="e = English, r = Russian [e]: "
 if /i "%ui%" == "r" (
 	:: ru
-	set "done=Ваш горячий кофе готов. Он был приготовлен из свежемолотых зёрен арабики. Теперь вы можете наслаждаться его вкусом и ароматом в любое удобное для вас время ;)"
-	set downloading=Загрузка
-	set extracting=Извлечение
-	set fail=Неудача
 	set no7zerror=[ERROR] Файл 7z.exe не найден!
 	set no7zinfo=[INFO] Установите 7-Zip или разместите 7z.exe и 7z.dll в папке "%~dp0.tools"
 	set nocurlerror=[ERROR] Файл curl.exe не найден!
@@ -18,12 +14,12 @@ if /i "%ui%" == "r" (
 	set "patchingicons=Патч иконок . . . "
 	set "compilesetup=Сборка установщика . . . "
 	set "deletedirsprompt=Удалить папки x64 и x86 (y/n)? [y]: "
+	set downloading=Загрузка
+	set extracting=Извлечение
+	set fail=Неудача
+	set "done=Ваш горячий кофе готов. Он был приготовлен из свежемолотых зёрен арабики. Теперь вы можете наслаждаться его вкусом и ароматом в любое удобное для вас время ;)"
 ) else (
 	:: en
-	set "done=Your hot coffee is ready. It was made from freshly ground arabica beans. Now you can enjoy its taste and aroma at any time convenient for you ;)"
-	set downloading=Downloading
-	set extracting=Extracting
-	set fail=FAIL
 	set no7zerror=[ERROR] No 7z.exe found!
 	set no7zinfo=[INFO] Install 7-Zip or place 7z.exe and 7z.dll files to "%~dp0.tools"
 	set nocurlerror=[ERROR] No curl.exe found!
@@ -33,6 +29,10 @@ if /i "%ui%" == "r" (
 	set "patchingicons=Patching icons . . . "
 	set "compilesetup=Compile setup . . . "
 	set "deletedirsprompt=Delete x64 and x86 folders (y/n)? [y]: "
+	set downloading=Downloading
+	set extracting=Extracting
+	set fail=FAIL
+	set "done=Your hot coffee is ready. It was made from freshly ground arabica beans. Now you can enjoy its taste and aroma at any time convenient for you ;)"
 )
 
 rem Check curl
@@ -146,6 +146,7 @@ pushd "%~dp0x86\Skins\IconPacks"
 	IconPatcher.exe /bin="%~dp0x86\Miranda32.exe" /arc=xpk /silent
 	IconPatcher.exe /bin="%~dp0x86\Miranda32.exe" /arc=xpk_hotcoffee /verysilent
 ) 2>err&&echo:OK||(echo:%fail%&type err)
+del /f /q err>nul
 popd
 
 rem Compile
