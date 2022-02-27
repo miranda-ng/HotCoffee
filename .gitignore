@@ -7,6 +7,6 @@
 !.x_srcs/web
 !xx_srcs.bat
 !ToDo.txt
-output/*HotCoffee*.exe
+output/
 x64/
 x86/
