@@ -132,12 +132,14 @@ call :extract "%dest%" "%~dp0x86"
 del /q "%dest%" 2>nul
 
 rem Download debug
+if exist "output/debug/debug.exe" goto :Icons
 set "dest=%~dp0debug.7z"
 call :download "https://miranda-ng.org/distr/packs/HotCoffee/.debug.7z" "%dest%"
 call :extract "%dest%" "%~dp0output"
 del /q "%dest%" 2>nul
 
 rem Icons
+:Icons
 pushd "%~dp0x86\Skins\IconPacks"
 <nul set /p "=%patchingicons%"
 (
