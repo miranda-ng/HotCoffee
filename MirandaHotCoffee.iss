@@ -220,12 +220,7 @@ Type: filesandordirs; Name: {app}\Scripts; Check: IsPortableSetupType and IsUpda
 Type: filesandordirs; Name: {app}\Skins; Check: IsPortableSetupType and IsUpdate;
 Type: filesandordirs; Name: {app}\Sounds; Check: IsPortableSetupType and IsUpdate;
 Type: filesandordirs; Name: {app}\UserSet; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\{#AppExeName}; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\{#AppExeOppName}; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\pu_stub.exe; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\mirandaboot.ini; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\*.log; Check: IsPortableSetupType and IsUpdate;
-Type: files; Name: {app}\*.pdb; Check: IsPortableSetupType and IsUpdate;
+Type: files; Name: {app}\*.*; Check: IsPortableSetupType and IsUpdate;
 
 [Files]
  ; image resources
