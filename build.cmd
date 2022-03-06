@@ -9,7 +9,7 @@ if /i "%ui%" == "r" (
 	set no7zinfo=[INFO] Установите 7-Zip или разместите 7z.exe и 7z.dll в папке "%~dp0.tools"
 	set nocurlerror=[ERROR] Файл curl.exe не найден!
 	set nocurlinfo=[INFO] Разместите curl.exe в папке "%~dp0.tools"
-	set "needcompilerprompt=Для продолжения требуется компилятор Inno Setup ResTools. Продолжить (y/n)? [y]: "
+	set "needcompilerprompt=Для продолжения требуется расширенная версия компилятора Inno Setup от ResTools. Продолжить (y/n)? [y]: "
 	set "queryversionprompt=Какую версию вы предпочитаете (s = Стабильную, d = В разработке)? [s]: "
 	set "patchingicons=Патч иконок . . . "
 	set "compilesetup=Сборка установщика . . . "
@@ -24,7 +24,7 @@ if /i "%ui%" == "r" (
 	set no7zinfo=[INFO] Install 7-Zip or place 7z.exe and 7z.dll files to "%~dp0.tools"
 	set nocurlerror=[ERROR] No curl.exe found!
 	set nocurlinfo=[INFO] Place curl.exe to "%~dp0.tools"
-	set "needcompilerprompt=Inno Setup ResTools is required to continue. Continue (y/n)? [y]: "
+	set "needcompilerprompt=To continue, the extended version of Inno Setup compiler from ResTools is required. Continue (y/n)? [y]: "
 	set "queryversionprompt=Which version would you prefer (s = Stable, d = Development)? [s]: "
 	set "patchingicons=Patching icons . . . "
 	set "compilesetup=Compile setup . . . "
