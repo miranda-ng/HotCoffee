@@ -2,6 +2,7 @@
 setlocal
 
 rem UI query
+set allowqueries=0
 set /p ui="e = English, r = Russian [e]: "
 if /i "%ui%" == "r" (
 	:: ru
@@ -10,7 +11,7 @@ if /i "%ui%" == "r" (
 	set nocurlerror=[ERROR] Файл curl.exe не найден!
 	set nocurlinfo=[INFO] Разместите curl.exe в папке "%~dp0.tools"
 	set "needcompilerprompt=Для продолжения требуется расширенная версия компилятора Inno Setup от ResTools. Продолжить (y/n)? [y]: "
-	set "queryversionprompt=Какую версию вы предпочитаете (s = Стабильную, d = В разработке)? [s]: "
+	set "queryversionprompt=Какую версию вы предпочитаете (s = Стабильную, d = В разработке)? [d]: "
 	set "patchingicons=Патч иконок . . . "
 	set "compilesetup=Сборка установщика . . . "
 	set "deletedirsprompt=Удалить папки x64 и x86 (y/n)? [y]: "
@@ -25,7 +26,7 @@ if /i "%ui%" == "r" (
 	set nocurlerror=[ERROR] No curl.exe found!
 	set nocurlinfo=[INFO] Place curl.exe to "%~dp0.tools"
 	set "needcompilerprompt=To continue, the extended version of Inno Setup compiler from ResTools is required. Continue (y/n)? [y]: "
-	set "queryversionprompt=Which version would you prefer (s = Stable, d = Development)? [s]: "
+	set "queryversionprompt=Which version would you prefer (s = Stable, d = Development)? [d]: "
 	set "patchingicons=Patching icons . . . "
 	set "compilesetup=Compile setup . . . "
 	set "deletedirsprompt=Delete x64 and x86 folders (y/n)? [y]: "
@@ -63,39 +64,9 @@ rd /s /q x64 2>nul&md x64 2>nul
 
 rem Downloads
 set "components=authstate bass_interface bosskey buddyexpectator changekeyboardlayout cloudfile currencyrates dbeditorpp dbx_mdbx dbx_mmap emlanproto fingerprint flags folders gg gmailnotifier historypp icqcorp ieview menuex messagestate mirlua mradio newawaysys neweventnotify newsaggregator newxstatusnotify omegle packupdater popupplus quickmessages quicksearch sametime sessions skypeweb smileyadd spellchecker splashscreen statusmanager steam stopspam tipper tox translitswitcher twitter uinfoex variables vkontakte weather webview whenwasit yamn alarms assocmgr buddypounce console favcontacts fltcontacts historysweeperlight keyboardnotify listeningto mydetails mirotr nudge secureim cryptopp winterspeak"
-goto start
-set query=
-set /p "query=%queryversionprompt%"
-if /i "%query%" == "d" (
-:start
-	set "dest=%~dp0x86\miranda-ng.7z"
-	call :download "https://www.miranda-ng.org/distr/miranda-ng-alpha-latest.7z" "%%dest%%"
-	call :extract "%%dest%%" "%~dp0x86" "-x!mirandaboot.ini"
-	call del /q "%%dest%%" 2>nul
-
-	set "dest=%~dp0x64\miranda-ng.7z"
-	call :download "https://www.miranda-ng.org/distr/miranda-ng-alpha-latest_x64.7z" "%%dest%%"
-	call :extract "%%dest%%" "%~dp0x64" "-x!Icons -x!Plugins\Import -x!mirandaboot.ini"
-	call del /q "%%dest%%" 2>nul
-
-	set "dest=%~dp0x86\langpack_russian.zip"
-	call :download "https://miranda-ng.org/distr/x32/Languages/langpack_russian.zip" "%%dest%%"
-	call :extract "%%dest%%" "%~dp0x86"
-	call del /q "%%dest%%" 2>nul
-
-	for %%? in (%components%) do (
-		set "dest=%~dp0x86\%%?.zip"
-		call :download "https://miranda-ng.org/distr/x32/Plugins/%%?.zip" "%%dest%%"
-		call :extract "%%dest%%" "%~dp0x86" "-x!Gadgets -x!Sounds"
-		call del /q "%%dest%%" 2>nul
-
-		set "dest=%~dp0x64\%%?.zip"
-		call :download "https://miranda-ng.org/distr/x64/Plugins/%%?.zip" "%%dest%%"
-		call :extract "%%dest%%" "%~dp0x64" "-x!Gadgets -x!Icons -x!Plugins\CurrencyRates\*.xml -x!Plugins\Weather -x!Sounds"
-		call del /q "%%dest%%" 2>nul
-	)
-goto start
-) else (
+set query=d
+if "%allowqueries%" == "1" set /p "query=%queryversionprompt%"
+if /i "%query%" == "s" (
 	set "dest=%~dp0x86\miranda-ng.7z"
 	call :download "https://miranda-ng.org/distr/stable/miranda-ng-v0.95.13.1.7z" "%%dest%%"
 	call :extract "%%dest%%" "%~dp0x86" "-x!mirandaboot.ini"
@@ -122,8 +93,34 @@ goto start
 		call :extract "%%dest%%" "%~dp0x64" "-x!Gadgets -x!Icons -x!Plugins\CurrencyRates\*.xml -x!Plugins\Weather -x!Sounds"
 		call del /q "%%dest%%" 2>nul
 	)
+) else (
+	set "dest=%~dp0x86\miranda-ng.7z"
+	call :download "https://www.miranda-ng.org/distr/miranda-ng-alpha-latest.7z" "%%dest%%"
+	call :extract "%%dest%%" "%~dp0x86" "-x!mirandaboot.ini"
+	call del /q "%%dest%%" 2>nul
+
+	set "dest=%~dp0x64\miranda-ng.7z"
+	call :download "https://www.miranda-ng.org/distr/miranda-ng-alpha-latest_x64.7z" "%%dest%%"
+	call :extract "%%dest%%" "%~dp0x64" "-x!Icons -x!Plugins\Import -x!mirandaboot.ini"
+	call del /q "%%dest%%" 2>nul
+
+	set "dest=%~dp0x86\langpack_russian.zip"
+	call :download "https://miranda-ng.org/distr/x32/Languages/langpack_russian.zip" "%%dest%%"
+	call :extract "%%dest%%" "%~dp0x86"
+	call del /q "%%dest%%" 2>nul
+
+	for %%? in (%components%) do (
+		set "dest=%~dp0x86\%%?.zip"
+		call :download "https://miranda-ng.org/distr/x32/Plugins/%%?.zip" "%%dest%%"
+		call :extract "%%dest%%" "%~dp0x86" "-x!Gadgets -x!Sounds"
+		call del /q "%%dest%%" 2>nul
+
+		set "dest=%~dp0x64\%%?.zip"
+		call :download "https://miranda-ng.org/distr/x64/Plugins/%%?.zip" "%%dest%%"
+		call :extract "%%dest%%" "%~dp0x64" "-x!Gadgets -x!Icons -x!Plugins\CurrencyRates\*.xml -x!Plugins\Weather -x!Sounds"
+		call del /q "%%dest%%" 2>nul
+	)
 )
-:start
 
 rem Download sources
 set "dest=%~dp0Sources.7z"
@@ -159,13 +156,10 @@ rem Compile
 ) 2>err&&echo:OK||(echo:%fail%&type err)
 
 rem Delete x86, x64 dirs
-goto start
 set query=y
-set /p "query=%deletedirsprompt%"
+if "%allowqueries%" == "1" set /p "query=%deletedirsprompt%"
 if /i "%query%" == "y" rd /s /q x86 2>nul&rd /s /q x64 2>nul
-:start
-rd /s /q x86 2>nul&rd /s /q x64 2>nul
-del /f /q "%~dp0err"
+del /f /q "%~dp0err">nul
 
 :err_0
 echo:%done%

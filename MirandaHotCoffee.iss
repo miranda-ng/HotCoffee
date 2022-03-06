@@ -59,7 +59,7 @@
 #define SelectedTasksDefault "curuser"
 #define SelectedSettingsDefault \
   "UpdateSettings" + "," + AppDevOrStab + "," + \
-  "OnTop,CompactMode,UseSound,CLCNoVScrollBar," + \
+  "CompactMode,UseSound,CLCNoVScrollBar," + \
   "SendCtrlEnter,SendEnter,AutoSizeInputArea,TabCaptionLow,TabSRMMNoVScrollBar," + \
   "AutoAwayDetection,AutoIdleDetection"
 #define SelectedStyleSettingsDefault \
@@ -813,9 +813,9 @@ Name: Resources\Themes\Textolite_Gray_Light; Description: {code:ComponentsHelper
 [Tasks]
 Name: alluser; Description: {code:TasksHelper|ForAllComputerUsers}; GroupDescription: {cm:CreateShortcut}; Flags: exclusive; Check: IsDefaultSetupType;
 Name: curuser; Description: {code:TasksHelper|OnlyForTheCurrentUser}; GroupDescription: {cm:CreateShortcut}; Flags: exclusive unchecked; Check: IsDefaultSetupType;
-Name: curuser; Description: {code:TasksHelper|OnlyForTheCurrentUser}; GroupDescription: {cm:CreateShortcut}; Flags: exclusive; Check: IsPortableSetupType;
+;Name: curuser; Description: {code:TasksHelper|OnlyForTheCurrentUser}; GroupDescription: {cm:CreateShortcut}; Flags: exclusive; Check: IsPortableSetupType;
 Name: desktopicon; Description: {code:TasksHelper|CreateDesktopIcon}; GroupDescription: {cm:AdditionalIcons}; Check: IsDefaultSetupType;
-Name: desktopicon; Description: {code:TasksHelper|CreateDesktopIcon}; GroupDescription: {cm:AdditionalIcons}; Flags: unchecked; Check: IsPortableSetupType;
+;Name: desktopicon; Description: {code:TasksHelper|CreateDesktopIcon}; GroupDescription: {cm:AdditionalIcons}; Flags: unchecked; Check: IsPortableSetupType;
 Name: quicklaunchicon; Description: {code:TasksHelper|CreateQuickLaunchIcon}; GroupDescription: {cm:AdditionalIcons}; Flags: unchecked; OnlyBelowVersion: 0,6.1;
 Name: pintotaskbar; Description: {code:TasksHelper|PinToTaskbarIcon}; GroupDescription: {cm:AdditionalIcons}; Flags: unchecked; MinVersion: 0,6.1;
 Name: pintostartmenu; Description: {code:TasksHelper|PinToStartMenuIcon}; GroupDescription: {cm:AdditionalIcons}; Flags: unchecked;
@@ -1925,6 +1925,10 @@ const
   PixelFormat32bppPARGB = $000E200B;
   Rotate180FlipX = 6;
 
+  ECM_FIRST = $1500;
+  EM_SHOWBALLOONTIP = (ECM_FIRST + 3);
+  TTI_ERROR = 3;
+
 type
   PAINTSTRUCT = record
     hdc: Longint;
@@ -2226,6 +2230,13 @@ type
     szInternalDefault: string;
   end;
 
+  TEditBaloonTip = record
+    cbStruct: DWORD;
+    pszTitle: string;
+    pszText: string;
+    ttiIcon: Integer;
+  end;
+
 // Window Class Functions
 function GetClassName(hWnd: HWND; lpClassName: string; nMaxCount: Integer): Integer; external 'GetClassName{#A}@user32.dll stdcall';
 function GetWindowLong(hWnd: HWND; nIndex: Integer): Longint; external 'GetWindowLong{#A}@user32.dll stdcall';
@@ -2262,6 +2273,7 @@ function SendMessageHDHTI(hWnd: HWND; Msg: UINT; wParam: Longint; var lParam: HD
 function SendMessageTVITEM(hWnd: HWND; Msg: UINT; wParam: Longint; var lParam: TVITEM): Longint; external 'SendMessage{#A}@user32.dll stdcall';
 function SendMessageTVHTI(hWnd: HWND; Msg: UINT; wParam: Longint; var lParam: TVHITTESTINFO): Longint; external 'SendMessage{#A}@user32.dll stdcall';
 function SendMessageTimeout(hWnd: HWND; Msg: UINT; wParam, lParam: Longint; fuFlags, uTimeout: UINT; var lpdwResult: Longint): Longint; external 'SendMessageTimeout{#A}@user32.dll stdcall';
+function SendMessageEditBaloonTip(hWnd: HWND; Msg: UINT; wParam: Longint; var lParam: TEditBaloonTip): Longint; external 'SendMessage{#A}@user32.dll stdcall';
 
 // Coordinate Space and Transformation Functions
 function MapWindowPointsRECT(hWndFrom, hWndTo: HWND; var lpPoints: TRect; cPoints: UINT): Integer; external 'MapWindowPoints@user32.dll stdcall';
@@ -5922,6 +5934,21 @@ begin
   end;
 end;
 
+procedure DirEditKeyPress(Sender: TObject; var Key: Char);
+var
+  LEditBaloonTip: TEditBaloonTip;
+begin
+  if Ord(Key) > $7F then
+  begin
+    LEditBaloonTip.cbStruct := SizeOf(LEditBaloonTip);
+    LEditBaloonTip.pszTitle := 'Invalid path';
+    LEditBaloonTip.pszText := 'Only latin letters allowed';
+    LEditBaloonTip.ttiIcon := TTI_ERROR;
+    SendMessageEditBaloonTip(TEdit(Sender).Handle, EM_SHOWBALLOONTIP, 0, LEditBaloonTip);
+    Key := #0;
+  end;
+end;
+
 //////////////////////////////
 procedure CreateSelectDirPage;
 var
@@ -5933,6 +5960,12 @@ var
   shfi: SHFILEINFO;
   hImgList: THandle;
 begin
+  { DirEdit. }
+  with WizardForm.DirEdit do
+  begin
+    OnKeyPress := @DirEditKeyPress;
+  end;
+
   { g_DriveListView }
   g_DriveListView := TListView.Create(WizardForm);
   with g_DriveListView do
@@ -9774,6 +9807,8 @@ begin
         if Result then
           WizardForm.NoIconsCheck.Checked := True;
       end;
+    wpSelectTasks:
+      Result := IsPortableSetupType;
     PreparePage.ID:
       Result := GetFilesInUse(ExpandConstant('{app}'), g_PrepareListView) = '';
   end;
