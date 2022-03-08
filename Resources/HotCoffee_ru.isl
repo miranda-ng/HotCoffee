@@ -80,7 +80,7 @@ Twitter_Protocol=Protocols\Twitter | Twitter | Протокол Twitter.%n%nTwitter.dll
 VKontakte_Protocol=Protocols\VKontakte | VKontakte | Протокол VKontakte (социальная сеть vk.com).%n%nVKontakte.dll
 WhatsApp_Protocol=Protocols\WhatsApp | WhatsApp | Протокол WhatsApp.%n%nWhatsApp.dll
 YAHOO_Protocol=Protocols\Yahoo | YAHOO | Протокол Yahoo%n(Yahoo! Messenger).%n%nYahoo.dll
-; Pseudo-protocols
+	; Pseudo-protocols
 Pseudo_Protocols=Protocols\Pseudo | Псевдо-протоколы | Дополнительные псевдо-протоколы.
 CurrencyRates_Pseudo_Protocol=Protocols\Pseudo\CurrencyRates | CurrencyRates | Позволяет наблюдать за изменениями курсов валют и биржевых котировок.%n%nCurrencyRates.dll
 GmailNotifier_Pseudo_Protocol=Protocols\Pseudo\GmailNotifier | GmailNotifier | Проверка входящей почты Gmail.%n%nGmailNotifier.dll
@@ -362,6 +362,8 @@ FoundVerNotUpdatableConfirm=Найденную версию программы обновить невозможно!%nНаж
 FoundPortableVerUpdateActivateInfo=В указанной папке обнаружена переносная версия.%nАктивирован режим обновления!
 NotMirandaFolderNameError=Внимание! Если имя папки для установки не содержит слова "Miranda", шаблон IEView будет работать некорректно!
 ArchIncompatibleInfo=Внимание! Программа установки обнаружила архитектурно несовместимые файлы и переместила их в папку "incompatible".
+InvalidPath=Недопустимый путь.
+OnlyLatinLettersAllowed=Допускаются только латинские буквы.
 
 
 ; *** Others

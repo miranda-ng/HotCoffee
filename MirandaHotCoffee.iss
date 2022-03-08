@@ -1,9 +1,10 @@
 #define debug 0                                                             ; only for developers: 0 - debug off, 1 - debug on
-#define generatecheck 0                                                     ; only for developers: 0 - generatecheck off, 1 - generatecheck on
+#define generatecheck 0                                                     ; only for developers: 0 - generate check off, 1 - generate check on
 #define splash 0                                                            ; splash screen: 0 - splash off, 1 - splash on
 #define aero 0                                                              ; aero theme: 0 - disable, 1 - full, 2 - top, 3 - bottom, 4 - top/bottom.
 #define fulltype 1                                                          ; full type: 0 - disable, 1 - enable
-#define freezecheckbox 0                                                    ; freezecheckbox: 0 - disable, 1 - enable
+#define freezecheckbox 0                                                    ; freeze check box: 0 - disable, 1 - enable
+#define mirandeddirname 0                                                   ; miranded dir name: 0 - disable, 1 - enable
 
 #define AppId "HotCoffee™"
 #define AppName "Miranda NG HotCoffee"
@@ -26,7 +27,7 @@
 #define AppVerMinor "96"
 #define AppVerBuild "1"
 #define AppVerRevis "24291"
-#define AppStatus "Test"                                                   ; must be Test, Alpha, Beta or Final
+#define AppStatus "Test"                                                    ; must be Test, Alpha, Beta or Final
 #define AppRelease "R56"
 #define AppVerStatusBuild AppStatus == "Final" ? " build #" : " alpha build #"
 
@@ -5941,8 +5942,8 @@ begin
   if Ord(Key) > $7F then
   begin
     LEditBaloonTip.cbStruct := SizeOf(LEditBaloonTip);
-    LEditBaloonTip.pszTitle := 'Invalid path';
-    LEditBaloonTip.pszText := 'Only latin letters allowed';
+    LEditBaloonTip.pszTitle := CustomMessage('InvalidPath');
+    LEditBaloonTip.pszText := CustomMessage('OnlyLatinLettersAllowed');
     LEditBaloonTip.ttiIcon := TTI_ERROR;
     SendMessageEditBaloonTip(TEdit(Sender).Handle, EM_SHOWBALLOONTIP, 0, LEditBaloonTip);
     Key := #0;
@@ -9590,8 +9591,10 @@ begin
       end;
     wpSelectDir:
       begin
+#if mirandeddirname == 1
         if Pos('miranda', Lowercase(WizardDirValue)) = 0 then
           Result := MsgBox(CustomMessage('NotMirandaFolderNameError'), mbError, MB_OK) = IDOK;                    // error when not "miranded" dir name select
+#endif
         case ErrorHelper of
           { default select }
           'PortableDirSelectError':

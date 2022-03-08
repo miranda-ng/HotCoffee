@@ -80,7 +80,7 @@ Twitter_Protocol=Protocols\Twitter | Twitter | Twitter protocol.%n%nTwitter.dll
 VKontakte_Protocol=Protocols\VKontakte | VKontakte | VKontakte protocol of the vk.com social network.%n%nVKontakte.dll
 WhatsApp_Protocol=Protocols\WhatsApp | WhatsApp | WhatsApp protocol.%n%nWhatsApp.dll
 YAHOO_Protocol=Protocols\Yahoo | YAHOO | Yahoo protocol%n(Yahoo! Messenger).%n%nYahoo.dll
-; Pseudo-protocols
+	; Pseudo-protocols
 Pseudo_Protocols=Protocols\Pseudo | Pseudo-protocols | Additional pseudo-protocols.
 CurrencyRates_Pseudo_Protocol=Protocols\Pseudo\CurrencyRates | CurrencyRates | Show currency rates and economic quotes.%n%nCurrencyRates.dll
 GmailNotifier_Pseudo_Protocol=Protocols\Pseudo\GmailNotifier | GmailNotifier | Checking incoming Gmail.%n%nGmailNotifier.dll
@@ -362,6 +362,8 @@ FoundVerNotUpdatableConfirm=Found version can not be updated!%nClick "Yes" to re
 FoundPortableVerUpdateActivateInfo=A portable version was detected in the specified folder.%nUpdate mode activated!
 NotMirandaFolderNameError=Warning: if the installation directory's name doesn't contain the word 'Miranda', IEView templates might not work correctly.
 ArchIncompatibleInfo=Warning: the installer detected some incompatible files and moved them to the 'incompatible' folder.
+InvalidPath=Invalid path.
+OnlyLatinLettersAllowed=Only latin letters allowed.
 
 
 ; *** Others
