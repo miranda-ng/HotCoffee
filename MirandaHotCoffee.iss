@@ -5949,6 +5949,25 @@ begin
   end;
 end;
 
+procedure DirEditChange(Sender: TObject);
+var
+  LText: string;
+  LKey: Char;
+  I, Len: Integer;
+begin
+  LText := TEdit(Sender).Text;
+  Len := Length(LText);
+  I := 1;
+  while I <= Len do
+  begin
+    LKey := LText[I];
+    DirEditKeyPress(Sender, LKey);
+    WizardForm.NextButton.Enabled := LKey <> #0;
+    if LKey = #0 then Break;
+    Inc(I);
+  end;
+end;
+
 //////////////////////////////
 procedure CreateSelectDirPage;
 var
@@ -5964,6 +5983,7 @@ begin
   with WizardForm.DirEdit do
   begin
     OnKeyPress := @DirEditKeyPress;
+    OnChange := @DirEditChange;
   end;
 
   { g_DriveListView }
