@@ -1,6 +1,6 @@
 #define debug 0                                                             ; only for developers: 0 - debug off, 1 - debug on
 #define generatecheck 0                                                     ; only for developers: 0 - generate check off, 1 - generate check on
-#define splash 0                                                            ; splash screen: 0 - splash off, 1 - splash on
+#define splash 1                                                            ; splash screen: 0 - splash off, 1 - splash on
 #define aero 0                                                              ; aero theme: 0 - disable, 1 - full, 2 - top, 3 - bottom, 4 - top/bottom.
 #define fulltype 1                                                          ; full type: 0 - disable, 1 - enable
 #define freezecheckbox 0                                                    ; freeze check box: 0 - disable, 1 - enable
@@ -23,21 +23,28 @@
  #define AppArch "x86"
 #endif
 
-#define AppVerMajor "0"
-#define AppVerMinor "96"
-#define AppVerBuild "1"
-#define AppVerRevis "24291"
-#define AppStatus "Test"                                                    ; must be Test, Alpha, Beta or Final
-#define AppRelease "R56"
-#define AppVerStatusBuild AppStatus == "Final" ? " build #" : " alpha build #"
+#define AppVerMajor "1"
+#define AppVerMinor "0"
+#define AppStatus "Alpha"                                                   ; must be Test, Alpha, Beta or Final
+#define AppRelease "R57"
+#define AppVer AppVerMajor + "." + AppVerMinor
+#define AppFullVer AppVer + " " + AppStatus + " " + AppRelease
 
-#define AppShortVer AppVerMajor + "." + AppVerMinor + "." + AppVerBuild
-#define AppVer AppVerMajor + "." + AppVerMinor + "." + AppVerBuild + "." + AppVerRevis
-#define AppFullVer AppVerMajor + "." + AppVerMinor + "." + AppVerBuild + "." + AppVerRevis + " " + AppStatus + " " + AppRelease
-#define AppMirVer AppShortVer + AppVerStatusBuild + AppVerRevis
-#define AppDevOrStab AppStatus == "Final" ? "StableVersion" : "DevelopmentVersion"
+#define AppMirVerMajor "0"
+#define AppMirVerMinor "96"
+#define AppMirVerBuild "1"
+#define AppMirVerRevis "24433"
+#define AppMirVerHash " (7401cfeb7d)"
 
-#define AppUpdateVersion "0.95.13.23830,0.96.1.24291"                       ; product version update range
+#define AppMirVerStatusBuild AppStatus == "Final" ? " build #" : " alpha build #"
+#define AppMirArch AppArch == "x64" ? " x64" : ""
+
+#define AppMirShortVer AppMirVerMajor + "." + AppMirVerMinor + "." + AppMirVerBuild
+#define AppMirVer AppMirVerMajor + "." + AppMirVerMinor + "." + AppMirVerBuild + "." + AppMirVerRevis
+#define AppMirFullVer AppMirShortVer + AppMirVerStatusBuild + AppMirVerRevis + AppMirVerHash + AppMirArch
+#define AppMirDevOrStab AppStatus == "Final" ? "StableVersion" : "DevelopmentVersion"
+
+#define AppUpdateVersion "0.96.1.24291,1.0"                                 ; product version update range
 
 #define AppWidth "65"                                                       ; Increasing width of the client
 #define AppHeight "25"                                                      ; Increasing height of the client
@@ -59,7 +66,7 @@
 #define TypeDefault "optimal"
 #define SelectedTasksDefault "curuser"
 #define SelectedSettingsDefault \
-  "UpdateSettings" + "," + AppDevOrStab + "," + \
+  "UpdateSettings" + "," + AppMirDevOrStab + "," + \
   "CompactMode,UseSound,CLCNoVScrollBar," + \
   "SendCtrlEnter,SendEnter,AutoSizeInputArea,TabCaptionLow,TabSRMMNoVScrollBar," + \
   "AutoAwayDetection,AutoIdleDetection"
@@ -79,7 +86,6 @@
 
 #define CLUIFrames \
   "Protocols\EmLanProto," + \
-  "Protocols\Facebook," + \
   "Protocols\GG," + \
   "Protocols\ICQ\ICQ," + \
   "Protocols\ICQ\ICQ2," + \
@@ -193,7 +199,7 @@ Name: en; MessagesFile: Resources\English.isl,Resources\{#AppShortName}_en.isl; 
 Name: ru; MessagesFile: Resources\Russian.isl,Resources\{#AppShortName}_ru.isl; LicenseFile: Resources\License_ru.rtf; InfoBeforeFile: Resources\InfoBefore_ru.rtf; InfoAfterFile: Resources\InfoAfter_ru.rtf;
 
 [Messages]
-BeveledLabel={#AppName} {#AppVer} {#AppStatus} {#AppRelease} ({#AppArch}) © {#AppPublisher}, 2010 - {#GetDateTimeString('yyyy', '', '')}
+BeveledLabel={#AppName} {#AppFullVer} ({#AppArch}) © {#AppPublisher}, 2010 - {#GetDateTimeString('yyyy', '', '')}
 
 [Types]
 Name: minimal; Description: {code:TypesHelper|MinimalInstall};
@@ -241,6 +247,7 @@ Source: x86\Icons\Custom_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; 
 Source: x86\Icons\Proto_conn.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Discord.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Dummy.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_Facebook.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_MetaContacts.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\TabSRMM_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Toolbar_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
@@ -324,10 +331,6 @@ Source: x86\mirandaboot.ini; DestDir: {app}; Flags: ignoreversion; Components: M
  ; Protocols\EmLanProto
 Source: {#AppArch}\Plugins\EmLanProto.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\EmLanProto; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_EM_LAN_PROTO.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\EmLanProto; AfterInstall: AddDetails;
- ; Protocols\Facebook
-Source: {#AppArch}\Plugins\Facebook.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Facebook; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_conn_Facebook.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Facebook; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_Facebook.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Facebook; AfterInstall: AddDetails;
  ; Protocols\GG
 Source: {#AppArch}\Plugins\GG.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\GG; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_conn_GG.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\GG; AfterInstall: AddDetails;
@@ -590,7 +593,6 @@ Name: MainCore; Description: {code:ComponentsHelper|CoreFiles}; Types: minimal o
  ; Protocols
 Name: Protocols; Description: {code:ComponentsHelper|Protocols}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Protocols\EmLanProto; Description: {code:ComponentsHelper|EmLanProto_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Facebook; Description: {code:ComponentsHelper|Facebook_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\GG; Description: {code:ComponentsHelper|GG_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\ICQ; Description: {code:ComponentsHelper|ICQ_Protocol}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
 Name: Protocols\ICQ\ICQ; Description: {code:ComponentsHelper|ICQ_Protocol_ICQ}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
@@ -704,7 +706,6 @@ Name: MainCore; Description: {code:ComponentsHelper|CoreFiles}; Types: minimal o
  ; Protocols
 Name: Protocols; Description: {code:ComponentsHelper|Protocols}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Protocols\EmLanProto; Description: {code:ComponentsHelper|EmLanProto_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Facebook; Description: {code:ComponentsHelper|Facebook_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\GG; Description: {code:ComponentsHelper|GG_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\ICQ; Description: {code:ComponentsHelper|ICQ_Protocol}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
 Name: Protocols\ICQ\ICQ; Description: {code:ComponentsHelper|ICQ_Protocol_ICQ}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
@@ -926,8 +927,8 @@ Filename: {app}\mirandaboot.ini; Section: Language; Key: DefaultLanguage; String
 Filename: {app}\Profiles\settings.ini; Section: Langpack; Key: Current; String: udefault; Languages: en;
 Filename: {app}\Profiles\settings.ini; Section: Langpack; Key: Current; String: ulangpack_russian.txt; Languages: ru;
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: "Name"; String: u{#AppName};
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Version; String: u{#AppVer} {#AppStatus} {#AppRelease};
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: MirVer; String: u{#AppMirVer};
+Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Version; String: u{#AppFullVer};
+Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: MirVer; String: u{#AppMirFullVer};
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@xmpp.ru;
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")};
 Filename: {app}\Profiles\settings.ini; Section: PackUpdater; Key: File_VersionURL; String: uhttp://im-hotcoffee.narod.ru/hotcoffee_{#AppArch}.ini;
@@ -942,8 +943,8 @@ Filename: {app}\Profiles\settings.ini; Section: CLUI; Key: StatusBarProtosPerLin
 Filename: {app}\Profiles\update.ini; Section: Langpack; Key: Current; String: udefault; Languages: en;
 Filename: {app}\Profiles\update.ini; Section: Langpack; Key: Current; String: ulangpack_russian.txt; Languages: ru;
 Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: "Name"; String: u{#AppName};
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Version; String: u{#AppVer} {#AppStatus} {#AppRelease};
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: MirVer; String: u{#AppMirVer};
+Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Version; String: u{#AppFullVer};
+Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: MirVer; String: u{#AppMirFullVer};
 Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@xmpp.ru;
 Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")};
 Filename: {app}\Profiles\update.ini; Section: PackUpdater; Key: File_VersionURL; String: uhttp://im-hotcoffee.narod.ru/hotcoffee_{#AppArch}.ini;
@@ -958,8 +959,8 @@ Filename: {app}\Profiles\update.ini; Section: CLUI; Key: StatusBarProtosPerLine;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Langpack; Key: Current; String: udefault; Languages: en; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: Langpack; Key: Current; String: ulangpack_russian.txt; Languages: ru; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: "Name"; String: u{#AppName}; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Version; String: u{#AppVer} {#AppStatus} {#AppRelease}; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: MirVer; String: u{#AppMirVer}; Check: IsUpdate;
+Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Version; String: u{#AppFullVer}; Check: IsUpdate;
+Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: MirVer; String: u{#AppMirFullVer}; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@xmpp.ru; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")}; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackUpdater; Key: File_VersionURL; String: uhttp://im-hotcoffee.narod.ru/hotcoffee_{#AppArch}.ini; Check: IsUpdate;
@@ -1020,12 +1021,6 @@ Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 18; String: sEM_
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 218; String: d18; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
 Filename: {app}\Profiles\update.ini; Section: EM_LAN_PROTO; Key: AM_BaseProto; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
 Filename: {app}\Profiles\autoexec_update.ini; Section: EM_LAN_PROTO; Key: AM_BaseProto; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto; Check: IsUpdate;
- ; Protocols\Facebook
-Filename: {app}\Profiles\settings.ini; Section: Facebook; Key: AM_BaseProto; String: sFacebook; Flags: uninsdeleteentry; Components: Protocols\Facebook;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 20; String: sFacebook; Flags: uninsdeleteentry; Components: Protocols\Facebook;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 220; String: d20; Flags: uninsdeleteentry; Components: Protocols\Facebook;
-Filename: {app}\Profiles\update.ini; Section: Facebook; Key: AM_BaseProto; String: sFacebook; Flags: uninsdeleteentry; Components: Protocols\Facebook;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Facebook; Key: AM_BaseProto; String: sFacebook; Flags: uninsdeleteentry; Components: Protocols\Facebook; Check: IsUpdate;
  ; Protocols\GG
 Filename: {app}\Profiles\settings.ini; Section: GG; Key: AM_BaseProto; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 22; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG;

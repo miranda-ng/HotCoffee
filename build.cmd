@@ -10,30 +10,30 @@ if /i "%ui%" == "r" (
 	set no7zinfo=[INFO] Установите 7-Zip или разместите 7z.exe и 7z.dll в папке "%~dp0.tools"
 	set nocurlerror=[ERROR] Файл curl.exe не найден!
 	set nocurlinfo=[INFO] Разместите curl.exe в папке "%~dp0.tools"
-	set "needcompilerprompt=Для продолжения требуется расширенная версия компилятора Inno Setup от ResTools. Продолжить (y/n)? [y]: "
-	set "queryversionprompt=Какую версию вы предпочитаете (s = Стабильную, d = В разработке)? [d]: "
+	set "needcompilerprompt=Для продолжения требуется расширенная версия компилятора Inno Setup от ResTools. Продолжить? (y/n) [y]: "
+	set "queryversionprompt=Какую версию вы предпочитаете? (s = Стабильную, d = В разработке) [d]: "
 	set "patchingicons=Патч иконок . . . "
 	set "compilesetup=Сборка установщика . . . "
-	set "deletedirsprompt=Удалить папки x64 и x86 (y/n)? [y]: "
+	set "deletedirsprompt=Удалить папки x64 и x86? (y/n) [y]: "
 	set downloading=Загрузка
 	set extracting=Извлечение
 	set fail=Неудача
-	set "done=Ваш горячий кофе готов. Он был приготовлен из свежемолотых зёрен арабики. Теперь вы можете наслаждаться его вкусом и ароматом в любое удобное для вас время ;)"
+	set "done=Ваш горячий кофе готов ;)"
 ) else (
 	:: en
 	set no7zerror=[ERROR] No 7z.exe found!
 	set no7zinfo=[INFO] Install 7-Zip or place 7z.exe and 7z.dll files to "%~dp0.tools"
 	set nocurlerror=[ERROR] No curl.exe found!
 	set nocurlinfo=[INFO] Place curl.exe to "%~dp0.tools"
-	set "needcompilerprompt=To continue, the extended version of Inno Setup compiler from ResTools is required. Continue (y/n)? [y]: "
-	set "queryversionprompt=Which version would you prefer (s = Stable, d = Development)? [d]: "
+	set "needcompilerprompt=To continue, the extended version of Inno Setup compiler from ResTools is required. Continue? (y/n) [y]: "
+	set "queryversionprompt=Which version would you prefer? (s = Stable, d = Development) [d]: "
 	set "patchingicons=Patching icons . . . "
 	set "compilesetup=Compile setup . . . "
-	set "deletedirsprompt=Delete x64 and x86 folders (y/n)? [y]: "
+	set "deletedirsprompt=Delete x64 and x86 folders? (y/n) [y]: "
 	set downloading=Downloading
 	set extracting=Extracting
 	set fail=FAIL
-	set "done=Your hot coffee is ready. It was made from freshly ground arabica beans. Now you can enjoy its taste and aroma at any time convenient for you ;)"
+	set "done=Your hot coffee is ready ;)"
 )
 
 rem Check curl
