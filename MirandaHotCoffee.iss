@@ -33,8 +33,8 @@
 #define AppMirVerMajor "0"
 #define AppMirVerMinor "96"
 #define AppMirVerBuild "1"
-#define AppMirVerRevis "24433"
-#define AppMirVerHash " (7401cfeb7d)"
+#define AppMirVerRevis "24451"
+#define AppMirVerHash " (3ba7b017ff)"
 
 #define AppMirVerStatusBuild AppStatus == "Final" ? " build #" : " alpha build #"
 #define AppMirArch AppArch == "x64" ? " x64" : ""
