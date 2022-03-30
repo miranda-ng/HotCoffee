@@ -862,7 +862,8 @@ Filename: {app}\Skins\IconPacks\IconPatcher.exe; Parameters: "/bin=""{app}\{#App
 ;Filename: {app}\Skins\IconPacks\IconPatcher.exe; Parameters: "/bin=""{app}\{#AppExeName}"" /arc=Xpk /SILENT"; Flags: runhidden; Check: IsStyleChecked('IconsXpk');
 ;Filename: {app}\Skins\IconPacks\IconPatcher.exe; Parameters: "/bin=""{app}\{#AppExeName}"" /arc=Xpk_HotCoffee /VERYSILENT"; Flags: runhidden; Check: IsStyleChecked('IconsXpk');
  ; postinstall
-Filename: {app}\{#AppExeName}; Description: {cm:LaunchProgram,{#AppName}}; Flags: nowait postinstall runascurrentuser skipifsilent;
+Filename: {app}\{#AppExeName}; Description: {cm:LaunchProgram,{#AppName}}; Parameters: "/profile=HotCoffee"; Flags: nowait postinstall runascurrentuser skipifsilent; Check: not IsUpdate;
+Filename: {app}\{#AppExeName}; Description: {cm:LaunchProgram,{#AppName}}; Flags: nowait postinstall runascurrentuser skipifsilent; Check: IsUpdate;
 Filename: {cm:AppURL}; Description: {cm:AppURLOpen}; Flags: nowait postinstall skipifsilent shellexec unchecked;
 ;Filename: {cm:AppURLWiki}; Description: {cm:AppURLWikiOpen}; Flags: nowait postinstall skipifsilent shellexec unchecked;
 Filename: {cm:AppURLMNG}; Description: {cm:AppURLMNGOpen}; Flags: nowait postinstall skipifsilent shellexec;
