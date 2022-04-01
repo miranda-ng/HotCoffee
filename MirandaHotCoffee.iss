@@ -68,7 +68,7 @@
 #define SelectedSettingsDefault \
   "UpdateSettings" + "," + AppMirDevOrStab + "," + \
   "CompactMode,UseSound,CLCNoVScrollBar," + \
-  "SendCtrlEnter,SendEnter,AutoSizeInputArea,TabCaptionLow,TabSRMMNoVScrollBar," + \
+  "HKSendEnter,AutoSizeInputArea,TabCaptionLow,TabSRMMNoVScrollBar," + \
   "AutoAwayDetection,AutoIdleDetection"
 #define SelectedStyleSettingsDefault \
   "Skin_Textolite_Gray_Dark,IconsXpk,IEViewAnimation,IEViewShortLink,IEViewContextMenu,IEViewScrollBar,FontPrinting"
@@ -1309,15 +1309,15 @@ Filename: {app}\Profiles\update.ini; Section: CLC; Key: NoVScrollBar; String: b{
 Filename: {app}\Profiles\autoexec_update.ini; Section: CLC; Key: NoVScrollBar; String: b{code:SetBoolSetting|!CLCNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
 
  ; Settings Page \ Message sessions \ Sending messages
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: sendonshiftenter; String: b{code:SetBoolSetting|SendShiftEnter}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: SendOnEnter; String: b{code:SetBoolSetting|SendEnter}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: SendOnDblEnter; String: b{code:SetBoolSetting|SendDoubleEnter}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: sendonshiftenter; String: b{code:SetBoolSetting|SendShiftEnter}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: SendOnEnter; String: b{code:SetBoolSetting|SendEnter}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: SendOnDblEnter; String: b{code:SetBoolSetting|SendDoubleEnter}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: sendonshiftenter; String: b{code:SetBoolSetting|SendShiftEnter}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: SendOnEnter; String: b{code:SetBoolSetting|SendEnter}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: SendOnDblEnter; String: b{code:SetBoolSetting|SendDoubleEnter}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {app}\Profiles\settings.ini; Section: SkinHotKeys; Key: tabsrmm_send; String: w525; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendCtrlEnter');
+Filename: {app}\Profiles\settings.ini; Section: SkinHotKeys; Key: tabsrmm_send; String: w269; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendShiftEnter');
+Filename: {app}\Profiles\settings.ini; Section: SkinHotKeys; Key: tabsrmm_send; String: w13; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendEnter');
+Filename: {app}\Profiles\update.ini; Section: SkinHotKeys; Key: tabsrmm_send; String: w525; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendCtrlEnter');
+Filename: {app}\Profiles\update.ini; Section: SkinHotKeys; Key: tabsrmm_send; String: w269; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendShiftEnter');
+Filename: {app}\Profiles\update.ini; Section: SkinHotKeys; Key: tabsrmm_send; String: w13; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendEnter');
+Filename: {app}\Profiles\autoexec_update.ini; Section: SkinHotKeys; Key: tabsrmm_send; String: w525; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendCtrlEnter') and IsUpdate;
+Filename: {app}\Profiles\autoexec_update.ini; Section: SkinHotKeys; Key: tabsrmm_send; String: w269; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendShiftEnter') and IsUpdate;
+Filename: {app}\Profiles\autoexec_update.ini; Section: SkinHotKeys; Key: tabsrmm_send; String: w13; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendEnter') and IsUpdate;
  ; Settings Page \ Message sessions \ AutoSizeInputArea... Ñombined with LocationTabsMessageWindow
  ; Settings Page \ Message sessions \ LogStatusChanges
 Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: logstatuschanges; String: b{code:SetBoolSetting|LogStatusChanges}; Flags: uninsdeleteentry;
@@ -6314,11 +6314,10 @@ begin
           AddCheckBox(SettingsHelper('CLCNoVScrollBar'), '', 1, False, True, True, True, nil);
 
           AddCheckBox(SettingsHelper('MessageSessions'), '', 0, False, True, True, True, nil);
-          AddCheckBoxEx(SettingsHelper('SendingMessage'), '', 1, False, True, True, True, nil, False);
-          AddCheckBox(SettingsHelper('SendCtrlEnter'), '', 2, False, False, True, True, nil);
-          AddCheckBox(SettingsHelper('SendShiftEnter'), '', 2, False, True, True, False, nil);
-          AddCheckBox(SettingsHelper('SendEnter'), '', 2, False, True, True, True, nil);
-          AddCheckBox(SettingsHelper('SendDoubleEnter'), '', 2, False, True, True, False, nil);
+          AddCheckBoxEx(SettingsHelper('SendingMessage'), '', 1, False, False, True, True, nil, False);
+          AddRadioButton(SettingsHelper('HKSendCtrlEnter'), '', 2, False, True, nil);
+          AddRadioButton(SettingsHelper('HKSendShiftEnter'), '', 2, False, True, nil);
+          AddRadioButton(SettingsHelper('HKSendEnter'), '', 2, False, True, nil);
           AddCheckBox(SettingsHelper('AutoSizeInputArea'), '', 1, False, True, True, True, nil);
           AddCheckBox(SettingsHelper('LogStatusChanges'), '', 1, False, True, True, False, nil);
           AddCheckBox(SettingsHelper('TypingNotification'), '', 1, False, True, True, False, nil);
