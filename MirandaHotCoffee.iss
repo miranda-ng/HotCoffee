@@ -398,13 +398,13 @@ Source: x86\Icons\Proto_Sametime.dll; DestDir: {app}\Icons; Flags: ignoreversion
 Source: {#AppArch}\Plugins\SkypeWeb.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Skype; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_conn_Skype.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Skype; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Skype.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Skype; AfterInstall: AddDetails;
-Source: x86\Skins\Smileys\flags\*; DestDir: {app}\Skins\Smileys\flags; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Protocols\Skype and Resources\Smileys; AfterInstall: AddDetails;
-Source: x86\Skins\Smileys\_dark\Skype\*; DestDir: {app}\Skins\Smileys\_dark\Skype; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Protocols\Skype and Resources\Smileys; AfterInstall: AddDetails;
-Source: x86\Skins\Smileys\_dark\Skype\Skype_big_pack.msl; DestDir: {app}\Skins\Smileys\_dark\Skype; DestName: Skype.msl; Flags: ignoreversion; Components: Protocols\Skype and Resources\Smileys\big_pack; AfterInstall: AddDetails;
-Source: x86\Skins\Smileys\_dark\Skype\Skype_small_pack.msl; DestDir: {app}\Skins\Smileys\_dark\Skype; DestName: Skype.msl; Flags: ignoreversion; Components: Protocols\Skype and Resources\Smileys\small_pack; AfterInstall: AddDetails;
-Source: x86\Skins\Smileys\_light\Skype\*; DestDir: {app}\Skins\Smileys\_light\Skype; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Protocols\Skype and Resources\Smileys; AfterInstall: AddDetails;
-Source: x86\Skins\Smileys\_light\Skype\Skype_big_pack.msl; DestDir: {app}\Skins\Smileys\_light\Skype; DestName: Skype.msl; Flags: ignoreversion; Components: Protocols\Skype and Resources\Smileys\big_pack; AfterInstall: AddDetails;
-Source: x86\Skins\Smileys\_light\Skype\Skype_small_pack.msl; DestDir: {app}\Skins\Smileys\_light\Skype; DestName: Skype.msl; Flags: ignoreversion; Components: Protocols\Skype and Resources\Smileys\small_pack; AfterInstall: AddDetails;
+Source: x86\Skins\Smileys\flags\*; DestDir: {app}\Skins\Smileys\flags; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Protocols\Skype; AfterInstall: AddDetails;
+Source: x86\Skins\Smileys\_dark\Skype\*; DestDir: {app}\Skins\Smileys\_dark\Skype; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Protocols\Skype; AfterInstall: AddDetails;
+Source: x86\Skins\Smileys\_dark\Skype\Skype_big_pack.msl; DestDir: {app}\Skins\Smileys\_dark\Skype; DestName: Skype.msl; Flags: ignoreversion; Components: Protocols\Skype; AfterInstall: AddDetails;
+Source: x86\Skins\Smileys\_dark\Skype\Skype_small_pack.msl; DestDir: {app}\Skins\Smileys\_dark\Skype; DestName: Skype.msl; Flags: ignoreversion; Components: Protocols\Skype; AfterInstall: AddDetails;
+Source: x86\Skins\Smileys\_light\Skype\*; DestDir: {app}\Skins\Smileys\_light\Skype; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Protocols\Skype; AfterInstall: AddDetails;
+Source: x86\Skins\Smileys\_light\Skype\Skype_big_pack.msl; DestDir: {app}\Skins\Smileys\_light\Skype; DestName: Skype.msl; Flags: ignoreversion; Components: Protocols\Skype; AfterInstall: AddDetails;
+Source: x86\Skins\Smileys\_light\Skype\Skype_small_pack.msl; DestDir: {app}\Skins\Smileys\_light\Skype; DestName: Skype.msl; Flags: ignoreversion; Components: Protocols\Skype; AfterInstall: AddDetails;
  ; Protocols\Steam
 Source: {#AppArch}\Plugins\Steam.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Steam; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Steam.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Steam; AfterInstall: AddDetails;
@@ -420,7 +420,7 @@ Source: x86\Icons\Proto_Twitter.dll; DestDir: {app}\Icons; Flags: ignoreversion;
 Source: {#AppArch}\Plugins\VKontakte.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\VKontakte; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_conn_VKontakte.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\VKontakte; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_VKontakte.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\VKontakte; AfterInstall: AddDetails;
-Source: x86\Skins\Smileys\stickers\VK\*; DestDir: {app}\Skins\Smileys\stickers\VK; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Protocols\VKontakte and Resources\Smileys; AfterInstall: AddDetails;
+Source: x86\Skins\Smileys\stickers\VK\*; DestDir: {app}\Skins\Smileys\stickers\VK; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Protocols\VKontakte; AfterInstall: AddDetails;
  ; Protocols\Pseudo
  ; Protocols\Pseudo\CurrencyRates
 Source: {#AppArch}\Plugins\CurrencyRates.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\CurrencyRates; AfterInstall: AddDetails;
@@ -516,23 +516,23 @@ Source: {#AppArch}\Plugins\PopupPlus.dll; DestDir: {app}\Plugins; Flags: ignorev
 Source: x86\Skins\Popup\Default_Miranda\*; DestDir: {app}\Skins\Popup\Default_Miranda; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\PopupPlus; AfterInstall: AddDetails;
  ; Resources\Smileys
 Source: {#AppArch}\Plugins\SmileyAdd.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Resources\Smileys; AfterInstall: AddDetails;
-Source: x86\Skins\Smileys\_dark\emoji\*; DestDir: {app}\Skins\Smileys\_dark\emoji; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\Smileys; AfterInstall: AddDetails;
-Source: x86\Skins\Smileys\_light\emoji\*; DestDir: {app}\Skins\Smileys\_light\emoji; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\Smileys; AfterInstall: AddDetails;
-Source: x86\Skins\Smileys\_dark\kolobok\*; DestDir: {app}\Skins\Smileys\_dark\kolobok; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\Smileys; AfterInstall: AddDetails;
-Source: x86\Skins\Smileys\_light\kolobok\*; DestDir: {app}\Skins\Smileys\_light\kolobok; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\Smileys; AfterInstall: AddDetails;
-Source: x86\Skins\Smileys\emoji\*; DestDir: {app}\Skins\Smileys\emoji; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\Smileys; AfterInstall: AddDetails;
+Source: x86\Skins\Smileys\_dark\emoji\*; DestDir: {app}\Skins\Smileys\_dark\emoji; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Skins\Smileys\_light\emoji\*; DestDir: {app}\Skins\Smileys\_light\emoji; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Skins\Smileys\_dark\kolobok\*; DestDir: {app}\Skins\Smileys\_dark\kolobok; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Skins\Smileys\_light\kolobok\*; DestDir: {app}\Skins\Smileys\_light\kolobok; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Skins\Smileys\emoji\*; DestDir: {app}\Skins\Smileys\emoji; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MainCore; AfterInstall: AddDetails;
  ; Resources\Smileys\big_pack emoji
 Source: x86\Skins\Smileys\_dark\emoji\emoji_big_pack.msl; DestDir: {app}\Skins\Smileys\_dark\emoji; DestName: emoji.msl; Flags: ignoreversion; Components: Resources\Smileys\big_pack; AfterInstall: AddDetails;
 Source: x86\Skins\Smileys\_light\emoji\emoji_big_pack.msl; DestDir: {app}\Skins\Smileys\_light\emoji; DestName: emoji.msl; Flags: ignoreversion; Components: Resources\Smileys\big_pack; AfterInstall: AddDetails;
  ; Resources\Smileys\small_pack emoji
-Source: x86\Skins\Smileys\_dark\emoji\emoji_small_pack.msl; DestDir: {app}\Skins\Smileys\_dark\emoji; DestName: emoji.msl; Flags: ignoreversion; Components: Resources\Smileys\small_pack; AfterInstall: AddDetails;
-Source: x86\Skins\Smileys\_light\emoji\emoji_small_pack.msl; DestDir: {app}\Skins\Smileys\_light\emoji; DestName: emoji.msl; Flags: ignoreversion; Components: Resources\Smileys\small_pack; AfterInstall: AddDetails;
+Source: x86\Skins\Smileys\_dark\emoji\emoji_small_pack.msl; DestDir: {app}\Skins\Smileys\_dark\emoji; DestName: emoji.msl; Flags: ignoreversion; Components: Resources\Smileys\small_pack or (not Resources\Smileys\big_pack); AfterInstall: AddDetails;
+Source: x86\Skins\Smileys\_light\emoji\emoji_small_pack.msl; DestDir: {app}\Skins\Smileys\_light\emoji; DestName: emoji.msl; Flags: ignoreversion; Components: Resources\Smileys\small_pack or (not Resources\Smileys\big_pack); AfterInstall: AddDetails;
  ; Resources\Smileys\big_pack kolobok
 Source: x86\Skins\Smileys\_dark\kolobok\kolobok_big_pack.msl; DestDir: {app}\Skins\Smileys\_dark\kolobok; DestName: kolobok.msl; Flags: ignoreversion; Components: Resources\Smileys\big_pack; AfterInstall: AddDetails;
 Source: x86\Skins\Smileys\_light\kolobok\kolobok_big_pack.msl; DestDir: {app}\Skins\Smileys\_light\kolobok; DestName: kolobok.msl; Flags: ignoreversion; Components: Resources\Smileys\big_pack; AfterInstall: AddDetails;
  ; Resources\Smileys\small_pack kolobok
-Source: x86\Skins\Smileys\_dark\kolobok\kolobok_small_pack.msl; DestDir: {app}\Skins\Smileys\_dark\kolobok; DestName: kolobok.msl; Flags: ignoreversion; Components: Resources\Smileys\small_pack; AfterInstall: AddDetails;
-Source: x86\Skins\Smileys\_light\kolobok\kolobok_small_pack.msl; DestDir: {app}\Skins\Smileys\_light\kolobok; DestName: kolobok.msl; Flags: ignoreversion; Components: Resources\Smileys\small_pack; AfterInstall: AddDetails;
+Source: x86\Skins\Smileys\_dark\kolobok\kolobok_small_pack.msl; DestDir: {app}\Skins\Smileys\_dark\kolobok; DestName: kolobok.msl; Flags: ignoreversion; Components: Resources\Smileys\small_pack or (not Resources\Smileys\big_pack); AfterInstall: AddDetails;
+Source: x86\Skins\Smileys\_light\kolobok\kolobok_small_pack.msl; DestDir: {app}\Skins\Smileys\_light\kolobok; DestName: kolobok.msl; Flags: ignoreversion; Components: Resources\Smileys\small_pack or (not Resources\Smileys\big_pack); AfterInstall: AddDetails;
  ; Resources\Sounds
 Source: {#AppArch}\Plugins\BASS\*; DestDir: {app}\Plugins\BASS; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\BASS_interface.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Resources\Sounds; AfterInstall: AddDetails;
