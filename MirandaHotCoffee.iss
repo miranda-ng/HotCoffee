@@ -612,7 +612,7 @@ Name: Protocols\Jabber\OK; Description: {code:ComponentsHelper|Jabber_Protocol_O
 Name: Protocols\Jabber\XMPP; Description: {code:ComponentsHelper|Jabber_Protocol_XMPP}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Omegle; Description: {code:ComponentsHelper|Omegle_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Sametime; Description: {code:ComponentsHelper|Sametime_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Skype; Description: {code:ComponentsHelper|Skype_Protocol}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Protocols\Skype; Description: {code:ComponentsHelper|Skype_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Steam; Description: {code:ComponentsHelper|Steam_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Tox; Description: {code:ComponentsHelper|TOX_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Twitter; Description: {code:ComponentsHelper|Twitter_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
@@ -649,7 +649,7 @@ Name: Plugins\WhenWasIt; Description: {code:ComponentsHelper|WhenWasIt}; Types: 
 Name: Resources; Description: {code:ComponentsHelper|Resources}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
 Name: Resources\IEView; Description: {code:ComponentsHelper|IEView}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\PopupPlus; Description: {code:ComponentsHelper|PopupPlus}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
-Name: Resources\Smileys; Description: {code:ComponentsHelper|Smileys}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Smileys; Description: {code:ComponentsHelper|Smileys}; Types: minimal optimal advanced custom; Flags: fixed disablenouninstallwarning;
 Name: Resources\Smileys\big_pack; Description: {code:ComponentsHelper|SmileysBigPack}; Flags: exclusive disablenouninstallwarning;
 Name: Resources\Smileys\small_pack; Description: {code:ComponentsHelper|SmileysSmallPack}; Types: minimal optimal advanced custom; Flags: exclusive disablenouninstallwarning;
 Name: Resources\Sounds; Description: {code:ComponentsHelper|Sounds}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
@@ -725,7 +725,7 @@ Name: Protocols\Jabber\OK; Description: {code:ComponentsHelper|Jabber_Protocol_O
 Name: Protocols\Jabber\XMPP; Description: {code:ComponentsHelper|Jabber_Protocol_XMPP}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Omegle; Description: {code:ComponentsHelper|Omegle_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Sametime; Description: {code:ComponentsHelper|Sametime_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Skype; Description: {code:ComponentsHelper|Skype_Protocol}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Skype; Description: {code:ComponentsHelper|Skype_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Steam; Description: {code:ComponentsHelper|Steam_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Tox; Description: {code:ComponentsHelper|TOX_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Twitter; Description: {code:ComponentsHelper|Twitter_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
@@ -762,7 +762,7 @@ Name: Plugins\WhenWasIt; Description: {code:ComponentsHelper|WhenWasIt}; Types: 
 Name: resources; Description: {code:ComponentsHelper|Resources}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
 Name: Resources\IEView; Description: {code:ComponentsHelper|IEView}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\PopupPlus; Description: {code:ComponentsHelper|PopupPlus}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
-Name: Resources\Smileys; Description: {code:ComponentsHelper|Smileys}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Smileys; Description: {code:ComponentsHelper|Smileys}; Types: minimal optimal advanced full custom; Flags: fixed disablenouninstallwarning;
 Name: Resources\Smileys\big_pack; Description: {code:ComponentsHelper|SmileysBigPack}; Flags: exclusive disablenouninstallwarning;
 Name: Resources\Smileys\small_pack; Description: {code:ComponentsHelper|SmileysSmallPack}; Types: minimal optimal advanced full custom; Flags: exclusive disablenouninstallwarning;
 Name: Resources\Sounds; Description: {code:ComponentsHelper|Sounds}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
@@ -932,7 +932,7 @@ Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Version; String: 
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: MirVer; String: u{#AppMirFullVer};
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@xmpp.ru;
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")};
-Filename: {app}\Profiles\settings.ini; Section: PackUpdater; Key: File_VersionURL; String: uhttp://im-hotcoffee.narod.ru/hotcoffee_{#AppArch}.ini;
+Filename: {app}\Profiles\settings.ini; Section: PackUpdater; Key: File_VersionURL; String: uhttps://miranda-ng.org/distr/packs/HotCoffee/.hotcoffee_{#AppArch}.ini;
 Filename: {app}\Profiles\settings.ini; Section: PackUpdater; Key: File_1_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
 Filename: {app}\Profiles\settings.ini; Section: PackUpdater; Key: File_30_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
 Filename: {app}\Profiles\settings.ini; Section: PackUpdater; Key: File_35_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
@@ -948,7 +948,7 @@ Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Version; String: u{
 Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: MirVer; String: u{#AppMirFullVer};
 Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@xmpp.ru;
 Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")};
-Filename: {app}\Profiles\update.ini; Section: PackUpdater; Key: File_VersionURL; String: uhttp://im-hotcoffee.narod.ru/hotcoffee_{#AppArch}.ini;
+Filename: {app}\Profiles\update.ini; Section: PackUpdater; Key: File_VersionURL; String: uhttps://miranda-ng.org/distr/packs/HotCoffee/.hotcoffee_{#AppArch}.ini;
 Filename: {app}\Profiles\update.ini; Section: PackUpdater; Key: File_1_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
 Filename: {app}\Profiles\update.ini; Section: PackUpdater; Key: File_30_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
 Filename: {app}\Profiles\update.ini; Section: PackUpdater; Key: File_35_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
@@ -964,7 +964,7 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Version; S
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: MirVer; String: u{#AppMirFullVer}; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@xmpp.ru; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")}; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackUpdater; Key: File_VersionURL; String: uhttp://im-hotcoffee.narod.ru/hotcoffee_{#AppArch}.ini; Check: IsUpdate;
+Filename: {app}\Profiles\autoexec_update.ini; Section: PackUpdater; Key: File_VersionURL; String: uhttps://miranda-ng.org/distr/packs/HotCoffee/.hotcoffee_{#AppArch}.ini; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackUpdater; Key: File_1_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")}; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackUpdater; Key: File_30_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")}; Check: IsUpdate;
 Filename: {app}\Profiles\autoexec_update.ini; Section: PackUpdater; Key: File_35_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")}; Check: IsUpdate;

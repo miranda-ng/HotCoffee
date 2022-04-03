@@ -39,7 +39,7 @@ local goToForum = function()
 end
 
 local goToHomepage = function()
-  winapi.ShellExecute('open', 'http://www.miranda-ng.org/hotcoffee')
+  winapi.ShellExecute('open', 'https://www.miranda-ng.org/hotcoffee')
 end
 
 local goToBlog = function()
@@ -56,44 +56,44 @@ end
 local goToFaq = function()
   local value = db.GetSetting(_, 'Langpack', 'Current')
   if value == 'langpack_russian.txt' then
-    winapi.ShellExecute('open', 'http://www.miranda-ng.org/hotcoffee/ru/faq')
+    winapi.ShellExecute('open', 'https://www.miranda-ng.org/hotcoffee/faq')
   elseif value == 'langpack_polish.txt' then
-      winapi.ShellExecute('open', 'http://www.miranda-ng.org/hotcoffee/pl/faq')
+      winapi.ShellExecute('open', 'https://www.miranda-ng.org/hotcoffee/faq')
   else
-    winapi.ShellExecute('open', 'http://www.miranda-ng.org/hotcoffee/en/faq')
+    winapi.ShellExecute('open', 'https://www.miranda-ng.org/hotcoffee/faq')
   end
 end
 
 local goToUseful = function()
   local value = db.GetSetting(_, 'Langpack', 'Current')
   if value == 'langpack_russian.txt' then
-    winapi.ShellExecute('open', 'http://www.miranda-ng.org/hotcoffee/ru/useful')
+    winapi.ShellExecute('open', 'https://www.miranda-ng.org/hotcoffee/useful')
   elseif value == 'langpack_polish.txt' then
-      winapi.ShellExecute('open', 'http://www.miranda-ng.org/hotcoffee/pl/useful')
+      winapi.ShellExecute('open', 'https://www.miranda-ng.org/hotcoffee/useful')
   else
-    winapi.ShellExecute('open', 'http://www.miranda-ng.org/hotcoffee/en/useful')
+    winapi.ShellExecute('open', 'https://www.miranda-ng.org/hotcoffee/useful')
   end
 end
 
 local goToCopyright = function()
   local value = db.GetSetting(_, 'Langpack', 'Current')
   if value == 'langpack_russian.txt' then
-    winapi.ShellExecute('open', 'http://www.miranda-ng.org/hotcoffee/ru/licenses')
+    winapi.ShellExecute('open', 'https://www.miranda-ng.org/hotcoffee/licenses')
   elseif value == 'langpack_polish.txt' then
-      winapi.ShellExecute('open', 'http://www.miranda-ng.org/hotcoffee/pl/licenses')
+      winapi.ShellExecute('open', 'https://www.miranda-ng.org/hotcoffee/licenses')
   else
-    winapi.ShellExecute('open', 'http://www.miranda-ng.org/hotcoffee/en/licenses')
+    winapi.ShellExecute('open', 'https://www.miranda-ng.org/hotcoffee/licenses')
   end
 end
 
 local goToDonate = function()
   local value = db.GetSetting(_, 'Langpack', 'Current')
   if value == 'langpack_russian.txt' then
-    winapi.ShellExecute('open', 'http://www.miranda-ng.org/hotcoffee/ru/donate')
+    winapi.ShellExecute('open', 'https://www.miranda-ng.org/hotcoffee/donate')
   elseif value == 'langpack_polish.txt' then
-      winapi.ShellExecute('open', 'http://www.miranda-ng.org/hotcoffee/pl/donate')
+      winapi.ShellExecute('open', 'https://www.miranda-ng.org/hotcoffee/donate')
   else
-    winapi.ShellExecute('open', 'http://www.miranda-ng.org/hotcoffee/en/donate')
+    winapi.ShellExecute('open', 'https://www.miranda-ng.org/hotcoffee/donate')
   end
 end
 

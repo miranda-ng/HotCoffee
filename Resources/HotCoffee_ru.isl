@@ -318,7 +318,7 @@ CreateAutorunIcon=autorun | Создать значок в &Автозагрузке | Значок программы в 
 Dbtool=Проверить базу
 Support=Поддержка
 Homepage=Домашняя страница
-AppURL=https://www.miranda-ng.org/hotcoffee/
+AppURL=https://www.miranda-ng.org/hotcoffee
 AppURLOpen=Открыть домашнюю страницу
 SupportWiki=Вики на Miranda NG
 AppURLWiki=https://wiki.miranda-ng.org/index.php?title=%D0%A1%D0%B1%D0%BE%D1%80%D0%BA%D0%B8/Miranda_NG_HotCoffee
@@ -330,7 +330,7 @@ SupportMP=Поддержка на Miranda Planet
 AppURLMP=http://miranda-planet.com/packs/1670-miranda-im-hotcoffee.html
 AppURLMPOpen=Открыть страницу поддержки на Miranda Planet
 SupportFaq=ЧаВО
-AppFaqURL=https://www.miranda-ng.org/hotcoffee/ru/faq/
+AppFaqURL=https://www.miranda-ng.org/hotcoffee/faq
 AppFaqURLOpen=Открыть страницу Часто задаваемые Вопросы и Ответы
 SupportBlog=Блог
 AppSupportBlogURL=http://hotcoffee-im.blogspot.com/
