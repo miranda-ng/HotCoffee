@@ -1214,8 +1214,6 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: default_h
 #sub AddThemeIni
  ; Write the default theme to ini
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: u{#theme[i]}; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_{#theme[i]}');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Skin; String: u{#theme[i]}; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_{#theme[i]}');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Skin; String: u{#theme[i]}; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_{#theme[i]}') and IsUpdate;
 #endsub
 #for {i = 0; i < 31; i++} AddThemeIni
 
