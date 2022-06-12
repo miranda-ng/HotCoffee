@@ -65,15 +65,15 @@ rd /s /q x64 2>nul&md x64 2>nul
 rem Downloads
 set "components=authstate bass_interface bosskey buddyexpectator changekeyboardlayout cloudfile currencyrates dbeditorpp dbx_mdbx dbx_mmap emlanproto fingerprint flags folders gg gmailnotifier historypp icqcorp ieview menuex messagestate mirlua mradio newawaysys neweventnotify newsaggregator newxstatusnotify omegle packupdater popupplus quickmessages quicksearch sametime sessions skypeweb smileyadd spellchecker splashscreen statusmanager steam stopspam tipper tox translitswitcher twitter uinfoex variables vkontakte weather webview whenwasit yamn alarms assocmgr buddypounce console favcontacts fltcontacts historysweeperlight keyboardnotify listeningto mydetails mirotr nudge secureim cryptopp winterspeak"
 set query=d
-if "%allowqueries%" == "1" set /p "query=%queryversionprompt%"
+if "%allowqueries%" == "0" set /p "query=%queryversionprompt%"
 if /i "%query%" == "s" (
 	set "dest=%~dp0x86\miranda-ng.7z"
-	call :download "https://miranda-ng.org/distr/stable/miranda-ng-v0.95.13.1.7z" "%%dest%%"
+	call :download "https://miranda-ng.org/distr/stable/miranda-ng-v0.96.1.7z" "%%dest%%"
 	call :extract "%%dest%%" "%~dp0x86" "-x!mirandaboot.ini"
 	call del /q "%%dest%%" 2>nul
 
 	set "dest=%~dp0x64\miranda-ng.7z"
-	call :download "https://miranda-ng.org/distr/stable/miranda-ng-v0.95.13.1_x64.7z" "%%dest%%"
+	call :download "https://miranda-ng.org/distr/stable/miranda-ng-v0.96.1_x64.7z" "%%dest%%"
 	call :extract "%%dest%%" "%~dp0x64" "-x!Icons -x!Plugins\Import -x!mirandaboot.ini"
 	call del /q "%%dest%%" 2>nul
 
