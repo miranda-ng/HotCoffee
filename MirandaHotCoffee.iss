@@ -25,7 +25,7 @@
 
 #define AppVerMajor "1"
 #define AppVerMinor "0"
-#define AppStatus "Alpha"                                                   ; must be Test, Alpha, Beta or Final
+#define AppStatus "Test"                                                   ; must be Test, Alpha, Beta or Final
 #define AppRelease "R57"
 #define AppVer AppVerMajor + "." + AppVerMinor
 #define AppFullVer AppVer + " " + AppStatus + " " + AppRelease

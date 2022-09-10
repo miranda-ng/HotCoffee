@@ -162,6 +162,9 @@ Skins =
 	{ Name = 'Graphite_Gray_Dark',   Description = 'Graphite Gray Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AD03' },
 	{ Name = 'Graphite_Gray_Light',   Description = 'Graphite Gray Light',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AD04' },
 
+	{ Name = 'Notepad_Dark',   Description = 'Notepad Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D3AE01' },
+	{ Name = 'Notepad_Light',   Description = 'Notepad Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D3AE02' },
+
 	{ Name = 'PhotoOne_Dark',   Description = 'PhotoOne Dark',   Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AE01' },
 	{ Name = 'PhotoOne_Light',   Description = 'PhotoOne Light',  Uid = 'D34F56EC-3E9D-4502-B700-5F49A6D2AE02' },
 
@@ -181,6 +184,7 @@ function WriteTabSRMMSkin(skinName, fontName)
 	local pattern_4 = 'WinStyle_Classic_Dark,WinStyle_Classic_Light'
 	local pattern_5 = 'Diplomat_Dark,Diplomat_Light,Textolite_Brown_Dark,Textolite_Brown_Light,Textolite_Gray_Dark,Textolite_Gray_Light'
 	local pattern_6 = 'Surface_Black,Surface_White'
+	local pattern_7 = 'Notepad_Dark,Notepad_Light'
 
 	local result = 0
 
@@ -208,6 +212,10 @@ function WriteTabSRMMSkin(skinName, fontName)
 		result = 12
 	elseif pattern_6:find(skinName) and fontName == 'Handwriting' then
 		result = 9
+	elseif pattern_7:find(skinName) and fontName == 'Printing' then
+		result = 13
+	elseif pattern_7:find(skinName) and fontName == 'Handwriting' then
+		result = 10
 	end
 
 	if result > 0 then
@@ -540,6 +548,7 @@ function WriteTabSRMMSkinTabCaption(skinName, CaptionSize)
 	local pattern_6 = 'Surface_Black,Surface_White,Textolite_Brown_Dark,Textolite_Brown_Light,Textolite_Gray_Dark,Textolite_Gray_Light'
 	local pattern_7 = 'GoldTime_Dark,GoldTime_Light'
 	local pattern_8 = 'Graphite_Brown_Light,Graphite_Gray_Dark,PhotoOne_Dark,PhotoOne_Light'
+	local pattern_9 = 'Notepad_Dark,Notepad_Light'
 
 	local result = 0
 
@@ -582,6 +591,11 @@ function WriteTabSRMMSkinTabCaption(skinName, CaptionSize)
 		result = 18
 	elseif pattern_8:find(skinName) and CaptionSize == 'CaptionHigh' then
 		result = 22
+
+	elseif pattern_9:find(skinName) and CaptionSize == 'CaptionLow' then
+		result = 51
+	elseif pattern_9:find(skinName) and CaptionSize == 'CaptionHigh' then
+		result = 55
 	end
 
 	if result > 0 then
