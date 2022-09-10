@@ -1,0 +1,220 @@
+/*--- Global ---*/
+
+.Link-Text, .tzerlink {
+	color: #004DAA;
+}
+
+input {
+	background: #EBEBEB;
+	border-left: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #A5A8AD;
+	border-bottom: 1px solid #A5A8AD;
+	color: #4A5968;
+}
+
+html {
+	scrollbar-face-color: #EBEBEB;
+	scrollbar-highlight-color: #EBEBEB;
+	scrollbar-shadow-color: #EBEBEB;
+	scrollbar-arrow-color: #4A5968;
+	scrollbar-3dlight-color: #FFFFFF;
+	scrollbar-darkshadow-color: #A5A8AD;
+	scrollbar-track-color: #FAFAFA;
+	background: url(Light.png) fixed no-repeat bottom right;
+	background-color: #FAFAFA;
+	overflow: auto;
+	padding: 0px 0px 0px 0px;
+	margin: 0;
+	font-size: 13px;
+	color: #4A5968;
+	zoom: 0 !important;
+}
+
+a, a:active {
+	color: #004DAA;
+	text-decoration: none;
+	font-weight: normal;
+	cursor:pointer;
+}
+
+a:visited {
+	color: #AA4800;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+a:hover {
+	color: #004DAA;
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+div {
+	width: auto;
+	word-wrap: break-word;
+}
+
+.img {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	vertical-align: middle;
+}
+
+/*.head {
+	border-bottom: 1px dotted;
+}*/
+
+.date {
+	font-weight: bold;
+	float: right;
+	font-size: 11px;
+	padding: 3px 5px 0px 5px;
+}
+
+.name {
+	font-weight: bold;
+	padding: 3px 5px 0px 5px;
+}
+
+.time {
+	color: #9FAAB5;
+	font-weight: normal;
+	float: right;
+	font-size: 11px;
+}
+
+.text {
+/*	word-break: break-all;*/
+	padding: 3px 5px 3px 5px;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+div.avatar {
+	display: none;
+	float: left;
+	padding: 0px 0px 0px 0px;
+}
+
+.avatar img {
+	height: 32;
+}
+
+.code {
+	border: 1px dashed #A5A8AD;
+	margin: -1px;
+}
+
+.MessageIn, .hMessageIn, .frame_MessageInGroupStart, .frame_hMessageInGroupStart {
+	border-left: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #A5A8AD;
+	border-bottom: 1px solid #A5A8AD;
+}
+
+.MessageOut, .hMessageOut, .frame_MessageOutGroupStart, .frame_hMessageOutGroupStart {
+	border-left: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #A5A8AD;
+	border-bottom: 1px solid #A5A8AD;
+}
+
+.MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
+	border-top: 1px dotted #A5A8AD;
+}
+
+.hMessageIn, .hMessageOut, .frame_hMessageInGroupStart, .frame_hMessageOutGroupStart, .hStatus, .hFileIn, .hFileOut, .hURL {
+	background: url(Notepad_Light/history.png) no-repeat bottom right;
+}
+
+/* -------------------- incoming messagebox -------------------- */
+
+.in .head {
+	color: #AA4800;
+	background-image: url(Notepad_Light/in.png);
+}
+
+.contentMessageIn, .contenthMessageIn, .contentMessageInGroupStart, .MessageInGroupInner, .contenthMessageInGroupStart, .hMessageInGroupInner {
+	background-image: url(Notepad_Light/in.png);
+}
+
+/* -------------------- outgoing messagebox -------------------- */
+
+.out .head {
+	color: #004DAA;
+	background-image: url(Notepad_Light/out.png);
+}
+
+.contentMessageOut, .contenthMessageOut, .contentMessageOutGroupStart, .MessageOutGroupInner, .contenthMessageOutGroupStart, .hMessageOutGroupInner {
+	background-image: url(Notepad_Light/out.png);
+}
+
+/* -------------------- status support -------------------- */
+
+.status .head {
+	color: #AA4800;
+	background-image: url(Notepad_Light/status.png);
+}
+
+.contentStatus, .contenthStatus {
+	color: #AA4800;
+	background-image: url(Notepad_Light/status.png);
+}
+
+.contentStatus .time, .contenthStatus .time {
+	color: #C48C64;
+}
+
+.Status, .hStatus {
+	border-left: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #A5A8AD;
+	border-bottom: 1px solid #A5A8AD;
+}
+
+/* -------------------- file transfer support -------------------- */
+
+.infile .head, .outfile .head {
+	color: #008000;
+	background-image: url(Notepad_Light/file.png);
+}
+
+.contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
+	color: #008000;
+	background-image: url(Notepad_Light/file.png);
+}
+
+.contentFileIn .time, .contenthFileIn .time, .contentFileOut .time, .contenthFileOut .time {
+	color: #6DA76D;
+}
+
+.FileIn, .hFileIn, .FileOut, .hFileOut {
+	border-left: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #A5A8AD;
+	border-bottom: 1px solid #A5A8AD;
+}
+
+/* -------------------- URL support -------------------- */
+
+.inurl .head, .outurl .head {
+	color: #004DAA;
+	background-image: url(Notepad_Light/url.png);
+}
+
+.contentURL, .contenthURL {
+	color: #004DAA;
+	background-image: url(Notepad_Light/url.png);
+}
+
+.contentURL .time, .contenthURL .time {
+	color: #6D93BC;
+}
+
+.URL, .hURL {
+	border-left: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #A5A8AD;
+	border-bottom: 1px solid #A5A8AD;
+}

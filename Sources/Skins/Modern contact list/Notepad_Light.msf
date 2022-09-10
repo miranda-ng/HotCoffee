@@ -24,20 +24,20 @@ $$Window=sGlyph,Fragment,BG.png,0,0,20,14,StretchBoth,12,6,7,7,255
 $$Background=sGlyph,Solid,235,235,235,255
 ;
 $$SubGroup/Closed/Hot=sGlyph,Fragment,BG.png,22,18,123,17,StretchBoth,0,0,0,0,255
-$$SubGroup/Closed/Selected=sGlyph,Fragment,BG.png,22,0,123,17,StretchBoth,0,0,0,0,255
-$$SubGroup/Closed=sGlyph,Fragment,BG.png,22,0,123,17,StretchBoth,0,0,0,0,255
+$$SubGroup/Closed/Selected=sGlyph,Fragment,BG.png,22,0,123,17,StretchBoth,0,0,0,0,200
+$$SubGroup/Closed=sGlyph,Fragment,BG.png,22,0,123,17,StretchBoth,0,0,0,0,200
 ;
 $$SubGroup/Open/Hot=sGlyph,Fragment,BG.png,22,18,123,17,StretchBoth,0,0,0,0,255
-$$SubGroup/Open/Selected=sGlyph,Fragment,BG.png,22,0,123,17,StretchBoth,0,0,0,0,255
-$$SubGroup/Open=sGlyph,Fragment,BG.png,22,0,123,17,StretchBoth,0,0,0,0,255
+$$SubGroup/Open/Selected=sGlyph,Fragment,BG.png,22,0,123,17,StretchBoth,0,0,0,0,200
+$$SubGroup/Open=sGlyph,Fragment,BG.png,22,0,123,17,StretchBoth,0,0,0,0,200
 ;
 $$Group/Closed/Hot=sGlyph,Fragment,BG.png,22,18,123,17,StretchBoth,0,0,0,0,255
-$$Group/Closed/Selected=sGlyph,Fragment,BG.png,22,0,123,17,StretchBoth,0,0,0,0,255
-$$Group/Closed=sGlyph,Fragment,BG.png,22,0,123,17,StretchBoth,0,0,0,0,255
+$$Group/Closed/Selected=sGlyph,Fragment,BG.png,22,0,123,17,StretchBoth,0,0,0,0,200
+$$Group/Closed=sGlyph,Fragment,BG.png,22,0,123,17,StretchBoth,0,0,0,0,200
 ;
 $$Group/Open/Hot=sGlyph,Fragment,BG.png,22,18,123,17,StretchBoth,0,0,0,0,255
-$$Group/Open/Selected=sGlyph,Fragment,BG.png,22,0,123,17,StretchBoth,0,0,0,0,255
-$$Group/Open=sGlyph,Fragment,BG.png,22,0,123,17,StretchBoth,0,0,0,0,255
+$$Group/Open/Selected=sGlyph,Fragment,BG.png,22,0,123,17,StretchBoth,0,0,0,0,200
+$$Group/Open=sGlyph,Fragment,BG.png,22,0,123,17,StretchBoth,0,0,0,0,200
 ;
 $$Contact/Hot=sGlyph,Fragment,BG.png,22,18,123,17,StretchBoth,0,0,0,0,255
 $$Contact/Selected=sGlyph,Fragment,BG.png,22,18,123,17,StretchBoth,0,0,0,0,255
@@ -257,7 +257,7 @@ BUTTWIDTH=d22
 ;Colors
 [Alarm]
 BkColour=l
-clFrameBack=d16249069
+clFrameBack=d15461355
 Font=sVerdana
 FontCol=d6838602
 FontFlags=w0
@@ -278,10 +278,10 @@ FontWindowSize=b-13
 FontWindowSty=b0
 
 [BASS Interface]
-ColorFrame=d16249069
+ColorFrame=d15461355
 
 [CLC]
-BkColour=d16249069
+BkColour=d15461355
 HotTextColour=d11160832
 QuickSearchColour=d327871
 SelBkColour=l
@@ -528,8 +528,8 @@ Font23Size=b8
 Font23Sty=b0
 
 [Chat]
-ColorLogBG=d16777215
-ColorNicklistBG=d16777215
+ColorLogBG=d16448250
+ColorNicklistBG=d16448250
 NickColor0=d32768
 NickColor1=d24981
 NickColor2=d327882
@@ -766,8 +766,8 @@ TextColour=d6838602
 Color0=d11905695
 Color1=d16777215
 Color2=d11307624
-Color3=d16777215
-Color4=d16381942
+Color3=d16448250
+Color4=d15461355
 Color5=d15793904
 Color6=d15793904
 Color7=d16709616
@@ -783,7 +783,7 @@ Color16=d15792126
 Color17=d16777215
 Color18=d15792126
 Color19=d15792126
-Color22=d16777215
+Color22=d16448250
 Color23=d15792126
 Color24=d15792126
 Color25=d15792126
@@ -961,7 +961,7 @@ Font28Size=b-13
 Font28Sty=b0
 
 [JABBER]
-clFrameBack=d16249069
+clFrameBack=d15461355
 fntFrameClock=sVerdana
 fntFrameClockCol=d6838602
 fntFrameClockFlags=w32
@@ -982,11 +982,11 @@ SelTextColour=d8388608
 TextColour=d0
 
 [ModernSettings]
-KeyColor=d16249069
+KeyColor=d15461355
 
 [MyDetails]
 AvatarBorderColor=d0
-BackgroundColor=d16249069
+BackgroundColor=d15461355
 AccountFont=sVerdana
 AccountFontCol=d6838602
 AccountFontFlags=w32
@@ -1288,7 +1288,7 @@ XMPP_Error/TextColSty=b0
 {Misc/Warning}textSty=b0
 
 [QuickSearch]
-frame_back=d16249069
+frame_back=d15461355
 back_del=l
 back_dis=l
 back_hid=l
@@ -1313,19 +1313,19 @@ SelBkColour=l
 
 [TabSRMM_Fonts]
 aeroGlow=l
-BkgColour=d16777215
+BkgColour=d16448250
 cRichBorders=l
 fillColor=l
 genericTxtClr=l
 hgrid=d11905695
-inbg=d16777215
-inputbg=d16777215
-ipfieldsbg=d15523029
-ipfieldsbgHigh=d16249069
-oldinbg=d16777215
-oldoutbg=d16381942
-outbg=d16381942
-statbg=d15792126
+inbg=d16448250
+inputbg=d16448250
+ipfieldsbg=d15461355
+ipfieldsbgHigh=d15461355
+oldinbg=d16448250
+oldoutbg=d15461355
+outbg=d15461355
+statbg=d14280946
 tbBgHigh=l
 tbBgLow=l
 Font0=sVerdana
@@ -1491,7 +1491,7 @@ Font104Set=b204
 Font104Size=b-11
 Font104Sty=b0
 Font105=sVerdana
-Font105Col=d8281145
+Font105Col=d7491901
 Font105Flags=w268435744
 Font105Set=b204
 Font105Size=b-11
@@ -1510,9 +1510,9 @@ tab_txt_unread=l
 [Tipper]
 AvBorderCol=d0
 BorderCol=d11905695
-ColourBg=d16249069
+ColourBg=d15461355
 DividerCol=d11905695
-SidebarCol=d16249069
+SidebarCol=d15461355
 FontFirst=sVerdana
 FontFirstCol=d18602
 FontFirstFlags=w288
@@ -1547,7 +1547,7 @@ BkColour=l
 SelBkColour=l
 
 [Weather]
-ColorMwinFrame=d16249069
+ColorMwinFrame=d15461355
 fnt0=sVerdana
 fnt0Col=d3355443
 fnt0Flags=w160
@@ -1562,7 +1562,7 @@ fnt1Size=b-11
 fnt1Sty=b1
 
 [mRadio]
-frame_back=d16249069
+frame_back=d15461355
 
 
 ;Popup colors
@@ -1687,7 +1687,7 @@ Foreground=d5380120
 
 ;Settings
 [FloatingContacts]
-BkColor=d16249069
+BkColor=d15461355
 LTEdgesColor=d16777215
 RBEdgesColor=d11643043
 
