@@ -1020,7 +1020,7 @@ StatusMessageFontSty=b2
 
 [Popup]
 ColourAvatarBorder=d0
-ColourBg=d9079434
+ColourBg=d10259329
 fntAction=sVerdana
 fntActionCol=d6435081
 fntActionFlags=w288
@@ -1571,7 +1571,7 @@ iPopUpColorBack=d8951900
 iPopUpColorFore=d2898437
 
 [ChangeKeyboardLayout]
-BackColor=d9079434
+BackColor=d10259329
 TextColor=d4535589
 
 [Chat]
@@ -1579,7 +1579,7 @@ PopupColorBG=d4622508
 PopupColorText=d12618
 
 [DBEditorpp]
-PopupColour=d9079434
+PopupColour=d10259329
 PopupTextColour=d4535589
 
 [GmailMNotifier]
@@ -1591,14 +1591,14 @@ PopupBackColor=d4880565
 PopupTextColor=d9301
 
 [NewAwaySys]
-PopupBGColour=d9079434
+PopupBGColour=d10259329
 PopupTextColour=d4535589
 
 [NewEventNotify]
 ColorBackErr=d6513086
 ColorBackFile=d6332256
 ColorBackMsg=d4622508
-ColorBackOthers=d9079434
+ColorBackOthers=d10259329
 ColorTextErr=d986462
 ColorTextFile=d1389845
 ColorTextMsg=d12618
@@ -1631,7 +1631,7 @@ ColorTextOthers=d4535589
 40082tx=d12618
 
 [PackUpdater]
-Popups0Bg=d9079434
+Popups0Bg=d10259329
 Popups0Tx=d4535589
 Popups1Bg=d6513086
 Popups1Tx=d986462
@@ -1661,9 +1661,9 @@ Popup/ColorBack=d11959374
 Popup/ColorText=d6435081
 
 [TypingNotify]
-OFF_BG=d9079434
+OFF_BG=d10259329
 OFF_TX=d4535589
-ON_BG=d9079434
+ON_BG=d10259329
 ON_TX=d4535589
 
 [UserInfoEx]
@@ -1673,7 +1673,7 @@ PopupBirthClrBirthBack=d11364199
 PopupBirthClrBirthText=d5380120
 
 [Weather]
-BackgroundColour=d9079434
+BackgroundColour=d10259329
 TextColour=d4535589
 
 [WebView]
@@ -1702,7 +1702,7 @@ Skin=uNotepad_Light
 [Popup]
 DropShadow=b0
 EnableShadowRegion=b0
-skin.Notepad_Light=d972
+skin.Notepad_Light=d973
 SkinPack=sNotepad_Light
 spacing=w0
 UseWinColors=b0
