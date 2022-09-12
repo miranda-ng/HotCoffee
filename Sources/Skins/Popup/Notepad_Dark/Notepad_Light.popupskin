@@ -716,6 +716,33 @@ object
 	y 6+11+(title.height-clock.height)/2+1
 end
 
+# Standard digital clocks border foreground for dark title text
+object
+	ifnotset 1
+	ifset 5
+	ifset 6
+	type bitmap
+	source tt_dtt.png
+	layer
+	x window.width-4-clock.width
+	y 6+11+(title.height-clock.height)/2
+	w clock.width-3-2
+	h clock.height+1
+end
+object
+	ifset 1
+	ifset 5
+	ifset 6
+	type bitmap
+	source tt_dtt.png
+	mono
+	layer
+	x window.width-4-clock.width
+	y 6+11+(title.height-clock.height)/2
+	w clock.width-3-2
+	h clock.height+1
+end
+
 #===========Standard digital clocks================================================================
 # ifnotset Color text, ifnotset Dark title text
 object
@@ -904,6 +931,116 @@ object
 	type title
 	x 20+16+7+1
 	y 6+11+1
+end
+
+# Title text border foreground for dark title text
+object
+	ifnotset 2
+	ifset 5
+	ifnotset 6
+	ifnotset 10
+	type bitmap
+	source tt_dtt.png
+	layer
+	x 20+icon.width+7
+	y 6+11
+	w window.width-(20+icon.width+7)-8-clock.width-2
+	h title.height+2
+end
+object
+	ifset 2
+	ifset 5
+	ifnotset 6
+	ifnotset 10
+	type bitmap
+	source tt_dtt.png
+	mono
+	layer
+	x 20+icon.width+7
+	y 6+11
+	w window.width-(20+icon.width+7)-8-clock.width-2
+	h title.height+2
+end
+object
+	ifnotset 2
+	ifset 5
+	ifset 6
+	ifnotset 10
+	type bitmap
+	source tt_dtt.png
+	layer
+	x 20+icon.width+7
+	y 6+11
+	w window.width-(20+icon.width+7)-1-clock.width-1
+	h title.height+2
+end
+object
+	ifset 2
+	ifset 5
+	ifset 6
+	ifnotset 10
+	type bitmap
+	source tt_dtt.png
+	mono
+	layer
+	x 20+icon.width+7
+	y 6+11
+	w window.width-(20+icon.width+7)-1-clock.width-1
+	h title.height+2
+end
+object
+	ifnotset 2
+	ifset 5
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source tt_dtt.png
+	layer
+	x 20+icon.width+7
+	y 6+11
+	w window.width-(20+icon.width+7)-8-clock.width-27-2
+	h title.height+2
+end
+object
+	ifset 2
+	ifset 5
+	ifnotset 6
+	ifset 10
+	type bitmap
+	source tt_dtt.png
+	mono
+	layer
+	x 20+icon.width+7
+	y 6+11
+	w window.width-(20+icon.width+7)-8-clock.width-27-2
+	h title.height+2
+end
+object
+	ifnotset 2
+	ifset 5
+	ifset 6
+	ifset 10
+	type bitmap
+	source tt_dtt.png
+	layer
+	x 20+icon.width+7
+	y 6+11
+	w window.width-(20+icon.width+7)-1-clock.width-1
+	h title.height+2
+end
+object
+	ifset 2
+	ifset 5
+	ifset 6
+	ifset 10
+	type bitmap
+	source tt_dtt.png
+	mono
+	layer
+	x 20+icon.width+7
+	y 6+11
+	w window.width-(20+icon.width+7)-1-clock.width-1
+	h title.height+2
 end
 
 #===========Title text=============================================================================
