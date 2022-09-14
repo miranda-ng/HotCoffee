@@ -52,7 +52,7 @@ $$Scroll/BtnUp=sGlyph,Fragment,BG.png,40,39,17,17,StretchBoth,0,0,10,7,255
 $$Scroll/BtnDn=sGlyph,Fragment,BG.png,40,57,17,17,StretchBoth,0,7,10,0,255
 $$Scroll/Thumb=sGlyph,Fragment,BG.png,22,79,17,5,StretchBoth,0,2,6,2,255
 ;
-$$FrameTitleBar=s
+$$FrameTitleBar=sGlyph,Fragment,BG.png,30,79,5,5,StretchBoth,2,2,2,2,150
 ;
 $$StatusBar=s
 ;

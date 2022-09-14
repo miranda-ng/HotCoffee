@@ -213,9 +213,9 @@ function WriteTabSRMMSkin(skinName, fontName)
 	elseif pattern_6:find(skinName) and fontName == 'Handwriting' then
 		result = 9
 	elseif pattern_7:find(skinName) and fontName == 'Printing' then
-		result = 13
+		result = 15
 	elseif pattern_7:find(skinName) and fontName == 'Handwriting' then
-		result = 10
+		result = 12
 	end
 
 	if result > 0 then

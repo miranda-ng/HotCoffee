@@ -5,24 +5,24 @@
 }
 
 input {
-	background: #1D1D1D;
+	background: #181818;
 	border-left: 1px solid #373737;
 	border-top: 1px solid #373737;
-	border-right: 1px solid #0C0C0C;
-	border-bottom: 1px solid #0C0C0C;
+	border-right: 1px solid #070707;
+	border-bottom: 1px solid #070707;
 	color: #C0C0C0;
 }
 
 html {
-	scrollbar-face-color: #1D1D1D;
-	scrollbar-highlight-color: #1D1D1D;
-	scrollbar-shadow-color: #1D1D1D;
+	scrollbar-face-color: #181818;
+	scrollbar-highlight-color: #181818;
+	scrollbar-shadow-color: #181818;
 	scrollbar-arrow-color: #C0C0C0;
 	scrollbar-3dlight-color: #373737;
-	scrollbar-darkshadow-color: #0C0C0C;
-	scrollbar-track-color: #252525;
+	scrollbar-darkshadow-color: #070707;
+	scrollbar-track-color: #0F0F0F;
 	background: url(Dark.png) fixed no-repeat bottom right;
-	background-color: #252525;
+	background-color: #0F0F0F;
 	overflow: auto;
 	padding: 0px 0px 0px 0px;
 	margin: 0;
@@ -109,15 +109,15 @@ div.avatar {
 .MessageIn, .hMessageIn, .frame_MessageInGroupStart, .frame_hMessageInGroupStart {
 	border-left: 1px solid #373737;
 	border-top: 1px solid #373737;
-	border-right: 1px solid #0C0C0C;
-	border-bottom: 1px solid #0C0C0C;
+	border-right: 1px solid #070707;
+	border-bottom: 1px solid #070707;
 }
 
 .MessageOut, .hMessageOut, .frame_MessageOutGroupStart, .frame_hMessageOutGroupStart {
 	border-left: 1px solid #373737;
 	border-top: 1px solid #373737;
-	border-right: 1px solid #0C0C0C;
-	border-bottom: 1px solid #0C0C0C;
+	border-right: 1px solid #070707;
+	border-bottom: 1px solid #070707;
 }
 
 .MessageInGroupInner, .hMessageInGroupInner, .MessageOutGroupInner, .hMessageOutGroupInner {
