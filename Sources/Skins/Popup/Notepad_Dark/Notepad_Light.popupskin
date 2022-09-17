@@ -18,7 +18,7 @@ options
 	option	10	1	Logo
 end
 
-h 8+11+title.height+5+(2+avatar.height>text.height+2)+2+10+16
+h 8+11+title.height+5+(2+avatar.height>text.height+2)+29
 
 popup-version 02010007
 
@@ -1205,7 +1205,7 @@ object
 	ifset 8
 	ifset 9
 	type avatar
-	x window.width-avatar.width-8
+	x window.width-avatar.width-9
 	y 8+11+title.height+5+7+14
 	w options.avatarsize
 	proportional 1
