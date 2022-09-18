@@ -8,13 +8,17 @@ local db = require('m_database')
 assert(db)
 local winapi = require('winapi')
 assert(winapi)
+schedule = require('m_schedule')
+assert(schedule)
 
-if not m.ServiceExists('Weather/Update') then
-  return
-end
+schedule.At(os.time() + 8).Do(function()
+  if not m.ServiceExists('Weather/Update') then
+    return
+  end
 
-if db.GetSetting(_, 'FirstRun', 'Lua_Weather', 0) == 0 then
-  local mImportIniPath = toansi(m.Parse('%miranda_path%\\Plugins\\Weather\\Weather.cfg'))
-  m.CallService('DBEditorpp/Import', 0, mImportIniPath)
-  db.WriteSetting(_, 'FirstRun', 'Lua_Weather', 1, db.DBVT_BYTE)
-end
+  if db.GetSetting(_, 'FirstRun', 'Lua_Weather', 0) == 0 then
+    local mImportIniPath = toansi(m.Parse('%miranda_path%\\Plugins\\Weather\\Weather.cfg'))
+    m.CallService('DBEditorpp/Import', 0, mImportIniPath)
+    db.WriteSetting(_, 'FirstRun', 'Lua_Weather', 1, db.DBVT_BYTE)
+  end
+end)
