@@ -974,26 +974,32 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: CLUI; Key: EqualSections;
 Filename: {app}\Profiles\autoexec_update.ini; Section: CLUI; Key: StatusBarProtosPerLine; String: b{code:GetCLUIFrames|StatusBarProtosPerLine}; Check: IsUpdate;
 
  ; Protocols\Pseudo\NewsAggregator
+Filename: {app}\Profiles\settings.ini; Section: CListGroups; Key: 0; String: uNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
 Filename: {app}\Profiles\settings.ini; Section: NewsAggregator; Key: AM_BaseProto; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 0; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 200; String: d0; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
  ; Protocols\Pseudo\WebView
+Filename: {app}\Profiles\settings.ini; Section: CListGroups; Key: 1; String: uWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
 Filename: {app}\Profiles\settings.ini; Section: WebView; Key: AM_BaseProto; String: sWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 1; String: sWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 201; String: d1; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
  ; Protocols\Pseudo\Weather
+Filename: {app}\Profiles\settings.ini; Section: CListGroups; Key: 2; String: uWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
 Filename: {app}\Profiles\settings.ini; Section: Weather; Key: AM_BaseProto; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 2; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 202; String: d2; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
  ; Protocols\Pseudo\GmailNotifier
+Filename: {app}\Profiles\settings.ini; Section: CListGroups; Key: 4; String: uGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
 Filename: {app}\Profiles\settings.ini; Section: GmailMNotifier; Key: AM_BaseProto; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 4; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 204; String: d4; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
  ; Protocols\Pseudo\YAMN
+Filename: {app}\Profiles\settings.ini; Section: CListGroups; Key: 6; String: uYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
 Filename: {app}\Profiles\settings.ini; Section: YAMN; Key: AM_BaseProto; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 6; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 206; String: d6; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
  ; Protocols\Pseudo\CurrencyRates
+Filename: {app}\Profiles\settings.ini; Section: CListGroups; Key: 8; String: uCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
 Filename: {app}\Profiles\settings.ini; Section: CurrencyRates; Key: AM_BaseProto; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 8; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 208; String: d8; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
