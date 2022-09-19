@@ -989,20 +989,20 @@ Filename: {app}\Profiles\settings.ini; Section: Weather; Key: AM_BaseProto; Stri
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 2; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 202; String: d2; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
  ; Protocols\Pseudo\GmailNotifier
-Filename: {app}\Profiles\settings.ini; Section: CListGroups; Key: 4; String: uGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
+Filename: {app}\Profiles\settings.ini; Section: CListGroups; Key: 3; String: uGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
 Filename: {app}\Profiles\settings.ini; Section: GmailMNotifier; Key: AM_BaseProto; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 4; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 204; String: d4; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 3; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 203; String: d3; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
  ; Protocols\Pseudo\YAMN
-Filename: {app}\Profiles\settings.ini; Section: CListGroups; Key: 6; String: uYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
+Filename: {app}\Profiles\settings.ini; Section: CListGroups; Key: 4; String: uYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
 Filename: {app}\Profiles\settings.ini; Section: YAMN; Key: AM_BaseProto; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 6; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 206; String: d6; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 4; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 204; String: d4; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
  ; Protocols\Pseudo\CurrencyRates
-Filename: {app}\Profiles\settings.ini; Section: CListGroups; Key: 8; String: uCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
+Filename: {app}\Profiles\settings.ini; Section: CListGroups; Key: 5; String: uCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
 Filename: {app}\Profiles\settings.ini; Section: CurrencyRates; Key: AM_BaseProto; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 8; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 208; String: d8; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 5; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 205; String: d5; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
  ; MetaContacts
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 10; String: sMetaContacts; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 210; String: d10; Flags: uninsdeleteentry;
