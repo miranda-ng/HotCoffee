@@ -110,7 +110,7 @@
   "Protocols\VKontakte," + \
   "Protocols\Pseudo\WebView"
 
-#dim theme[31]
+#dim theme[33]
 #define theme[0] "Default_Miranda"
 #define theme[1] "Current_Windows"
 #define theme[2] "Custom_Miranda"
@@ -134,14 +134,16 @@
 #define theme[20] "Graphite_Brown_Light"
 #define theme[21] "Graphite_Gray_Dark"
 #define theme[22] "Graphite_Gray_Light"
-#define theme[23] "PhotoOne_Dark"
-#define theme[24] "PhotoOne_Light"
-#define theme[25] "Surface_Black"
-#define theme[26] "Surface_White"
-#define theme[27] "Textolite_Brown_Dark"
-#define theme[28] "Textolite_Brown_Light"
-#define theme[29] "Textolite_Gray_Dark"
-#define theme[30] "Textolite_Gray_Light"
+#define theme[23] "Notepad_Dark"
+#define theme[24] "Notepad_Light"
+#define theme[25] "PhotoOne_Dark"
+#define theme[26] "PhotoOne_Light"
+#define theme[27] "Surface_Black"
+#define theme[28] "Surface_White"
+#define theme[29] "Textolite_Brown_Dark"
+#define theme[30] "Textolite_Brown_Light"
+#define theme[31] "Textolite_Gray_Dark"
+#define theme[32] "Textolite_Gray_Light"
 
  ; {#AppShortName}_{#AppArch}.ini
 #expr WriteIni(AddBackslash(SourcePath) + "x86\Profiles\" + AppShortName + "_" + AppArch + ".ini", "FileInfo_1", "FileVersion", '"' + GetDateTimeString('yyyy.m.d', '', '') + '"')
@@ -686,6 +688,9 @@ Name: Resources\Themes\Graphite_Brown_Dark; Description: {code:ComponentsHelper|
 Name: Resources\Themes\Graphite_Brown_Light; Description: {code:ComponentsHelper|Graphite_Brown_Light}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Graphite_Gray_Dark; Description: {code:ComponentsHelper|Graphite_Gray_Dark}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Graphite_Gray_Light; Description: {code:ComponentsHelper|Graphite_Gray_Light}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+ ; Resources\Themes\Notepad
+Name: Resources\Themes\Notepad_Dark; Description: {code:ComponentsHelper|Notepad_Dark}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Notepad_Light; Description: {code:ComponentsHelper|Notepad_Light}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\PhotoOne
 Name: Resources\Themes\PhotoOne_Dark; Description: {code:ComponentsHelper|PhotoOne_Dark}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\PhotoOne_Light; Description: {code:ComponentsHelper|PhotoOne_Light}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
@@ -799,6 +804,9 @@ Name: Resources\Themes\Graphite_Brown_Dark; Description: {code:ComponentsHelper|
 Name: Resources\Themes\Graphite_Brown_Light; Description: {code:ComponentsHelper|Graphite_Brown_Light}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Graphite_Gray_Dark; Description: {code:ComponentsHelper|Graphite_Gray_Dark}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Graphite_Gray_Light; Description: {code:ComponentsHelper|Graphite_Gray_Light}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+ ; Resources\Themes\Notepad
+Name: Resources\Themes\Notepad_Dark; Description: {code:ComponentsHelper|Notepad_Dark}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Notepad_Light; Description: {code:ComponentsHelper|Notepad_Light}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
  ; Resources\Themes\PhotoOne
 Name: Resources\Themes\PhotoOne_Dark; Description: {code:ComponentsHelper|PhotoOne_Dark}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Resources\Themes\PhotoOne_Light; Description: {code:ComponentsHelper|PhotoOne_Light}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
@@ -894,6 +902,7 @@ Root: HKCU; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\
   "IsStyleChecked('Skin_Graphite_Brown_Dark') or " + \
   "IsStyleChecked('Skin_Graphite_Gray_Dark') or " + \
   "IsStyleChecked('Skin_Native_7_Dark') or " + \
+  "IsStyleChecked('Skin_Notepad_Dark') or " + \
   "IsStyleChecked('Skin_PhotoOne_Dark') or " + \
   "IsStyleChecked('Skin_Surface_Black') or " + \
   "IsStyleChecked('Skin_Textolite_Brown_Dark') or " + \
@@ -913,6 +922,7 @@ Root: HKCU; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\
   "IsStyleChecked('Skin_Graphite_Brown_Light') or " + \
   "IsStyleChecked('Skin_Graphite_Gray_Light') or " + \
   "IsStyleChecked('Skin_Native_7_Light') or " + \
+  "IsStyleChecked('Skin_Notepad_Light') or " + \
   "IsStyleChecked('Skin_PhotoOne_Light') or " + \
   "IsStyleChecked('Skin_Surface_White') or " + \
   "IsStyleChecked('Skin_Textolite_Brown_Light') or " + \
@@ -5389,6 +5399,8 @@ begin
       'Skin_Graphite_Brown_Light',
       'Skin_Graphite_Gray_Dark',
       'Skin_Graphite_Gray_Light',
+      'Skin_Notepad_Dark',
+      'Skin_Notepad_Light',
       'Skin_PhotoOne_Dark',
       'Skin_PhotoOne_Light',
       'Skin_Surface_Black',
@@ -6588,6 +6600,8 @@ begin
       AddRadioButton(StylesHelper('Skin_Graphite_Brown_Light'), '', 1, False, True, nil);
       AddRadioButton(StylesHelper('Skin_Graphite_Gray_Dark'), '', 1, False, True, nil);
       AddRadioButton(StylesHelper('Skin_Graphite_Gray_Light'), '', 1, False, True, nil);
+      AddRadioButton(StylesHelper('Skin_Notepad_Dark'), '', 1, False, True, nil);
+      AddRadioButton(StylesHelper('Skin_Notepad_Light'), '', 1, False, True, nil);
       AddRadioButton(StylesHelper('Skin_PhotoOne_Dark'), '', 1, False, True, nil);
       AddRadioButton(StylesHelper('Skin_PhotoOne_Light'), '', 1, False, True, nil);
       AddRadioButton(StylesHelper('Skin_Surface_Black'), '', 1, False, True, nil);
@@ -7123,6 +7137,8 @@ begin
                 'Skin_Graphite_Brown_Light',
                 'Skin_Graphite_Gray_Dark',
                 'Skin_Graphite_Gray_Light',
+                'Skin_Notepad_Dark',
+                'Skin_Notepad_Light',
                 'Skin_PhotoOne_Dark',
                 'Skin_PhotoOne_Light',
                 'Skin_Surface_Black',
@@ -8670,6 +8686,8 @@ begin
           'Resources\Themes\Graphite_Brown_Light',
           'Resources\Themes\Graphite_Gray_Dark',
           'Resources\Themes\Graphite_Gray_Light',
+          'Resources\Themes\Notepad_Dark',
+          'Resources\Themes\Notepad_Light',
           'Resources\Themes\PhotoOne_Dark',
           'Resources\Themes\PhotoOne_Light',
           'Resources\Themes\Surface_Black',
@@ -8844,6 +8862,8 @@ begin
           'Resources\Themes\Graphite_Brown_Light',
           'Resources\Themes\Graphite_Gray_Dark',
           'Resources\Themes\Graphite_Gray_Light',
+          'Resources\Themes\Notepad_Dark',
+          'Resources\Themes\Notepad_Light',
           'Resources\Themes\PhotoOne_Dark',
           'Resources\Themes\PhotoOne_Light',
           'Resources\Themes\Surface_Black',
@@ -9354,6 +9374,10 @@ begin
             ItemEnabled[i] := IsComponentSelected('Resources\Themes\Graphite_Gray_Dark') and bUpdate;
           'Skin_Graphite_Gray_Light':
             ItemEnabled[i] := IsComponentSelected('Resources\Themes\Graphite_Gray_Light') and bUpdate;
+          'Skin_Notepad_Dark':
+            ItemEnabled[i] := IsComponentSelected('Resources\Themes\Notepad_Dark') and bUpdate;
+          'Skin_Notepad_Light':
+            ItemEnabled[i] := IsComponentSelected('Resources\Themes\Notepad_Light') and bUpdate;
           'Skin_PhotoOne_Dark':
             ItemEnabled[i] := IsComponentSelected('Resources\Themes\PhotoOne_Dark') and bUpdate;
           'Skin_PhotoOne_Light':
