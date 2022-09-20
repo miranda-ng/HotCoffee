@@ -560,7 +560,7 @@ Source: x86\Skins\IEView\styles\{#theme[i]}.css; DestDir: {app}\Skins\IEView\sty
 Source: x86\Skins\IEView\{#theme[i]}.ivt; DestDir: {app}\Skins\IEView; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]} and Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\{#theme[i]}.ini; DestDir: {app}\Skins; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]}; AfterInstall: AddDetails;
 #endsub
-#for {i = 2; i < 31; i++} AddTheme
+#for {i = 2; i < 33; i++} AddTheme
  ; copy autoexec_skin.ini for clean installation default themes
 #if AppSkinUp == "0"
 Source: x86\Skins\Default_Miranda.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Default_Miranda') and not IsUpdate; AfterInstall: AddDetails;
@@ -576,14 +576,14 @@ Source: x86\Skins\Current_Windows.ini; DestDir: {app}\Profiles; DestName: autoex
 #sub AddThemeAutoexecSkin
 Source: x86\Skins\{#theme[i]}.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_{#theme[i]}') and not IsUpdate; AfterInstall: AddDetails;
 #endsub
-#for {i = 2; i < 31; i++} AddThemeAutoexecSkin
+#for {i = 2; i < 33; i++} AddThemeAutoexecSkin
 #endif
 #if AppSkinUp == "1"
 #define public i 2
 #sub AddThemeAutoexecSkin
 Source: x86\Skins\{#theme[i]}.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_{#theme[i]}'); AfterInstall: AddDetails;
 #endsub
-#for {i = 2; i < 31; i++} AddThemeAutoexecSkin
+#for {i = 2; i < 33; i++} AddThemeAutoexecSkin
 #endif
 #endif
 
@@ -1231,7 +1231,7 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: default_h
  ; Write the default theme to ini
 Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: u{#theme[i]}; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_{#theme[i]}');
 #endsub
-#for {i = 0; i < 31; i++} AddThemeIni
+#for {i = 0; i < 33; i++} AddThemeIni
 
  ; Smileys for the dark skin
 Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: clist-filename; String: uSkins\Smileys\_dark\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
@@ -1365,7 +1365,7 @@ Filename: {app}\Skins\TabSRMM\Default_Miranda\Default_Miranda.tsk; Section: Glob
 #sub AddThemeTskNoScrollbars
 Filename: {app}\Skins\TabSRMM\{#theme[i]}\{#theme[i]}.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]};
 #endsub
-#for {i = 2; i < 31; i++} AddThemeTskNoScrollbars
+#for {i = 2; i < 33; i++} AddThemeTskNoScrollbars
 
  ; Settings Page \ Status \ DialogStatusMessages (NewAwaySys off)
 Filename: {app}\Profiles\settings.ini; Section: NewAwaySys; Key: DontPopDlg; String: w1022; Flags: uninsdeleteentry; Check: not IsSettingChecked('DialogStatusMessages');
@@ -1514,7 +1514,7 @@ Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Font
 Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,4');
 Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Components: Resources\Themes\{#theme[i]}; Check: IsAdditionalSettingChecked('DialogFontSize,5');
 #endsub
-#for {i = 2; i < 31; i++} AddCustomThemeIni
+#for {i = 2; i < 33; i++} AddCustomThemeIni
  ; Additional settings Page \ LoadHistorySize
 Filename: {app}\Profiles\settings.ini; Section: SRMsg; Key: LoadCount; String: w5; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1');
 Filename: {app}\Profiles\settings.ini; Section: SRMsg; Key: LoadCount; String: w10; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2');
