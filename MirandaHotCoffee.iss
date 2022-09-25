@@ -444,9 +444,9 @@ Source: x86\Icons\Proto_NewsAggregator.dll; DestDir: {app}\Icons; Flags: ignorev
 Source: x86\Skins\Avatars\rss.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\Pseudo\NewsAggregator; AfterInstall: AddDetails;
  ; Protocols\Pseudo\Weather
 Source: {#AppArch}\Plugins\Weather.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\Weather; AfterInstall: AddDetails;
-Source: x86\Plugins\Weather\*; DestDir: {app}\Plugins\Weather; Flags: ignoreversion; Components: Protocols\Pseudo\Weather; AfterInstall: AddDetails;
-Source: x86\Plugins\Weather\Weather_en.cfg; DestDir: {app}\Plugins\Weather; DestName: Weather.cfg; Languages: en; Flags: ignoreversion; Components: Protocols\Pseudo\Weather; AfterInstall: AddDetails;
-Source: x86\Plugins\Weather\Weather_ru.cfg; DestDir: {app}\Plugins\Weather; DestName: Weather.cfg; Languages: ru; Flags: ignoreversion; Components: Protocols\Pseudo\Weather; AfterInstall: AddDetails;
+Source: x86\Plugins\Weather\*; DestDir: {app}\Plugins\Weather; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Protocols\Pseudo\Weather; AfterInstall: AddDetails;
+Source: x86\Plugins\Weather\en\Weather.cfg; DestDir: {app}\Plugins\Weather; Languages: en; Flags: ignoreversion; Components: Protocols\Pseudo\Weather; AfterInstall: AddDetails;
+Source: x86\Plugins\Weather\ru\Weather.cfg; DestDir: {app}\Plugins\Weather; Languages: ru; Flags: ignoreversion; Components: Protocols\Pseudo\Weather; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Weather.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Pseudo\Weather; AfterInstall: AddDetails;
  ; Protocols\Pseudo\WebView
 Source: {#AppArch}\Plugins\WebView.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\WebView; AfterInstall: AddDetails;

@@ -157,7 +157,7 @@ rem Compile
 
 rem Delete x86, x64 dirs
 set query=y
-if "%allowqueries%" == "1" set /p "query=%deletedirsprompt%"
+if "%allowqueries%" == "0" set /p "query=%deletedirsprompt%"
 if /i "%query%" == "y" rd /s /q x86 2>nul&rd /s /q x64 2>nul
 del /f /q "%~dp0err">nul
 

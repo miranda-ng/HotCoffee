@@ -50,6 +50,19 @@ function OnLanguageChanged(langpack)
         ["splashScreenPathFrom"] = splashScreenPathFrom,
         ["splashScreenPathTo"] = splashScreenPathTo
     }
+
+    local weatherConfigPathTo = m.Parse('%miranda_path%\\Plugins\\Weather')
+    local weatherConfigPathFrom = weatherConfigPathTo
+    if IsCyrillicLangpack(langpack) then
+        weatherConfigPathFrom = weatherConfigPathFrom .. '\\' .. 'ru'
+    else
+        weatherConfigPathFrom = weatherConfigPathFrom .. '\\' .. 'en'
+    end
+    local batch = "xcopy /Y \"{weatherConfigPathFrom}\" \"{weatherConfigPathTo}\"" % {
+        ["weatherConfigPathFrom"] = weatherConfigPathFrom,
+        ["weatherConfigPathTo"] = weatherConfigPathTo
+    }
+
     winapi.ShellExecute(globals.HasAccess(m.Parse("%miranda_path%\\miranda.test")) and "open" or "runas", 'cmd.exe', '/C '.. batch)
 
     current = langpack
