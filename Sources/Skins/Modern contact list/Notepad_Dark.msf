@@ -21,7 +21,7 @@ tProfile2=s
 tProfile3=s
 ;
 $$Window=sGlyph,Fragment,BG.png,0,0,20,14,StretchBoth,12,6,7,7,255
-$$Background=sGlyph,Solid,24,24,24,255
+$$Background=sGlyph,Solid,22,22,22,255
 ;
 $$SubGroup/Closed/Hot=sGlyph,Fragment,BG.png,22,18,123,17,StretchBoth,0,0,0,0,255
 $$SubGroup/Closed/Selected=sGlyph,Fragment,BG.png,22,0,123,17,StretchBoth,0,0,0,0,200
