@@ -1,8 +1,344 @@
-﻿Привет Санёк! Тут ещё некоторые мысли текстом...
+Привет Саня!
+Как ты там жив здоров?
+Надеюсь у тебя всё хорошо.
+Я снова к тебе с хотелкой...
+
+Нужно сделать похожую функцию на функцию CLUIFrames.
+Функцию можно назвать ProtocolQueue
+
+В сборке существует множество поддерживаемых протоколов и все они должны иметь определённую последовательность...:
+#define ProtocolQueue \
+  "Protocols\Pseudo\NewsAggregator," + \
+  "Protocols\Pseudo\WebView," + \
+  "Protocols\Pseudo\Weather," + \
+  "Protocols\Pseudo\GmailNotifier," + \
+  "Protocols\Pseudo\YAMN," + \
+  "Protocols\Pseudo\CurrencyRates," + \
+  "MetaContacts," + \				;этот компонент не имеет чекбокса, т.е. он всегда присутствует в миранде
+  "Protocols\EmLanProto," + \
+  "Protocols\GG," + \
+  "Protocols\ICQ\ICQ," + \
+  "Protocols\ICQ\ICQ2," + \
+  "Protocols\ICQCorp," + \
+  "Protocols\IRC," + \
+  "Protocols\Jabber\Jabber," + \
+  "Protocols\Jabber\Jabberru," + \
+  "Protocols\Jabber\LJ," + \
+  "Protocols\ICQ\MRA," + \
+  "Protocols\ICQ\MRA2," + \
+  "Protocols\Jabber\OK," + \
+  "Protocols\Omegle," + \
+  "Protocols\Sametime," + \
+  "Protocols\Skype," + \
+  "Protocols\Steam," + \
+  "Protocols\Tox," + \
+  "Protocols\Twitter," + \
+  "Protocols\VKontakte," + \
+  "Protocols\Jabber\XMPP," + \
+  "Protocols\Pseudo\mRadio," + \
+  "CloudFile/Dropbox," + \			;этот компонент не имеет чекбокса, т.е. он всегда присутствует в миранде
+  "CloudFile/GDrive," + \			;этот компонент не имеет чекбокса, т.е. он всегда присутствует в миранде
+  "CloudFile/OneDrive," + \			;этот компонент не имеет чекбокса, т.е. он всегда присутствует в миранде
+  "CloudFile/YandexDisk"			;этот компонент не имеет чекбокса, т.е. он всегда присутствует в миранде
+
+именно в такой последовательности должны быть протоколы в списке контактов миранды
+функция ProtocolQueue должна понимать и самостоятельно подсчитывать цифру для каждого протокола
+т.е. если юзер выбрал все протоколы, то каждый из этих протоколов должен получить свою цифру согласно последовательности
+если выбраны все возможные протоколы, то вот такие ключи должны проставиться в ини:
+[Protocols]
+0=sNewsAggregator
+1=sWebView
+2=sWeather
+3=sGmailMNotifier
+4=sYAMN
+5=sCurrencyRates
+6=sMetaContacts
+7=sEM_LAN_PROTO
+8=sGG
+9=sICQ
+10=sICQ2
+11=sICQCorp
+12=sIRC
+13=sJabber
+14=sJabberru
+15=sLJ
+16=sMRA
+17=sMRA2
+18=sOK
+19=sOmegle
+20=sSametime
+21=sSkype
+22=sSteam
+23=sTOX
+24=sTwitter
+25=sVKontakte
+26=sXMPP
+27=smRadio
+28=sDropbox
+29=sGDrive
+30=sOneDrive
+31=sYandexDisk
+
+200=d0
+201=d1
+202=d2
+203=d3
+204=d4
+205=d5
+206=d6
+207=d7
+208=d8
+209=d9
+210=d10
+211=d11
+212=d12
+213=d13
+214=d14
+215=d15
+216=d16
+217=d17
+218=d18
+219=d19
+220=d20
+221=d21
+222=d22
+223=d23
+224=d24
+225=d25
+226=d26
+227=d27
+228=d28
+229=d29
+230=d30
+231=d31
+
+400=d1
+401=d1
+402=d1
+403=d1
+404=d1
+405=d1
+406=d1
+407=d1
+408=d1
+409=d1
+410=d1
+411=d1
+412=d1
+413=d1
+414=d1
+415=d1
+416=d1
+417=d1
+418=d1
+419=d1
+420=d1
+421=d1
+422=d1
+423=d1
+424=d1
+425=d1
+426=d1
+427=d1
+428=d1
+429=d1
+430=d1
+431=d1
+
+600=d1
+601=d1
+602=d1
+603=d1
+604=d1
+605=d1
+606=d1
+607=d1
+608=d1
+609=d1
+610=d1
+611=d1
+612=d1
+613=d1
+614=d1
+615=d1
+616=d1
+617=d1
+618=d1
+619=d1
+620=d1
+621=d1
+622=d1
+623=d1
+624=d1
+625=d1
+626=d1
+627=d1
+628=d1
+629=d1
+630=d1
+631=d1
+
+800=uNewsAggregator
+801=uWebView
+802=uWeather
+803=uGmailMNotifier
+804=uYAMN
+805=uCurrencyRates
+806=uMetaContacts
+807=uEM_LAN_PROTO
+808=uGG
+809=uICQ
+810=uICQ2
+811=uICQCorp
+812=uIRC
+813=uJabber
+814=uJabberru
+815=uLJ
+816=uMRA
+817=uMRA2
+818=uOK
+819=uOmegle
+820=uSametime
+821=uSkype
+822=uSteam
+823=uTOX
+824=uTwitter
+825=uVKontakte
+826=uXMPP
+827=umRadio
+828=uDropbox
+829=uGDrive
+830=uOneDrive
+831=uYandexDisk
+
+ProtoCount=d32
 
 
-IconPatcher
-1. Можно ли научить патчер, патчить не только иконки, но и шапку диалога настроек заменить картинкой?
+а если пользователь выбрал например только эти протоколы:
+Protocols\Pseudo\Weather
+Protocols\ICQ\ICQ
+Protocols\Jabber\XMPP
+тогда вот такие цифры должны получить протоколы:
+Protocols\Pseudo\Weather - 0
+MetaContacts - 1
+Protocols\ICQ\ICQ - 2
+CloudFile/Dropbox - 3
+CloudFile/GDrive - 4
+CloudFile/OneDrive - 5
+CloudFile/YandexDisk - 6
 
-2. И ещё идея немного переделать отображение удачно патченых, патченых не полностью, или патченых с ошибкой файлов...
-Чтобы не иконки использовались, а системные чекбоксы, если в системе предусмотрены чекбоксы для предупреждений и ошибок.
+т.е. вот такие ключи должны проставиться в ини:
+[Protocols]
+0=sWeather
+1=sMetaContacts
+2=sICQ
+3=sDropbox
+4=sGDrive
+5=sOneDrive
+6=sYandexDisk
+
+200=d0
+201=d1
+202=d2
+203=d3
+204=d4
+205=d5
+206=d6
+
+400=d1
+401=d1
+402=d1
+403=d1
+404=d1
+405=d1
+406=d1
+
+600=d1
+601=d1
+602=d1
+603=d1
+604=d1
+605=d1
+606=d1
+
+800=uWeather
+801=uMetaContacts
+802=uICQ
+803=uDropbox
+804=uGDrive
+805=uOneDrive
+806=uYandexDisk
+
+ProtoCount=d7
+
+
+
+
+И тут же понадобится ещё одна функция CListGroupsQueue (эта функция тоже определяет последовательность, но ещё определяет какие группы нужно создать на основе выбора протоколов)
+#define CListGroupsQueue \
+  "Protocols\Pseudo\NewsAggregator," + \	;Info
+  "Protocols\Pseudo\WebView," + \		;Info
+  "Protocols\Pseudo\Weather," + \		;Info
+  "Protocols\Pseudo\GmailNotifier," + \		;Info
+  "Protocols\Pseudo\YAMN," + \			;Info
+  "Protocols\Pseudo\CurrencyRates," + \		;Info
+  "MetaContacts," + \				;MetaContacts ;этот компонент не имеет чекбокса, т.е. он всегда присутствует в миранде
+  "Protocols\EmLanProto," + \			;Chat rooms, General, Bots
+  "Protocols\GG," + \				;Chat rooms, General, Bots
+  "Protocols\ICQ\ICQ," + \			;Chat rooms, General, Bots, Phone Contacts
+  "Protocols\ICQ\ICQ2," + \			;Chat rooms, General, Bots, Phone Contacts
+  "Protocols\ICQCorp," + \			;Chat rooms, General, Bots
+  "Protocols\IRC," + \				;Chat rooms, General, Bots
+  "Protocols\Jabber\Jabber," + \		;Chat rooms, General, Bots
+  "Protocols\Jabber\Jabberru," + \		;Chat rooms, General, Bots
+  "Protocols\Jabber\LJ," + \			;Chat rooms, General, Bots
+  "Protocols\ICQ\MRA," + \			;Chat rooms, General, Bots, Phone Contacts
+  "Protocols\ICQ\MRA2," + \			;Chat rooms, General, Bots, Phone Contacts
+  "Protocols\Jabber\OK," + \			;Chat rooms, General, Bots, OK
+  "Protocols\Omegle," + \			;Chat rooms, General, Bots
+  "Protocols\Sametime," + \			;Chat rooms, General, Bots
+  "Protocols\Skype," + \			;Chat rooms, General, Bots, Skype
+  "Protocols\Steam," + \			;Chat rooms, General, Bots, Steam
+  "Protocols\Tox," + \				;Chat rooms, General, Bots, Tox
+  "Protocols\Twitter," + \			;Chat rooms, General, Bots, Twitter
+  "Protocols\VKontakte," + \			;Chat rooms, General, Bots, VKontakte
+  "Protocols\Jabber\XMPP," + \			;Chat rooms, General, Bots
+  "Protocols\Pseudo\mRadio," + \		;mRadio
+  "CloudFile/Dropbox," + \			;этот компонент не имеет чекбокса, т.е. он всегда присутствует в миранде и этот компонент не требует создания группы
+  "CloudFile/GDrive," + \			;этот компонент не имеет чекбокса, т.е. он всегда присутствует в миранде и этот компонент не требует создания группы
+  "CloudFile/OneDrive," + \			;этот компонент не имеет чекбокса, т.е. он всегда присутствует в миранде и этот компонент не требует создания группы
+  "CloudFile/YandexDisk"			;этот компонент не имеет чекбокса, т.е. он всегда присутствует в миранде и этот компонент не требует создания группы
+если выбраны все протоколы то пишем в ини так:
+[CListGroups]
+0=uInfo
+1=uMetaContacts
+2=uChat rooms
+3=uGeneral
+4=uBots
+5=uPhone Contacts
+6=uOK
+7=uSkype
+8=uSteam
+9=uTox
+10=uTwitter
+11=uVKontakte
+12=uRadio
+
+а если пользователь выбрал например только эти протоколы:
+Protocols\Skype
+Protocols\Jabber\XMPP
+Protocols\Pseudo\mRadio
+тогда вот такие ключи должны проставиться в ини:
+[CListGroups]
+0=uMetaContacts
+1=uChat rooms
+2=uGeneral
+3=uBots
+4=uSkype
+5=uRadio
+
+
+
+
+
+

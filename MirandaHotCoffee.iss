@@ -93,9 +93,6 @@
   "Protocols\ICQ\MRA2," + \
   "Protocols\ICQCorp," + \
   "Protocols\IRC," + \
-  "Protocols\Jabber\GMail," + \
-  "Protocols\Jabber\GTalk," + \
-  "Protocols\Jabber\Hangouts," + \
   "Protocols\Jabber\Jabber," + \
   "Protocols\Jabber\Jabberru," + \
   "Protocols\Jabber\LJ," + \
@@ -250,6 +247,10 @@ Source: x86\Icons\Proto_conn.dll; DestDir: {app}\Icons; Flags: ignoreversion; Co
 Source: x86\Icons\Proto_Discord.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Dummy.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Facebook.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_GMail.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_Google.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_GTalk.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_Hangouts.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_MetaContacts.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\TabSRMM_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Toolbar_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
@@ -274,6 +275,7 @@ Source: {#AppArch}\Plugins\CloudFile.dll; DestDir: {app}\Plugins; Flags: ignorev
 Source: {#AppArch}\Plugins\CrashDumper.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Db_autobackups.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\DbChecker.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\DbEditorPP.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Dbx_mdbx.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Dbx_mmap.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\Dbx_sqlite.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
@@ -362,19 +364,8 @@ Source: x86\Icons\Proto_IRC.dll; DestDir: {app}\Icons; Flags: ignoreversion; Com
 Source: x86\Skins\Avatars\IRC.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\IRC; AfterInstall: AddDetails;
  ; Protocols\Jabber
 Source: {#AppArch}\Plugins\Jabber.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_conn_Google.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_Google.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
 Source: x86\Icons\xStatus_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
 Source: x86\Skins\Avatars\Jabber.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
- ; Protocols\Jabber\GMail
-Source: x86\Icons\Proto_conn_GMail.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\GMail; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_GMail.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\GMail; AfterInstall: AddDetails;
- ; Protocols\Jabber\GTalk
-Source: x86\Icons\Proto_conn_GTalk.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\GTalk; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_GTalk.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\GTalk; AfterInstall: AddDetails;
- ; Protocols\Jabber\Hangouts
-Source: x86\Icons\Proto_conn_Hangouts.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Hangouts; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_Hangouts.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Hangouts; AfterInstall: AddDetails;
  ; Protocols\Jabber\Jabber
 Source: x86\Icons\Proto_conn_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Jabber; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Jabber; AfterInstall: AddDetails;
@@ -441,6 +432,7 @@ Source: x86\Skins\Avatars\mRadio.png; DestDir: {app}\Skins\Avatars; Flags: ignor
  ; Protocols\Pseudo\NewsAggregator
 Source: {#AppArch}\Plugins\NewsAggregator.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\NewsAggregator; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_NewsAggregator.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Pseudo\NewsAggregator; AfterInstall: AddDetails;
+Source: x86\Plugins\NewsAggregator\RSS.cfg; DestDir: {app}\Plugins\NewsAggregator; Flags: ignoreversion; Components: Protocols\Pseudo\NewsAggregator; AfterInstall: AddDetails;
 Source: x86\Skins\Avatars\rss.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\Pseudo\NewsAggregator; AfterInstall: AddDetails;
  ; Protocols\Pseudo\Weather
 Source: {#AppArch}\Plugins\Weather.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\Weather; AfterInstall: AddDetails;
@@ -465,8 +457,6 @@ Source: {#AppArch}\Plugins\BuddyExpectator.dll; DestDir: {app}\Plugins; Flags: i
  ; Plugins\ChangeKeyboardLayout
 Source: {#AppArch}\Plugins\ChangeKeyboardLayout.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\ChangeKeyboardLayout; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\TranslitSwitcher.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\ChangeKeyboardLayout; AfterInstall: AddDetails;
- ; Plugins\DbEditorPP
-Source: {#AppArch}\Plugins\DbEditorPP.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\DbEditorPP; AfterInstall: AddDetails;
  ; Plugins\Fingerprint
 Source: {#AppArch}\Plugins\Fingerprint.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Plugins\Fingerprint; AfterInstall: AddDetails;
 Source: x86\Icons\Fp_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Plugins\Fingerprint; AfterInstall: AddDetails;
@@ -606,9 +596,6 @@ Name: Protocols\ICQ\MRA2; Description: {code:ComponentsHelper|ICQ_Protocol_MRA2}
 Name: Protocols\ICQCorp; Description: {code:ComponentsHelper|ICQCorp_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\IRC; Description: {code:ComponentsHelper|IRC_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
-Name: Protocols\Jabber\GMail; Description: {code:ComponentsHelper|Jabber_Protocol_GMail}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Jabber\GTalk; Description: {code:ComponentsHelper|Jabber_Protocol_GTalk}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Jabber\Hangouts; Description: {code:ComponentsHelper|Jabber_Protocol_Hangouts}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol_Jabber}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\Jabberru; Description: {code:ComponentsHelper|Jabber_Protocol_Jabberru}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber\LJ; Description: {code:ComponentsHelper|Jabber_Protocol_LJ}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
@@ -636,7 +623,6 @@ Name: Plugins\AuthState; Description: {code:ComponentsHelper|AuthState}; Types: 
 Name: Plugins\BuddyExpectator; Description: {code:ComponentsHelper|BuddyExpectator}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Plugins\BossKey; Description: {code:ComponentsHelper|BossKey}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\ChangeKeyboardLayout; Description: {code:ComponentsHelper|ChangeKeyboardLayout}; Types: advanced custom; Flags: disablenouninstallwarning;
-Name: Plugins\DbEditorPP; Description: {code:ComponentsHelper|DbEditorPP}; Types: advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\Fingerprint; Description: {code:ComponentsHelper|Fingerprint}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\Flags; Description: {code:ComponentsHelper|Flags}; Types: optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Plugins\HistoryPP; Description: {code:ComponentsHelper|HistoryPP}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
@@ -722,9 +708,6 @@ Name: Protocols\ICQ\MRA2; Description: {code:ComponentsHelper|ICQ_Protocol_MRA2}
 Name: Protocols\ICQCorp; Description: {code:ComponentsHelper|ICQCorp_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\IRC; Description: {code:ComponentsHelper|IRC_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
-Name: Protocols\Jabber\GMail; Description: {code:ComponentsHelper|Jabber_Protocol_GMail}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Jabber\GTalk; Description: {code:ComponentsHelper|Jabber_Protocol_GTalk}; Types: full custom; Flags: disablenouninstallwarning;
-Name: Protocols\Jabber\Hangouts; Description: {code:ComponentsHelper|Jabber_Protocol_Hangouts}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol_Jabber}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\Jabberru; Description: {code:ComponentsHelper|Jabber_Protocol_Jabberru}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\LJ; Description: {code:ComponentsHelper|Jabber_Protocol_LJ}; Types: full custom; Flags: disablenouninstallwarning;
@@ -752,7 +735,6 @@ Name: Plugins\AuthState; Description: {code:ComponentsHelper|AuthState}; Types: 
 Name: Plugins\BuddyExpectator; Description: {code:ComponentsHelper|BuddyExpectator}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Plugins\BossKey; Description: {code:ComponentsHelper|BossKey}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\ChangeKeyboardLayout; Description: {code:ComponentsHelper|ChangeKeyboardLayout}; Types: advanced full custom; Flags: disablenouninstallwarning;
-Name: Plugins\DbEditorPP; Description: {code:ComponentsHelper|DbEditorPP}; Types: advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\Fingerprint; Description: {code:ComponentsHelper|Fingerprint}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\Flags; Description: {code:ComponentsHelper|Flags}; Types: optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Plugins\HistoryPP; Description: {code:ComponentsHelper|HistoryPP}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
@@ -986,54 +968,32 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: CLUI; Key: EqualSections;
 Filename: {app}\Profiles\autoexec_update.ini; Section: CLUI; Key: StatusBarProtosPerLine; String: b{code:GetCLUIFrames|StatusBarProtosPerLine}; Check: IsUpdate;
 
  ; Protocols\Pseudo\NewsAggregator
-Filename: {app}\Profiles\settings.ini; Section: CListGroups; Key: 0; String: uNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
 Filename: {app}\Profiles\settings.ini; Section: NewsAggregator; Key: AM_BaseProto; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 0; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 200; String: d0; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
  ; Protocols\Pseudo\WebView
-Filename: {app}\Profiles\settings.ini; Section: CListGroups; Key: 1; String: uWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
 Filename: {app}\Profiles\settings.ini; Section: WebView; Key: AM_BaseProto; String: sWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 1; String: sWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 201; String: d1; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
  ; Protocols\Pseudo\Weather
-Filename: {app}\Profiles\settings.ini; Section: CListGroups; Key: 2; String: uWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
 Filename: {app}\Profiles\settings.ini; Section: Weather; Key: AM_BaseProto; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 2; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 202; String: d2; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
  ; Protocols\Pseudo\GmailNotifier
-Filename: {app}\Profiles\settings.ini; Section: CListGroups; Key: 3; String: uGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
 Filename: {app}\Profiles\settings.ini; Section: GmailMNotifier; Key: AM_BaseProto; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 3; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 203; String: d3; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
  ; Protocols\Pseudo\YAMN
-Filename: {app}\Profiles\settings.ini; Section: CListGroups; Key: 4; String: uYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
 Filename: {app}\Profiles\settings.ini; Section: YAMN; Key: AM_BaseProto; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 4; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 204; String: d4; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
  ; Protocols\Pseudo\CurrencyRates
-Filename: {app}\Profiles\settings.ini; Section: CListGroups; Key: 5; String: uCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
 Filename: {app}\Profiles\settings.ini; Section: CurrencyRates; Key: AM_BaseProto; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 5; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 205; String: d5; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
  ; MetaContacts
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 10; String: sMetaContacts; Flags: uninsdeleteentry;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 210; String: d10; Flags: uninsdeleteentry;
- ; CloudFile/Dropbox
-Filename: {app}\Profiles\settings.ini; Section: Dropbox; Key: AM_BaseProto; String: sCloudFile/Dropbox; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 12; String: sDropbox; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 212; String: d12; Flags: uninsdeleteentry;
- ; CloudFile/GDrive
-Filename: {app}\Profiles\settings.ini; Section: GDrive; Key: AM_BaseProto; String: sCloudFile/GDrive; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 13; String: sGDrive; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 213; String: d13; Flags: uninsdeleteentry;
- ; CloudFile/OneDrive
-Filename: {app}\Profiles\settings.ini; Section: OneDrive; Key: AM_BaseProto; String: sCloudFile/OneDrive; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 14; String: sOneDrive; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 214; String: d14; Flags: uninsdeleteentry;
- ; CloudFile/YandexDisk
-Filename: {app}\Profiles\settings.ini; Section: YandexDisk; Key: AM_BaseProto; String: sCloudFile/YandexDisk; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 15; String: sYandexDisk; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 215; String: d15; Flags: uninsdeleteentry;
  ; Protocols\EmLanProto
 Filename: {app}\Profiles\settings.ini; Section: EM_LAN_PROTO; Key: AM_BaseProto; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 18; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
@@ -1046,24 +1006,6 @@ Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 22; String: sGG;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 222; String: d22; Flags: uninsdeleteentry; Components: Protocols\GG;
 Filename: {app}\Profiles\update.ini; Section: GG; Key: AM_BaseProto; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG;
 Filename: {app}\Profiles\autoexec_update.ini; Section: GG; Key: AM_BaseProto; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG; Check: IsUpdate;
- ; Protocols\Jabber\GMail
-Filename: {app}\Profiles\settings.ini; Section: GMail; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\GMail;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 24; String: sGMail; Flags: uninsdeleteentry; Components: Protocols\Jabber\GMail;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 224; String: d24; Flags: uninsdeleteentry; Components: Protocols\Jabber\GMail;
-Filename: {app}\Profiles\update.ini; Section: GMail; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\GMail;
-Filename: {app}\Profiles\autoexec_update.ini; Section: GMail; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\GMail; Check: IsUpdate;
- ; Protocols\Jabber\GTalk
-Filename: {app}\Profiles\settings.ini; Section: GTalk; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\GTalk;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 26; String: sGTalk; Flags: uninsdeleteentry; Components: Protocols\Jabber\GTalk;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 226; String: d26; Flags: uninsdeleteentry; Components: Protocols\Jabber\GTalk;
-Filename: {app}\Profiles\update.ini; Section: GTalk; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\GTalk;
-Filename: {app}\Profiles\autoexec_update.ini; Section: GTalk; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\GTalk; Check: IsUpdate;
- ; Protocols\Jabber\Hangouts
-Filename: {app}\Profiles\settings.ini; Section: Hangouts; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Hangouts;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 27; String: sHangouts; Flags: uninsdeleteentry; Components: Protocols\Jabber\Hangouts;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 227; String: d27; Flags: uninsdeleteentry; Components: Protocols\Jabber\Hangouts;
-Filename: {app}\Profiles\update.ini; Section: Hangouts; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Hangouts;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Hangouts; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Hangouts; Check: IsUpdate;
  ; Protocols\ICQ\ICQ
 Filename: {app}\Profiles\settings.ini; Section: ICQ; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 29; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
@@ -1175,6 +1117,22 @@ Filename: {app}\Profiles\autoexec_update.ini; Section: XMPP; Key: AM_BaseProto; 
  ; Protocols\Pseudo\mRadio
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 86; String: smRadio; Flags: uninsdeleteentry; Components: Protocols\Pseudo\mRadio;
 Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 286; String: d86; Flags: uninsdeleteentry; Components: Protocols\Pseudo\mRadio;
+ ; CloudFile/Dropbox
+Filename: {app}\Profiles\settings.ini; Section: Dropbox; Key: AM_BaseProto; String: sCloudFile/Dropbox; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 90; String: sDropbox; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 290; String: d90; Flags: uninsdeleteentry;
+ ; CloudFile/GDrive
+Filename: {app}\Profiles\settings.ini; Section: GDrive; Key: AM_BaseProto; String: sCloudFile/GDrive; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 91; String: sGDrive; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 291; String: d91; Flags: uninsdeleteentry;
+ ; CloudFile/OneDrive
+Filename: {app}\Profiles\settings.ini; Section: OneDrive; Key: AM_BaseProto; String: sCloudFile/OneDrive; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 92; String: sOneDrive; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 292; String: d92; Flags: uninsdeleteentry;
+ ; CloudFile/YandexDisk
+Filename: {app}\Profiles\settings.ini; Section: YandexDisk; Key: AM_BaseProto; String: sCloudFile/YandexDisk; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 93; String: sYandexDisk; Flags: uninsdeleteentry;
+Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 293; String: d93; Flags: uninsdeleteentry;
 
  ; Plugins\NewXstatusNotify
 Filename: {app}\Profiles\settings.ini; Section: Ignore; Key: Default1; String: d0; Flags: uninsdeleteentry; Components: Plugins\NewXstatusNotify;
