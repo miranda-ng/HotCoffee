@@ -283,26 +283,26 @@ ProtoCount=d7
   "Protocols\Pseudo\YAMN," + \			;Info
   "Protocols\Pseudo\CurrencyRates," + \		;Info
   "MetaContacts," + \				;MetaContacts ;этот компонент не имеет чекбокса, т.е. он всегда присутствует в миранде
-  "Protocols\EmLanProto," + \			;Chat rooms, General, Bots
-  "Protocols\GG," + \				;Chat rooms, General, Bots
-  "Protocols\ICQ\ICQ," + \			;Chat rooms, General, Bots, Phone Contacts
-  "Protocols\ICQ\ICQ2," + \			;Chat rooms, General, Bots, Phone Contacts
-  "Protocols\ICQCorp," + \			;Chat rooms, General, Bots
-  "Protocols\IRC," + \				;Chat rooms, General, Bots
-  "Protocols\Jabber\Jabber," + \		;Chat rooms, General, Bots
-  "Protocols\Jabber\Jabberru," + \		;Chat rooms, General, Bots
-  "Protocols\Jabber\LJ," + \			;Chat rooms, General, Bots
-  "Protocols\ICQ\MRA," + \			;Chat rooms, General, Bots, Phone Contacts
-  "Protocols\ICQ\MRA2," + \			;Chat rooms, General, Bots, Phone Contacts
-  "Protocols\Jabber\OK," + \			;Chat rooms, General, Bots, OK
-  "Protocols\Omegle," + \			;Chat rooms, General, Bots
-  "Protocols\Sametime," + \			;Chat rooms, General, Bots
-  "Protocols\Skype," + \			;Chat rooms, General, Bots, Skype
-  "Protocols\Steam," + \			;Chat rooms, General, Bots, Steam
-  "Protocols\Tox," + \				;Chat rooms, General, Bots, Tox
-  "Protocols\Twitter," + \			;Chat rooms, General, Bots, Twitter
-  "Protocols\VKontakte," + \			;Chat rooms, General, Bots, VKontakte
-  "Protocols\Jabber\XMPP," + \			;Chat rooms, General, Bots
+  "Protocols\EmLanProto," + \			;Bots, Chat rooms, General
+  "Protocols\GG," + \				;Bots, Chat rooms, General
+  "Protocols\ICQ\ICQ," + \			;Bots, Chat rooms, General, Phone Contacts
+  "Protocols\ICQ\ICQ2," + \			;Bots, Chat rooms, General, Phone Contacts
+  "Protocols\ICQCorp," + \			;Bots, Chat rooms, General
+  "Protocols\IRC," + \				;Bots, Chat rooms, General
+  "Protocols\Jabber\Jabber," + \		;Bots, Chat rooms, General
+  "Protocols\Jabber\Jabberru," + \		;Bots, Chat rooms, General
+  "Protocols\Jabber\LJ," + \			;Bots, Chat rooms, General
+  "Protocols\ICQ\MRA," + \			;Bots, Chat rooms, General, Phone Contacts
+  "Protocols\ICQ\MRA2," + \			;Bots, Chat rooms, General, Phone Contacts
+  "Protocols\Jabber\OK," + \			;Bots, Chat rooms, General, OK
+  "Protocols\Omegle," + \			;Bots, Chat rooms, General
+  "Protocols\Sametime," + \			;Bots, Chat rooms, General
+  "Protocols\Skype," + \			;Bots, Chat rooms, General, Skype
+  "Protocols\Steam," + \			;Bots, Chat rooms, General, Steam
+  "Protocols\Tox," + \				;Bots, Chat rooms, General, Tox
+  "Protocols\Twitter," + \			;Bots, Chat rooms, General, Twitter
+  "Protocols\VKontakte," + \			;Bots, Chat rooms, General, VKontakte
+  "Protocols\Jabber\XMPP," + \			;Bots, Chat rooms, General
   "Protocols\Pseudo\mRadio," + \		;mRadio
   "CloudFile/Dropbox," + \			;этот компонент не имеет чекбокса, т.е. он всегда присутствует в миранде и этот компонент не требует создания группы
   "CloudFile/GDrive," + \			;этот компонент не имеет чекбокса, т.е. он всегда присутствует в миранде и этот компонент не требует создания группы
@@ -312,9 +312,9 @@ ProtoCount=d7
 [CListGroups]
 0=uInfo
 1=uMetaContacts
-2=uChat rooms
-3=uGeneral
-4=uBots
+2=uBots
+3=uChat rooms
+4=uGeneral
 5=uPhone Contacts
 6=uOK
 7=uSkype
@@ -331,9 +331,9 @@ Protocols\Pseudo\mRadio
 тогда вот такие ключи должны проставиться в ини:
 [CListGroups]
 0=uMetaContacts
-1=uChat rooms
-2=uGeneral
-3=uBots
+1=uBots
+2=uChat rooms
+3=uGeneral
 4=uSkype
 5=uRadio
 

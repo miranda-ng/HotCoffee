@@ -26,4 +26,16 @@ t.HasAccess = function(path)
 	return false
 end
 
+t.FileExists = function(path)
+	if not path then
+		return false
+	end
+	local file = io.open(path, 'r')
+	if file then
+		file:close()
+		return true
+	end
+	return false
+end
+
 return t
