@@ -2,7 +2,7 @@
 setlocal
 
 rem UI query
-set allowqueries=0
+set allowqueries=1
 set /p ui="e = English, r = Russian [e]: "
 if /i "%ui%" == "r" (
 	:: ru
@@ -65,7 +65,7 @@ rd /s /q x64 2>nul&md x64 2>nul
 rem Downloads
 set "components=authstate bass_interface bosskey buddyexpectator changekeyboardlayout cloudfile currencyrates dbeditorpp dbx_mdbx dbx_mmap emlanproto fingerprint flags folders gg gmailnotifier historypp icqcorp ieview menuex messagestate mirlua mradio newawaysys neweventnotify newsaggregator newxstatusnotify omegle packupdater popupplus quickmessages quicksearch sametime sessions skypeweb smileyadd spellchecker splashscreen statusmanager steam stopspam tipper tox translitswitcher twitter uinfoex variables vkontakte weather webview whenwasit yamn alarms assocmgr buddypounce console favcontacts fltcontacts historysweeperlight keyboardnotify listeningto mydetails mirotr nudge secureim cryptopp winterspeak"
 set query=d
-if "%allowqueries%" == "0" set /p "query=%queryversionprompt%"
+if "%allowqueries%" == "1" set /p "query=%queryversionprompt%"
 if /i "%query%" == "s" (
 	set "dest=%~dp0x86\miranda-ng.7z"
 	call :download "https://miranda-ng.org/distr/stable/miranda-ng-v0.96.1.7z" "%%dest%%"
@@ -85,12 +85,12 @@ if /i "%query%" == "s" (
 	for %%? in (%components%) do (
 		set "dest=%~dp0x86\%%?.zip"
 		call :download "https://miranda-ng.org/distr/stable/x32/Plugins/%%?.zip" "%%dest%%"
-		call :extract "%%dest%%" "%~dp0x86" "-x!Gadgets -x!Sounds"
+		call :extract "%%dest%%" "%~dp0x86" "-x!Gadgets -x!Plugins\VoiceService.dll -x!Sounds"
 		call del /q "%%dest%%" 2>nul
 
 		set "dest=%~dp0x64\%%?.zip"
 		call :download "https://miranda-ng.org/distr/stable/x64/Plugins/%%?.zip" "%%dest%%"
-		call :extract "%%dest%%" "%~dp0x64" "-x!Gadgets -x!Icons -x!Plugins\CurrencyRates\*.xml -x!Plugins\Weather -x!Sounds"
+		call :extract "%%dest%%" "%~dp0x64" "-x!Gadgets -x!Icons -x!Plugins\CurrencyRates\*.xml -x!Plugins\Weather -x!Plugins\VoiceService.dll -x!Sounds"
 		call del /q "%%dest%%" 2>nul
 	)
 ) else (
@@ -112,12 +112,12 @@ if /i "%query%" == "s" (
 	for %%? in (%components%) do (
 		set "dest=%~dp0x86\%%?.zip"
 		call :download "https://miranda-ng.org/distr/x32/Plugins/%%?.zip" "%%dest%%"
-		call :extract "%%dest%%" "%~dp0x86" "-x!Gadgets -x!Sounds"
+		call :extract "%%dest%%" "%~dp0x86" "-x!Gadgets -x!Plugins\VoiceService.dll -x!Sounds"
 		call del /q "%%dest%%" 2>nul
 
 		set "dest=%~dp0x64\%%?.zip"
 		call :download "https://miranda-ng.org/distr/x64/Plugins/%%?.zip" "%%dest%%"
-		call :extract "%%dest%%" "%~dp0x64" "-x!Gadgets -x!Icons -x!Plugins\CurrencyRates\*.xml -x!Plugins\Weather -x!Sounds"
+		call :extract "%%dest%%" "%~dp0x64" "-x!Gadgets -x!Icons -x!Plugins\CurrencyRates\*.xml -x!Plugins\Weather -x!Plugins\VoiceService.dll -x!Sounds"
 		call del /q "%%dest%%" 2>nul
 	)
 )
@@ -157,7 +157,7 @@ rem Compile
 
 rem Delete x86, x64 dirs
 set query=y
-if "%allowqueries%" == "0" set /p "query=%deletedirsprompt%"
+if "%allowqueries%" == "1" set /p "query=%deletedirsprompt%"
 if /i "%query%" == "y" rd /s /q x86 2>nul&rd /s /q x64 2>nul
 del /f /q "%~dp0err">nul
 
