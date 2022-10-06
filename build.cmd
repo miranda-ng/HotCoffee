@@ -69,12 +69,12 @@ if "%allowqueries%" == "1" set /p "query=%queryversionprompt%"
 if /i "%query%" == "s" (
 	set "dest=%~dp0x86\miranda-ng.7z"
 	call :download "https://miranda-ng.org/distr/stable/miranda-ng-v0.96.1.7z" "%%dest%%"
-	call :extract "%%dest%%" "%~dp0x86" "-x!mirandaboot.ini"
+	call :extract "%%dest%%" "%~dp0x86" "-x!Plugins\VoiceService.dll -x!mirandaboot.ini"
 	call del /q "%%dest%%" 2>nul
 
 	set "dest=%~dp0x64\miranda-ng.7z"
 	call :download "https://miranda-ng.org/distr/stable/miranda-ng-v0.96.1_x64.7z" "%%dest%%"
-	call :extract "%%dest%%" "%~dp0x64" "-x!Icons -x!Plugins\Import -x!mirandaboot.ini"
+	call :extract "%%dest%%" "%~dp0x64" "-x!Icons -x!Plugins\Import -x!Plugins\VoiceService.dll -x!mirandaboot.ini"
 	call del /q "%%dest%%" 2>nul
 
 	set "dest=%~dp0x86\langpack_russian.zip"
@@ -85,23 +85,23 @@ if /i "%query%" == "s" (
 	for %%? in (%components%) do (
 		set "dest=%~dp0x86\%%?.zip"
 		call :download "https://miranda-ng.org/distr/stable/x32/Plugins/%%?.zip" "%%dest%%"
-		call :extract "%%dest%%" "%~dp0x86" "-x!Gadgets -x!Plugins\VoiceService.dll -x!Sounds"
+		call :extract "%%dest%%" "%~dp0x86" "-x!Gadgets -x!Sounds"
 		call del /q "%%dest%%" 2>nul
 
 		set "dest=%~dp0x64\%%?.zip"
 		call :download "https://miranda-ng.org/distr/stable/x64/Plugins/%%?.zip" "%%dest%%"
-		call :extract "%%dest%%" "%~dp0x64" "-x!Gadgets -x!Icons -x!Plugins\CurrencyRates\*.xml -x!Plugins\Weather -x!Plugins\VoiceService.dll -x!Sounds"
+		call :extract "%%dest%%" "%~dp0x64" "-x!Gadgets -x!Icons -x!Plugins\CurrencyRates\*.xml -x!Plugins\Weather -x!Sounds"
 		call del /q "%%dest%%" 2>nul
 	)
 ) else (
 	set "dest=%~dp0x86\miranda-ng.7z"
 	call :download "https://www.miranda-ng.org/distr/miranda-ng-alpha-latest.7z" "%%dest%%"
-	call :extract "%%dest%%" "%~dp0x86" "-x!mirandaboot.ini"
+	call :extract "%%dest%%" "%~dp0x86" "-x!Plugins\VoiceService.dll -x!mirandaboot.ini"
 	call del /q "%%dest%%" 2>nul
 
 	set "dest=%~dp0x64\miranda-ng.7z"
 	call :download "https://www.miranda-ng.org/distr/miranda-ng-alpha-latest_x64.7z" "%%dest%%"
-	call :extract "%%dest%%" "%~dp0x64" "-x!Icons -x!Plugins\Import -x!mirandaboot.ini"
+	call :extract "%%dest%%" "%~dp0x64" "-x!Icons -x!Plugins\Import -x!Plugins\VoiceService.dll -x!mirandaboot.ini"
 	call del /q "%%dest%%" 2>nul
 
 	set "dest=%~dp0x86\langpack_russian.zip"
@@ -112,12 +112,12 @@ if /i "%query%" == "s" (
 	for %%? in (%components%) do (
 		set "dest=%~dp0x86\%%?.zip"
 		call :download "https://miranda-ng.org/distr/x32/Plugins/%%?.zip" "%%dest%%"
-		call :extract "%%dest%%" "%~dp0x86" "-x!Gadgets -x!Plugins\VoiceService.dll -x!Sounds"
+		call :extract "%%dest%%" "%~dp0x86" "-x!Gadgets -x!Sounds"
 		call del /q "%%dest%%" 2>nul
 
 		set "dest=%~dp0x64\%%?.zip"
 		call :download "https://miranda-ng.org/distr/x64/Plugins/%%?.zip" "%%dest%%"
-		call :extract "%%dest%%" "%~dp0x64" "-x!Gadgets -x!Icons -x!Plugins\CurrencyRates\*.xml -x!Plugins\Weather -x!Plugins\VoiceService.dll -x!Sounds"
+		call :extract "%%dest%%" "%~dp0x64" "-x!Gadgets -x!Icons -x!Plugins\CurrencyRates\*.xml -x!Plugins\Weather -x!Sounds"
 		call del /q "%%dest%%" 2>nul
 	)
 )
