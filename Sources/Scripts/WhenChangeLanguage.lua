@@ -39,28 +39,44 @@ function OnLanguageChanged(langpack)
     local mImportIniPath = toansi(m.Parse('%miranda_path%\\UserSet\\ini\\WhenChangeLanguage.ini'))
     m.CallService('DB/Ini/ImportFile', mImportIniPath)
 
-    local splashScreenPathTo = m.Parse('%miranda_path%\\Skins\\SplashScreen')
-    local splashScreenPathFrom = splashScreenPathTo
+    local SplashScreenPathTo = m.Parse('%miranda_path%\\Skins\\SplashScreen')
+    local SplashScreenPathFrom = SplashScreenPathTo
     if IsCyrillicLangpack(langpack) then
-        splashScreenPathFrom = splashScreenPathFrom .. '\\' .. 'ru'
+        SplashScreenPathFrom = SplashScreenPathFrom .. '\\' .. 'ru'
     else
-        splashScreenPathFrom = splashScreenPathFrom .. '\\' .. 'en'
+        SplashScreenPathFrom = SplashScreenPathFrom .. '\\' .. 'en'
     end
-    local batch = "xcopy /Y \"{splashScreenPathFrom}\" \"{splashScreenPathTo}\"" % {
-        ["splashScreenPathFrom"] = splashScreenPathFrom,
-        ["splashScreenPathTo"] = splashScreenPathTo
+    local batch = "xcopy /Y \"{SplashScreenPathFrom}\" \"{SplashScreenPathTo}\"" % {
+        ["SplashScreenPathFrom"] = SplashScreenPathFrom,
+        ["SplashScreenPathTo"] = SplashScreenPathTo
     }
 
-    local weatherConfigPathTo = m.Parse('%miranda_path%\\Plugins\\Weather')
-    local weatherConfigPathFrom = weatherConfigPathTo
+    winapi.ShellExecute(globals.HasAccess(m.Parse("%miranda_path%\\miranda.test")) and "open" or "runas", 'cmd.exe', '/C '.. batch)
+
+    local WeatherConfigPathTo = m.Parse('%miranda_path%\\Plugins\\Weather')
+    local WeatherConfigPathFrom = WeatherConfigPathTo
     if IsCyrillicLangpack(langpack) then
-        weatherConfigPathFrom = weatherConfigPathFrom .. '\\' .. 'ru'
+        WeatherConfigPathFrom = WeatherConfigPathFrom .. '\\' .. 'ru'
     else
-        weatherConfigPathFrom = weatherConfigPathFrom .. '\\' .. 'en'
+        WeatherConfigPathFrom = WeatherConfigPathFrom .. '\\' .. 'en'
     end
-    local batch = "xcopy /Y \"{weatherConfigPathFrom}\" \"{weatherConfigPathTo}\"" % {
-        ["weatherConfigPathFrom"] = weatherConfigPathFrom,
-        ["weatherConfigPathTo"] = weatherConfigPathTo
+    local batch = "xcopy /Y \"{WeatherConfigPathFrom}\" \"{WeatherConfigPathTo}\"" % {
+        ["WeatherConfigPathFrom"] = WeatherConfigPathFrom,
+        ["WeatherConfigPathTo"] = WeatherConfigPathTo
+    }
+
+    winapi.ShellExecute(globals.HasAccess(m.Parse("%miranda_path%\\miranda.test")) and "open" or "runas", 'cmd.exe', '/C '.. batch)
+
+    local NewsAggregatorConfigPathTo = m.Parse('%miranda_path%\\Plugins\\NewsAggregator')
+    local NewsAggregatorConfigPathFrom = NewsAggregatorConfigPathTo
+    if IsCyrillicLangpack(langpack) then
+        NewsAggregatorConfigPathFrom = NewsAggregatorConfigPathFrom .. '\\' .. 'ru'
+    else
+        NewsAggregatorConfigPathFrom = NewsAggregatorConfigPathFrom .. '\\' .. 'en'
+    end
+    local batch = "xcopy /Y \"{NewsAggregatorConfigPathFrom}\" \"{NewsAggregatorConfigPathTo}\"" % {
+        ["NewsAggregatorConfigPathFrom"] = NewsAggregatorConfigPathFrom,
+        ["NewsAggregatorConfigPathTo"] = NewsAggregatorConfigPathTo
     }
 
     winapi.ShellExecute(globals.HasAccess(m.Parse("%miranda_path%\\miranda.test")) and "open" or "runas", 'cmd.exe', '/C '.. batch)

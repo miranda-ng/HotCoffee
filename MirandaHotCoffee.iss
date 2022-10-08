@@ -431,8 +431,10 @@ Source: x86\Icons\Proto_mRadio.dll; DestDir: {app}\Icons; Flags: ignoreversion; 
 Source: x86\Skins\Avatars\mRadio.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
  ; Protocols\Pseudo\NewsAggregator
 Source: {#AppArch}\Plugins\NewsAggregator.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\NewsAggregator; AfterInstall: AddDetails;
+Source: x86\Plugins\NewsAggregator\*; DestDir: {app}\Plugins\NewsAggregator; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Protocols\Pseudo\NewsAggregator; AfterInstall: AddDetails;
+Source: x86\Plugins\NewsAggregator\en\RSS.cfg; DestDir: {app}\Plugins\NewsAggregator; Languages: en; Flags: ignoreversion; Components: Protocols\Pseudo\NewsAggregator; AfterInstall: AddDetails;
+Source: x86\Plugins\NewsAggregator\ru\RSS.cfg; DestDir: {app}\Plugins\NewsAggregator; Languages: ru; Flags: ignoreversion; Components: Protocols\Pseudo\NewsAggregator; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_NewsAggregator.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Pseudo\NewsAggregator; AfterInstall: AddDetails;
-Source: x86\Plugins\NewsAggregator\RSS.cfg; DestDir: {app}\Plugins\NewsAggregator; Flags: ignoreversion; Components: Protocols\Pseudo\NewsAggregator; AfterInstall: AddDetails;
 Source: x86\Skins\Avatars\rss.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\Pseudo\NewsAggregator; AfterInstall: AddDetails;
  ; Protocols\Pseudo\Weather
 Source: {#AppArch}\Plugins\Weather.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\Weather; AfterInstall: AddDetails;
