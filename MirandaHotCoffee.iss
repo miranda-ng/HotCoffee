@@ -917,564 +917,377 @@ Root: HKCU; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\
   "IsStyleChecked('Skin_WinStyle_Light')"
 
 [INI]
+#define public SettingsIni "{app}\Profiles\settings.ini"
+#define public UpdateIni "{app}\Profiles\update.ini"
+#define public AutoexecUpdateIni "{app}\Profiles\autoexec_update.ini"
+#define public CurrentIni ""
+
  ; mirandaboot.ini
 Filename: {app}\mirandaboot.ini; Section: Database; Key: ProfileDir; String: {#AppProfile}\Profiles; Check: IsDefaultSetupType;
 Filename: {app}\mirandaboot.ini; Section: Language; Key: DefaultLanguage; String: langpack_russian.txt; Languages: ru;
  ; settings.ini
-Filename: {app}\Profiles\settings.ini; Section: Langpack; Key: Current; String: udefault; Languages: en;
-Filename: {app}\Profiles\settings.ini; Section: Langpack; Key: Current; String: ulangpack_russian.txt; Languages: ru;
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: "Name"; String: u{#AppName};
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Version; String: u{#AppFullVer};
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: MirVer; String: u{#AppMirFullVer};
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@xmpp.ru;
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")};
-Filename: {app}\Profiles\settings.ini; Section: PackUpdater; Key: File_VersionURL; String: uhttps://miranda-ng.org/distr/packs/HotCoffee/.hotcoffee_{#AppArch}.ini;
-Filename: {app}\Profiles\settings.ini; Section: PackUpdater; Key: File_1_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
-Filename: {app}\Profiles\settings.ini; Section: PackUpdater; Key: File_30_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
-Filename: {app}\Profiles\settings.ini; Section: PackUpdater; Key: File_35_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
-Filename: {app}\Profiles\settings.ini; Section: CLUIFrames; Key: Height12; String: w{code:GetCLUIFrames|Height12};
-Filename: {app}\Profiles\settings.ini; Section: CLUIFrames; Key: TBVisile12; String: b{code:GetCLUIFrames|TBVisile12};
-Filename: {app}\Profiles\settings.ini; Section: CLUI; Key: EqualSections; String: b{code:GetCLUIFrames|EqualSections};
-Filename: {app}\Profiles\settings.ini; Section: CLUI; Key: StatusBarProtosPerLine; String: b{code:GetCLUIFrames|StatusBarProtosPerLine};
+Filename: {#SettingsIni}; Section: Langpack; Key: Current; String: udefault; Languages: en;
+Filename: {#SettingsIni}; Section: Langpack; Key: Current; String: ulangpack_russian.txt; Languages: ru;
+Filename: {#SettingsIni}; Section: PackInfo; Key: "Name"; String: u{#AppName};
+Filename: {#SettingsIni}; Section: PackInfo; Key: Version; String: u{#AppFullVer};
+Filename: {#SettingsIni}; Section: PackInfo; Key: MirVer; String: u{#AppMirFullVer};
+Filename: {#SettingsIni}; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@xmpp.ru;
+Filename: {#SettingsIni}; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")};
+Filename: {#SettingsIni}; Section: PackUpdater; Key: File_VersionURL; String: uhttps://miranda-ng.org/distr/packs/HotCoffee/.hotcoffee_{#AppArch}.ini;
+Filename: {#SettingsIni}; Section: PackUpdater; Key: File_1_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
+Filename: {#SettingsIni}; Section: PackUpdater; Key: File_30_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
+Filename: {#SettingsIni}; Section: PackUpdater; Key: File_35_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
+Filename: {#SettingsIni}; Section: CLUIFrames; Key: Height12; String: w{code:GetCLUIFrames|Height12};
+Filename: {#SettingsIni}; Section: CLUIFrames; Key: TBVisile12; String: b{code:GetCLUIFrames|TBVisile12};
+Filename: {#SettingsIni}; Section: CLUI; Key: EqualSections; String: b{code:GetCLUIFrames|EqualSections};
+Filename: {#SettingsIni}; Section: CLUI; Key: StatusBarProtosPerLine; String: b{code:GetCLUIFrames|StatusBarProtosPerLine};
  ; update.ini
-Filename: {app}\Profiles\update.ini; Section: Langpack; Key: Current; String: udefault; Languages: en;
-Filename: {app}\Profiles\update.ini; Section: Langpack; Key: Current; String: ulangpack_russian.txt; Languages: ru;
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: "Name"; String: u{#AppName};
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Version; String: u{#AppFullVer};
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: MirVer; String: u{#AppMirFullVer};
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@xmpp.ru;
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")};
-Filename: {app}\Profiles\update.ini; Section: PackUpdater; Key: File_VersionURL; String: uhttps://miranda-ng.org/distr/packs/HotCoffee/.hotcoffee_{#AppArch}.ini;
-Filename: {app}\Profiles\update.ini; Section: PackUpdater; Key: File_1_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
-Filename: {app}\Profiles\update.ini; Section: PackUpdater; Key: File_30_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
-Filename: {app}\Profiles\update.ini; Section: PackUpdater; Key: File_35_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
-Filename: {app}\Profiles\update.ini; Section: CLUIFrames; Key: Height12; String: w{code:GetCLUIFrames|Height12};
-Filename: {app}\Profiles\update.ini; Section: CLUIFrames; Key: TBVisile12; String: b{code:GetCLUIFrames|TBVisile12};
-Filename: {app}\Profiles\update.ini; Section: CLUI; Key: EqualSections; String: b{code:GetCLUIFrames|EqualSections};
-Filename: {app}\Profiles\update.ini; Section: CLUI; Key: StatusBarProtosPerLine; String: b{code:GetCLUIFrames|StatusBarProtosPerLine};
+Filename: {#UpdateIni}; Section: Langpack; Key: Current; String: udefault; Languages: en;
+Filename: {#UpdateIni}; Section: Langpack; Key: Current; String: ulangpack_russian.txt; Languages: ru;
+Filename: {#UpdateIni}; Section: PackInfo; Key: "Name"; String: u{#AppName};
+Filename: {#UpdateIni}; Section: PackInfo; Key: Version; String: u{#AppFullVer};
+Filename: {#UpdateIni}; Section: PackInfo; Key: MirVer; String: u{#AppMirFullVer};
+Filename: {#UpdateIni}; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@xmpp.ru;
+Filename: {#UpdateIni}; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")};
+Filename: {#UpdateIni}; Section: PackUpdater; Key: File_VersionURL; String: uhttps://miranda-ng.org/distr/packs/HotCoffee/.hotcoffee_{#AppArch}.ini;
+Filename: {#UpdateIni}; Section: PackUpdater; Key: File_1_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
+Filename: {#UpdateIni}; Section: PackUpdater; Key: File_30_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
+Filename: {#UpdateIni}; Section: PackUpdater; Key: File_35_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
+Filename: {#UpdateIni}; Section: CLUIFrames; Key: Height12; String: w{code:GetCLUIFrames|Height12};
+Filename: {#UpdateIni}; Section: CLUIFrames; Key: TBVisile12; String: b{code:GetCLUIFrames|TBVisile12};
+Filename: {#UpdateIni}; Section: CLUI; Key: EqualSections; String: b{code:GetCLUIFrames|EqualSections};
+Filename: {#UpdateIni}; Section: CLUI; Key: StatusBarProtosPerLine; String: b{code:GetCLUIFrames|StatusBarProtosPerLine};
  ; autoexec_update.ini
-Filename: {app}\Profiles\autoexec_update.ini; Section: Langpack; Key: Current; String: udefault; Languages: en; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Langpack; Key: Current; String: ulangpack_russian.txt; Languages: ru; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: "Name"; String: u{#AppName}; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Version; String: u{#AppFullVer}; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: MirVer; String: u{#AppMirFullVer}; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@xmpp.ru; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")}; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackUpdater; Key: File_VersionURL; String: uhttps://miranda-ng.org/distr/packs/HotCoffee/.hotcoffee_{#AppArch}.ini; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackUpdater; Key: File_1_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")}; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackUpdater; Key: File_30_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")}; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackUpdater; Key: File_35_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")}; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: CLUIFrames; Key: Height12; String: w{code:GetCLUIFrames|Height12}; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: CLUIFrames; Key: TBVisile12; String: b{code:GetCLUIFrames|TBVisile12}; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: CLUI; Key: EqualSections; String: b{code:GetCLUIFrames|EqualSections}; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: CLUI; Key: StatusBarProtosPerLine; String: b{code:GetCLUIFrames|StatusBarProtosPerLine}; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: Langpack; Key: Current; String: udefault; Languages: en; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: Langpack; Key: Current; String: ulangpack_russian.txt; Languages: ru; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: "Name"; String: u{#AppName}; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Version; String: u{#AppFullVer}; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: MirVer; String: u{#AppMirFullVer}; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@xmpp.ru; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")}; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: PackUpdater; Key: File_VersionURL; String: uhttps://miranda-ng.org/distr/packs/HotCoffee/.hotcoffee_{#AppArch}.ini; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: PackUpdater; Key: File_1_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")}; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: PackUpdater; Key: File_30_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")}; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: PackUpdater; Key: File_35_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")}; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: CLUIFrames; Key: Height12; String: w{code:GetCLUIFrames|Height12}; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: CLUIFrames; Key: TBVisile12; String: b{code:GetCLUIFrames|TBVisile12}; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: CLUI; Key: EqualSections; String: b{code:GetCLUIFrames|EqualSections}; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: CLUI; Key: StatusBarProtosPerLine; String: b{code:GetCLUIFrames|StatusBarProtosPerLine}; Check: IsUpdate;
 
  ; Protocols\Pseudo\NewsAggregator
-Filename: {app}\Profiles\settings.ini; Section: NewsAggregator; Key: AM_BaseProto; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 0; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 200; String: d0; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
-Filename: {app}\Profiles\update.ini; Section: NewsAggregator; Key: AM_BaseProto; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 0; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 200; String: d0; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
-Filename: {app}\Profiles\autoexec_update.ini; Section: NewsAggregator; Key: AM_BaseProto; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 0; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 200; String: d0; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: NewsAggregator; Key: AM_BaseProto; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
+Filename: {#UpdateIni}; Section: NewsAggregator; Key: AM_BaseProto; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
+Filename: {#AutoexecUpdateIni}; Section: NewsAggregator; Key: AM_BaseProto; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator; Check: IsUpdate;
  ; Protocols\Pseudo\WebView
-Filename: {app}\Profiles\settings.ini; Section: WebView; Key: AM_BaseProto; String: sWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 1; String: sWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 201; String: d1; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
-Filename: {app}\Profiles\update.ini; Section: WebView; Key: AM_BaseProto; String: sWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 1; String: sWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 201; String: d1; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
-Filename: {app}\Profiles\autoexec_update.ini; Section: WebView; Key: AM_BaseProto; String: sWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 1; String: sWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 201; String: d1; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: WebView; Key: AM_BaseProto; String: sWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
+Filename: {#UpdateIni}; Section: WebView; Key: AM_BaseProto; String: sWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
+Filename: {#AutoexecUpdateIni}; Section: WebView; Key: AM_BaseProto; String: sWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView; Check: IsUpdate;
  ; Protocols\Pseudo\Weather
-Filename: {app}\Profiles\settings.ini; Section: Weather; Key: AM_BaseProto; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 2; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 202; String: d2; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
-Filename: {app}\Profiles\update.ini; Section: Weather; Key: AM_BaseProto; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 2; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 202; String: d2; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Weather; Key: AM_BaseProto; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 2; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 202; String: d2; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: Weather; Key: AM_BaseProto; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
+Filename: {#UpdateIni}; Section: Weather; Key: AM_BaseProto; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
+Filename: {#AutoexecUpdateIni}; Section: Weather; Key: AM_BaseProto; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather; Check: IsUpdate;
  ; Protocols\Pseudo\GmailNotifier
-Filename: {app}\Profiles\settings.ini; Section: GmailMNotifier; Key: AM_BaseProto; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 3; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 203; String: d3; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
-Filename: {app}\Profiles\update.ini; Section: GmailMNotifier; Key: AM_BaseProto; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 3; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 203; String: d3; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
-Filename: {app}\Profiles\autoexec_update.ini; Section: GmailMNotifier; Key: AM_BaseProto; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 3; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 203; String: d3; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: GmailMNotifier; Key: AM_BaseProto; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
+Filename: {#UpdateIni}; Section: GmailMNotifier; Key: AM_BaseProto; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
+Filename: {#AutoexecUpdateIni}; Section: GmailMNotifier; Key: AM_BaseProto; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier; Check: IsUpdate;
  ; Protocols\Pseudo\YAMN
-Filename: {app}\Profiles\settings.ini; Section: YAMN; Key: AM_BaseProto; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 4; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 204; String: d4; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
-Filename: {app}\Profiles\update.ini; Section: YAMN; Key: AM_BaseProto; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 4; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 204; String: d4; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
-Filename: {app}\Profiles\autoexec_update.ini; Section: YAMN; Key: AM_BaseProto; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 4; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 204; String: d4; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: YAMN; Key: AM_BaseProto; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
+Filename: {#UpdateIni}; Section: YAMN; Key: AM_BaseProto; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
+Filename: {#AutoexecUpdateIni}; Section: YAMN; Key: AM_BaseProto; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN; Check: IsUpdate;
  ; Protocols\Pseudo\CurrencyRates
-Filename: {app}\Profiles\settings.ini; Section: CurrencyRates; Key: AM_BaseProto; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 5; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 205; String: d5; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
-Filename: {app}\Profiles\update.ini; Section: CurrencyRates; Key: AM_BaseProto; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 5; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 205; String: d5; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
-Filename: {app}\Profiles\autoexec_update.ini; Section: CurrencyRates; Key: AM_BaseProto; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 5; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 205; String: d5; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: CurrencyRates; Key: AM_BaseProto; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
+Filename: {#UpdateIni}; Section: CurrencyRates; Key: AM_BaseProto; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
+Filename: {#AutoexecUpdateIni}; Section: CurrencyRates; Key: AM_BaseProto; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates; Check: IsUpdate;
  ; MetaContacts
-Filename: {app}\Profiles\settings.ini; Section: MetaContacts; Key: AM_BaseProto; String: sMetaContacts; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 10; String: sMetaContacts; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 210; String: d10; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: MetaContacts; Key: AM_BaseProto; String: sMetaContacts; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 10; String: sMetaContacts; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 210; String: d10; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: MetaContacts; Key: AM_BaseProto; String: sMetaContacts; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 10; String: sMetaContacts; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 210; String: d10; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: MetaContacts; Key: AM_BaseProto; String: sMetaContacts; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: MetaContacts; Key: AM_BaseProto; String: sMetaContacts; Flags: uninsdeleteentry;
+Filename: {#AutoexecUpdateIni}; Section: MetaContacts; Key: AM_BaseProto; String: sMetaContacts; Flags: uninsdeleteentry; Check: IsUpdate;
  ; Protocols\EmLanProto
-Filename: {app}\Profiles\settings.ini; Section: EM_LAN_PROTO; Key: AM_BaseProto; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 18; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 218; String: d18; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
-Filename: {app}\Profiles\update.ini; Section: EM_LAN_PROTO; Key: AM_BaseProto; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 18; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 218; String: d18; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
-Filename: {app}\Profiles\autoexec_update.ini; Section: EM_LAN_PROTO; Key: AM_BaseProto; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 18; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 218; String: d18; Flags: uninsdeleteentry; Components: Protocols\EmLanProto; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: EM_LAN_PROTO; Key: AM_BaseProto; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
+Filename: {#UpdateIni}; Section: EM_LAN_PROTO; Key: AM_BaseProto; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
+Filename: {#AutoexecUpdateIni}; Section: EM_LAN_PROTO; Key: AM_BaseProto; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto; Check: IsUpdate;
  ; Protocols\GG
-Filename: {app}\Profiles\settings.ini; Section: GG; Key: AM_BaseProto; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 22; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 222; String: d22; Flags: uninsdeleteentry; Components: Protocols\GG;
-Filename: {app}\Profiles\update.ini; Section: GG; Key: AM_BaseProto; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 22; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 222; String: d22; Flags: uninsdeleteentry; Components: Protocols\GG;
-Filename: {app}\Profiles\autoexec_update.ini; Section: GG; Key: AM_BaseProto; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 22; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 222; String: d22; Flags: uninsdeleteentry; Components: Protocols\GG; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: GG; Key: AM_BaseProto; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG;
+Filename: {#UpdateIni}; Section: GG; Key: AM_BaseProto; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG;
+Filename: {#AutoexecUpdateIni}; Section: GG; Key: AM_BaseProto; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG; Check: IsUpdate;
  ; Protocols\ICQ\ICQ
-Filename: {app}\Profiles\settings.ini; Section: ICQ; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 29; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 229; String: d29; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
-Filename: {app}\Profiles\update.ini; Section: ICQ; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 29; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 229; String: d29; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
-Filename: {app}\Profiles\autoexec_update.ini; Section: ICQ; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 29; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 229; String: d29; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: ICQ; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
+Filename: {#UpdateIni}; Section: ICQ; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
+Filename: {#AutoexecUpdateIni}; Section: ICQ; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ; Check: IsUpdate;
  ; Protocols\ICQ\ICQ2
-Filename: {app}\Profiles\settings.ini; Section: ICQ2; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 30; String: sICQ2; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 230; String: d30; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2;
-Filename: {app}\Profiles\update.ini; Section: ICQ2; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 30; String: sICQ2; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 230; String: d30; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2;
-Filename: {app}\Profiles\autoexec_update.ini; Section: ICQ2; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 30; String: sICQ2; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 230; String: d30; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: ICQ2; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2;
+Filename: {#UpdateIni}; Section: ICQ2; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2;
+Filename: {#AutoexecUpdateIni}; Section: ICQ2; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2; Check: IsUpdate;
  ; Protocols\ICQCorp
-Filename: {app}\Profiles\settings.ini; Section: ICQCorp; Key: AM_BaseProto; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 33; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 233; String: d33; Flags: uninsdeleteentry; Components: Protocols\ICQCorp;
-Filename: {app}\Profiles\update.ini; Section: ICQCorp; Key: AM_BaseProto; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 33; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 233; String: d33; Flags: uninsdeleteentry; Components: Protocols\ICQCorp;
-Filename: {app}\Profiles\autoexec_update.ini; Section: ICQCorp; Key: AM_BaseProto; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 33; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 233; String: d33; Flags: uninsdeleteentry; Components: Protocols\ICQCorp; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: ICQCorp; Key: AM_BaseProto; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp;
+Filename: {#UpdateIni}; Section: ICQCorp; Key: AM_BaseProto; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp;
+Filename: {#AutoexecUpdateIni}; Section: ICQCorp; Key: AM_BaseProto; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp; Check: IsUpdate;
  ; Protocols\IRC
-Filename: {app}\Profiles\settings.ini; Section: IRC; Key: AM_BaseProto; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 35; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 235; String: d35; Flags: uninsdeleteentry; Components: Protocols\IRC;
-Filename: {app}\Profiles\update.ini; Section: IRC; Key: AM_BaseProto; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 35; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 235; String: d35; Flags: uninsdeleteentry; Components: Protocols\IRC;
-Filename: {app}\Profiles\autoexec_update.ini; Section: IRC; Key: AM_BaseProto; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 35; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 235; String: d35; Flags: uninsdeleteentry; Components: Protocols\IRC; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: IRC; Key: AM_BaseProto; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC;
+Filename: {#UpdateIni}; Section: IRC; Key: AM_BaseProto; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC;
+Filename: {#AutoexecUpdateIni}; Section: IRC; Key: AM_BaseProto; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC; Check: IsUpdate;
  ; Protocols\Jabber\Jabber
-Filename: {app}\Profiles\settings.ini; Section: Jabber; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 37; String: sJabber; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 237; String: d37; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber;
-Filename: {app}\Profiles\update.ini; Section: Jabber; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 37; String: sJabber; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 237; String: d37; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Jabber; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 37; String: sJabber; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 237; String: d37; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: Jabber; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber;
+Filename: {#UpdateIni}; Section: Jabber; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber;
+Filename: {#AutoexecUpdateIni}; Section: Jabber; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber; Check: IsUpdate;
  ; Protocols\Jabber\Jabberru
-Filename: {app}\Profiles\settings.ini; Section: Jabberru; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 38; String: sJabberru; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 238; String: d38; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
-Filename: {app}\Profiles\update.ini; Section: Jabberru; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 38; String: sJabberru; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 238; String: d38; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Jabberru; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 38; String: sJabberru; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 238; String: d38; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: Jabberru; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
+Filename: {#UpdateIni}; Section: Jabberru; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
+Filename: {#AutoexecUpdateIni}; Section: Jabberru; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru; Check: IsUpdate;
  ; Protocols\Jabber\LJ
-Filename: {app}\Profiles\settings.ini; Section: LJ; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 39; String: sLJ; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 239; String: d39; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ;
-Filename: {app}\Profiles\update.ini; Section: LJ; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 39; String: sLJ; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 239; String: d39; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ;
-Filename: {app}\Profiles\autoexec_update.ini; Section: LJ; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 39; String: sLJ; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 239; String: d39; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: LJ; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ;
+Filename: {#UpdateIni}; Section: LJ; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ;
+Filename: {#AutoexecUpdateIni}; Section: LJ; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ; Check: IsUpdate;
  ; Protocols\ICQ\MRA
-Filename: {app}\Profiles\settings.ini; Section: MRA; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 42; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 242; String: d42; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
-Filename: {app}\Profiles\update.ini; Section: MRA; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 42; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 242; String: d42; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
-Filename: {app}\Profiles\autoexec_update.ini; Section: MRA; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 42; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 242; String: d42; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: MRA; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
+Filename: {#UpdateIni}; Section: MRA; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
+Filename: {#AutoexecUpdateIni}; Section: MRA; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA; Check: IsUpdate;
  ; Protocols\ICQ\MRA2
-Filename: {app}\Profiles\settings.ini; Section: MRA2; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 43; String: sMRA2; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 243; String: d43; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2;
-Filename: {app}\Profiles\update.ini; Section: MRA2; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 43; String: sMRA2; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 243; String: d43; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2;
-Filename: {app}\Profiles\autoexec_update.ini; Section: MRA2; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 43; String: sMRA2; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 243; String: d43; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: MRA2; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2;
+Filename: {#UpdateIni}; Section: MRA2; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2;
+Filename: {#AutoexecUpdateIni}; Section: MRA2; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2; Check: IsUpdate;
  ; Protocols\Jabber\OK
-Filename: {app}\Profiles\settings.ini; Section: OK; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 52; String: sOK; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 252; String: d52; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
-Filename: {app}\Profiles\update.ini; Section: OK; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 52; String: sOK; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 252; String: d52; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
-Filename: {app}\Profiles\autoexec_update.ini; Section: OK; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 52; String: sOK; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 252; String: d52; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: OK; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
+Filename: {#UpdateIni}; Section: OK; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
+Filename: {#AutoexecUpdateIni}; Section: OK; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK; Check: IsUpdate;
  ; Protocols\Omegle
-Filename: {app}\Profiles\settings.ini; Section: Omegle; Key: AM_BaseProto; String: sOmegle; Flags: uninsdeleteentry; Components: Protocols\Omegle;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 54; String: sOmegle; Flags: uninsdeleteentry; Components: Protocols\Omegle;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 254; String: d54; Flags: uninsdeleteentry; Components: Protocols\Omegle;
-Filename: {app}\Profiles\update.ini; Section: Omegle; Key: AM_BaseProto; String: sOmegle; Flags: uninsdeleteentry; Components: Protocols\Omegle;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 54; String: sOmegle; Flags: uninsdeleteentry; Components: Protocols\Omegle;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 254; String: d54; Flags: uninsdeleteentry; Components: Protocols\Omegle;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Omegle; Key: AM_BaseProto; String: sOmegle; Flags: uninsdeleteentry; Components: Protocols\Omegle; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 54; String: sOmegle; Flags: uninsdeleteentry; Components: Protocols\Omegle; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 254; String: d54; Flags: uninsdeleteentry; Components: Protocols\Omegle; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: Omegle; Key: AM_BaseProto; String: sOmegle; Flags: uninsdeleteentry; Components: Protocols\Omegle;
+Filename: {#UpdateIni}; Section: Omegle; Key: AM_BaseProto; String: sOmegle; Flags: uninsdeleteentry; Components: Protocols\Omegle;
+Filename: {#AutoexecUpdateIni}; Section: Omegle; Key: AM_BaseProto; String: sOmegle; Flags: uninsdeleteentry; Components: Protocols\Omegle; Check: IsUpdate;
  ; Protocols\Sametime
-Filename: {app}\Profiles\settings.ini; Section: Sametime; Key: AM_BaseProto; String: sSametime; Flags: uninsdeleteentry; Components: Protocols\Sametime;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 58; String: sSametime; Flags: uninsdeleteentry; Components: Protocols\Sametime;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 258; String: d58; Flags: uninsdeleteentry; Components: Protocols\Sametime;
-Filename: {app}\Profiles\update.ini; Section: Sametime; Key: AM_BaseProto; String: sSametime; Flags: uninsdeleteentry; Components: Protocols\Sametime;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 58; String: sSametime; Flags: uninsdeleteentry; Components: Protocols\Sametime;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 258; String: d58; Flags: uninsdeleteentry; Components: Protocols\Sametime;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Sametime; Key: AM_BaseProto; String: sSametime; Flags: uninsdeleteentry; Components: Protocols\Sametime; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 58; String: sSametime; Flags: uninsdeleteentry; Components: Protocols\Sametime; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 258; String: d58; Flags: uninsdeleteentry; Components: Protocols\Sametime; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: Sametime; Key: AM_BaseProto; String: sSametime; Flags: uninsdeleteentry; Components: Protocols\Sametime;
+Filename: {#UpdateIni}; Section: Sametime; Key: AM_BaseProto; String: sSametime; Flags: uninsdeleteentry; Components: Protocols\Sametime;
+Filename: {#AutoexecUpdateIni}; Section: Sametime; Key: AM_BaseProto; String: sSametime; Flags: uninsdeleteentry; Components: Protocols\Sametime; Check: IsUpdate;
  ; Protocols\Skype
-Filename: {app}\Profiles\settings.ini; Section: Skype; Key: AM_BaseProto; String: sSKYPE; Flags: uninsdeleteentry; Components: Protocols\Skype;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 60; String: sSkype; Flags: uninsdeleteentry; Components: Protocols\Skype;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 260; String: d60; Flags: uninsdeleteentry; Components: Protocols\Skype;
-Filename: {app}\Profiles\update.ini; Section: Skype; Key: AM_BaseProto; String: sSKYPE; Flags: uninsdeleteentry; Components: Protocols\Skype;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 60; String: sSkype; Flags: uninsdeleteentry; Components: Protocols\Skype;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 260; String: d60; Flags: uninsdeleteentry; Components: Protocols\Skype;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Skype; Key: AM_BaseProto; String: sSKYPE; Flags: uninsdeleteentry; Components: Protocols\Skype; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 60; String: sSkype; Flags: uninsdeleteentry; Components: Protocols\Skype; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 260; String: d60; Flags: uninsdeleteentry; Components: Protocols\Skype; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: Skype; Key: AM_BaseProto; String: sSKYPE; Flags: uninsdeleteentry; Components: Protocols\Skype;
+Filename: {#UpdateIni}; Section: Skype; Key: AM_BaseProto; String: sSKYPE; Flags: uninsdeleteentry; Components: Protocols\Skype;
+Filename: {#AutoexecUpdateIni}; Section: Skype; Key: AM_BaseProto; String: sSKYPE; Flags: uninsdeleteentry; Components: Protocols\Skype; Check: IsUpdate;
  ; Protocols\Steam
-Filename: {app}\Profiles\settings.ini; Section: Steam; Key: AM_BaseProto; String: sSTEAM; Flags: uninsdeleteentry; Components: Protocols\Steam;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 62; String: sSteam; Flags: uninsdeleteentry; Components: Protocols\Steam;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 262; String: d62; Flags: uninsdeleteentry; Components: Protocols\Steam;
-Filename: {app}\Profiles\update.ini; Section: Steam; Key: AM_BaseProto; String: sSTEAM; Flags: uninsdeleteentry; Components: Protocols\Steam;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 62; String: sSteam; Flags: uninsdeleteentry; Components: Protocols\Steam;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 262; String: d62; Flags: uninsdeleteentry; Components: Protocols\Steam;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Steam; Key: AM_BaseProto; String: sSTEAM; Flags: uninsdeleteentry; Components: Protocols\Steam; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 62; String: sSteam; Flags: uninsdeleteentry; Components: Protocols\Steam; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 262; String: d62; Flags: uninsdeleteentry; Components: Protocols\Steam; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: Steam; Key: AM_BaseProto; String: sSTEAM; Flags: uninsdeleteentry; Components: Protocols\Steam;
+Filename: {#UpdateIni}; Section: Steam; Key: AM_BaseProto; String: sSTEAM; Flags: uninsdeleteentry; Components: Protocols\Steam;
+Filename: {#AutoexecUpdateIni}; Section: Steam; Key: AM_BaseProto; String: sSTEAM; Flags: uninsdeleteentry; Components: Protocols\Steam; Check: IsUpdate;
  ; Protocols\Tox
-Filename: {app}\Profiles\settings.ini; Section: TOX; Key: AM_BaseProto; String: sTOX; Flags: uninsdeleteentry; Components: Protocols\Tox;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 63; String: sTOX; Flags: uninsdeleteentry; Components: Protocols\Tox;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 263; String: d63; Flags: uninsdeleteentry; Components: Protocols\Tox;
-Filename: {app}\Profiles\update.ini; Section: TOX; Key: AM_BaseProto; String: sTOX; Flags: uninsdeleteentry; Components: Protocols\Tox;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 63; String: sTOX; Flags: uninsdeleteentry; Components: Protocols\Tox;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 263; String: d63; Flags: uninsdeleteentry; Components: Protocols\Tox;
-Filename: {app}\Profiles\autoexec_update.ini; Section: TOX; Key: AM_BaseProto; String: sTOX; Flags: uninsdeleteentry; Components: Protocols\Tox; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 63; String: sTOX; Flags: uninsdeleteentry; Components: Protocols\Tox; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 263; String: d63; Flags: uninsdeleteentry; Components: Protocols\Tox; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: TOX; Key: AM_BaseProto; String: sTOX; Flags: uninsdeleteentry; Components: Protocols\Tox;
+Filename: {#UpdateIni}; Section: TOX; Key: AM_BaseProto; String: sTOX; Flags: uninsdeleteentry; Components: Protocols\Tox;
+Filename: {#AutoexecUpdateIni}; Section: TOX; Key: AM_BaseProto; String: sTOX; Flags: uninsdeleteentry; Components: Protocols\Tox; Check: IsUpdate;
  ; Protocols\Twitter
-Filename: {app}\Profiles\settings.ini; Section: Twitter; Key: AM_BaseProto; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 64; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 264; String: d64; Flags: uninsdeleteentry; Components: Protocols\Twitter;
-Filename: {app}\Profiles\update.ini; Section: Twitter; Key: AM_BaseProto; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 64; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 264; String: d64; Flags: uninsdeleteentry; Components: Protocols\Twitter;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Twitter; Key: AM_BaseProto; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 64; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 264; String: d64; Flags: uninsdeleteentry; Components: Protocols\Twitter; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: Twitter; Key: AM_BaseProto; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter;
+Filename: {#UpdateIni}; Section: Twitter; Key: AM_BaseProto; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter;
+Filename: {#AutoexecUpdateIni}; Section: Twitter; Key: AM_BaseProto; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter; Check: IsUpdate;
  ; Protocols\VKontakte
-Filename: {app}\Profiles\settings.ini; Section: VKontakte; Key: AM_BaseProto; String: sVKontakte; Flags: uninsdeleteentry; Components: Protocols\VKontakte;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 68; String: sVKontakte; Flags: uninsdeleteentry; Components: Protocols\VKontakte;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 268; String: d68; Flags: uninsdeleteentry; Components: Protocols\VKontakte;
-Filename: {app}\Profiles\update.ini; Section: VKontakte; Key: AM_BaseProto; String: sVKontakte; Flags: uninsdeleteentry; Components: Protocols\VKontakte;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 68; String: sVKontakte; Flags: uninsdeleteentry; Components: Protocols\VKontakte;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 268; String: d68; Flags: uninsdeleteentry; Components: Protocols\VKontakte;
-Filename: {app}\Profiles\autoexec_update.ini; Section: VKontakte; Key: AM_BaseProto; String: sVKontakte; Flags: uninsdeleteentry; Components: Protocols\VKontakte; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 68; String: sVKontakte; Flags: uninsdeleteentry; Components: Protocols\VKontakte; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 268; String: d68; Flags: uninsdeleteentry; Components: Protocols\VKontakte; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: VKontakte; Key: AM_BaseProto; String: sVKontakte; Flags: uninsdeleteentry; Components: Protocols\VKontakte;
+Filename: {#UpdateIni}; Section: VKontakte; Key: AM_BaseProto; String: sVKontakte; Flags: uninsdeleteentry; Components: Protocols\VKontakte;
+Filename: {#AutoexecUpdateIni}; Section: VKontakte; Key: AM_BaseProto; String: sVKontakte; Flags: uninsdeleteentry; Components: Protocols\VKontakte; Check: IsUpdate;
  ; Protocols\Jabber\XMPP
-Filename: {app}\Profiles\settings.ini; Section: XMPP; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 74; String: sXMPP; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 274; String: d74; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
-Filename: {app}\Profiles\update.ini; Section: XMPP; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 74; String: sXMPP; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 274; String: d74; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
-Filename: {app}\Profiles\autoexec_update.ini; Section: XMPP; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 74; String: sXMPP; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 274; String: d74; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: XMPP; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
+Filename: {#UpdateIni}; Section: XMPP; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
+Filename: {#AutoexecUpdateIni}; Section: XMPP; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP; Check: IsUpdate;
  ; Protocols\Pseudo\mRadio
-Filename: {app}\Profiles\settings.ini; Section: mRadio; Key: AM_BaseProto; String: smRadio; Flags: uninsdeleteentry; Components: Protocols\Pseudo\mRadio;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 86; String: smRadio; Flags: uninsdeleteentry; Components: Protocols\Pseudo\mRadio;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 286; String: d86; Flags: uninsdeleteentry; Components: Protocols\Pseudo\mRadio;
-Filename: {app}\Profiles\update.ini; Section: mRadio; Key: AM_BaseProto; String: smRadio; Flags: uninsdeleteentry; Components: Protocols\Pseudo\mRadio;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 86; String: smRadio; Flags: uninsdeleteentry; Components: Protocols\Pseudo\mRadio;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 286; String: d86; Flags: uninsdeleteentry; Components: Protocols\Pseudo\mRadio;
-Filename: {app}\Profiles\autoexec_update.ini; Section: mRadio; Key: AM_BaseProto; String: smRadio; Flags: uninsdeleteentry; Components: Protocols\Pseudo\mRadio; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 86; String: smRadio; Flags: uninsdeleteentry; Components: Protocols\Pseudo\mRadio; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 286; String: d86; Flags: uninsdeleteentry; Components: Protocols\Pseudo\mRadio; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: mRadio; Key: AM_BaseProto; String: smRadio; Flags: uninsdeleteentry; Components: Protocols\Pseudo\mRadio;
+Filename: {#UpdateIni}; Section: mRadio; Key: AM_BaseProto; String: smRadio; Flags: uninsdeleteentry; Components: Protocols\Pseudo\mRadio;
+Filename: {#AutoexecUpdateIni}; Section: mRadio; Key: AM_BaseProto; String: smRadio; Flags: uninsdeleteentry; Components: Protocols\Pseudo\mRadio; Check: IsUpdate;
  ; CloudFile/Dropbox
-Filename: {app}\Profiles\settings.ini; Section: Dropbox; Key: AM_BaseProto; String: sCloudFile/Dropbox; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 90; String: sDropbox; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 290; String: d90; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Dropbox; Key: AM_BaseProto; String: sCloudFile/Dropbox; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 90; String: sDropbox; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 290; String: d90; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Dropbox; Key: AM_BaseProto; String: sCloudFile/Dropbox; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 90; String: sDropbox; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 290; String: d90; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: Dropbox; Key: AM_BaseProto; String: sCloudFile/Dropbox; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: Dropbox; Key: AM_BaseProto; String: sCloudFile/Dropbox; Flags: uninsdeleteentry;
+Filename: {#AutoexecUpdateIni}; Section: Dropbox; Key: AM_BaseProto; String: sCloudFile/Dropbox; Flags: uninsdeleteentry; Check: IsUpdate;
  ; CloudFile/GDrive
-Filename: {app}\Profiles\settings.ini; Section: GDrive; Key: AM_BaseProto; String: sCloudFile/GDrive; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 91; String: sGDrive; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 291; String: d91; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: GDrive; Key: AM_BaseProto; String: sCloudFile/GDrive; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 91; String: sGDrive; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 291; String: d91; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: GDrive; Key: AM_BaseProto; String: sCloudFile/GDrive; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 91; String: sGDrive; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 291; String: d91; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: GDrive; Key: AM_BaseProto; String: sCloudFile/GDrive; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: GDrive; Key: AM_BaseProto; String: sCloudFile/GDrive; Flags: uninsdeleteentry;
+Filename: {#AutoexecUpdateIni}; Section: GDrive; Key: AM_BaseProto; String: sCloudFile/GDrive; Flags: uninsdeleteentry; Check: IsUpdate;
  ; CloudFile/OneDrive
-Filename: {app}\Profiles\settings.ini; Section: OneDrive; Key: AM_BaseProto; String: sCloudFile/OneDrive; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 92; String: sOneDrive; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 292; String: d92; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: OneDrive; Key: AM_BaseProto; String: sCloudFile/OneDrive; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 92; String: sOneDrive; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 292; String: d92; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: OneDrive; Key: AM_BaseProto; String: sCloudFile/OneDrive; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 92; String: sOneDrive; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 292; String: d92; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: OneDrive; Key: AM_BaseProto; String: sCloudFile/OneDrive; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: OneDrive; Key: AM_BaseProto; String: sCloudFile/OneDrive; Flags: uninsdeleteentry;
+Filename: {#AutoexecUpdateIni}; Section: OneDrive; Key: AM_BaseProto; String: sCloudFile/OneDrive; Flags: uninsdeleteentry; Check: IsUpdate;
  ; CloudFile/YandexDisk
-Filename: {app}\Profiles\settings.ini; Section: YandexDisk; Key: AM_BaseProto; String: sCloudFile/YandexDisk; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 93; String: sYandexDisk; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Protocols; Key: 293; String: d93; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: YandexDisk; Key: AM_BaseProto; String: sCloudFile/YandexDisk; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 93; String: sYandexDisk; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Protocols; Key: 293; String: d93; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: YandexDisk; Key: AM_BaseProto; String: sCloudFile/YandexDisk; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 93; String: sYandexDisk; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Protocols; Key: 293; String: d93; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: YandexDisk; Key: AM_BaseProto; String: sCloudFile/YandexDisk; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: YandexDisk; Key: AM_BaseProto; String: sCloudFile/YandexDisk; Flags: uninsdeleteentry;
+Filename: {#AutoexecUpdateIni}; Section: YandexDisk; Key: AM_BaseProto; String: sCloudFile/YandexDisk; Flags: uninsdeleteentry; Check: IsUpdate;
 
  ; Plugins\NewXstatusNotify
-Filename: {app}\Profiles\settings.ini; Section: Ignore; Key: Default1; String: d0; Flags: uninsdeleteentry; Components: Plugins\NewXstatusNotify;
-Filename: {app}\Profiles\settings.ini; Section: Ignore; Key: Default1; String: d8; Flags: uninsdeleteentry; Components: not Plugins\NewXstatusNotify;
-Filename: {app}\Profiles\update.ini; Section: Ignore; Key: Default1; String: d0; Flags: uninsdeleteentry; Components: Plugins\NewXstatusNotify;
-Filename: {app}\Profiles\update.ini; Section: Ignore; Key: Default1; String: d8; Flags: uninsdeleteentry; Components: not Plugins\NewXstatusNotify;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Ignore; Key: Default1; String: d0; Flags: uninsdeleteentry; Components: Plugins\NewXstatusNotify; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Ignore; Key: Default1; String: d8; Flags: uninsdeleteentry; Components: not Plugins\NewXstatusNotify; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: Ignore; Key: Default1; String: d0; Flags: uninsdeleteentry; Components: Plugins\NewXstatusNotify;
+Filename: {#SettingsIni}; Section: Ignore; Key: Default1; String: d8; Flags: uninsdeleteentry; Components: not Plugins\NewXstatusNotify;
+Filename: {#UpdateIni}; Section: Ignore; Key: Default1; String: d0; Flags: uninsdeleteentry; Components: Plugins\NewXstatusNotify;
+Filename: {#UpdateIni}; Section: Ignore; Key: Default1; String: d8; Flags: uninsdeleteentry; Components: not Plugins\NewXstatusNotify;
+Filename: {#AutoexecUpdateIni}; Section: Ignore; Key: Default1; String: d0; Flags: uninsdeleteentry; Components: Plugins\NewXstatusNotify; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: Ignore; Key: Default1; String: d8; Flags: uninsdeleteentry; Components: not Plugins\NewXstatusNotify; Check: IsUpdate;
  ; Plugins\UserInfoEx RemindEnabled - on
-Filename: {app}\Profiles\settings.ini; Section: UserInfoEx; Key: RemindEnabled; String: b3; Flags: uninsdeleteentry; Components: (Plugins\UInfoEx and not Plugins\WhenWasIt) or not (Plugins\UInfoEx and Plugins\WhenWasIt);
-Filename: {app}\Profiles\update.ini; Section: UserInfoEx; Key: RemindEnabled; String: b3; Flags: uninsdeleteentry; Components: (Plugins\UInfoEx and not Plugins\WhenWasIt) or not (Plugins\UInfoEx and Plugins\WhenWasIt);
-Filename: {app}\Profiles\autoexec_update.ini; Section: UserInfoEx; Key: RemindEnabled; String: b3; Flags: uninsdeleteentry; Components: (Plugins\UInfoEx and not Plugins\WhenWasIt) or not (Plugins\UInfoEx and Plugins\WhenWasIt); Check: IsUpdate;
+Filename: {#SettingsIni}; Section: UserInfoEx; Key: RemindEnabled; String: b3; Flags: uninsdeleteentry; Components: (Plugins\UInfoEx and not Plugins\WhenWasIt) or not (Plugins\UInfoEx and Plugins\WhenWasIt);
+Filename: {#UpdateIni}; Section: UserInfoEx; Key: RemindEnabled; String: b3; Flags: uninsdeleteentry; Components: (Plugins\UInfoEx and not Plugins\WhenWasIt) or not (Plugins\UInfoEx and Plugins\WhenWasIt);
+Filename: {#AutoexecUpdateIni}; Section: UserInfoEx; Key: RemindEnabled; String: b3; Flags: uninsdeleteentry; Components: (Plugins\UInfoEx and not Plugins\WhenWasIt) or not (Plugins\UInfoEx and Plugins\WhenWasIt); Check: IsUpdate;
  ; Plugins\UserInfoEx RemindEnabled - off
-Filename: {app}\Profiles\settings.ini; Section: UserInfoEx; Key: RemindEnabled; String: b2; Flags: uninsdeleteentry; Components: Plugins\WhenWasIt or (Plugins\UInfoEx and Plugins\WhenWasIt);
-Filename: {app}\Profiles\update.ini; Section: UserInfoEx; Key: RemindEnabled; String: b2; Flags: uninsdeleteentry; Components: Plugins\WhenWasIt or (Plugins\UInfoEx and Plugins\WhenWasIt);
-Filename: {app}\Profiles\autoexec_update.ini; Section: UserInfoEx; Key: RemindEnabled; String: b2; Flags: uninsdeleteentry; Components: Plugins\WhenWasIt or (Plugins\UInfoEx and Plugins\WhenWasIt); Check: IsUpdate;
+Filename: {#SettingsIni}; Section: UserInfoEx; Key: RemindEnabled; String: b2; Flags: uninsdeleteentry; Components: Plugins\WhenWasIt or (Plugins\UInfoEx and Plugins\WhenWasIt);
+Filename: {#UpdateIni}; Section: UserInfoEx; Key: RemindEnabled; String: b2; Flags: uninsdeleteentry; Components: Plugins\WhenWasIt or (Plugins\UInfoEx and Plugins\WhenWasIt);
+Filename: {#AutoexecUpdateIni}; Section: UserInfoEx; Key: RemindEnabled; String: b2; Flags: uninsdeleteentry; Components: Plugins\WhenWasIt or (Plugins\UInfoEx and Plugins\WhenWasIt); Check: IsUpdate;
 
 ; Resources\PopupPlus Popup - on
-Filename: {app}\Profiles\settings.ini; Section: Popup; Key: ModuleIsEnabled; String: b1; Flags: uninsdeleteentry; Components: Resources\PopupPlus;
-Filename: {app}\Profiles\update.ini; Section: Popup; Key: ModuleIsEnabled; String: b1; Flags: uninsdeleteentry; Components: Resources\PopupPlus;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Popup; Key: ModuleIsEnabled; String: b1; Flags: uninsdeleteentry; Components: Resources\PopupPlus; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: Popup; Key: ModuleIsEnabled; String: b1; Flags: uninsdeleteentry; Components: Resources\PopupPlus;
+Filename: {#UpdateIni}; Section: Popup; Key: ModuleIsEnabled; String: b1; Flags: uninsdeleteentry; Components: Resources\PopupPlus;
+Filename: {#AutoexecUpdateIni}; Section: Popup; Key: ModuleIsEnabled; String: b1; Flags: uninsdeleteentry; Components: Resources\PopupPlus; Check: IsUpdate;
 ; Resources\PopupPlus Popup - off
-Filename: {app}\Profiles\settings.ini; Section: Popup; Key: ModuleIsEnabled; String: b0; Flags: uninsdeleteentry; Components: not Resources\PopupPlus;
-Filename: {app}\Profiles\update.ini; Section: Popup; Key: ModuleIsEnabled; String: b0; Flags: uninsdeleteentry; Components: not Resources\PopupPlus;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Popup; Key: ModuleIsEnabled; String: b0; Flags: uninsdeleteentry; Components: not Resources\PopupPlus; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: Popup; Key: ModuleIsEnabled; String: b0; Flags: uninsdeleteentry; Components: not Resources\PopupPlus;
+Filename: {#UpdateIni}; Section: Popup; Key: ModuleIsEnabled; String: b0; Flags: uninsdeleteentry; Components: not Resources\PopupPlus;
+Filename: {#AutoexecUpdateIni}; Section: Popup; Key: ModuleIsEnabled; String: b0; Flags: uninsdeleteentry; Components: not Resources\PopupPlus; Check: IsUpdate;
 
  ; Received files directory advanced - IsDefaultSetupType
-;Filename: {app}\Profiles\settings.ini; Section: SRFile; Key: RecvFilesDirAdv; String: u%USERPROFILE%\Downloads\HotCoffee\%userid% (%nick%)\; Flags: uninsdeleteentry; Check: IsDefaultSetupType;
-;Filename: {app}\Profiles\update.ini; Section: SRFile; Key: RecvFilesDirAdv; String: u%USERPROFILE%\Downloads\HotCoffee\%userid% (%nick%)\; Flags: uninsdeleteentry; Check: IsDefaultSetupType;
-;Filename: {app}\Profiles\autoexec_update.ini; Section: SRFile; Key: RecvFilesDirAdv; String: u%USERPROFILE%\Downloads\HotCoffee\%userid% (%nick%)\; Flags: uninsdeleteentry; Check: IsDefaultSetupType and IsUpdate;
+;Filename: {#SettingsIni}; Section: SRFile; Key: RecvFilesDirAdv; String: u%USERPROFILE%\Downloads\HotCoffee\%userid% (%nick%)\; Flags: uninsdeleteentry; Check: IsDefaultSetupType;
+;Filename: {#UpdateIni}; Section: SRFile; Key: RecvFilesDirAdv; String: u%USERPROFILE%\Downloads\HotCoffee\%userid% (%nick%)\; Flags: uninsdeleteentry; Check: IsDefaultSetupType;
+;Filename: {#AutoexecUpdateIni}; Section: SRFile; Key: RecvFilesDirAdv; String: u%USERPROFILE%\Downloads\HotCoffee\%userid% (%nick%)\; Flags: uninsdeleteentry; Check: IsDefaultSetupType and IsUpdate;
 
  ; Tab_SRMsg default
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: default_ieview; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and not Plugins\HistoryPP;
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: default_hpp; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and not Plugins\HistoryPP;
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: default_ieview; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and not Plugins\HistoryPP;
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: default_hpp; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and not Plugins\HistoryPP;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: default_ieview; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and not Plugins\HistoryPP; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: default_hpp; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and not Plugins\HistoryPP; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: default_ieview; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and not Plugins\HistoryPP;
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: default_hpp; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and not Plugins\HistoryPP;
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: default_ieview; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and not Plugins\HistoryPP;
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: default_hpp; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and not Plugins\HistoryPP;
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: default_ieview; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and not Plugins\HistoryPP; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: default_hpp; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and not Plugins\HistoryPP; Check: IsUpdate;
  ; IEView default
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: default_ieview; String: b1; Flags: uninsdeleteentry; Components: (Resources\IEView and Plugins\HistoryPP) or (Resources\IEView and not Plugins\HistoryPP);
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: default_hpp; String: b0; Flags: uninsdeleteentry; Components: (Resources\IEView and Plugins\HistoryPP) or (Resources\IEView and not Plugins\HistoryPP);
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: default_ieview; String: b1; Flags: uninsdeleteentry; Components: (Resources\IEView and Plugins\HistoryPP) or (Resources\IEView and not Plugins\HistoryPP);
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: default_hpp; String: b0; Flags: uninsdeleteentry; Components: (Resources\IEView and Plugins\HistoryPP) or (Resources\IEView and not Plugins\HistoryPP);
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: default_ieview; String: b1; Flags: uninsdeleteentry; Components: (Resources\IEView and Plugins\HistoryPP) or (Resources\IEView and not Plugins\HistoryPP); Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: default_hpp; String: b0; Flags: uninsdeleteentry; Components: (Resources\IEView and Plugins\HistoryPP) or (Resources\IEView and not Plugins\HistoryPP); Check: IsUpdate;
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: default_ieview; String: b1; Flags: uninsdeleteentry; Components: (Resources\IEView and Plugins\HistoryPP) or (Resources\IEView and not Plugins\HistoryPP);
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: default_hpp; String: b0; Flags: uninsdeleteentry; Components: (Resources\IEView and Plugins\HistoryPP) or (Resources\IEView and not Plugins\HistoryPP);
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: default_ieview; String: b1; Flags: uninsdeleteentry; Components: (Resources\IEView and Plugins\HistoryPP) or (Resources\IEView and not Plugins\HistoryPP);
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: default_hpp; String: b0; Flags: uninsdeleteentry; Components: (Resources\IEView and Plugins\HistoryPP) or (Resources\IEView and not Plugins\HistoryPP);
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: default_ieview; String: b1; Flags: uninsdeleteentry; Components: (Resources\IEView and Plugins\HistoryPP) or (Resources\IEView and not Plugins\HistoryPP); Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: default_hpp; String: b0; Flags: uninsdeleteentry; Components: (Resources\IEView and Plugins\HistoryPP) or (Resources\IEView and not Plugins\HistoryPP); Check: IsUpdate;
  ; History++ default
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: default_ieview; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and Plugins\HistoryPP;
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: default_hpp; String: b1; Flags: uninsdeleteentry; Components: not Resources\IEView and Plugins\HistoryPP;
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: default_ieview; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and Plugins\HistoryPP;
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: default_hpp; String: b1; Flags: uninsdeleteentry; Components: not Resources\IEView and Plugins\HistoryPP;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: default_ieview; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and Plugins\HistoryPP; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: default_hpp; String: b1; Flags: uninsdeleteentry; Components: not Resources\IEView and Plugins\HistoryPP; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: default_ieview; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and Plugins\HistoryPP;
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: default_hpp; String: b1; Flags: uninsdeleteentry; Components: not Resources\IEView and Plugins\HistoryPP;
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: default_ieview; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and Plugins\HistoryPP;
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: default_hpp; String: b1; Flags: uninsdeleteentry; Components: not Resources\IEView and Plugins\HistoryPP;
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: default_ieview; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and Plugins\HistoryPP; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: default_hpp; String: b1; Flags: uninsdeleteentry; Components: not Resources\IEView and Plugins\HistoryPP; Check: IsUpdate;
 
 #define public i 0
 #sub AddThemeIni
  ; Write the default theme to ini
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Skin; String: u{#theme[i]}; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_{#theme[i]}');
+Filename: {#SettingsIni}; Section: PackInfo; Key: Skin; String: u{#theme[i]}; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_{#theme[i]}');
 #endsub
 #for {i = 0; i < 33; i++} AddThemeIni
 
  ; Smileys for the dark skin
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: clist-filename; String: uSkins\Smileys\_dark\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: Standard-filename; String: uSkins\Smileys\_dark\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: Tipper-filename; String: uSkins\Smileys\_dark\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: AllProtoFacebook-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: AllProtoMRA-filename; String: uSkins\Smileys\_dark\MRA\MRA.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: AllProtoMSN-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: AllProtoSkype-filename; String: uSkins\Smileys\_dark\Skype\Skype.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: AllProtoTOX-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: AllProtoTwitter-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: AllProtoVKontakte-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: AllProtoWhatsApp-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: GMail-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: Google-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: GTalk-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: Hangouts-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: OK-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: Yandex-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: clist-filename; String: uSkins\Smileys\_dark\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: Standard-filename; String: uSkins\Smileys\_dark\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: Tipper-filename; String: uSkins\Smileys\_dark\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: AllProtoFacebook-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: AllProtoMRA-filename; String: uSkins\Smileys\_dark\MRA\MRA.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: AllProtoMSN-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: AllProtoSkype-filename; String: uSkins\Smileys\_dark\Skype\Skype.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: AllProtoTOX-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: AllProtoTwitter-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: AllProtoVKontakte-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: AllProtoWhatsApp-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: GMail-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: Google-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: GTalk-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: Hangouts-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: OK-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: Yandex-filename; String: uSkins\Smileys\_dark\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#DarkSkin};
  ; Smileys for the light skin
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: clist-filename; String: uSkins\Smileys\_light\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: Standard-filename; String: uSkins\Smileys\_light\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: Tipper-filename; String: uSkins\Smileys\_light\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: AllProtoFacebook-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: AllProtoMRA-filename; String: uSkins\Smileys\_light\MRA\MRA.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: AllProtoMSN-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: AllProtoSkype-filename; String: uSkins\Smileys\_light\Skype\Skype.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: AllProtoTOX-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: AllProtoTwitter-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: AllProtoVKontakte-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: AllProtoWhatsApp-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: GMail-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: Google-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: GTalk-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: Hangouts-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: OK-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
-Filename: {app}\Profiles\settings.ini; Section: SmileyAdd; Key: Yandex-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: clist-filename; String: uSkins\Smileys\_light\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: Standard-filename; String: uSkins\Smileys\_light\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: Tipper-filename; String: uSkins\Smileys\_light\kolobok\kolobok.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: AllProtoFacebook-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: AllProtoMRA-filename; String: uSkins\Smileys\_light\MRA\MRA.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: AllProtoMSN-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: AllProtoSkype-filename; String: uSkins\Smileys\_light\Skype\Skype.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: AllProtoTOX-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: AllProtoTwitter-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: AllProtoVKontakte-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: AllProtoWhatsApp-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: GMail-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: Google-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: GTalk-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: Hangouts-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: OK-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
+Filename: {#SettingsIni}; Section: SmileyAdd; Key: Yandex-filename; String: uSkins\Smileys\_light\emoji\emoji.msl; Flags: uninsdeleteentry; Check: {#LightSkin};
 
  ; Settings Page \ Check for updates \ CheckUpdates
-Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: UpdateOnStartup; String: b{code:SetBoolSetting|CheckUpdates}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: UpdateOnStartup; String: b{code:SetBoolSetting|CheckUpdates}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: UpdateOnStartup; String: b{code:SetBoolSetting|CheckUpdates}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: PluginUpdater; Key: UpdateOnStartup; String: b{code:SetBoolSetting|CheckUpdates}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: PluginUpdater; Key: UpdateOnStartup; String: b{code:SetBoolSetting|CheckUpdates}; Flags: uninsdeleteentry;
+Filename: {#AutoexecUpdateIni}; Section: PluginUpdater; Key: UpdateOnStartup; String: b{code:SetBoolSetting|CheckUpdates}; Flags: uninsdeleteentry; Check: IsUpdate;
  ; Settings Page \ Check for updates \ StableVersion
-Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: UpdateMode; String: b1; Flags: uninsdeleteentry; Check: IsSettingChecked('StableVersion');
-Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: UpdateMode; String: b1; Flags: uninsdeleteentry; Check: IsSettingChecked('StableVersion');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: UpdateMode; String: b1; Flags: uninsdeleteentry; Check: IsSettingChecked('StableVersion') and IsUpdate;
+Filename: {#SettingsIni}; Section: PluginUpdater; Key: UpdateMode; String: b1; Flags: uninsdeleteentry; Check: IsSettingChecked('StableVersion');
+Filename: {#UpdateIni}; Section: PluginUpdater; Key: UpdateMode; String: b1; Flags: uninsdeleteentry; Check: IsSettingChecked('StableVersion');
+Filename: {#AutoexecUpdateIni}; Section: PluginUpdater; Key: UpdateMode; String: b1; Flags: uninsdeleteentry; Check: IsSettingChecked('StableVersion') and IsUpdate;
  ; StableVersion & DontSwitchToStable
-Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b0; Flags: uninsdeleteentry; Check: IsSettingChecked('StableVersion');
-Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b0; Flags: uninsdeleteentry; Check: IsSettingChecked('StableVersion');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b0; Flags: uninsdeleteentry; Check: IsSettingChecked('StableVersion') and IsUpdate;
+Filename: {#SettingsIni}; Section: PluginUpdater; Key: DontSwitchToStable; String: b0; Flags: uninsdeleteentry; Check: IsSettingChecked('StableVersion');
+Filename: {#UpdateIni}; Section: PluginUpdater; Key: DontSwitchToStable; String: b0; Flags: uninsdeleteentry; Check: IsSettingChecked('StableVersion');
+Filename: {#AutoexecUpdateIni}; Section: PluginUpdater; Key: DontSwitchToStable; String: b0; Flags: uninsdeleteentry; Check: IsSettingChecked('StableVersion') and IsUpdate;
  ; Settings Page \ Check for updates \ DevelopmentVersion
-Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: UpdateMode; String: b2; Flags: uninsdeleteentry; Check: IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion');
-Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: UpdateMode; String: b2; Flags: uninsdeleteentry; Check: IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: UpdateMode; String: b2; Flags: uninsdeleteentry; Check: (IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion')) and IsUpdate;
+Filename: {#SettingsIni}; Section: PluginUpdater; Key: UpdateMode; String: b2; Flags: uninsdeleteentry; Check: IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion');
+Filename: {#UpdateIni}; Section: PluginUpdater; Key: UpdateMode; String: b2; Flags: uninsdeleteentry; Check: IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion');
+Filename: {#AutoexecUpdateIni}; Section: PluginUpdater; Key: UpdateMode; String: b2; Flags: uninsdeleteentry; Check: (IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion')) and IsUpdate;
  ; DevelopmentVersion & DontSwitchToStable
-Filename: {app}\Profiles\settings.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b1; Flags: uninsdeleteentry; Check: IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion');
-Filename: {app}\Profiles\update.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b1; Flags: uninsdeleteentry; Check: IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PluginUpdater; Key: DontSwitchToStable; String: b1; Flags: uninsdeleteentry; Check: (IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion')) and IsUpdate;
+Filename: {#SettingsIni}; Section: PluginUpdater; Key: DontSwitchToStable; String: b1; Flags: uninsdeleteentry; Check: IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion');
+Filename: {#UpdateIni}; Section: PluginUpdater; Key: DontSwitchToStable; String: b1; Flags: uninsdeleteentry; Check: IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion');
+Filename: {#AutoexecUpdateIni}; Section: PluginUpdater; Key: DontSwitchToStable; String: b1; Flags: uninsdeleteentry; Check: (IsSettingChecked('DevelopmentVersion') or not IsSettingChecked('StableVersion')) and IsUpdate;
 
  ; Settings Page \ Contact list \ OnTop
-Filename: {app}\Profiles\settings.ini; Section: CList; Key: OnTop; String: b{code:SetBoolSetting|OnTop}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: CList; Key: OnTop; String: b{code:SetBoolSetting|OnTop}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: CList; Key: OnTop; String: b{code:SetBoolSetting|OnTop}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: CList; Key: OnTop; String: b{code:SetBoolSetting|OnTop}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: CList; Key: OnTop; String: b{code:SetBoolSetting|OnTop}; Flags: uninsdeleteentry;
+Filename: {#AutoexecUpdateIni}; Section: CList; Key: OnTop; String: b{code:SetBoolSetting|OnTop}; Flags: uninsdeleteentry; Check: IsUpdate;
  ; Settings Page \ Contact list \ ViewModes
-Filename: {app}\Profiles\settings.ini; Section: CLUIFrames; Key: Visible5; String: b{code:SetBoolSetting|ViewModes}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: CLUIFrames; Key: Visible5; String: b{code:SetBoolSetting|ViewModes}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: CLUIFrames; Key: Visible5; String: b{code:SetBoolSetting|ViewModes}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: CLUIFrames; Key: Visible5; String: b{code:SetBoolSetting|ViewModes}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: CLUIFrames; Key: Visible5; String: b{code:SetBoolSetting|ViewModes}; Flags: uninsdeleteentry;
+Filename: {#AutoexecUpdateIni}; Section: CLUIFrames; Key: Visible5; String: b{code:SetBoolSetting|ViewModes}; Flags: uninsdeleteentry; Check: IsUpdate;
  ; Settings Page \ Contact list \ CompactMode
-Filename: {app}\Profiles\settings.ini; Section: CLC; Key: CompactMode; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: CList; Key: AlignLeftItemsToLeft; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: CList; Key: AlignRightItemsToRight; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: CLC; Key: CompactMode; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: CList; Key: AlignLeftItemsToLeft; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: CList; Key: AlignRightItemsToRight; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: CLC; Key: CompactMode; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: CList; Key: AlignLeftItemsToLeft; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: CList; Key: AlignRightItemsToRight; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: CLC; Key: CompactMode; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry;
+Filename: {#SettingsIni}; Section: CList; Key: AlignLeftItemsToLeft; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry;
+Filename: {#SettingsIni}; Section: CList; Key: AlignRightItemsToRight; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: CLC; Key: CompactMode; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: CList; Key: AlignLeftItemsToLeft; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: CList; Key: AlignRightItemsToRight; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry;
+Filename: {#AutoexecUpdateIni}; Section: CLC; Key: CompactMode; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: CList; Key: AlignLeftItemsToLeft; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: CList; Key: AlignRightItemsToRight; String: b{code:SetBoolSetting|CompactMode}; Flags: uninsdeleteentry; Check: IsUpdate;
  ; Settings Page \ Contact list \ UseSound
-Filename: {app}\Profiles\settings.ini; Section: Skin; Key: UseSound; String: b{code:SetBoolSetting|UseSound}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Skin; Key: UseSound; String: b{code:SetBoolSetting|UseSound}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Skin; Key: UseSound; String: b{code:SetBoolSetting|UseSound}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: Skin; Key: UseSound; String: b{code:SetBoolSetting|UseSound}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: Skin; Key: UseSound; String: b{code:SetBoolSetting|UseSound}; Flags: uninsdeleteentry;
+Filename: {#AutoexecUpdateIni}; Section: Skin; Key: UseSound; String: b{code:SetBoolSetting|UseSound}; Flags: uninsdeleteentry; Check: IsUpdate;
  ; UseSound for SplashScreen
-Filename: {app}\Profiles\settings.ini; Section: SplashScreen; Key: PlaySound; String: b{code:SetBoolSetting|UseSound}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: SplashScreen; Key: PlaySound; String: b{code:SetBoolSetting|UseSound}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SplashScreen; Key: PlaySound; String: b{code:SetBoolSetting|UseSound}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: SplashScreen; Key: PlaySound; String: b{code:SetBoolSetting|UseSound}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: SplashScreen; Key: PlaySound; String: b{code:SetBoolSetting|UseSound}; Flags: uninsdeleteentry;
+Filename: {#AutoexecUpdateIni}; Section: SplashScreen; Key: PlaySound; String: b{code:SetBoolSetting|UseSound}; Flags: uninsdeleteentry; Check: IsUpdate;
  ; Settings Page \ Contact list \ CLCNoVScrollBar
-Filename: {app}\Profiles\settings.ini; Section: CLC; Key: NoVScrollBar; String: b{code:SetBoolSetting|!CLCNoVScrollBar}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: CLC; Key: NoVScrollBar; String: b{code:SetBoolSetting|!CLCNoVScrollBar}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: CLC; Key: NoVScrollBar; String: b{code:SetBoolSetting|!CLCNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: CLC; Key: NoVScrollBar; String: b{code:SetBoolSetting|!CLCNoVScrollBar}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: CLC; Key: NoVScrollBar; String: b{code:SetBoolSetting|!CLCNoVScrollBar}; Flags: uninsdeleteentry;
+Filename: {#AutoexecUpdateIni}; Section: CLC; Key: NoVScrollBar; String: b{code:SetBoolSetting|!CLCNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
 
  ; Settings Page \ Message sessions \ Sending messages
-Filename: {app}\Profiles\settings.ini; Section: SkinHotKeys; Key: tabsrmm_send; String: w525; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendCtrlEnter');
-Filename: {app}\Profiles\settings.ini; Section: SkinHotKeys; Key: tabsrmm_send; String: w269; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendShiftEnter');
-Filename: {app}\Profiles\settings.ini; Section: SkinHotKeys; Key: tabsrmm_send; String: w13; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendEnter');
-Filename: {app}\Profiles\update.ini; Section: SkinHotKeys; Key: tabsrmm_send; String: w525; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendCtrlEnter');
-Filename: {app}\Profiles\update.ini; Section: SkinHotKeys; Key: tabsrmm_send; String: w269; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendShiftEnter');
-Filename: {app}\Profiles\update.ini; Section: SkinHotKeys; Key: tabsrmm_send; String: w13; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendEnter');
-Filename: {app}\Profiles\autoexec_update.ini; Section: SkinHotKeys; Key: tabsrmm_send; String: w525; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendCtrlEnter') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SkinHotKeys; Key: tabsrmm_send; String: w269; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendShiftEnter') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SkinHotKeys; Key: tabsrmm_send; String: w13; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendEnter') and IsUpdate;
+Filename: {#SettingsIni}; Section: SkinHotKeys; Key: tabsrmm_send; String: w525; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendCtrlEnter');
+Filename: {#SettingsIni}; Section: SkinHotKeys; Key: tabsrmm_send; String: w269; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendShiftEnter');
+Filename: {#SettingsIni}; Section: SkinHotKeys; Key: tabsrmm_send; String: w13; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendEnter');
+Filename: {#UpdateIni}; Section: SkinHotKeys; Key: tabsrmm_send; String: w525; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendCtrlEnter');
+Filename: {#UpdateIni}; Section: SkinHotKeys; Key: tabsrmm_send; String: w269; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendShiftEnter');
+Filename: {#UpdateIni}; Section: SkinHotKeys; Key: tabsrmm_send; String: w13; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendEnter');
+Filename: {#AutoexecUpdateIni}; Section: SkinHotKeys; Key: tabsrmm_send; String: w525; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendCtrlEnter') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: SkinHotKeys; Key: tabsrmm_send; String: w269; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendShiftEnter') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: SkinHotKeys; Key: tabsrmm_send; String: w13; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendEnter') and IsUpdate;
  ; Settings Page \ Message sessions \ AutoSizeInputArea... Ñombined with LocationTabsMessageWindow
  ; Settings Page \ Message sessions \ LogStatusChanges
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: logstatuschanges; String: b{code:SetBoolSetting|LogStatusChanges}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: logstatuschanges; String: b{code:SetBoolSetting|LogStatusChanges}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: logstatuschanges; String: b{code:SetBoolSetting|LogStatusChanges}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: logstatuschanges; String: b{code:SetBoolSetting|LogStatusChanges}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: logstatuschanges; String: b{code:SetBoolSetting|LogStatusChanges}; Flags: uninsdeleteentry;
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: logstatuschanges; String: b{code:SetBoolSetting|LogStatusChanges}; Flags: uninsdeleteentry; Check: IsUpdate;
  ; Settings Page \ Message sessions \ TypingNotification
-Filename: {app}\Profiles\settings.ini; Section: TypingNotify; Key: Disabled; String: b{code:SetBoolSetting|!TypingNotification}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: TypingNotify; Key: Disabled; String: b{code:SetBoolSetting|!TypingNotification}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: TypingNotify; Key: Disabled; String: b{code:SetBoolSetting|!TypingNotification}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: TypingNotify; Key: Disabled; String: b{code:SetBoolSetting|!TypingNotification}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: TypingNotify; Key: Disabled; String: b{code:SetBoolSetting|!TypingNotification}; Flags: uninsdeleteentry;
+Filename: {#AutoexecUpdateIni}; Section: TypingNotify; Key: Disabled; String: b{code:SetBoolSetting|!TypingNotification}; Flags: uninsdeleteentry; Check: IsUpdate;
  ; Settings Page \ Message sessions \ TabCaptionLow
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: TabCaption; String: uCaptionLow; Flags: uninsdeleteentry; Check: IsSettingChecked('TabCaptionLow') or not IsSettingChecked('TabCaptionHigh');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: TabCaption; String: uCaptionLow; Flags: uninsdeleteentry; Check: IsSettingChecked('TabCaptionLow') or not IsSettingChecked('TabCaptionHigh');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: TabCaption; String: uCaptionLow; Flags: uninsdeleteentry; Check: (IsSettingChecked('TabCaptionLow') or not IsSettingChecked('TabCaptionHigh')) and IsUpdate;
+Filename: {#SettingsIni}; Section: PackInfo; Key: TabCaption; String: uCaptionLow; Flags: uninsdeleteentry; Check: IsSettingChecked('TabCaptionLow') or not IsSettingChecked('TabCaptionHigh');
+Filename: {#UpdateIni}; Section: PackInfo; Key: TabCaption; String: uCaptionLow; Flags: uninsdeleteentry; Check: IsSettingChecked('TabCaptionLow') or not IsSettingChecked('TabCaptionHigh');
+Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: TabCaption; String: uCaptionLow; Flags: uninsdeleteentry; Check: (IsSettingChecked('TabCaptionLow') or not IsSettingChecked('TabCaptionHigh')) and IsUpdate;
  ; Settings Page \ Message sessions \ TabCaptionHigh
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: TabCaption; String: uCaptionHigh; Flags: uninsdeleteentry; Check: IsSettingChecked('TabCaptionHigh');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: TabCaption; String: uCaptionHigh; Flags: uninsdeleteentry; Check: IsSettingChecked('TabCaptionHigh');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: TabCaption; String: uCaptionHigh; Flags: uninsdeleteentry; Check: IsSettingChecked('TabCaptionHigh') and IsUpdate;
+Filename: {#SettingsIni}; Section: PackInfo; Key: TabCaption; String: uCaptionHigh; Flags: uninsdeleteentry; Check: IsSettingChecked('TabCaptionHigh');
+Filename: {#UpdateIni}; Section: PackInfo; Key: TabCaption; String: uCaptionHigh; Flags: uninsdeleteentry; Check: IsSettingChecked('TabCaptionHigh');
+Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: TabCaption; String: uCaptionHigh; Flags: uninsdeleteentry; Check: IsSettingChecked('TabCaptionHigh') and IsUpdate;
  ; Settings Page \ Message sessions \ TabSRMMNoVScrollBar
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: TabScrollBar; String: b{code:SetBoolSetting|TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: disableVScroll; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: HistoryPlusPlus; Key: NoLogScrollBar; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: TabScrollBar; String: b{code:SetBoolSetting|TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: disableVScroll; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: HistoryPlusPlus; Key: NoLogScrollBar; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: TabScrollBar; String: b{code:SetBoolSetting|TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: disableVScroll; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: HistoryPlusPlus; Key: NoLogScrollBar; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: PackInfo; Key: TabScrollBar; String: b{code:SetBoolSetting|TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: disableVScroll; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
+Filename: {#SettingsIni}; Section: HistoryPlusPlus; Key: NoLogScrollBar; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: PackInfo; Key: TabScrollBar; String: b{code:SetBoolSetting|TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: disableVScroll; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: HistoryPlusPlus; Key: NoLogScrollBar; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
+Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: TabScrollBar; String: b{code:SetBoolSetting|TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: disableVScroll; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: HistoryPlusPlus; Key: NoLogScrollBar; String: b{code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry; Check: IsUpdate;
  ; Settings Page \ Message sessions \ TabSRMMNoVScrollBar for TabSRMM Skin
 Filename: {app}\Skins\TabSRMM\Default_Miranda\Default_Miranda.tsk; Section: Global; Key: NoScrollbars; String: {code:SetBoolSetting|!TabSRMMNoVScrollBar}; Flags: uninsdeleteentry;
 #define public i 2
@@ -1484,76 +1297,76 @@ Filename: {app}\Skins\TabSRMM\{#theme[i]}\{#theme[i]}.tsk; Section: Global; Key:
 #for {i = 2; i < 33; i++} AddThemeTskNoScrollbars
 
  ; Settings Page \ Status \ DialogStatusMessages (NewAwaySys off)
-Filename: {app}\Profiles\settings.ini; Section: NewAwaySys; Key: DontPopDlg; String: w1022; Flags: uninsdeleteentry; Check: not IsSettingChecked('DialogStatusMessages');
-Filename: {app}\Profiles\update.ini; Section: NewAwaySys; Key: DontPopDlg; String: w1022; Flags: uninsdeleteentry; Check: not IsSettingChecked('DialogStatusMessages');
-Filename: {app}\Profiles\autoexec_update.ini; Section: NewAwaySys; Key: DontPopDlg; String: w1022; Flags: uninsdeleteentry; Check: not IsSettingChecked('DialogStatusMessages') and IsUpdate;
+Filename: {#SettingsIni}; Section: NewAwaySys; Key: DontPopDlg; String: w1022; Flags: uninsdeleteentry; Check: not IsSettingChecked('DialogStatusMessages');
+Filename: {#UpdateIni}; Section: NewAwaySys; Key: DontPopDlg; String: w1022; Flags: uninsdeleteentry; Check: not IsSettingChecked('DialogStatusMessages');
+Filename: {#AutoexecUpdateIni}; Section: NewAwaySys; Key: DontPopDlg; String: w1022; Flags: uninsdeleteentry; Check: not IsSettingChecked('DialogStatusMessages') and IsUpdate;
  ; Settings Page \ Status \ DialogStatusMessages (NewAwaySys on)
-Filename: {app}\Profiles\settings.ini; Section: NewAwaySys; Key: DontPopDlg; String: w0; Flags: uninsdeleteentry; Check: IsSettingChecked('DialogStatusMessages');
-Filename: {app}\Profiles\update.ini; Section: NewAwaySys; Key: DontPopDlg; String: w0; Flags: uninsdeleteentry; Check: IsSettingChecked('DialogStatusMessages');
-Filename: {app}\Profiles\autoexec_update.ini; Section: NewAwaySys; Key: DontPopDlg; String: w0; Flags: uninsdeleteentry; Check: IsSettingChecked('DialogStatusMessages') and IsUpdate;
+Filename: {#SettingsIni}; Section: NewAwaySys; Key: DontPopDlg; String: w0; Flags: uninsdeleteentry; Check: IsSettingChecked('DialogStatusMessages');
+Filename: {#UpdateIni}; Section: NewAwaySys; Key: DontPopDlg; String: w0; Flags: uninsdeleteentry; Check: IsSettingChecked('DialogStatusMessages');
+Filename: {#AutoexecUpdateIni}; Section: NewAwaySys; Key: DontPopDlg; String: w0; Flags: uninsdeleteentry; Check: IsSettingChecked('DialogStatusMessages') and IsUpdate;
  ; Settings Page \ Status \ DialogStatusMessages (SRAway)
-Filename: {app}\Profiles\settings.ini; Section: SRAway; Key: IdlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: SRAway; Key: OtpNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: SRAway; Key: OtlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: SRAway; Key: InvNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: SRAway; Key: FreeChatNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: SRAway; Key: DndNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: SRAway; Key: OccupiedNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: SRAway; Key: NaNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: SRAway; Key: AwayNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\settings.ini; Section: SRAway; Key: OnNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: SRAway; Key: IdlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: SRAway; Key: OtpNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: SRAway; Key: OtlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: SRAway; Key: InvNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: SRAway; Key: FreeChatNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: SRAway; Key: DndNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: SRAway; Key: OccupiedNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: SRAway; Key: NaNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: SRAway; Key: AwayNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: SRAway; Key: OnNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SRAway; Key: IdlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SRAway; Key: OtpNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SRAway; Key: OtlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SRAway; Key: InvNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SRAway; Key: FreeChatNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SRAway; Key: DndNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SRAway; Key: OccupiedNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SRAway; Key: NaNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SRAway; Key: AwayNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SRAway; Key: OnNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: SRAway; Key: IdlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
+Filename: {#SettingsIni}; Section: SRAway; Key: OtpNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
+Filename: {#SettingsIni}; Section: SRAway; Key: OtlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
+Filename: {#SettingsIni}; Section: SRAway; Key: InvNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
+Filename: {#SettingsIni}; Section: SRAway; Key: FreeChatNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
+Filename: {#SettingsIni}; Section: SRAway; Key: DndNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
+Filename: {#SettingsIni}; Section: SRAway; Key: OccupiedNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
+Filename: {#SettingsIni}; Section: SRAway; Key: NaNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
+Filename: {#SettingsIni}; Section: SRAway; Key: AwayNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
+Filename: {#SettingsIni}; Section: SRAway; Key: OnNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: SRAway; Key: IdlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: SRAway; Key: OtpNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: SRAway; Key: OtlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: SRAway; Key: InvNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: SRAway; Key: FreeChatNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: SRAway; Key: DndNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: SRAway; Key: OccupiedNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: SRAway; Key: NaNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: SRAway; Key: AwayNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: SRAway; Key: OnNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
+Filename: {#AutoexecUpdateIni}; Section: SRAway; Key: IdlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: SRAway; Key: OtpNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: SRAway; Key: OtlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: SRAway; Key: InvNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: SRAway; Key: FreeChatNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: SRAway; Key: DndNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: SRAway; Key: OccupiedNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: SRAway; Key: NaNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: SRAway; Key: AwayNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: SRAway; Key: OnNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
  ; Settings Page \ Status \ Autoreply
-Filename: {app}\Profiles\settings.ini; Section: NewAwaySys; Key: EnableReply; String: b{code:SetBoolSetting|Autoreply}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: NewAwaySys; Key: EnableReply; String: b{code:SetBoolSetting|Autoreply}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: NewAwaySys; Key: EnableReply; String: b{code:SetBoolSetting|Autoreply}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: NewAwaySys; Key: EnableReply; String: b{code:SetBoolSetting|Autoreply}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: NewAwaySys; Key: EnableReply; String: b{code:SetBoolSetting|Autoreply}; Flags: uninsdeleteentry;
+Filename: {#AutoexecUpdateIni}; Section: NewAwaySys; Key: EnableReply; String: b{code:SetBoolSetting|Autoreply}; Flags: uninsdeleteentry; Check: IsUpdate;
  ; Settings Page \ Status \ AutoAwayDetection off
-Filename: {app}\Profiles\settings.ini; Section: AdvancedAutoAway; Key: ALLPROTOS_OptionFlags; String: w52; Flags: uninsdeleteentry; Check: not IsSettingChecked('AutoAwayDetection');
-Filename: {app}\Profiles\update.ini; Section: AdvancedAutoAway; Key: ALLPROTOS_OptionFlags; String: w52; Flags: uninsdeleteentry; Check: not IsSettingChecked('AutoAwayDetection');
-Filename: {app}\Profiles\autoexec_update.ini; Section: AdvancedAutoAway; Key: ALLPROTOS_OptionFlags; String: w52; Flags: uninsdeleteentry; Check: not IsSettingChecked('AutoAwayDetection') and IsUpdate;
+Filename: {#SettingsIni}; Section: AdvancedAutoAway; Key: ALLPROTOS_OptionFlags; String: w52; Flags: uninsdeleteentry; Check: not IsSettingChecked('AutoAwayDetection');
+Filename: {#UpdateIni}; Section: AdvancedAutoAway; Key: ALLPROTOS_OptionFlags; String: w52; Flags: uninsdeleteentry; Check: not IsSettingChecked('AutoAwayDetection');
+Filename: {#AutoexecUpdateIni}; Section: AdvancedAutoAway; Key: ALLPROTOS_OptionFlags; String: w52; Flags: uninsdeleteentry; Check: not IsSettingChecked('AutoAwayDetection') and IsUpdate;
  ; Settings Page \ Status \ AutoAwayDetection on
-Filename: {app}\Profiles\settings.ini; Section: AdvancedAutoAway; Key: ALLPROTOS_OptionFlags; String: w183; Flags: uninsdeleteentry; Check: IsSettingChecked('AutoAwayDetection');
-Filename: {app}\Profiles\update.ini; Section: AdvancedAutoAway; Key: ALLPROTOS_OptionFlags; String: w183; Flags: uninsdeleteentry; Check: IsSettingChecked('AutoAwayDetection');
-Filename: {app}\Profiles\autoexec_update.ini; Section: AdvancedAutoAway; Key: ALLPROTOS_OptionFlags; String: w183; Flags: uninsdeleteentry; Check: IsSettingChecked('AutoAwayDetection') and IsUpdate;
+Filename: {#SettingsIni}; Section: AdvancedAutoAway; Key: ALLPROTOS_OptionFlags; String: w183; Flags: uninsdeleteentry; Check: IsSettingChecked('AutoAwayDetection');
+Filename: {#UpdateIni}; Section: AdvancedAutoAway; Key: ALLPROTOS_OptionFlags; String: w183; Flags: uninsdeleteentry; Check: IsSettingChecked('AutoAwayDetection');
+Filename: {#AutoexecUpdateIni}; Section: AdvancedAutoAway; Key: ALLPROTOS_OptionFlags; String: w183; Flags: uninsdeleteentry; Check: IsSettingChecked('AutoAwayDetection') and IsUpdate;
  ; Settings Page \ Status \ AutoIdleDetection IdleOnFullScr
-Filename: {app}\Profiles\settings.ini; Section: Idle; Key: IdleOnFullScr; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Idle; Key: IdleOnFullScr; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Idle; Key: IdleOnFullScr; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: Idle; Key: IdleOnFullScr; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: Idle; Key: IdleOnFullScr; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
+Filename: {#AutoexecUpdateIni}; Section: Idle; Key: IdleOnFullScr; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry; Check: IsUpdate;
  ; Settings Page \ Status \ AutoIdleDetection IdleOnLock
-Filename: {app}\Profiles\settings.ini; Section: Idle; Key: IdleOnLock; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Idle; Key: IdleOnLock; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Idle; Key: IdleOnLock; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: Idle; Key: IdleOnLock; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: Idle; Key: IdleOnLock; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
+Filename: {#AutoexecUpdateIni}; Section: Idle; Key: IdleOnLock; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry; Check: IsUpdate;
  ; Settings Page \ Status \ AutoIdleDetection IdleOnSaver
-Filename: {app}\Profiles\settings.ini; Section: Idle; Key: IdleOnSaver; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Idle; Key: IdleOnSaver; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Idle; Key: IdleOnSaver; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: Idle; Key: IdleOnSaver; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: Idle; Key: IdleOnSaver; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
+Filename: {#AutoexecUpdateIni}; Section: Idle; Key: IdleOnSaver; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry; Check: IsUpdate;
  ; Settings Page \ Status \ AutoIdleDetection IdleOnTerminalDisconnect
-Filename: {app}\Profiles\settings.ini; Section: Idle; Key: IdleOnTerminalDisconnect; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Idle; Key: IdleOnTerminalDisconnect; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Idle; Key: IdleOnTerminalDisconnect; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: Idle; Key: IdleOnTerminalDisconnect; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: Idle; Key: IdleOnTerminalDisconnect; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
+Filename: {#AutoexecUpdateIni}; Section: Idle; Key: IdleOnTerminalDisconnect; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry; Check: IsUpdate;
  ; Settings Page \ Status \ AutoIdleDetection UserIdleCheck
-Filename: {app}\Profiles\settings.ini; Section: Idle; Key: UserIdleCheck; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\update.ini; Section: Idle; Key: UserIdleCheck; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Idle; Key: UserIdleCheck; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: Idle; Key: UserIdleCheck; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
+Filename: {#UpdateIni}; Section: Idle; Key: UserIdleCheck; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry;
+Filename: {#AutoexecUpdateIni}; Section: Idle; Key: UserIdleCheck; String: b{code:SetBoolSetting|AutoIdleDetection}; Flags: uninsdeleteentry; Check: IsUpdate;
 
  ; Additional settings Page \ DialogFontSize
 Filename: {app}\UserSet\Fonts\Handwriting.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
@@ -1568,24 +1381,24 @@ Filename: {app}\UserSet\Fonts\Printing.ini; Section: TabSRMM_Fonts; Key: Font16S
 Filename: {app}\UserSet\Fonts\Printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
 Filename: {app}\UserSet\Fonts\Printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
 Filename: {app}\UserSet\Fonts\Printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
-Filename: {app}\Profiles\settings.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
-Filename: {app}\Profiles\settings.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
-Filename: {app}\Profiles\settings.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
-Filename: {app}\Profiles\settings.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
-Filename: {app}\Profiles\settings.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
-Filename: {app}\Profiles\settings.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
-Filename: {app}\Profiles\update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
-Filename: {app}\Profiles\update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
-Filename: {app}\Profiles\update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
-Filename: {app}\Profiles\update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
-Filename: {app}\Profiles\update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
-Filename: {app}\Profiles\update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
-Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5') and IsUpdate;
+Filename: {#SettingsIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
+Filename: {#SettingsIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
+Filename: {#SettingsIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
+Filename: {#SettingsIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
+Filename: {#SettingsIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
+Filename: {#SettingsIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
+Filename: {#UpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
+Filename: {#UpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
+Filename: {#UpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
+Filename: {#UpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
+Filename: {#UpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
+Filename: {#UpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
+Filename: {#AutoexecUpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5') and IsUpdate;
 #if AppSkinUp == "0"
 Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0') and not IsUpdate;
 Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1') and not IsUpdate;
@@ -1632,119 +1445,318 @@ Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Font
 #endsub
 #for {i = 2; i < 33; i++} AddCustomThemeIni
  ; Additional settings Page \ LoadHistorySize
-Filename: {app}\Profiles\settings.ini; Section: SRMsg; Key: LoadCount; String: w5; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1');
-Filename: {app}\Profiles\settings.ini; Section: SRMsg; Key: LoadCount; String: w10; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2');
-Filename: {app}\Profiles\settings.ini; Section: SRMsg; Key: LoadCount; String: w20; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,3');
-Filename: {app}\Profiles\settings.ini; Section: SRMsg; Key: LoadCount; String: w50; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,4');
-Filename: {app}\Profiles\settings.ini; Section: SRMsg; Key: LoadCount; String: w100; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,5');
-Filename: {app}\Profiles\settings.ini; Section: SRMsg; Key: LoadHistory; String: b0; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,0');
-Filename: {app}\Profiles\settings.ini; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1');
-Filename: {app}\Profiles\settings.ini; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2');
-Filename: {app}\Profiles\settings.ini; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,3');
-Filename: {app}\Profiles\settings.ini; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,4');
-Filename: {app}\Profiles\settings.ini; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,5');
-Filename: {app}\Profiles\update.ini; Section: SRMsg; Key: LoadCount; String: w5; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1');
-Filename: {app}\Profiles\update.ini; Section: SRMsg; Key: LoadCount; String: w10; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2');
-Filename: {app}\Profiles\update.ini; Section: SRMsg; Key: LoadCount; String: w20; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,3');
-Filename: {app}\Profiles\update.ini; Section: SRMsg; Key: LoadCount; String: w50; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,4');
-Filename: {app}\Profiles\update.ini; Section: SRMsg; Key: LoadCount; String: w100; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,5');
-Filename: {app}\Profiles\update.ini; Section: SRMsg; Key: LoadHistory; String: b0; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,0');
-Filename: {app}\Profiles\update.ini; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1');
-Filename: {app}\Profiles\update.ini; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2');
-Filename: {app}\Profiles\update.ini; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,3');
-Filename: {app}\Profiles\update.ini; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,4');
-Filename: {app}\Profiles\update.ini; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,5');
-Filename: {app}\Profiles\autoexec_update.ini; Section: SRMsg; Key: LoadCount; String: w5; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SRMsg; Key: LoadCount; String: w10; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SRMsg; Key: LoadCount; String: w20; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,3') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SRMsg; Key: LoadCount; String: w50; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,4') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SRMsg; Key: LoadCount; String: w100; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,5') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SRMsg; Key: LoadHistory; String: b0; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,0') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,3') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,4') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,5') and IsUpdate;
+Filename: {#SettingsIni}; Section: SRMsg; Key: LoadCount; String: w5; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1');
+Filename: {#SettingsIni}; Section: SRMsg; Key: LoadCount; String: w10; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2');
+Filename: {#SettingsIni}; Section: SRMsg; Key: LoadCount; String: w20; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,3');
+Filename: {#SettingsIni}; Section: SRMsg; Key: LoadCount; String: w50; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,4');
+Filename: {#SettingsIni}; Section: SRMsg; Key: LoadCount; String: w100; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,5');
+Filename: {#SettingsIni}; Section: SRMsg; Key: LoadHistory; String: b0; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,0');
+Filename: {#SettingsIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1');
+Filename: {#SettingsIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2');
+Filename: {#SettingsIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,3');
+Filename: {#SettingsIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,4');
+Filename: {#SettingsIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,5');
+Filename: {#UpdateIni}; Section: SRMsg; Key: LoadCount; String: w5; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1');
+Filename: {#UpdateIni}; Section: SRMsg; Key: LoadCount; String: w10; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2');
+Filename: {#UpdateIni}; Section: SRMsg; Key: LoadCount; String: w20; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,3');
+Filename: {#UpdateIni}; Section: SRMsg; Key: LoadCount; String: w50; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,4');
+Filename: {#UpdateIni}; Section: SRMsg; Key: LoadCount; String: w100; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,5');
+Filename: {#UpdateIni}; Section: SRMsg; Key: LoadHistory; String: b0; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,0');
+Filename: {#UpdateIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1');
+Filename: {#UpdateIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2');
+Filename: {#UpdateIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,3');
+Filename: {#UpdateIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,4');
+Filename: {#UpdateIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,5');
+Filename: {#AutoexecUpdateIni}; Section: SRMsg; Key: LoadCount; String: w5; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: SRMsg; Key: LoadCount; String: w10; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: SRMsg; Key: LoadCount; String: w20; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,3') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: SRMsg; Key: LoadCount; String: w50; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,4') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: SRMsg; Key: LoadCount; String: w100; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,5') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: SRMsg; Key: LoadHistory; String: b0; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,0') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,3') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,4') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,5') and IsUpdate;
  ; Additional settings Page \ LocationTabsMessageWindow & AutoSizeInputArea on
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1144541508; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570056; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570312; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1144541508; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570056; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570312; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1144541508; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570056; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570312; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and IsSettingChecked('AutoSizeInputArea');
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and IsSettingChecked('AutoSizeInputArea');
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1144541508; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and IsSettingChecked('AutoSizeInputArea');
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and IsSettingChecked('AutoSizeInputArea');
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and IsSettingChecked('AutoSizeInputArea');
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570056; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and IsSettingChecked('AutoSizeInputArea');
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and IsSettingChecked('AutoSizeInputArea');
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570312; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and IsSettingChecked('AutoSizeInputArea');
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and IsSettingChecked('AutoSizeInputArea');
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and IsSettingChecked('AutoSizeInputArea');
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1144541508; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and IsSettingChecked('AutoSizeInputArea');
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and IsSettingChecked('AutoSizeInputArea');
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and IsSettingChecked('AutoSizeInputArea');
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570056; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and IsSettingChecked('AutoSizeInputArea');
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and IsSettingChecked('AutoSizeInputArea');
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570312; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and IsSettingChecked('AutoSizeInputArea');
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1144541508; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570056; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570312; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
  ; Additional settings Page \ LocationTabsMessageWindow & AutoSizeInputArea off
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1144525124; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570056; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\settings.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570312; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1144525124; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570056; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\update.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570312; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1144525124; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570056; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {app}\Profiles\autoexec_update.ini; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570312; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and not IsSettingChecked('AutoSizeInputArea');
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and not IsSettingChecked('AutoSizeInputArea');
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1144525124; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and not IsSettingChecked('AutoSizeInputArea');
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and not IsSettingChecked('AutoSizeInputArea');
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea');
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570056; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea');
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea');
+Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570312; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea');
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and not IsSettingChecked('AutoSizeInputArea');
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and not IsSettingChecked('AutoSizeInputArea');
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1144525124; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and not IsSettingChecked('AutoSizeInputArea');
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and not IsSettingChecked('AutoSizeInputArea');
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea');
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570056; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea');
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea');
+Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570312; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea');
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1144525124; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570056; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570312; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
 
  ; Appearance Page \ IEView settings \ IEViewAnimation
-Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: Animation; String: b{code:SetBoolStyle|IEViewAnimation}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: Animation; String: b{code:SetBoolStyle|IEViewAnimation}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: Animation; String: b{code:SetBoolStyle|IEViewAnimation}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: IEView_Template; Key: Animation; String: b{code:SetBoolStyle|IEViewAnimation}; Flags: uninsdeleteentry; Components: Resources\IEView;
+Filename: {#UpdateIni}; Section: IEView_Template; Key: Animation; String: b{code:SetBoolStyle|IEViewAnimation}; Flags: uninsdeleteentry; Components: Resources\IEView;
+Filename: {#AutoexecUpdateIni}; Section: IEView_Template; Key: Animation; String: b{code:SetBoolStyle|IEViewAnimation}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
  ; Appearance Page \ IEView settings \ IEViewAvatar
-Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: Avatars; String: b{code:SetBoolStyle|IEViewAvatar}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: Avatars; String: b{code:SetBoolStyle|IEViewAvatar}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: Avatars; String: b{code:SetBoolStyle|IEViewAvatar}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: IEView_Template; Key: Avatars; String: b{code:SetBoolStyle|IEViewAvatar}; Flags: uninsdeleteentry; Components: Resources\IEView;
+Filename: {#UpdateIni}; Section: IEView_Template; Key: Avatars; String: b{code:SetBoolStyle|IEViewAvatar}; Flags: uninsdeleteentry; Components: Resources\IEView;
+Filename: {#AutoexecUpdateIni}; Section: IEView_Template; Key: Avatars; String: b{code:SetBoolStyle|IEViewAvatar}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
  ; Appearance Page \ IEView settings \ IEViewShortLink
-Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: ShortLinks; String: b{code:SetBoolStyle|IEViewShortLink}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: ShortLinks; String: b{code:SetBoolStyle|IEViewShortLink}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: ShortLinks; String: b{code:SetBoolStyle|IEViewShortLink}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: IEView_Template; Key: ShortLinks; String: b{code:SetBoolStyle|IEViewShortLink}; Flags: uninsdeleteentry; Components: Resources\IEView;
+Filename: {#UpdateIni}; Section: IEView_Template; Key: ShortLinks; String: b{code:SetBoolStyle|IEViewShortLink}; Flags: uninsdeleteentry; Components: Resources\IEView;
+Filename: {#AutoexecUpdateIni}; Section: IEView_Template; Key: ShortLinks; String: b{code:SetBoolStyle|IEViewShortLink}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
  ; Appearance Page \ IEView settings \ IEViewContextMenu
-Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: CustomContextMenu; String: b{code:SetBoolStyle|IEViewContextMenu}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: CustomContextMenu; String: b{code:SetBoolStyle|IEViewContextMenu}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: CustomContextMenu; String: b{code:SetBoolStyle|IEViewContextMenu}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: IEView_Template; Key: CustomContextMenu; String: b{code:SetBoolStyle|IEViewContextMenu}; Flags: uninsdeleteentry; Components: Resources\IEView;
+Filename: {#UpdateIni}; Section: IEView_Template; Key: CustomContextMenu; String: b{code:SetBoolStyle|IEViewContextMenu}; Flags: uninsdeleteentry; Components: Resources\IEView;
+Filename: {#AutoexecUpdateIni}; Section: IEView_Template; Key: CustomContextMenu; String: b{code:SetBoolStyle|IEViewContextMenu}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
  ; Appearance Page \ IEView settings \ IEViewScrollBar
-Filename: {app}\Profiles\settings.ini; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {app}\Profiles\update.ini; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {app}\Profiles\autoexec_update.ini; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
+Filename: {#SettingsIni}; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry; Components: Resources\IEView;
+Filename: {#UpdateIni}; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry; Components: Resources\IEView;
+Filename: {#AutoexecUpdateIni}; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
 
  ; Appearance Page \ Font \ FontHandwriting
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Font; String: uHandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Font; String: uHandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Font; String: uHandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting') and IsUpdate;
+Filename: {#SettingsIni}; Section: PackInfo; Key: Font; String: uHandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting');
+Filename: {#UpdateIni}; Section: PackInfo; Key: Font; String: uHandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting');
+Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uHandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting') and IsUpdate;
  ; Appearance Page \ Font \ FontPrinting
-Filename: {app}\Profiles\settings.ini; Section: PackInfo; Key: Font; String: uPrinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting');
-Filename: {app}\Profiles\update.ini; Section: PackInfo; Key: Font; String: uPrinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting');
-Filename: {app}\Profiles\autoexec_update.ini; Section: PackInfo; Key: Font; String: uPrinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting') and IsUpdate;
+Filename: {#SettingsIni}; Section: PackInfo; Key: Font; String: uPrinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting');
+Filename: {#UpdateIni}; Section: PackInfo; Key: Font; String: uPrinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting');
+Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uPrinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting') and IsUpdate;
+
+#define ProtocolQueue \
+  "Protocols\Pseudo\NewsAggregator=NewsAggregator," + \
+  "Protocols\Pseudo\WebView=WebView," + \
+  "Protocols\Pseudo\Weather=Weather," + \
+  "Protocols\Pseudo\GmailNotifier=GmailMNotifier," + \
+  "Protocols\Pseudo\YAMN=YAMN," + \
+  "Protocols\Pseudo\CurrencyRates=CurrencyRates," + \
+  "*MetaContacts=MetaContacts," + \
+  "Protocols\EmLanProto=EM_LAN_PROTO," + \
+  "Protocols\GG=GG," + \
+  "Protocols\ICQ\ICQ=ICQ," + \
+  "Protocols\ICQ\ICQ2=ICQ2," + \
+  "Protocols\ICQCorp=ICQCorp," + \
+  "Protocols\IRC=IRC," + \
+  "Protocols\Jabber\Jabber=Jabber," + \
+  "Protocols\Jabber\Jabberru=Jabberru," + \
+  "Protocols\Jabber\LJ=LJ," + \
+  "Protocols\ICQ\MRA=MRA," + \
+  "Protocols\ICQ\MRA2=MRA2," + \
+  "Protocols\Jabber\OK=OK," + \
+  "Protocols\Omegle=Omegle," + \
+  "Protocols\Sametime=Sametime," + \
+  "Protocols\Skype=Skype," + \
+  "Protocols\Steam=Steam," + \
+  "Protocols\Tox=Tox," + \
+  "Protocols\Twitter=Twitter," + \
+  "Protocols\VKontakte=VKontakte," + \
+  "Protocols\Jabber\XMPP=XMPP," + \
+  "Protocols\Pseudo\mRadio=mRadio," + \
+  "*CloudFile/Dropbox=Dropbox," + \
+  "*CloudFile/GDrive=GDrive," + \
+  "*CloudFile/OneDrive=OneDrive," + \
+  "*CloudFile/YandexDisk=YandexDisk"
+
+#sub CleanProtocolsEntries
+; Clean Protocols section in current ini-file
+Filename: {#CurrentIni}; Section: Protocols; Components: Protocols; Flags: uninsdeletesectionifempty; BeforeInstall: DeleteIniSection('Protocols', ExpandConstant('{#CurrentIni}'))
+#endsub
+
+#define public LocalProtocolQueue ""
+#sub AddProtocolEntries
+  #define private ProtocolEntry ""
+  #define private ProtocolCompName ""
+  #define private ProtocolCompValue ""
+  #define private ReadEntry \
+    (LocalProtocolQueue = Trim(LocalProtocolQueue)) != "" ? ( \
+      Local[0] = Pos(",", LocalProtocolQueue), \
+      ProtocolEntry = Trim(Copy(LocalProtocolQueue, 1, (Local[0] ? Local[0] - 1 : Len(LocalProtocolQueue)))), \
+      Local[1] = Pos("=", ProtocolEntry), \
+      ProtocolCompName = Trim(Copy(ProtocolEntry, 1, Local[1] - 1)), \
+      ProtocolCompValue = Trim(Copy(ProtocolEntry, Local[1] + 1)), \
+      Delete(LocalProtocolQueue, 1, (Local[0] ? Local[0] : Len(LocalProtocolQueue))) \
+    ) : void
+  #expr ReadEntry
+#emit '; ' + ProtocolCompName
+Filename: {#CurrentIni}; Section: Protocols; Key: {code:GetTempIndex|{#CurrentIni}}; String: s{#ProtocolCompValue}; Flags: uninsdeleteentry; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+Filename: {#CurrentIni}; Section: Protocols; Key: 2{code:GetTempIndex2|{#CurrentIni}}; String: d{code:GetTempIndex|{#CurrentIni}}; Flags: uninsdeleteentry; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+Filename: {#CurrentIni}; Section: Protocols; Key: 4{code:GetTempIndex2|{#CurrentIni}}; String: d1; Flags: uninsdeleteentry; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+Filename: {#CurrentIni}; Section: Protocols; Key: 6{code:GetTempIndex2|{#CurrentIni}}; String: d1; Flags: uninsdeleteentry; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+Filename: {#CurrentIni}; Section: Protocols; Key: 8{code:GetTempIndex2|{#CurrentIni}}; String: u{#ProtocolCompValue}; Flags: uninsdeleteentry; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+Filename: {#CurrentIni}; Section: __temp; Key: __count; String: {code:SetTempIndex|{#CurrentIni}}; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+#endsub
+
+#sub SetProtocolsCount
+; Set protocols count
+Filename: {#CurrentIni}; Section: Protocols; Key: ProtoCount; String: d{code:GetTempIndex|{#CurrentIni}}; Flags: uninsdeleteentry; AfterInstall: DeleteIniSection('__temp', ExpandConstant('{#CurrentIni}'));{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+#endsub
+
+#for {CurrentIni = SettingsIni, CleanProtocolsEntries, LocalProtocolQueue = ProtocolQueue; LocalProtocolQueue != ""; void} AddProtocolEntries
+#expr SetProtocolsCount
+#for {CurrentIni = UpdateIni, CleanProtocolsEntries, LocalProtocolQueue = ProtocolQueue; LocalProtocolQueue != ""; void} AddProtocolEntries
+#expr SetProtocolsCount
+#for {CurrentIni = AutoexecUpdateIni, CleanProtocolsEntries, LocalProtocolQueue = ProtocolQueue; LocalProtocolQueue != ""; void} AddProtocolEntries
+#expr SetProtocolsCount
+
+#define public CListGroup_Info \
+  "Protocols\Pseudo\NewsAggregator or " + \
+  "Protocols\Pseudo\WebView or " + \
+  "Protocols\Pseudo\Weather or " + \
+  "Protocols\Pseudo\GmailNotifier or " + \
+  "Protocols\Pseudo\YAMN or " + \
+  "Protocols\Pseudo\CurrencyRates"
+#define public CListGroup_Bots \
+  "Protocols\EmLanProto or " + \
+  "Protocols\GG or " + \
+  "Protocols\ICQ\ICQ or " + \
+  "Protocols\ICQ\ICQ2 or " + \
+  "Protocols\IRC or " + \
+  "Protocols\Jabber\Jabber or " + \
+  "Protocols\Jabber\Jabberru or " + \
+  "Protocols\Jabber\LJ or " + \
+  "Protocols\ICQ\MRA or " + \
+  "Protocols\ICQ\MRA2 or " + \
+  "Protocols\Jabber\OK or " + \
+  "Protocols\Omegle or " + \
+  "Protocols\Sametime or " + \
+  "Protocols\Skype or " + \
+  "Protocols\Steam or " + \
+  "Protocols\Tox or " + \
+  "Protocols\Twitter or " + \
+  "Protocols\VKontakte or " + \
+  "Protocols\Jabber\XMPP"
+#define public CListGroup_ChatRooms \
+  "Protocols\EmLanProto or " + \
+  "Protocols\GG or " + \
+  "Protocols\ICQ\ICQ or " + \
+  "Protocols\ICQ\ICQ2 or " + \
+  "Protocols\IRC or " + \
+  "Protocols\Jabber\Jabber or " + \
+  "Protocols\Jabber\Jabberru or " + \
+  "Protocols\Jabber\LJ or " + \
+  "Protocols\ICQ\MRA or " + \
+  "Protocols\ICQ\MRA2 or " + \
+  "Protocols\Jabber\OK or " + \
+  "Protocols\Omegle or " + \
+  "Protocols\Sametime or " + \
+  "Protocols\Skype or " + \
+  "Protocols\Steam or " + \
+  "Protocols\Tox or " + \
+  "Protocols\Twitter or " + \
+  "Protocols\VKontakte or " + \
+  "Protocols\Jabber\XMPP"
+#define public CListGroup_General \
+  "Protocols\EmLanProto or " + \
+  "Protocols\GG or " + \
+  "Protocols\ICQ\ICQ or " + \
+  "Protocols\ICQ\ICQ2 or " + \
+  "Protocols\IRC or " + \
+  "Protocols\Jabber\Jabber or " + \
+  "Protocols\Jabber\Jabberru or " + \
+  "Protocols\Jabber\LJ or " + \
+  "Protocols\ICQ\MRA or " + \
+  "Protocols\ICQ\MRA2 or " + \
+  "Protocols\Jabber\OK or " + \
+  "Protocols\Omegle or " + \
+  "Protocols\Sametime or " + \
+  "Protocols\Skype or " + \
+  "Protocols\Steam or " + \
+  "Protocols\Tox or " + \
+  "Protocols\Twitter or " + \
+  "Protocols\VKontakte or " + \
+  "Protocols\Jabber\XMPP"
+#define public CListGroup_PhoneContacts \
+  "Protocols\ICQ\ICQ or " + \
+  "Protocols\ICQ\ICQ2 or " + \
+  "Protocols\ICQ\MRA or " + \
+  "Protocols\ICQ\MRA2"
+#define public CListGroup_OK \
+  "Protocols\Jabber\OK"
+#define public CListGroup_Skype \
+  "Protocols\Skype"
+#define public CListGroup_Steam \
+  "Protocols\Steam"
+#define public CListGroup_Tox \
+  "Protocols\Tox"
+#define public CListGroup_Twitter \
+  "Protocols\Twitter"
+#define public CListGroup_VKontakte \
+  "Protocols\VKontakte"
+#define public CListGroup_mRadio \
+  "Protocols\Pseudo\mRadio"
+
+#sub AddCListGroupEntries
+; CListGroup: Info
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Info"; Flags: uninsdeleteentry; Components: {#CListGroup_Info};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+; CListGroup: MetaContacts
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|MetaContacts"; Flags: uninsdeleteentry;{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+; CListGroup: Bots
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Bots"; Flags: uninsdeleteentry; Components: {#CListGroup_Bots};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+; CListGroup: Chat rooms
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Chat rooms"; Flags: uninsdeleteentry; Components: {#CListGroup_ChatRooms};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+; CListGroup: General
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|General"; Flags: uninsdeleteentry; Components: {#CListGroup_General};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+; CListGroup: Phone Contacts
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Phone Contacts"; Flags: uninsdeleteentry; Components: {#CListGroup_PhoneContacts};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+; CListGroup: OK
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|OK"; Flags: uninsdeleteentry; Components: {#CListGroup_OK};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+; CListGroup: Skype
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Skype"; Flags: uninsdeleteentry; Components: {#CListGroup_Skype};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+; CListGroup: Steam
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Steam"; Flags: uninsdeleteentry; Components: {#CListGroup_Steam};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+; CListGroup: Tox
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Tox"; Flags: uninsdeleteentry; Components: {#CListGroup_Tox};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+; CListGroup: Twitter
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Twitter"; Flags: uninsdeleteentry; Components: {#CListGroup_Twitter};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+; CListGroup: VKontakte
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|VKontakte"; Flags: uninsdeleteentry; Components: {#CListGroup_VKontakte};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+; CListGroup: mRadio
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|mRadio"; Flags: uninsdeleteentry; Components: {#CListGroup_mRadio};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+; Delete temp counter
+Filename: {#CurrentIni}; Section: CListGroups; AfterInstall: DeleteIniSection('__temp', ExpandConstant('{#CurrentIni}'));{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+#endsub
+#expr CurrentIni = SettingsIni
+#expr AddCListGroupEntries
+#expr CurrentIni = UpdateIni
+#expr AddCListGroupEntries
+#expr CurrentIni = AutoexecUpdateIni
+#expr AddCListGroupEntries
 
 [UninstallDelete]
 Type: dirifempty; Name: {#SetupSetting("UninstallFilesDir")};
@@ -3594,6 +3606,34 @@ begin
   finally
     Free;
   end;
+end;
+
+function GetTempIndex(const AParam: string): string;
+begin
+  Result := ExpandConstant(Format('{ini:%s,__temp,__count|0}', [AParam]));
+end;
+
+function GetTempIndex2(const AParam: string): string;
+begin
+  Result := Format('%.2d', [StrToIntDef(GetTempIndex(AParam), 0)]);
+end;
+
+function SetTempIndex(const AParam: string): string;
+var
+  I: Integer;
+begin
+  I := StrToIntDef(GetTempIndex(AParam), 0) + 1;
+  Result := IntToStr(I);
+  SetIniInt('__temp', '__count', I, AParam);
+end;
+
+function SetTempIndex2(const AParam: string): string;
+var
+  I: Integer;
+begin
+  I := StrToIntDef(GetTempIndex(AParam), 0);
+  Result := IntToStr(I);
+  SetIniInt('__temp', '__count', I + 1, AParam);
 end;
 
 /////////////////////
