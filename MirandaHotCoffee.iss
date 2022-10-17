@@ -1593,11 +1593,6 @@ Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uPrinting;
   "*CloudFile/OneDrive=OneDrive," + \
   "*CloudFile/YandexDisk=YandexDisk"
 
-#sub CleanProtocolsEntries
-; Clean Protocols section in current ini-file
-Filename: {#CurrentIni}; Section: Protocols; Components: Protocols; Flags: uninsdeletesectionifempty; BeforeInstall: DeleteIniSection('Protocols', ExpandConstant('{#CurrentIni}'))
-#endsub
-
 #define public LocalProtocolQueue ""
 #sub AddProtocolEntries
   #define private ProtocolEntry ""
@@ -1627,11 +1622,11 @@ Filename: {#CurrentIni}; Section: __temp; Key: __count; String: {code:SetTempInd
 Filename: {#CurrentIni}; Section: Protocols; Key: ProtoCount; String: d{code:GetTempIndex|{#CurrentIni}}; Flags: uninsdeleteentry; AfterInstall: DeleteIniSection('__temp', ExpandConstant('{#CurrentIni}'));{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
 #endsub
 
-#for {CurrentIni = SettingsIni, CleanProtocolsEntries, LocalProtocolQueue = ProtocolQueue; LocalProtocolQueue != ""; void} AddProtocolEntries
+#for {CurrentIni = SettingsIni, LocalProtocolQueue = ProtocolQueue; LocalProtocolQueue != ""; void} AddProtocolEntries
 #expr SetProtocolsCount
-#for {CurrentIni = UpdateIni, CleanProtocolsEntries, LocalProtocolQueue = ProtocolQueue; LocalProtocolQueue != ""; void} AddProtocolEntries
+#for {CurrentIni = UpdateIni, LocalProtocolQueue = ProtocolQueue; LocalProtocolQueue != ""; void} AddProtocolEntries
 #expr SetProtocolsCount
-#for {CurrentIni = AutoexecUpdateIni, CleanProtocolsEntries, LocalProtocolQueue = ProtocolQueue; LocalProtocolQueue != ""; void} AddProtocolEntries
+#for {CurrentIni = AutoexecUpdateIni, LocalProtocolQueue = ProtocolQueue; LocalProtocolQueue != ""; void} AddProtocolEntries
 #expr SetProtocolsCount
 
 #define public CListGroup_Info \
