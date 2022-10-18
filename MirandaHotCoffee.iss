@@ -921,187 +921,38 @@ Root: HKCU; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\
 #define public UpdateIni "{app}\Profiles\update.ini"
 #define public AutoexecUpdateIni "{app}\Profiles\autoexec_update.ini"
 #define public CurrentIni ""
-
+#define public SettingsIniFile "settings.ini"
+#define public UpdateIniFile "update.ini"
+#define public AutoexecUpdateIniFile "autoexec_update.ini"
+#define public CurrentIniFile ""
  ; mirandaboot.ini
 Filename: {app}\mirandaboot.ini; Section: Database; Key: ProfileDir; String: {#AppProfile}\Profiles; Check: IsDefaultSetupType;
 Filename: {app}\mirandaboot.ini; Section: Language; Key: DefaultLanguage; String: langpack_russian.txt; Languages: ru;
- ; settings.ini
-Filename: {#SettingsIni}; Section: Langpack; Key: Current; String: udefault; Languages: en;
-Filename: {#SettingsIni}; Section: Langpack; Key: Current; String: ulangpack_russian.txt; Languages: ru;
-Filename: {#SettingsIni}; Section: PackInfo; Key: "Name"; String: u{#AppName};
-Filename: {#SettingsIni}; Section: PackInfo; Key: Version; String: u{#AppFullVer};
-Filename: {#SettingsIni}; Section: PackInfo; Key: MirVer; String: u{#AppMirFullVer};
-Filename: {#SettingsIni}; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@xmpp.ru;
-Filename: {#SettingsIni}; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")};
-Filename: {#SettingsIni}; Section: PackUpdater; Key: File_VersionURL; String: uhttps://miranda-ng.org/distr/packs/HotCoffee/.hotcoffee_{#AppArch}.ini;
-Filename: {#SettingsIni}; Section: PackUpdater; Key: File_1_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
-Filename: {#SettingsIni}; Section: PackUpdater; Key: File_30_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
-Filename: {#SettingsIni}; Section: PackUpdater; Key: File_35_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
-Filename: {#SettingsIni}; Section: CLUIFrames; Key: Height12; String: w{code:GetCLUIFrames|Height12};
-Filename: {#SettingsIni}; Section: CLUIFrames; Key: TBVisile12; String: b{code:GetCLUIFrames|TBVisile12};
-Filename: {#SettingsIni}; Section: CLUI; Key: EqualSections; String: b{code:GetCLUIFrames|EqualSections};
-Filename: {#SettingsIni}; Section: CLUI; Key: StatusBarProtosPerLine; String: b{code:GetCLUIFrames|StatusBarProtosPerLine};
- ; update.ini
-Filename: {#UpdateIni}; Section: Langpack; Key: Current; String: udefault; Languages: en;
-Filename: {#UpdateIni}; Section: Langpack; Key: Current; String: ulangpack_russian.txt; Languages: ru;
-Filename: {#UpdateIni}; Section: PackInfo; Key: "Name"; String: u{#AppName};
-Filename: {#UpdateIni}; Section: PackInfo; Key: Version; String: u{#AppFullVer};
-Filename: {#UpdateIni}; Section: PackInfo; Key: MirVer; String: u{#AppMirFullVer};
-Filename: {#UpdateIni}; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@xmpp.ru;
-Filename: {#UpdateIni}; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")};
-Filename: {#UpdateIni}; Section: PackUpdater; Key: File_VersionURL; String: uhttps://miranda-ng.org/distr/packs/HotCoffee/.hotcoffee_{#AppArch}.ini;
-Filename: {#UpdateIni}; Section: PackUpdater; Key: File_1_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
-Filename: {#UpdateIni}; Section: PackUpdater; Key: File_30_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
-Filename: {#UpdateIni}; Section: PackUpdater; Key: File_35_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};
-Filename: {#UpdateIni}; Section: CLUIFrames; Key: Height12; String: w{code:GetCLUIFrames|Height12};
-Filename: {#UpdateIni}; Section: CLUIFrames; Key: TBVisile12; String: b{code:GetCLUIFrames|TBVisile12};
-Filename: {#UpdateIni}; Section: CLUI; Key: EqualSections; String: b{code:GetCLUIFrames|EqualSections};
-Filename: {#UpdateIni}; Section: CLUI; Key: StatusBarProtosPerLine; String: b{code:GetCLUIFrames|StatusBarProtosPerLine};
- ; autoexec_update.ini
-Filename: {#AutoexecUpdateIni}; Section: Langpack; Key: Current; String: udefault; Languages: en; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: Langpack; Key: Current; String: ulangpack_russian.txt; Languages: ru; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: "Name"; String: u{#AppName}; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Version; String: u{#AppFullVer}; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: MirVer; String: u{#AppMirFullVer}; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@xmpp.ru; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")}; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: PackUpdater; Key: File_VersionURL; String: uhttps://miranda-ng.org/distr/packs/HotCoffee/.hotcoffee_{#AppArch}.ini; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: PackUpdater; Key: File_1_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")}; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: PackUpdater; Key: File_30_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")}; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: PackUpdater; Key: File_35_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")}; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: CLUIFrames; Key: Height12; String: w{code:GetCLUIFrames|Height12}; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: CLUIFrames; Key: TBVisile12; String: b{code:GetCLUIFrames|TBVisile12}; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: CLUI; Key: EqualSections; String: b{code:GetCLUIFrames|EqualSections}; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: CLUI; Key: StatusBarProtosPerLine; String: b{code:GetCLUIFrames|StatusBarProtosPerLine}; Check: IsUpdate;
 
- ; Protocols\Pseudo\NewsAggregator
-Filename: {#SettingsIni}; Section: NewsAggregator; Key: AM_BaseProto; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
-Filename: {#UpdateIni}; Section: NewsAggregator; Key: AM_BaseProto; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator;
-Filename: {#AutoexecUpdateIni}; Section: NewsAggregator; Key: AM_BaseProto; String: sNewsAggregator; Flags: uninsdeleteentry; Components: Protocols\Pseudo\NewsAggregator; Check: IsUpdate;
- ; Protocols\Pseudo\WebView
-Filename: {#SettingsIni}; Section: WebView; Key: AM_BaseProto; String: sWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
-Filename: {#UpdateIni}; Section: WebView; Key: AM_BaseProto; String: sWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView;
-Filename: {#AutoexecUpdateIni}; Section: WebView; Key: AM_BaseProto; String: sWebView; Flags: uninsdeleteentry; Components: Protocols\Pseudo\WebView; Check: IsUpdate;
- ; Protocols\Pseudo\Weather
-Filename: {#SettingsIni}; Section: Weather; Key: AM_BaseProto; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
-Filename: {#UpdateIni}; Section: Weather; Key: AM_BaseProto; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather;
-Filename: {#AutoexecUpdateIni}; Section: Weather; Key: AM_BaseProto; String: sWeather; Flags: uninsdeleteentry; Components: Protocols\Pseudo\Weather; Check: IsUpdate;
- ; Protocols\Pseudo\GmailNotifier
-Filename: {#SettingsIni}; Section: GmailMNotifier; Key: AM_BaseProto; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
-Filename: {#UpdateIni}; Section: GmailMNotifier; Key: AM_BaseProto; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier;
-Filename: {#AutoexecUpdateIni}; Section: GmailMNotifier; Key: AM_BaseProto; String: sGmailMNotifier; Flags: uninsdeleteentry; Components: Protocols\Pseudo\GmailNotifier; Check: IsUpdate;
- ; Protocols\Pseudo\YAMN
-Filename: {#SettingsIni}; Section: YAMN; Key: AM_BaseProto; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
-Filename: {#UpdateIni}; Section: YAMN; Key: AM_BaseProto; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN;
-Filename: {#AutoexecUpdateIni}; Section: YAMN; Key: AM_BaseProto; String: sYAMN; Flags: uninsdeleteentry; Components: Protocols\Pseudo\YAMN; Check: IsUpdate;
- ; Protocols\Pseudo\CurrencyRates
-Filename: {#SettingsIni}; Section: CurrencyRates; Key: AM_BaseProto; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
-Filename: {#UpdateIni}; Section: CurrencyRates; Key: AM_BaseProto; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates;
-Filename: {#AutoexecUpdateIni}; Section: CurrencyRates; Key: AM_BaseProto; String: sCurrencyRates; Flags: uninsdeleteentry; Components: Protocols\Pseudo\CurrencyRates; Check: IsUpdate;
- ; MetaContacts
-Filename: {#SettingsIni}; Section: MetaContacts; Key: AM_BaseProto; String: sMetaContacts; Flags: uninsdeleteentry;
-Filename: {#UpdateIni}; Section: MetaContacts; Key: AM_BaseProto; String: sMetaContacts; Flags: uninsdeleteentry;
-Filename: {#AutoexecUpdateIni}; Section: MetaContacts; Key: AM_BaseProto; String: sMetaContacts; Flags: uninsdeleteentry; Check: IsUpdate;
- ; Protocols\EmLanProto
-Filename: {#SettingsIni}; Section: EM_LAN_PROTO; Key: AM_BaseProto; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
-Filename: {#UpdateIni}; Section: EM_LAN_PROTO; Key: AM_BaseProto; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto;
-Filename: {#AutoexecUpdateIni}; Section: EM_LAN_PROTO; Key: AM_BaseProto; String: sEM_LAN_PROTO; Flags: uninsdeleteentry; Components: Protocols\EmLanProto; Check: IsUpdate;
- ; Protocols\GG
-Filename: {#SettingsIni}; Section: GG; Key: AM_BaseProto; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG;
-Filename: {#UpdateIni}; Section: GG; Key: AM_BaseProto; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG;
-Filename: {#AutoexecUpdateIni}; Section: GG; Key: AM_BaseProto; String: sGG; Flags: uninsdeleteentry; Components: Protocols\GG; Check: IsUpdate;
- ; Protocols\ICQ\ICQ
-Filename: {#SettingsIni}; Section: ICQ; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
-Filename: {#UpdateIni}; Section: ICQ; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ;
-Filename: {#AutoexecUpdateIni}; Section: ICQ; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ; Check: IsUpdate;
- ; Protocols\ICQ\ICQ2
-Filename: {#SettingsIni}; Section: ICQ2; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2;
-Filename: {#UpdateIni}; Section: ICQ2; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2;
-Filename: {#AutoexecUpdateIni}; Section: ICQ2; Key: AM_BaseProto; String: sICQ; Flags: uninsdeleteentry; Components: Protocols\ICQ\ICQ2; Check: IsUpdate;
- ; Protocols\ICQCorp
-Filename: {#SettingsIni}; Section: ICQCorp; Key: AM_BaseProto; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp;
-Filename: {#UpdateIni}; Section: ICQCorp; Key: AM_BaseProto; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp;
-Filename: {#AutoexecUpdateIni}; Section: ICQCorp; Key: AM_BaseProto; String: sICQCorp; Flags: uninsdeleteentry; Components: Protocols\ICQCorp; Check: IsUpdate;
- ; Protocols\IRC
-Filename: {#SettingsIni}; Section: IRC; Key: AM_BaseProto; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC;
-Filename: {#UpdateIni}; Section: IRC; Key: AM_BaseProto; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC;
-Filename: {#AutoexecUpdateIni}; Section: IRC; Key: AM_BaseProto; String: sIRC; Flags: uninsdeleteentry; Components: Protocols\IRC; Check: IsUpdate;
- ; Protocols\Jabber\Jabber
-Filename: {#SettingsIni}; Section: Jabber; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber;
-Filename: {#UpdateIni}; Section: Jabber; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber;
-Filename: {#AutoexecUpdateIni}; Section: Jabber; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabber; Check: IsUpdate;
- ; Protocols\Jabber\Jabberru
-Filename: {#SettingsIni}; Section: Jabberru; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
-Filename: {#UpdateIni}; Section: Jabberru; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru;
-Filename: {#AutoexecUpdateIni}; Section: Jabberru; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\Jabberru; Check: IsUpdate;
- ; Protocols\Jabber\LJ
-Filename: {#SettingsIni}; Section: LJ; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ;
-Filename: {#UpdateIni}; Section: LJ; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ;
-Filename: {#AutoexecUpdateIni}; Section: LJ; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\LJ; Check: IsUpdate;
- ; Protocols\ICQ\MRA
-Filename: {#SettingsIni}; Section: MRA; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
-Filename: {#UpdateIni}; Section: MRA; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA;
-Filename: {#AutoexecUpdateIni}; Section: MRA; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA; Check: IsUpdate;
- ; Protocols\ICQ\MRA2
-Filename: {#SettingsIni}; Section: MRA2; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2;
-Filename: {#UpdateIni}; Section: MRA2; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2;
-Filename: {#AutoexecUpdateIni}; Section: MRA2; Key: AM_BaseProto; String: sMRA; Flags: uninsdeleteentry; Components: Protocols\ICQ\MRA2; Check: IsUpdate;
- ; Protocols\Jabber\OK
-Filename: {#SettingsIni}; Section: OK; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
-Filename: {#UpdateIni}; Section: OK; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK;
-Filename: {#AutoexecUpdateIni}; Section: OK; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\OK; Check: IsUpdate;
- ; Protocols\Omegle
-Filename: {#SettingsIni}; Section: Omegle; Key: AM_BaseProto; String: sOmegle; Flags: uninsdeleteentry; Components: Protocols\Omegle;
-Filename: {#UpdateIni}; Section: Omegle; Key: AM_BaseProto; String: sOmegle; Flags: uninsdeleteentry; Components: Protocols\Omegle;
-Filename: {#AutoexecUpdateIni}; Section: Omegle; Key: AM_BaseProto; String: sOmegle; Flags: uninsdeleteentry; Components: Protocols\Omegle; Check: IsUpdate;
- ; Protocols\Sametime
-Filename: {#SettingsIni}; Section: Sametime; Key: AM_BaseProto; String: sSametime; Flags: uninsdeleteentry; Components: Protocols\Sametime;
-Filename: {#UpdateIni}; Section: Sametime; Key: AM_BaseProto; String: sSametime; Flags: uninsdeleteentry; Components: Protocols\Sametime;
-Filename: {#AutoexecUpdateIni}; Section: Sametime; Key: AM_BaseProto; String: sSametime; Flags: uninsdeleteentry; Components: Protocols\Sametime; Check: IsUpdate;
- ; Protocols\Skype
-Filename: {#SettingsIni}; Section: Skype; Key: AM_BaseProto; String: sSKYPE; Flags: uninsdeleteentry; Components: Protocols\Skype;
-Filename: {#UpdateIni}; Section: Skype; Key: AM_BaseProto; String: sSKYPE; Flags: uninsdeleteentry; Components: Protocols\Skype;
-Filename: {#AutoexecUpdateIni}; Section: Skype; Key: AM_BaseProto; String: sSKYPE; Flags: uninsdeleteentry; Components: Protocols\Skype; Check: IsUpdate;
- ; Protocols\Steam
-Filename: {#SettingsIni}; Section: Steam; Key: AM_BaseProto; String: sSTEAM; Flags: uninsdeleteentry; Components: Protocols\Steam;
-Filename: {#UpdateIni}; Section: Steam; Key: AM_BaseProto; String: sSTEAM; Flags: uninsdeleteentry; Components: Protocols\Steam;
-Filename: {#AutoexecUpdateIni}; Section: Steam; Key: AM_BaseProto; String: sSTEAM; Flags: uninsdeleteentry; Components: Protocols\Steam; Check: IsUpdate;
- ; Protocols\Tox
-Filename: {#SettingsIni}; Section: TOX; Key: AM_BaseProto; String: sTOX; Flags: uninsdeleteentry; Components: Protocols\Tox;
-Filename: {#UpdateIni}; Section: TOX; Key: AM_BaseProto; String: sTOX; Flags: uninsdeleteentry; Components: Protocols\Tox;
-Filename: {#AutoexecUpdateIni}; Section: TOX; Key: AM_BaseProto; String: sTOX; Flags: uninsdeleteentry; Components: Protocols\Tox; Check: IsUpdate;
- ; Protocols\Twitter
-Filename: {#SettingsIni}; Section: Twitter; Key: AM_BaseProto; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter;
-Filename: {#UpdateIni}; Section: Twitter; Key: AM_BaseProto; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter;
-Filename: {#AutoexecUpdateIni}; Section: Twitter; Key: AM_BaseProto; String: sTwitter; Flags: uninsdeleteentry; Components: Protocols\Twitter; Check: IsUpdate;
- ; Protocols\VKontakte
-Filename: {#SettingsIni}; Section: VKontakte; Key: AM_BaseProto; String: sVKontakte; Flags: uninsdeleteentry; Components: Protocols\VKontakte;
-Filename: {#UpdateIni}; Section: VKontakte; Key: AM_BaseProto; String: sVKontakte; Flags: uninsdeleteentry; Components: Protocols\VKontakte;
-Filename: {#AutoexecUpdateIni}; Section: VKontakte; Key: AM_BaseProto; String: sVKontakte; Flags: uninsdeleteentry; Components: Protocols\VKontakte; Check: IsUpdate;
- ; Protocols\Jabber\XMPP
-Filename: {#SettingsIni}; Section: XMPP; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
-Filename: {#UpdateIni}; Section: XMPP; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP;
-Filename: {#AutoexecUpdateIni}; Section: XMPP; Key: AM_BaseProto; String: sJABBER; Flags: uninsdeleteentry; Components: Protocols\Jabber\XMPP; Check: IsUpdate;
- ; Protocols\Pseudo\mRadio
-Filename: {#SettingsIni}; Section: mRadio; Key: AM_BaseProto; String: smRadio; Flags: uninsdeleteentry; Components: Protocols\Pseudo\mRadio;
-Filename: {#UpdateIni}; Section: mRadio; Key: AM_BaseProto; String: smRadio; Flags: uninsdeleteentry; Components: Protocols\Pseudo\mRadio;
-Filename: {#AutoexecUpdateIni}; Section: mRadio; Key: AM_BaseProto; String: smRadio; Flags: uninsdeleteentry; Components: Protocols\Pseudo\mRadio; Check: IsUpdate;
- ; CloudFile/Dropbox
-Filename: {#SettingsIni}; Section: Dropbox; Key: AM_BaseProto; String: sCloudFile/Dropbox; Flags: uninsdeleteentry;
-Filename: {#UpdateIni}; Section: Dropbox; Key: AM_BaseProto; String: sCloudFile/Dropbox; Flags: uninsdeleteentry;
-Filename: {#AutoexecUpdateIni}; Section: Dropbox; Key: AM_BaseProto; String: sCloudFile/Dropbox; Flags: uninsdeleteentry; Check: IsUpdate;
- ; CloudFile/GDrive
-Filename: {#SettingsIni}; Section: GDrive; Key: AM_BaseProto; String: sCloudFile/GDrive; Flags: uninsdeleteentry;
-Filename: {#UpdateIni}; Section: GDrive; Key: AM_BaseProto; String: sCloudFile/GDrive; Flags: uninsdeleteentry;
-Filename: {#AutoexecUpdateIni}; Section: GDrive; Key: AM_BaseProto; String: sCloudFile/GDrive; Flags: uninsdeleteentry; Check: IsUpdate;
- ; CloudFile/OneDrive
-Filename: {#SettingsIni}; Section: OneDrive; Key: AM_BaseProto; String: sCloudFile/OneDrive; Flags: uninsdeleteentry;
-Filename: {#UpdateIni}; Section: OneDrive; Key: AM_BaseProto; String: sCloudFile/OneDrive; Flags: uninsdeleteentry;
-Filename: {#AutoexecUpdateIni}; Section: OneDrive; Key: AM_BaseProto; String: sCloudFile/OneDrive; Flags: uninsdeleteentry; Check: IsUpdate;
- ; CloudFile/YandexDisk
-Filename: {#SettingsIni}; Section: YandexDisk; Key: AM_BaseProto; String: sCloudFile/YandexDisk; Flags: uninsdeleteentry;
-Filename: {#UpdateIni}; Section: YandexDisk; Key: AM_BaseProto; String: sCloudFile/YandexDisk; Flags: uninsdeleteentry;
-Filename: {#AutoexecUpdateIni}; Section: YandexDisk; Key: AM_BaseProto; String: sCloudFile/YandexDisk; Flags: uninsdeleteentry; Check: IsUpdate;
+#sub ConfigIniFile
+#emit ' ; ' + CurrentIniFile
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: Langpack; Key: Current; String: udefault; Languages: en; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: Langpack; Key: Current; String: ulangpack_russian.txt; Languages: ru; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackInfo; Key: "Name"; String: u{#AppName}; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackInfo; Key: Version; String: u{#AppFullVer}; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackInfo; Key: MirVer; String: u{#AppMirFullVer}; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@xmpp.ru; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")}; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackUpdater; Key: File_VersionURL; String: uhttps://miranda-ng.org/distr/packs/HotCoffee/.hotcoffee_{#AppArch}.ini; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackUpdater; Key: File_1_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")}; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackUpdater; Key: File_30_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")}; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackUpdater; Key: File_35_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")}; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: CLUIFrames; Key: Height12; String: w{code:GetCLUIFrames|Height12}; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: CLUIFrames; Key: TBVisile12; String: b{code:GetCLUIFrames|TBVisile12}; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: CLUI; Key: EqualSections; String: b{code:GetCLUIFrames|EqualSections}; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: CLUI; Key: StatusBarProtosPerLine; String: b{code:GetCLUIFrames|StatusBarProtosPerLine}; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
+#endsub
+#expr CurrentIniFile = SettingsIniFile
+#expr ConfigIniFile
+#expr CurrentIniFile = UpdateIniFile
+#expr ConfigIniFile
+#expr CurrentIniFile = AutoexecUpdateIniFile
+#expr ConfigIniFile
 
  ; Plugins\NewXstatusNotify
 Filename: {#SettingsIni}; Section: Ignore; Key: Default1; String: d0; Flags: uninsdeleteentry; Components: Plugins\NewXstatusNotify;
@@ -1119,11 +970,11 @@ Filename: {#SettingsIni}; Section: UserInfoEx; Key: RemindEnabled; String: b2; F
 Filename: {#UpdateIni}; Section: UserInfoEx; Key: RemindEnabled; String: b2; Flags: uninsdeleteentry; Components: Plugins\WhenWasIt or (Plugins\UInfoEx and Plugins\WhenWasIt);
 Filename: {#AutoexecUpdateIni}; Section: UserInfoEx; Key: RemindEnabled; String: b2; Flags: uninsdeleteentry; Components: Plugins\WhenWasIt or (Plugins\UInfoEx and Plugins\WhenWasIt); Check: IsUpdate;
 
-; Resources\PopupPlus Popup - on
+ ; Resources\PopupPlus Popup - on
 Filename: {#SettingsIni}; Section: Popup; Key: ModuleIsEnabled; String: b1; Flags: uninsdeleteentry; Components: Resources\PopupPlus;
 Filename: {#UpdateIni}; Section: Popup; Key: ModuleIsEnabled; String: b1; Flags: uninsdeleteentry; Components: Resources\PopupPlus;
 Filename: {#AutoexecUpdateIni}; Section: Popup; Key: ModuleIsEnabled; String: b1; Flags: uninsdeleteentry; Components: Resources\PopupPlus; Check: IsUpdate;
-; Resources\PopupPlus Popup - off
+ ; Resources\PopupPlus Popup - off
 Filename: {#SettingsIni}; Section: Popup; Key: ModuleIsEnabled; String: b0; Flags: uninsdeleteentry; Components: not Resources\PopupPlus;
 Filename: {#UpdateIni}; Section: Popup; Key: ModuleIsEnabled; String: b0; Flags: uninsdeleteentry; Components: not Resources\PopupPlus;
 Filename: {#AutoexecUpdateIni}; Section: Popup; Key: ModuleIsEnabled; String: b0; Flags: uninsdeleteentry; Components: not Resources\PopupPlus; Check: IsUpdate;
@@ -1155,9 +1006,9 @@ Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: default_hpp; String: b1; Flags:
 Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: default_ieview; String: b0; Flags: uninsdeleteentry; Components: not Resources\IEView and Plugins\HistoryPP; Check: IsUpdate;
 Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: default_hpp; String: b1; Flags: uninsdeleteentry; Components: not Resources\IEView and Plugins\HistoryPP; Check: IsUpdate;
 
+ ; Write the default theme to ini
 #define public i 0
 #sub AddThemeIni
- ; Write the default theme to ini
 Filename: {#SettingsIni}; Section: PackInfo; Key: Skin; String: u{#theme[i]}; Flags: uninsdeleteentry; Check: IsStyleChecked('Skin_{#theme[i]}');
 #endsub
 #for {i = 0; i < 33; i++} AddThemeIni
@@ -1305,36 +1156,24 @@ Filename: {#SettingsIni}; Section: NewAwaySys; Key: DontPopDlg; String: w0; Flag
 Filename: {#UpdateIni}; Section: NewAwaySys; Key: DontPopDlg; String: w0; Flags: uninsdeleteentry; Check: IsSettingChecked('DialogStatusMessages');
 Filename: {#AutoexecUpdateIni}; Section: NewAwaySys; Key: DontPopDlg; String: w0; Flags: uninsdeleteentry; Check: IsSettingChecked('DialogStatusMessages') and IsUpdate;
  ; Settings Page \ Status \ DialogStatusMessages (SRAway)
-Filename: {#SettingsIni}; Section: SRAway; Key: IdlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {#SettingsIni}; Section: SRAway; Key: OtpNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {#SettingsIni}; Section: SRAway; Key: OtlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {#SettingsIni}; Section: SRAway; Key: InvNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {#SettingsIni}; Section: SRAway; Key: FreeChatNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {#SettingsIni}; Section: SRAway; Key: DndNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {#SettingsIni}; Section: SRAway; Key: OccupiedNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {#SettingsIni}; Section: SRAway; Key: NaNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {#SettingsIni}; Section: SRAway; Key: AwayNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {#SettingsIni}; Section: SRAway; Key: OnNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {#UpdateIni}; Section: SRAway; Key: IdlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {#UpdateIni}; Section: SRAway; Key: OtpNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {#UpdateIni}; Section: SRAway; Key: OtlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {#UpdateIni}; Section: SRAway; Key: InvNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {#UpdateIni}; Section: SRAway; Key: FreeChatNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {#UpdateIni}; Section: SRAway; Key: DndNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {#UpdateIni}; Section: SRAway; Key: OccupiedNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {#UpdateIni}; Section: SRAway; Key: NaNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {#UpdateIni}; Section: SRAway; Key: AwayNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {#UpdateIni}; Section: SRAway; Key: OnNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;
-Filename: {#AutoexecUpdateIni}; Section: SRAway; Key: IdlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: SRAway; Key: OtpNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: SRAway; Key: OtlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: SRAway; Key: InvNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: SRAway; Key: FreeChatNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: SRAway; Key: DndNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: SRAway; Key: OccupiedNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: SRAway; Key: NaNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: SRAway; Key: AwayNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: SRAway; Key: OnNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; Check: IsUpdate;
+#sub SetIniSRAway
+Filename: {#CurrentIni}; Section: SRAway; Key: IdlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRAway; Key: OtpNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRAway; Key: OtlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRAway; Key: InvNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRAway; Key: FreeChatNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRAway; Key: DndNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRAway; Key: OccupiedNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRAway; Key: NaNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRAway; Key: AwayNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRAway; Key: OnNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+#endsub
+#expr CurrentIni = SettingsIni
+#expr SetIniSRAway
+#expr CurrentIni = UpdateIni
+#expr SetIniSRAway
+#expr CurrentIni = AutoexecUpdateIni
+#expr SetIniSRAway
  ; Settings Page \ Status \ Autoreply
 Filename: {#SettingsIni}; Section: NewAwaySys; Key: EnableReply; String: b{code:SetBoolSetting|Autoreply}; Flags: uninsdeleteentry;
 Filename: {#UpdateIni}; Section: NewAwaySys; Key: EnableReply; String: b{code:SetBoolSetting|Autoreply}; Flags: uninsdeleteentry;
@@ -1381,24 +1220,21 @@ Filename: {app}\UserSet\Fonts\Printing.ini; Section: TabSRMM_Fonts; Key: Font16S
 Filename: {app}\UserSet\Fonts\Printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
 Filename: {app}\UserSet\Fonts\Printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
 Filename: {app}\UserSet\Fonts\Printing.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
-Filename: {#SettingsIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
-Filename: {#SettingsIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
-Filename: {#SettingsIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
-Filename: {#SettingsIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
-Filename: {#SettingsIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
-Filename: {#SettingsIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
-Filename: {#UpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
-Filename: {#UpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
-Filename: {#UpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
-Filename: {#UpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
-Filename: {#UpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
-Filename: {#UpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
-Filename: {#AutoexecUpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5') and IsUpdate;
+#sub SetIniDialogFontSize
+Filename: {#CurrentIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+#endsub
+#expr CurrentIni = SettingsIni
+#expr SetIniDialogFontSize
+#expr CurrentIni = UpdateIni
+#expr SetIniDialogFontSize
+#expr CurrentIni = AutoexecUpdateIni
+#expr SetIniDialogFontSize
+ ; DialogFontSize write to autoexec theme.ini
 #if AppSkinUp == "0"
 Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0') and not IsUpdate;
 Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1') and not IsUpdate;
@@ -1445,89 +1281,59 @@ Filename: {app}\Skins\Modern contact list\{#theme[i]}.msf; Section: TabSRMM_Font
 #endsub
 #for {i = 2; i < 33; i++} AddCustomThemeIni
  ; Additional settings Page \ LoadHistorySize
-Filename: {#SettingsIni}; Section: SRMsg; Key: LoadCount; String: w5; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1');
-Filename: {#SettingsIni}; Section: SRMsg; Key: LoadCount; String: w10; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2');
-Filename: {#SettingsIni}; Section: SRMsg; Key: LoadCount; String: w20; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,3');
-Filename: {#SettingsIni}; Section: SRMsg; Key: LoadCount; String: w50; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,4');
-Filename: {#SettingsIni}; Section: SRMsg; Key: LoadCount; String: w100; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,5');
-Filename: {#SettingsIni}; Section: SRMsg; Key: LoadHistory; String: b0; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,0');
-Filename: {#SettingsIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1');
-Filename: {#SettingsIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2');
-Filename: {#SettingsIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,3');
-Filename: {#SettingsIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,4');
-Filename: {#SettingsIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,5');
-Filename: {#UpdateIni}; Section: SRMsg; Key: LoadCount; String: w5; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1');
-Filename: {#UpdateIni}; Section: SRMsg; Key: LoadCount; String: w10; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2');
-Filename: {#UpdateIni}; Section: SRMsg; Key: LoadCount; String: w20; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,3');
-Filename: {#UpdateIni}; Section: SRMsg; Key: LoadCount; String: w50; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,4');
-Filename: {#UpdateIni}; Section: SRMsg; Key: LoadCount; String: w100; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,5');
-Filename: {#UpdateIni}; Section: SRMsg; Key: LoadHistory; String: b0; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,0');
-Filename: {#UpdateIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1');
-Filename: {#UpdateIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2');
-Filename: {#UpdateIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,3');
-Filename: {#UpdateIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,4');
-Filename: {#UpdateIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,5');
-Filename: {#AutoexecUpdateIni}; Section: SRMsg; Key: LoadCount; String: w5; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: SRMsg; Key: LoadCount; String: w10; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: SRMsg; Key: LoadCount; String: w20; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,3') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: SRMsg; Key: LoadCount; String: w50; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,4') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: SRMsg; Key: LoadCount; String: w100; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,5') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: SRMsg; Key: LoadHistory; String: b0; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,0') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,3') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,4') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,5') and IsUpdate;
+#sub SetIniSRMsg
+Filename: {#CurrentIni}; Section: SRMsg; Key: LoadCount; String: w5; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRMsg; Key: LoadCount; String: w10; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRMsg; Key: LoadCount; String: w20; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,3'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRMsg; Key: LoadCount; String: w50; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,4'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRMsg; Key: LoadCount; String: w100; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,5'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRMsg; Key: LoadHistory; String: b0; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,0'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,1'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,2'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,3'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,4'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRMsg; Key: LoadHistory; String: b1; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LoadHistorySize,5'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+#endsub
+#expr CurrentIni = SettingsIni
+#expr SetIniSRMsg
+#expr CurrentIni = UpdateIni
+#expr SetIniSRMsg
+#expr CurrentIni = AutoexecUpdateIni
+#expr SetIniSRMsg
  ; Additional settings Page \ LocationTabsMessageWindow & AutoSizeInputArea on
-Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and IsSettingChecked('AutoSizeInputArea');
-Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and IsSettingChecked('AutoSizeInputArea');
-Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1144541508; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and IsSettingChecked('AutoSizeInputArea');
-Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and IsSettingChecked('AutoSizeInputArea');
-Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and IsSettingChecked('AutoSizeInputArea');
-Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570056; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and IsSettingChecked('AutoSizeInputArea');
-Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and IsSettingChecked('AutoSizeInputArea');
-Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570312; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and IsSettingChecked('AutoSizeInputArea');
-Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and IsSettingChecked('AutoSizeInputArea');
-Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and IsSettingChecked('AutoSizeInputArea');
-Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1144541508; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and IsSettingChecked('AutoSizeInputArea');
-Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and IsSettingChecked('AutoSizeInputArea');
-Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and IsSettingChecked('AutoSizeInputArea');
-Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570056; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and IsSettingChecked('AutoSizeInputArea');
-Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and IsSettingChecked('AutoSizeInputArea');
-Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570312; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and IsSettingChecked('AutoSizeInputArea');
-Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1144541508; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570056; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570312; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and IsSettingChecked('AutoSizeInputArea') and IsUpdate;
+#sub SetIniTab_SRMsgAutoSizeOn
+Filename: {#CurrentIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and IsSettingChecked('AutoSizeInputArea'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and IsSettingChecked('AutoSizeInputArea'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1144541508; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and IsSettingChecked('AutoSizeInputArea'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and IsSettingChecked('AutoSizeInputArea'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and IsSettingChecked('AutoSizeInputArea'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570056; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and IsSettingChecked('AutoSizeInputArea'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077432644; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and IsSettingChecked('AutoSizeInputArea'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570312; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and IsSettingChecked('AutoSizeInputArea'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+#endsub
+#expr CurrentIni = SettingsIni
+#expr SetIniTab_SRMsgAutoSizeOn
+#expr CurrentIni = UpdateIni
+#expr SetIniTab_SRMsgAutoSizeOn
+#expr CurrentIni = AutoexecUpdateIni
+#expr SetIniTab_SRMsgAutoSizeOn
  ; Additional settings Page \ LocationTabsMessageWindow & AutoSizeInputArea off
-Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1144525124; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570056; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570312; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1144525124; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570056; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570312; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea');
-Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1144525124; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570056; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
-Filename: {#AutoexecUpdateIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570312; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea') and IsUpdate;
+#sub SetIniTab_SRMsgAutoSizeOff
+Filename: {#CurrentIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and not IsSettingChecked('AutoSizeInputArea'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,0') and not IsSettingChecked('AutoSizeInputArea'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1144525124; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and not IsSettingChecked('AutoSizeInputArea'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33569800; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,1') and not IsSettingChecked('AutoSizeInputArea'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570056; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,2') and not IsSettingChecked('AutoSizeInputArea'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Tab_SRMsg; Key: CNTW_Def_Flags; String: d1077416260; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d33570312; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('LocationTabsMessageWindow,3') and not IsSettingChecked('AutoSizeInputArea'){#if CurrentIni != AutoexecUpdateIni};{#else} and IsUpdate;{#endif}
+#endsub
+#expr CurrentIni = SettingsIni
+#expr SetIniTab_SRMsgAutoSizeOff
+#expr CurrentIni = UpdateIni
+#expr SetIniTab_SRMsgAutoSizeOff
+#expr CurrentIni = AutoexecUpdateIni
+#expr SetIniTab_SRMsgAutoSizeOff
 
  ; Appearance Page \ IEView settings \ IEViewAnimation
 Filename: {#SettingsIni}; Section: IEView_Template; Key: Animation; String: b{code:SetBoolStyle|IEViewAnimation}; Flags: uninsdeleteentry; Components: Resources\IEView;
@@ -1549,7 +1355,6 @@ Filename: {#AutoexecUpdateIni}; Section: IEView_Template; Key: CustomContextMenu
 Filename: {#SettingsIni}; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry; Components: Resources\IEView;
 Filename: {#UpdateIni}; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry; Components: Resources\IEView;
 Filename: {#AutoexecUpdateIni}; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
-
  ; Appearance Page \ Font \ FontHandwriting
 Filename: {#SettingsIni}; Section: PackInfo; Key: Font; String: uHandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting');
 Filename: {#UpdateIni}; Section: PackInfo; Key: Font; String: uHandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting');
@@ -1608,20 +1413,20 @@ Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uPrinting;
       Delete(LocalProtocolQueue, 1, (Local[0] ? Local[0] : Len(LocalProtocolQueue))) \
     ) : void
   #expr ReadEntry
-#emit '; ' + ProtocolCompName
-Filename: {#CurrentIni}; Section: Protocols; Key: {code:GetTempIndex|{#CurrentIni}}; String: s{#ProtocolCompValue}; Flags: uninsdeleteentry; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
-Filename: {#CurrentIni}; Section: Protocols; Key: 2{code:GetTempIndex2|{#CurrentIni}}; String: d{code:GetTempIndex|{#CurrentIni}}; Flags: uninsdeleteentry; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
-Filename: {#CurrentIni}; Section: Protocols; Key: 4{code:GetTempIndex2|{#CurrentIni}}; String: d1; Flags: uninsdeleteentry; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
-Filename: {#CurrentIni}; Section: Protocols; Key: 6{code:GetTempIndex2|{#CurrentIni}}; String: d1; Flags: uninsdeleteentry; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
-Filename: {#CurrentIni}; Section: Protocols; Key: 8{code:GetTempIndex2|{#CurrentIni}}; String: u{#ProtocolCompValue}; Flags: uninsdeleteentry; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
-Filename: {#CurrentIni}; Section: __temp; Key: __count; String: {code:SetTempIndex|{#CurrentIni}}; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+#emit ' ; ' + ProtocolCompName
+Filename: {#CurrentIni}; Section: {#ProtocolCompValue}; Key: AM_BaseProto; String: s{#if Pos("CloudFile/", ProtocolCompName) > 0}CloudFile/{#endif}{#ProtocolCompValue}; Flags: uninsdeleteentry; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif} {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Protocols; Key: {code:GetTempIndex|{#CurrentIni}}; String: s{#ProtocolCompValue}; Flags: uninsdeleteentry; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif} {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Protocols; Key: 2{code:GetTempIndex2|{#CurrentIni}}; String: d{code:GetTempIndex|{#CurrentIni}}; Flags: uninsdeleteentry; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif} {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Protocols; Key: 4{code:GetTempIndex2|{#CurrentIni}}; String: d1; Flags: uninsdeleteentry; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif} {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Protocols; Key: 6{code:GetTempIndex2|{#CurrentIni}}; String: d1; Flags: uninsdeleteentry; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif} {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Protocols; Key: 8{code:GetTempIndex2|{#CurrentIni}}; String: u{#ProtocolCompValue}; Flags: uninsdeleteentry; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif} {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: __temp; Key: __count; String: {code:SetTempIndex|{#CurrentIni}}; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif} {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
 #endsub
 
 #sub SetProtocolsCount
-; Set protocols count
-Filename: {#CurrentIni}; Section: Protocols; Key: ProtoCount; String: d{code:GetTempIndex|{#CurrentIni}}; Flags: uninsdeleteentry; AfterInstall: DeleteIniSection('__temp', ExpandConstant('{#CurrentIni}'));{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+ ; Set protocols count
+Filename: {#CurrentIni}; Section: Protocols; Key: ProtoCount; String: d{code:GetTempIndex|{#CurrentIni}}; Flags: uninsdeleteentry; AfterInstall: DeleteIniSection('__temp', ExpandConstant('{#CurrentIni}')); {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
 #endsub
-
 #for {CurrentIni = SettingsIni, LocalProtocolQueue = ProtocolQueue; LocalProtocolQueue != ""; void} AddProtocolEntries
 #expr SetProtocolsCount
 #for {CurrentIni = UpdateIni, LocalProtocolQueue = ProtocolQueue; LocalProtocolQueue != ""; void} AddProtocolEntries
@@ -1717,34 +1522,34 @@ Filename: {#CurrentIni}; Section: Protocols; Key: ProtoCount; String: d{code:Get
   "Protocols\Pseudo\mRadio"
 
 #sub AddCListGroupEntries
-; CListGroup: Info
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Info"; Flags: uninsdeleteentry; Components: {#CListGroup_Info};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
-; CListGroup: MetaContacts
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|MetaContacts"; Flags: uninsdeleteentry;{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
-; CListGroup: Bots
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Bots"; Flags: uninsdeleteentry; Components: {#CListGroup_Bots};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
-; CListGroup: Chat rooms
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Chat rooms"; Flags: uninsdeleteentry; Components: {#CListGroup_ChatRooms};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
-; CListGroup: General
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|General"; Flags: uninsdeleteentry; Components: {#CListGroup_General};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
-; CListGroup: Phone Contacts
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Phone Contacts"; Flags: uninsdeleteentry; Components: {#CListGroup_PhoneContacts};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
-; CListGroup: OK
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|OK"; Flags: uninsdeleteentry; Components: {#CListGroup_OK};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
-; CListGroup: Skype
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Skype"; Flags: uninsdeleteentry; Components: {#CListGroup_Skype};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
-; CListGroup: Steam
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Steam"; Flags: uninsdeleteentry; Components: {#CListGroup_Steam};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
-; CListGroup: Tox
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Tox"; Flags: uninsdeleteentry; Components: {#CListGroup_Tox};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
-; CListGroup: Twitter
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Twitter"; Flags: uninsdeleteentry; Components: {#CListGroup_Twitter};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
-; CListGroup: VKontakte
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|VKontakte"; Flags: uninsdeleteentry; Components: {#CListGroup_VKontakte};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
-; CListGroup: mRadio
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|mRadio"; Flags: uninsdeleteentry; Components: {#CListGroup_mRadio};{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
-; Delete temp counter
-Filename: {#CurrentIni}; Section: CListGroups; AfterInstall: DeleteIniSection('__temp', ExpandConstant('{#CurrentIni}'));{#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate{#endif}
+ ; CListGroup: Info
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Info"; Flags: uninsdeleteentry; Components: {#CListGroup_Info}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+ ; CListGroup: MetaContacts
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|MetaContacts"; Flags: uninsdeleteentry; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+ ; CListGroup: Bots
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Bots"; Flags: uninsdeleteentry; Components: {#CListGroup_Bots}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+ ; CListGroup: Chat rooms
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Chat rooms"; Flags: uninsdeleteentry; Components: {#CListGroup_ChatRooms}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+ ; CListGroup: General
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|General"; Flags: uninsdeleteentry; Components: {#CListGroup_General}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+ ; CListGroup: Phone Contacts
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Phone Contacts"; Flags: uninsdeleteentry; Components: {#CListGroup_PhoneContacts}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+ ; CListGroup: OK
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|OK"; Flags: uninsdeleteentry; Components: {#CListGroup_OK}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+ ; CListGroup: Skype
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Skype"; Flags: uninsdeleteentry; Components: {#CListGroup_Skype}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+ ; CListGroup: Steam
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Steam"; Flags: uninsdeleteentry; Components: {#CListGroup_Steam}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+ ; CListGroup: Tox
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Tox"; Flags: uninsdeleteentry; Components: {#CListGroup_Tox}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+ ; CListGroup: Twitter
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Twitter"; Flags: uninsdeleteentry; Components: {#CListGroup_Twitter}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+ ; CListGroup: VKontakte
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|VKontakte"; Flags: uninsdeleteentry; Components: {#CListGroup_VKontakte}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+ ; CListGroup: mRadio
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|mRadio"; Flags: uninsdeleteentry; Components: {#CListGroup_mRadio}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+ ; Delete temp counter
+Filename: {#CurrentIni}; Section: CListGroups; AfterInstall: DeleteIniSection('__temp', ExpandConstant('{#CurrentIni}')); {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
 #endsub
 #expr CurrentIni = SettingsIni
 #expr AddCListGroupEntries
