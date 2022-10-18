@@ -1388,7 +1388,7 @@ Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uPrinting;
   "Protocols\Sametime=Sametime," + \
   "Protocols\Skype=Skype," + \
   "Protocols\Steam=Steam," + \
-  "Protocols\Tox=TOX," + \
+  "Protocols\Tox=Tox," + \
   "Protocols\Twitter=Twitter," + \
   "Protocols\VKontakte=VKontakte," + \
   "Protocols\Jabber\XMPP=XMPP," + \
