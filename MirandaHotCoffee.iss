@@ -867,17 +867,17 @@ Filename: {cm:AppFaqURL}; Description: {cm:AppFaqURLOpen}; Flags: nowait postins
 
 [Registry]
  ; all users
-Root: HKLM; Subkey: SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {app}\{#AppExeName}; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Check: IsRunAsAdmin
-Root: HKLM; Subkey: SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {group}\{#AppLnk}.lnk; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Tasks: alluser; Check: not WizardNoIcons and IsRunAsAdmin
-Root: HKLM; Subkey: SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {commondesktop}\{#AppName}.lnk; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Tasks: alluser and desktopicon; Check: IsRunAsAdmin
-Root: HKLM; Subkey: SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {userappdata}\Microsoft\Internet Explorer\Quick Launch\{#AppName}.lnk; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Tasks: alluser and quicklaunchicon; Check: IsRunAsAdmin
-Root: HKLM; Subkey: SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {commonstartup}\{#AppLnk}.lnk; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Tasks: alluser and autorun; Check: IsRunAsAdmin
+Root: HKLM; Subkey: SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {app}\{#AppExeName}; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Check: IsRunAsAdmin;
+Root: HKLM; Subkey: SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {group}\{#AppLnk}.lnk; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Tasks: alluser; Check: not WizardNoIcons and IsRunAsAdmin;
+Root: HKLM; Subkey: SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {commondesktop}\{#AppName}.lnk; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Tasks: alluser and desktopicon; Check: IsRunAsAdmin;
+Root: HKLM; Subkey: SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {userappdata}\Microsoft\Internet Explorer\Quick Launch\{#AppName}.lnk; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Tasks: alluser and quicklaunchicon; Check: IsRunAsAdmin;
+Root: HKLM; Subkey: SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {commonstartup}\{#AppLnk}.lnk; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Tasks: alluser and autorun; Check: IsRunAsAdmin;
  ; current user
-Root: HKCU; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {app}\{#AppExeName}; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Check: IsRunAsAdmin
-Root: HKCU; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {userprograms}\{code:ExtractFileName|{group}}\{#AppLnk}.lnk; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Tasks: curuser; Check: not WizardNoIcons and IsRunAsAdmin
-Root: HKCU; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {userdesktop}\{#AppName}.lnk; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Tasks: curuser and desktopicon; Check: IsRunAsAdmin
-Root: HKCU; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {userappdata}\Microsoft\Internet Explorer\Quick Launch\{#AppName}.lnk; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Tasks: curuser and quicklaunchicon; Check: IsRunAsAdmin
-Root: HKCU; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {userstartup}\{#AppLnk}.lnk; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Tasks: curuser and autorun; Check: IsRunAsAdmin
+Root: HKCU; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {app}\{#AppExeName}; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Check: IsRunAsAdmin;
+Root: HKCU; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {userprograms}\{code:ExtractFileName|{group}}\{#AppLnk}.lnk; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Tasks: curuser; Check: not WizardNoIcons and IsRunAsAdmin;
+Root: HKCU; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {userdesktop}\{#AppName}.lnk; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Tasks: curuser and desktopicon; Check: IsRunAsAdmin;
+Root: HKCU; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {userappdata}\Microsoft\Internet Explorer\Quick Launch\{#AppName}.lnk; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Tasks: curuser and quicklaunchicon; Check: IsRunAsAdmin;
+Root: HKCU; Subkey: Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers; ValueType: string; ValueName: {userstartup}\{#AppLnk}.lnk; ValueData: RUNASADMIN; Flags: uninsdeletevalue; MinVersion: 0,6.0; Tasks: curuser and autorun; Check: IsRunAsAdmin;
 
 #define DarkSkin \
   "IsStyleChecked('Skin_Custom_Miranda_Dark') or " + \
@@ -931,21 +931,21 @@ Filename: {app}\mirandaboot.ini; Section: Language; Key: DefaultLanguage; String
 
 #sub ConfigIniFile
 #emit ' ; ' + CurrentIniFile
-Filename: {app}\Profiles\{#CurrentIniFile}; Section: Langpack; Key: Current; String: udefault; Languages: en; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
-Filename: {app}\Profiles\{#CurrentIniFile}; Section: Langpack; Key: Current; String: ulangpack_russian.txt; Languages: ru; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
-Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackInfo; Key: "Name"; String: u{#AppName}; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
-Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackInfo; Key: Version; String: u{#AppFullVer}; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
-Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackInfo; Key: MirVer; String: u{#AppMirFullVer}; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
-Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@xmpp.ru; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
-Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")}; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
-Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackUpdater; Key: File_VersionURL; String: uhttps://miranda-ng.org/distr/packs/HotCoffee/.hotcoffee_{#AppArch}.ini; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
-Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackUpdater; Key: File_1_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")}; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
-Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackUpdater; Key: File_30_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")}; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
-Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackUpdater; Key: File_35_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")}; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
-Filename: {app}\Profiles\{#CurrentIniFile}; Section: CLUIFrames; Key: Height12; String: w{code:GetCLUIFrames|Height12}; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
-Filename: {app}\Profiles\{#CurrentIniFile}; Section: CLUIFrames; Key: TBVisile12; String: b{code:GetCLUIFrames|TBVisile12}; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
-Filename: {app}\Profiles\{#CurrentIniFile}; Section: CLUI; Key: EqualSections; String: b{code:GetCLUIFrames|EqualSections}; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
-Filename: {app}\Profiles\{#CurrentIniFile}; Section: CLUI; Key: StatusBarProtosPerLine; String: b{code:GetCLUIFrames|StatusBarProtosPerLine}; {#if CurrentIniFile == AutoexecUpdateIniFile}Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: Langpack; Key: Current; String: udefault; Languages: en;{#if CurrentIniFile == AutoexecUpdateIniFile} Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: Langpack; Key: Current; String: ulangpack_russian.txt; Languages: ru;{#if CurrentIniFile == AutoexecUpdateIniFile} Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackInfo; Key: "Name"; String: u{#AppName};{#if CurrentIniFile == AutoexecUpdateIniFile} Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackInfo; Key: Version; String: u{#AppFullVer};{#if CurrentIniFile == AutoexecUpdateIniFile} Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackInfo; Key: MirVer; String: u{#AppMirFullVer};{#if CurrentIniFile == AutoexecUpdateIniFile} Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackInfo; Key: Contacts; String: g\r\ne-mail: {#AppContacts}\r\njid: hotcoffee@xmpp.ru;{#if CurrentIniFile == AutoexecUpdateIniFile} Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackInfo; Key: ReleaseDate; String: u{#GetDateTimeString("dd.mm.yyyy", "", "")};{#if CurrentIniFile == AutoexecUpdateIniFile} Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackUpdater; Key: File_VersionURL; String: uhttps://miranda-ng.org/distr/packs/HotCoffee/.hotcoffee_{#AppArch}.ini;{#if CurrentIniFile == AutoexecUpdateIniFile} Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackUpdater; Key: File_1_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};{#if CurrentIniFile == AutoexecUpdateIniFile} Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackUpdater; Key: File_30_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};{#if CurrentIniFile == AutoexecUpdateIniFile} Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: PackUpdater; Key: File_35_CurrentVersion; String: u{#GetDateTimeString("yyyy.m.d", "", "")};{#if CurrentIniFile == AutoexecUpdateIniFile} Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: CLUIFrames; Key: Height12; String: w{code:GetCLUIFrames|Height12};{#if CurrentIniFile == AutoexecUpdateIniFile} Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: CLUIFrames; Key: TBVisile12; String: b{code:GetCLUIFrames|TBVisile12};{#if CurrentIniFile == AutoexecUpdateIniFile} Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: CLUI; Key: EqualSections; String: b{code:GetCLUIFrames|EqualSections};{#if CurrentIniFile == AutoexecUpdateIniFile} Check: IsUpdate;{#endif}
+Filename: {app}\Profiles\{#CurrentIniFile}; Section: CLUI; Key: StatusBarProtosPerLine; String: b{code:GetCLUIFrames|StatusBarProtosPerLine};{#if CurrentIniFile == AutoexecUpdateIniFile} Check: IsUpdate;{#endif}
 #endsub
 #expr CurrentIniFile = SettingsIniFile
 #expr ConfigIniFile
@@ -1157,16 +1157,16 @@ Filename: {#UpdateIni}; Section: NewAwaySys; Key: DontPopDlg; String: w0; Flags:
 Filename: {#AutoexecUpdateIni}; Section: NewAwaySys; Key: DontPopDlg; String: w0; Flags: uninsdeleteentry; Check: IsSettingChecked('DialogStatusMessages') and IsUpdate;
  ; Settings Page \ Status \ DialogStatusMessages (SRAway)
 #sub SetIniSRAway
-Filename: {#CurrentIni}; Section: SRAway; Key: IdlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
-Filename: {#CurrentIni}; Section: SRAway; Key: OtpNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
-Filename: {#CurrentIni}; Section: SRAway; Key: OtlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
-Filename: {#CurrentIni}; Section: SRAway; Key: InvNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
-Filename: {#CurrentIni}; Section: SRAway; Key: FreeChatNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
-Filename: {#CurrentIni}; Section: SRAway; Key: DndNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
-Filename: {#CurrentIni}; Section: SRAway; Key: OccupiedNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
-Filename: {#CurrentIni}; Section: SRAway; Key: NaNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
-Filename: {#CurrentIni}; Section: SRAway; Key: AwayNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
-Filename: {#CurrentIni}; Section: SRAway; Key: OnNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRAway; Key: IdlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRAway; Key: OtpNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRAway; Key: OtlNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRAway; Key: InvNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRAway; Key: FreeChatNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRAway; Key: DndNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRAway; Key: OccupiedNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRAway; Key: NaNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRAway; Key: AwayNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: SRAway; Key: OnNoDlg; String: b{code:SetBoolSetting|!DialogStatusMessages}; Flags: uninsdeleteentry;{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 #endsub
 #expr CurrentIni = SettingsIni
 #expr SetIniSRAway
@@ -1338,23 +1338,23 @@ Filename: {#CurrentIni}; Section: Tab_SRMsg; Key: CNTW_Def_FlagsEx; String: d335
  ; Appearance Page \ IEView settings \ IEViewAnimation
 Filename: {#SettingsIni}; Section: IEView_Template; Key: Animation; String: b{code:SetBoolStyle|IEViewAnimation}; Flags: uninsdeleteentry; Components: Resources\IEView;
 Filename: {#UpdateIni}; Section: IEView_Template; Key: Animation; String: b{code:SetBoolStyle|IEViewAnimation}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {#AutoexecUpdateIni}; Section: IEView_Template; Key: Animation; String: b{code:SetBoolStyle|IEViewAnimation}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: IEView_Template; Key: Animation; String: b{code:SetBoolStyle|IEViewAnimation}; Flags: uninsdeleteentry; Components: Resources\IEView; Check: IsUpdate;
  ; Appearance Page \ IEView settings \ IEViewAvatar
 Filename: {#SettingsIni}; Section: IEView_Template; Key: Avatars; String: b{code:SetBoolStyle|IEViewAvatar}; Flags: uninsdeleteentry; Components: Resources\IEView;
 Filename: {#UpdateIni}; Section: IEView_Template; Key: Avatars; String: b{code:SetBoolStyle|IEViewAvatar}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {#AutoexecUpdateIni}; Section: IEView_Template; Key: Avatars; String: b{code:SetBoolStyle|IEViewAvatar}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: IEView_Template; Key: Avatars; String: b{code:SetBoolStyle|IEViewAvatar}; Flags: uninsdeleteentry; Components: Resources\IEView; Check: IsUpdate;
  ; Appearance Page \ IEView settings \ IEViewShortLink
 Filename: {#SettingsIni}; Section: IEView_Template; Key: ShortLinks; String: b{code:SetBoolStyle|IEViewShortLink}; Flags: uninsdeleteentry; Components: Resources\IEView;
 Filename: {#UpdateIni}; Section: IEView_Template; Key: ShortLinks; String: b{code:SetBoolStyle|IEViewShortLink}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {#AutoexecUpdateIni}; Section: IEView_Template; Key: ShortLinks; String: b{code:SetBoolStyle|IEViewShortLink}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: IEView_Template; Key: ShortLinks; String: b{code:SetBoolStyle|IEViewShortLink}; Flags: uninsdeleteentry; Components: Resources\IEView; Check: IsUpdate;
  ; Appearance Page \ IEView settings \ IEViewContextMenu
 Filename: {#SettingsIni}; Section: IEView_Template; Key: CustomContextMenu; String: b{code:SetBoolStyle|IEViewContextMenu}; Flags: uninsdeleteentry; Components: Resources\IEView;
 Filename: {#UpdateIni}; Section: IEView_Template; Key: CustomContextMenu; String: b{code:SetBoolStyle|IEViewContextMenu}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {#AutoexecUpdateIni}; Section: IEView_Template; Key: CustomContextMenu; String: b{code:SetBoolStyle|IEViewContextMenu}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: IEView_Template; Key: CustomContextMenu; String: b{code:SetBoolStyle|IEViewContextMenu}; Flags: uninsdeleteentry; Components: Resources\IEView; Check: IsUpdate;
  ; Appearance Page \ IEView settings \ IEViewScrollBar
 Filename: {#SettingsIni}; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry; Components: Resources\IEView;
 Filename: {#UpdateIni}; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry; Components: Resources\IEView;
-Filename: {#AutoexecUpdateIni}; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry;  Components: Resources\IEView; Check: IsUpdate;
+Filename: {#AutoexecUpdateIni}; Section: IEView_Template; Key: ScrollBar; String: b{code:SetBoolStyle|IEViewScrollBar}; Flags: uninsdeleteentry; Components: Resources\IEView; Check: IsUpdate;
  ; Appearance Page \ Font \ FontHandwriting
 Filename: {#SettingsIni}; Section: PackInfo; Key: Font; String: uHandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting');
 Filename: {#UpdateIni}; Section: PackInfo; Key: Font; String: uHandwriting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontHandwriting');
@@ -1414,18 +1414,18 @@ Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uPrinting;
     ) : void
   #expr ReadEntry
 #emit ' ; ' + ProtocolCompName
-Filename: {#CurrentIni}; Section: {#ProtocolCompValue}; Key: AM_BaseProto; String: s{#if Pos("CloudFile/", ProtocolCompName) > 0}CloudFile/{#endif}{#ProtocolCompValue}; Flags: uninsdeleteentry; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif} {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
-Filename: {#CurrentIni}; Section: Protocols; Key: {code:GetTempIndex|{#CurrentIni}}; String: s{#ProtocolCompValue}; Flags: uninsdeleteentry; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif} {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
-Filename: {#CurrentIni}; Section: Protocols; Key: 2{code:GetTempIndex2|{#CurrentIni}}; String: d{code:GetTempIndex|{#CurrentIni}}; Flags: uninsdeleteentry; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif} {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
-Filename: {#CurrentIni}; Section: Protocols; Key: 4{code:GetTempIndex2|{#CurrentIni}}; String: d1; Flags: uninsdeleteentry; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif} {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
-Filename: {#CurrentIni}; Section: Protocols; Key: 6{code:GetTempIndex2|{#CurrentIni}}; String: d1; Flags: uninsdeleteentry; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif} {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
-Filename: {#CurrentIni}; Section: Protocols; Key: 8{code:GetTempIndex2|{#CurrentIni}}; String: u{#ProtocolCompValue}; Flags: uninsdeleteentry; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif} {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
-Filename: {#CurrentIni}; Section: __temp; Key: __count; String: {code:SetTempIndex|{#CurrentIni}}; {#if Pos("*", ProtocolCompName) == 0}Components: {#ProtocolCompName};{#endif} {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: {#ProtocolCompValue}; Key: AM_BaseProto; String: s{#if Pos("CloudFile/", ProtocolCompName) > 0}CloudFile/{#endif}{#ProtocolCompValue}; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Protocols; Key: {code:GetTempIndex|{#CurrentIni}}; String: s{#ProtocolCompValue}; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Protocols; Key: 2{code:GetTempIndex2|{#CurrentIni}}; String: d{code:GetTempIndex|{#CurrentIni}}; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Protocols; Key: 4{code:GetTempIndex2|{#CurrentIni}}; String: d1; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Protocols; Key: 6{code:GetTempIndex2|{#CurrentIni}}; String: d1; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Protocols; Key: 8{code:GetTempIndex2|{#CurrentIni}}; String: u{#ProtocolCompValue}; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: __temp; Key: __count; String: {code:SetTempIndex|{#CurrentIni}};{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 #endsub
 
 #sub SetProtocolsCount
  ; Set protocols count
-Filename: {#CurrentIni}; Section: Protocols; Key: ProtoCount; String: d{code:GetTempIndex|{#CurrentIni}}; Flags: uninsdeleteentry; AfterInstall: DeleteIniSection('__temp', ExpandConstant('{#CurrentIni}')); {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: Protocols; Key: ProtoCount; String: d{code:GetTempIndex|{#CurrentIni}}; Flags: uninsdeleteentry; AfterInstall: DeleteIniSection('__temp', ExpandConstant('{#CurrentIni}'));{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 #endsub
 #for {CurrentIni = SettingsIni, LocalProtocolQueue = ProtocolQueue; LocalProtocolQueue != ""; void} AddProtocolEntries
 #expr SetProtocolsCount
@@ -1523,33 +1523,33 @@ Filename: {#CurrentIni}; Section: Protocols; Key: ProtoCount; String: d{code:Get
 
 #sub AddCListGroupEntries
  ; CListGroup: Info
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Info"; Flags: uninsdeleteentry; Components: {#CListGroup_Info}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Info"; Flags: uninsdeleteentry; Components: {#CListGroup_Info};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
  ; CListGroup: MetaContacts
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|MetaContacts"; Flags: uninsdeleteentry; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|MetaContacts"; Flags: uninsdeleteentry;{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
  ; CListGroup: Bots
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Bots"; Flags: uninsdeleteentry; Components: {#CListGroup_Bots}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Bots"; Flags: uninsdeleteentry; Components: {#CListGroup_Bots};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
  ; CListGroup: Chat rooms
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Chat rooms"; Flags: uninsdeleteentry; Components: {#CListGroup_ChatRooms}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Chat rooms"; Flags: uninsdeleteentry; Components: {#CListGroup_ChatRooms};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
  ; CListGroup: General
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|General"; Flags: uninsdeleteentry; Components: {#CListGroup_General}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|General"; Flags: uninsdeleteentry; Components: {#CListGroup_General};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
  ; CListGroup: Phone Contacts
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Phone Contacts"; Flags: uninsdeleteentry; Components: {#CListGroup_PhoneContacts}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Phone Contacts"; Flags: uninsdeleteentry; Components: {#CListGroup_PhoneContacts};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
  ; CListGroup: OK
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|OK"; Flags: uninsdeleteentry; Components: {#CListGroup_OK}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|OK"; Flags: uninsdeleteentry; Components: {#CListGroup_OK};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
  ; CListGroup: Skype
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Skype"; Flags: uninsdeleteentry; Components: {#CListGroup_Skype}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Skype"; Flags: uninsdeleteentry; Components: {#CListGroup_Skype};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
  ; CListGroup: Steam
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Steam"; Flags: uninsdeleteentry; Components: {#CListGroup_Steam}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Steam"; Flags: uninsdeleteentry; Components: {#CListGroup_Steam};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
  ; CListGroup: Tox
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Tox"; Flags: uninsdeleteentry; Components: {#CListGroup_Tox}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Tox"; Flags: uninsdeleteentry; Components: {#CListGroup_Tox};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
  ; CListGroup: Twitter
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Twitter"; Flags: uninsdeleteentry; Components: {#CListGroup_Twitter}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Twitter"; Flags: uninsdeleteentry; Components: {#CListGroup_Twitter};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
  ; CListGroup: VKontakte
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|VKontakte"; Flags: uninsdeleteentry; Components: {#CListGroup_VKontakte}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|VKontakte"; Flags: uninsdeleteentry; Components: {#CListGroup_VKontakte};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
  ; CListGroup: mRadio
-Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|mRadio"; Flags: uninsdeleteentry; Components: {#CListGroup_mRadio}; {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|mRadio"; Flags: uninsdeleteentry; Components: {#CListGroup_mRadio};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
  ; Delete temp counter
-Filename: {#CurrentIni}; Section: CListGroups; AfterInstall: DeleteIniSection('__temp', ExpandConstant('{#CurrentIni}')); {#if CurrentIni == AutoexecUpdateIni}Check: IsUpdate;{#endif}
+Filename: {#CurrentIni}; Section: CListGroups; AfterInstall: DeleteIniSection('__temp', ExpandConstant('{#CurrentIni}'));{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 #endsub
 #expr CurrentIni = SettingsIni
 #expr AddCListGroupEntries
