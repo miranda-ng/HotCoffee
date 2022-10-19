@@ -1364,6 +1364,39 @@ Filename: {#SettingsIni}; Section: PackInfo; Key: Font; String: uPrinting; Flags
 Filename: {#UpdateIni}; Section: PackInfo; Key: Font; String: uPrinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting');
 Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uPrinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting') and IsUpdate;
 
+#define ProtocolBaseProto \
+  "Protocols\Pseudo\NewsAggregator = NewsAggregator," + \
+  "Protocols\Pseudo\WebView = WebView," + \
+  "Protocols\Pseudo\Weather = Weather," + \
+  "Protocols\Pseudo\GmailNotifier = GmailMNotifier," + \
+  "Protocols\Pseudo\YAMN = YAMN," + \
+  "Protocols\Pseudo\CurrencyRates = CurrencyRates," + \
+  "*MetaContacts = MetaContacts," + \
+  "Protocols\EmLanProto = EM_LAN_PROTO," + \
+  "Protocols\GG = GG," + \
+  "Protocols\ICQ\ICQ = ICQ," + \
+  "Protocols\ICQ\ICQ2 = ICQ," + \
+  "Protocols\ICQCorp = ICQCorp," + \
+  "Protocols\IRC = IRC," + \
+  "Protocols\Jabber\Jabber = JABBER," + \
+  "Protocols\Jabber\Jabberru = JABBER," + \
+  "Protocols\Jabber\LJ = JABBER," + \
+  "Protocols\ICQ\MRA = MRA," + \
+  "Protocols\ICQ\MRA2 = MRA," + \
+  "Protocols\Jabber\OK = JABBER," + \
+  "Protocols\Omegle = Omegle," + \
+  "Protocols\Sametime = Sametime," + \
+  "Protocols\Skype = SKYPE," + \
+  "Protocols\Steam = STEAM," + \
+  "Protocols\Twitter = Twitter," + \
+  "Protocols\VKontakte = VKontakte," + \
+  "Protocols\Jabber\XMPP = JABBER," + \
+  "Protocols\Pseudo\mRadio = mRadio," + \
+  "*CloudFile/Dropbox = CloudFile/Dropbox," + \
+  "*CloudFile/GDrive = CloudFile/GDrive," + \
+  "*CloudFile/OneDrive = CloudFile/OneDrive," + \
+  "*CloudFile/YandexDisk = CloudFile/YandexDisk"
+
 #define ProtocolQueue \
   "Protocols\Pseudo\NewsAggregator=NewsAggregator," + \
   "Protocols\Pseudo\WebView=WebView," + \
@@ -1388,7 +1421,7 @@ Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uPrinting;
   "Protocols\Sametime=Sametime," + \
   "Protocols\Skype=Skype," + \
   "Protocols\Steam=Steam," + \
-  "Protocols\Tox=Tox," + \
+  "Protocols\Tox=TOX," + \
   "Protocols\Twitter=Twitter," + \
   "Protocols\VKontakte=VKontakte," + \
   "Protocols\Jabber\XMPP=XMPP," + \
@@ -1399,6 +1432,7 @@ Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uPrinting;
   "*CloudFile/YandexDisk=YandexDisk"
 
 #define public LocalProtocolQueue ""
+#define public EntriesType ""
 #sub AddProtocolEntries
   #define private ProtocolEntry ""
   #define private ProtocolCompName ""
@@ -1414,24 +1448,31 @@ Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uPrinting;
     ) : void
   #expr ReadEntry
 #emit ' ; ' + ProtocolCompName
-Filename: {#CurrentIni}; Section: {#ProtocolCompValue}; Key: AM_BaseProto; String: s{#if Pos("CloudFile/", ProtocolCompName) > 0}CloudFile/{#endif}{#ProtocolCompValue}; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
+#if EntriesType == "ProtocolBaseProto"
+Filename: {#CurrentIni}; Section: {#ProtocolCompValue}; Key: AM_BaseProto; String: s{#ProtocolCompValue}; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
+#elif EntriesType == "ProtocolQueue"
 Filename: {#CurrentIni}; Section: Protocols; Key: {code:GetTempIndex|{#CurrentIni}}; String: s{#ProtocolCompValue}; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 Filename: {#CurrentIni}; Section: Protocols; Key: 2{code:GetTempIndex2|{#CurrentIni}}; String: d{code:GetTempIndex|{#CurrentIni}}; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 Filename: {#CurrentIni}; Section: Protocols; Key: 4{code:GetTempIndex2|{#CurrentIni}}; String: d1; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 Filename: {#CurrentIni}; Section: Protocols; Key: 6{code:GetTempIndex2|{#CurrentIni}}; String: d1; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 Filename: {#CurrentIni}; Section: Protocols; Key: 8{code:GetTempIndex2|{#CurrentIni}}; String: u{#ProtocolCompValue}; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 Filename: {#CurrentIni}; Section: __temp; Key: __count; String: {code:SetTempIndex|{#CurrentIni}};{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
+#endif
 #endsub
 
 #sub SetProtocolsCount
  ; Set protocols count
 Filename: {#CurrentIni}; Section: Protocols; Key: ProtoCount; String: d{code:GetTempIndex|{#CurrentIni}}; Flags: uninsdeleteentry; AfterInstall: DeleteIniSection('__temp', ExpandConstant('{#CurrentIni}'));{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 #endsub
-#for {CurrentIni = SettingsIni, LocalProtocolQueue = ProtocolQueue; LocalProtocolQueue != ""; void} AddProtocolEntries
+
+#for {CurrentIni = SettingsIni, LocalProtocolQueue = ProtocolBaseProto, EntriesType = "ProtocolBaseProto"; LocalProtocolQueue != ""; void} AddProtocolEntries
+#for {CurrentIni = SettingsIni, LocalProtocolQueue = ProtocolQueue, EntriesType = "ProtocolQueue"; LocalProtocolQueue != ""; void} AddProtocolEntries
 #expr SetProtocolsCount
-#for {CurrentIni = UpdateIni, LocalProtocolQueue = ProtocolQueue; LocalProtocolQueue != ""; void} AddProtocolEntries
+#for {CurrentIni = UpdateIni, LocalProtocolQueue = ProtocolBaseProto, EntriesType = "ProtocolBaseProto"; LocalProtocolQueue != ""; void} AddProtocolEntries
+#for {CurrentIni = UpdateIni, LocalProtocolQueue = ProtocolQueue, EntriesType = "ProtocolQueue"; LocalProtocolQueue != ""; void} AddProtocolEntries
 #expr SetProtocolsCount
-#for {CurrentIni = AutoexecUpdateIni, LocalProtocolQueue = ProtocolQueue; LocalProtocolQueue != ""; void} AddProtocolEntries
+#for {CurrentIni = AutoexecUpdateIni, LocalProtocolQueue = ProtocolBaseProto, EntriesType = "ProtocolBaseProto"; LocalProtocolQueue != ""; void} AddProtocolEntries
+#for {CurrentIni = AutoexecUpdateIni, LocalProtocolQueue = ProtocolQueue, EntriesType = "ProtocolQueue"; LocalProtocolQueue != ""; void} AddProtocolEntries
 #expr SetProtocolsCount
 
 #define public CListGroup_Info \
