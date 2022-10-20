@@ -1364,100 +1364,66 @@ Filename: {#SettingsIni}; Section: PackInfo; Key: Font; String: uPrinting; Flags
 Filename: {#UpdateIni}; Section: PackInfo; Key: Font; String: uPrinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting');
 Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uPrinting; Flags: uninsdeleteentry; Check: IsStyleChecked('FontPrinting') and IsUpdate;
 
-#define ProtocolBaseProto \
-  "Protocols\Pseudo\NewsAggregator = NewsAggregator," + \
-  "Protocols\Pseudo\WebView = WebView," + \
-  "Protocols\Pseudo\Weather = Weather," + \
-  "Protocols\Pseudo\GmailNotifier = GmailMNotifier," + \
-  "Protocols\Pseudo\YAMN = YAMN," + \
-  "Protocols\Pseudo\CurrencyRates = CurrencyRates," + \
-  "*MetaContacts = MetaContacts," + \
-  "Protocols\EmLanProto = EM_LAN_PROTO," + \
-  "Protocols\GG = GG," + \
-  "Protocols\ICQ\ICQ = ICQ," + \
-  "Protocols\ICQ\ICQ2 = ICQ," + \
-  "Protocols\ICQCorp = ICQCorp," + \
-  "Protocols\IRC = IRC," + \
-  "Protocols\Jabber\Jabber = JABBER," + \
-  "Protocols\Jabber\Jabberru = JABBER," + \
-  "Protocols\Jabber\LJ = JABBER," + \
-  "Protocols\ICQ\MRA = MRA," + \
-  "Protocols\ICQ\MRA2 = MRA," + \
-  "Protocols\Jabber\OK = JABBER," + \
-  "Protocols\Omegle = Omegle," + \
-  "Protocols\Sametime = Sametime," + \
-  "Protocols\Skype = SKYPE," + \
-  "Protocols\Steam = STEAM," + \
-  "Protocols\Twitter = Twitter," + \
-  "Protocols\VKontakte = VKontakte," + \
-  "Protocols\Jabber\XMPP = JABBER," + \
-  "Protocols\Pseudo\mRadio = mRadio," + \
-  "*CloudFile/Dropbox = CloudFile/Dropbox," + \
-  "*CloudFile/GDrive = CloudFile/GDrive," + \
-  "*CloudFile/OneDrive = CloudFile/OneDrive," + \
-  "*CloudFile/YandexDisk = CloudFile/YandexDisk"
-
 #define ProtocolQueue \
-  "Protocols\Pseudo\NewsAggregator=NewsAggregator," + \
-  "Protocols\Pseudo\WebView=WebView," + \
-  "Protocols\Pseudo\Weather=Weather," + \
-  "Protocols\Pseudo\GmailNotifier=GmailMNotifier," + \
-  "Protocols\Pseudo\YAMN=YAMN," + \
-  "Protocols\Pseudo\CurrencyRates=CurrencyRates," + \
-  "*MetaContacts=MetaContacts," + \
-  "Protocols\EmLanProto=EM_LAN_PROTO," + \
-  "Protocols\GG=GG," + \
-  "Protocols\ICQ\ICQ=ICQ," + \
-  "Protocols\ICQ\ICQ2=ICQ2," + \
-  "Protocols\ICQCorp=ICQCorp," + \
-  "Protocols\IRC=IRC," + \
-  "Protocols\Jabber\Jabber=Jabber," + \
-  "Protocols\Jabber\Jabberru=Jabberru," + \
-  "Protocols\Jabber\LJ=LJ," + \
-  "Protocols\ICQ\MRA=MRA," + \
-  "Protocols\ICQ\MRA2=MRA2," + \
-  "Protocols\Jabber\OK=OK," + \
-  "Protocols\Omegle=Omegle," + \
-  "Protocols\Sametime=Sametime," + \
-  "Protocols\Skype=Skype," + \
-  "Protocols\Steam=Steam," + \
-  "Protocols\Tox=TOX," + \
-  "Protocols\Twitter=Twitter," + \
-  "Protocols\VKontakte=VKontakte," + \
-  "Protocols\Jabber\XMPP=XMPP," + \
-  "Protocols\Pseudo\mRadio=mRadio," + \
-  "*CloudFile/Dropbox=Dropbox," + \
-  "*CloudFile/GDrive=GDrive," + \
-  "*CloudFile/OneDrive=OneDrive," + \
-  "*CloudFile/YandexDisk=YandexDisk"
+  "Protocols\Pseudo\NewsAggregator = NewsAggregator,NewsAggregator;" + \
+  "Protocols\Pseudo\WebView = WebView,WebView;" + \
+  "Protocols\Pseudo\Weather = Weather,Weather;" + \
+  "Protocols\Pseudo\GmailNotifier = GmailMNotifier,GmailMNotifier;" + \
+  "Protocols\Pseudo\YAMN = YAMN,YAMN;" + \
+  "Protocols\Pseudo\CurrencyRates = CurrencyRates,CurrencyRates;" + \
+  "*MetaContacts = MetaContacts,MetaContacts;" + \
+  "Protocols\EmLanProto = EM_LAN_PROTO,EM_LAN_PROTO;" + \
+  "Protocols\GG = GG,GG;" + \
+  "Protocols\ICQ\ICQ = ICQ,ICQ;" + \
+  "Protocols\ICQ\ICQ2 = ICQ2,ICQ;" + \
+  "Protocols\ICQCorp = ICQCorp,ICQCorp;" + \
+  "Protocols\IRC = IRC,IRC;" + \
+  "Protocols\Jabber\Jabber = Jabber,JABBER;" + \
+  "Protocols\Jabber\Jabberru = Jabberru,JABBER;" + \
+  "Protocols\Jabber\LJ = LJ,JABBER;" + \
+  "Protocols\ICQ\MRA = MRA,MRA;" + \
+  "Protocols\ICQ\MRA2 = MRA2,MRA;" + \
+  "Protocols\Jabber\OK = OK,JABBER;" + \
+  "Protocols\Omegle = Omegle,Omegle;" + \
+  "Protocols\Sametime = Sametime,Sametime;" + \
+  "Protocols\Skype = Skype,SKYPE;" + \
+  "Protocols\Steam = Steam,STEAM;" + \
+  "Protocols\Tox = TOX,TOX;" + \
+  "Protocols\Twitter = Twitter,Twitter;" + \
+  "Protocols\VKontakte = VKontakte,VKontakte;" + \
+  "Protocols\Jabber\XMPP = XMPP,JABBER;" + \
+  "Protocols\Pseudo\mRadio = mRadio,mRadio;" + \
+  "*CloudFile/Dropbox = Dropbox,CloudFile/Dropbox;" + \
+  "*CloudFile/GDrive = GDrive,CloudFile/GDrive;" + \
+  "*CloudFile/OneDrive = OneDrive,CloudFile/OneDrive;" + \
+  "*CloudFile/YandexDisk = YandexDisk,CloudFile/YandexDisk"
 
 #define public LocalProtocolQueue ""
-#define public EntriesType ""
 #sub AddProtocolEntries
   #define private ProtocolEntry ""
   #define private ProtocolCompName ""
   #define private ProtocolCompValue ""
+  #define private ProtocolBaseProtoValue ""
   #define private ReadEntry \
     (LocalProtocolQueue = Trim(LocalProtocolQueue)) != "" ? ( \
-      Local[0] = Pos(",", LocalProtocolQueue), \
+      Local[0] = Pos(";", LocalProtocolQueue), \
       ProtocolEntry = Trim(Copy(LocalProtocolQueue, 1, (Local[0] ? Local[0] - 1 : Len(LocalProtocolQueue)))), \
       Local[1] = Pos("=", ProtocolEntry), \
       ProtocolCompName = Trim(Copy(ProtocolEntry, 1, Local[1] - 1)), \
-      ProtocolCompValue = Trim(Copy(ProtocolEntry, Local[1] + 1)), \
+      Local[2] = Pos(",", ProtocolEntry), \
+      ProtocolCompValue = Trim(Copy(ProtocolEntry, Local[1] + 1, Local[2] - Local[1] - 1)), \
+      ProtocolBaseProtoValue = Trim(Copy(ProtocolEntry, Local[2] + 1)), \
       Delete(LocalProtocolQueue, 1, (Local[0] ? Local[0] : Len(LocalProtocolQueue))) \
     ) : void
   #expr ReadEntry
 #emit ' ; ' + ProtocolCompName
-#if EntriesType == "ProtocolBaseProto"
-Filename: {#CurrentIni}; Section: {#ProtocolCompValue}; Key: AM_BaseProto; String: s{#ProtocolCompValue}; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
-#elif EntriesType == "ProtocolQueue"
+Filename: {#CurrentIni}; Section: {#ProtocolCompValue}; Key: AM_BaseProto; String: s{#ProtocolBaseProtoValue}; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 Filename: {#CurrentIni}; Section: Protocols; Key: {code:GetTempIndex|{#CurrentIni}}; String: s{#ProtocolCompValue}; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 Filename: {#CurrentIni}; Section: Protocols; Key: 2{code:GetTempIndex2|{#CurrentIni}}; String: d{code:GetTempIndex|{#CurrentIni}}; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 Filename: {#CurrentIni}; Section: Protocols; Key: 4{code:GetTempIndex2|{#CurrentIni}}; String: d1; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 Filename: {#CurrentIni}; Section: Protocols; Key: 6{code:GetTempIndex2|{#CurrentIni}}; String: d1; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 Filename: {#CurrentIni}; Section: Protocols; Key: 8{code:GetTempIndex2|{#CurrentIni}}; String: u{#ProtocolCompValue}; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 Filename: {#CurrentIni}; Section: __temp; Key: __count; String: {code:SetTempIndex|{#CurrentIni}};{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
-#endif
 #endsub
 
 #sub SetProtocolsCount
@@ -1465,14 +1431,11 @@ Filename: {#CurrentIni}; Section: __temp; Key: __count; String: {code:SetTempInd
 Filename: {#CurrentIni}; Section: Protocols; Key: ProtoCount; String: d{code:GetTempIndex|{#CurrentIni}}; Flags: uninsdeleteentry; AfterInstall: DeleteIniSection('__temp', ExpandConstant('{#CurrentIni}'));{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 #endsub
 
-#for {CurrentIni = SettingsIni, LocalProtocolQueue = ProtocolBaseProto, EntriesType = "ProtocolBaseProto"; LocalProtocolQueue != ""; void} AddProtocolEntries
-#for {CurrentIni = SettingsIni, LocalProtocolQueue = ProtocolQueue, EntriesType = "ProtocolQueue"; LocalProtocolQueue != ""; void} AddProtocolEntries
+#for {CurrentIni = SettingsIni, LocalProtocolQueue = ProtocolQueue; LocalProtocolQueue != ""; void} AddProtocolEntries
 #expr SetProtocolsCount
-#for {CurrentIni = UpdateIni, LocalProtocolQueue = ProtocolBaseProto, EntriesType = "ProtocolBaseProto"; LocalProtocolQueue != ""; void} AddProtocolEntries
-#for {CurrentIni = UpdateIni, LocalProtocolQueue = ProtocolQueue, EntriesType = "ProtocolQueue"; LocalProtocolQueue != ""; void} AddProtocolEntries
+#for {CurrentIni = UpdateIni, LocalProtocolQueue = ProtocolQueue; LocalProtocolQueue != ""; void} AddProtocolEntries
 #expr SetProtocolsCount
-#for {CurrentIni = AutoexecUpdateIni, LocalProtocolQueue = ProtocolBaseProto, EntriesType = "ProtocolBaseProto"; LocalProtocolQueue != ""; void} AddProtocolEntries
-#for {CurrentIni = AutoexecUpdateIni, LocalProtocolQueue = ProtocolQueue, EntriesType = "ProtocolQueue"; LocalProtocolQueue != ""; void} AddProtocolEntries
+#for {CurrentIni = AutoexecUpdateIni, LocalProtocolQueue = ProtocolQueue; LocalProtocolQueue != ""; void} AddProtocolEntries
 #expr SetProtocolsCount
 
 #define public CListGroup_Info \
@@ -1483,7 +1446,6 @@ Filename: {#CurrentIni}; Section: Protocols; Key: ProtoCount; String: d{code:Get
   "Protocols\Pseudo\YAMN or " + \
   "Protocols\Pseudo\CurrencyRates"
 #define public CListGroup_Bots \
-  "Protocols\EmLanProto or " + \
   "Protocols\GG or " + \
   "Protocols\ICQ\ICQ or " + \
   "Protocols\ICQ\ICQ2 or " + \
@@ -1503,7 +1465,6 @@ Filename: {#CurrentIni}; Section: Protocols; Key: ProtoCount; String: d{code:Get
   "Protocols\VKontakte or " + \
   "Protocols\Jabber\XMPP"
 #define public CListGroup_ChatRooms \
-  "Protocols\EmLanProto or " + \
   "Protocols\GG or " + \
   "Protocols\ICQ\ICQ or " + \
   "Protocols\ICQ\ICQ2 or " + \
