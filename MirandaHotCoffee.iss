@@ -93,6 +93,9 @@
   "Protocols\ICQ\MRA2," + \
   "Protocols\ICQCorp," + \
   "Protocols\IRC," + \
+  "Protocols\Jabber\GMail," + \
+  "Protocols\Jabber\GTalk," + \
+  "Protocols\Jabber\Hangouts," + \
   "Protocols\Jabber\Jabber," + \
   "Protocols\Jabber\Jabberru," + \
   "Protocols\Jabber\LJ," + \
@@ -366,6 +369,15 @@ Source: x86\Skins\Avatars\IRC.png; DestDir: {app}\Skins\Avatars; Flags: ignoreve
 Source: {#AppArch}\Plugins\Jabber.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
 Source: x86\Icons\xStatus_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
 Source: x86\Skins\Avatars\Jabber.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
+ ; Protocols\Jabber\GMail
+Source: x86\Icons\Proto_conn_GMail.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\GMail; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_GMail.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\GMail; AfterInstall: AddDetails;
+ ; Protocols\Jabber\GTalk
+Source: x86\Icons\Proto_conn_GTalk.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\GTalk; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_GTalk.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\GTalk; AfterInstall: AddDetails;
+ ; Protocols\Jabber\Hangouts
+Source: x86\Icons\Proto_conn_Hangouts.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Hangouts; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_Hangouts.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Hangouts; AfterInstall: AddDetails;
  ; Protocols\Jabber\Jabber
 Source: x86\Icons\Proto_conn_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Jabber; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Jabber; AfterInstall: AddDetails;
@@ -598,6 +610,9 @@ Name: Protocols\ICQ\MRA2; Description: {code:ComponentsHelper|ICQ_Protocol_MRA2}
 Name: Protocols\ICQCorp; Description: {code:ComponentsHelper|ICQCorp_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\IRC; Description: {code:ComponentsHelper|IRC_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
+Name: Protocols\Jabber\GMail; Description: {code:ComponentsHelper|Jabber_Protocol_GMail}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\GTalk; Description: {code:ComponentsHelper|Jabber_Protocol_GTalk}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\Hangouts; Description: {code:ComponentsHelper|Jabber_Protocol_Hangouts}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol_Jabber}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\Jabberru; Description: {code:ComponentsHelper|Jabber_Protocol_Jabberru}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber\LJ; Description: {code:ComponentsHelper|Jabber_Protocol_LJ}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
@@ -710,6 +725,9 @@ Name: Protocols\ICQ\MRA2; Description: {code:ComponentsHelper|ICQ_Protocol_MRA2}
 Name: Protocols\ICQCorp; Description: {code:ComponentsHelper|ICQCorp_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\IRC; Description: {code:ComponentsHelper|IRC_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
+Name: Protocols\Jabber\GMail; Description: {code:ComponentsHelper|Jabber_Protocol_GMail}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Jabber\GTalk; Description: {code:ComponentsHelper|Jabber_Protocol_GTalk}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Jabber\Hangouts; Description: {code:ComponentsHelper|Jabber_Protocol_Hangouts}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol_Jabber}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\Jabberru; Description: {code:ComponentsHelper|Jabber_Protocol_Jabberru}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\LJ; Description: {code:ComponentsHelper|Jabber_Protocol_LJ}; Types: full custom; Flags: disablenouninstallwarning;
@@ -1112,7 +1130,7 @@ Filename: {#UpdateIni}; Section: SkinHotKeys; Key: tabsrmm_send; String: w13; Fl
 Filename: {#AutoexecUpdateIni}; Section: SkinHotKeys; Key: tabsrmm_send; String: w525; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendCtrlEnter') and IsUpdate;
 Filename: {#AutoexecUpdateIni}; Section: SkinHotKeys; Key: tabsrmm_send; String: w269; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendShiftEnter') and IsUpdate;
 Filename: {#AutoexecUpdateIni}; Section: SkinHotKeys; Key: tabsrmm_send; String: w13; Flags: uninsdeleteentry; Check: IsSettingChecked('HKSendEnter') and IsUpdate;
- ; Settings Page \ Message sessions \ AutoSizeInputArea... Сombined with LocationTabsMessageWindow
+ ; Settings Page \ Message sessions \ AutoSizeInputArea... Combined with LocationTabsMessageWindow
  ; Settings Page \ Message sessions \ LogStatusChanges
 Filename: {#SettingsIni}; Section: Tab_SRMsg; Key: logstatuschanges; String: b{code:SetBoolSetting|LogStatusChanges}; Flags: uninsdeleteentry;
 Filename: {#UpdateIni}; Section: Tab_SRMsg; Key: logstatuschanges; String: b{code:SetBoolSetting|LogStatusChanges}; Flags: uninsdeleteentry;
@@ -1378,6 +1396,9 @@ Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uPrinting;
   "Protocols\ICQ\ICQ2 = ICQ2,ICQ;" + \
   "Protocols\ICQCorp = ICQCorp,ICQCorp;" + \
   "Protocols\IRC = IRC,IRC;" + \
+  "Protocols\Jabber\GMail = GMail,Dummy;" + \
+  "Protocols\Jabber\GTalk = GTalk,Dummy;" + \
+  "Protocols\Jabber\Hangouts = Hangouts,Dummy;" + \
   "Protocols\Jabber\Jabber = Jabber,JABBER;" + \
   "Protocols\Jabber\Jabberru = Jabberru,JABBER;" + \
   "Protocols\Jabber\LJ = LJ,JABBER;" + \
@@ -1416,7 +1437,7 @@ Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uPrinting;
       Delete(LocalProtocolQueue, 1, (Local[0] ? Local[0] : Len(LocalProtocolQueue))) \
     ) : void
   #expr ReadEntry
-#emit ' ; ' + ProtocolCompName
+#emit ' ; ' + (Pos("*", ProtocolCompName) == 1 ? Copy(ProtocolCompName, 2) : ProtocolCompName)
 Filename: {#CurrentIni}; Section: {#ProtocolCompValue}; Key: AM_BaseProto; String: s{#ProtocolBaseProtoValue}; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 Filename: {#CurrentIni}; Section: Protocols; Key: {code:GetTempIndex|{#CurrentIni}}; String: s{#ProtocolCompValue}; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 Filename: {#CurrentIni}; Section: Protocols; Key: 2{code:GetTempIndex2|{#CurrentIni}}; String: d{code:GetTempIndex|{#CurrentIni}}; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
@@ -2605,10 +2626,10 @@ begin
       'TBVisile12':
         Result := Format('%d', [integer(n > 20)]);
     end;
-    // если параметр функции GetCLUIFrames равен EqualSections, ...
-    // то в зависимости от числа протоколов n ...
-    // результатом функции будет '1' (от 1 до 5 протоколов)...
-    // иначе '0' (6 или 7 протоколов)
+    // esli parametr funkcii GetCLUIFrames raven EqualSections, ...
+    // to v zavisimosti ot chisla protokolov n ...
+    // rezultatom funkcii budet '1' (ot 1 do 5 protokolov)...
+    // inache '0' (6 ili 7 protokolov)
     case Param of
       'EqualSections':
         case n of
@@ -10039,7 +10060,7 @@ begin
   DeleteFile(ExpandConstant(strFile));
 end;
 
-//компиляция прервётся, создастся файл GenerateCheck.iss после отработки препроцессором, в таком виде скрипт уже поступает на обработку компилятору, можно посмотреть, что там оно нагенерило.
+//generiruem fail GenerateCheck.iss... v takom vide skript postupaet na obrabotku kompilyatoru
 #if generatecheck == 1
 #expr SaveToFile(SourcePath + "GenerateCheck.iss")
 #pragma error "Stop compile"
