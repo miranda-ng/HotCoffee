@@ -369,15 +369,6 @@ Source: x86\Skins\Avatars\IRC.png; DestDir: {app}\Skins\Avatars; Flags: ignoreve
 Source: {#AppArch}\Plugins\Jabber.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
 Source: x86\Icons\xStatus_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
 Source: x86\Skins\Avatars\Jabber.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
- ; Protocols\Jabber\GMail
-Source: x86\Icons\Proto_conn_GMail.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\GMail; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_GMail.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\GMail; AfterInstall: AddDetails;
- ; Protocols\Jabber\GTalk
-Source: x86\Icons\Proto_conn_GTalk.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\GTalk; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_GTalk.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\GTalk; AfterInstall: AddDetails;
- ; Protocols\Jabber\Hangouts
-Source: x86\Icons\Proto_conn_Hangouts.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Hangouts; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_Hangouts.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Hangouts; AfterInstall: AddDetails;
  ; Protocols\Jabber\Jabber
 Source: x86\Icons\Proto_conn_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Jabber; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Jabber; AfterInstall: AddDetails;
