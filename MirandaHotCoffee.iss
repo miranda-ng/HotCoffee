@@ -429,7 +429,9 @@ Source: {#AppArch}\Plugins\GmailNotifier.dll; DestDir: {app}\Plugins; Flags: ign
  ; Protocols\Pseudo\mRadio
 Source: {#AppArch}\Plugins\mRadio.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
 Source: {#AppArch}\Plugins\BASS\*; DestDir: {app}\Plugins\BASS; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
-Source: x86\Plugins\mRadio\*; DestDir: {app}\Plugins\mRadio; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
+Source: x86\Plugins\mRadio\*; DestDir: {app}\Plugins\mRadio; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
+Source: x86\Plugins\mRadio\en\Radio.ini; DestDir: {app}\Plugins\mRadio; Languages: en; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
+Source: x86\Plugins\mRadio\ru\Radio.ini; DestDir: {app}\Plugins\mRadio; Languages: ru; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_mRadio.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
 Source: x86\Skins\Avatars\mRadio.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\Pseudo\mRadio; AfterInstall: AddDetails;
  ; Protocols\Pseudo\NewsAggregator

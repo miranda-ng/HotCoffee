@@ -2,7 +2,7 @@
 -----a. сервис 'mRadio/Import' существует;
 -----b. существует ли в БД в секции FirstRun ключ Lua_mRadio (byte) и значение = 0.
 -----c. существует ли файл mRadio.ini
---1. Отсчёт 40 минут после старта...
+--1. Отсчёт 30 минут после старта...
 --2. Проверяем существует ли сервис 'mRadio/Import', если существует, то едем дальше..., иначе брейк
 --3. Указываем путь к файлу mRadio.ini
 --4. Проверяем существует ли в БД в секции FirstRun ключ Lua_mRadio, и существует ли файл mRadio.ini,
@@ -24,9 +24,9 @@ if not m.ServiceExists('mRadio/Import') then
   return
 end
 
-  local mRadioIniPath = toansi(m.Parse('%miranda_path%\\Plugins\\mRadio\\mRadio.ini'))
+  local mRadioIniPath = toansi(m.Parse('%miranda_path%\\Plugins\\mRadio\\Radio.ini'))
 
-schedule.At(os.time() + 2400).Do(function()
+schedule.At(os.time() + 1800).Do(function()
   if db.GetSetting(_, 'FirstRun', 'Lua_mRadio', 0) == 0 and globals.FileExists(mRadioIniPath) then
     m.CallService('mRadio/Import', 0, mRadioIniPath)
     db.WriteSetting(_, 'FirstRun', 'Lua_mRadio', 1, db.DBVT_BYTE)
