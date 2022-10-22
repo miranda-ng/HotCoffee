@@ -62,6 +62,9 @@
 #define AppExeName AppArch == "x86" ? "Miranda32.exe" : "Miranda64.exe"
 #define AppExeOppName AppArch == "x86" ? "Miranda64.exe" : "Miranda32.exe"
 
+#define ProtoICQ "Protocols\ICQ\ICQ or Protocols\ICQ\ICQ2 or Protocols\ICQ\MRA or Protocols\ICQ\MRA2"
+#define ProtoJABBER "Protocols\Jabber\Jabber or Protocols\Jabber\Jabberru or Protocols\Jabber\LJ or Protocols\Jabber\OK or Protocols\Jabber\XMPP"
+
  ; defaults
 #define TypeDefault "optimal"
 #define SelectedTasksDefault "curuser"
@@ -244,6 +247,11 @@ Source: {#AppArch}\Core\*; DestDir: {app}\Core; Flags: ignoreversion; Components
  ; Icons
 Source: x86\Icons\Custom_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_conn.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_MetaContacts.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Icons\TabSRMM_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\Icons\Toolbar_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+ ; Icons for deprecated protocols
+Source: x86\Icons\Proto_AIM.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Discord.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Dummy.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Facebook.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
@@ -251,11 +259,6 @@ Source: x86\Icons\Proto_GMail.dll; DestDir: {app}\Icons; Flags: ignoreversion; C
 Source: x86\Icons\Proto_Google.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_GTalk.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Hangouts.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_MetaContacts.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons\TabSRMM_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons\Toolbar_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
- ; Icons for protocols deprecated
-Source: x86\Icons\Proto_AIM.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_MSN.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Yahoo.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Yandex.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
@@ -340,7 +343,7 @@ Source: {#AppArch}\Plugins\GG.dll; DestDir: {app}\Plugins; Flags: ignoreversion;
 Source: x86\Icons\Proto_conn_GG.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\GG; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_GG.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\GG; AfterInstall: AddDetails;
  ; Protocols\ICQ
-Source: {#AppArch}\Plugins\ICQ.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\ICQ; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\ICQ.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: {#ProtoICQ}; AfterInstall: AddDetails;
  ; Protocols\ICQ\ICQ
 Source: x86\Icons\Proto_conn_ICQ.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\ICQ; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_ICQ.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\ICQ; AfterInstall: AddDetails;
@@ -363,9 +366,9 @@ Source: x86\Icons\Proto_conn_IRC.dll; DestDir: {app}\Icons; Flags: ignoreversion
 Source: x86\Icons\Proto_IRC.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\IRC; AfterInstall: AddDetails;
 Source: x86\Skins\Avatars\IRC.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\IRC; AfterInstall: AddDetails;
  ; Protocols\Jabber
-Source: {#AppArch}\Plugins\Jabber.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
-Source: x86\Icons\xStatus_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
-Source: x86\Skins\Avatars\Jabber.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: Protocols\Jabber; AfterInstall: AddDetails;
+Source: {#AppArch}\Plugins\Jabber.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: {#ProtoJABBER}; AfterInstall: AddDetails;
+Source: x86\Icons\xStatus_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: {#ProtoJABBER}; AfterInstall: AddDetails;
+Source: x86\Skins\Avatars\Jabber.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: {#ProtoJABBER}; AfterInstall: AddDetails;
  ; Protocols\Jabber\Jabber
 Source: x86\Icons\Proto_conn_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Jabber; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Jabber; AfterInstall: AddDetails;
@@ -2616,10 +2619,10 @@ begin
       'TBVisile12':
         Result := Format('%d', [integer(n > 20)]);
     end;
-    // esli parametr funkcii GetCLUIFrames raven EqualSections, ...
-    // to v zavisimosti ot chisla protokolov n ...
-    // rezultatom funkcii budet '1' (ot 1 do 5 protokolov)...
-    // inache '0' (6 ili 7 protokolov)
+    // If the GetCLUIFrames function parameter is equal to EqualSections, ...
+    // then depending on the number of protocols n ...
+    // the result of the function will be '1' (from 1 to 5 protocols)...
+    // else '0' (6 or 7 protocols)
     case Param of
       'EqualSections':
         case n of
@@ -10050,7 +10053,7 @@ begin
   DeleteFile(ExpandConstant(strFile));
 end;
 
-//generiruem fail GenerateCheck.iss... v takom vide skript postupaet na obrabotku kompilyatoru
+//Generating a file GenerateCheck.iss. In this form, the script is sent to the compiler for processing.
 #if generatecheck == 1
 #expr SaveToFile(SourcePath + "GenerateCheck.iss")
 #pragma error "Stop compile"
