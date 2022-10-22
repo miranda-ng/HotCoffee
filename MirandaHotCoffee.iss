@@ -93,9 +93,6 @@
   "Protocols\ICQ\MRA2," + \
   "Protocols\ICQCorp," + \
   "Protocols\IRC," + \
-  "Protocols\Jabber\GMail," + \
-  "Protocols\Jabber\GTalk," + \
-  "Protocols\Jabber\Hangouts," + \
   "Protocols\Jabber\Jabber," + \
   "Protocols\Jabber\Jabberru," + \
   "Protocols\Jabber\LJ," + \
