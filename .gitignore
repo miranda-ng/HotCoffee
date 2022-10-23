@@ -1,8 +1,14 @@
 .tools/InnoRT/
-.x_srcs/*
-.x_srcs/xx_srcs/
 !.x_srcs/IconPatcher
 .x_srcs/IconPatcher/output/*.exe
+.x_srcs/**/*.dll
+.x_srcs/Icons
+.x_srcs/Installer
+.x_srcs/Profiles
+.x_srcs/Screens
+.x_srcs/Scripts
+.x_srcs/Skins
+.x_srcs/UserSet
 !.x_srcs/ini
 !.x_srcs/web
 !xx_srcs.bat
