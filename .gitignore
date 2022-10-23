@@ -7,6 +7,12 @@
 !.x_srcs/web
 !xx_srcs.bat
 !ToDo.iss
+Resources/
+!Resources/*.isl
+!Resources/*.rtf
+*.bmp
+*.gif
+*.png
 output/
 x64/
 x86/
