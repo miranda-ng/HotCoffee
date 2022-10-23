@@ -2,6 +2,7 @@
 !.x_srcs/IconPatcher
 .x_srcs/IconPatcher/output/*.exe
 .x_srcs/**/*.dll
+.x_srcs/**/*.ico
 .x_srcs/Icons
 .x_srcs/Installer
 .x_srcs/Profiles
