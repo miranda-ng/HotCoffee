@@ -123,24 +123,25 @@ if /i "%query%" == "s" (
 )
 
 rem Download resources
-if exist "Resources\icon.ico" goto :downloadsources
+if exist "Resources\icon.ico" goto :DownloadSources
 set "dest=%~dp0Resources.7z"
 call :download "https://miranda-ng.org/distr/packs/HotCoffee/.Resources.7z" "%dest%"
 call :extract "%dest%" "Resources"
 del /q "%dest%" 2>nul
 
 rem Download sources
-:downloadsources
-if exist "Sources\Icons\Custom_icons.dll" goto :downloaddebag
+:DownloadSources
+if exist "Sources\Icons\Custom_icons.dll" goto :CopySourcesFolders
 set "dest=%~dp0Sources.7z"
 call :download "https://miranda-ng.org/distr/packs/HotCoffee/.Sources.7z" "%dest%"
 call :extract "%dest%" "Sources"
 del /q "%dest%" 2>nul
 
-xcopy "Sources" "%~dp0x86"
+rem Copy Sources folders
+:CopySourcesFolders
+xcopy /s /q "Sources" "x86"
 
 rem Download debug
-:downloaddebag
 if exist "output/debug/debug.exe" goto :Icons
 set "dest=%~dp0debug.7z"
 call :download "https://miranda-ng.org/distr/packs/HotCoffee/.debug.7z" "%dest%"
