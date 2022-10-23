@@ -1385,13 +1385,13 @@ Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uPrinting;
   "*MetaContacts = MetaContacts,MetaContacts;" + \
   "Protocols\EmLanProto = EM_LAN_PROTO,EM_LAN_PROTO;" + \
   "Protocols\GG = GG,GG;" + \
+  "Protocols\Jabber\GMail = GMail,Dummy;" + \
+  "Protocols\Jabber\GTalk = GTalk,Dummy;" + \
+  "Protocols\Jabber\Hangouts = Hangouts,Dummy;" + \
   "Protocols\ICQ\ICQ = ICQ,ICQ;" + \
   "Protocols\ICQ\ICQ2 = ICQ2,ICQ;" + \
   "Protocols\ICQCorp = ICQCorp,ICQCorp;" + \
   "Protocols\IRC = IRC,IRC;" + \
-  "Protocols\Jabber\GMail = GMail,Dummy;" + \
-  "Protocols\Jabber\GTalk = GTalk,Dummy;" + \
-  "Protocols\Jabber\Hangouts = Hangouts,Dummy;" + \
   "Protocols\Jabber\Jabber = Jabber,JABBER;" + \
   "Protocols\Jabber\Jabberru = Jabberru,JABBER;" + \
   "Protocols\Jabber\LJ = LJ,JABBER;" + \
