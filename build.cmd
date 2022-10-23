@@ -131,6 +131,7 @@ del /q "%dest%" 2>nul
 
 rem Download sources
 :downloadsources
+if exist "Sources\Icons\Custom_icons.dll" goto :downloaddebag
 set "dest=%~dp0Sources.7z"
 call :download "https://miranda-ng.org/distr/packs/HotCoffee/.Sources.7z" "%dest%"
 call :extract "%dest%" "Sources"
@@ -139,6 +140,7 @@ del /q "%dest%" 2>nul
 xcopy "Sources" "%~dp0x86"
 
 rem Download debug
+:downloaddebag
 if exist "output/debug/debug.exe" goto :Icons
 set "dest=%~dp0debug.7z"
 call :download "https://miranda-ng.org/distr/packs/HotCoffee/.debug.7z" "%dest%"

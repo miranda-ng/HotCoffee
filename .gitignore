@@ -10,6 +10,13 @@
 Resources/
 !Resources/*.isl
 !Resources/*.rtf
+Sources/**/*.7z
+Sources/**/*.dll
+Sources/**/*.exe
+Sources/**/*.ico
+Sources/**/*.mp3
+Sources/**/*.wav
+Sources/**/*.swf
 *.bmp
 *.gif
 *.png
