@@ -246,12 +246,12 @@
 <div class="status Status">
 	<div class="head">
 		<div class="date">%date%</div>
-		<div class="name">%proto%</div>
+		<div class="name">%name%</div>
 	</div>
 	<div class="contentStatus">
 		<div class="text">
 			<div class="time">%time%</div>
-			%name% %text%
+			%text%
 		</div>
 	</div>
 	<script>ProcessGroup(Status);</script>
@@ -261,12 +261,12 @@
 <div class="status hStatus">
 	<div class="head">
 		<div class="date">%date%</div>
-		<div class="name">%proto%</div>
+		<div class="name">%name%</div>
 	</div>
 	<div class="contenthStatus">
 		<div class="text">
 			<div class="time">%time%</div>
-			%name% %text%
+			%text%
 		</div>
 	</div>
 	<script>ProcessGroup(hStatus);</script>
