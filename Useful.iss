@@ -1,4 +1,5 @@
 El Sanchez
+1.
 если в секции Protocols понадобится ставить значение 0, на ключиках начинающихся с цифры 4 и 6, например для протокола Steam, это можно сделать так:
 String: d{#if ProtocolCompName == "Protocols\Steam"}0{#else}1{#endif};
 если понадобится 0 для нескольких протоколов, тогда так:
@@ -14,3 +15,26 @@ begin
     (CompareText(AParam, 'Protocols\Steam') = 0) then
       Result := '0';
 end;
+
+2.
+если какие-то протоколы больше не поддерживаются, то как сделать так чтобы эти протоколы были видны в окне выбора компонентов, только если IsUpdate и только если они были установлены предыдущей установкой:
+[Components]
+Check: IsUpdate and IsNeedComponent('Protocols\Jabber\GTalk')
+[Code]
+function IsNeedComponent(const ACompName: string): Boolean;
+begin
+  Result := True;
+  with TStringList.Create do
+  try
+    Sorted := True;
+    CommaText := GetSetupPreviousData('Inno Setup: Selected Components', '');
+    Result := IndexOf(Lowercase(ACompName)) > -1;
+  finally
+    Free;
+  end;
+end;
+
+3.
+если для протоколов Dropbox, GDrive, OneDrive и YandexDisk значение ключа AM_BaseProto должно быть таким: CloudFile/Dropbox, CloudFile/GDrive, CloudFile/OneDrive и CloudFile/YandexDisk соответственно, тогда пишем так:
+[INI]
+String: s{#if Pos("CloudFile/", ProtocolCompName) > 0}CloudFile/{#endif}{#ProtocolCompValue};
