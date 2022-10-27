@@ -603,9 +603,9 @@ Name: Protocols\ICQ\MRA2; Description: {code:ComponentsHelper|ICQ_Protocol_MRA2}
 Name: Protocols\ICQCorp; Description: {code:ComponentsHelper|ICQCorp_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\IRC; Description: {code:ComponentsHelper|IRC_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
-Name: Protocols\Jabber\GMail; Description: {code:ComponentsHelper|Jabber_Protocol_GMail}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning; Check: IsUpdate and IsNeedComponent('Protocols\Jabber\GMail');
-Name: Protocols\Jabber\GTalk; Description: {code:ComponentsHelper|Jabber_Protocol_GTalk}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning; Check: IsUpdate and IsNeedComponent('Protocols\Jabber\GTalk');
-Name: Protocols\Jabber\Hangouts; Description: {code:ComponentsHelper|Jabber_Protocol_Hangouts}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning; Check: IsUpdate and IsNeedComponent('Protocols\Jabber\Hangouts');
+Name: Protocols\Jabber\GMail; Description: {code:ComponentsHelper|Jabber_Protocol_GMail}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\GTalk; Description: {code:ComponentsHelper|Jabber_Protocol_GTalk}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\Hangouts; Description: {code:ComponentsHelper|Jabber_Protocol_Hangouts}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol_Jabber}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\Jabberru; Description: {code:ComponentsHelper|Jabber_Protocol_Jabberru}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber\LJ; Description: {code:ComponentsHelper|Jabber_Protocol_LJ}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
@@ -718,9 +718,9 @@ Name: Protocols\ICQ\MRA2; Description: {code:ComponentsHelper|ICQ_Protocol_MRA2}
 Name: Protocols\ICQCorp; Description: {code:ComponentsHelper|ICQCorp_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\IRC; Description: {code:ComponentsHelper|IRC_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
-Name: Protocols\Jabber\GMail; Description: {code:ComponentsHelper|Jabber_Protocol_GMail}; Types: full custom; Flags: disablenouninstallwarning; Check: IsUpdate and IsNeedComponent('Protocols\Jabber\GMail');
-Name: Protocols\Jabber\GTalk; Description: {code:ComponentsHelper|Jabber_Protocol_GTalk}; Types: full custom; Flags: disablenouninstallwarning; Check: IsUpdate and IsNeedComponent('Protocols\Jabber\GTalk');
-Name: Protocols\Jabber\Hangouts; Description: {code:ComponentsHelper|Jabber_Protocol_Hangouts}; Types: full custom; Flags: disablenouninstallwarning; Check: IsUpdate and IsNeedComponent('Protocols\Jabber\Hangouts');
+Name: Protocols\Jabber\GMail; Description: {code:ComponentsHelper|Jabber_Protocol_GMail}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\GTalk; Description: {code:ComponentsHelper|Jabber_Protocol_GTalk}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\Hangouts; Description: {code:ComponentsHelper|Jabber_Protocol_Hangouts}; Types: full custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol_Jabber}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\Jabberru; Description: {code:ComponentsHelper|Jabber_Protocol_Jabberru}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\LJ; Description: {code:ComponentsHelper|Jabber_Protocol_LJ}; Types: full custom; Flags: disablenouninstallwarning;
@@ -2589,20 +2589,6 @@ begin
   Result := StringOfChar(#0, GetWindowTextLength(hWnd) + 1);
   GetWindowText(hWnd, Result, Length(Result));
   Result := TrimRight(Result);
-end;
-
-///////////////////////////////////////////////////////////
-function IsNeedComponent(const ACompName: string): Boolean;
-begin
-  Result := True;
-  with TStringList.Create do
-  try
-    Sorted := True;
-    CommaText := GetSetupPreviousData('Inno Setup: Selected Components', '');
-    Result := IndexOf(Lowercase(ACompName)) > -1;
-  finally
-    Free;
-  end;
 end;
 
 ////////////////////////////////////////////////////
