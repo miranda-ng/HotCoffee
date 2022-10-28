@@ -25,7 +25,7 @@
 
 #define AppVerMajor "1"
 #define AppVerMinor "0"
-#define AppStatus "Alpha"                                                   ; must be Test, Alpha, Beta or Final
+#define AppStatus "Test"                                                   ; must be Test, Alpha, Beta or Final
 #define AppRelease "R57"
 #define AppVer AppVerMajor + "." + AppVerMinor
 #define AppFullVer AppVer + " " + AppStatus + " " + AppRelease
@@ -255,10 +255,6 @@ Source: x86\Icons\Proto_AIM.dll; DestDir: {app}\Icons; Flags: ignoreversion; Com
 Source: x86\Icons\Proto_Discord.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Dummy.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Facebook.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_GMail.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_Google.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_GTalk.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_Hangouts.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_MSN.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Yahoo.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Yandex.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
@@ -369,6 +365,14 @@ Source: x86\Skins\Avatars\IRC.png; DestDir: {app}\Skins\Avatars; Flags: ignoreve
 Source: {#AppArch}\Plugins\Jabber.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: {#ProtoJABBER}; AfterInstall: AddDetails;
 Source: x86\Icons\xStatus_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: {#ProtoJABBER}; AfterInstall: AddDetails;
 Source: x86\Skins\Avatars\Jabber.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: {#ProtoJABBER}; AfterInstall: AddDetails;
+ ; Protocols\Jabber\GMail
+Source: x86\Icons\Proto_GMail.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\GMail; AfterInstall: AddDetails;
+ ; Protocols\Jabber\Google
+Source: x86\Icons\Proto_Google.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Google; AfterInstall: AddDetails;
+ ; Protocols\Jabber\GTalk
+Source: x86\Icons\Proto_GTalk.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\GTalk; AfterInstall: AddDetails;
+ ; Protocols\Jabber\Hangouts
+Source: x86\Icons\Proto_Hangouts.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Hangouts; AfterInstall: AddDetails;
  ; Protocols\Jabber\Jabber
 Source: x86\Icons\Proto_conn_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Jabber; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Jabber; AfterInstall: AddDetails;
@@ -604,6 +608,7 @@ Name: Protocols\ICQCorp; Description: {code:ComponentsHelper|ICQCorp_Protocol}; 
 Name: Protocols\IRC; Description: {code:ComponentsHelper|IRC_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
 Name: Protocols\Jabber\GMail; Description: {code:ComponentsHelper|Jabber_Protocol_GMail}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\Google; Description: {code:ComponentsHelper|Jabber_Protocol_Google}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber\GTalk; Description: {code:ComponentsHelper|Jabber_Protocol_GTalk}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber\Hangouts; Description: {code:ComponentsHelper|Jabber_Protocol_Hangouts}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol_Jabber}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
@@ -719,8 +724,9 @@ Name: Protocols\ICQCorp; Description: {code:ComponentsHelper|ICQCorp_Protocol}; 
 Name: Protocols\IRC; Description: {code:ComponentsHelper|IRC_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
 Name: Protocols\Jabber\GMail; Description: {code:ComponentsHelper|Jabber_Protocol_GMail}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\Google; Description: {code:ComponentsHelper|Jabber_Protocol_Google}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber\GTalk; Description: {code:ComponentsHelper|Jabber_Protocol_GTalk}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Jabber\Hangouts; Description: {code:ComponentsHelper|Jabber_Protocol_Hangouts}; Types: full custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\Hangouts; Description: {code:ComponentsHelper|Jabber_Protocol_Hangouts}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol_Jabber}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\Jabberru; Description: {code:ComponentsHelper|Jabber_Protocol_Jabberru}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\LJ; Description: {code:ComponentsHelper|Jabber_Protocol_LJ}; Types: full custom; Flags: disablenouninstallwarning;
@@ -1386,6 +1392,7 @@ Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uPrinting;
   "Protocols\EmLanProto = EM_LAN_PROTO,EM_LAN_PROTO;" + \
   "Protocols\GG = GG,GG;" + \
   "Protocols\Jabber\GMail = GMail,Dummy;" + \
+  "Protocols\Jabber\Google = Google,Dummy;" + \
   "Protocols\Jabber\GTalk = GTalk,Dummy;" + \
   "Protocols\Jabber\Hangouts = Hangouts,Dummy;" + \
   "Protocols\ICQ\ICQ = ICQ,ICQ;" + \
@@ -1536,6 +1543,11 @@ Filename: {#CurrentIni}; Section: Protocols; Key: ProtoCount; String: d{code:Get
   "Protocols\VKontakte"
 #define public CListGroup_mRadio \
   "Protocols\Pseudo\mRadio"
+#define public CListGroup_Dummy \
+  "Protocols\Jabber\GMail or " + \
+  "Protocols\Jabber\Google or " + \
+  "Protocols\Jabber\GTalk or " + \
+  "Protocols\Jabber\Hangouts"
 
 #sub AddCListGroupEntries
  ; CListGroup: Info
@@ -1564,6 +1576,8 @@ Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#Curren
 Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|VKontakte"; Flags: uninsdeleteentry; Components: {#CListGroup_VKontakte};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
  ; CListGroup: mRadio
 Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|mRadio"; Flags: uninsdeleteentry; Components: {#CListGroup_mRadio};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
+ ; CListGroup: Dummy
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Dummy"; Flags: uninsdeleteentry; Components: {#CListGroup_Dummy};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
  ; Delete temp counter
 Filename: {#CurrentIni}; Section: CListGroups; AfterInstall: DeleteIniSection('__temp', ExpandConstant('{#CurrentIni}'));{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 #endsub

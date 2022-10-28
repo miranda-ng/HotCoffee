@@ -1,4 +1,5 @@
-El Sanchez
+Ответы и подсказки от El Sanchez
+
 1.
 если в секции Protocols понадобится ставить значение 0, на ключиках начинающихся с цифры 4 и 6, например для протокола Steam, это можно сделать так:
 String: d{#if ProtocolCompName == "Protocols\Steam"}0{#else}1{#endif};
@@ -34,7 +35,6 @@ begin
   end;
 end;
 
-3.
-если для протоколов Dropbox, GDrive, OneDrive и YandexDisk значение ключа AM_BaseProto должно быть таким: CloudFile/Dropbox, CloudFile/GDrive, CloudFile/OneDrive и CloudFile/YandexDisk соответственно, тогда пишем так:
+если ProtocolCompName содержит в имени "CloudFile/", тогда пишем CloudFile/ перед ProtocolCompValue:
 [INI]
 String: s{#if Pos("CloudFile/", ProtocolCompName) > 0}CloudFile/{#endif}{#ProtocolCompValue};
