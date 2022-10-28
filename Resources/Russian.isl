@@ -80,7 +80,7 @@ ButtonNewFolder=&Создать папку
 
 ; *** "Select Language" dialog messages
 SelectLanguageTitle=Выберите язык
-SelectLanguageLabel=Выберите язык, который будет использован как в процессе установки так и в Miranda HotCoffee:
+SelectLanguageLabel=Выберите язык, который будет использован в процессе установки и в Miranda HotCoffee:
 
 ; *** Common wizard text
 ClickNext=Нажмите «Далее», чтобы продолжить, или «Отмена», чтобы выйти из программы установки.
@@ -152,7 +152,7 @@ FullInstallation=Полная установка
 CompactInstallation=Компактная установка
 CustomInstallation=Выборочная установка
 NoUninstallWarningTitle=Установленные компоненты
-NoUninstallWarning=Программа установки обнаружила, что следующие компоненты уже установлены на вашем компьютере:%n%n%1%n%nОтмена выбора этих компонент не удалит их.%n%nПродолжить?
+NoUninstallWarning=Программа установки обнаружила, что следующие компоненты уже установлены на вашем компьютере:%n%n%1%n%nОтмена выбора этих компонентов не удалит их.%n%nПродолжить?
 ComponentSize1=%1 Кб
 ComponentSize2=%1 Мб
 ComponentsDiskSpaceMBLabel=Текущий выбор требует не менее [mb] Мб на диске.
