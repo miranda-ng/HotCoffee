@@ -382,4 +382,4 @@ ComponentListInfoCaption=Наведите курсор на имя компонента, чтобы увидеть его оп
 StylesInfoCaption=Наведите курсор на имя компонента оформления, чтобы увидеть его описание.
 TasksListInfoCaption=Наведите курсор на имя задачи, чтобы увидеть её описание.
 SelectLanguageTitle=Выберите язык
-SelectLanguageLabel=Выберите язык, который будет использован в Miranda HotCoffee, а также в процессе установки:
+SelectLanguageLabel=Выберите язык, который будет использован в процессе установки и в Miranda HotCoffee:

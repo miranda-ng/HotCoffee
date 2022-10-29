@@ -197,8 +197,8 @@ RawDataResource=WizardSmallImage:"Resources\images\WizardSmallImage.bmp"
 #define RecycleLogo "Recycle.bmp"
 
 [Languages]
-Name: en; MessagesFile: Resources\English.isl,Resources\{#AppShortName}_en.isl; LicenseFile: Resources\License_en.rtf; InfoBeforeFile: Resources\InfoBefore_en.rtf; InfoAfterFile: Resources\InfoAfter_en.rtf;
-Name: ru; MessagesFile: Resources\Russian.isl,Resources\{#AppShortName}_ru.isl; LicenseFile: Resources\License_ru.rtf; InfoBeforeFile: Resources\InfoBefore_ru.rtf; InfoAfterFile: Resources\InfoAfter_ru.rtf;
+Name: en; MessagesFile: compiler:Languages\English.isl,Resources\{#AppShortName}_en.isl; LicenseFile: Resources\License_en.rtf; InfoBeforeFile: Resources\InfoBefore_en.rtf; InfoAfterFile: Resources\InfoAfter_en.rtf;
+Name: ru; MessagesFile: compiler:Languages\Russian.isl,Resources\{#AppShortName}_ru.isl; LicenseFile: Resources\License_ru.rtf; InfoBeforeFile: Resources\InfoBefore_ru.rtf; InfoAfterFile: Resources\InfoAfter_ru.rtf;
 
 [Messages]
 BeveledLabel={#AppName} {#AppFullVer} ({#AppArch}) © {#AppPublisher}, 2010 - {#GetDateTimeString('yyyy', '', '')}
