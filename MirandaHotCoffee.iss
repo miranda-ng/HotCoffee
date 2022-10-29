@@ -2,7 +2,7 @@
 #define generatecheck 0                                                     ; only for developers: 0 - generate check off, 1 - generate check on
 #define splash 1                                                            ; splash screen: 0 - splash off, 1 - splash on
 #define aero 0                                                              ; aero theme: 0 - disable, 1 - full, 2 - top, 3 - bottom, 4 - top/bottom.
-#define fulltype 1                                                          ; full type: 0 - disable, 1 - enable
+#define fulltype 0                                                          ; full type: 0 - disable, 1 - enable
 #define freezecheckbox 0                                                    ; freeze check box: 0 - disable, 1 - enable
 #define mirandeddirname 0                                                   ; miranded dir name: 0 - disable, 1 - enable
 
@@ -25,7 +25,7 @@
 
 #define AppVerMajor "1"
 #define AppVerMinor "0"
-#define AppStatus "Test"                                                   ; must be Test, Alpha, Beta or Final
+#define AppStatus "Alpha"                                                   ; must be Test, Alpha, Beta or Final
 #define AppRelease "R57"
 #define AppVer AppVerMajor + "." + AppVerMinor
 #define AppFullVer AppVer + " " + AppStatus + " " + AppRelease
