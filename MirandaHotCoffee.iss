@@ -109,7 +109,7 @@
   "Protocols\Tox," + \
   "Protocols\Twitter," + \
   "Protocols\VKontakte," + \
-  "Protocols\Pseudo\WebView"
+  "Protocols\WhatsApp"
 
 #dim theme[33]
 #define theme[0] "Default_Miranda"
@@ -254,8 +254,6 @@ Source: x86\Icons\TabSRMM_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion;
 Source: x86\Icons\Toolbar_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
  ; Icons for deprecated protocols
 Source: x86\Icons\Proto_AIM.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_Discord.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_Facebook.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_MSN.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Yahoo.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Yandex.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
@@ -428,6 +426,10 @@ Source: {#AppArch}\Plugins\VKontakte.dll; DestDir: {app}\Plugins; Flags: ignorev
 Source: x86\Icons\Proto_conn_VKontakte.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\VKontakte; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_VKontakte.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\VKontakte; AfterInstall: AddDetails;
 Source: x86\Skins\Smileys\stickers\VK\*; DestDir: {app}\Skins\Smileys\stickers\VK; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Protocols\VKontakte; AfterInstall: AddDetails;
+ ; Protocols\WhatsApp
+Source: {#AppArch}\Plugins\WhatsApp.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\WhatsApp; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_conn_WhatsApp.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\WhatsApp; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_WhatsApp.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\WhatsApp; AfterInstall: AddDetails;
  ; Protocols\Pseudo
  ; Protocols\Pseudo\CurrencyRates
 Source: {#AppArch}\Plugins\CurrencyRates.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\CurrencyRates; AfterInstall: AddDetails;
@@ -632,6 +634,7 @@ Name: Protocols\Steam; Description: {code:ComponentsHelper|Steam_Protocol}; Type
 Name: Protocols\Tox; Description: {code:ComponentsHelper|TOX_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Twitter; Description: {code:ComponentsHelper|Twitter_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\VKontakte; Description: {code:ComponentsHelper|VKontakte_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\WhatsApp; Description: {code:ComponentsHelper|WhatsApp_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Pseudo; Description: {code:ComponentsHelper|Pseudo_Protocols}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
 Name: Protocols\Pseudo\CurrencyRates; Description: {code:ComponentsHelper|CurrencyRates_Pseudo_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Pseudo\GmailNotifier; Description: {code:ComponentsHelper|GmailNotifier_Pseudo_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
@@ -750,6 +753,7 @@ Name: Protocols\Steam; Description: {code:ComponentsHelper|Steam_Protocol}; Type
 Name: Protocols\Tox; Description: {code:ComponentsHelper|TOX_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Twitter; Description: {code:ComponentsHelper|Twitter_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\VKontakte; Description: {code:ComponentsHelper|VKontakte_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\WhatsApp; Description: {code:ComponentsHelper|WhatsApp_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Pseudo; Description: {code:ComponentsHelper|Pseudo_Protocols}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
 Name: Protocols\Pseudo\CurrencyRates; Description: {code:ComponentsHelper|CurrencyRates_Pseudo_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Pseudo\GmailNotifier; Description: {code:ComponentsHelper|GmailNotifier_Pseudo_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
@@ -1394,7 +1398,6 @@ Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uPrinting;
 
 #define ProtocolQueue \
   "Protocols\Pseudo\NewsAggregator = NewsAggregator,NewsAggregator;" + \
-  "Protocols\Pseudo\WebView = WebView,WebView;" + \
   "Protocols\Pseudo\Weather = Weather,Weather;" + \
   "Protocols\Pseudo\GmailNotifier = GmailMNotifier,GmailMNotifier;" + \
   "Protocols\Pseudo\YAMN = YAMN,YAMN;" + \
@@ -1425,6 +1428,7 @@ Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uPrinting;
   "Protocols\Tox = TOX,TOX;" + \
   "Protocols\Twitter = Twitter,Twitter;" + \
   "Protocols\VKontakte = VKontakte,VKontakte;" + \
+  "Protocols\WhatsApp = WhatsApp,WhatsApp;" + \
   "Protocols\Jabber\XMPP = XMPP,JABBER;" + \
   "Protocols\Pseudo\mRadio = mRadio,mRadio;" + \
   "*CloudFile/Dropbox = Dropbox,CloudFile/Dropbox;" + \
@@ -1556,6 +1560,8 @@ Filename: {#CurrentIni}; Section: Protocols; Key: ProtoCount; String: d{code:Get
   "Protocols\Twitter"
 #define public CListGroup_VKontakte \
   "Protocols\VKontakte"
+#define public CListGroup_WhatsApp \
+  "Protocols\WhatsApp"
 #define public CListGroup_mRadio \
   "Protocols\Pseudo\mRadio"
 #define public CListGroup_Dummy \
@@ -1592,6 +1598,8 @@ Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#Curren
 Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Twitter"; Flags: uninsdeleteentry; Components: {#CListGroup_Twitter};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
  ; CListGroup: VKontakte
 Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|VKontakte"; Flags: uninsdeleteentry; Components: {#CListGroup_VKontakte};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
+ ; CListGroup: WhatsApp
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|WhatsApp"; Flags: uninsdeleteentry; Components: {#CListGroup_WhatsApp};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
  ; CListGroup: mRadio
 Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|mRadio"; Flags: uninsdeleteentry; Components: {#CListGroup_mRadio};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
  ; CListGroup: Dummy
