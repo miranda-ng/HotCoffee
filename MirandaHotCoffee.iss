@@ -66,7 +66,7 @@
 #define ProtoJABBER "Protocols\Jabber\Jabber or Protocols\Jabber\Jabberru or Protocols\Jabber\LJ or Protocols\Jabber\OK or Protocols\Jabber\XMPP"
 
  ; defaults
-#define TypeDefault "optimal"
+#define TypeDefault "custom"
 #define SelectedTasksDefault "curuser"
 #define SelectedSettingsDefault \
   "UpdateSettings" + "," + AppMirDevOrStab + "," + \
@@ -89,6 +89,7 @@
 
 #define CLUIFrames \
   "Protocols\EmLanProto," + \
+  "Protocols\Facebook," + \
   "Protocols\GG," + \
   "Protocols\ICQ\ICQ," + \
   "Protocols\ICQ\ICQ2," + \
@@ -331,9 +332,15 @@ Source: {#AppArch}\pu_stub.exe; DestDir: {app}; Flags: ignoreversion; Components
 Source: x86\mirandaboot.ini; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 
  ; Protocols
+ ; Protocols\Discord
+Source: x86\Icons\Proto_Discord.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Discord; AfterInstall: AddDetails;
  ; Protocols\EmLanProto
 Source: {#AppArch}\Plugins\EmLanProto.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\EmLanProto; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_EM_LAN_PROTO.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\EmLanProto; AfterInstall: AddDetails;
+ ; Protocols\Facebook
+Source: {#AppArch}\Plugins\Facebook.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Facebook; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_conn_Facebook.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Facebook; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_Facebook.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Facebook; AfterInstall: AddDetails;
  ; Protocols\GG
 Source: {#AppArch}\Plugins\GG.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\GG; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_conn_GG.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\GG; AfterInstall: AddDetails;
@@ -597,7 +604,9 @@ Name: MainCore; Description: {code:ComponentsHelper|CoreFiles}; Types: minimal o
 
  ; Protocols
 Name: Protocols; Description: {code:ComponentsHelper|Protocols}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
+Name: Protocols\Discord; Description: {code:ComponentsHelper|Discord_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\EmLanProto; Description: {code:ComponentsHelper|EmLanProto_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Facebook; Description: {code:ComponentsHelper|Facebook_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\GG; Description: {code:ComponentsHelper|GG_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\ICQ; Description: {code:ComponentsHelper|ICQ_Protocol}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
 Name: Protocols\ICQ\ICQ; Description: {code:ComponentsHelper|ICQ_Protocol_ICQ}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
@@ -607,10 +616,10 @@ Name: Protocols\ICQ\MRA2; Description: {code:ComponentsHelper|ICQ_Protocol_MRA2}
 Name: Protocols\ICQCorp; Description: {code:ComponentsHelper|ICQCorp_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\IRC; Description: {code:ComponentsHelper|IRC_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol}; Types: minimal optimal advanced custom; Flags: collapsed disablenouninstallwarning;
-Name: Protocols\Jabber\GMail; Description: {code:ComponentsHelper|Jabber_Protocol_GMail}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning fixed;
-Name: Protocols\Jabber\Google; Description: {code:ComponentsHelper|Jabber_Protocol_Google}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning fixed;
-Name: Protocols\Jabber\GTalk; Description: {code:ComponentsHelper|Jabber_Protocol_GTalk}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning fixed;
-Name: Protocols\Jabber\Hangouts; Description: {code:ComponentsHelper|Jabber_Protocol_Hangouts}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning fixed;
+Name: Protocols\Jabber\GMail; Description: {code:ComponentsHelper|Jabber_Protocol_GMail}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\Google; Description: {code:ComponentsHelper|Jabber_Protocol_Google}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\GTalk; Description: {code:ComponentsHelper|Jabber_Protocol_GTalk}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\Hangouts; Description: {code:ComponentsHelper|Jabber_Protocol_Hangouts}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol_Jabber}; Types: minimal optimal advanced custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\Jabberru; Description: {code:ComponentsHelper|Jabber_Protocol_Jabberru}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber\LJ; Description: {code:ComponentsHelper|Jabber_Protocol_LJ}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
@@ -713,7 +722,9 @@ Name: MainCore; Description: {code:ComponentsHelper|CoreFiles}; Types: minimal o
 
  ; Protocols
 Name: Protocols; Description: {code:ComponentsHelper|Protocols}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Discord; Description: {code:ComponentsHelper|Discord_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\EmLanProto; Description: {code:ComponentsHelper|EmLanProto_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
+Name: Protocols\Facebook; Description: {code:ComponentsHelper|Facebook_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\GG; Description: {code:ComponentsHelper|GG_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\ICQ; Description: {code:ComponentsHelper|ICQ_Protocol}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
 Name: Protocols\ICQ\ICQ; Description: {code:ComponentsHelper|ICQ_Protocol_ICQ}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
@@ -723,10 +734,10 @@ Name: Protocols\ICQ\MRA2; Description: {code:ComponentsHelper|ICQ_Protocol_MRA2}
 Name: Protocols\ICQCorp; Description: {code:ComponentsHelper|ICQCorp_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\IRC; Description: {code:ComponentsHelper|IRC_Protocol}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol}; Types: minimal optimal advanced full custom; Flags: collapsed disablenouninstallwarning;
-Name: Protocols\Jabber\GMail; Description: {code:ComponentsHelper|Jabber_Protocol_GMail}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning fixed;
-Name: Protocols\Jabber\Google; Description: {code:ComponentsHelper|Jabber_Protocol_Google}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning fixed;
-Name: Protocols\Jabber\GTalk; Description: {code:ComponentsHelper|Jabber_Protocol_GTalk}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning fixed;
-Name: Protocols\Jabber\Hangouts; Description: {code:ComponentsHelper|Jabber_Protocol_Hangouts}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning fixed;
+Name: Protocols\Jabber\GMail; Description: {code:ComponentsHelper|Jabber_Protocol_GMail}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\Google; Description: {code:ComponentsHelper|Jabber_Protocol_Google}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\GTalk; Description: {code:ComponentsHelper|Jabber_Protocol_GTalk}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\Hangouts; Description: {code:ComponentsHelper|Jabber_Protocol_Hangouts}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Jabber\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol_Jabber}; Types: minimal optimal advanced full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\Jabberru; Description: {code:ComponentsHelper|Jabber_Protocol_Jabberru}; Types: full custom; Flags: disablenouninstallwarning;
 Name: Protocols\Jabber\LJ; Description: {code:ComponentsHelper|Jabber_Protocol_LJ}; Types: full custom; Flags: disablenouninstallwarning;
@@ -1389,7 +1400,9 @@ Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uPrinting;
   "Protocols\Pseudo\YAMN = YAMN,YAMN;" + \
   "Protocols\Pseudo\CurrencyRates = CurrencyRates,CurrencyRates;" + \
   "*MetaContacts = MetaContacts,MetaContacts;" + \
+  "Protocols\Discord = Discord,Discord;" + \
   "Protocols\EmLanProto = EM_LAN_PROTO,EM_LAN_PROTO;" + \
+  "Protocols\Facebook = Facebook,Facebook;" + \
   "Protocols\GG = GG,GG;" + \
   "Protocols\Jabber\GMail = GMail,Dummy;" + \
   "Protocols\Jabber\Google = Google,Dummy;" + \
@@ -1529,6 +1542,8 @@ Filename: {#CurrentIni}; Section: Protocols; Key: ProtoCount; String: d{code:Get
   "Protocols\ICQ\ICQ2 or " + \
   "Protocols\ICQ\MRA or " + \
   "Protocols\ICQ\MRA2"
+#define public CListGroup_Facebook \
+  "Protocols\Facebook"
 #define public CListGroup_OK \
   "Protocols\Jabber\OK"
 #define public CListGroup_Skype \
@@ -1544,6 +1559,7 @@ Filename: {#CurrentIni}; Section: Protocols; Key: ProtoCount; String: d{code:Get
 #define public CListGroup_mRadio \
   "Protocols\Pseudo\mRadio"
 #define public CListGroup_Dummy \
+  "Protocols\Discord or " + \
   "Protocols\Jabber\GMail or " + \
   "Protocols\Jabber\Google or " + \
   "Protocols\Jabber\GTalk or " + \
@@ -1562,6 +1578,8 @@ Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#Curren
 Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|General"; Flags: uninsdeleteentry; Components: {#CListGroup_General};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
  ; CListGroup: Phone Contacts
 Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Phone Contacts"; Flags: uninsdeleteentry; Components: {#CListGroup_PhoneContacts};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
+ ; CListGroup: Facebook
+Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|Facebook"; Flags: uninsdeleteentry; Components: {#CListGroup_Facebook};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
  ; CListGroup: OK
 Filename: {#CurrentIni}; Section: CListGroups; Key: {code:SetTempIndex2|{#CurrentIni}}; String: "u|OK"; Flags: uninsdeleteentry; Components: {#CListGroup_OK};{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
  ; CListGroup: Skype
@@ -8638,16 +8656,17 @@ begin
 
   { SelectComponentsPage }
       // check/enable components
-  with TStringList.Create do
+  TempList := TStringList.Create;
+  with TempList do
   try
     Sorted := True;
+    CommaText := GetSetupPreviousDataEx('Inno Setup: Selected Components', '');
     with WizardForm.ComponentsList do
     begin
-      CommaText := GetSetupPreviousDataEx('Inno Setup: Selected Components', '');
       for i := 0 to ItemCount - 1 do
       begin
         if IsUpdate then
-          Checked[i] := Find(g_ComponentsHelper[i].szInternalName, Index);
+          Checked[i] := TempList.Find(g_ComponentsHelper[i].szInternalName, Index);
 
         // disable previous installed themes
         case g_ComponentsHelper[i].szInternalName of
@@ -8684,18 +8703,44 @@ begin
           'Resources\Themes\Textolite_Gray_Light':
             ItemEnabled[i] := not IsUpdate or not Checked[i];
         end;
+
+        // disable deprecated protocols
+        case g_ComponentsHelper[i].szInternalName of
+          'Protocols\Discord',
+          'Protocols\Jabber\GMail',
+          'Protocols\Jabber\Google',
+          'Protocols\Jabber\GTalk',
+          'Protocols\Jabber\Hangouts':
+            begin
+              ItemEnabled[i] := TempList.Find(g_ComponentsHelper[i].szInternalName, Index);
+              if not IsUpdate then
+                Checked[i] := False;
+            end;
+        end;
       end;
     end;
   finally
     Free;
   end;
+
       // types
+  WizardForm.TypesCombo.ItemIndex := -1;
+  S := GetSetupPreviousDataEx('Inno Setup: Setup Type', '{#TypeDefault}');
   for i := 0 to GetArrayLength(g_TypesHelper) - 1 do
-    if CompareText(g_TypesHelper[i].szInternalName, GetSetupPreviousDataEx('Inno Setup: Setup Type', '{#TypeDefault}')) = 0 then
+    if CompareText(g_TypesHelper[i].szInternalName, S) = 0 then
     begin
       WizardForm.TypesCombo.ItemIndex := i;
       Break;
     end;
+  if WizardForm.TypesCombo.ItemIndex = -1 then
+  begin
+    for i := 0 to GetArrayLength(g_TypesHelper) - 1 do
+      if CompareText(g_TypesHelper[i].szInternalName, '{#TypeDefault}') = 0 then
+      begin
+        WizardForm.TypesCombo.ItemIndex := i;
+        Break;
+      end;
+  end;
   WizardForm.TypesCombo.OnChange(WizardForm.TypesCombo);
 
   { SelectProgramGroupPage }
@@ -8814,16 +8859,17 @@ begin
   if CompareText(szPreviousSelectedPortableAppPath, RemoveQuotes(WizardDirValue)) = 0 then Exit;
 
   { SelectComponentsPage }
-  with TStringList.Create do
+  TempList := TStringList.Create;
+  with TempList do
   try
     Sorted := True;
+    CommaText := ExpandConstant('{ini:{app}\Profiles\{#AppINI},{#AppNameSetup},SelectedComponents|}');
     with WizardForm.ComponentsList do
     begin
-      CommaText := ExpandConstant('{ini:{app}\Profiles\{#AppINI},{#AppNameSetup},SelectedComponents|}');
       for i := 0 to ItemCount - 1 do
       begin
         if (CompareText(Param, 'FoundPortableVerUpdateActivateInfo') = 0) then
-          Checked[i] := Find(g_ComponentsHelper[i].szInternalName, Index);
+          Checked[i] := TempList.Find(g_ComponentsHelper[i].szInternalName, Index);
 
         // disable previous installed themes
         case g_ComponentsHelper[i].szInternalName of
@@ -8858,20 +8904,47 @@ begin
           'Resources\Themes\Textolite_Brown_Light',
           'Resources\Themes\Textolite_Gray_Dark',
           'Resources\Themes\Textolite_Gray_Light':
-            ItemEnabled[i] := (CompareText(Param, 'RestorePortableSettings') = 0) or ((CompareText(Param, 'FoundPortableVerUpdateActivateInfo') = 0) and not Checked[i]);
+            ItemEnabled[i] := (CompareText(Param, 'RestorePortableSettings') = 0) or
+              ((CompareText(Param, 'FoundPortableVerUpdateActivateInfo') = 0) and not Checked[i]);
+        end;
+
+        // disable deprecated protocols
+        case g_ComponentsHelper[i].szInternalName of
+          'Protocols\Discord',
+          'Protocols\Jabber\GMail',
+          'Protocols\Jabber\Google',
+          'Protocols\Jabber\GTalk',
+          'Protocols\Jabber\Hangouts':
+            begin
+              ItemEnabled[i] := TempList.Find(g_ComponentsHelper[i].szInternalName, Index);
+              if not IsUpdate then
+                Checked[i] := False;
+            end;
         end;
       end;
     end;
   finally
     Free;
   end;
+
       // types
+  WizardForm.TypesCombo.ItemIndex := -1;
+  S := ExpandConstant('{ini:{app}\Profiles\{#AppINI},{#AppNameSetup},SetupType|{#TypeDefault}}');
   for i := 0 to GetArrayLength(g_TypesHelper) - 1 do
-    if CompareText(g_TypesHelper[i].szInternalName, ExpandConstant('{ini:{app}\Profiles\{#AppINI},{#AppNameSetup},SetupType|{#TypeDefault}}')) = 0 then
+    if CompareText(g_TypesHelper[i].szInternalName, S) = 0 then
     begin
+      WizardForm.TypesCombo.ItemIndex := i;
+      Break;
+    end;
+  if WizardForm.TypesCombo.ItemIndex = -1 then
+  begin
+    for i := 0 to GetArrayLength(g_TypesHelper) - 1 do
+      if CompareText(g_TypesHelper[i].szInternalName, '{#TypeDefault}') = 0 then
+      begin
         WizardForm.TypesCombo.ItemIndex := i;
         Break;
-    end;
+      end;
+  end;
   WizardForm.TypesCombo.OnChange(WizardForm.TypesCombo);
 
   { SettingsPage }
@@ -8882,7 +8955,8 @@ begin
     Sorted := True;
     Duplicates := dupIgnore;
     CommaText := ExpandConstant('{ini:{app}\Profiles\{#AppINI},{#AppNameSetup},SelectedSettings|{#SelectedSettingsDefault}}');
-    if IsUpdate then with TStringList.Create do
+    if IsUpdate then
+    with TStringList.Create do
     try
       Sorted := True;
       Duplicates := dupIgnore;
