@@ -5,6 +5,7 @@
 #define fulltype 0                                                          ; full type: 0 - disable, 1 - enable
 #define freezecheckbox 0                                                    ; freeze check box: 0 - disable, 1 - enable
 #define mirandeddirname 0                                                   ; miranded dir name: 0 - disable, 1 - enable
+#define AppSkinUp 1                                                         ; selective skin if IsUpdate: 0 - disable, 1 - enable
 
 #define AppId "HotCoffee™"
 #define AppName "Miranda NG HotCoffee"
@@ -48,8 +49,6 @@
 
 #define AppWidth "65"                                                       ; Increasing width of the client
 #define AppHeight "25"                                                      ; Increasing height of the client
-
-#define AppSkinUp "1"                                                       ; selective skin if IsUpdate: 0 - disable, 1 - enable
 
 #define AppPublisher "HotCoffee™"
 
@@ -574,29 +573,14 @@ Source: x86\Skins\{#theme[i]}.ini; DestDir: {app}\Skins; Flags: ignoreversion; C
 #endsub
 #for {i = 2; i < 33; i++} AddTheme
  ; copy autoexec_skin.ini for clean installation default themes
-#if AppSkinUp == "0"
-Source: x86\Skins\Default_Miranda.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Default_Miranda') and not IsUpdate; AfterInstall: AddDetails;
-Source: x86\Skins\Current_Windows.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Current_Windows') and not IsUpdate; AfterInstall: AddDetails;
-#endif
-#if AppSkinUp == "1"
-Source: x86\Skins\Default_Miranda.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Default_Miranda'); AfterInstall: AddDetails;
-Source: x86\Skins\Current_Windows.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Current_Windows'); AfterInstall: AddDetails;
-#endif
+Source: x86\Skins\Default_Miranda.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Default_Miranda'){#if AppSkinUp == 0} and not IsUpdate;{#else};{#endif} AfterInstall: AddDetails;
+Source: x86\Skins\Current_Windows.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_Current_Windows'){#if AppSkinUp == 0} and not IsUpdate;{#else};{#endif} AfterInstall: AddDetails;
  ; copy autoexec_skin.ini for clean installation custom themes
-#if AppSkinUp == "0"
 #define public i 2
 #sub AddThemeAutoexecSkin
-Source: x86\Skins\{#theme[i]}.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_{#theme[i]}') and not IsUpdate; AfterInstall: AddDetails;
+Source: x86\Skins\{#theme[i]}.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_{#theme[i]}'){#if AppSkinUp == 0} and not IsUpdate;{#else};{#endif} AfterInstall: AddDetails;
 #endsub
 #for {i = 2; i < 33; i++} AddThemeAutoexecSkin
-#endif
-#if AppSkinUp == "1"
-#define public i 2
-#sub AddThemeAutoexecSkin
-Source: x86\Skins\{#theme[i]}.ini; DestDir: {app}\Profiles; DestName: autoexec_skin.ini; Flags: ignoreversion; Check: IsStyleChecked('Skin_{#theme[i]}'); AfterInstall: AddDetails;
-#endsub
-#for {i = 2; i < 33; i++} AddThemeAutoexecSkin
-#endif
 #endif
 
 [Components]
@@ -1267,22 +1251,12 @@ Filename: {#CurrentIni}; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; 
 #expr CurrentIni = AutoexecUpdateIni
 #expr SetIniDialogFontSize
  ; DialogFontSize write to autoexec theme.ini
-#if AppSkinUp == "0"
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0') and not IsUpdate;
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1') and not IsUpdate;
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2') and not IsUpdate;
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3') and not IsUpdate;
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4') and not IsUpdate;
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5') and not IsUpdate;
-#endif
-#if AppSkinUp == "1"
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0');
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1');
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2');
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3');
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4');
-Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5');
-#endif
+Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-12; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,0'){#if AppSkinUp == 0} and not IsUpdate;{#else};{#endif}
+Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-13; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,1'){#if AppSkinUp == 0} and not IsUpdate;{#else};{#endif}
+Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-15; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,2'){#if AppSkinUp == 0} and not IsUpdate;{#else};{#endif}
+Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-16; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,3'){#if AppSkinUp == 0} and not IsUpdate;{#else};{#endif}
+Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-19; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,4'){#if AppSkinUp == 0} and not IsUpdate;{#else};{#endif}
+Filename: {app}\Profiles\autoexec_skin.ini; Section: TabSRMM_Fonts; Key: Font16Size; String: b-21; Flags: uninsdeleteentry; Check: IsAdditionalSettingChecked('DialogFontSize,5'){#if AppSkinUp == 0} and not IsUpdate;{#else};{#endif}
 #define public i 0
 #sub AddDefaultThemeIni
  ; DialogFontSize write to default theme.ini
@@ -9387,7 +9361,7 @@ begin
     StylesPage.ID:
       with StylesPage.CheckListBox do
       begin
-      #if AppSkinUp == "0"
+      #if AppSkinUp == 0
         bUpdate := not IsUpdate;
       #else
         bUpdate := True;
@@ -9395,7 +9369,7 @@ begin
         for i := 0 to GetArrayLength(g_StylesHelper) - 1 do
         case g_StylesHelper[i].szInternalName of
           { enabled/disabled skins }
-        #if AppSkinUp == "0"
+        #if AppSkinUp == 0
           'Skin_Default_Miranda',
           'Skin_Current_Windows':
             ItemEnabled[i] := bUpdate;
