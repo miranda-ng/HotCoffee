@@ -5,7 +5,7 @@
 #define fulltype 0                                                          ; full type: 0 - disable, 1 - enable
 #define freezecheckbox 0                                                    ; freeze check box: 0 - disable, 1 - enable
 #define mirandeddirname 0                                                   ; miranded dir name: 0 - disable, 1 - enable
-#define AppSkinUp 1                                                         ; selective skin if IsUpdate: 0 - disable, 1 - enable
+#define AppSkinUp 1                                                         ; choosing a skin on the page 'Appearance' (if IsUpdate): 0 - disable, 1 - enable
 
 #define AppId "HotCoffee™"
 #define AppName "Miranda NG HotCoffee"

@@ -12,7 +12,6 @@
 .x_srcs/UserSet
 !.x_srcs/ini
 !.x_srcs/web
-!xx_srcs.bat
 !ToDo.iss
 Resources/
 !Resources/*.isl
@@ -27,6 +26,7 @@ Sources/**/*.swf
 *.bmp
 *.gif
 *.png
+GenerateCheck.iss
 output/
 x64/
 x86/
