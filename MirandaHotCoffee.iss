@@ -65,7 +65,8 @@
 #define ProtoJABBER "Protocols\Jabber\Jabber or Protocols\Jabber\Jabberru or Protocols\Jabber\LJ or Protocols\Jabber\OK or Protocols\Jabber\XMPP"
 
  ; defaults
-#define TypeDefault "custom"
+#define TypeDefault "optimal"
+#define TypeCustom "custom"
 #define SelectedTasksDefault "curuser"
 #define SelectedSettingsDefault \
   "UpdateSettings" + "," + AppMirDevOrStab + "," + \
@@ -8717,7 +8718,7 @@ begin
   if WizardForm.TypesCombo.ItemIndex = -1 then
   begin
     for i := 0 to GetArrayLength(g_TypesHelper) - 1 do
-      if CompareText(g_TypesHelper[i].szInternalName, '{#TypeDefault}') = 0 then
+      if CompareText(g_TypesHelper[i].szInternalName, '{#TypeCustom}') = 0 then
       begin
         WizardForm.TypesCombo.ItemIndex := i;
         Break;
@@ -8921,7 +8922,7 @@ begin
   if WizardForm.TypesCombo.ItemIndex = -1 then
   begin
     for i := 0 to GetArrayLength(g_TypesHelper) - 1 do
-      if CompareText(g_TypesHelper[i].szInternalName, '{#TypeDefault}') = 0 then
+      if CompareText(g_TypesHelper[i].szInternalName, '{#TypeCustom}') = 0 then
       begin
         WizardForm.TypesCombo.ItemIndex := i;
         Break;
