@@ -5,6 +5,7 @@
 #define fulltype 0                                                          ; full type: 0 - disable, 1 - enable
 #define freezecheckbox 0                                                    ; freeze check box: 0 - disable, 1 - enable
 #define mirandeddirname 0                                                   ; miranded dir name: 0 - disable, 1 - enable
+#define SelSkinUp 0                                                         ; choosing a skin on the page 'Select Components' (if IsUpdate): 0 - disable, 1 - enable
 #define AppSkinUp 1                                                         ; choosing a skin on the page 'Appearance' (if IsUpdate): 0 - disable, 1 - enable
 
 #define AppId "HotCoffee™"
@@ -8652,6 +8653,7 @@ begin
           Checked[i] := TempList.Find(g_ComponentsHelper[i].szInternalName, Index);
 
         // disable previous installed themes
+      #if SelSkinUp == 0
         case g_ComponentsHelper[i].szInternalName of
           'Resources\Themes\Custom_Miranda',
           'Resources\Themes\Custom_Miranda_Dark',
@@ -8686,7 +8688,7 @@ begin
           'Resources\Themes\Textolite_Gray_Light':
             ItemEnabled[i] := not IsUpdate or not Checked[i];
         end;
-
+      #endif
         // disable deprecated protocols
         case g_ComponentsHelper[i].szInternalName of
           'Protocols\Discord',
@@ -8855,6 +8857,7 @@ begin
           Checked[i] := TempList.Find(g_ComponentsHelper[i].szInternalName, Index);
 
         // disable previous installed themes
+      #if SelSkinUp == 0
         case g_ComponentsHelper[i].szInternalName of
           'Resources\Themes\Custom_Miranda',
           'Resources\Themes\Custom_Miranda_Dark',
@@ -8890,7 +8893,7 @@ begin
             ItemEnabled[i] := (CompareText(Param, 'RestorePortableSettings') = 0) or
               ((CompareText(Param, 'FoundPortableVerUpdateActivateInfo') = 0) and not Checked[i]);
         end;
-
+      #endif
         // disable deprecated protocols
         case g_ComponentsHelper[i].szInternalName of
           'Protocols\Discord',
