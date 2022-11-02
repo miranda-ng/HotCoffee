@@ -2632,7 +2632,7 @@ begin
           41..50: Result := '93';
         end;
       'TBVisile12':
-        Result := Format('%d', [integer(n > 20)]);
+        Result := Format('%d', [integer(n > 10)]);
     end;
     // If the GetCLUIFrames function parameter is equal to EqualSections, ...
     // then depending on the number of protocols n ...
