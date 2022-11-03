@@ -149,7 +149,7 @@ rem Copy Sources folder
 :CopySourcesFolders
 xcopy /s /q "Sources" "x86"
 
-rem Icons
+rem Icons patch
 pushd "%~dp0x86\Skins\IconPacks"
 <nul set /p "=%patchingicons%"
 (
