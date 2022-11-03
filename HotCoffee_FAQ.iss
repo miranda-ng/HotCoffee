@@ -16,6 +16,8 @@ begin
     (CompareText(AParam, 'Protocols\Steam') = 0) then
       Result := '0';
 end;
+если ProtocolCompName содержит в имени "CloudFile/", тогда пишем CloudFile/ перед ProtocolCompValue:
+String: s{#if Pos("CloudFile/", ProtocolCompName) > 0}CloudFile/{#endif}{#ProtocolCompValue};
 
 2.
 если какие-то протоколы больше не поддерживаются, то как сделать так чтобы эти протоколы были видны в окне выбора компонентов, только если IsUpdate и только если они были установлены предыдущей установкой:
@@ -34,7 +36,3 @@ begin
     Free;
   end;
 end;
-
-если ProtocolCompName содержит в имени "CloudFile/", тогда пишем CloudFile/ перед ProtocolCompValue:
-[INI]
-String: s{#if Pos("CloudFile/", ProtocolCompName) > 0}CloudFile/{#endif}{#ProtocolCompValue};

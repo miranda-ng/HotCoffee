@@ -164,8 +164,8 @@ popd
 rem Compile
 <nul set /p "=%compilesetup%"
 (
-	.tools\InnoRT\iscc.exe /dAppArch=x64 MirandaHotCoffee.iss /q
-	.tools\InnoRT\iscc.exe /dAppArch=x86 MirandaHotCoffee.iss /q
+	.tools\InnoRT\iscc.exe /dAppArch=x64 HotCoffee.iss /q
+	.tools\InnoRT\iscc.exe /dAppArch=x86 HotCoffee.iss /q
 ) 2>err&&echo:OK||(echo:%fail%&type err)
 
 rem Delete x86, x64 dirs
