@@ -46,7 +46,7 @@ if not exist "%b7zip%" set b7zip=%~dp0.tools\7z.exe
 if not exist "%b7zip%" goto :err_2
 
 rem Check Inno Setup
-if exist ".tools\InnoRT\Compil32.exe" goto :recreatedirs
+if exist ".tools\InnoRT\Compil32.exe" goto :DownloadDebug
 :checkinnosetup
 set query=
 set /p "query=%needcompilerprompt%"
@@ -56,6 +56,23 @@ set "dest=%~dp0InnoRT.7z"
 call :download "https://miranda-ng.org/distr/packs/HotCoffee/.InnoRT.7z" "%dest%"
 call :extract "%dest%" ".tools\InnoRT"
 del /q "%dest%" 2>nul
+
+rem Download debug
+:DownloadDebug
+if exist "output/debug/debug.exe" goto :checkmiranda
+set "dest=%~dp0debug.7z"
+call :download "https://miranda-ng.org/distr/packs/HotCoffee/.debug.7z" "%dest%"
+call :extract "%dest%" "%~dp0output"
+del /q "%dest%" 2>nul
+
+rem Check Miranda
+:checkmiranda
+if not exist "x64\Miranda64.exe" goto :recreatedirs
+
+rem Delete x86, x64 dirs
+set query=y
+if "%allowqueries%" == "0" set /p "query=%deletedirsprompt%"
+if /i not "%query%" == "" if /i not "%query%" == "y" goto :DownloadResources
 
 rem Recreate x86, x64 dirs
 :recreatedirs
@@ -123,6 +140,7 @@ if /i "%query%" == "s" (
 )
 
 rem Download resources
+:DownloadResources
 if exist "Resources\icon.ico" goto :DownloadSources
 set "dest=%~dp0Resources.7z"
 call :download "https://miranda-ng.org/distr/packs/HotCoffee/.Resources.7z" "%dest%"
@@ -131,21 +149,18 @@ del /q "%dest%" 2>nul
 
 rem Download sources
 :DownloadSources
+if exist "x86\Icons\Custom_icons.dll" goto :Compile
+if exist "Sources.7z" goto :ExtractSources
 set "dest=%~dp0Sources.7z"
 call :download "https://miranda-ng.org/distr/packs/HotCoffee/.Sources.7z" "%dest%"
 call :extract "%dest%" "x86"
-del /q "%dest%" 2>nul
-
-rem Download debug
-:DownloadDebug
-if exist "output/debug/debug.exe" goto :CopySourcesFolders
-set "dest=%~dp0debug.7z"
-call :download "https://miranda-ng.org/distr/packs/HotCoffee/.debug.7z" "%dest%"
-call :extract "%dest%" "%~dp0output"
-del /q "%dest%" 2>nul
+goto :CopySources
+:ExtractSources
+set "dest=%~dp0Sources.7z"
+call :extract "%dest%" "x86"
 
 rem Copy Sources folder
-:CopySourcesFolders
+:CopySources
 xcopy /s /q /y "Sources" "x86"
 
 rem Icons patch
@@ -161,6 +176,7 @@ del /f /q err>nul
 popd
 
 rem Compile
+:Compile
 <nul set /p "=%compilesetup%"
 (
 	.tools\InnoRT\iscc.exe /dAppArch=x64 HotCoffee.iss /q
@@ -172,6 +188,9 @@ set query=y
 if "%allowqueries%" == "1" set /p "query=%deletedirsprompt%"
 if /i "%query%" == "y" rd /s /q x86 2>nul&rd /s /q x64 2>nul
 del /f /q "%~dp0err">nul
+
+rem Delete Sources.7z
+if "%allowqueries%" == "1" del /q "%~dp0Sources.7z" 2>nul
 
 :err_0
 echo:%done%
