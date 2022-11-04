@@ -25,8 +25,9 @@ Sources/**/*.swf
 output/
 x64/
 x86/
-Sources.7z
 GenerateCheck.iss
+HotCoffee.cmd
+Sources.7z
 *.bmp
 *.gif
 *.png
