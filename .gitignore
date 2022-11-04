@@ -22,10 +22,12 @@ Sources/**/*.ico
 Sources/**/*.mp3
 Sources/**/*.wav
 Sources/**/*.swf
-*.bmp
-*.gif
-*.png
-GenerateCheck.iss
 output/
 x64/
 x86/
+HotCoffee.cmd
+Sources.7z
+GenerateCheck.iss
+*.bmp
+*.gif
+*.png
