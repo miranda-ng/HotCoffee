@@ -1564,6 +1564,30 @@ fnt1Sty=b1
 [mRadio]
 frame_back=d4609099
 
+[YAPP]
+ColourBg=d4609099
+ColourBorder=d0
+ColourSidebar=d3160628
+ColourTitleUnderline=d6582633
+FontFirst=uVerdana
+FontFirstCol=d15527148
+FontFirstFlags=w288
+FontFirstSet=b0
+FontFirstSize=b-11
+FontFirstSty=b0
+FontSecond=uVerdana
+FontSecondCol=d15527148
+FontSecondFlags=w288
+FontSecondSet=b0
+FontSecondSize=b-11
+FontSecondSty=b0
+FontTime=uVerdana
+FontTimeCol=d15527148
+FontTimeFlags=w288
+FontTimeSet=b0
+FontTimeSize=b-11
+FontTimeSty=b0
+
 
 ;Popup colors
 [BuddyExpectator]
@@ -1684,6 +1708,43 @@ PopTxtClr=d16769220
 Background=d11502981
 Foreground=d16767449
 
+[YAPP]
+GG_Error/BgCol=d7960254
+GG_Error/TextCol=d13355769
+Jabber_Error/BgCol=d7960254
+Jabber_Error/TextCol=d13355769
+Jabberru_Error/BgCol=d7960254
+Jabberru_Error/TextCol=d13355769
+LJ_Error/BgCol=d7960254
+LJ_Error/TextCol=d13355769
+OK_Error/BgCol=d7960254
+OK_Error/TextCol=d13355769
+Sametime_Error/BgCol=d7960254
+Sametime_Error/TextCol=d13355769
+Skype_Error/BgCol=d7960254
+Skype_Error/TextCol=d13355769
+VKontakte_Error/BgCol=d7960254
+VKontakte_Error/TextCol=d13355769
+WhatsApp_Error/BgCol=d7960254
+WhatsApp_Error/TextCol=d13355769
+XMPP_Error/BgCol=d7960254
+XMPP_Error/TextCol=d13355769
+;
+Nudge/BgCol=d6850999
+Nudge/TextCol=d12442109
+;
+GG_Notify/BgCol=d11832427
+GG_Notify/TextCol=d16769220
+Sametime_Notify/BgCol=d11832427
+Sametime_Notify/TextCol=d16769220
+Skype_Notification/BgCol=d11832427
+Skype_Notification/TextCol=d16769220
+VKontakte_Notification/BgCol=d11832427
+VKontakte_Notification/TextCol=d16769220
+;
+Skype_Call/BgCol=d7181933
+Skype_Call/TextCol=d13299914
+
 
 ;Settings
 [FloatingContacts]
@@ -1766,3 +1827,7 @@ ValueIndent=d7
 RoundCorners=b1
 SkinEngine=b1
 SkinName=uWinStyle_Classic_Dark
+
+[YAPP]
+Border=b1
+RoundCorners=b0
