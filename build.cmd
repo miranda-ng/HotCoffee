@@ -150,17 +150,12 @@ del /q "%dest%" 2>nul
 rem Download sources
 :DownloadSources
 if exist "x86\Icons\Custom_icons.dll" goto :CopySrcs
-if exist "Sources.7z" goto :ExtractSources
 set "dest=%~dp0Sources.7z"
 call :download "https://miranda-ng.org/distr/packs/HotCoffee/.Sources.7z" "%dest%"
 call :extract "%dest%" "x86"
-goto :CopySources
-:ExtractSources
-set "dest=%~dp0Sources.7z"
-call :extract "%dest%" "x86"
+del /q "%dest%" 2>nul
 
 rem Copy Sources folder
-:CopySources
 xcopy /s /q /y "Sources" "x86"
 
 rem Icons patch
@@ -179,7 +174,6 @@ goto :Compile
 rem Copy Sources folder
 :CopySrcs
 xcopy /s /q /y "Sources" "x86"
-
 
 rem Compile
 :Compile
