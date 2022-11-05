@@ -531,10 +531,10 @@ Source: {#AppArch}\Plugins\IEView.dll; DestDir: {app}\Plugins; Flags: ignorevers
 Source: x86\Skins\IEView\!tools\filetypes\*; DestDir: {app}\Skins\IEView\!tools\filetypes; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\!tools\fonts\*; DestDir: {app}\Skins\IEView\!tools\fonts; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\!tools\Icons\*; DestDir: {app}\Skins\IEView\!tools\Icons; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\IEView; AfterInstall: AddDetails;
-Source: x86\Skins\IEView\!tools\Icons\packs\fugue.7z; DestDir: {app}\Skins\IEView\!tools\Icons; Check: IsStyleChecked('IconsFugue'); AfterInstall: Extract();
-Source: x86\Skins\IEView\!tools\Icons\packs\ice.7z; DestDir: {app}\Skins\IEView\!tools\Icons; Check: IsStyleChecked('IconsIce'); AfterInstall: Extract();
-Source: x86\Skins\IEView\!tools\Icons\packs\nova.7z; DestDir: {app}\Skins\IEView\!tools\Icons; Check: IsStyleChecked('IconsNova'); AfterInstall: Extract();
-Source: x86\Skins\IEView\!tools\Icons\packs\xpk.7z; DestDir: {app}\Skins\IEView\!tools\Icons; Check: IsStyleChecked('IconsXpk'); AfterInstall: Extract();
+Source: x86\Skins\IEView\!tools\Icons\packs\fugue.7z; DestDir: {app}\Skins\IEView\!tools\Icons; Components: Resources\IEView; Check: IsStyleChecked('IconsFugue'); AfterInstall: Extract();
+Source: x86\Skins\IEView\!tools\Icons\packs\ice.7z; DestDir: {app}\Skins\IEView\!tools\Icons; Components: Resources\IEView; Check: IsStyleChecked('IconsIce'); AfterInstall: Extract();
+Source: x86\Skins\IEView\!tools\Icons\packs\nova.7z; DestDir: {app}\Skins\IEView\!tools\Icons; Components: Resources\IEView; Check: IsStyleChecked('IconsNova'); AfterInstall: Extract();
+Source: x86\Skins\IEView\!tools\Icons\packs\xpk.7z; DestDir: {app}\Skins\IEView\!tools\Icons; Components: Resources\IEView; Check: IsStyleChecked('IconsXpk'); AfterInstall: Extract();
 Source: x86\Skins\IEView\!tools\player\*; DestDir: {app}\Skins\IEView\!tools\player; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\!tools\scripts\*; DestDir: {app}\Skins\IEView\!tools\scripts; Flags: ignoreversion recursesubdirs createallsubdirs; Components: Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\styles\Current_Windows\*; DestDir: {app}\Skins\IEView\styles\Current_Windows; Flags: ignoreversion; Components: Resources\IEView; AfterInstall: AddDetails;
@@ -691,8 +691,8 @@ Name: Resources\Themes\Custom_Miranda_Light; Description: {code:ComponentsHelper
 Name: Resources\Themes\Native_7_Dark; Description: {code:ComponentsHelper|Native_7_Dark}; Types: {#FType}; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Native_7_Light; Description: {code:ComponentsHelper|Native_7_Light}; Types: {#FType}; Flags: disablenouninstallwarning;
  ; Resources\Themes\WinStyle_Classic
-Name: Resources\Themes\WinStyle_Classic_Dark; Description: {code:ComponentsHelper|WinStyle_Classic_Dark}; Types: advanced {#FType}; Flags: disablenouninstallwarning;
-Name: Resources\Themes\WinStyle_Classic_Light; Description: {code:ComponentsHelper|WinStyle_Classic_Light}; Types: advanced {#FType}; Flags: disablenouninstallwarning;
+Name: Resources\Themes\WinStyle_Classic_Dark; Description: {code:ComponentsHelper|WinStyle_Classic_Dark}; Types: optimal advanced {#FType}; Flags: disablenouninstallwarning;
+Name: Resources\Themes\WinStyle_Classic_Light; Description: {code:ComponentsHelper|WinStyle_Classic_Light}; Types: optimal advanced {#FType}; Flags: disablenouninstallwarning;
  ; Resources\Themes\WinStyle
 Name: Resources\Themes\WinStyle_Dark; Description: {code:ComponentsHelper|WinStyle_Dark}; Types: {#FType}; Flags: disablenouninstallwarning;
 Name: Resources\Themes\WinStyle_Light; Description: {code:ComponentsHelper|WinStyle_Light}; Types: {#FType}; Flags: disablenouninstallwarning;
@@ -702,28 +702,28 @@ Name: Resources\Themes\Diplomat_Light; Description: {code:ComponentsHelper|Diplo
  ; Resources\Themes\Glamour
 Name: Resources\Themes\Glamour_Aqua_Dark; Description: {code:ComponentsHelper|Glamour_Aqua_Dark}; Types: advanced {#FType}; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Glamour_Aqua_Light; Description: {code:ComponentsHelper|Glamour_Aqua_Light}; Types: advanced {#FType}; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Glamour_Dark; Description: {code:ComponentsHelper|Glamour_Dark}; Types: advanced {#FType}; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Glamour_Light; Description: {code:ComponentsHelper|Glamour_Light}; Types: advanced {#FType}; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Glamour_Dark; Description: {code:ComponentsHelper|Glamour_Dark}; Types: optimal advanced {#FType}; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Glamour_Light; Description: {code:ComponentsHelper|Glamour_Light}; Types: optimal advanced {#FType}; Flags: disablenouninstallwarning;
  ; Resources\Themes\GoldTime
 Name: Resources\Themes\GoldTime_Dark; Description: {code:ComponentsHelper|GoldTime_Dark}; Types: {#FType}; Flags: disablenouninstallwarning;
 Name: Resources\Themes\GoldTime_Light; Description: {code:ComponentsHelper|GoldTime_Light}; Types: {#FType}; Flags: disablenouninstallwarning;
  ; Resources\Themes\Graphite
 Name: Resources\Themes\Graphite_Brown_Dark; Description: {code:ComponentsHelper|Graphite_Brown_Dark}; Types: optimal advanced {#FType}; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Graphite_Brown_Light; Description: {code:ComponentsHelper|Graphite_Brown_Light}; Types: optimal advanced {#FType}; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Graphite_Gray_Dark; Description: {code:ComponentsHelper|Graphite_Gray_Dark}; Types: optimal advanced {#FType}; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Graphite_Brown_Light; Description: {code:ComponentsHelper|Graphite_Brown_Light}; Types: minimal optimal advanced {#FType}; Flags: disablenouninstallwarning fixed;
+Name: Resources\Themes\Graphite_Gray_Dark; Description: {code:ComponentsHelper|Graphite_Gray_Dark}; Types: minimal optimal advanced {#FType}; Flags: disablenouninstallwarning fixed;
 Name: Resources\Themes\Graphite_Gray_Light; Description: {code:ComponentsHelper|Graphite_Gray_Light}; Types: optimal advanced {#FType}; Flags: disablenouninstallwarning;
  ; Resources\Themes\Notepad
-Name: Resources\Themes\Notepad_Dark; Description: {code:ComponentsHelper|Notepad_Dark}; Types: advanced {#FType}; Flags: disablenouninstallwarning;
-Name: Resources\Themes\Notepad_Light; Description: {code:ComponentsHelper|Notepad_Light}; Types: advanced {#FType}; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Notepad_Dark; Description: {code:ComponentsHelper|Notepad_Dark}; Types: {#FType}; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Notepad_Light; Description: {code:ComponentsHelper|Notepad_Light}; Types: {#FType}; Flags: disablenouninstallwarning;
  ; Resources\Themes\PhotoOne
-Name: Resources\Themes\PhotoOne_Dark; Description: {code:ComponentsHelper|PhotoOne_Dark}; Types: optimal advanced {#FType}; Flags: disablenouninstallwarning;
-Name: Resources\Themes\PhotoOne_Light; Description: {code:ComponentsHelper|PhotoOne_Light}; Types: optimal advanced {#FType}; Flags: disablenouninstallwarning;
+Name: Resources\Themes\PhotoOne_Dark; Description: {code:ComponentsHelper|PhotoOne_Dark}; Types: minimal optimal advanced {#FType}; Flags: disablenouninstallwarning fixed;
+Name: Resources\Themes\PhotoOne_Light; Description: {code:ComponentsHelper|PhotoOne_Light}; Types: minimal optimal advanced {#FType}; Flags: disablenouninstallwarning fixed;
  ; Resources\Themes\Surface
 Name: Resources\Themes\Surface_Black; Description: {code:ComponentsHelper|Surface_Black}; Types: {#FType}; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Surface_White; Description: {code:ComponentsHelper|Surface_White}; Types: {#FType}; Flags: disablenouninstallwarning;
  ; Resources\Themes\Textolite
-Name: Resources\Themes\Textolite_Brown_Dark; Description: {code:ComponentsHelper|Textolite_Brown_Dark}; Types: minimal optimal advanced {#FType}; Flags: disablenouninstallwarning fixed;
-Name: Resources\Themes\Textolite_Brown_Light; Description: {code:ComponentsHelper|Textolite_Brown_Light}; Types: minimal optimal advanced {#FType}; Flags: disablenouninstallwarning fixed;
+Name: Resources\Themes\Textolite_Brown_Dark; Description: {code:ComponentsHelper|Textolite_Brown_Dark}; Types: optimal advanced {#FType}; Flags: disablenouninstallwarning;
+Name: Resources\Themes\Textolite_Brown_Light; Description: {code:ComponentsHelper|Textolite_Brown_Light}; Types: optimal advanced {#FType}; Flags: disablenouninstallwarning;
 Name: Resources\Themes\Textolite_Gray_Dark; Description: {code:ComponentsHelper|Textolite_Gray_Dark}; Types: minimal optimal advanced {#FType}; Flags: disablenouninstallwarning fixed;
 Name: Resources\Themes\Textolite_Gray_Light; Description: {code:ComponentsHelper|Textolite_Gray_Light}; Types: minimal optimal advanced {#FType}; Flags: disablenouninstallwarning fixed;
 
