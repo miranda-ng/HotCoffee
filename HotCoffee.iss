@@ -48,7 +48,7 @@
 #define AppMirFullVer AppMirShortVer + AppMirVerStatusBuild + AppMirVerRevis + AppMirVerHash + AppMirArch
 #define AppMirDevOrStab AppStatus == "Final" ? "StableVersion" : "DevelopmentVersion"
 
-#define AppUpdateVersion "0.96.1.24291,1.0"                                 ; product version update range
+#define AppUpdateVersion "0.95.5.15968,0.95.6.18429,0.96.1.24291,1.0"       ; product version update range
 
 #define AppWidth "65"                                                       ; Increasing width of the client
 #define AppHeight "25"                                                      ; Increasing height of the client
@@ -96,6 +96,9 @@
   "Protocols\GG," + \
   "Protocols\ICQ\ICQ," + \
   "Protocols\ICQ\ICQ2," + \
+  "Protocols\ICQ\ICQ3," + \
+  "Protocols\ICQ\ICQ4," + \
+  "Protocols\ICQ\ICQ5," + \
   "Protocols\ICQ\MRA," + \
   "Protocols\ICQ\MRA2," + \
   "Protocols\ICQCorp," + \
@@ -255,11 +258,6 @@ Source: x86\Icons\Proto_Dummy.dll; DestDir: {app}\Icons; Flags: ignoreversion; C
 Source: x86\Icons\Proto_MetaContacts.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\TabSRMM_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Icons\Toolbar_icons.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
- ; Icons for deprecated protocols
-Source: x86\Icons\Proto_AIM.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_MSN.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_Yahoo.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\Icons\Proto_Yandex.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
  ; Languages
 Source: x86\Languages\langpack_russian.txt; DestDir: {app}\Languages; Languages: ru; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
  ; Libs
@@ -333,6 +331,8 @@ Source: {#AppArch}\pu_stub.exe; DestDir: {app}; Flags: ignoreversion; Components
 Source: x86\mirandaboot.ini; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 
  ; Protocols
+ ; Protocols\AIM
+Source: x86\Icons\Proto_AIM.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\AIM; AfterInstall: AddDetails;
  ; Protocols\Discord
 Source: x86\Icons\Proto_Discord.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Discord; AfterInstall: AddDetails;
  ; Protocols\EmLanProto
@@ -354,6 +354,15 @@ Source: x86\Icons\Proto_ICQ.dll; DestDir: {app}\Icons; Flags: ignoreversion; Com
  ; Protocols\ICQ\ICQ2
 Source: x86\Icons\Proto_conn_ICQ2.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\ICQ2; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_ICQ2.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\ICQ2; AfterInstall: AddDetails;
+ ; Protocols\ICQ\ICQ3
+Source: x86\Icons\Proto_conn_ICQ3.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\ICQ3; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_ICQ3.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\ICQ3; AfterInstall: AddDetails;
+ ; Protocols\ICQ\ICQ4
+Source: x86\Icons\Proto_conn_ICQ4.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\ICQ4; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_ICQ4.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\ICQ4; AfterInstall: AddDetails;
+ ; Protocols\ICQ\ICQ5
+Source: x86\Icons\Proto_conn_ICQ5.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\ICQ5; AfterInstall: AddDetails;
+Source: x86\Icons\Proto_ICQ5.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\ICQ5; AfterInstall: AddDetails;
  ; Protocols\ICQ\MRA
 Source: x86\Icons\Proto_conn_MRA.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\MRA; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_MRA.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\ICQ\MRA; AfterInstall: AddDetails;
@@ -396,6 +405,10 @@ Source: x86\Icons\Proto_OK.dll; DestDir: {app}\Icons; Flags: ignoreversion; Comp
  ; Protocols\Jabber\XMPP
 Source: x86\Icons\Proto_conn_XMPP.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\XMPP; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_XMPP.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\XMPP; AfterInstall: AddDetails;
+ ; Protocols\Jabber\Yandex
+Source: x86\Icons\Proto_Yandex.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\Yandex; AfterInstall: AddDetails;
+ ; Protocols\MSN
+Source: x86\Icons\Proto_MSN.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\MSN; AfterInstall: AddDetails;
  ; Protocols\Omegle
 Source: {#AppArch}\Plugins\Omegle.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Omegle; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_Omegle.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Omegle; AfterInstall: AddDetails;
@@ -433,6 +446,8 @@ Source: x86\Skins\Smileys\stickers\VK\*; DestDir: {app}\Skins\Smileys\stickers\V
 Source: {#AppArch}\Plugins\WhatsApp.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\WhatsApp; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_conn_WhatsApp.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\WhatsApp; AfterInstall: AddDetails;
 Source: x86\Icons\Proto_WhatsApp.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\WhatsApp; AfterInstall: AddDetails;
+ ; Protocols\Yahoo
+Source: x86\Icons\Proto_Yahoo.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Yahoo; AfterInstall: AddDetails;
  ; Protocols\Pseudo
  ; Protocols\Pseudo\CurrencyRates
 Source: {#AppArch}\Plugins\CurrencyRates.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Protocols\Pseudo\CurrencyRates; AfterInstall: AddDetails;
@@ -593,43 +608,50 @@ Name: MainCore; Description: {code:ComponentsHelper|CoreFiles}; Types: minimal o
 
  ; Protocols
 Name: Protocols; Description: {code:ComponentsHelper|Protocols}; Types: minimal optimal advanced {#FType}; Flags: disablenouninstallwarning;
-Name: Protocols\Discord; Description: {code:ComponentsHelper|Discord_Protocol}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\EmLanProto; Description: {code:ComponentsHelper|EmLanProto_Protocol}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\Facebook; Description: {code:ComponentsHelper|Facebook_Protocol}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\GG; Description: {code:ComponentsHelper|GG_Protocol}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\ICQ; Description: {code:ComponentsHelper|ICQ_Protocol}; Types: minimal optimal advanced {#FType}; Flags: collapsed disablenouninstallwarning;
-Name: Protocols\ICQ\ICQ; Description: {code:ComponentsHelper|ICQ_Protocol_ICQ}; Types: minimal optimal advanced {#FType}; Flags: disablenouninstallwarning;
-Name: Protocols\ICQ\ICQ2; Description: {code:ComponentsHelper|ICQ_Protocol_ICQ2}; Types: {#FType}; Flags: disablenouninstallwarning;
-Name: Protocols\ICQ\MRA; Description: {code:ComponentsHelper|ICQ_Protocol_MRA}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\ICQ\MRA2; Description: {code:ComponentsHelper|ICQ_Protocol_MRA2}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\ICQCorp; Description: {code:ComponentsHelper|ICQCorp_Protocol}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\IRC; Description: {code:ComponentsHelper|IRC_Protocol}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol}; Types: minimal optimal advanced {#FType}; Flags: collapsed disablenouninstallwarning;
-Name: Protocols\Jabber\GMail; Description: {code:ComponentsHelper|Jabber_Protocol_GMail}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Jabber\Google; Description: {code:ComponentsHelper|Jabber_Protocol_Google}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Jabber\GTalk; Description: {code:ComponentsHelper|Jabber_Protocol_GTalk}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Jabber\Hangouts; Description: {code:ComponentsHelper|Jabber_Protocol_Hangouts}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
-Name: Protocols\Jabber\Jabber; Description: {code:ComponentsHelper|Jabber_Protocol_Jabber}; Types: minimal optimal advanced {#FType}; Flags: disablenouninstallwarning;
-Name: Protocols\Jabber\Jabberru; Description: {code:ComponentsHelper|Jabber_Protocol_Jabberru}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\Jabber\LJ; Description: {code:ComponentsHelper|Jabber_Protocol_LJ}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\Jabber\OK; Description: {code:ComponentsHelper|Jabber_Protocol_OK}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\Jabber\XMPP; Description: {code:ComponentsHelper|Jabber_Protocol_XMPP}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\Omegle; Description: {code:ComponentsHelper|Omegle_Protocol}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\Sametime; Description: {code:ComponentsHelper|Sametime_Protocol}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\Skype; Description: {code:ComponentsHelper|Skype_Protocol}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\Steam; Description: {code:ComponentsHelper|Steam_Protocol}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\Tox; Description: {code:ComponentsHelper|TOX_Protocol}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\Twitter; Description: {code:ComponentsHelper|Twitter_Protocol}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\VKontakte; Description: {code:ComponentsHelper|VKontakte_Protocol}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\WhatsApp; Description: {code:ComponentsHelper|WhatsApp_Protocol}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\AIM; Description: {code:ComponentsHelper|Protocol_AIM_NS}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Discord; Description: {code:ComponentsHelper|Protocol_Discord_NS}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\EmLanProto; Description: {code:ComponentsHelper|Protocol_EmLanProto}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\Facebook; Description: {code:ComponentsHelper|Protocol_Facebook}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\GG; Description: {code:ComponentsHelper|Protocol_GG}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\ICQ; Description: {code:ComponentsHelper|Protocol_ICQ}; Types: minimal optimal advanced {#FType}; Flags: collapsed disablenouninstallwarning;
+Name: Protocols\ICQ\ICQ; Description: {code:ComponentsHelper|Protocol_ICQ_ICQ}; Types: minimal optimal advanced {#FType}; Flags: disablenouninstallwarning;
+Name: Protocols\ICQ\ICQ2; Description: {code:ComponentsHelper|Protocol_ICQ_ICQ2}; Types: {#FType}; Flags: disablenouninstallwarning;
+Name: Protocols\ICQ\ICQ3; Description: {code:ComponentsHelper|Protocol_ICQ_ICQ3}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\ICQ\ICQ4; Description: {code:ComponentsHelper|Protocol_ICQ_ICQ4}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\ICQ\ICQ5; Description: {code:ComponentsHelper|Protocol_ICQ_ICQ5}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\ICQ\MRA; Description: {code:ComponentsHelper|Protocol_ICQ_MRA}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\ICQ\MRA2; Description: {code:ComponentsHelper|Protocol_ICQ_MRA2}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\ICQCorp; Description: {code:ComponentsHelper|Protocol_ICQCorp}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\IRC; Description: {code:ComponentsHelper|Protocol_IRC}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\Jabber; Description: {code:ComponentsHelper|Protocol_Jabber}; Types: minimal optimal advanced {#FType}; Flags: collapsed disablenouninstallwarning;
+Name: Protocols\Jabber\GMail; Description: {code:ComponentsHelper|Protocol_Jabber_GMail_NS}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\Google; Description: {code:ComponentsHelper|Protocol_Jabber_Google_NS}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\GTalk; Description: {code:ComponentsHelper|Protocol_Jabber_GTalk_NS}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\Hangouts; Description: {code:ComponentsHelper|Protocol_Jabber_Hangouts_NS}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Jabber\Jabber; Description: {code:ComponentsHelper|Protocol_Jabber_Jabber}; Types: minimal optimal advanced {#FType}; Flags: disablenouninstallwarning;
+Name: Protocols\Jabber\Jabberru; Description: {code:ComponentsHelper|Protocol_Jabber_Jabberru}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\Jabber\LJ; Description: {code:ComponentsHelper|Protocol_Jabber_LJ}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\Jabber\OK; Description: {code:ComponentsHelper|Protocol_Jabber_OK}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\Jabber\XMPP; Description: {code:ComponentsHelper|Protocol_Jabber_XMPP}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\Jabber\Yandex; Description: {code:ComponentsHelper|Protocol_Jabber_Yandex_NS}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\MSN; Description: {code:ComponentsHelper|Protocol_MSN_NS}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
+Name: Protocols\Omegle; Description: {code:ComponentsHelper|Protocol_Omegle}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\Sametime; Description: {code:ComponentsHelper|Protocol_Sametime}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\Skype; Description: {code:ComponentsHelper|Protocol_Skype}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\Steam; Description: {code:ComponentsHelper|Protocol_Steam}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\Tox; Description: {code:ComponentsHelper|Protocol_TOX}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\Twitter; Description: {code:ComponentsHelper|Protocol_Twitter}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\VKontakte; Description: {code:ComponentsHelper|Protocol_VKontakte}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\WhatsApp; Description: {code:ComponentsHelper|Protocol_WhatsApp}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\Yahoo; Description: {code:ComponentsHelper|Protocol_YAHOO_NS}; Types: custom; Flags: dontinheritcheck disablenouninstallwarning;
 Name: Protocols\Pseudo; Description: {code:ComponentsHelper|Pseudo_Protocols}; Types: minimal optimal advanced {#FType}; Flags: collapsed disablenouninstallwarning;
-Name: Protocols\Pseudo\CurrencyRates; Description: {code:ComponentsHelper|CurrencyRates_Pseudo_Protocol}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\Pseudo\GmailNotifier; Description: {code:ComponentsHelper|GmailNotifier_Pseudo_Protocol}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\Pseudo\mRadio; Description: {code:ComponentsHelper|mRadio_Pseudo_Protocol}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\Pseudo\NewsAggregator; Description: {code:ComponentsHelper|NewsAggregator_Pseudo_Protocol}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\Pseudo\Weather; Description: {code:ComponentsHelper|Weather_Pseudo_Protocol}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\Pseudo\WebView; Description: {code:ComponentsHelper|WebView_Pseudo_Protocol}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
-Name: Protocols\Pseudo\YAMN; Description: {code:ComponentsHelper|YAMN_Pseudo_Protocol}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\Pseudo\CurrencyRates; Description: {code:ComponentsHelper|Pseudo_Protocol_CurrencyRates}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\Pseudo\GmailNotifier; Description: {code:ComponentsHelper|Pseudo_Protocol_GmailNotifier}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\Pseudo\mRadio; Description: {code:ComponentsHelper|Pseudo_Protocol_mRadio}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\Pseudo\NewsAggregator; Description: {code:ComponentsHelper|Pseudo_Protocol_NewsAggregator}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\Pseudo\Weather; Description: {code:ComponentsHelper|Pseudo_Protocol_Weather}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\Pseudo\WebView; Description: {code:ComponentsHelper|Pseudo_Protocol_WebView}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
+Name: Protocols\Pseudo\YAMN; Description: {code:ComponentsHelper|Pseudo_Protocol_YAMN}; Types: {#FType}; Flags: {#FFlag}disablenouninstallwarning;
 
  ; Plugins
 Name: Plugins; Description: {code:ComponentsHelper|PluginsFiles}; Types: minimal optimal advanced {#FType}; Flags: collapsed disablenouninstallwarning;
@@ -1260,6 +1282,7 @@ Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uPrinting;
   "Protocols\Pseudo\YAMN = YAMN,YAMN;" + \
   "Protocols\Pseudo\CurrencyRates = CurrencyRates,CurrencyRates;" + \
   "*MetaContacts = MetaContacts,MetaContacts;" + \
+  "Protocols\AIM = AIM,AIM;" + \
   "Protocols\Discord = Discord,Discord;" + \
   "Protocols\EmLanProto = EM_LAN_PROTO,EM_LAN_PROTO;" + \
   "Protocols\Facebook = Facebook,Facebook;" + \
@@ -1270,6 +1293,9 @@ Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uPrinting;
   "Protocols\Jabber\Hangouts = Hangouts,Dummy;" + \
   "Protocols\ICQ\ICQ = ICQ,ICQ;" + \
   "Protocols\ICQ\ICQ2 = ICQ2,ICQ;" + \
+  "Protocols\ICQ\ICQ3 = ICQ3,ICQ;" + \
+  "Protocols\ICQ\ICQ4 = ICQ4,ICQ;" + \
+  "Protocols\ICQ\ICQ5 = ICQ5,ICQ;" + \
   "Protocols\ICQCorp = ICQCorp,ICQCorp;" + \
   "Protocols\IRC = IRC,IRC;" + \
   "Protocols\Jabber\Jabber = Jabber,JABBER;" + \
@@ -1277,6 +1303,7 @@ Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uPrinting;
   "Protocols\Jabber\LJ = LJ,JABBER;" + \
   "Protocols\ICQ\MRA = MRA,MRA;" + \
   "Protocols\ICQ\MRA2 = MRA2,MRA;" + \
+  "Protocols\MSN = MSN,MSN;" + \
   "Protocols\Jabber\OK = OK,JABBER;" + \
   "Protocols\Omegle = Omegle,Omegle;" + \
   "Protocols\Sametime = Sametime,Sametime;" + \
@@ -1287,6 +1314,8 @@ Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uPrinting;
   "Protocols\VKontakte = VKontakte,VKontakte;" + \
   "Protocols\WhatsApp = WhatsApp,WhatsApp;" + \
   "Protocols\Jabber\XMPP = XMPP,JABBER;" + \
+  "Protocols\Jabber\Yandex = Yandex,JABBER;" + \
+  "Protocols\Yahoo = YAHOO,YAHOO;" + \
   "Protocols\Pseudo\mRadio = mRadio,mRadio;" + \
   "*CloudFile/Dropbox = Dropbox,CloudFile/Dropbox;" + \
   "*CloudFile/GDrive = GDrive,CloudFile/GDrive;" + \
@@ -1344,6 +1373,9 @@ Filename: {#CurrentIni}; Section: Protocols; Key: ProtoCount; String: d{code:Get
   "Protocols\GG or " + \
   "Protocols\ICQ\ICQ or " + \
   "Protocols\ICQ\ICQ2 or " + \
+  "Protocols\ICQ\ICQ3 or " + \
+  "Protocols\ICQ\ICQ4 or " + \
+  "Protocols\ICQ\ICQ5 or " + \
   "Protocols\IRC or " + \
   "Protocols\Jabber\Jabber or " + \
   "Protocols\Jabber\Jabberru or " + \
@@ -1363,6 +1395,9 @@ Filename: {#CurrentIni}; Section: Protocols; Key: ProtoCount; String: d{code:Get
   "Protocols\GG or " + \
   "Protocols\ICQ\ICQ or " + \
   "Protocols\ICQ\ICQ2 or " + \
+  "Protocols\ICQ\ICQ3 or " + \
+  "Protocols\ICQ\ICQ4 or " + \
+  "Protocols\ICQ\ICQ5 or " + \
   "Protocols\IRC or " + \
   "Protocols\Jabber\Jabber or " + \
   "Protocols\Jabber\Jabberru or " + \
@@ -1383,6 +1418,9 @@ Filename: {#CurrentIni}; Section: Protocols; Key: ProtoCount; String: d{code:Get
   "Protocols\GG or " + \
   "Protocols\ICQ\ICQ or " + \
   "Protocols\ICQ\ICQ2 or " + \
+  "Protocols\ICQ\ICQ3 or " + \
+  "Protocols\ICQ\ICQ4 or " + \
+  "Protocols\ICQ\ICQ5 or " + \
   "Protocols\IRC or " + \
   "Protocols\Jabber\Jabber or " + \
   "Protocols\Jabber\Jabberru or " + \
@@ -1401,6 +1439,9 @@ Filename: {#CurrentIni}; Section: Protocols; Key: ProtoCount; String: d{code:Get
 #define public CListGroup_PhoneContacts \
   "Protocols\ICQ\ICQ or " + \
   "Protocols\ICQ\ICQ2 or " + \
+  "Protocols\ICQ\ICQ3 or " + \
+  "Protocols\ICQ\ICQ4 or " + \
+  "Protocols\ICQ\ICQ5 or " + \
   "Protocols\ICQ\MRA or " + \
   "Protocols\ICQ\MRA2"
 #define public CListGroup_Facebook \
@@ -1422,11 +1463,15 @@ Filename: {#CurrentIni}; Section: Protocols; Key: ProtoCount; String: d{code:Get
 #define public CListGroup_mRadio \
   "Protocols\Pseudo\mRadio"
 #define public CListGroup_Dummy \
+  "Protocols\AIM or " + \
   "Protocols\Discord or " + \
   "Protocols\Jabber\GMail or " + \
   "Protocols\Jabber\Google or " + \
   "Protocols\Jabber\GTalk or " + \
-  "Protocols\Jabber\Hangouts"
+  "Protocols\Jabber\Hangouts or " + \
+  "Protocols\MSN or " + \
+  "Protocols\Jabber\Yandex or " + \
+  "Protocols\Yahoo"
 
 #sub AddCListGroupEntries
  ; CListGroup: Info
@@ -8572,11 +8617,18 @@ begin
       #endif
         // disable deprecated protocols
         case g_ComponentsHelper[i].szInternalName of
+          'Protocols\AIM',
           'Protocols\Discord',
+          'Protocols\ICQ\ICQ3',
+          'Protocols\ICQ\ICQ4',
+          'Protocols\ICQ\ICQ5',
           'Protocols\Jabber\GMail',
           'Protocols\Jabber\Google',
           'Protocols\Jabber\GTalk',
-          'Protocols\Jabber\Hangouts':
+          'Protocols\Jabber\Hangouts',
+          'Protocols\Jabber\Yandex',
+          'Protocols\MSN',
+          'Protocols\Yahoo':
             begin
               ItemEnabled[i] := TempList.Find(g_ComponentsHelper[i].szInternalName, Index);
               if not IsUpdate then
@@ -8777,11 +8829,18 @@ begin
       #endif
         // disable deprecated protocols
         case g_ComponentsHelper[i].szInternalName of
+          'Protocols\AIM',
           'Protocols\Discord',
+          'Protocols\ICQ\ICQ3',
+          'Protocols\ICQ\ICQ4',
+          'Protocols\ICQ\ICQ5',
           'Protocols\Jabber\GMail',
           'Protocols\Jabber\Google',
           'Protocols\Jabber\GTalk',
-          'Protocols\Jabber\Hangouts':
+          'Protocols\Jabber\Hangouts',
+          'Protocols\Jabber\Yandex',
+          'Protocols\MSN',
+          'Protocols\Yahoo':
             begin
               ItemEnabled[i] := TempList.Find(g_ComponentsHelper[i].szInternalName, Index);
               if not IsUpdate then
