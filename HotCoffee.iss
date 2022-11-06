@@ -576,14 +576,14 @@ Source: x86\Skins\SplashScreen\en\HotSplash5.png; DestDir: {app}\Skins\SplashScr
 Source: x86\Skins\SplashScreen\ru\HotSplash5.png; DestDir: {app}\Skins\SplashScreen; DestName: HotSplash5.png; Languages: ru; Flags: ignoreversion; Components: Resources\SplashScreen; AfterInstall: AddDetails;
  ; Resources\Tipper
 Source: {#AppArch}\Plugins\Tipper.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: Resources\Tipper; AfterInstall: AddDetails;
-Source: x86\Skins\Tipper\Default_Miranda\*; DestDir: {app}\Skins\Tipper\Default_Miranda; Flags: ignoreversion; Components: Resources\Tipper; AfterInstall: AddDetails;
+Source: x86\Skins\Tipper\Default_Miranda\*; DestDir: {app}\Skins\Tipper\Default_Miranda; Flags: ignoreversion; Components: Resources\Tipper\Themes; AfterInstall: AddDetails;
 #define public i 2
 #sub AddTheme
  ; Resources\Themes
 Source: x86\Skins\Modern contact list\{#theme[i]}\*; DestDir: {app}\Skins\Modern contact list\{#theme[i]}; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]}; AfterInstall: AddDetails;
 Source: x86\Skins\Modern contact list\{#theme[i]}.msf; DestDir: {app}\Skins\Modern contact list; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]}; AfterInstall: AddDetails;
 Source: x86\Skins\TabSRMM\{#theme[i]}\*; DestDir: {app}\Skins\TabSRMM\{#theme[i]}; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]}; AfterInstall: AddDetails;
-Source: x86\Skins\Tipper\{#theme[i]}\*; DestDir: {app}\Skins\Tipper\{#theme[i]}; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]} and Resources\Tipper; AfterInstall: AddDetails;
+Source: x86\Skins\Tipper\{#theme[i]}\*; DestDir: {app}\Skins\Tipper\{#theme[i]}; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]} and Resources\Tipper\Themes; AfterInstall: AddDetails;
 Source: x86\Skins\Popup\{#theme[i]}\*; DestDir: {app}\Skins\Popup\{#theme[i]}; Flags: ignoreversion recursesubdirs createallsubdirs skipifsourcedoesntexist; Components: Resources\Themes\{#theme[i]} and Resources\PopupPlus; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\styles\{#theme[i]}\*; DestDir: {app}\Skins\IEView\styles\{#theme[i]}; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]} and Resources\IEView; AfterInstall: AddDetails;
 Source: x86\Skins\IEView\styles\{#theme[i]}.css; DestDir: {app}\Skins\IEView\styles; Flags: ignoreversion; Components: Resources\Themes\{#theme[i]} and Resources\IEView; AfterInstall: AddDetails;
@@ -675,12 +675,14 @@ Name: Plugins\WhenWasIt; Description: {code:ComponentsHelper|WhenWasIt}; Types: 
 Name: Resources; Description: {code:ComponentsHelper|Resources}; Types: minimal optimal advanced {#FType}; Flags: collapsed disablenouninstallwarning;
 Name: Resources\IEView; Description: {code:ComponentsHelper|IEView}; Types: optimal advanced {#FType}; Flags: disablenouninstallwarning;
 Name: Resources\PopupPlus; Description: {code:ComponentsHelper|PopupPlus}; Types: optimal advanced {#FType}; Flags: disablenouninstallwarning;
-Name: Resources\Smileys; Description: {code:ComponentsHelper|Smileys}; Types: minimal optimal advanced {#FType}; Flags: disablenouninstallwarning fixed;
-Name: Resources\Smileys\big_pack; Description: {code:ComponentsHelper|SmileysBigPack}; Flags: disablenouninstallwarning exclusive;
+Name: Resources\Smileys; Description: {code:ComponentsHelper|Smileys}; Types: minimal optimal advanced {#FType}; Flags: collapsed disablenouninstallwarning fixed;
+Name: Resources\Smileys\big_pack; Description: {code:ComponentsHelper|SmileysBigPack}; Types: custom; Flags: disablenouninstallwarning exclusive;
 Name: Resources\Smileys\small_pack; Description: {code:ComponentsHelper|SmileysSmallPack}; Types: minimal optimal advanced {#FType}; Flags: disablenouninstallwarning exclusive;
 Name: Resources\Sounds; Description: {code:ComponentsHelper|Sounds}; Types: optimal advanced {#FType}; Flags: disablenouninstallwarning;
 Name: Resources\SplashScreen; Description: {code:ComponentsHelper|SplashScreen}; Types: optimal advanced {#FType}; Flags: disablenouninstallwarning;
-Name: Resources\Tipper; Description: {code:ComponentsHelper|Tipper}; Types: minimal optimal advanced {#FType}; Flags: disablenouninstallwarning;
+Name: Resources\Tipper; Description: {code:ComponentsHelper|Tipper}; Types: minimal optimal advanced {#FType}; Flags: collapsed disablenouninstallwarning;
+Name: Resources\Tipper\Themes; Description: {code:ComponentsHelper|TipperThemes}; Types: minimal optimal advanced {#FType}; Flags: disablenouninstallwarning exclusive;
+Name: Resources\Tipper\FillColor; Description: {code:ComponentsHelper|TipperFillColor}; Types: custom; Flags: disablenouninstallwarning exclusive;
  ; Resources\Themes
 Name: Resources\Themes; Description: {code:ComponentsHelper|Themes}; Types: advanced {#FType}; Flags: collapsed disablenouninstallwarning;
  ; Resources\Themes\Custom_Miranda

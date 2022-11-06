@@ -69,10 +69,8 @@ rem Check Miranda
 :checkmiranda
 if not exist "x64\Miranda64.exe" goto :recreatedirs
 
-rem Delete x86, x64 dirs
-set query=y
-if "%allowqueries%" == "0" set /p "query=%deletedirsprompt%"
-if /i not "%query%" == "" if /i not "%query%" == "y" goto :DownloadResources
+rem Allow jump to download Resources
+if "%allowqueries%" == "0" goto :DownloadResources
 
 rem Recreate x86, x64 dirs
 :recreatedirs
@@ -185,12 +183,9 @@ rem Compile
 
 rem Delete x86, x64 dirs
 set query=y
-if "%allowqueries%" == "1" set /p "query=%deletedirsprompt%"
+if "%allowqueries%" == "0" set /p "query=%deletedirsprompt%"
 if /i "%query%" == "y" rd /s /q x86 2>nul&rd /s /q x64 2>nul
 del /f /q "%~dp0err">nul
-
-rem Delete Sources.7z
-if "%allowqueries%" == "1" del /q "%~dp0Sources.7z" 2>nul
 
 :err_0
 echo:%done%

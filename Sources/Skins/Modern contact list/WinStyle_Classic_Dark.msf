@@ -1512,7 +1512,7 @@ AvBorderCol=d16777215
 BorderCol=d1120275
 ColourBg=d4609099
 DividerCol=d6582633
-SidebarCol=d4609099
+SidebarCol=d3686973
 FontFirst=sVerdana
 FontFirstCol=d4814774
 FontFirstFlags=w288
@@ -1566,8 +1566,8 @@ frame_back=d4609099
 
 [YAPP]
 ColourBg=d4609099
-ColourBorder=d0
-ColourSidebar=d3160628
+ColourBorder=d1120275
+ColourSidebar=d3686973
 ColourTitleUnderline=d6582633
 FontFirst=uVerdana
 FontFirstCol=d15527148
@@ -1824,7 +1824,7 @@ SidebarWidth=d28
 TitleIndent=d23
 TextIndent=d23
 ValueIndent=d7
-RoundCorners=b1
+RoundCorners=b0
 SkinEngine=b1
 SkinName=uWinStyle_Classic_Dark
 
