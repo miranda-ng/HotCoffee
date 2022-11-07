@@ -1730,8 +1730,8 @@ WhatsApp_Error/TextCol=d1380995
 XMPP_Error/BgCol=d5196766
 XMPP_Error/TextCol=d1380995
 ;
-Nudge/BgCol=d6850999
-Nudge/TextCol=d12442109
+Nudge/BgCol=d679889
+Nudge/TextCol=d469850
 ;
 GG_Notify/BgCol=d13795904
 GG_Notify/TextCol=d7683085
