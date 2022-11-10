@@ -1316,7 +1316,7 @@ Filename: {#AutoexecUpdateIni}; Section: PackInfo; Key: Font; String: uPrinting;
   "Protocols\VKontakte = VKontakte,VKontakte;" + \
   "Protocols\WhatsApp = WhatsApp,WhatsApp;" + \
   "Protocols\Jabber\XMPP = XMPP,JABBER;" + \
-  "Protocols\Jabber\Yandex = Yandex,JABBER;" + \
+  "Protocols\Jabber\Yandex = Yandex,Dummy;" + \
   "Protocols\Yahoo = YAHOO,YAHOO;" + \
   "Protocols\Pseudo\mRadio = mRadio,mRadio;" + \
   "*CloudFile/Dropbox = Dropbox,CloudFile/Dropbox;" + \
