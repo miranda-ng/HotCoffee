@@ -185,6 +185,10 @@ rem Delete x86, x64 dirs
 set query=y
 if "%allowqueries%" == "0" set /p "query=%deletedirsprompt%"
 if /i "%query%" == "y" rd /s /q x86 2>nul&rd /s /q x64 2>nul
+if exist "%~dp0err" (
+	del /f /q "%~dp0err">nul
+	goto :eof
+)
 del /f /q "%~dp0err">nul
 
 :err_0
