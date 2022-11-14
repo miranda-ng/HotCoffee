@@ -12,7 +12,7 @@ assert(winapi)
 local globals = require('GlobalFunctions')
 assert(globals)
 
-local CyrillicLanpacks = { 'langpack_belarusian.txt', 'langpack_russian.txt', 'langpack_ukrainian.txt' }
+local CyrillicLangpacks = { 'langpack_belarusian.txt', 'langpack_russian.txt', 'langpack_ukrainian.txt' }
 
 local current = db.GetSetting(_, 'Langpack', 'Current')
 
@@ -27,13 +27,13 @@ function IsCurrentLangpackChanged(dbcws)
 end
 
 local function IsCyrillicLangpack(langpack)
-    for i = 1, #CyrillicLanpacks do
-        if CyrillicLanpacks[i] == langpack then
+    for i = 1, #CyrillicLangpacks do
+        if CyrillicLangpacks[i] == langpack then
             return true
         end
     end
     return false
- end
+end
 
 function OnLanguageChanged(langpack)
     local mImportIniPath = toansi(m.Parse('%miranda_path%\\UserSet\\ini\\WhenChangeLanguage.ini'))
