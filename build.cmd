@@ -179,7 +179,7 @@ rem Compile
 (
 	.tools\InnoRT\iscc.exe /dAppArch=x64 HotCoffee.iss /q
 	.tools\InnoRT\iscc.exe /dAppArch=x86 HotCoffee.iss /q
-) 2>err&&echo:OK||(echo:%fail%&type err)
+) 2>err&&echo:OK&&echo: &&echo:%done%&&echo: ||(echo:%fail%&type err&&echo: )
 
 rem Delete x86, x64 dirs
 set query=y
@@ -189,10 +189,8 @@ if exist "%~dp0err" (
 	del /f /q "%~dp0err">nul
 	goto :eof
 )
-del /f /q "%~dp0err">nul
 
 :err_0
-echo:%done%
 pause
 exit /b 0
 
