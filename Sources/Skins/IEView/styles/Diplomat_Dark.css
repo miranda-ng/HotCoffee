@@ -142,7 +142,7 @@ div.avatar {
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
-	color: #7499C7;
+	color: #6F9ACE;
 	background-image: url(Diplomat_Dark/out.png);
 }
 
@@ -176,7 +176,7 @@ div.avatar {
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
-	color: #7BA965;
+	color: #71AC71;
 	background-image: url(Diplomat_Dark/file.png);
 }
 
@@ -199,7 +199,7 @@ div.avatar {
 /* -------------------- URL support -------------------- */
 
 .inurl .head, .outurl .head {
-	color: #7499C7;
+	color: #6F9ACE;
 	background-image: url(Diplomat_Dark/url.png);
 }
 

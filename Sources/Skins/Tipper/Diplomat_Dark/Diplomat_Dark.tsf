@@ -28,7 +28,7 @@ Label-effect = FONT_BOLD
 Value-color = 185 187 200
 Value-effect = 0
 
-TrayTitle-color = 116 153 199
+TrayTitle-color = 111 154 206
 TrayTitle-effect = FONT_BOLD
 
 Divider-color = 109 112 124
