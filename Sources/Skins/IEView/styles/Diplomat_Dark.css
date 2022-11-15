@@ -131,7 +131,7 @@ div.avatar {
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
-	color: #B5784A;
+	color: #BE8861;
 	background-image: url(Diplomat_Dark/in.png);
 }
 
@@ -142,7 +142,7 @@ div.avatar {
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
-	color: #618BBE;
+	color: #7499C7;
 	background-image: url(Diplomat_Dark/out.png);
 }
 
@@ -153,7 +153,7 @@ div.avatar {
 /* -------------------- status support -------------------- */
 
 .status .head {
-	color: #B5784A;
+	color: #BE8861;
 	background-image: url(Diplomat_Dark/status.png);
 }
 
@@ -176,7 +176,7 @@ div.avatar {
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
-	color: #699C4E;
+	color: #7BA965;
 	background-image: url(Diplomat_Dark/file.png);
 }
 
@@ -199,7 +199,7 @@ div.avatar {
 /* -------------------- URL support -------------------- */
 
 .inurl .head, .outurl .head {
-	color: #618BBE;
+	color: #7499C7;
 	background-image: url(Diplomat_Dark/url.png);
 }
 
