@@ -1,7 +1,7 @@
 /*--- Global ---*/
 
 .Link-Text, .tzerlink {
-	color: #356DB3;
+	color: #24599B;
 }
 
 input {
@@ -32,20 +32,20 @@ html {
 }
 
 a, a:active {
-	color: #356DB3;
+	color: #24599B;
 	text-decoration: none;
 	font-weight: normal;
 	cursor:pointer;
 }
 
 a:visited {
-	color: #94582C;
+	color: #9B5724;
 	text-decoration: none;
 	font-weight: normal;
 }
 
 a:hover {
-	color: #356DB3;
+	color: #24599B;
 	text-decoration: underline;
 	font-weight: normal;
 }
@@ -131,7 +131,7 @@ div.avatar {
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
-	color: #94582C;
+	color: #9B5724;
 	background-image: url(Diplomat_Light/in.png);
 }
 
@@ -142,7 +142,7 @@ div.avatar {
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
-	color: #356DB3;
+	color: #24599B;
 	background-image: url(Diplomat_Light/out.png);
 }
 
@@ -153,12 +153,12 @@ div.avatar {
 /* -------------------- status support -------------------- */
 
 .status .head {
-	color: #94582C;
+	color: #9B5724;
 	background-image: url(Diplomat_Light/status.png);
 }
 
 .contentStatus, .contenthStatus {
-	color: #94582C;
+	color: #9B5724;
 	background-image: url(Diplomat_Light/status.png);
 }
 
@@ -176,12 +176,12 @@ div.avatar {
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
-	color: #3A833A;
+	color: #368736;
 	background-image: url(Diplomat_Light/file.png);
 }
 
 .contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
-	color: #3A833A;
+	color: #368736;
 	background-image: url(Diplomat_Light/file.png);
 }
 
@@ -199,12 +199,12 @@ div.avatar {
 /* -------------------- URL support -------------------- */
 
 .inurl .head, .outurl .head {
-	color: #356DB3;
+	color: #24599B;
 	background-image: url(Diplomat_Light/url.png);
 }
 
 .contentURL, .contenthURL {
-	color: #356DB3;
+	color: #24599B;
 	background-image: url(Diplomat_Light/url.png);
 }
 
