@@ -131,7 +131,7 @@ div.avatar {
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
-	color: #B5784A;
+	color: #DFA375;
 	background-image: url(Textolite_Brown_Dark/in.png);
 }
 
@@ -142,7 +142,7 @@ div.avatar {
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
-	color: #618BBE;
+	color: #8EB6E6;
 	background-image: url(Textolite_Brown_Dark/out.png);
 }
 
@@ -153,7 +153,7 @@ div.avatar {
 /* -------------------- status support -------------------- */
 
 .status .head {
-	color: #B5784A;
+	color: #DFA375;
 	background-image: url(Textolite_Brown_Dark/status.png);
 }
 
@@ -176,7 +176,7 @@ div.avatar {
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
-	color: #699C4E;
+	color: #86CC86;
 	background-image: url(Textolite_Brown_Dark/file.png);
 }
 
@@ -199,7 +199,7 @@ div.avatar {
 /* -------------------- URL support -------------------- */
 
 .inurl .head, .outurl .head {
-	color: #618BBE;
+	color: #8EB6E6;
 	background-image: url(Textolite_Brown_Dark/url.png);
 }
 
