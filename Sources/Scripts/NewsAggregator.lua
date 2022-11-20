@@ -20,7 +20,7 @@ local globals = require('GlobalFunctions')
 assert(globals)
 
 
-schedule.At(os.time() + 30).Do(function()
+schedule.At(os.time() + 20).Do(function()
   if not m.ServiceExists('NewsAggregator/ImportFeeds') then
     return
   end

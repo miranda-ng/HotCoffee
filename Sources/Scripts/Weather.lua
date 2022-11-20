@@ -20,7 +20,7 @@ assert(schedule)
 local globals = require('GlobalFunctions')
 assert(globals)
 
-schedule.At(os.time() + 15).Do(function()
+schedule.At(os.time() + 25).Do(function()
   if not m.ServiceExists('Weather/Update') then
     return
   end

@@ -127,7 +127,7 @@ div.avatar {
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
-	color: #B5784A;
+	color: #DFA375;
 	background-image: url(Surface_Black/in.png);
 }
 
@@ -138,7 +138,7 @@ div.avatar {
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
-	color: #618BBE;
+	color: #8EB6E6;
 	background-image: url(Surface_Black/out.png);
 }
 
@@ -149,7 +149,7 @@ div.avatar {
 /* -------------------- status support -------------------- */
 
 .status .head {
-	color: #B5784A;
+	color: #DFA375;
 	background-image: url(Surface_Black/status.png);
 }
 
@@ -170,7 +170,7 @@ div.avatar {
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
-	color: #699C4E;
+	color: #86CC86;
 	background-image: url(Surface_Black/file.png);
 }
 
@@ -191,7 +191,7 @@ div.avatar {
 /* -------------------- URL support -------------------- */
 
 .inurl .head, .outurl .head {
-	color: #618BBE;
+	color: #8EB6E6;
 	background-image: url(Surface_Black/url.png);
 }
 
