@@ -19,7 +19,7 @@ Right = 3
 Bottom = 10
 
 [Fonts]
-Title-color = 255 196 152
+Title-color = 251 197 157
 Title-effect = FONT_BOLD
 
 Label-color = 210 206 204

@@ -131,7 +131,7 @@ div.avatar {
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
-	color: #FFC498;
+	color: #FBC59D;
 	background-image: url(PhotoOne_Dark/in.png);
 }
 
@@ -153,7 +153,7 @@ div.avatar {
 /* -------------------- status support -------------------- */
 
 .status .head {
-	color: #FFC498;
+	color: #FBC59D;
 	background-image: url(PhotoOne_Dark/status.png);
 }
 
@@ -176,7 +176,7 @@ div.avatar {
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
-	color: #A0F3A0;
+	color: #A7EDA7;
 	background-image: url(PhotoOne_Dark/file.png);
 }
 
