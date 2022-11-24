@@ -668,7 +668,7 @@ object
 	ifset 5
 	ifset 6
 	type clock
-	color 212 212 212
+	color 223 223 223
 	x window.width-3-clock.width+1
 	y 6+11+(title.height-clock.height)/2
 end
@@ -677,7 +677,7 @@ object
 	ifset 5
 	ifset 6
 	type clock
-	color 212 212 212
+	color 223 223 223
 	x window.width-3-clock.width
 	y 6+11+(title.height-clock.height)/2+1
 end
@@ -686,7 +686,7 @@ object
 	ifset 5
 	ifset 6
 	type clock
-	color 212 212 212
+	color 223 223 223
 	x window.width-3-clock.width+1
 	y 6+11+(title.height-clock.height)/2+1
 end
@@ -750,7 +750,7 @@ object
 	ifnotset 5
 	ifset 6
 	type clock
-	color 212 212 212
+	color 223 223 223
 	x window.width-3-clock.width
 	y 6+11+(title.height-clock.height)/2
 end
@@ -831,7 +831,7 @@ object
 	ifset 5
 	ifset 7
 	type title
-	color 212 212 212
+	color 223 223 223
 	x 20+icon.width+7+1
 	y 6+11
 end
@@ -840,7 +840,7 @@ object
 	ifset 5
 	ifset 7
 	type title
-	color 212 212 212
+	color 223 223 223
 	x 20+icon.width+7
 	y 6+11+1
 end
@@ -849,7 +849,7 @@ object
 	ifset 5
 	ifset 7
 	type title
-	color 212 212 212
+	color 223 223 223
 	x 20+icon.width+7+1
 	y 6+11+1
 end
@@ -859,7 +859,7 @@ object
 	ifset 5
 	ifnotset 7
 	type title
-	color 212 212 212
+	color 223 223 223
 	x 20+16+7+1
 	y 6+11
 end
@@ -868,7 +868,7 @@ object
 	ifset 5
 	ifnotset 7
 	type title
-	color 212 212 212
+	color 223 223 223
 	x 20+16+7
 	y 6+11+1
 end
@@ -877,7 +877,7 @@ object
 	ifset 5
 	ifnotset 7
 	type title
-	color 212 212 212
+	color 223 223 223
 	x 20+16+7+1
 	y 6+11+1
 end
@@ -1050,7 +1050,7 @@ object
 	ifnotset 5
 	ifset 7
 	type title
-	color 212 212 212
+	color 223 223 223
 	x 20+icon.width+7
 	y 6+11
 end
@@ -1078,7 +1078,7 @@ object
 	ifnotset 5
 	ifnotset 7
 	type title
-	color 212 212 212
+	color 223 223 223
 	x 20+16+7
 	y 6+11
 end
@@ -1217,7 +1217,7 @@ object
 	ifnotset 4
 	ifnotset 9
 	type text
-	color 212 212 212
+	color 223 223 223
 	x 6+avatar.width+3
 	y 8+11+title.height+5+7+14
 	w window.width-(6+avatar.width+3)-6-3
@@ -1236,7 +1236,7 @@ object
 	ifnotset 4
 	ifset 9
 	type text
-	color 212 212 212
+	color 223 223 223
 	x 6+3
 	y 8+11+title.height+5+7+14
 	w window.width-(6+avatar.width+3)-6-3
