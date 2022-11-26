@@ -1,7 +1,7 @@
 /*--- Global ---*/
 
 .Link-Text, .tzerlink {
-	color: #4470A6;
+	color: #39669D;
 }
 
 input {
@@ -32,20 +32,20 @@ html {
 }
 
 a, a:active {
-	color: #4470A6;
+	color: #39669D;
 	text-decoration: none;
 	font-weight: normal;
 	cursor:pointer;
 }
 
 a:visited {
-	color: #A66D44;
+	color: #9D6439;
 	text-decoration: none;
 	font-weight: normal;
 }
 
 a:hover {
-	color: #4470A6;
+	color: #39669D;
 	text-decoration: underline;
 	font-weight: normal;
 }
@@ -131,7 +131,7 @@ div.avatar {
 /* -------------------- incoming messagebox -------------------- */
 
 .in .head {
-	color: #A66D44;
+	color: #9D6439;
 	background-image: url(Graphite_Gray_Light/in.png);
 }
 
@@ -142,7 +142,7 @@ div.avatar {
 /* -------------------- outgoing messagebox -------------------- */
 
 .out .head {
-	color: #4470A6;
+	color: #39669D;
 	background-image: url(Graphite_Gray_Light/out.png);
 }
 
@@ -153,12 +153,12 @@ div.avatar {
 /* -------------------- status support -------------------- */
 
 .status .head {
-	color: #A66D44;
+	color: #9D6439;
 	background-image: url(Graphite_Gray_Light/status.png);
 }
 
 .contentStatus, .contenthStatus {
-	color: #A66D44;
+	color: #9D6439;
 	background-image: url(Graphite_Gray_Light/status.png);
 }
 
@@ -176,12 +176,12 @@ div.avatar {
 /* -------------------- file transfer support -------------------- */
 
 .infile .head, .outfile .head {
-	color: #488248;
+	color: #3E763E;
 	background-image: url(Graphite_Gray_Light/file.png);
 }
 
 .contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
-	color: #488248;
+	color: #3E763E;
 	background-image: url(Graphite_Gray_Light/file.png);
 }
 
@@ -199,12 +199,12 @@ div.avatar {
 /* -------------------- URL support -------------------- */
 
 .inurl .head, .outurl .head {
-	color: #4470A6;
+	color: #39669D;
 	background-image: url(Graphite_Gray_Light/url.png);
 }
 
 .contentURL, .contenthURL {
-	color: #4470A6;
+	color: #39669D;
 	background-image: url(Graphite_Gray_Light/url.png);
 }
 
