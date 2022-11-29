@@ -1352,9 +1352,9 @@ Filename: {#CurrentIni}; Section: Protocols; Key: 4{code:GetTempIndex2|{#Current
 Filename: {#CurrentIni}; Section: Protocols; Key: 6{code:GetTempIndex2|{#CurrentIni}}; String: d1; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 Filename: {#CurrentIni}; Section: Protocols; Key: 8{code:GetTempIndex2|{#CurrentIni}}; String: u{#ProtocolCompValue}; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 Filename: {#CurrentIni}; Section: __temp; Key: __count; String: {code:SetTempIndex|{#CurrentIni}};{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
-#emit '' + (Pos("Jabber", ProtocolCompName) == 0 ? "" : ' ; ' + ProtocolCompValue + ' XmlLang')
-{#if Pos("Jabber", ProtocolCompName) == 0}{#else}Filename: {#CurrentIni}; Section: {#ProtocolCompValue}; Key: XmlLang; String: sen; Languages: en; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}{#endif}
-{#if Pos("Jabber", ProtocolCompName) == 0}{#else}Filename: {#CurrentIni}; Section: {#ProtocolCompValue}; Key: XmlLang; String: sru; Languages: ru; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}{#endif}
+#emit '' + (Pos("JABBER", ProtocolBaseProtoValue) == 0 ? "" : ' ; ' + ProtocolCompValue + ' XmlLang')
+{#if Pos("JABBER", ProtocolBaseProtoValue) == 0}{#else}Filename: {#CurrentIni}; Section: {#ProtocolCompValue}; Key: XmlLang; String: sen; Languages: en; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}{#endif}
+{#if Pos("JABBER", ProtocolBaseProtoValue) == 0}{#else}Filename: {#CurrentIni}; Section: {#ProtocolCompValue}; Key: XmlLang; String: sru; Languages: ru; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}{#endif}
 #endsub
 
 #sub SetProtocolsCount
