@@ -25,9 +25,9 @@ Version=1
 FontColor=D2CECC
 MenuBarBG=4E4E4E
 TabTextActive=FFFFFF
-TabTextHottrack=AAD0FF
+TabTextHottrack=B4D6FF
 TabTextNormal=D2CECC
-TabTextUnread=FFCEAA
+TabTextUnread=FBC59D
 DarkShadow=000000
 LightShadow=FFFFFF
 

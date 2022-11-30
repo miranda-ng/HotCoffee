@@ -383,6 +383,9 @@ Source: x86\Skins\Avatars\IRC.png; DestDir: {app}\Skins\Avatars; Flags: ignoreve
  ; Protocols\Jabber
 Source: {#AppArch}\Plugins\Jabber.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: {#ProtoJABBER}; AfterInstall: AddDetails;
 Source: x86\Icons\xStatus_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: {#ProtoJABBER}; AfterInstall: AddDetails;
+Source: x86\Plugins\Jabber\*; DestDir: {app}\Plugins\mRadio; Flags: ignoreversion recursesubdirs createallsubdirs; Components: {#ProtoJABBER}; AfterInstall: AddDetails;
+Source: x86\Plugins\Jabber\en\Jabber.ini; DestDir: {app}\Plugins\Jabber; Languages: en; Flags: ignoreversion; Components: {#ProtoJABBER}; AfterInstall: AddDetails;
+Source: x86\Plugins\Jabber\ru\Jabber.ini; DestDir: {app}\Plugins\Jabber; Languages: ru; Flags: ignoreversion; Components: {#ProtoJABBER}; AfterInstall: AddDetails;
 Source: x86\Skins\Avatars\Jabber.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: {#ProtoJABBER}; AfterInstall: AddDetails;
  ; Protocols\Jabber\GMail
 Source: x86\Icons\Proto_GMail.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\GMail; AfterInstall: AddDetails;

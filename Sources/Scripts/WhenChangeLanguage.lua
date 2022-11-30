@@ -39,6 +39,26 @@ function OnLanguageChanged(langpack)
     local mImportIniPath = toansi(m.Parse('%miranda_path%\\UserSet\\ini\\WhenChangeLanguage.ini'))
     m.CallService('DB/Ini/ImportFile', mImportIniPath)
 
+    local JabberConfigPathTo = m.Parse('%miranda_path%\\Plugins\\Jabber')
+    local JabberConfigPathFrom = JabberConfigPathTo
+    if IsCyrillicLangpack(langpack) then
+        JabberConfigPathFrom = JabberConfigPathFrom .. '\\' .. 'ru'
+    else
+        JabberConfigPathFrom = JabberConfigPathFrom .. '\\' .. 'en'
+    end
+    local batch = "xcopy /Y \"{JabberConfigPathFrom}\" \"{JabberConfigPathTo}\"" % {
+        ["JabberConfigPathFrom"] = JabberConfigPathFrom,
+        ["JabberConfigPathTo"] = JabberConfigPathTo
+    }
+    if IsCyrillicLangpack(langpack) then
+        JabberIniPathFrom = toansi(m.Parse('%miranda_path%\\Plugins\\Jabber\\ru\\Jabber.ini'))
+    else
+        JabberIniPathFrom = toansi(m.Parse('%miranda_path%\\Plugins\\Jabber\\en\\Jabber.ini'))
+    end
+    m.CallService('DBEditorpp/Import', 0, JabberIniPathFrom)
+
+    winapi.ShellExecute(globals.HasAccess(m.Parse("%miranda_path%\\miranda.test")) and "open" or "runas", 'cmd.exe', '/C '.. batch)
+
     local mRadioConfigPathTo = m.Parse('%miranda_path%\\Plugins\\mRadio')
     local mRadioConfigPathFrom = mRadioConfigPathTo
     if IsCyrillicLangpack(langpack) then
