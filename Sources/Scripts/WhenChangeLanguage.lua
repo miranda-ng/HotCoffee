@@ -40,24 +40,12 @@ function OnLanguageChanged(langpack)
     m.CallService('DB/Ini/ImportFile', mImportIniPath)
 
     local WChLConfigPathTo = m.Parse('%miranda_path%\\UserSet\\WChL')
-    local WChLConfigPathFrom = WChLConfigPathTo
-    if IsCyrillicLangpack(langpack) then
-        WChLConfigPathFrom = WChLConfigPathFrom .. '\\' .. 'ru'
-    else
-        WChLConfigPathFrom = WChLConfigPathFrom .. '\\' .. 'en'
-    end
-    local batch = "xcopy /Y \"{WChLConfigPathFrom}\" \"{WChLConfigPathTo}\"" % {
-        ["WChLConfigPathFrom"] = WChLConfigPathFrom,
-        ["WChLConfigPathTo"] = WChLConfigPathTo
-    }
     if IsCyrillicLangpack(langpack) then
         WChLIniPathFrom = toansi(m.Parse('%miranda_path%\\UserSet\\WChL\\ru\\WChL.ini'))
     else
         WChLIniPathFrom = toansi(m.Parse('%miranda_path%\\UserSet\\WChL\\en\\WChL.ini'))
     end
     m.CallService('DBEditorpp/Import', 0, WChLIniPathFrom)
-
-    winapi.ShellExecute(globals.HasAccess(m.Parse("%miranda_path%\\miranda.test")) and "open" or "runas", 'cmd.exe', '/C '.. batch)
 
     local mRadioConfigPathTo = m.Parse('%miranda_path%\\Plugins\\mRadio')
     local mRadioConfigPathFrom = mRadioConfigPathTo

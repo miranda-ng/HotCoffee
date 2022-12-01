@@ -330,8 +330,6 @@ Source: x86\UserSet\Fonts\Printing.ini; DestDir: {app}\Profiles; DestName: autoe
 Source: x86\UserSet\ini\*; DestDir: {app}\UserSet\ini; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
  ; UserSet WChL
 Source: x86\UserSet\WChL\*; DestDir: {app}\UserSet\WChL; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\UserSet\WChL\en\WChL.ini; DestDir: {app}\UserSet\WChL; Languages: en; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\UserSet\WChL\ru\WChL.ini; DestDir: {app}\UserSet\WChL; Languages: ru; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
  ; root
 Source: {#AppArch}\{#AppExeName}; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\pu_stub.exe; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
