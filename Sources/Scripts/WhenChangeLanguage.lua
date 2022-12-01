@@ -39,23 +39,23 @@ function OnLanguageChanged(langpack)
     local mImportIniPath = toansi(m.Parse('%miranda_path%\\UserSet\\ini\\WhenChangeLanguage.ini'))
     m.CallService('DB/Ini/ImportFile', mImportIniPath)
 
-    local JabberConfigPathTo = m.Parse('%miranda_path%\\Plugins\\Jabber')
-    local JabberConfigPathFrom = JabberConfigPathTo
+    local WChLConfigPathTo = m.Parse('%miranda_path%\\UserSet\\WChL')
+    local WChLConfigPathFrom = WChLConfigPathTo
     if IsCyrillicLangpack(langpack) then
-        JabberConfigPathFrom = JabberConfigPathFrom .. '\\' .. 'ru'
+        WChLConfigPathFrom = WChLConfigPathFrom .. '\\' .. 'ru'
     else
-        JabberConfigPathFrom = JabberConfigPathFrom .. '\\' .. 'en'
+        WChLConfigPathFrom = WChLConfigPathFrom .. '\\' .. 'en'
     end
-    local batch = "xcopy /Y \"{JabberConfigPathFrom}\" \"{JabberConfigPathTo}\"" % {
-        ["JabberConfigPathFrom"] = JabberConfigPathFrom,
-        ["JabberConfigPathTo"] = JabberConfigPathTo
+    local batch = "xcopy /Y \"{WChLConfigPathFrom}\" \"{WChLConfigPathTo}\"" % {
+        ["WChLConfigPathFrom"] = WChLConfigPathFrom,
+        ["WChLConfigPathTo"] = WChLConfigPathTo
     }
     if IsCyrillicLangpack(langpack) then
-        JabberIniPathFrom = toansi(m.Parse('%miranda_path%\\Plugins\\Jabber\\ru\\Jabber.ini'))
+        WChLIniPathFrom = toansi(m.Parse('%miranda_path%\\UserSet\\WChL\\ru\\WChL.ini'))
     else
-        JabberIniPathFrom = toansi(m.Parse('%miranda_path%\\Plugins\\Jabber\\en\\Jabber.ini'))
+        WChLIniPathFrom = toansi(m.Parse('%miranda_path%\\UserSet\\WChL\\en\\WChL.ini'))
     end
-    m.CallService('DBEditorpp/Import', 0, JabberIniPathFrom)
+    m.CallService('DBEditorpp/Import', 0, WChLIniPathFrom)
 
     winapi.ShellExecute(globals.HasAccess(m.Parse("%miranda_path%\\miranda.test")) and "open" or "runas", 'cmd.exe', '/C '.. batch)
 

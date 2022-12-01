@@ -18,6 +18,10 @@ begin
 end;
 если ProtocolCompName содержит в имени "CloudFile/", тогда пишем CloudFile/ перед ProtocolCompValue:
 String: s{#if Pos("CloudFile/", ProtocolCompName) > 0}CloudFile/{#endif}{#ProtocolCompValue};
+пример записи в секции выбранных и действующих учётных записей JABBER
+#emit '' + (Pos("JABBER", ProtocolBaseProtoValue) == 0 ? "" : ' ; ' + ProtocolCompValue + ' XmlLang')
+{#if Pos("JABBER", ProtocolBaseProtoValue) == 0}{#else}Filename: {#CurrentIni}; Section: {#ProtocolCompValue}; Key: XmlLang; String: sen; Languages: en; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}{#endif}
+{#if Pos("JABBER", ProtocolBaseProtoValue) == 0}{#else}Filename: {#CurrentIni}; Section: {#ProtocolCompValue}; Key: XmlLang; String: sru; Languages: ru; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}{#endif}
 
 2.
 если какие-то протоколы больше не поддерживаются, то как сделать так чтобы эти протоколы были видны в окне выбора компонентов, только если IsUpdate и только если они были установлены предыдущей установкой:

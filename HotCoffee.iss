@@ -322,11 +322,16 @@ Source: x86\Skins\IconPacks\*; DestDir: {app}\Skins\IconPacks; Flags: ignorevers
 Source: x86\Skins\TabSRMM\Default_Miranda\*; DestDir: {app}\Skins\TabSRMM\Default_Miranda; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Skins\Default_Miranda.ini; DestDir: {app}\Skins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\Skins\Current_Windows.ini; DestDir: {app}\Skins; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
- ; UserSet
+ ; UserSet Fonts
 Source: x86\UserSet\Fonts\*; DestDir: {app}\UserSet\Fonts; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
-Source: x86\UserSet\ini\*; DestDir: {app}\UserSet\ini; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: x86\UserSet\Fonts\Handwriting.ini; DestDir: {app}\Profiles; DestName: autoexec_zfont.ini; Flags: ignoreversion; Components: MainCore; Check: IsStyleChecked('FontHandwriting'); AfterInstall: AddDetails;
 Source: x86\UserSet\Fonts\Printing.ini; DestDir: {app}\Profiles; DestName: autoexec_zfont.ini; Flags: ignoreversion; Components: MainCore; Check: IsStyleChecked('FontPrinting'); AfterInstall: AddDetails;
+ ; UserSet ini
+Source: x86\UserSet\ini\*; DestDir: {app}\UserSet\ini; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+ ; UserSet WChL
+Source: x86\UserSet\WChL\*; DestDir: {app}\UserSet\WChL; Flags: ignoreversion recursesubdirs createallsubdirs; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\UserSet\WChL\en\WChL.ini; DestDir: {app}\UserSet\WChL; Languages: en; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
+Source: x86\UserSet\WChL\ru\WChL.ini; DestDir: {app}\UserSet\WChL; Languages: ru; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
  ; root
 Source: {#AppArch}\{#AppExeName}; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
 Source: {#AppArch}\pu_stub.exe; DestDir: {app}; Flags: ignoreversion; Components: MainCore; AfterInstall: AddDetails;
@@ -383,9 +388,6 @@ Source: x86\Skins\Avatars\IRC.png; DestDir: {app}\Skins\Avatars; Flags: ignoreve
  ; Protocols\Jabber
 Source: {#AppArch}\Plugins\Jabber.dll; DestDir: {app}\Plugins; Flags: ignoreversion; Components: {#ProtoJABBER}; AfterInstall: AddDetails;
 Source: x86\Icons\xStatus_Jabber.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: {#ProtoJABBER}; AfterInstall: AddDetails;
-Source: x86\Plugins\Jabber\*; DestDir: {app}\Plugins\mRadio; Flags: ignoreversion recursesubdirs createallsubdirs; Components: {#ProtoJABBER}; AfterInstall: AddDetails;
-Source: x86\Plugins\Jabber\en\Jabber.ini; DestDir: {app}\Plugins\Jabber; Languages: en; Flags: ignoreversion; Components: {#ProtoJABBER}; AfterInstall: AddDetails;
-Source: x86\Plugins\Jabber\ru\Jabber.ini; DestDir: {app}\Plugins\Jabber; Languages: ru; Flags: ignoreversion; Components: {#ProtoJABBER}; AfterInstall: AddDetails;
 Source: x86\Skins\Avatars\Jabber.png; DestDir: {app}\Skins\Avatars; Flags: ignoreversion; Components: {#ProtoJABBER}; AfterInstall: AddDetails;
  ; Protocols\Jabber\GMail
 Source: x86\Icons\Proto_GMail.dll; DestDir: {app}\Icons; Flags: ignoreversion; Components: Protocols\Jabber\GMail; AfterInstall: AddDetails;
@@ -1355,9 +1357,6 @@ Filename: {#CurrentIni}; Section: Protocols; Key: 4{code:GetTempIndex2|{#Current
 Filename: {#CurrentIni}; Section: Protocols; Key: 6{code:GetTempIndex2|{#CurrentIni}}; String: d1; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 Filename: {#CurrentIni}; Section: Protocols; Key: 8{code:GetTempIndex2|{#CurrentIni}}; String: u{#ProtocolCompValue}; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
 Filename: {#CurrentIni}; Section: __temp; Key: __count; String: {code:SetTempIndex|{#CurrentIni}};{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}
-#emit '' + (Pos("JABBER", ProtocolBaseProtoValue) == 0 ? "" : ' ; ' + ProtocolCompValue + ' XmlLang')
-{#if Pos("JABBER", ProtocolBaseProtoValue) == 0}{#else}Filename: {#CurrentIni}; Section: {#ProtocolCompValue}; Key: XmlLang; String: sen; Languages: en; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}{#endif}
-{#if Pos("JABBER", ProtocolBaseProtoValue) == 0}{#else}Filename: {#CurrentIni}; Section: {#ProtocolCompValue}; Key: XmlLang; String: sru; Languages: ru; Flags: uninsdeleteentry;{#if Pos("*", ProtocolCompName) == 0} Components: {#ProtocolCompName};{#endif}{#if CurrentIni == AutoexecUpdateIni} Check: IsUpdate;{#endif}{#endif}
 #endsub
 
 #sub SetProtocolsCount
