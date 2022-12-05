@@ -1414,7 +1414,7 @@ AvBorderCol=d0
 BorderCol=d15394530
 ColourBg=d16777215
 DividerCol=d15394530
-SidebarCol=d16777215
+SidebarCol=d16382198
 FontFirst=sVerdana
 FontFirstCol=d18602
 FontFirstFlags=w288
@@ -1469,7 +1469,7 @@ frame_back=d16777215
 [YAPP]
 ColourBg=d16777215
 ColourBorder=d15394530
-ColourSidebar=d16777215
+ColourSidebar=d16382198
 ColourTitleUnderline=d15394530
 FontFirst=uVerdana
 FontFirstCol=d6838602

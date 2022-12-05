@@ -45,14 +45,14 @@ end
 object
 	ifnotset 1
 	type bitmap
-	source pixel:F6F7F8
+	source pixel:F6F8F9
 	x 1
 	y 8+3
 end
 object
 	ifset 1
 	type bitmap
-	source pixel:F6F7F8
+	source pixel:F6F8F9
 	mono
 	x 1
 	y 8+3
@@ -77,14 +77,14 @@ end
 object
 	ifnotset 1
 	type bitmap
-	source pixel:F6F7F8
+	source pixel:F6F8F9
 	x -2
 	y 8+3
 end
 object
 	ifset 1
 	type bitmap
-	source pixel:F6F7F8
+	source pixel:F6F8F9
 	mono
 	x -2
 	y 8+3
@@ -126,14 +126,14 @@ end
 object
 	ifnotset 1
 	type bitmap
-	source pixel:F6F7F8
+	source pixel:F6F8F9
 	x 1
 	y -2
 end
 object
 	ifset 1
 	type bitmap
-	source pixel:F6F7F8
+	source pixel:F6F8F9
 	mono
 	x 1
 	y -2
@@ -158,14 +158,14 @@ end
 object
 	ifnotset 1
 	type bitmap
-	source pixel:F6F7F8
+	source pixel:F6F8F9
 	x -2
 	y -2
 end
 object
 	ifset 1
 	type bitmap
-	source pixel:F6F7F8
+	source pixel:F6F8F9
 	mono
 	x -2
 	y -2
