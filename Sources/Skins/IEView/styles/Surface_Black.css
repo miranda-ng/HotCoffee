@@ -1,7 +1,7 @@
 /*--- Global ---*/
 
 .Link-Text, .tzerlink {
-	color: #5988C2;
+	color: #6586AD;
 }
 
 input {
@@ -32,20 +32,20 @@ html {
 }
 
 a, a:active {
-	color: #5988C2;
+	color: #6586AD;
 	text-decoration: none;
 	font-weight: normal;
 	cursor:pointer;
 }
 
 a:visited {
-	color: #B57240;
+	color: #A87651;
 	text-decoration: none;
 	font-weight: normal;
 }
 
 a:hover {
-	color: #5988C2;
+	color: #6586AD;
 	text-decoration: underline;
 	font-weight: normal;
 }
@@ -154,7 +154,7 @@ div.avatar {
 }
 
 .contentStatus, .contenthStatus {
-	color: #B57240;
+	color: #A87651;
 	background-image: url(Surface_Black/status.png);
 }
 
@@ -175,7 +175,7 @@ div.avatar {
 }
 
 .contentFileIn, .contenthFileIn, .contentFileOut, .contenthFileOut {
-	color: #5E995E;
+	color: #679267;
 	background-image: url(Surface_Black/file.png);
 }
 
@@ -196,7 +196,7 @@ div.avatar {
 }
 
 .contentURL, .contenthURL {
-	color: #5988C2;
+	color: #6586AD;
 	background-image: url(Surface_Black/url.png);
 }
 

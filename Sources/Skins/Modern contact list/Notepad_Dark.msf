@@ -1411,10 +1411,10 @@ tab_txt_unread=l
 
 [Tipper]
 AvBorderCol=d16777215
-BorderCol=d6969419
+BorderCol=d4536624
 ColourBg=d1579032
 DividerCol=d3487029
-SidebarCol=d1579032
+SidebarCol=d4536624
 FontFirst=sVerdana
 FontFirstCol=d5606873
 FontFirstFlags=w288
@@ -1468,8 +1468,8 @@ frame_back=d1579032
 
 [YAPP]
 ColourBg=d1579032
-ColourBorder=d6969419
-ColourSidebar=d1579032
+ColourBorder=d4536624
+ColourSidebar=d4536624
 ColourTitleUnderline=d3487029
 FontFirst=uVerdana
 FontFirstCol=d12632256
@@ -1722,7 +1722,7 @@ InnerAvatarPadding=w2
 OuterAvatarPadding=w20
 Padding=w20
 TextPadding=w3
-SidebarWidth=d0
+SidebarWidth=d48
 TitleIndent=d30
 TextIndent=d30
 ValueIndent=d7
