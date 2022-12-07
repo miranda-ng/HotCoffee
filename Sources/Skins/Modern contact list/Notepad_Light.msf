@@ -1411,7 +1411,7 @@ tab_txt_unread=l
 
 [Tipper]
 AvBorderCol=d0
-BorderCol=d0
+BorderCol=d7826275
 ColourBg=d15461355
 DividerCol=d11905695
 SidebarCol=d7826275
@@ -1468,7 +1468,7 @@ frame_back=d15461355
 
 [YAPP]
 ColourBg=d15461355
-ColourBorder=d0
+ColourBorder=d7826275
 ColourSidebar=d7826275
 ColourTitleUnderline=d11905695
 FontFirst=uVerdana
@@ -1722,7 +1722,7 @@ InnerAvatarPadding=w2
 OuterAvatarPadding=w20
 Padding=w20
 TextPadding=w3
-SidebarWidth=d0
+SidebarWidth=d48
 TitleIndent=d30
 TextIndent=d30
 ValueIndent=d7
