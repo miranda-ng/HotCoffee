@@ -1411,10 +1411,10 @@ tab_txt_unread=l
 
 [Tipper]
 AvBorderCol=d0
-BorderCol=d11905695
+BorderCol=d0
 ColourBg=d15461355
 DividerCol=d11905695
-SidebarCol=d15461355
+SidebarCol=d7826275
 FontFirst=sVerdana
 FontFirstCol=d18602
 FontFirstFlags=w288
@@ -1468,8 +1468,8 @@ frame_back=d15461355
 
 [YAPP]
 ColourBg=d15461355
-ColourBorder=d11905695
-ColourSidebar=d15461355
+ColourBorder=d0
+ColourSidebar=d7826275
 ColourTitleUnderline=d11905695
 FontFirst=uVerdana
 FontFirstCol=d6838602
