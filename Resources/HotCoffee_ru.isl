@@ -394,3 +394,6 @@ StylesInfoCaption=Наведите курсор на имя компонента оформления, чтобы увидеть ег
 TasksListInfoCaption=Наведите курсор на имя задачи, чтобы увидеть её описание.
 SelectLanguageTitle=Выберите язык
 SelectLanguageLabel=Выберите язык, который будет использован в процессе установки и в Miranda HotCoffee:
+CRSmbl=©
+TMSmbl=™
+Smbl0=•

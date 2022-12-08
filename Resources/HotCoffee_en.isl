@@ -394,3 +394,6 @@ StylesInfoCaption=Hover your mouse over the theme component's name to see its de
 TasksListInfoCaption=Hover your mouse over the task's name to see its description.
 SelectLanguageTitle=Select language
 SelectLanguageLabel=Select the language to use during the installation and in Miranda HotCoffee:
+CRSmbl=©
+TMSmbl=™
+Smbl0=•
