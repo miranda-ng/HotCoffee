@@ -224,8 +224,8 @@ AutoAwayDetection=Auto-away detection | Enable/Disable auto-away detection.
 AutoIdleDetection=Auto-idle detection | Enable/Disable auto-idle detection.
 UpdateSettings=Update settings | Update settings for plugins.%n%nWarning! After update many icons will be replaced by the ones from Miranda NG.
 CheckUpdates=Check for updates | Enable/Disable automatic check for plugin updates.%n%nWarning! After update many icons will be replaced by the ones from Miranda NG.
-StableVersion=Stable version | Stable version%n(recommended).%n%nWarning! After update many icons will be replaced by the ones from Miranda NG.
-DevelopmentVersion=Development version | Development version%n(updated daily).%n%nWarning! After update many icons will be replaced by the ones from Miranda NG.
+StableVersion=Stable version | Stable version.%n%nWarning! After update many icons will be replaced by the ones from Miranda NG.
+DevelopmentVersion=Development version | Development version.%n%nWarning! After update many icons will be replaced by the ones from Miranda NG.
 	; additional settings name: additional settings display name | additional setting description
 	;; names
 DialogFontSize=Font size in input area: | Choose a font size of text input area.
